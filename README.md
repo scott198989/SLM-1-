@@ -34,7 +34,7 @@ controlled training and private engineering evaluations.
 
 Linux DDP is implemented for supervised/preference/distillation training. Local
 Windows Gloo execution was blocked by the installed runtime's unsupported device;
-Linux CI passed the full 221-test suite and the two-process CPU/Gloo training and
+Linux CI passed the full 227-test suite and the two-process CPU/Gloo training and
 checkpoint-write smoke. Distributed resume and H100/NCCL remain unverified. See
 [validation evidence](docs/VALIDATION.md) for the current verified boundary.
 

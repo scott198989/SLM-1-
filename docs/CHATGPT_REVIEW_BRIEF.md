@@ -197,13 +197,13 @@ FSDP, distributed GRPO, quantization, and multimodal inputs are not implemented.
 
 ## 6. Evidence versus hypotheses
 
-**Recorded verification:** 221 baseline FORGE tests; 19-check installed-CLI
+**Recorded verification:** 227 FORGE tests passed in Linux CI; 19-check installed-CLI
 lifecycle runs on CPU and CUDA; causal masking and padding; finite gradients;
 tiny-model pattern learning at loops 1/2/4; exact interrupted/uninterrupted single-process CPU
 weights, optimizer, RNG and cursor; objective/normalization tests; fixture ancestry;
-and bounded model export/generation. Six further setup/cleanup regression tests
-passed together with the existing 20 trainer tests after a process-group lifecycle
-fix. These are software and small learning checks.
+and bounded model export/generation. The suite includes six setup/cleanup
+regressions added after a process-group lifecycle fix. These are software and
+small learning checks.
 
 The full 1.003B model performed AdamW updates on an RTX 5090 at sequence 1,024,
 batch one, with BF16 activations/checkpointing. Balanced measured ~3,601 target
@@ -211,7 +211,7 @@ tokens/s over five steps; deep ~2,366 over twelve steps; both peaked at 15.82 Gi
 allocated memory. These short reused-random-token tests exclude meaningful corpus
 learning, long-run thermals, and representative data/checkpoint I/O.
 
-**Distributed evidence:** Linux CI run `36488408147` passed 221 tests and the
+**Distributed evidence:** Linux CI run `36489419499` passed 227 tests and the
 two-process CPU/Gloo check. That verifies collective execution and distributed
 checkpoint writing. Distributed checkpoint restoration and exact distributed
 resume have not been exercised; single-process resume results do not establish

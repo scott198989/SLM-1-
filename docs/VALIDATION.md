@@ -6,6 +6,7 @@ This record describes the FORGE foundation delivered before a production dataset
 
 - The FORGE-only test suite passed **221 tests**: 220 focused checks plus the installed-CLI lifecycle test. Lint and all ten supplied configuration presets also passed validation.
 - A subsequent trainer setup/cleanup correction passed **six additional regression tests plus the existing 20 trainer tests**. These cover partial process-group initialization, preflight failure, caller-owned resources, signal-handler restoration and thermal-worker setup.
+- The resulting complete suite passed **227 tests in Linux CI**, followed by successful two-process CPU/Gloo training and checkpoint writing: [run 36489419499](https://github.com/scott198989/SLM-1-/actions/runs/36489419499).
 - Exact count on the main architecture: **1,003,169,935 unique trainable parameters**. The research preset has **99,825,487**. Shared core passes do not multiply unique parameters.
 - Causal attention at all named loop budgets; padding isolation; correct one-time autoregressive target shift; finite gradients and BF16 activation recomputation.
 - Fresh byte/BPE tokenizer behavior, Unicode preservation, digit boundaries, control-token protection, fingerprint roundtrips, source rights/hash/schema gates, document isolation and cross-split family/prompt checks.

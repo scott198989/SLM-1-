@@ -69,7 +69,7 @@ checks path placement, not the cloud storage product behind the mount.
 
 The supervised trainer implements PyTorch DDP: CUDA uses NCCL; CPU uses Gloo.
 The local Windows Gloo run failed because the installed runtime did not support
-the requested device. Linux CI passed the full 221-test suite and two-process
+the requested device. Linux CI passed the full 227-test suite and two-process
 CPU/Gloo training and checkpoint writing. Distributed resume, NCCL, and real
 multi-H100 performance remain unverified; [VALIDATION.md](VALIDATION.md) tracks
 their status.

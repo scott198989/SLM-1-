@@ -139,18 +139,22 @@ def styles():
         sheet[name].fontName = 'Review'
         sheet[name].textColor = INK
     sheet['BodyText'].fontSize = 9.5
-    sheet['BodyText'].leading = 14
+    sheet['BodyText'].leading = 13.5
     sheet['BodyText'].spaceAfter = 7
+    sheet['BodyText'].allowWidows = 0
+    sheet['BodyText'].allowOrphans = 0
     sheet['Heading1'].fontName = 'ReviewBold'
     sheet['Heading1'].fontSize = 17
     sheet['Heading1'].leading = 21
     sheet['Heading1'].spaceBefore = 17
     sheet['Heading1'].spaceAfter = 9
+    sheet['Heading1'].keepWithNext = True
     sheet['Heading2'].fontName = 'ReviewBold'
     sheet['Heading2'].fontSize = 12
     sheet['Heading2'].leading = 16
     sheet['Heading2'].spaceBefore = 13
     sheet['Heading2'].spaceAfter = 7
+    sheet['Heading2'].keepWithNext = True
     sheet.add(ParagraphStyle('Cover', fontName='ReviewBold', fontSize=29, leading=34, textColor=INK, spaceAfter=8))
     sheet.add(ParagraphStyle('Deck', parent=sheet['BodyText'], fontSize=11, leading=16, textColor=MUTED, spaceAfter=12))
     sheet.add(ParagraphStyle('TableCell', parent=sheet['BodyText'], fontSize=8, leading=11, spaceAfter=0))
