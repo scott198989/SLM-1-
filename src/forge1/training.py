@@ -4,7 +4,7 @@ All paths are local. This module never fetches weights/data or provisions comput
 """
 from __future__ import annotations
 
-from contextlib import nullcontext
+from contextlib import ExitStack, nullcontext
 from dataclasses import asdict, dataclass, fields
 import json
 import math
@@ -278,6 +278,26 @@ def train(config: TrainConfig, *, resume: str | None = None, stop_after: int | N
     requires identical world size, data, tokenizer and schedule; stage changes use
     init_checkpoint and a new run directory instead.
     """
+    # Register resources immediately as they are acquired, including setup before
+    # the optimizer loop. ExitStack is idempotent if the loop closes it first.
+    with ExitStack() as cleanup:
+        return _train_impl(config, resume=resume, stop_after=stop_after, cleanup=cleanup)
+
+
+def _destroy_initialized_process_group() -> None:
+    if dist.is_initialized():
+        dist.destroy_process_group()
+
+
+def _start_thermal_guard(cleanup: ExitStack, maximum_c: float, device: torch.device) -> ThermalGuard:
+    guard = ThermalGuard(maximum_c, telemetry_device_id(device))
+    # start() may create a worker before raising, so register its cleanup first.
+    cleanup.callback(guard.close)
+    return guard.start()
+
+
+def _train_impl(config: TrainConfig, *, resume: str | None, stop_after: int | None,
+                cleanup: ExitStack) -> dict[str, Any]:
     world_size = int(os.environ.get("WORLD_SIZE", "1"))
     rank = int(os.environ.get("RANK", "0"))
     local_rank = int(os.environ.get("LOCAL_RANK", "0"))
@@ -290,6 +310,9 @@ def train(config: TrainConfig, *, resume: str | None = None, stop_after: int | N
         if config.precision == "bf16" and not torch.cuda.is_bf16_supported():
             raise ValueError("This GPU does not support bf16; use fp32 explicitly")
     if world_size > 1 and not dist.is_initialized():
+        # Only groups initialized by this invocation belong to its lifecycle.
+        # Register before initialization also covers partially successful setup.
+        cleanup.callback(_destroy_initialized_process_group)
         dist.init_process_group("nccl" if use_cuda else "gloo",
                                 init_method=os.environ.get("FORGE_DISTRIBUTED_INIT_METHOD", "env://"),
                                 world_size=world_size, rank=rank)
@@ -401,13 +424,13 @@ def train(config: TrainConfig, *, resume: str | None = None, stop_after: int | N
     stream = IndexStream(len(dataset), config.seed)
     model.train()
     requested_stop = {"reason": None}
-    previous_sigint = signal.getsignal(signal.SIGINT)
-    previous_sigterm = signal.getsignal(signal.SIGTERM)
     def stop_signal(signum, frame):
         requested_stop["reason"] = f"signal {signum}"
-    signal.signal(signal.SIGINT, stop_signal)
-    signal.signal(signal.SIGTERM, stop_signal)
-    guard = ThermalGuard(config.max_temperature_c, telemetry_device_id(device)).start() if use_cuda else None
+    for signum in (signal.SIGINT, signal.SIGTERM):
+        previous_handler = signal.getsignal(signum)
+        signal.signal(signum, stop_signal)
+        cleanup.callback(signal.signal, signum, previous_handler)
+    guard = _start_thermal_guard(cleanup, config.max_temperature_c, device) if use_cuda else None
     started = time.perf_counter()
     session_start_step = step
     last_metrics = {}
@@ -517,9 +540,4 @@ def train(config: TrainConfig, *, resume: str | None = None, stop_after: int | N
             (output_dir / "result.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
         return result
     finally:
-        if guard:
-            guard.close()
-        signal.signal(signal.SIGINT, previous_sigint)
-        signal.signal(signal.SIGTERM, previous_sigterm)
-        if world_size > 1 and dist.is_initialized():
-            dist.destroy_process_group()
+        cleanup.close()
