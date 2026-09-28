@@ -1,0 +1,20 @@
+{
+  "init_checkpoint": "runs/sft-1b-pilot/last.pt",
+  "reference_checkpoint": "runs/sft-1b-pilot/last.pt",
+  "tokenizer": "data/tokenizer.json",
+  "dataset": "data/rl-train",
+  "output_dir": "runs/grpo-1b-pilot",
+  "steps": 100,
+  "batch_size": 1,
+  "group_size": 4,
+  "max_new_tokens": 256,
+  "mode": "balanced",
+  "lr": 0.000005,
+  "beta": 0.02,
+  "clip": 0.2,
+  "precision": "bf16",
+  "device": "cuda",
+  "checkpoint_every": 10,
+  "max_run_seconds": 3600,
+  "allow_fixture_data": false
+}

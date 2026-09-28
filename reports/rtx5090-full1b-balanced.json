@@ -1,0 +1,138 @@
+{
+  "benchmark_kind": "full_optimizer_random_token_smoke_NOT_language_quality",
+  "torch": "2.10.0+cu128",
+  "cuda": "12.8",
+  "device": "cuda",
+  "gpu_before": {
+    "name": "NVIDIA GeForce RTX 5090",
+    "temperature_c": 41.0,
+    "power_w": 37.74,
+    "memory_used_mib": 938.0,
+    "memory_total_mib": 32607.0,
+    "utilization_percent": 0.0
+  },
+  "gpu_after": {
+    "name": "NVIDIA GeForce RTX 5090",
+    "temperature_c": 49.0,
+    "power_w": 302.87,
+    "memory_used_mib": 18917.0,
+    "memory_total_mib": 32607.0,
+    "utilization_percent": 58.0
+  },
+  "parameter_report": {
+    "unique_parameters": 1003169935,
+    "trainable_parameters": 1003169935,
+    "groups": {
+      "anchor_logits": 2048,
+      "update_logits": 2048,
+      "token_embedding": 100663296,
+      "stem": 180387840,
+      "core": 541163520,
+      "speaker": 180387840,
+      "recurrent_norm": 2048,
+      "final_norm": 2048,
+      "ledger": 528512,
+      "constraint_head": 8196,
+      "dimension_head": 14343,
+      "domain_head": 6147,
+      "verifier_head": 2049
+    },
+    "unique_layers": 20,
+    "default_executed_layers": 32,
+    "tied_embedding_and_output": true,
+    "ledger_lanes": [
+      "quantity",
+      "dynamics",
+      "material",
+      "constraint"
+    ]
+  },
+  "sequence_length": 1024,
+  "batch_size": 1,
+  "loops": 2,
+  "precision": "bf16",
+  "activation_checkpointing": true,
+  "optimizer": "AdamW fp32, foreach=False",
+  "warmup_steps": 1,
+  "measured_steps": 5,
+  "step_seconds": [
+    0.293301000026986,
+    0.26775540004018694,
+    0.25615649996325374,
+    0.30247009999584407,
+    0.3006076000165194
+  ],
+  "losses": [
+    11.127828598022461,
+    11.029754638671875,
+    10.781508445739746,
+    10.574563026428223,
+    10.127358436584473
+  ],
+  "gradient_norms": [
+    113.53076934814453,
+    103.91143798828125,
+    48.3526725769043,
+    40.535675048828125,
+    6.770782470703125
+  ],
+  "supervised_tokens_per_second": 3601.3756620271206,
+  "peak_allocated_gib": 15.817111492156982,
+  "peak_reserved_gib": 16.857421875,
+  "peak_temperature_c": 45.0,
+  "projections": [
+    {
+      "tokens": 100000000,
+      "tokens_per_second": 3601.3756620271206,
+      "useful_time_fraction": 0.85,
+      "hours": 9.07423763276529,
+      "days_continuous": 0.3780932346985537,
+      "compute_cost": 0.0,
+      "excludes": [
+        "architecture search",
+        "data preparation",
+        "post-training",
+        "storage",
+        "egress"
+      ],
+      "assumption": "Throughput representative of the actual sequence length, depth, optimizer and device count"
+    },
+    {
+      "tokens": 1000000000,
+      "tokens_per_second": 3601.3756620271206,
+      "useful_time_fraction": 0.85,
+      "hours": 90.74237632765289,
+      "days_continuous": 3.780932346985537,
+      "compute_cost": 0.0,
+      "excludes": [
+        "architecture search",
+        "data preparation",
+        "post-training",
+        "storage",
+        "egress"
+      ],
+      "assumption": "Throughput representative of the actual sequence length, depth, optimizer and device count"
+    },
+    {
+      "tokens": 20000000000,
+      "tokens_per_second": 3601.3756620271206,
+      "useful_time_fraction": 0.85,
+      "hours": 1814.8475265530576,
+      "days_continuous": 75.61864693971073,
+      "compute_cost": 0.0,
+      "excludes": [
+        "architecture search",
+        "data preparation",
+        "post-training",
+        "storage",
+        "egress"
+      ],
+      "assumption": "Throughput representative of the actual sequence length, depth, optimizer and device count"
+    }
+  ],
+  "limitations": [
+    "Short runs do not establish long-run thermal stability",
+    "Random-token workload verifies machinery, not learned engineering ability",
+    "Longer contexts, deeper recurrence, evaluation and checkpoint I/O change throughput"
+  ]
+}
