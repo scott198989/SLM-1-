@@ -1,0 +1,159 @@
+{
+  "benchmark_kind": "full_optimizer_random_token_smoke_NOT_language_quality",
+  "torch": "2.10.0+cu128",
+  "cuda": "12.8",
+  "device": "cuda",
+  "gpu_before": {
+    "name": "NVIDIA GeForce RTX 5090",
+    "temperature_c": 41.0,
+    "power_w": 38.11,
+    "memory_used_mib": 810.0,
+    "memory_total_mib": 32607.0,
+    "utilization_percent": 1.0
+  },
+  "gpu_after": {
+    "name": "NVIDIA GeForce RTX 5090",
+    "temperature_c": 52.0,
+    "power_w": 316.34,
+    "memory_used_mib": 19033.0,
+    "memory_total_mib": 32607.0,
+    "utilization_percent": 86.0
+  },
+  "parameter_report": {
+    "unique_parameters": 1003169935,
+    "trainable_parameters": 1003169935,
+    "groups": {
+      "anchor_logits": 2048,
+      "update_logits": 2048,
+      "token_embedding": 100663296,
+      "stem": 180387840,
+      "core": 541163520,
+      "speaker": 180387840,
+      "recurrent_norm": 2048,
+      "final_norm": 2048,
+      "ledger": 528512,
+      "constraint_head": 8196,
+      "dimension_head": 14343,
+      "domain_head": 6147,
+      "verifier_head": 2049
+    },
+    "unique_layers": 20,
+    "default_executed_layers": 32,
+    "tied_embedding_and_output": true,
+    "ledger_lanes": [
+      "quantity",
+      "dynamics",
+      "material",
+      "constraint"
+    ]
+  },
+  "sequence_length": 1024,
+  "batch_size": 1,
+  "loops": 4,
+  "precision": "bf16",
+  "activation_checkpointing": true,
+  "optimizer": "AdamW fp32, foreach=False",
+  "warmup_steps": 1,
+  "measured_steps": 12,
+  "step_seconds": [
+    0.4341449000639841,
+    0.45066259999293834,
+    0.4122293000109494,
+    0.4623210000572726,
+    0.4471544000552967,
+    0.43334720004349947,
+    0.4281654000515118,
+    0.4021703000180423,
+    0.47477700002491474,
+    0.4068032999057323,
+    0.4196509999455884,
+    0.4168703999603167
+  ],
+  "losses": [
+    11.158147811889648,
+    11.189411163330078,
+    11.107553482055664,
+    11.106093406677246,
+    11.204898834228516,
+    11.204495429992676,
+    10.998125076293945,
+    10.69272518157959,
+    10.291165351867676,
+    9.917713165283203,
+    9.633597373962402,
+    9.38188362121582
+  ],
+  "gradient_norms": [
+    2994.89208984375,
+    1323.1453857421875,
+    979.9248046875,
+    682.0191040039062,
+    351.06231689453125,
+    135.16465759277344,
+    141.169189453125,
+    146.03411865234375,
+    24.73966407775879,
+    3.1442902088165283,
+    3.6876320838928223,
+    1.8030636310577393
+  ],
+  "supervised_tokens_per_second": 2366.094399166273,
+  "peak_allocated_gib": 15.817111492156982,
+  "peak_reserved_gib": 17.19140625,
+  "peak_temperature_c": 51.0,
+  "projections": [
+    {
+      "tokens": 100000000,
+      "tokens_per_second": 2366.094399166273,
+      "useful_time_fraction": 0.85,
+      "hours": 13.811679945485977,
+      "days_continuous": 0.5754866643952491,
+      "compute_cost": 0.0,
+      "excludes": [
+        "architecture search",
+        "data preparation",
+        "post-training",
+        "storage",
+        "egress"
+      ],
+      "assumption": "Throughput representative of the actual sequence length, depth, optimizer and device count"
+    },
+    {
+      "tokens": 1000000000,
+      "tokens_per_second": 2366.094399166273,
+      "useful_time_fraction": 0.85,
+      "hours": 138.11679945485977,
+      "days_continuous": 5.75486664395249,
+      "compute_cost": 0.0,
+      "excludes": [
+        "architecture search",
+        "data preparation",
+        "post-training",
+        "storage",
+        "egress"
+      ],
+      "assumption": "Throughput representative of the actual sequence length, depth, optimizer and device count"
+    },
+    {
+      "tokens": 20000000000,
+      "tokens_per_second": 2366.094399166273,
+      "useful_time_fraction": 0.85,
+      "hours": 2762.3359890971956,
+      "days_continuous": 115.09733287904982,
+      "compute_cost": 0.0,
+      "excludes": [
+        "architecture search",
+        "data preparation",
+        "post-training",
+        "storage",
+        "egress"
+      ],
+      "assumption": "Throughput representative of the actual sequence length, depth, optimizer and device count"
+    }
+  ],
+  "limitations": [
+    "Short runs do not establish long-run thermal stability",
+    "Random-token workload verifies machinery, not learned engineering ability",
+    "Longer contexts, deeper recurrence, evaluation and checkpoint I/O change throughput"
+  ]
+}

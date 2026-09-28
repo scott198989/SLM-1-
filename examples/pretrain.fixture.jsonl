@@ -1,0 +1,2 @@
+{"id":"fixture-pretrain-001","document_family":"fixture-unit-torque","text":"TEST FIXTURE ONLY. For a perpendicular force F applied at lever arm r, torque is τ = F r. With F = 4 N and r = 0.5 m, τ = 2 N·m. State the perpendicular-force assumption before using this relation."}
+{"id":"fixture-pretrain-002","document_family":"fixture-unit-ohms-law","text":"TEST FIXTURE ONLY. For an ideal ohmic resistor, V = I R. If I = 0.2 A and R = 10 Ω, then V = 2 V. Real components also need power and temperature checks."}

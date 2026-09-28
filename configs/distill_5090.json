@@ -1,0 +1,22 @@
+{
+  "model_config": "configs/model_1b.json",
+  "tokenizer": "data/tokenizer.json",
+  "dataset": "data/sft-train",
+  "validation_dataset": "data/sft-validation",
+  "init_checkpoint": "runs/pretrain-1b-pilot/last.pt",
+  "teacher_checkpoint": "runs/sft-1b-pilot/last.pt",
+  "output_dir": "runs/distill-1b-pilot",
+  "stage": "distill",
+  "steps": 1000,
+  "batch_size": 1,
+  "gradient_accumulation": 16,
+  "learning_rate": 0.00002,
+  "warmup_steps": 100,
+  "precision": "bf16",
+  "device": "cuda",
+  "distill_alpha": 0.5,
+  "distill_temperature": 2.0,
+  "loop_min": 1,
+  "loop_max": 4,
+  "max_run_seconds": 14400
+}
