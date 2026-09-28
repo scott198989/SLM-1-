@@ -11,6 +11,8 @@ private/
 runs/
 checkpoints/
 artifacts/
+output/
+tmp/
 *.pt
 *.pth
 *.safetensors

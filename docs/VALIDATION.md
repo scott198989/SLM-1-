@@ -5,6 +5,7 @@ This record describes the FORGE foundation delivered before a production dataset
 ## Verified locally
 
 - The FORGE-only test suite passed **221 tests**: 220 focused checks plus the installed-CLI lifecycle test. Lint and all ten supplied configuration presets also passed validation.
+- A subsequent trainer setup/cleanup correction passed **six additional regression tests plus the existing 20 trainer tests**. These cover partial process-group initialization, preflight failure, caller-owned resources, signal-handler restoration and thermal-worker setup.
 - Exact count on the main architecture: **1,003,169,935 unique trainable parameters**. The research preset has **99,825,487**. Shared core passes do not multiply unique parameters.
 - Causal attention at all named loop budgets; padding isolation; correct one-time autoregressive target shift; finite gradients and BF16 activation recomputation.
 - Fresh byte/BPE tokenizer behavior, Unicode preservation, digit boundaries, control-token protection, fingerprint roundtrips, source rights/hash/schema gates, document isolation and cross-split family/prompt checks.
@@ -41,7 +42,7 @@ The benchmark reused random tokens to exercise the machine and optimizer. It lea
 
 ## Distributed and cloud boundary
 
-The supervised trainer implements DDP, per-rank sampling/RNG and globally normalized gradients. Native Windows PyTorch failed the two-process CPU smoke with `unsupported gloo device` (its torchrun entrypoint also requested unavailable libuv). Single-GPU CUDA training is independently verified. Linux CPU/Gloo CI is the portable integration gate; future H100/NCCL scaling, throughput, memory, topology and checkpoint recovery require a run on the rented hardware.
+The supervised trainer implements DDP, per-rank sampling/RNG and globally normalized gradients. Native Windows PyTorch failed the two-process CPU smoke with `unsupported gloo device` (its torchrun entrypoint also requested unavailable libuv). Single-GPU CUDA training is independently verified. [Linux CI run 36488408147](https://github.com/scott198989/SLM-1-/actions/runs/36488408147) passed the full 221-test suite and a genuine two-process CPU/Gloo training and checkpoint-write smoke. The distributed smoke verifies optimizer steps, cursor progression and saved per-rank RNG records; it does not exercise distributed restoration or compare distributed gradients with a single-process reference. Future H100/NCCL scaling, throughput, memory, topology and checkpoint recovery require a run on the rented hardware.
 
 No RunPod or other paid resource has been created. Provider-level budget/shutdown behavior and persistent storage have not been exercised. Stopping the trainer does not stop cloud billing.
 

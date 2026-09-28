@@ -91,11 +91,14 @@ The following heads support later supervised training:
 |---|---|---|
 | `constraint_logits` | `[batch, token, 4]` | Four explicitly defined binary constraint labels |
 | `si_dimensions` | `[batch, token, 7]` | SI exponents in a documented order, with missing-label masks |
-| `domain_logits` | `[batch, token, 3]` | In-domain, out-of-domain, and insufficient-context labels |
+| `domain_logits` | `[batch, token, 3]` | Subject labels: 0=mechatronics, 1=mathematics, 2=materials science |
 | `verifier_logits` | `[batch, token]` | Supervised solution/step validity score |
 | `ledger_states` | `[batch, token, 4, rank]` | Diagnostics; present only with the ledger enabled |
 
 The head outputs are unconstrained predictions, not calibrated truth indicators.
+The three-way subject head does not detect out-of-domain requests or insufficient
+information. Domain-only answering and clarification behavior require separate
+conversation supervision, evaluation, and potentially an additional calibrated gate.
 Train and calibrate them before using scores to gate responses. A dimension head
 does not replace a unit parser; a verifier head does not replace a numerical
 solver. The exact label meanings are part of the dataset schema and must remain

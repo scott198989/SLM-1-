@@ -34,7 +34,8 @@ controlled training and private engineering evaluations.
 
 Linux DDP is implemented for supervised/preference/distillation training. Local
 Windows Gloo execution was blocked by the installed runtime's unsupported device;
-Linux distributed runtime validation remains pending. See
+Linux CI passed the full 221-test suite and the two-process CPU/Gloo training and
+checkpoint-write smoke. Distributed resume and H100/NCCL remain unverified. See
 [validation evidence](docs/VALIDATION.md) for the current verified boundary.
 
 ## Start here
@@ -132,6 +133,12 @@ model to train; its weights cannot load directly into the 1B architecture.
 - [Validation evidence and remaining coverage](docs/VALIDATION.md)
 - [Future RunPod/H100 workflow](docs/RUNPOD.md)
 - [Research roadmap and release gates](docs/ROADMAP.md)
+- [Independent ChatGPT review brief and critical-review prompt](docs/CHATGPT_REVIEW_BRIEF.md)
+
+To regenerate a shareable PDF and source packet, run
+`python scripts/build_review_packet.py` from a document environment with
+`reportlab` installed. Outputs go to `output/pdf/`; this optional document tool
+does not change the model's training dependencies.
 
 The current inference path recomputes the prefix. KV caching, learned adaptive
 halting, distributed GRPO, PPO, FSDP, and quantized training/inference are not
