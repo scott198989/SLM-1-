@@ -1,7 +1,14 @@
 # SLM-1-
 # FORGE — Training Data & Knowledge Repository
 
-## Verified project status: October 1, 2026
+## Phase 3 pilot — current gate
+
+Private release: **16 calculator protocol SFT examples / 4,430 Qwen tokens / 2,793 assistant tokens**; **12 sealed statistics/DOE/SPC tasks**; **9 qualified private reference-RAG chunks** with 10/10 demonstration query hits in top 3; **56 software tests pass**. [Complete gate report](reports/FORGE_PHASE3_GATE_REPORT.md), [released pilot receipt](reports/phase3-pilot-release.json), [technical review](reports/phase3-technical-review.json), [family evidence](reports/phase3-family-analysis.json), [sealed composition](reports/phase3-sealed-gold.json), [RAG results](reports/phase3-rag-pilot.json).
+
+The 2,112 legacy review curriculum is **not fully technically validated**:134 technical PASS,17 REJECT,42 QUARANTINE,1919 NEEDS HUMAN REVIEW (1917 unreviewed substantively; two specialist holds). No legacy or Drive SFT released. Whole-source owned pilot train/gold overlap 0; broader semantic independence remains unknown. The pilot is small JSON calculator integration data, not a broad engineering specialization set. No independent model-development examples, no stock Qwen scores, no GPU certification. **Training is not recommended or authorized; no weights or training.** Siemens follow-up is being handled by the user. Drive content and private evaluation remain outside Git; automatic checks remain canceled.
+
+## Phase 2 snapshot — historical preparation status
+
 
 Target: **Qwen/Qwen3-30B-A3B-Base**, SFT with QLoRA plus citation RAG. No from-scratch model or tokenizer training. The mission below describes the intended system; it is not a claim of completed implementation.
 
@@ -505,7 +512,7 @@ Integrated GPU:
 Intel Iris Xe
 
 Storage:
-1 TB WD PC SN740 NVMe SSD
+1 TB WD PC SN 740 NVMe SSD
 
 Display:
 2560 × 1600
@@ -529,7 +536,7 @@ NVIDIA GeForce RTX 5090
 32 GB VRAM
 
 Storage:
-2 TB PCIe Gen5 NVMe SSD
+2 TB PCIe Gen 5 NVMe SSD
 
 Operating System:
 Windows 11 Home

@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-10-01 — Phase 3 pilot
+
+- Added 400-row checkpointed selected-anchor family evidence across 34,463 candidates and 136,879 authorized active Drive units; preserved semantic uncertainty and source-level exclusion.
+- Recorded 189 substantive legacy reviews and complete 104-row thermal dispositions; all 2,112 structurally screened, with 1917 still substantively unreviewed. No silent answer corrections or legacy release.
+- Released 16 private independently checked calculator protocol examples with exact 4430/2793 Qwen/assistant counts, source/family/rights/mask receipts and no imported API/Drive text.
+- Sealed 12 private statistics tasks with full source-family exclusion and fixed graders; retired two pre-model construction versions. No broad 240-task benchmark or baseline score claimed.
+- Qualified 9 private frozen-reference chunks and an original reviewed model graph;10 curated top 3 retrieval demonstrations. Existing incomplete academic index remains rejected.
+- Added strict offline evaluation tool controller and 56 passing software tests. Published scoped capability/gap/rights/baseline/configuration reports; model-development and GPU gates remain unmet.
+- No weights, training, automatic checks, paid services or private Drive content in Git.
+
 ## 2026-10-01
 
 - Recorded direct synthetic-origin attestation for all Completions families and 198 SLM conversations; formal rights matrix retains historical-contract applicability as PARTIAL without conflating ownership and usage.
