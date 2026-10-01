@@ -1,6 +1,17 @@
 # SLM-1-
 # FORGE — Training Data & Knowledge Repository
 
+## Verified project status: October 1, 2026
+
+Target: **Qwen/Qwen3-30B-A3B-Base**, SFT with QLoRA plus citation RAG. No from-scratch model or tokenizer training. The mission below describes the intended system; it is not a claim of completed implementation.
+
+- [Complete data and architecture audit](reports/FORGE_DATA_AND_ARCHITECTURE_REPORT.md).
+- [Deduplicated repository staging and lineage](data/sft/staging/consolidated-20261001-v2/README.md): 34,463 unique conversations, 29,153 awaiting review and 5,310 quarantined. **Zero approved SFT examples.**
+- [Final consolidated counts](reports/consolidated-audit.json), [all populated source files](manifests/repository-datasets-final.json), [all tracked paths](manifests/repository-files.json), [README review](manifests/readme-review.json).
+- Drive scope is the three previously authorized academic trees, recursively. Private source text stays private; only aggregate Drive evidence is committed here. Production RAG is not approved.
+- [Current model/hardware constraints](configs/qwen-sft-plan.json), [session record](docs/sessions/2026-10-01-data-audit.md), [changes](CHANGELOG.md).
+- Automatic checks were canceled by the user. No weights, training jobs, paid compute or invented answer repairs.
+
 ## Mission
 
 FORGE is a specialized engineering and mechatronics AI model built from Qwen3-30B-A3B-Base.

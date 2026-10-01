@@ -1,0 +1,3058 @@
+[
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": ".claude/settings.local.json",
+    "blob_sha1": "9df618f64f4901cddea9e4af7ac7a9a15d1a3673",
+    "bytes": 161,
+    "classification": "local_configuration_or_binary"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "AutoCAD.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "Bash_Shell.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "CAD.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "Conversations_SFT.jsonl.bak",
+    "blob_sha1": "48672cf0774309efe91fb390037bb60c075513c1",
+    "bytes": 586648,
+    "classification": "candidate_dataset",
+    "sha256": "cde6112ffccfee6d992cc4b570bd7b08f5de5b8defc24698aedbdfb66b719856",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_AC_Circuits.jsonl",
+    "blob_sha1": "18fa442897941f9359434fc1d36f983112052006",
+    "bytes": 410949,
+    "classification": "candidate_dataset",
+    "sha256": "b0ab0bc29f2a47c4d3604659c72fbdb9c0da97593d51a827db4da95028248eb8",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_Advanced_Eng_Math.jsonl",
+    "blob_sha1": "fca1ec7289a2061e78fcc5effb87037b4f07fb8e",
+    "bytes": 439828,
+    "classification": "candidate_dataset",
+    "sha256": "91e1adbb4db662e463ecf96f3c21455639802c9be71e42a23f51e464a06f6cc9",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_Algebra.jsonl",
+    "blob_sha1": "49abd5e2c6c9d1e5a9954c61c993a9d2dbb53f16",
+    "bytes": 547194,
+    "classification": "candidate_dataset",
+    "sha256": "87dea8584252719990f16589465740a1fa9bfb4f2c161912e7c5e3bd2af2de07",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_Conversations.jsonl",
+    "blob_sha1": "b166b5f8caf72196b257cec9cba7ed337db5a709",
+    "bytes": 2218089,
+    "classification": "candidate_dataset",
+    "sha256": "c42ae8c60c9c6ec3ff8431435a92925a44b5ccb01f498014386c3b40bdb969b0",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_Conversations_SFT.jsonl",
+    "blob_sha1": "fd65344167481629b0574dba62110758ae775455",
+    "bytes": 554594,
+    "classification": "candidate_dataset",
+    "sha256": "86f026a9d959793feed36a8dfba9cc5f9a86f1b88ccd5ec4a8939906d90e3e16",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_Thermodynamics.jsonl",
+    "blob_sha1": "f00cf03819a2f63462e2ddf7597f69f86d586486",
+    "bytes": 480758,
+    "classification": "candidate_dataset",
+    "sha256": "6ee9f061dc134989c25d768db2f3def9c20726e8b56501c8765f158f03cfb12a",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_Trigonometry.jsonl",
+    "blob_sha1": "35eab5dc944386455bc385e1e3067dfeefbcd8c1",
+    "bytes": 600685,
+    "classification": "candidate_dataset",
+    "sha256": "16978f85007b8e9742c1b55f0cc288a505833c654042b0fe79a8cfe96ff19173",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_calculus.jsonl",
+    "blob_sha1": "c6079808ecda232ef8f424ba7a26f46e85991f89",
+    "bytes": 652149,
+    "classification": "candidate_dataset",
+    "sha256": "b0d723661de91b79a32a417e4cd52c1f9fb36dac64053d86ad5fc18a63f85e21",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_elect_components.jsonl",
+    "blob_sha1": "2249438948283f7e75265a553f9849ade65dc23b",
+    "bytes": 618784,
+    "classification": "candidate_dataset",
+    "sha256": "222eacc539118a515f60f35f661a8d70f8c1d3f8448fb2b4fe12ea8a8fce75d8",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_electrodynamics.jsonl",
+    "blob_sha1": "2a95f5febfb3e76ac26b407f6a1f9d3fbda64a81",
+    "bytes": 502965,
+    "classification": "candidate_dataset",
+    "sha256": "6ed8a1ef96bb7edc3d8286b66092ca699840ee54895c32cab0a87f963cb812cd",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_material_science.jsonl",
+    "blob_sha1": "7600092ff72f14bf69ea54f647928cbbcd84edf3",
+    "bytes": 726427,
+    "classification": "candidate_dataset",
+    "sha256": "028348459f744df65879a12bf9df655c32fc25597c3202a13c3c780667554cc4",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_physics.jsonl",
+    "blob_sha1": "a7c4723400b13c6b3a6d1aa043f5911f5e6b938c",
+    "bytes": 667400,
+    "classification": "candidate_dataset",
+    "sha256": "080c95bcf16135143d3609bd39c6d8bccd90385405dc49b8673ccb8e7e5cab93",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "README.md",
+    "blob_sha1": "2cf70c0a38e978ea9365a14dcfafbf97fd9e8981",
+    "bytes": 13382,
+    "classification": "documentation_config_or_code",
+    "sha256": "458d575416e1c9d00583d2df0364df33f247214e941c744fb7a9e8f317247360",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "__pycache__/build_sft.cpython-313.pyc",
+    "blob_sha1": "b99d7b38a02e492617f9d25a76b50205e2de3f4c",
+    "bytes": 5064,
+    "classification": "local_configuration_or_binary"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "_audit.py",
+    "blob_sha1": "d59c678a83843fd3fdc3b4959b26169646ff3da7",
+    "bytes": 7296,
+    "classification": "documentation_config_or_code",
+    "sha256": "19768beda359e17f0ad52f6151d0fe5b2fb1a39b0faa4473075063f036c7fc97",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "_audit_report.txt",
+    "blob_sha1": "f522cb21dceb7b63ad5f0ae4d997187097019997",
+    "bytes": 13153,
+    "classification": "documentation_config_or_code",
+    "sha256": "0c16092e7654150ff2c2101d8dfc715eeadfcbd3059f6d59fcb3451209e9d7c5",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "_near_dupe_flags.md",
+    "blob_sha1": "cc31f7b51c5a2bbdb2f72f8339e5154560d7bdcc",
+    "bytes": 6898,
+    "classification": "documentation_config_or_code",
+    "sha256": "e04a2e97c4c08b3a0d83e0c85e163fc9599a16dc492bf6ca1ab1f74216d7dd86",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "ampacet_masterbatch.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "build_sft.py",
+    "blob_sha1": "8adab3bd023f433fd13561d2f95077e742fbb05a",
+    "bytes": 2960,
+    "classification": "documentation_config_or_code",
+    "sha256": "1f24c8999e16bb72cba13e73d82a606f8a29cfd3c795da8ea8f8cecf4f9ab749",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "business_ethics.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "business_law.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "business_stats.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "c#.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "c++.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "c.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "core_world_model.jsonl",
+    "blob_sha1": "d4a916a8e6ff8b72f4285b43c7a5333bfa701c79",
+    "bytes": 611420,
+    "classification": "candidate_dataset",
+    "sha256": "269d13d04d65a7fae68e4cf833e7c43cc5fc7903e2ce32e3570e9e4580fec369",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "creo.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "css.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "financial_accounting.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "gcode_mcode.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "general_system_theory.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "git_commands.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "html.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "hydraulics_pneumatics.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "industrial_dynamics.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "intellectual_property.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "java.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "javascript.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "json.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "label_jsonl.py",
+    "blob_sha1": "06d9b7d8c1d615bd9cc2d69f3be551580a1241b5",
+    "bytes": 10434,
+    "classification": "documentation_config_or_code",
+    "sha256": "bb2a70fee0d297ec5002eb194b99a6f397043560f21c232376c4b301cd611684",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "macroeconomics.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "manufacturing_processes.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "markdown.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "matlab_octave.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "microeconomics.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "php.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "plc_ladder.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "principles_of_management.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "principles_of_marketing.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "process_control.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "python.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "quality_in_business.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "react_jsx.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "robotics.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "siemens.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "siemens_scl.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "six_sigma.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "solidworks.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "sql.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "structured_text.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "transport_phenomena.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "typescript.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "wh_blown_film.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "workplace_software.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "yaml.jsonl",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "candidate_dataset",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": ".claude/settings.local.json",
+    "blob_sha1": "099f427d0640a53f251214ba27f1a97037effa7c",
+    "bytes": 528,
+    "classification": "local_configuration_or_binary"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": ".gitignore",
+    "blob_sha1": "c318c8c5bb5d3579146e1017286910d5759492d3",
+    "bytes": 285,
+    "classification": "documentation_config_or_code",
+    "sha256": "00755e994db30f2ec1004cbe5e4b4da73cd96268af17223b875c1b96f0cea184",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "CHAT_FIX_SUMMARY.md",
+    "blob_sha1": "dd28517f26c5e663607e2612a0cf99be5bbc0659",
+    "bytes": 6239,
+    "classification": "documentation_config_or_code",
+    "sha256": "dde62772e32912ee77e0dc330d98ba85550ea544d379322c6e61e4b6eebbaff4",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "CLAUDE.md",
+    "blob_sha1": "240fa1f29d8aab15b1f4cd0e6c3701ad81349eb2",
+    "bytes": 28995,
+    "classification": "documentation_config_or_code",
+    "sha256": "b928edd243f9af6167cb940205e2f1582638ec4bdffa0dd54aeacf68c9a7b268",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "COMPREHENSIVE_REPO_ANALYSIS.md",
+    "blob_sha1": "c8f57b2ccae6fde73fa60075d16001b87de3986c",
+    "bytes": 32103,
+    "classification": "documentation_config_or_code",
+    "sha256": "7e70bb28be4cec8c732c4cfe6a7b949615c544c642bbe78d820e99085bc4c438",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "HAVOC_7B_IMPLEMENTATION_SUMMARY.md",
+    "blob_sha1": "0259aa6e6ea5e2d4267dace078881c5a87687d0d",
+    "bytes": 15564,
+    "classification": "documentation_config_or_code",
+    "sha256": "2f09616fa7d398d9db3f93c71849c5f4450b32a679c35b2834e78eb0dcbc3c61",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "HAVOC_7B_PRIME_ARCHITECTURE.md",
+    "blob_sha1": "7d41cec8af607bdcb54bd8cc3d83a8bc1bdbc621",
+    "bytes": 25508,
+    "classification": "documentation_config_or_code",
+    "sha256": "7df9a20583df2f7de4b140fab8dbef8329857da6f2105c393aa29a9b0216985e",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "HAVOC_7B_QUICK_START.md",
+    "blob_sha1": "430c5e192d1a357dcaeae9cb8a62b4f96bfde4a5",
+    "bytes": 12930,
+    "classification": "documentation_config_or_code",
+    "sha256": "cbc9def2fa9c3275cf1eae8111fde2d22763f9b7cf08038fe4c0a28bbc0a8ed0",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "HAVOC_DATA_EXTRACT.py",
+    "blob_sha1": "37b270760fc0c6126bf11eb91d55e76e600d47aa",
+    "bytes": 1313,
+    "classification": "documentation_config_or_code",
+    "sha256": "9de269c9c934f38775610cd3382b93afb717ebc95a85344b7f7972d2a210f361",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "HAVOC_HYBRID_IMPLEMENTATION_SUMMARY.md",
+    "blob_sha1": "9a600f05c99b26043c16b3919d1f536cdea5e50f",
+    "bytes": 14986,
+    "classification": "documentation_config_or_code",
+    "sha256": "5362e517a8a367756b890a3156e769886504ae4668e29ab280a215b5fcf5ffab",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "HAVOC_PRIME_README.md",
+    "blob_sha1": "9e6559da26da69b8af2455ce7708c6e2ed756ea7",
+    "bytes": 11560,
+    "classification": "documentation_config_or_code",
+    "sha256": "8b1f337e5f01ebb997afc11d50b1a373e2109286707594445c99ff3e42382a2c",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "HAVOC_TRAINING_INVENTORY_REPORT.md",
+    "blob_sha1": "dcd697abf570b3dcce86e21008b4fc878bd5a763",
+    "bytes": 21048,
+    "classification": "documentation_config_or_code",
+    "sha256": "4a87e7288c89d16fa4304e731cd916ba5ec088d190eb549449c330e756c3ef3e",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "IMPLEMENTATION_SUMMARY.md",
+    "blob_sha1": "2ca208d0c4cc5e49319559854be730599747464a",
+    "bytes": 10434,
+    "classification": "documentation_config_or_code",
+    "sha256": "ce09ce03838404d20a2f50186000d5b584946e79aa0e74cf7f3e70d9573d9ef6",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "INFERENCE_GUIDE.md",
+    "blob_sha1": "f67c930469568ac3d7756319ea82b3b56eaa8d2c",
+    "bytes": 11863,
+    "classification": "documentation_config_or_code",
+    "sha256": "bf7e023b880540968fc78bf56cc62d0743fccebd5ff60cd392ebed3e043c6e12",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "MIGRATION_GUIDE_SRS_TO_PRIME.md",
+    "blob_sha1": "b68feb6fc4297ad67ea96c6230449f77ef3ad765",
+    "bytes": 9874,
+    "classification": "documentation_config_or_code",
+    "sha256": "0efd28bded06ac8324aef6b1aba0fc7a05af4fe1a9ad4dae3536b287ccc35d0e",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "QUICK_START_HAVOC_HYBRID.md",
+    "blob_sha1": "f07786cb2ac34bfb8e75d104984b4a538999ebe7",
+    "bytes": 4021,
+    "classification": "documentation_config_or_code",
+    "sha256": "bcc440a557194b8f052fe187948430c5b27bdc48bb346fa979fe89a82c8a8cca",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "README.md",
+    "blob_sha1": "9c3b42d094ce19b3e604ff556053570868e32af4",
+    "bytes": 4331,
+    "classification": "documentation_config_or_code",
+    "sha256": "be9fd81e5de2ad554f2c90076593ec6d320a6f413666bcbbd1bad9c966f5ab71",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "RUNPOD_SETUP.md",
+    "blob_sha1": "c593c0874630e5f14a565f4a90130cb7c08d06c0",
+    "bytes": 5655,
+    "classification": "documentation_config_or_code",
+    "sha256": "125335ec1b9dd8cfdf9d35a64afdcfe49a9ae95c1af22475ed6f31b1ba93392f",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "RUNPOD_SYNC_INSTRUCTIONS.md",
+    "blob_sha1": "c7549f11a591c241f1614385be86f74db9287853",
+    "bytes": 3393,
+    "classification": "documentation_config_or_code",
+    "sha256": "b93e23f038bfc6a80062b20f415509c66ea14acb119134c837b53084f0403618",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "STABILIZATION_SUMMARY.md",
+    "blob_sha1": "1b095c7533ea54b1e790e4c4fe597ff345eaf6ce",
+    "bytes": 8441,
+    "classification": "documentation_config_or_code",
+    "sha256": "10d92625c14ff5582462309cd137679d244d8a9754835aa73301643ebc086040",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "TOKENIZER_GUIDE.md",
+    "blob_sha1": "051ecc052261bd0805609cde47a1e37cc8400e80",
+    "bytes": 18179,
+    "classification": "documentation_config_or_code",
+    "sha256": "ad9d59661fb40aee87144d095da12dd860ab2167ec7299130c3e992bb21d771e",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "TRAINING_GUIDE.md",
+    "blob_sha1": "99e0859256e7896abfd44e15430798dab7bd4d84",
+    "bytes": 8199,
+    "classification": "documentation_config_or_code",
+    "sha256": "e6bd200fdd09744210430922459473b6bcfd25189685e73939eabe000df6b9de",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "chat_havoc.py",
+    "blob_sha1": "ab5a1fd1bcb80730f439aa392ba63d8bbcdc35e3",
+    "bytes": 3792,
+    "classification": "documentation_config_or_code",
+    "sha256": "ca6e5c0e60697d65a9a1e357ec4492078fbdb428d9664dd1589ae9860fc28e79",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/data/default_data.yaml",
+    "blob_sha1": "0d35e90df2a2af8df78cd5e05d379042caadf9aa",
+    "bytes": 790,
+    "classification": "documentation_config_or_code",
+    "sha256": "d10159f9633ee930ddf03d9a0b6d9f629d11c09bff693f2fb413c4cc1bae2d63",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/havoc_instruct.yaml",
+    "blob_sha1": "6af1b0bcf8bb48b32de62506e0d40a1cbb7adb5a",
+    "bytes": 319,
+    "classification": "documentation_config_or_code",
+    "sha256": "7a69c82e2e7cc3e1ad42931cdbe981c885cb2766a041c350ff881a498777b19e",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/havoc_train.yaml",
+    "blob_sha1": "fc46b99340effd660b05bba7f2255901c9335f68",
+    "bytes": 1418,
+    "classification": "documentation_config_or_code",
+    "sha256": "f1fe0489c156b549d14b32a01a7dc163a7b731211aa29ab385051ab9d283c77a",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/inference/default.yaml",
+    "blob_sha1": "dd6ee25d2759af74aa1d5a24a705c47ddf6f7204",
+    "bytes": 758,
+    "classification": "documentation_config_or_code",
+    "sha256": "25ac76a5561563de2169996c0fd7e81f50be29c4ad10244b60abbdcbba475830",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/inference/default_inference.yaml",
+    "blob_sha1": "9770affe36a58803edcd9c4ae51e4ebbe90ce4dc",
+    "bytes": 3550,
+    "classification": "documentation_config_or_code",
+    "sha256": "52db2a051d1e78f87f601d0a53c1c4a23db0f902ac21f3c1975194c16b08648e",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/model/havoc_7b.yaml",
+    "blob_sha1": "7080e82a3934971204bfb4a522e0fecc95c030f1",
+    "bytes": 206,
+    "classification": "documentation_config_or_code",
+    "sha256": "bcb46dd9386243c611faad9c66fec8c7ad4b063c32383aef0103840b9af7b0ac",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/rag/default_rag.yaml",
+    "blob_sha1": "3397af653e22c8e2b744e2f5696a9d949619d48d",
+    "bytes": 66,
+    "classification": "documentation_config_or_code",
+    "sha256": "a937f3dbc389a5c7a5a043db77e7729bfc9b8fa9085b8d41cde3a3ee02c1e1b5",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/srs/default_srs.yaml",
+    "blob_sha1": "c70b03569e468c7afee652db64fad2198dfd2065",
+    "bytes": 194,
+    "classification": "documentation_config_or_code",
+    "sha256": "540606f3dd7c1ba35576bcc9f9b0a930a600e81e2f4f8abbb5b632b2cbc8b363",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/tokenizer/configs/tokenizer/havoc_tokenizer_70k.yaml",
+    "blob_sha1": "1e8ef020f4ea5685c4b95a8fc2f805f8966b103f",
+    "bytes": 306,
+    "classification": "documentation_config_or_code",
+    "sha256": "3eb0061710376ea0dbda439a059ef5d918c6ddd45e4a07c1eda1af01f724e9f2",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/tokenizer/default.yaml",
+    "blob_sha1": "f8b9bcff720f330533619dbf803f84c6d9f965ae",
+    "bytes": 5155,
+    "classification": "documentation_config_or_code",
+    "sha256": "66a939a2530fd630c15b370659468d9fdaa570883f81f6a34b367b55f9b4558c",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/tokenizer/havoc_tokenizer_70k.yaml",
+    "blob_sha1": "9cee84106ba595b42f56322a2609ffffe1894784",
+    "bytes": 1865,
+    "classification": "documentation_config_or_code",
+    "sha256": "ed19e68b97b16659348c09f0cc489c220b390fa6cdd19d08ab0d37f4d126235f",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/tools/default_tools.yaml",
+    "blob_sha1": "29b1ca4ae179a7c918cc636bab9984a7f04c00d1",
+    "bytes": 54,
+    "classification": "documentation_config_or_code",
+    "sha256": "4b839ab0f1bbd6ef68e94f0e19c04931f5bbbd212bdbf12ec9cfba8eb0b799e7",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/training/default_training.yaml",
+    "blob_sha1": "06ad936478be681c8ddba29465488c21a3c1fe1d",
+    "bytes": 4120,
+    "classification": "documentation_config_or_code",
+    "sha256": "91bba478662ef14ec3b4ebe5b11c33d09f8fd2c2d8bba5215afe165277a16c08",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/training/havoc_7b_phase1_stable.yaml",
+    "blob_sha1": "5e6a4b97f301dfe026998e088170d397c34c15ec",
+    "bytes": 4725,
+    "classification": "documentation_config_or_code",
+    "sha256": "f4c00b7301a75f50a507cd052c5fba611c14ffe7f56df7417d3fbb02d6cbbe10",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/training/havoc_7b_train.yaml",
+    "blob_sha1": "4831a91e685ab0f6ec6b33288f53ddf923298028",
+    "bytes": 4160,
+    "classification": "documentation_config_or_code",
+    "sha256": "9f62411264c01acd4f8e432bb84ef92977376f15e44b5882c9a823f6a2669f2a",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/training/havoc_phase0_academic_2b.yaml",
+    "blob_sha1": "28f3a59028c9380281fae0752264e5373fa55363",
+    "bytes": 1214,
+    "classification": "documentation_config_or_code",
+    "sha256": "b1fb0e987a7852cdd46ffa84854a7f818c95ded930fa91c5a593fa436a5d29ab",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/training/havoc_phase0_complete.yaml",
+    "blob_sha1": "b601095d615fe72095a4f6fad0ddc1309f044628",
+    "bytes": 2775,
+    "classification": "documentation_config_or_code",
+    "sha256": "2e0a3afd3f4c1919ea696108ec19381cd7eb845c8abc1a19e1d2ed05a5b9da81",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/training/havoc_phase0_full_pretrain.yaml",
+    "blob_sha1": "e7316ef42c42fa33960e78a0fd33445f5588b240",
+    "bytes": 1242,
+    "classification": "documentation_config_or_code",
+    "sha256": "74e318b472b31d8f99b6c3f8d59e026c2830eccff23fd3e56cbba4d5d3a074d7",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/training/havoc_phase0_havoc2b_local.yaml",
+    "blob_sha1": "178643da9d19e9ed95f6e5a8d0cd24fe6d0d4711",
+    "bytes": 1286,
+    "classification": "documentation_config_or_code",
+    "sha256": "fd5f0da92eed3a2567604220a382f5f9fd6c637316c78dba07598e072cfd2ca0",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/training/havoc_phase1_sft_2b.yaml",
+    "blob_sha1": "805d52acdb22c0d62f1ac1198f1e47b7879e43eb",
+    "bytes": 1225,
+    "classification": "documentation_config_or_code",
+    "sha256": "d9087816bb1c409a4ea70e9a03dd9e76f6df8d34a91e2453ea81a49d5da8e48d",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/training/havoc_phase1_sft_3b.yaml",
+    "blob_sha1": "c10f9a21b5e63b683f66813634f4d3861f9e6399",
+    "bytes": 1531,
+    "classification": "documentation_config_or_code",
+    "sha256": "d73f0f4e098e179bee9394e046e50173157be3e21d0ad26f63defb6afa064f86",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/training/phase1_general_sft_full.yaml",
+    "blob_sha1": "4b899f8e2b7ae69553b34dad5880f164909c13df",
+    "bytes": 1299,
+    "classification": "documentation_config_or_code",
+    "sha256": "bfabd9a26510eeaa928100ebe33b82919f670a6d7ebab24b0a0b92fbc8c64ba7",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/training/phase1_general_sft_smoke.yaml",
+    "blob_sha1": "90c41b5ed774115d21a4ee564cc1ad74b66b36d0",
+    "bytes": 1041,
+    "classification": "documentation_config_or_code",
+    "sha256": "290658ffbc0d097b26564b7d4e4b767b24b88a6716545c4e4b1718b76fa280cf",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "configs/training/pretrain_chemistry.yaml",
+    "blob_sha1": "fcd518ce06faaa93c30b49be7063008fbdf7d8c1",
+    "bytes": 2222,
+    "classification": "documentation_config_or_code",
+    "sha256": "ec8e07448f089a455c10fe018aeeaced9f84313280cef76515ccb1d2531d22d1",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "fix.py",
+    "blob_sha1": "d6f2c4dc3395b88e950ec2b136c4278fbcd50840",
+    "bytes": 9400,
+    "classification": "documentation_config_or_code",
+    "sha256": "defd8f0536be5d62443d3836b327e2e32e3b1ec4b1b76f8d28fbc0c6463dcc49",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "frontend/.gitignore",
+    "blob_sha1": "4108b33e7b3aae71ade8d7e209a72f99f17c3485",
+    "bytes": 277,
+    "classification": "unsupported_or_generated_artifact"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "frontend/README.md",
+    "blob_sha1": "296ef7ac392c1c5badb6aa93e230a38ddb805f6a",
+    "bytes": 7098,
+    "classification": "documentation_config_or_code",
+    "sha256": "a8f79804c642b7ea6f28d6e214dd62b9eb7eeb654af344b04d204da2b07c9c0c",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "frontend/index.html",
+    "blob_sha1": "9b29a3f030cb3074da8b5ebf6f420c131b608457",
+    "bytes": 657,
+    "classification": "documentation_config_or_code",
+    "sha256": "5c9f78438986424dc01c8ce8a5db6ee17843d0fd22011b8b6d0ab9f93da728bb",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "frontend/package.json",
+    "blob_sha1": "ea81b2106657b06e6eed48179380829eb2159205",
+    "bytes": 1112,
+    "classification": "documentation_config_or_code",
+    "sha256": "d234f64ec82f3efbff30c63f87cd808dab0bc3db33fb217e694a96dc4c2fc6b2",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "frontend/postcss.config.js",
+    "blob_sha1": "5eec88dd73470d5c00fc354be7a55d89ffe7c573",
+    "bytes": 86,
+    "classification": "documentation_config_or_code",
+    "sha256": "374f669f08b18e67d0a7264fa45b71228017e604fe7f6db8a5c1bd5ba27e5c98",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "frontend/src/App.jsx",
+    "blob_sha1": "41188d49c4c782cd089137922c6630e2ec6e0b4f",
+    "bytes": 8695,
+    "classification": "documentation_config_or_code",
+    "sha256": "bd9285b3faf7732bb2f64431d26ce6a75c56834e6d2d9f9a5639d4d47dbf7a80",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "frontend/src/components/ChatInput.jsx",
+    "blob_sha1": "791fb880b2d83334e9a47ceb2b1f0deec7571803",
+    "bytes": 2111,
+    "classification": "documentation_config_or_code",
+    "sha256": "eaa0c7866b919eb5dcd9fa29017595703e418e0c8eebd10c840d1842772d96d7",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "frontend/src/components/ChatMessage.jsx",
+    "blob_sha1": "981dd002bce1a894c3a238b881854c19def79dbc",
+    "bytes": 1561,
+    "classification": "documentation_config_or_code",
+    "sha256": "0d1f1cc2d0fc0a74a0ecff69c0e3bdfb4817c5dbc7355eb5d8846bc8e650fc22",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "frontend/src/components/MarkdownMessage.jsx",
+    "blob_sha1": "3c8100cfe2cf96ba5e426ebc6df64c42a202d981",
+    "bytes": 2329,
+    "classification": "documentation_config_or_code",
+    "sha256": "a2fb3c5bce68bd48d8caf51574e92b03980366f270cf9a5f3dd74c3dc09d57bc",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "frontend/src/components/Scene3D.jsx",
+    "blob_sha1": "e701533ab7c9de9adb7e98193ffac725ecfad50b",
+    "bytes": 3478,
+    "classification": "documentation_config_or_code",
+    "sha256": "4f612525d49d7b65be432ae6d6ea9b3efe809cf0e56d9e9b591cc14c59a48ef4",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "frontend/src/components/Settings.jsx",
+    "blob_sha1": "b1a61cc4b6229a4010ae70090339ea3d02ddfd6a",
+    "bytes": 7205,
+    "classification": "documentation_config_or_code",
+    "sha256": "6ffad890a348a0372f8788cee116907b8e19e4f20e0ac64efaba2d297f5b5904",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "frontend/src/index.css",
+    "blob_sha1": "ebd53d3ee6472520f8d3e73c94cce4528fe88212",
+    "bytes": 2523,
+    "classification": "documentation_config_or_code",
+    "sha256": "1137f12efe7f2bb1c01bdd1774e56922369da1e90c9e9a968f9581377de7f970",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "frontend/src/lib/api.js",
+    "blob_sha1": "10235202b9ccba605ee3bbb889961fe993ad97e0",
+    "bytes": 4700,
+    "classification": "documentation_config_or_code",
+    "sha256": "741a40211e82332894867957426e79ed31de524c7ab0650f42b1ac311b887e72",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "frontend/src/main.jsx",
+    "blob_sha1": "0c8bec948eb314302bfc7b2770904e5cf4d366bb",
+    "bytes": 245,
+    "classification": "documentation_config_or_code",
+    "sha256": "6bf20ed84acf549812a5aca0ace32c7fdbbc1a9e93897e240aaa69cd10964844",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "frontend/tailwind.config.js",
+    "blob_sha1": "7ca8eab6c890c59865a32ff9f607a4091b0e8c5a",
+    "bytes": 877,
+    "classification": "documentation_config_or_code",
+    "sha256": "d1c5c772927256da307f866282a3d4be3ae22a13c8b4b91162cbe1b5e60793e0",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "frontend/vite.config.js",
+    "blob_sha1": "fef8748e021f62955ef4578735821bb894d11106",
+    "bytes": 347,
+    "classification": "documentation_config_or_code",
+    "sha256": "ae38309159f5bde04df76ef6dc4d6ed7e88441f19ad183cd9b4927ef09a8e801",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "havoc_pretrain_forge.py",
+    "blob_sha1": "607e8c7cf0183db466aa0c77c0e776f189e89ea8",
+    "bytes": 6671,
+    "classification": "documentation_config_or_code",
+    "sha256": "6ea3d083140e9d4385744b58e948eb7c1c3ef0cc7c7d1b287e7e4b6b2377ea9c",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "list_file_types.py",
+    "blob_sha1": "c1eee6b44b9479589af83883d4dcd77e980476fe",
+    "bytes": 940,
+    "classification": "documentation_config_or_code",
+    "sha256": "9efa8cd754463cdfa58dbe10408b0d29507003063559fe51e82a73e3438d7dd0",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "logs_phase1/metrics.jsonl",
+    "blob_sha1": "172eabeab103ec732ce8f774c1f1e42b5e1d5d31",
+    "bytes": 318756,
+    "classification": "training_log_or_evaluation_artifact",
+    "sha256": "7198e997b56b260ab0710b07cb363488c0952fc7d7c2c48b9cef126ac70bde34",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "logs_phase1/train.log",
+    "blob_sha1": "b0c98f3b36fbabb9427298bef44c0fc7dd1242da",
+    "bytes": 384999,
+    "classification": "unsupported_or_generated_artifact"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "logs_phase1/val_examples.jsonl",
+    "blob_sha1": "099c8a91a1853aa7cb2eae30a9f3d5e3f6f1fd01",
+    "bytes": 98298,
+    "classification": "training_log_or_evaluation_artifact",
+    "sha256": "8bdc808fff2895c2f7c638e8d89a3998d64294c53a00ac0e2f72775ddfd89646",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "pyproject.toml",
+    "blob_sha1": "37f189b631dfc797947e607af79f840824941d79",
+    "bytes": 1024,
+    "classification": "documentation_config_or_code",
+    "sha256": "3e62035fcfbcfa4802952654884ce383b323da8d9d2ec5757fece776839d2001",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "repo_layout.txt",
+    "blob_sha1": "1af0bda00f3aa93b0619a65552f7a12a086c568b",
+    "bytes": 3747744,
+    "classification": "documentation_config_or_code",
+    "status": "fetch_or_decode_failed",
+    "error_class": "UnicodeDecodeError"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "scripts/chat.py",
+    "blob_sha1": "a9be1522c8f12ec2a68d028d32820641c816760b",
+    "bytes": 13193,
+    "classification": "documentation_config_or_code",
+    "sha256": "f6d51fe0505e61193b042b0f9e1e0a6c8621b9a0ec9f0b14b3fc930111fac0b3",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "scripts/demo_havoc_prime.py",
+    "blob_sha1": "c2fae0e27a33463281c2b84fa18eeb16e923431f",
+    "bytes": 2776,
+    "classification": "documentation_config_or_code",
+    "sha256": "0fe23821eb0cb314b216c45308a4dbf5a430e04f30df621ea1907c0c3e2c6e39",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "scripts/demo_run.py",
+    "blob_sha1": "c6b4e779d983a1775f759610a74a65d4e6703fb6",
+    "bytes": 315,
+    "classification": "documentation_config_or_code",
+    "sha256": "f90349ab01abef1b8ec5fd2a82fded06df97edfa3aaace3e9817753d20b52aa9",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "scripts/dev_checklist.sh",
+    "blob_sha1": "5db65247d64405489fbf25c29ea7227e96ad7cae",
+    "bytes": 152,
+    "classification": "documentation_config_or_code",
+    "sha256": "5d7cb1998de35c5dba2cc42ac251e8f9d4cb22a2f9a4210239e80ab862f268d1",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "scripts/phase0_train_tokenizer.py",
+    "blob_sha1": "a64e5806e628b88c1b751e6a3683ebc4cbe09bf5",
+    "bytes": 4277,
+    "classification": "documentation_config_or_code",
+    "sha256": "e4e78026818e93ca22baecb15d05da91d7dcf23e034240d8ea31df2bd3d4892c",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "scripts/phase1_pretrain_7b.py",
+    "blob_sha1": "baf986a9fd23385c810293405eeb918469d0163f",
+    "bytes": 12236,
+    "classification": "documentation_config_or_code",
+    "sha256": "4afb005bed8f13086bbedbc182938e6ff331274144862858c268a0d6079f6bd7",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "scripts/phase2_sft_7b.py",
+    "blob_sha1": "bfdf0d778eedd8fa7bcde6851d5f191621542a13",
+    "bytes": 7083,
+    "classification": "documentation_config_or_code",
+    "sha256": "30fd8078893497092ab2ef1d5a7feafd2aa87f119576ccd51597023c7b1a4349",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "scripts/phase3_polish_7b.py",
+    "blob_sha1": "c4cd11b3ac4a9e9e2e770f8d99d3cf07b290a787",
+    "bytes": 7787,
+    "classification": "documentation_config_or_code",
+    "sha256": "280bfb9fb5ae7d37c37764a67a3cda0ea2f0258520b458ea9ecc6773f3e9c04f",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "scripts/pretokenize_data.py",
+    "blob_sha1": "48057e68a39e17fbd683f55260f3f24fb78c1476",
+    "bytes": 2347,
+    "classification": "documentation_config_or_code",
+    "sha256": "2e1ba9b22fc7bac14acc5c374efd600899040356ed5703160624eb7ab0176bb7",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "scripts/sanity_finetune.py",
+    "blob_sha1": "110f9d25bf103650a0bb4148da067428335e637e",
+    "bytes": 11851,
+    "classification": "documentation_config_or_code",
+    "sha256": "a16c575c7c561f804245b00625544634f98c153ec953a7228b53b5af85b671a4",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "scripts/serve.py",
+    "blob_sha1": "96f7cf57a94a7001f17186ce61665cece5b880f1",
+    "bytes": 4991,
+    "classification": "documentation_config_or_code",
+    "sha256": "a0d93778821247c6116ea9e5468020dc119abc63383e5db3190083bcfed1e3c3",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "scripts/train.py",
+    "blob_sha1": "e64a63caa495e6c9ae12252f716e4f466d3ac85d",
+    "bytes": 15696,
+    "classification": "documentation_config_or_code",
+    "sha256": "1a65c2500f407b1e75e315b82ccffccc1fcee77962bbc8e0f727749dfe8f4983",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "scripts/train_tokenizer_70k.py",
+    "blob_sha1": "5cf5cc5474289198ff008f6b198013ddad52a86a",
+    "bytes": 10021,
+    "classification": "documentation_config_or_code",
+    "sha256": "ee7f2ecf7e89937cc2dd58c57029003f7286110149af91dfc5f17dae10a95dc7",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "classification": "candidate_dataset",
+    "sha256": "10fcd013171449ba215930ac29cf8a609123ce5fecb0297d4519412e615a20e8",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "classification": "candidate_dataset",
+    "sha256": "31dab3fc71813d9397130109340172c9974475c2cee7da3afb86815bdcb15de1",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "classification": "candidate_dataset",
+    "sha256": "4ba2a96788a5efcaef751e3a0ced5fabafdc8382e866cfa22a6a585c21b036e1",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "classification": "candidate_dataset",
+    "sha256": "cf6687a940a14597d1f3633795bef12669b3cff7118fc481b3b0721c2624f83e",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "classification": "candidate_dataset",
+    "sha256": "5ff4115a1cb3046b4968a4fb1802bb43bab297aa6b0f83d4fdc687e8041c1e92",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/tokenizer_corpus.txt",
+    "blob_sha1": "e7ed5dbfa96bbb2ea5f44c026b0c1393da763633",
+    "bytes": 34813,
+    "classification": "tokenizer_corpus_not_sft",
+    "sha256": "0d2fe299b48feace78ff6b55c7c9103065006216236c89dd4aa416bc72d8c809",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_cli/__init__.py",
+    "blob_sha1": "c6452bf969f3a3b496ed519b73f0f147e5787fad",
+    "bytes": 154,
+    "classification": "documentation_config_or_code",
+    "sha256": "2c0e528ef6edafdbf600a9117f4ce0f5d79c6fae71ff5060de363866f350530d",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_cli/__main__.py",
+    "blob_sha1": "7edd48f00b98ea2ef2d77fe7d494d02db3379ad6",
+    "bytes": 151,
+    "classification": "documentation_config_or_code",
+    "sha256": "97f936658a0ca253a73a4aa4ccd80b6cacc80716b475a5d2d914d378aff322ca",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_cli/main.py",
+    "blob_sha1": "0c5fd7bb26556d1481ade547e7acc52ad861f489",
+    "bytes": 3158,
+    "classification": "documentation_config_or_code",
+    "sha256": "e24e556eca45b657dddc394b2ab039423eeacaab76617e78c37dfda78d6cdd1d",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_core/__init__.py",
+    "blob_sha1": "3942885970b177eb90071267c660e3611203abb1",
+    "bytes": 1062,
+    "classification": "documentation_config_or_code",
+    "sha256": "99638ebcca8ff225378fa76c93a284cee0c12b50b221a61282be6e9aeeb2dbd1",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_core/attention.py",
+    "blob_sha1": "86144bc9eecc7bea83d237cd1dc234442310f5fd",
+    "bytes": 380,
+    "classification": "documentation_config_or_code",
+    "sha256": "bb55b6f8dc4b993ae181c53565bb7e2e860713bac46772edd643f706c5880b80",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_core/config.py",
+    "blob_sha1": "f59defe88ae4e66c267f2ed68806063d7d034f67",
+    "bytes": 5985,
+    "classification": "documentation_config_or_code",
+    "sha256": "c5975158fa539aff86eb899c7e401ee2757d6813b34271cd7f30afeb824db197",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_core/config_7b.py",
+    "blob_sha1": "1257b10d589aab4c6b455f49f14c12c3c69e1773",
+    "bytes": 11251,
+    "classification": "documentation_config_or_code",
+    "sha256": "4d77826599b5741e1ec7c6f5004c916cd664cb5d0198c7a0720db2d6e602a400",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_core/mlp.py",
+    "blob_sha1": "9db373d5f3c981baf2c58de02d29719b64e0ae5e",
+    "bytes": 184,
+    "classification": "documentation_config_or_code",
+    "sha256": "8c745b84a85b713e185c9c99d63a4aa1c03dc7c8b5804fdde41a932cfd6aa7f4",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_core/model/__init__.py",
+    "blob_sha1": "8c339d28dbb80eb0bec5d51b8dd21fce8ac00147",
+    "bytes": 473,
+    "classification": "documentation_config_or_code",
+    "sha256": "ed7c887fa50be71a52a59312c65d828ef0b7eb2e0bf3b117e3c425b030449960",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_core/model/blocks.py",
+    "blob_sha1": "4f2971d98cb0c3109da03b0f33c07b9501d41f1d",
+    "bytes": 7532,
+    "classification": "documentation_config_or_code",
+    "sha256": "9ee09345901392f481630e9ab46e1edde2282d5f95643f117d68ad36bb6d27f1",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_core/model/prime_model.py",
+    "blob_sha1": "d0c902267b98bc120acd3fcdad7a02619259b95b",
+    "bytes": 19577,
+    "classification": "documentation_config_or_code",
+    "sha256": "b76ff663ae612c4cf02e658b3f223a62fe9e42255c0753a30819a31907792b04",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_core/model/transformer.py",
+    "blob_sha1": "e472f53c23bee365c0f719b950fa0c720b6fb31d",
+    "bytes": 6954,
+    "classification": "documentation_config_or_code",
+    "sha256": "8001ee61d75f68b8cbdc6d2e0c2b853072100190854d6cc31ee021879eac0bdd",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_core/reasoning_tokens.py",
+    "blob_sha1": "6b2572832e6aab0912bb74d6ab10b7a1200ce906",
+    "bytes": 10987,
+    "classification": "documentation_config_or_code",
+    "sha256": "1eb7a9abff6e4d85f2a133b04d0167c780d6173ac465d73710652ec0310ef097",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_core/tokenizer/__init__.py",
+    "blob_sha1": "a9bccbc27a860ffdbf382da2d12fb55a8569a15e",
+    "bytes": 850,
+    "classification": "documentation_config_or_code",
+    "sha256": "83a97bffd5e64928d2267528adadb6ab8038106760632ea020498792f07cc793",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_core/tokenizer/tokenizer.py",
+    "blob_sha1": "c4e91a8bb55d41c26fca72f262929f2b9011c247",
+    "bytes": 3476,
+    "classification": "documentation_config_or_code",
+    "sha256": "b833cd3666c9c9c78b9c4db105cca2f503cfd79783c14ec09d72e0f555e49f15",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_core/tokenizer/train_tokenizer.py",
+    "blob_sha1": "938a1a0c8bdbae8e5c24b306a7934ac3eb52c2d7",
+    "bytes": 9292,
+    "classification": "documentation_config_or_code",
+    "sha256": "53724cf1b9444bfc706584ac0dfac007dc3ae3ccfb60711816eb4da4b4261a34",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_core/tokenizer/vocab_utils.py",
+    "blob_sha1": "b70991e3dd4c64f26913667481ee2f82bb6756f2",
+    "bytes": 8276,
+    "classification": "documentation_config_or_code",
+    "sha256": "b6c7428d1cc5371997e62041bab14e7fa16f0e5a7e773c787ebe5a37b4a0d40a",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_core/tool_interface.py",
+    "blob_sha1": "75a04ab73b234405d28701c1c239f2980a5cea43",
+    "bytes": 17882,
+    "classification": "documentation_config_or_code",
+    "sha256": "930e6279a6dd5a1f98fd297aeec3feb840ab1cb98b18dc380b41ace433bc1cd6",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_data/__init__.py",
+    "blob_sha1": "aec14c0874127f508ff81bfbe7e782db209d5177",
+    "bytes": 951,
+    "classification": "documentation_config_or_code",
+    "sha256": "2bebc3ebd6ae65e62fbff0077731a97ea726daa7ff00cbc7c10bd498ad0eb7a9",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_data/build.py",
+    "blob_sha1": "157fc54f939974fa1fe7041916b55785dd762e4c",
+    "bytes": 3212,
+    "classification": "documentation_config_or_code",
+    "sha256": "d955d7104a022565fd94dd866e648f5766c3e879d9c485ad08f35da7854929b5",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_data/dataset.py",
+    "blob_sha1": "3b4aba2436691c38111d3d33ced0a9714641d83e",
+    "bytes": 6312,
+    "classification": "documentation_config_or_code",
+    "sha256": "0bcbeaff85205f43135271ebc6647b260155a4ed897cf9aeb1693b1d5392a133",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_data/preprocess.py",
+    "blob_sha1": "d9e6a74f718eb7d816aa1a9d1b67fd9cbc296d94",
+    "bytes": 3241,
+    "classification": "documentation_config_or_code",
+    "sha256": "e4cd47e25476b30f16b6a358fc1072e58ac679bcc4cf18441cf3ec40ee278a69",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_data/sources.py",
+    "blob_sha1": "8c5a2b5f99e88a522c075bc005e10da93312b372",
+    "bytes": 4141,
+    "classification": "documentation_config_or_code",
+    "sha256": "019f72d46d9e10fd941e9b1adefe7ad45bc50729c9891370e126378c471bacaa",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_eval/__init__.py",
+    "blob_sha1": "3bf389f4660f014d032dc4990ac829654223212b",
+    "bytes": 323,
+    "classification": "documentation_config_or_code",
+    "sha256": "19117d12a5e0897f18c7d8d95ccd7802cd20c40f88cf73caed44710f06bde420",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_eval/benchmarks.py",
+    "blob_sha1": "4fd707eed4c46b3205b44594565a977d72561a94",
+    "bytes": 627,
+    "classification": "documentation_config_or_code",
+    "sha256": "db86a2552b2ccbc25934ce62f8927c5af9a8b8b45b670475a93097738a7679c2",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_eval/harness.py",
+    "blob_sha1": "c775bb1689e2e1ed2ea380b3f4edfc02b87b1e88",
+    "bytes": 737,
+    "classification": "documentation_config_or_code",
+    "sha256": "8ec9be4f255f2b94e88395acd162686b3cf5966798790663de8fd640b1f4cee7",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_inference/__init__.py",
+    "blob_sha1": "dd57a6eb4102a1e0336d54335414372eb8939a23",
+    "bytes": 146,
+    "classification": "documentation_config_or_code",
+    "sha256": "a3c9822f28b333e46ffc841188b6e71e6fca74f81ff76d5d6799a573efe28928",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_inference/__main__.py",
+    "blob_sha1": "f8c11474a5291108c9aa96e2a134e1a899de107c",
+    "bytes": 453,
+    "classification": "documentation_config_or_code",
+    "sha256": "91c0763f1c2087fbf91b663e8ea6b0738062a9f15099c4262581e26410dacdfd",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_inference/engine.py",
+    "blob_sha1": "d4766ce21d86640bd02beb8cdaac978aea022178",
+    "bytes": 15011,
+    "classification": "documentation_config_or_code",
+    "sha256": "3eebfcf5f92bf55859cdbbd7d6b2b5eb4ed92e850f7c7cd392e5297d1d9e9c99",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_inference/server.py",
+    "blob_sha1": "3b2738cb340ba47ea703b17ec761991e0ab9772b",
+    "bytes": 12367,
+    "classification": "documentation_config_or_code",
+    "sha256": "21a328994c9d066efbda69d5b8233f5b4f1d17bba01b30d403eef6d69f48f534",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_prime/__init__.py",
+    "blob_sha1": "08e22f7565e34669b7987471f91dc6452a4b5169",
+    "bytes": 2700,
+    "classification": "documentation_config_or_code",
+    "sha256": "24e9e207feca4c18deab79748acea09f20cb5952f4439917e4093ef48c732088",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_prime/adversarial.py",
+    "blob_sha1": "551a55b84ec526880e34fa4a146c72b28f7f90c6",
+    "bytes": 13966,
+    "classification": "documentation_config_or_code",
+    "sha256": "87ae8d089a1d68848488b6f738c294cec8e5985ed9f16b8c14c17f7e2c7cf11e",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_prime/chrono_loop.py",
+    "blob_sha1": "aee74e63907d6d4ff95e118d1468b13ed9e97ded",
+    "bytes": 6236,
+    "classification": "documentation_config_or_code",
+    "sha256": "6e4bd51424996e24636a6e021a71b658b1e1d89e197e9217c9f9e8b704e1a604",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_prime/compression.py",
+    "blob_sha1": "2a03d260316fe1caa0acb8a581dc03ef4823be9e",
+    "bytes": 5846,
+    "classification": "documentation_config_or_code",
+    "sha256": "af5fca31e165fdc97a238cd11b3b8cf76d679b050741b5dffd8791536103dbf4",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_prime/constraints.py",
+    "blob_sha1": "6cfec20036cc47c93dd5a1a2536c784bac47c820",
+    "bytes": 6899,
+    "classification": "documentation_config_or_code",
+    "sha256": "2ca04ea826351e147e2589abd322c8dbf11f37e7452916ca9f76031bca871a06",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_prime/operator_graph.py",
+    "blob_sha1": "0fa79174e73adf4171f30040bdc8fd31075a9120",
+    "bytes": 12934,
+    "classification": "documentation_config_or_code",
+    "sha256": "1796089638da802a66772f20ff6599581c4db689350b9dfe787951500f0f730a",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_prime/orchestrator.py",
+    "blob_sha1": "6f9f3c4a6e317489c4c8f6248ebb3dfd8483571c",
+    "bytes": 12611,
+    "classification": "documentation_config_or_code",
+    "sha256": "9ed7b2025cdd9b26d751032747e59de38b28b43a8dc3ab118f0c0a959b25d245",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_prime/router.py",
+    "blob_sha1": "e28d8588f5ba3d8535e8d8838cfa2cec6dc64d96",
+    "bytes": 8403,
+    "classification": "documentation_config_or_code",
+    "sha256": "947cab9cd5c8bf25a686aa89f78171f49291db33c094cacac7bb943b2a6a45dd",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_prime/verification.py",
+    "blob_sha1": "d140cd77c4e89839ce146c58fe1a5463c1281bff",
+    "bytes": 3938,
+    "classification": "documentation_config_or_code",
+    "sha256": "e648a5434564232570e69df2bf628b81835fcd81eb7138d11a859dedf827efd9",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_prime/workspace.py",
+    "blob_sha1": "7aa2b2887934dbe31dd10877c3ca006ce778e761",
+    "bytes": 5846,
+    "classification": "documentation_config_or_code",
+    "sha256": "419a2647b1eb0745a67b15294017e7561ef73ff04881865af8ff99cc83ac6112",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_rag/__init__.py",
+    "blob_sha1": "c04df6d07569afe8f8634955937c7cba9f3aa504",
+    "bytes": 349,
+    "classification": "documentation_config_or_code",
+    "sha256": "6163b86d2dc3a689110b1529e64c3f8bd3a93e3657a1a681e81523b8ecd9ed5d",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_rag/embeddings.py",
+    "blob_sha1": "8da0e6e376dafb2cfc31519c455384ab52133c8a",
+    "bytes": 460,
+    "classification": "documentation_config_or_code",
+    "sha256": "c6a665242b9da956101169f1ce3fcde3625f211fb82416cceef88caa7decf797",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_rag/index.py",
+    "blob_sha1": "23ba94542db1861c604559768c9b3a37fc36f2b0",
+    "bytes": 814,
+    "classification": "documentation_config_or_code",
+    "sha256": "d71f6bca25b829caa93b867d9238844d1b14d34b748f671678b9fd42f7cf8d6e",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_rag/retrieval.py",
+    "blob_sha1": "2dba402ccdb05e043615b25530018eb01b04772e",
+    "bytes": 820,
+    "classification": "documentation_config_or_code",
+    "sha256": "cf34816226ec3a5eefae5c12969d970de4ad8a2ff919b379ad32b92c66f6396f",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_srs/__init__.py",
+    "blob_sha1": "d8c70ca9d66b4af19b02ee4386f77422eb0ee065",
+    "bytes": 1055,
+    "classification": "documentation_config_or_code",
+    "sha256": "7fc2afc2c9a4c6952bc99fc4109ff9f169161701ff63ac3bc44db6c3d66d02b1",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_srs/answer.py",
+    "blob_sha1": "c25fc3f8ef8b1465b4bc2296398edaa548250057",
+    "bytes": 10358,
+    "classification": "documentation_config_or_code",
+    "sha256": "b61199cd98e0517e74000d8dc31d76791f765146e9a82aa429e1b630863dbb87",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_srs/arbiter.py",
+    "blob_sha1": "0530926be03b7d5fb2416c14e11b5d9f9583b2f9",
+    "bytes": 5162,
+    "classification": "documentation_config_or_code",
+    "sha256": "c32d6a4dff772a241f8698cba40bf180c745678d7f5829506fd0232f7d501c4a",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_srs/argue.py",
+    "blob_sha1": "421fcac605f68c0d81f4c12874fcb8c2e7ca4665",
+    "bytes": 5424,
+    "classification": "documentation_config_or_code",
+    "sha256": "22882f43b2f5351f071a34df0f1195cf4053a72484242f3ffbdfb611ce0693d9",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_srs/audit.py",
+    "blob_sha1": "0d9bb6c1b4da8f471343292e3c132fd38d37c9bd",
+    "bytes": 721,
+    "classification": "documentation_config_or_code",
+    "sha256": "192d38c5e3a16a978321ee9d825fc8d6f481bf92ecddead4b52cf403ec92fe66",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_srs/execute.py",
+    "blob_sha1": "568fb2873a12081558472fcdf31f1b325b11795d",
+    "bytes": 7425,
+    "classification": "documentation_config_or_code",
+    "sha256": "0bdf76b7b7cb2132f15bdc1bbc1f9b95d63149c64a242cd142a87737062bc981",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_srs/ground.py",
+    "blob_sha1": "40d99787e9cc0661eba8b4c360bce756e2c1983d",
+    "bytes": 505,
+    "classification": "documentation_config_or_code",
+    "sha256": "beb2d193e817392ca565ad47c1cf4ee3cc8cf73d86f541aa2971e65691248da4",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_srs/mode.py",
+    "blob_sha1": "d8fcbca3b787f1f69a3723235cda366095cbb92d",
+    "bytes": 1298,
+    "classification": "documentation_config_or_code",
+    "sha256": "cf0cb6d1666fe7debf61004334ed9f206a59277a0c8b1774a38426af16deff54",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_srs/orchestrator.py",
+    "blob_sha1": "ed2e8a946cd8b0d97e593a945b9d92810b4d6cf2",
+    "bytes": 3164,
+    "classification": "documentation_config_or_code",
+    "sha256": "82288c2cdccafc45c562a6e5c6d3f01ea7af6eec610a750d73ec97b13aea049c",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_srs/plan.py",
+    "blob_sha1": "46ac381927e12865ce1f397051bb1305bbb4d7ed",
+    "bytes": 1115,
+    "classification": "documentation_config_or_code",
+    "sha256": "aebfb9d7dd2b9e25e279d41099fe45d93b48268d315904e9cdc74786f72f8c5a",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_tools/__init__.py",
+    "blob_sha1": "63cddbef7cd1546d65edb5c5eb7b7abc0a3a0713",
+    "bytes": 529,
+    "classification": "documentation_config_or_code",
+    "sha256": "5f30d2509bff966b0f42c965d67b9f276f7863fc90e6622880ea019d9a2e622a",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_tools/dsl/__init__.py",
+    "blob_sha1": "c2bf19c9c6d24df3cee25d2f9c9fc9ac727498ae",
+    "bytes": 473,
+    "classification": "documentation_config_or_code",
+    "sha256": "0af8c824788a93e295063a6f0529b941d91acd2b4e8ff98aa03919127a2b5cfc",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_tools/dsl/executor.py",
+    "blob_sha1": "38d6d557bf5b264045822b26f6240aede48dbd3d",
+    "bytes": 7821,
+    "classification": "documentation_config_or_code",
+    "sha256": "fa419c7b6b5c89ea32af438128d00e98e39f45922dcb6e60e914489a019361d1",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_tools/dsl/parser.py",
+    "blob_sha1": "3f00b84957e25795f1aab43a7ada1d28c1382364",
+    "bytes": 3480,
+    "classification": "documentation_config_or_code",
+    "sha256": "c4bd9b41d7270e403ac22ce6f2713a5f0d61dc63e516008be0c6d7e868a285e7",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_tools/dsl/spec.py",
+    "blob_sha1": "444f19187d635e1b7e01a839b8656c726f335a6f",
+    "bytes": 2035,
+    "classification": "documentation_config_or_code",
+    "sha256": "55ca25298d1c34a861d73be3df2a183f7ce80f5345c64ece08756c85a7523b13",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_tools/python_math/__init__.py",
+    "blob_sha1": "49064b682c3c998fba23e12cb952b936fbec7c9f",
+    "bytes": 180,
+    "classification": "documentation_config_or_code",
+    "sha256": "ca57ddba30aa2162df217e8ea0bdf61f609b4430af256ae728153994bf793ba7",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_tools/python_math/engine.py",
+    "blob_sha1": "fda0787b771e9173705a854543eecc14ec093185",
+    "bytes": 12161,
+    "classification": "documentation_config_or_code",
+    "sha256": "8fa1f1ddbb8233d86171859a883fa7d4d3cae471052295fcbb3af4e794ffe818",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_training/__init__.py",
+    "blob_sha1": "6d64898a3d0f25f5424b4bc73148aceea0711ff4",
+    "bytes": 69,
+    "classification": "documentation_config_or_code",
+    "sha256": "053a1d0a7ff4d499dda22099bfcb14b56e259e28616f9bc0ceb2006e0b4f06d3",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_training/__main__.py",
+    "blob_sha1": "d59551f2eaeaf501e79acc003272ba8548e8fe26",
+    "bytes": 436,
+    "classification": "documentation_config_or_code",
+    "sha256": "e266554562bc8fb94b24ac95217a3cee2ed780b3a03733b8346ff98f80a5cdd5",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_training/optimized_trainer.py",
+    "blob_sha1": "4cc6eb1889197c9064e4c31c504a639878b24e00",
+    "bytes": 19181,
+    "classification": "documentation_config_or_code",
+    "sha256": "bdf736496e3218c145af5d5325e34d2fb01478586ed118faaab8b09b0b7838be",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/havoc_training/trainer.py",
+    "blob_sha1": "477475b6dc7852057285536733a50f9016f5a2b4",
+    "bytes": 26572,
+    "classification": "documentation_config_or_code",
+    "sha256": "03e867866f4402880084c392f567be645b64b4ee3800e31be2e84c3059163a5c",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/srs_tools/__init__.py",
+    "blob_sha1": "70feeb46447a5cb50baffdca14ed93eb0542188c",
+    "bytes": 582,
+    "classification": "documentation_config_or_code",
+    "sha256": "34f2c480c96c6ed81acd7d385b23e4e6e1023da83cc7984ac562d06d0bcfbd1b",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/srs_tools/answer_formatter.py",
+    "blob_sha1": "ac76a857e2c115c4341a9417358c450202b9de2c",
+    "bytes": 11277,
+    "classification": "documentation_config_or_code",
+    "sha256": "930b4d56db56dcecb22d8258897fa6145b2dccb0472343fbce0d0b30755da75a",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/srs_tools/dsl_executor.py",
+    "blob_sha1": "0c72e21c1e15f0471f28ab5022576e5c9b7d996f",
+    "bytes": 4349,
+    "classification": "documentation_config_or_code",
+    "sha256": "a4b44f86dd96c762438a1011938d66da009d0b920bc1a449c221ccf8fbda1569",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/srs_tools/python_math.py",
+    "blob_sha1": "175bdc287f87d47fdbf03b42fddc70e990c12725",
+    "bytes": 5925,
+    "classification": "documentation_config_or_code",
+    "sha256": "aa13a1a26e2590d1c1258977dd32659b57ad6bb0c795b5b55ed6695ed8f22cb6",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "src/srs_tools/rag_helper.py",
+    "blob_sha1": "e27ef7bb4551a7e838efec8f05531706e7543acc",
+    "bytes": 4502,
+    "classification": "documentation_config_or_code",
+    "sha256": "59e31a0adc54b28834d087633f81ad5fec7b60ffad26eded4b53b3c20bd0c152",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "test_chat.py",
+    "blob_sha1": "af4c42009eb0c4024e9eb9d3664c59e241f9ff94",
+    "bytes": 2821,
+    "classification": "documentation_config_or_code",
+    "sha256": "12183b3e262b069b966ec0584dd98555c79b39b0e9c48fd0446bc5b629165ee4",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "test_smoke.py",
+    "blob_sha1": "fe74df089ade5505fa55b3111ebef0049c1365c8",
+    "bytes": 8164,
+    "classification": "documentation_config_or_code",
+    "sha256": "0888e56a7676d48c48a273e857f93c1ef6195f7e20cfba4a9dc9e859f4ec1b8a",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "test_srs_simple.py",
+    "blob_sha1": "4089cd81cbefbe145c57dacea283843c2a3d0bfb",
+    "bytes": 8474,
+    "classification": "documentation_config_or_code",
+    "sha256": "f3a053b6801ed241cd7ec66afc88403acb94cf7d722f239cccace085faa351ee",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "test_tokenizer_quick.py",
+    "blob_sha1": "d3838c9f6fabc057bc039dd5dd518246b3215f4a",
+    "bytes": 5067,
+    "classification": "documentation_config_or_code",
+    "sha256": "ecd3e547f6684c9e1f3bee92024f19f30602e5ba204ff3e82efa930c3159463b",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "tests/conftest.py",
+    "blob_sha1": "4f302b158764c913ae6ec2bf7c3bf43b0a8a991d",
+    "bytes": 120,
+    "classification": "documentation_config_or_code",
+    "sha256": "57028e90833cd0f1c9c636dd796a2a0b307ea39ef93d087103400eddf726de2c",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "tests/smoke_test.py",
+    "blob_sha1": "e1ef53df88027ba9fbfaad5ebb1e255566b28cba",
+    "bytes": 6115,
+    "classification": "documentation_config_or_code",
+    "sha256": "40783a27c8ac2d15b107945b0382ad49041b0c81d96a772ea40b96f216b84ed7",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "tests/test_7b_pipeline.py",
+    "blob_sha1": "0000e8cccd29732f85f13459aefeca14e08676db",
+    "bytes": 16138,
+    "classification": "documentation_config_or_code",
+    "sha256": "a7b9d1d7d2f522b5d68a2fdd74483b2f5f85b147235798d43402c6fc0816ca65",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "tests/test_config.py",
+    "blob_sha1": "ffeb97c513e8e9b8265fa99142abc43a3f9a4c9c",
+    "bytes": 523,
+    "classification": "documentation_config_or_code",
+    "sha256": "28f92d6634d1675f30b1f7c238b62c3bc269c62b499df105791670da6c34fd18",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "tests/test_data_pipeline.py",
+    "blob_sha1": "9b4a95e8b03bc70c02e15470ad959c053b434a2d",
+    "bytes": 2644,
+    "classification": "documentation_config_or_code",
+    "sha256": "f036631f1abbb2de47e250ea6fad3bb0396c3627dfa134e2cf37b5e1afdff989",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "tests/test_dsl.py",
+    "blob_sha1": "df80084a41e3ca6259e42c28597bf10a7bc8b546",
+    "bytes": 10604,
+    "classification": "documentation_config_or_code",
+    "sha256": "3b0b81cd67c792352b72cf7736256737d0284948eb207ec361b13c12dd09fe56",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "tests/test_havoc_prime.py",
+    "blob_sha1": "da832eb973d8547b13236fcb69b090ac972ec58a",
+    "bytes": 6578,
+    "classification": "documentation_config_or_code",
+    "sha256": "23b5bb18291c24bf7820aa9bc7659627ff3115b86ac2c38a28449ee7f881cb6b",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "tests/test_imports.py",
+    "blob_sha1": "d23008f160a4a07ea677ea20e712455ec63daf0f",
+    "bytes": 1959,
+    "classification": "documentation_config_or_code",
+    "sha256": "30b53957748f1b8e38bd7598471fe81718f8dab1fd3902df751e47ce7b921872",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "tests/test_model.py",
+    "blob_sha1": "c4df4e2d30d6b58511504e0bfc68063b848cd614",
+    "bytes": 10962,
+    "classification": "documentation_config_or_code",
+    "sha256": "03ddc52981a1a6f64e849c3a729e32f42ae75be1a05cf77a3c1551f1265e4295",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "tests/test_srs_integration.py",
+    "blob_sha1": "09b35de4eef2a4e286fb9d2429416a1b23e6f028",
+    "bytes": 13144,
+    "classification": "documentation_config_or_code",
+    "sha256": "3a3d351800b45858d21c891c880ce0aee80e945ad5f2eab13eb4317d5118dcf6",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "tests/test_srs_pipeline.py",
+    "blob_sha1": "f3367975421c449c9fd9edc50b5970e6f406e81d",
+    "bytes": 314,
+    "classification": "documentation_config_or_code",
+    "sha256": "befad8c2e8224ddad753ad42500809b05f5d28eb40881b92df7983b782447ca6",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "tests/test_tokenizer.py",
+    "blob_sha1": "7375e0e4fef68fe27badff3500b4775bea7045f8",
+    "bytes": 20849,
+    "classification": "documentation_config_or_code",
+    "sha256": "da48fce0dfb7f3863484e30bf58001039842c7394267b12f0394719684d130f3",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "verify_setup.py",
+    "blob_sha1": "484758d7832893bace8e4538952331c2d1179fae",
+    "bytes": 6671,
+    "classification": "documentation_config_or_code",
+    "sha256": "c6be547d0445a82057b13430d5b2ab7f6f8a236b955f484483f7a868a53403e2",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "-ScottsLaptop.gitignore",
+    "blob_sha1": "e489a984ad2817a980c4b0318acb69e3771b12e9",
+    "bytes": 779,
+    "classification": "documentation_config_or_code",
+    "sha256": "f1024bb70d5fec7e31b345712cfad7098be136d9ba880c8479f47a5492326054",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": ".claude/scheduled_tasks.lock",
+    "blob_sha1": "4084d8c1fb2585b332f76529c69528a1eb0fa071",
+    "bytes": 91,
+    "classification": "local_configuration_or_binary"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": ".claude/settings.local.json",
+    "blob_sha1": "b567052c6439d7b620f768cf1b6a78534f2d52ae",
+    "bytes": 382,
+    "classification": "local_configuration_or_binary"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": ".dockerignore",
+    "blob_sha1": "be63f38bdff52e39ab4b5d692d15980d1a2ab033",
+    "bytes": 376,
+    "classification": "documentation_config_or_code",
+    "sha256": "7996e802b84fefa15b3cd8ee4750eea5dbbfa3733324f81ab35e1be163aa5a81",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": ".gitignore",
+    "blob_sha1": "9e9b3a02416cfa25ba9663d9bd6699231121f0a0",
+    "bytes": 2313,
+    "classification": "documentation_config_or_code",
+    "sha256": "e6ea6f5de813b7abb29f2ca4baf65ae0e14ba39ee6835faaebc4825fae10d200",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "CHANGELOG.md",
+    "blob_sha1": "cc90b9bd10b0a627093d1c4ef65a9e7b31e1c4a2",
+    "bytes": 4802,
+    "classification": "documentation_config_or_code",
+    "sha256": "12bf946ca13a3c75102bd8f0244c17952a66bbf5aa183863d4645e3b3927a485",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "Dockerfile",
+    "blob_sha1": "d2f04a2544990b16ac700b8c2bf6682d9d300759",
+    "bytes": 570,
+    "classification": "documentation_config_or_code",
+    "sha256": "4f170625d3b780be7b4b29ba0dbf02f6b7040e32ebabb2862c05aefc8e4ca5e7",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "README.md",
+    "blob_sha1": "80845247648f822c8179d396430af3c4a668f062",
+    "bytes": 9274,
+    "classification": "documentation_config_or_code",
+    "sha256": "3ea8cefb35e0a576877c24a99b41cfeed4832133ae723b33027250a5f8653889",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "REPO_SNAPSHOT.md",
+    "blob_sha1": "ee70d721f5ac7873e4bee7eeac8504cbfaa829da",
+    "bytes": 56787,
+    "classification": "documentation_config_or_code",
+    "sha256": "963253f55396891c82cec26ed11a0efd9e4c1fdc792ddcd74f705fc3061e4215",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "chat_ui/app.py",
+    "blob_sha1": "2fea6f7acdd9bfd036ff190e71b348aa701d5694",
+    "bytes": 15214,
+    "classification": "documentation_config_or_code",
+    "sha256": "5213ae6eb642223bbda27802dea5b9760cc30e566e15c6e24e796408ef17a01c",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "chat_ui/nanogpt_engine.py",
+    "blob_sha1": "01b0a234eaa1350c9c2796d0905c4cd8c3f71483",
+    "bytes": 9366,
+    "classification": "documentation_config_or_code",
+    "sha256": "5114edf1cc1323261de09a8b13acd7bb161441564d19f2772c021b55744c14c0",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "chat_ui/reasoning_engine.py",
+    "blob_sha1": "6107c9d3bed250cadbf1ae617a74eb3aeb778831",
+    "bytes": 11098,
+    "classification": "documentation_config_or_code",
+    "sha256": "42408d32ec482823b369bda24a66bb9a2e747d4788f55ac562edb96b2cb717a8",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "chat_ui/templates/index.html",
+    "blob_sha1": "6576939a406fef2874c9ab2813f3689e0d38ec2d",
+    "bytes": 41015,
+    "classification": "documentation_config_or_code",
+    "sha256": "5230f5384310e702489b8dcde31ce2a102866354bfd5a2d9dfe6003dda140ce7",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "configs/havoc-50m.json",
+    "blob_sha1": "4f535afbb52a6bfcaaf44c79c8c669d7dbda814b",
+    "bytes": 1091,
+    "classification": "documentation_config_or_code",
+    "sha256": "ff4f4be64510a31fc37ddc552ed556751d468aea877a553941baeb4f7fbc8f89",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "conversations_audit.md",
+    "blob_sha1": "bf773cddfa45bbe9c7f63779e5140e28bf37da67",
+    "bytes": 22460,
+    "classification": "documentation_config_or_code",
+    "sha256": "f64b3f149b3808630e8a588d40ff63eacf205ed234c16bb223ff10becde8ed4b",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/prepare_pretrain.py",
+    "blob_sha1": "2f35512cf07c4858280f28d559221fd76d70cf67",
+    "bytes": 16444,
+    "classification": "documentation_config_or_code",
+    "sha256": "533c7004d34a027daed7d80b1ad6f4d115e56bd8ef797e071195209c0524b49c",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/processed_smoke/tokenizer_info.json",
+    "blob_sha1": "4ebe73c68cefce68078a6d4cb45436bc24adaf86",
+    "bytes": 833,
+    "classification": "documentation_config_or_code",
+    "sha256": "7ba663920c62a9ce816bd7128c22504c0d0c4d0a4450ffddd5066633a15d9bc2",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/processed_smoke_run/tokenizer_info.json",
+    "blob_sha1": "cece090033d6033b43460572a0553abba221ca18",
+    "bytes": 833,
+    "classification": "documentation_config_or_code",
+    "sha256": "e6c7cf4b9df60da11bbee5d3cb30b43540a9570a5a309e6e754e0f6bcb9fd6f6",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/sft_v0/all.jsonl",
+    "blob_sha1": "f1e56b60492e7543442e832f85d175406c92d4d2",
+    "bytes": 6980049,
+    "classification": "candidate_dataset",
+    "sha256": "3ab944cec5d522d926bacb9b9d777cbd8d63914b66a360fb0230d87aee194e07",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/sft_v0/train.jsonl",
+    "blob_sha1": "2aa7f82671fdb2da69aab9b61b7cae79c8ac79ef",
+    "bytes": 6640637,
+    "classification": "candidate_dataset",
+    "sha256": "9b91579242c80c26f98a7efc5724f7334d02b58eb6cab0ce6304a30a378711d0",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/sft_v0/val.jsonl",
+    "blob_sha1": "54285a33efdd1c492f64449624b7475ee981ab77",
+    "bytes": 339412,
+    "classification": "candidate_dataset",
+    "sha256": "87b23f3e79335ece55d27368b1357993e355522dc490042d8273978f8df91096",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/shards_smoke/meta.json",
+    "blob_sha1": "6b2dfb8be9838b9eea2301390e49f6b2f78a69c9",
+    "bytes": 480,
+    "classification": "documentation_config_or_code",
+    "sha256": "380e2382976994443bf30f08b4f9f19ab51f44e2e9ffb7b5e11e3082606c9de1",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "classification": "candidate_dataset",
+    "sha256": "e7c94728ae09eb2f962a042050b21e072f9f16389b4e95197e21d53613213a94",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/train_log_smoke.csv",
+    "blob_sha1": "3314eb45e16e85a189761c7d4c16da6512e5998b",
+    "bytes": 594,
+    "classification": "documentation_config_or_code",
+    "sha256": "02b59e03a2f4344096277fb6ce374fa14e3ace4b8f7e04d2376be810d90073c6",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "model/__init__.py",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "documentation_config_or_code",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "model/havoc.py",
+    "blob_sha1": "d9488a2098a9bf8aed38404fd1dd700ea3fab8a1",
+    "bytes": 9019,
+    "classification": "documentation_config_or_code",
+    "sha256": "b8baff5b0baad1d1dc7a234a52c2f6b35daea65326d989bdfbc6b8c573bc8cb3",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "notebooks/runpod_pretrain.ipynb",
+    "blob_sha1": "a00ac09c579122dd845e5b0571bb00abf3d762ff",
+    "bytes": 6332,
+    "classification": "documentation_config_or_code",
+    "sha256": "5c546e2dc6de83ded190c0d08b1fd9d1d1a4495f0d8f7347f618d18558af675a",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "requirements.txt",
+    "blob_sha1": "61a05977037c8f96c565bf5687bb6a1aa63d5f58",
+    "bytes": 1943,
+    "classification": "documentation_config_or_code",
+    "sha256": "0208d9f5946dd026661abea9cea3875cc37ae6f4d6a06dd1a7b227e78d1f2b5a",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/agents/__init__.py",
+    "blob_sha1": "7db880e1af75cab0a3b210e978f4d55f3f94c349",
+    "bytes": 188,
+    "classification": "documentation_config_or_code",
+    "sha256": "246319a8ea584ed8d9eb82629d09265488fd88b835671c95a5f53399ba045c08",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/agents/critic.py",
+    "blob_sha1": "82d683d4693ffd4c44d4cf3cb6c31a993beb08c6",
+    "bytes": 2347,
+    "classification": "documentation_config_or_code",
+    "sha256": "5dc2a97682d1ab076525e08c34219668c51e9ed7048f1d546cdb87faae5a6a56",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/agents/retrieval.py",
+    "blob_sha1": "6aea545fccb072623ca953807f1f0bb0eca7cf2d",
+    "bytes": 4043,
+    "classification": "documentation_config_or_code",
+    "sha256": "b335b59a2bb0591dc9eb64f4d214f26a194d15cdee0c99fada643780be335857",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/build_v0_dataset.py",
+    "blob_sha1": "2bf6364df5e9cf14c3bce49f85f583ef979ee7f8",
+    "bytes": 25671,
+    "classification": "documentation_config_or_code",
+    "sha256": "9ba583219a6b5ec964bc5b6c0278745a08de61a12653a13a611adf5ab7a3f25b",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/config.py",
+    "blob_sha1": "4a78cadaa0c37d51deac2014f43c64e0b2d203ec",
+    "bytes": 4805,
+    "classification": "documentation_config_or_code",
+    "sha256": "dbc1529c63e5277962881826ed02ba751fb4d7cad4f216b956f0192cf69a622e",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/dataset.py",
+    "blob_sha1": "78dad6e15ee32af1944cf332792584ff9e952e0f",
+    "bytes": 6804,
+    "classification": "documentation_config_or_code",
+    "sha256": "ea1e5425f87da79fcd2b2657dabd3fae1d9c91e2f734a1248035085cadc8634d",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/download_datasets.py",
+    "blob_sha1": "5ad94ce837153d755f7093a09062360b149af337",
+    "bytes": 16440,
+    "classification": "documentation_config_or_code",
+    "sha256": "a07d16abcf89c6820c919e3cdb5f748d54620b01f2aa5a302359b19da376c28d",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/eval_tiny.py",
+    "blob_sha1": "d635645c963b0debc96d3d6569d859ca483b5d91",
+    "bytes": 3573,
+    "classification": "documentation_config_or_code",
+    "sha256": "8ba2e438f966f4abe876510aed31e6e4c19776bdbd52f0c7f1554390436de830",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/eval_v0.py",
+    "blob_sha1": "243e4aa382dae56a227141fa8169e2dc7bc6bb58",
+    "bytes": 2913,
+    "classification": "documentation_config_or_code",
+    "sha256": "0732b08cab0801aec23d6062d0972188c0cd2d999b4baa471737eeb52678a13d",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/gui_app.py",
+    "blob_sha1": "c873d0fbf005ad795494a6808136503b6ca74654",
+    "bytes": 44613,
+    "classification": "documentation_config_or_code",
+    "sha256": "afc05cb3ffaf561c47021ed6dda849667d8f242fbfaa8d95ff2900e5d71d7c68",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/inference.py",
+    "blob_sha1": "76df354f7ae29aaa766b05e142aa6fd980d0ec8c",
+    "bytes": 18993,
+    "classification": "documentation_config_or_code",
+    "sha256": "eb0725d51689b12082503b395f522a0ab250b921f524917f02a8bfe6aa143bc9",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/model.py",
+    "blob_sha1": "25b6f50e6fbbd8138bcdd34b3f47a5d7f4ecc588",
+    "bytes": 10879,
+    "classification": "documentation_config_or_code",
+    "sha256": "49960028cd497fdfa22f4423d76b83c860f8dab3e37fb529ef90270def7cc02b",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/orchestrator.py",
+    "blob_sha1": "b2b6448220fff311d7910348a7edd6534bb831c7",
+    "bytes": 9729,
+    "classification": "documentation_config_or_code",
+    "sha256": "c2aa6b728dd8b6a15f5af4a0b9549b9642aaa2d728e0cf309e4cf0ada1595c21",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/preprocess.py",
+    "blob_sha1": "7282dbbedd10df1582cb290613121d8f50fad439",
+    "bytes": 15002,
+    "classification": "documentation_config_or_code",
+    "sha256": "9efe4d69f709a4417c5f7d44eaed7e1dd79f9816fd51b11cec52177de06edc89",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/pretrain.py",
+    "blob_sha1": "dd0b134405d5cab415ceac5f5450135f4165dd3b",
+    "bytes": 26878,
+    "classification": "documentation_config_or_code",
+    "sha256": "b38b169b2badb311adfaf247728202db0ad649042af37ffeae4ee0063e0f8d7b",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/refinement.py",
+    "blob_sha1": "4f3106086cf8577e6a0e9322120ae91da0e4d9f1",
+    "bytes": 12555,
+    "classification": "documentation_config_or_code",
+    "sha256": "58986d2c5573401408636d667dc451c235867bfe74776da3a36eb185d7dc5957",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/setup_runpod.sh",
+    "blob_sha1": "0b360a4b1c74ef98d5ff8ceff3282c19cadef87c",
+    "bytes": 2674,
+    "classification": "documentation_config_or_code",
+    "sha256": "91b2e6123bc032e634839c86239acccb468047239e91fc12868d7f31adb587a8",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/sft.py",
+    "blob_sha1": "e5fc03c796559eba2c7dcf6544d9553f2a5b8797",
+    "bytes": 19703,
+    "classification": "documentation_config_or_code",
+    "sha256": "23eeabe570b5041ec0d965b1b09035e85ed3ca24203dcaaf2218f64ddbe60a1b",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/tokenizer_havoc.py",
+    "blob_sha1": "0656748dd6f1b80bb4fc2b74f59e9c1230b7dc03",
+    "bytes": 10920,
+    "classification": "documentation_config_or_code",
+    "sha256": "1572bb73f0fe0e693934167d964ad474bda6d89ac493a24c44d6cc455f7caabc",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/tools/__init__.py",
+    "blob_sha1": "6c86ba9c6ee6fa82b3c5a27cda41aa8176beda4f",
+    "bytes": 691,
+    "classification": "documentation_config_or_code",
+    "sha256": "7443afbc0248ccfcdaefe9d4aa0a0f08ba7091c66cdb2e5bade10faf4bce4402",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/tools/calculator.py",
+    "blob_sha1": "60671d9d254f41dd5cfc32af2d7a2d450aec60c8",
+    "bytes": 2669,
+    "classification": "documentation_config_or_code",
+    "sha256": "1731f5fd0ea1de9d9a23517329eeded5ceecb3eaf0ca358823fcb5cde5a64b9c",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/tools/file_reader.py",
+    "blob_sha1": "bfe0d304adcde8bcf28e61798dc1b6b13a7767b5",
+    "bytes": 2113,
+    "classification": "documentation_config_or_code",
+    "sha256": "5d941cc967babcdb5a913c036863d0f5baa74a3343a2af2b5dc4407cd0cac13f",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/tools/json_validator.py",
+    "blob_sha1": "5d4ac8cc887256a402305c887e41e91f9e85247f",
+    "bytes": 1701,
+    "classification": "documentation_config_or_code",
+    "sha256": "06857350cb3c2f78b2060a9e76732f1249b5fc9b5bdff6ccb01d6fd5301599be",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/tools/python_exec.py",
+    "blob_sha1": "666378b139c0aed9834270d9fe57995e184c9645",
+    "bytes": 4192,
+    "classification": "documentation_config_or_code",
+    "sha256": "570f53421bb3e05b6515ce1d8e9ae05f4adb665350885942e5123e92c3295ba2",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/tools/regex_utility.py",
+    "blob_sha1": "f436dfef9424cc6ef90fd713b6f09932f2986a84",
+    "bytes": 1378,
+    "classification": "documentation_config_or_code",
+    "sha256": "ee334a078798666a6b057affb6bbca741b71fb8ff19115b8a756d6d9ab0395e4",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/tools/router.py",
+    "blob_sha1": "f4620119582dfc0c406be40de45304df67bf5697",
+    "bytes": 4147,
+    "classification": "documentation_config_or_code",
+    "sha256": "a864a1d3a7b3a02f1823fc3623315f47bf5cbd601f72bdb93dc9316060dd7bc1",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/tools/text_parser.py",
+    "blob_sha1": "4d113874f5a645a7e76aa3180d5603bbb1405667",
+    "bytes": 1582,
+    "classification": "documentation_config_or_code",
+    "sha256": "316aed00800d7dd3380ea8b9d908359428dc14e9c6e8c0e98f7cca044c89f8a6",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/tools/unit_converter.py",
+    "blob_sha1": "ea36e307256baaae27b04f5f4e4c023c5d2247f8",
+    "bytes": 5044,
+    "classification": "documentation_config_or_code",
+    "sha256": "5d68165e682a7b8fa08d85e14582e586746c19e59b2992054c945bbd53f58e61",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/train_runpod.sh",
+    "blob_sha1": "3bf2f7c787ce4bda8e000ddb6528725e63d7cde7",
+    "bytes": 3778,
+    "classification": "documentation_config_or_code",
+    "sha256": "bcff79b47192eb12610a21a241020f947a8e1b546211642d111da32df08552af",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/train_tokenizer.py",
+    "blob_sha1": "e08838473d11fed4e9d32abe2c13543f17a22343",
+    "bytes": 3531,
+    "classification": "documentation_config_or_code",
+    "sha256": "d3b233b7a6e8ba75cbf97b130e4fb47ba47e49b37c88e186fee250bb22754408",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/verifier.py",
+    "blob_sha1": "79b6e49a55b44ccd4a1b90c423e7aa59f944adad",
+    "bytes": 5025,
+    "classification": "documentation_config_or_code",
+    "sha256": "1e06f855f5f9d7df83505dcebd3d6f46d21fb57b07116bc74c585bb9434b90fa",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/verify_params.py",
+    "blob_sha1": "94d29297a08c95aec3df7aede7e72c6b246a9f3e",
+    "bytes": 4241,
+    "classification": "documentation_config_or_code",
+    "sha256": "7ace5f060ad488a34c916600ba14d252351e45ab6b64a2413cf5fdbd9ad6c830",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "scripts/verify_setup.py",
+    "blob_sha1": "d9567531e63f7b2cd3c44c1a4aa90f98659e992a",
+    "bytes": 3190,
+    "classification": "documentation_config_or_code",
+    "sha256": "657dbf818c7d145357d9bc3824bcf7fc44672c9f4481bed05df51286b3eb7035",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "system_prompt.txt",
+    "blob_sha1": "c9c93919a5e6e69984f0c513e3b9bb06ee919228",
+    "bytes": 539,
+    "classification": "documentation_config_or_code",
+    "sha256": "f7590b1ff4b37894b0f934152f55737a7fe6eefa6ed381b10cdc89b36175ecc4",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "train/__init__.py",
+    "blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "bytes": 0,
+    "classification": "documentation_config_or_code",
+    "status": "empty_stub"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "train/pretrain.py",
+    "blob_sha1": "460f81708a27f103a89393d03c0905ff072fa37b",
+    "bytes": 17325,
+    "classification": "documentation_config_or_code",
+    "sha256": "8c6f58f7ba7138329c63cb6b979e7c405c622e0b8b1a329b176ab85b84e289d3",
+    "status": "screened_local_snapshot"
+  },
+  {
+    "repository": "scott198989/SLM-1-",
+    "commit": "97f500e978cf4cce532a572b615eb63dc40759af",
+    "path": "README.md",
+    "blob_sha1": "ab3fb51599f826c42f58479c35ed6bd6d85c9f9f",
+    "bytes": 17136,
+    "classification": "documentation_config_or_code",
+    "sha256": "dd4fca73c4b6a9f9fe7cc7a820ef894fe6046c62c43e20b334c67ba236c9d995",
+    "status": "screened_local_snapshot"
+  }
+]

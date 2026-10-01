@@ -1,0 +1,37 @@
+{
+  "validation": "passed",
+  "records_checked": 34463,
+  "origin_occurrences_checked": 102230,
+  "statuses": {
+    "quarantined": 5310,
+    "needs_review": 29153
+  },
+  "approved_records": 0,
+  "checks": [
+    "canonical_messages",
+    "record_hashes",
+    "no_exact_duplicates",
+    "privacy_screen",
+    "one_to_one_lineage_join",
+    "review_states",
+    "source_allowlist",
+    "audit_count_reconciliation"
+  ],
+  "files": [
+    {
+      "path": "data/sft/staging/consolidated-20261001-v2/candidates.jsonl",
+      "bytes": 10820843,
+      "sha256": "7b5a31e51834cec4dacd35db24abb09c3f12df71ed788035062f294e450457ac"
+    },
+    {
+      "path": "data/sft/staging/consolidated-20261001-v2/candidates.jsonl.gz",
+      "bytes": 3330557,
+      "sha256": "5696cb8188a1a9aa44ffc2544cdefa7f10ce3870862c1edd01922effeff95dcd"
+    },
+    {
+      "path": "data/sft/staging/consolidated-20261001-v2/provenance.jsonl.gz",
+      "bytes": 3252335,
+      "sha256": "d69e1c9a103c7d06b7f5ccee8df7b7176864b15660d550f33adeeec5f23ebe8e"
+    }
+  ]
+}
