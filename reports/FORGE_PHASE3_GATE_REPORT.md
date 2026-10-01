@@ -21,7 +21,7 @@ Source/oracle/mask/family/rights/seal hashes and release receipts: [pilot releas
 
 ## Proposed legacy curriculum: exact current dispositions
 
-All 2,112 records received structural/context/privacy and actual Qwen-format screening. **189** received substantive agent review; the complete 104-record thermal/process batch is included. Of the remaining 1919 NEEDS_HUMAN_REVIEW records, **1917 have not yet received substantive technical verification** and two were read but require specialist confirmation. This queue label is not a claim that a human must perform every simple check. The requested curriculum-wide technical review remains outstanding; structural/tool agreement never supplied correctness approval. No answers were silently changed.
+All 2,112 records received structural/context/privacy and actual Qwen-format screening. **374** received substantive agent review; the complete 211-record circuits and 104-record thermal/process batches are included. Of the remaining 1737 NEEDS_HUMAN_REVIEW records, **1735 have not yet received substantive technical verification** and two were read but require specialist confirmation. This queue label is not a claim that a human must perform every simple check. The requested curriculum-wide technical review remains outstanding; structural/tool agreement never supplied correctness approval. No answers were silently changed.
 
 Domain labels here are originating-file classifications, not certified semantic capabilities. These counts are not a random sample, corpus accuracy estimate or approved training count.
 
@@ -29,7 +29,7 @@ Domain labels here are originating-file classifications, not certified semantic 
 |---|---:|---:|---:|---:|
 | algebra | 9 | 2 | 2 | 203 |
 | calculus | 5 | 2 | 0 | 208 |
-| circuits | 20 | 2 | 7 | 182 |
+| circuits | 139 | 12 | 60 | 0 |
 | electrical_components | 6 | 0 | 1 | 293 |
 | electromagnetism | 2 | 2 | 0 | 162 |
 | engineering_mathematics | 4 | 0 | 2 | 194 |
@@ -37,7 +37,7 @@ Domain labels here are originating-file classifications, not certified semantic 
 | physics | 4 | 2 | 2 | 242 |
 | thermal_process_engineering | 73 | 5 | 24 | 2 |
 | trigonometry | 8 | 0 | 3 | 189 |
-| **Total** | **134** | **17** | **42** | **1919** |
+| **Total** | **253** | **27** | **95** | **1737** |
 
 **Released legacy curriculum examples:0.** Technical PASS is separate from applicable contract and family qualification. Row-specific unchanged-message hashes/reasons are in [technical decisions](../data/review/phase3/technical-review.jsonl.gz), [substantive receipts](../manifests/phase3-agent-technical-review.json) and [aggregate report](phase3-technical-review.json). Rejections include wrong energy/departure signs, defective-matrix claims, missing equilibria and false optimization rules. Quarantine covers incomplete prior context, unit/model conditions, missing chart values, unresolved visual dependencies and contradictory scratch reasoning. Overlapping risk flags:1110 equation/calculation/proof;792 units/model;23 visual prompts;187 operations/diagnosis. No sampled usable-percentage extrapolation is justified.
 
@@ -53,7 +53,7 @@ The complete engineering calculator family is train/reference; the complete stat
 
 Active private seal: v03,12 tasks in data_analysis_doe_spc:5 closed-book,5 deterministic-tool and 2 frozen-reference citation tasks.12 reference roundtrips and 22 wrong-unit/citation/Boolean grader checks passed. Those are grader checks, not model scores. Original rational/algebraic/combinatorial/source-based references were reviewed; tasks are programmatic, not independently human-authored. Earlier construction versions were retired before any model run. Questions, answers, recipe and complete source snapshot remain private; the public receipt stores only composition and external seal pin.
 
-The proposed 240-task/12-domain design has 228 unfilled task slots and 11 unfilled domains, rather than fabricated weak tasks. The current suite cannot establish broad FORGE engineering accuracy. [Seal receipt](phase3-sealed-gold.json). The [exact baseline experiment](../docs/PHASE 3_BASELINE_EXPERIMENT.md) specifies pinned stock Qwen, NF4/BF16, identical official template, greedy decoding,2048 context,512 output tokens, three allowed tool requests maximum, exact frozen references and private response/grader receipts. **Not run; model-load authorization and desktop runtime checks are still needed.**
+The proposed 240-task/12-domain design has 228 unfilled task slots and 11 unfilled domains, rather than fabricated weak tasks. The current suite cannot establish broad FORGE engineering accuracy. [Seal receipt](phase3-sealed-gold.json). The [exact baseline experiment](../docs/PHASE3_BASELINE_EXPERIMENT.md) specifies pinned stock Qwen, NF4/BF16, identical official template, greedy decoding,2048 context,512 output tokens, three allowed tool requests maximum, exact frozen references and private response/grader receipts. **Not run; model-load authorization and desktop runtime checks are still needed.**
 
 ## Qualified private RAG pilot
 
@@ -63,7 +63,7 @@ The graph is an ideal specified PM DC model, not measured data or a Drive diagra
 
 ## Tools and capability gaps
 
-13 tools are implemented and independently tested within bounded contracts. The complete preparation suite has 56 passing tests, including mathematical/dimensional oracles, finite/strict-input refusal, rank/DOE/SPC constraints, checkpoint drift, seals, exact citations, tokenizer masks and offline controller budgets. Tests do not validate every corpus answer or a GPU stack. [Exact tool inventory and limits](../docs/PHASE 3_CAPABILITY_INVENTORY.md), [validation receipt](phase3-validation.json).
+13 tools are implemented and independently tested within bounded contracts. The complete preparation suite has 56 passing tests, including mathematical/dimensional oracles, finite/strict-input refusal, rank/DOE/SPC constraints, checkpoint drift, seals, exact citations, tokenizer masks and offline controller budgets. Tests do not validate every corpus answer or a GPU stack. [Exact tool inventory and limits](../docs/PHASE3_CAPABILITY_INVENTORY.md), [validation receipt](phase3-validation.json).
 
 | Capability | Released SFT count | What the pilot actually teaches | What remains absent |
 |---|---:|---|---|
@@ -93,6 +93,11 @@ Proposed model/revision: Qwen/Qwen3-30B-A3B-Base /1b75feb79f60b8dc6c5bc769a898c2
 
 The 16-record pilot would give **one optimizer update** at effective batch 16, not a useful engineering-specialization run. No update is scheduled. Desktop 5090/32 GiB/64 GiB is README-derived until checked live; laptop 2050/4 GiB/16 GiB is preparation-only. GPU package stack/expert quantization, exact transitive lock, memory estimate 20â€“29 GiB and resume behavior are unmeasured. The eventual model-load/memory pilot must be separately authorized and cannot count as already run.
 
-**Reasons not to authorize training:** requested 1917-record substantive review outstanding; two specialist judgments; applicable legacy contracts unresolved;16 narrow protocol records inadequate for broad FORGE specialization; independent model-development set absent; gold is only 12 tasks/one domain and not an independently human-reviewed broad benchmark; no stock-model scores; academic OCR/equation/visual fidelity and production-source rights remain unqualified; desktop/GPU/runtime/quantized-expert/memory/resume gates not verified.
+**Reasons not to authorize training:** requested 1735-record substantive review outstanding; two specialist judgments; applicable legacy contracts unresolved;16 narrow protocol records inadequate for broad FORGE specialization; independent model-development set absent; gold is only 12 tasks/one domain and not an independently human-reviewed broad benchmark; no stock-model scores; academic OCR/equation/visual fidelity and production-source rights remain unqualified; desktop/GPU/runtime/quantized-expert/memory/resume gates not verified.
 
 The next work is checkpointed review of the held curriculum (not broad discovery), applicable generation-use evidence, independent engineering development/gold source families, and targeted source-qualified academic RAG/task assembly. Never repair answers silently or expand into unrelated corpora to satisfy counts. Siemens is user-owned follow-up. This is a released small pilot and transparent gate report, **not completion of all Phase 3 validation**. Stop before model weights or training.
+
+
+## Cloud continuation checkpoint
+
+The circuit review is complete as dispositions:139 PASS /12 REJECT /60 QUARANTINE /0 NEEDS HUMAN REVIEW. Technical PASS remains separate from training release. [Cloud handoff and exact next steps](../HANDOFF_README.md), [machine-readable checkpoint](phase3-cloud-handoff.json). Private artifacts remain local and must not be reconstructed or declared verified from public receipts alone.

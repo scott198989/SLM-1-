@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-01 - Cloud handoff and completed circuit review
+
+- Saved 185 more substantive reviews; all 211 circuit candidates dispositioned, with 374 total reviews and 253 PASS /27 REJECT /95 QUARANTINE /1737 NEEDS_HUMAN_REVIEW across the curriculum.
+- Added portable bounded review reader and explicit cloud continuation/checksum manifest. Updated current gate counts; retained historical review receipts.
+- Private Drive content and sealed evaluation remain local; no model download, training, automatic checks or cloud task creation.
+
+
 ## 2026-10-01 — Phase 3 pilot
 
 - Added 400-row checkpointed selected-anchor family evidence across 34,463 candidates and 136,879 authorized active Drive units; preserved semantic uncertainty and source-level exclusion.
