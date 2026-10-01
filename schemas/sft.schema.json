@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://havoc.local/schemas/sft.schema.json",
+  "title": "HAVOC sft envelope v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "stage",
+    "split",
+    "payload",
+    "metadata"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stage": {
+      "const": "sft"
+    },
+    "split": {
+      "enum": [
+        "train",
+        "validation",
+        "test"
+      ]
+    },
+    "payload": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "messages"
+      ],
+      "properties": {
+        "messages": {
+          "$ref": "common.schema.json#/$defs/messages"
+        }
+      }
+    },
+    "metadata": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/metadata"
+        },
+        {
+          "required": [
+            "sft_training_targets"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "scope": "current_default_branch_snapshots_only_not_history_or_external_references",
+  "all_nonempty_fetched_candidate_rows_scanned": true,
+  "technical_answers_independently_verified": 0,
+  "ready_sft_records": 0,
+  "ready_rag_chunks": 0,
+  "unique_candidate_records": 34265,
+  "statuses": {
+    "quarantined": 3578,
+    "needs_review": 30687
+  },
+  "issue_counts": {
+    "PROMPT_COLLISION_REVIEW": 1964,
+    "GARBLED_WORDS": 2,
+    "TRUNCATED_SENTENCE_HINT": 6,
+    "AMBIGUOUS_HYPHENATION": 1,
+    "MOJIBAKE": 1,
+    "UNBALANCED_MATH_DELIMITERS": 8,
+    "LEGACY_VALIDATION_OVERLAP_REVIEW": 1332,
+    "NUMERIC_EQUALITY_MISMATCH": 228,
+    "UNBALANCED_MATH_BRACKETS": 56,
+    "OCR_NUMERIC_CONFUSION": 4,
+    "EMBEDDED_TRAINING_CONTROL_TOKENS": 1
+  },
+  "repositories": {
+    "Completions": {
+      "files": 70,
+      "local_configuration_or_binary": 2,
+      "candidate_dataset": 62,
+      "empty_files": 48,
+      "screened_files": 20,
+      "rows": 40665,
+      "unique_records_added": 34265,
+      "exact_duplicate_rows": 6373,
+      "invalid_rows": 27,
+      "documentation_config_or_code": 6
+    },
+    "SLM": {
+      "files": 177,
+      "local_configuration_or_binary": 1,
+      "documentation_config_or_code": 166,
+      "screened_files": 173,
+      "unsupported_or_generated_artifact": 2,
+      "training_log_or_evaluation_artifact": 2,
+      "candidate_dataset": 5,
+      "rows": 396,
+      "invalid_rows": 396,
+      "tokenizer_corpus_not_sft": 1
+    },
+    "LLM": {
+      "files": 64,
+      "documentation_config_or_code": 58,
+      "screened_files": 60,
+      "local_configuration_or_binary": 2,
+      "candidate_dataset": 4,
+      "rows": 61222,
+      "exact_duplicate_rows": 61196,
+      "invalid_rows": 26,
+      "empty_files": 2
+    },
+    "SLM-1-": {
+      "files": 1,
+      "documentation_config_or_code": 1,
+      "screened_files": 1
+    }
+  },
+  "prompt_collision_groups": 671,
+  "normalized_near_twin_groups": 66,
+  "license_status": "No LICENSE files in these pinned trees; upstream rights/provenance need review"
+}

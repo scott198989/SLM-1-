@@ -1,0 +1,4043 @@
+[
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "Conversations_SFT.jsonl.bak",
+    "blob_sha1": "48672cf0774309efe91fb390037bb60c075513c1",
+    "bytes": 586648,
+    "line": 1701,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "Conversations_SFT.jsonl.bak",
+    "blob_sha1": "48672cf0774309efe91fb390037bb60c075513c1",
+    "bytes": 586648,
+    "line": 2552,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "Conversations_SFT.jsonl.bak",
+    "blob_sha1": "48672cf0774309efe91fb390037bb60c075513c1",
+    "bytes": 586648,
+    "line": 3616,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "Conversations_SFT.jsonl.bak",
+    "blob_sha1": "48672cf0774309efe91fb390037bb60c075513c1",
+    "bytes": 586648,
+    "line": 3714,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "Conversations_SFT.jsonl.bak",
+    "blob_sha1": "48672cf0774309efe91fb390037bb60c075513c1",
+    "bytes": 586648,
+    "line": 4490,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "Conversations_SFT.jsonl.bak",
+    "blob_sha1": "48672cf0774309efe91fb390037bb60c075513c1",
+    "bytes": 586648,
+    "line": 4919,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "Conversations_SFT.jsonl.bak",
+    "blob_sha1": "48672cf0774309efe91fb390037bb60c075513c1",
+    "bytes": 586648,
+    "line": 4932,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "Conversations_SFT.jsonl.bak",
+    "blob_sha1": "48672cf0774309efe91fb390037bb60c075513c1",
+    "bytes": 586648,
+    "line": 4957,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "Conversations_SFT.jsonl.bak",
+    "blob_sha1": "48672cf0774309efe91fb390037bb60c075513c1",
+    "bytes": 586648,
+    "line": 6021,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "Conversations_SFT.jsonl.bak",
+    "blob_sha1": "48672cf0774309efe91fb390037bb60c075513c1",
+    "bytes": 586648,
+    "line": 6025,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "Conversations_SFT.jsonl.bak",
+    "blob_sha1": "48672cf0774309efe91fb390037bb60c075513c1",
+    "bytes": 586648,
+    "line": 6084,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "Conversations_SFT.jsonl.bak",
+    "blob_sha1": "48672cf0774309efe91fb390037bb60c075513c1",
+    "bytes": 586648,
+    "line": 6222,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "Conversations_SFT.jsonl.bak",
+    "blob_sha1": "48672cf0774309efe91fb390037bb60c075513c1",
+    "bytes": 586648,
+    "line": 6417,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "core_world_model.jsonl",
+    "blob_sha1": "d4a916a8e6ff8b72f4285b43c7a5333bfa701c79",
+    "bytes": 611420,
+    "line": 419,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "core_world_model.jsonl",
+    "blob_sha1": "d4a916a8e6ff8b72f4285b43c7a5333bfa701c79",
+    "bytes": 611420,
+    "line": 423,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "core_world_model.jsonl",
+    "blob_sha1": "d4a916a8e6ff8b72f4285b43c7a5333bfa701c79",
+    "bytes": 611420,
+    "line": 427,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "core_world_model.jsonl",
+    "blob_sha1": "d4a916a8e6ff8b72f4285b43c7a5333bfa701c79",
+    "bytes": 611420,
+    "line": 446,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "core_world_model.jsonl",
+    "blob_sha1": "d4a916a8e6ff8b72f4285b43c7a5333bfa701c79",
+    "bytes": 611420,
+    "line": 451,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "core_world_model.jsonl",
+    "blob_sha1": "d4a916a8e6ff8b72f4285b43c7a5333bfa701c79",
+    "bytes": 611420,
+    "line": 472,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "core_world_model.jsonl",
+    "blob_sha1": "d4a916a8e6ff8b72f4285b43c7a5333bfa701c79",
+    "bytes": 611420,
+    "line": 477,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "core_world_model.jsonl",
+    "blob_sha1": "d4a916a8e6ff8b72f4285b43c7a5333bfa701c79",
+    "bytes": 611420,
+    "line": 481,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "core_world_model.jsonl",
+    "blob_sha1": "d4a916a8e6ff8b72f4285b43c7a5333bfa701c79",
+    "bytes": 611420,
+    "line": 488,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "core_world_model.jsonl",
+    "blob_sha1": "d4a916a8e6ff8b72f4285b43c7a5333bfa701c79",
+    "bytes": 611420,
+    "line": 492,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "core_world_model.jsonl",
+    "blob_sha1": "d4a916a8e6ff8b72f4285b43c7a5333bfa701c79",
+    "bytes": 611420,
+    "line": 509,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "core_world_model.jsonl",
+    "blob_sha1": "d4a916a8e6ff8b72f4285b43c7a5333bfa701c79",
+    "bytes": 611420,
+    "line": 519,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "core_world_model.jsonl",
+    "blob_sha1": "d4a916a8e6ff8b72f4285b43c7a5333bfa701c79",
+    "bytes": 611420,
+    "line": 1638,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "core_world_model.jsonl",
+    "blob_sha1": "d4a916a8e6ff8b72f4285b43c7a5333bfa701c79",
+    "bytes": 611420,
+    "line": 1771,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 1,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 2,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 3,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 4,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 5,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 6,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 7,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 8,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 9,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 10,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 11,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 12,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 13,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 14,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 15,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 16,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 17,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 18,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 19,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 20,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 21,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 22,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 23,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 24,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 25,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 26,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 27,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 28,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 29,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 30,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 31,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 32,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 33,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 34,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 35,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 36,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 37,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 38,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 39,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 40,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 41,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 42,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 43,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 44,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 45,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 46,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 47,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "line": 48,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 1,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 2,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 3,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 4,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 5,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 6,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 7,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 8,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 9,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 10,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 11,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 12,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 13,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 14,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 15,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 16,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 17,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 18,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 19,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 20,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 21,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 22,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 23,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 24,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 25,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 26,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 27,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 28,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 29,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 30,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 31,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 32,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 33,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 34,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 35,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 36,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 37,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 38,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 39,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 40,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 41,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 42,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 43,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 44,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 45,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 46,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 47,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 48,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "line": 49,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 1,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 2,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 3,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 4,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 5,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 6,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 7,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 8,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 9,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 10,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 11,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 12,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 13,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 14,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 15,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 16,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 17,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 18,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 19,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 20,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 21,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 22,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 23,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 24,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 25,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 26,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 27,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 28,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 29,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 30,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 31,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 32,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 33,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 34,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 35,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 36,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 37,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 38,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 39,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 40,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 41,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 42,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 43,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 44,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 45,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 46,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 47,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 48,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 49,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 50,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 51,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "line": 52,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 1,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 2,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 3,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 4,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 5,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 6,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 7,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 8,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 9,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 10,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 11,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 12,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 13,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 14,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 15,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 16,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 17,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 18,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 19,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 20,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 21,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 22,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 23,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 24,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 25,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 26,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 27,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 28,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 29,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 30,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 31,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 32,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 33,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 34,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 35,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 36,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 37,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 38,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 39,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 40,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 41,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 42,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 43,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 44,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 45,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 46,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 47,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 48,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "line": 49,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 1,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 2,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 3,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 4,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 5,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 6,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 7,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 8,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 9,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 10,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 11,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 12,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 13,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 14,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 15,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 16,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 17,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 18,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 19,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 20,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 21,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 22,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 23,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 24,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 25,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 26,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 27,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 28,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 29,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 30,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 31,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 32,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 33,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 34,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 35,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 36,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 37,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 38,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 39,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 40,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 41,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 42,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 43,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 44,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 45,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 46,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 47,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 48,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 49,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 50,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 51,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 52,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 53,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 54,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 55,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 56,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 57,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 58,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 59,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 60,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 61,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 62,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 63,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 64,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 65,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 66,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 67,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 68,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 69,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 70,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 71,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 72,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 73,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 74,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 75,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 76,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 77,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 78,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 79,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 80,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 81,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 82,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 83,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 84,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 85,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 86,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 87,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 88,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 89,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 90,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 91,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 92,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 93,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 94,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 95,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 96,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 97,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 98,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 99,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 100,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 101,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 102,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 103,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 104,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 105,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 106,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 107,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 108,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 109,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 110,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 111,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 112,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 113,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 114,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 115,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 116,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 117,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 118,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 119,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 120,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 121,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 122,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 123,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 124,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 125,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 126,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 127,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 128,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 129,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 130,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 131,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 132,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 133,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 134,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 135,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 136,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 137,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 138,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 139,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 140,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 141,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 142,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 143,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 144,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 145,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 146,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 147,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 148,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 149,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 150,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 151,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 152,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 153,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 154,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 155,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 156,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 157,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 158,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 159,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 160,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 161,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 162,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 163,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 164,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 165,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 166,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 167,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 168,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 169,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 170,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 171,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 172,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 173,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 174,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 175,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 176,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 177,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 178,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 179,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 180,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 181,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 182,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 183,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 184,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 185,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 186,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 187,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 188,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 189,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 190,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 191,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 192,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 193,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 194,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 195,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 196,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 197,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "line": 198,
+    "code": "UNSUPPORTED_ROW_SCHEMA"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5065,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5110,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5111,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5112,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5113,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5114,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5115,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5116,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5117,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5118,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5119,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5120,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5165,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5210,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5211,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5212,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5213,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5214,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5215,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5216,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5217,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5218,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5219,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5220,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5265,
+    "code": "INVALID_JSON"
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "line": 5831,
+    "code": "INVALID_JSON"
+  }
+]

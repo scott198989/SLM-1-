@@ -1,0 +1,27 @@
+{
+  "base_model": "Qwen/Qwen3-30B-A3B-Base",
+  "training_method": "QLoRA_SFT",
+  "configuration_status": "planning_only_no_validated_training_runtime",
+  "data_status": "unverified_staging",
+  "assistant_only_loss_required": true,
+  "tokenizer": "upstream_Qwen_tokenizer_and_chat_template_not_downloaded",
+  "split_status": "unassigned_family_review_required",
+  "laptop": {
+    "gpu": "RTX 2050",
+    "vram_gib": 4,
+    "ram_gib": 16,
+    "cpu": "i7-1360P",
+    "role": "data_preparation_not_30B_training"
+  },
+  "desktop_from_readme": {
+    "gpu": "RTX 5090",
+    "vram_gib": 32,
+    "ram_gib": 64,
+    "status": "requires_measured_QLoRA_memory_benchmark"
+  },
+  "rag": {
+    "status": "local_review_pilot_only",
+    "visual_policy": "exact_source_page_image_links_no_claim_of_pixel_understanding"
+  },
+  "automatic_checks": "canceled_by_user"
+}

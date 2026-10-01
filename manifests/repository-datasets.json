@@ -1,0 +1,271 @@
+[
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "Conversations_SFT.jsonl.bak",
+    "blob_sha1": "48672cf0774309efe91fb390037bb60c075513c1",
+    "bytes": 586648,
+    "sha256": "cde6112ffccfee6d992cc4b570bd7b08f5de5b8defc24698aedbdfb66b719856",
+    "rows": 6459,
+    "valid_rows": 6446,
+    "issues": {
+      "INVALID_JSON": 13
+    }
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_AC_Circuits.jsonl",
+    "blob_sha1": "18fa442897941f9359434fc1d36f983112052006",
+    "bytes": 410949,
+    "sha256": "b0ab0bc29f2a47c4d3604659c72fbdb9c0da97593d51a827db4da95028248eb8",
+    "rows": 1348,
+    "valid_rows": 1348,
+    "issues": {}
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_Advanced_Eng_Math.jsonl",
+    "blob_sha1": "fca1ec7289a2061e78fcc5effb87037b4f07fb8e",
+    "bytes": 439828,
+    "sha256": "91e1adbb4db662e463ecf96f3c21455639802c9be71e42a23f51e464a06f6cc9",
+    "rows": 1474,
+    "valid_rows": 1474,
+    "issues": {}
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_Algebra.jsonl",
+    "blob_sha1": "49abd5e2c6c9d1e5a9954c61c993a9d2dbb53f16",
+    "bytes": 547194,
+    "sha256": "87dea8584252719990f16589465740a1fa9bfb4f2c161912e7c5e3bd2af2de07",
+    "rows": 1314,
+    "valid_rows": 1314,
+    "issues": {}
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_Conversations.jsonl",
+    "blob_sha1": "b166b5f8caf72196b257cec9cba7ed337db5a709",
+    "bytes": 2218089,
+    "sha256": "c42ae8c60c9c6ec3ff8431435a92925a44b5ccb01f498014386c3b40bdb969b0",
+    "rows": 12376,
+    "valid_rows": 12376,
+    "issues": {}
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_Conversations_SFT.jsonl",
+    "blob_sha1": "fd65344167481629b0574dba62110758ae775455",
+    "bytes": 554594,
+    "sha256": "86f026a9d959793feed36a8dfba9cc5f9a86f1b88ccd5ec4a8939906d90e3e16",
+    "rows": 5805,
+    "valid_rows": 5805,
+    "issues": {}
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_Thermodynamics.jsonl",
+    "blob_sha1": "f00cf03819a2f63462e2ddf7597f69f86d586486",
+    "bytes": 480758,
+    "sha256": "6ee9f061dc134989c25d768db2f3def9c20726e8b56501c8765f158f03cfb12a",
+    "rows": 1069,
+    "valid_rows": 1069,
+    "issues": {}
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_Trigonometry.jsonl",
+    "blob_sha1": "35eab5dc944386455bc385e1e3067dfeefbcd8c1",
+    "bytes": 600685,
+    "sha256": "16978f85007b8e9742c1b55f0cc288a505833c654042b0fe79a8cfe96ff19173",
+    "rows": 1498,
+    "valid_rows": 1498,
+    "issues": {}
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_calculus.jsonl",
+    "blob_sha1": "c6079808ecda232ef8f424ba7a26f46e85991f89",
+    "bytes": 652149,
+    "sha256": "b0d723661de91b79a32a417e4cd52c1f9fb36dac64053d86ad5fc18a63f85e21",
+    "rows": 1535,
+    "valid_rows": 1535,
+    "issues": {}
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_elect_components.jsonl",
+    "blob_sha1": "2249438948283f7e75265a553f9849ade65dc23b",
+    "bytes": 618784,
+    "sha256": "222eacc539118a515f60f35f661a8d70f8c1d3f8448fb2b4fe12ea8a8fce75d8",
+    "rows": 1497,
+    "valid_rows": 1497,
+    "issues": {}
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_electrodynamics.jsonl",
+    "blob_sha1": "2a95f5febfb3e76ac26b407f6a1f9d3fbda64a81",
+    "bytes": 502965,
+    "sha256": "6ed8a1ef96bb7edc3d8286b66092ca699840ee54895c32cab0a87f963cb812cd",
+    "rows": 1318,
+    "valid_rows": 1318,
+    "issues": {}
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_material_science.jsonl",
+    "blob_sha1": "7600092ff72f14bf69ea54f647928cbbcd84edf3",
+    "bytes": 726427,
+    "sha256": "028348459f744df65879a12bf9df655c32fc25597c3202a13c3c780667554cc4",
+    "rows": 1601,
+    "valid_rows": 1601,
+    "issues": {}
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_physics.jsonl",
+    "blob_sha1": "a7c4723400b13c6b3a6d1aa043f5911f5e6b938c",
+    "bytes": 667400,
+    "sha256": "080c95bcf16135143d3609bd39c6d8bccd90385405dc49b8673ccb8e7e5cab93",
+    "rows": 1600,
+    "valid_rows": 1600,
+    "issues": {}
+  },
+  {
+    "repository": "scott198989/Completions",
+    "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "core_world_model.jsonl",
+    "blob_sha1": "d4a916a8e6ff8b72f4285b43c7a5333bfa701c79",
+    "bytes": 611420,
+    "sha256": "269d13d04d65a7fae68e4cf833e7c43cc5fc7903e2ce32e3570e9e4580fec369",
+    "rows": 1771,
+    "valid_rows": 1757,
+    "issues": {
+      "INVALID_JSON": 14
+    }
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "blob_sha1": "c6ea18c99f205c23c182920fabbf2abfef723df3",
+    "bytes": 9145,
+    "sha256": "10fcd013171449ba215930ac29cf8a609123ce5fecb0297d4519412e615a20e8",
+    "rows": 48,
+    "valid_rows": 0,
+    "issues": {
+      "UNSUPPORTED_ROW_SCHEMA": 48
+    }
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "blob_sha1": "fc79e24437a9f6cc4b8e7666913105a2eacee9e0",
+    "bytes": 9312,
+    "sha256": "31dab3fc71813d9397130109340172c9974475c2cee7da3afb86815bdcb15de1",
+    "rows": 49,
+    "valid_rows": 0,
+    "issues": {
+      "UNSUPPORTED_ROW_SCHEMA": 49
+    }
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "blob_sha1": "a6620942a935324f0c43a128516b9956bf9832dd",
+    "bytes": 10185,
+    "sha256": "4ba2a96788a5efcaef751e3a0ced5fabafdc8382e866cfa22a6a585c21b036e1",
+    "rows": 52,
+    "valid_rows": 0,
+    "issues": {
+      "UNSUPPORTED_ROW_SCHEMA": 52
+    }
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "blob_sha1": "43f4fdd2a07b9c1352a1a307c9948e1bb77f3435",
+    "bytes": 9352,
+    "sha256": "cf6687a940a14597d1f3633795bef12669b3cff7118fc481b3b0721c2624f83e",
+    "rows": 49,
+    "valid_rows": 0,
+    "issues": {
+      "UNSUPPORTED_ROW_SCHEMA": 49
+    }
+  },
+  {
+    "repository": "scott198989/SLM",
+    "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "blob_sha1": "9b27a3c7e99fc6dc040a1e2666a94fb0830307df",
+    "bytes": 38192,
+    "sha256": "5ff4115a1cb3046b4968a4fb1802bb43bab297aa6b0f83d4fdc687e8041c1e92",
+    "rows": 198,
+    "valid_rows": 0,
+    "issues": {
+      "UNSUPPORTED_ROW_SCHEMA": 198
+    }
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/sft_v0/all.jsonl",
+    "blob_sha1": "f1e56b60492e7543442e832f85d175406c92d4d2",
+    "bytes": 6980049,
+    "sha256": "3ab944cec5d522d926bacb9b9d777cbd8d63914b66a360fb0230d87aee194e07",
+    "rows": 26630,
+    "valid_rows": 26630,
+    "issues": {}
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/sft_v0/train.jsonl",
+    "blob_sha1": "2aa7f82671fdb2da69aab9b61b7cae79c8ac79ef",
+    "bytes": 6640637,
+    "sha256": "9b91579242c80c26f98a7efc5724f7334d02b58eb6cab0ce6304a30a378711d0",
+    "rows": 25298,
+    "valid_rows": 25298,
+    "issues": {}
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/sft_v0/val.jsonl",
+    "blob_sha1": "54285a33efdd1c492f64449624b7475ee981ab77",
+    "bytes": 339412,
+    "sha256": "87b23f3e79335ece55d27368b1357993e355522dc490042d8273978f8df91096",
+    "rows": 1332,
+    "valid_rows": 1332,
+    "issues": {}
+  },
+  {
+    "repository": "scott198989/LLM",
+    "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/smoke_raw/conversations.jsonl",
+    "blob_sha1": "a0753cfa466192d0d06182bb92a11895aaa95fee",
+    "bytes": 1283985,
+    "sha256": "e7c94728ae09eb2f962a042050b21e072f9f16389b4e95197e21d53613213a94",
+    "rows": 7962,
+    "valid_rows": 7936,
+    "issues": {
+      "INVALID_JSON": 26
+    }
+  }
+]

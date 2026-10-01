@@ -1,0 +1,17 @@
+.audit-sources/
+__pycache__/
+*.pyc
+.venv/
+.cache/
+*.sqlite*
+.env
+.env.*
+*.safetensors
+*.gguf
+*.bin
+logs/
+
+# Intermediate imports stay local; publish only the deduplicated gzip staging.
+data/sft/staging/repository-candidates.jsonl
+data/sft/staging/consolidated-20261001/
+data/sft/staging/consolidated-20261001-v2/candidates.jsonl
