@@ -1,0 +1,17 @@
+{
+  "RAG_chunks_fully_rechecked": 9,
+  "RAG_curated_queries_expected_top3": 10,
+  "baseline_run": false,
+  "canonical_schema_release_gate_rechecks": 16,
+  "exact_Qwen_token_and_assistant_mask_replays": 16,
+  "grader_negative_checks": 22,
+  "legacy_substantive_review_complete": false,
+  "released_pilot_records": 16,
+  "sealed_reference_roundtrips": 12,
+  "software_tests_not_answer_accuracy": true,
+  "test_result": "PASS",
+  "tests": 56,
+  "tool_or_refusal_replays": 16,
+  "training_run": false,
+  "weights_downloaded": false
+}

@@ -1,0 +1,62 @@
+{
+  "all_canonical_schema_release_and_preflight_checks_passed": true,
+  "assistant_masks_sha256": "9fa301466808f938d82f56188fe1f54ff93159a865f4ee9128ff30d3cce20f53",
+  "assistant_tokens": 2793,
+  "by_domain": {
+    "circuits": {
+      "assistant_tokens": 532,
+      "examples": 3,
+      "qwen_tokens": 859
+    },
+    "controls": {
+      "assistant_tokens": 605,
+      "examples": 3,
+      "qwen_tokens": 918
+    },
+    "engineering_problem_solving": {
+      "assistant_tokens": 332,
+      "examples": 3,
+      "qwen_tokens": 553
+    },
+    "instrumentation_sensors": {
+      "assistant_tokens": 70,
+      "examples": 1,
+      "qwen_tokens": 147
+    },
+    "motors_drives": {
+      "assistant_tokens": 534,
+      "examples": 2,
+      "qwen_tokens": 789
+    },
+    "statics_strength": {
+      "assistant_tokens": 347,
+      "examples": 2,
+      "qwen_tokens": 568
+    },
+    "thermal_process_engineering": {
+      "assistant_tokens": 373,
+      "examples": 2,
+      "qwen_tokens": 596
+    }
+  },
+  "dataset_sha256": "110152a09c2e598b848520f734a708fae6b0b7b5a2cda4513e4d0ca2c315b45a",
+  "engineering_source_sha256": "ce6ab03daa581ba0dc179facd89dec2e41b2e3890c3215af5a5c75454199fd9e",
+  "exact_source_answer_receipt_sha256": "c83b17395193cdc3ab5de21a287731caadae31ee6c68687a8f392693b848a9c1",
+  "examples": 16,
+  "family_manifest_sha256": "861b3ccf2ac3ae9988c4e6ffa59e8043c31623e88f5136b70c0ddfeba51a9510",
+  "gold_seal_sha256": "d52888a1662243d0d6fc60203277edd284ce877e0052cc4f658e6d7d70d1023d",
+  "independent_human_review": false,
+  "legacy_curriculum_examples_released": 0,
+  "legacy_curriculum_review_completed": false,
+  "native_tool_message_training": false,
+  "new_examples_scope": "specifically_identified_technical_tool_use_gap; nominal_boundary_and_refusal_behaviors; not manufactured domain quota",
+  "oracles_sha256": "1c364ab6428975c4b9266ad895c446e17a6996643a68587c26fa399f4600505f",
+  "private_experimental_use": "authorized_owned_code_deterministic_facts; no legal guarantee",
+  "public_redistribution": "NOT_LICENSED_OR_PUBLISHED",
+  "qwen_tokens": 4430,
+  "release_time": "2026-10-01T21:34:04.805803+00:00",
+  "rights_manifest_sha256": "87d8247546810f388c741faf4710bcf220f6d029a3978fb8cc85d6191c00c549",
+  "source_family_overlap_with_gold": 0,
+  "status": "RELEASED_PRIVATE_CALCULATOR_PROTOCOL_PILOT",
+  "training_authorized": false
+}

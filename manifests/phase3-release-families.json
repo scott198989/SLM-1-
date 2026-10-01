@@ -1,0 +1,26 @@
+{
+  "all_repository_API_and_Drive_families": "WITHHELD; no uncertain legacy family admitted to released SFT, model development, gold or production training RAG",
+  "development_families": [],
+  "gold_families": [
+    "owned-statistics-complete-source-v01"
+  ],
+  "gold_in_train_sft_or_training_rag": false,
+  "legacy_family_receipt_sha256": "8bdbb427b34e288d8eb79c6e71d8a5493b62539d94abe55fe73494e718425751",
+  "pretraining_overlap": "UNKNOWN",
+  "random_row_split": false,
+  "shared_public_tests": "implementation regression tests only; prohibited as model-development selection tasks",
+  "source_bindings": {
+    "src/forge_tools/engineering.py": {
+      "family": "owned-engineering-calculator-complete-source-v01",
+      "sha256": "ce6ab03daa581ba0dc179facd89dec2e41b2e3890c3215af5a5c75454199fd9e"
+    },
+    "src/forge_tools/statistics.py": {
+      "family": "owned-statistics-complete-source-v01",
+      "sha256": "d72162556c53bdc63151f87a89ecedb231933800b928f86935d7c0882bbfd43d"
+    }
+  },
+  "train_families": [
+    "owned-engineering-calculator-complete-source-v01"
+  ],
+  "version": "FORGE_phase3_whole_source_split_v01"
+}
