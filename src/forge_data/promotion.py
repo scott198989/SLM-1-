@@ -1,6 +1,8 @@
 """Fail-closed, stage-specific promotion. No implicit rights or correctness."""
+
 from dataclasses import dataclass, fields
 from enum import Enum
+
 
 class EvidenceState(str, Enum):
     VERIFIED = "VERIFIED"
@@ -8,6 +10,7 @@ class EvidenceState(str, Enum):
     UNKNOWN = "UNKNOWN"
     CONFLICTING = "CONFLICTING"
     NOT_APPLICABLE = "NOT_APPLICABLE"
+
 
 class Stage(str, Enum):
     RAW = "RAW"
@@ -19,6 +22,7 @@ class Stage(str, Enum):
     RAG_READY = "RAG_READY"
     EVAL_READY = "EVAL_READY"
     RELEASED = "RELEASED"
+
 
 @dataclass(frozen=True)
 class Proof:
@@ -52,39 +56,94 @@ class Proof:
         for field in fields(self):
             value = getattr(self, field.name)
             if field.name in {"provenance", "rights"}:
-                if not isinstance(value, EvidenceState): raise ValueError("evidence_state_must_be_enum")
+                if not isinstance(value, EvidenceState):
+                    raise ValueError("evidence_state_must_be_enum")
             elif isinstance(field.default, bool) and type(value) is not bool:
                 raise ValueError("proof_flags_must_be_boolean")
             elif isinstance(field.default, str) and not isinstance(value, str):
                 raise ValueError("evidence_references_must_be_strings")
 
-COMMON = ("lineage", "immutable_source_hash", "exact_location", "privacy_pass", "source_complete")
-VALIDATED = COMMON + ("fidelity_pass", "visual_dependencies_resolved", "family_isolation_pass")
-ALLOWED = {Stage.RAW:{Stage.EXTRACTED,Stage.QUARANTINED}, Stage.EXTRACTED:{Stage.REVIEW,Stage.QUARANTINED}, Stage.QUARANTINED:{Stage.REVIEW}, Stage.REVIEW:{Stage.VALIDATED,Stage.QUARANTINED}, Stage.VALIDATED:{Stage.SFT_READY,Stage.RAG_READY,Stage.EVAL_READY,Stage.QUARANTINED}, Stage.SFT_READY:{Stage.RELEASED,Stage.QUARANTINED}, Stage.RAG_READY:{Stage.RELEASED,Stage.QUARANTINED}, Stage.EVAL_READY:{Stage.RELEASED,Stage.QUARANTINED}}
+
+COMMON = (
+    "lineage",
+    "immutable_source_hash",
+    "exact_location",
+    "privacy_pass",
+    "source_complete",
+)
+VALIDATED = COMMON + (
+    "fidelity_pass",
+    "visual_dependencies_resolved",
+    "family_isolation_pass",
+)
+ALLOWED = {
+    Stage.RAW: {Stage.EXTRACTED, Stage.QUARANTINED},
+    Stage.EXTRACTED: {Stage.REVIEW, Stage.QUARANTINED},
+    Stage.QUARANTINED: {Stage.REVIEW},
+    Stage.REVIEW: {Stage.VALIDATED, Stage.QUARANTINED},
+    Stage.VALIDATED: {
+        Stage.SFT_READY,
+        Stage.RAG_READY,
+        Stage.EVAL_READY,
+        Stage.QUARANTINED,
+    },
+    Stage.SFT_READY: {Stage.RELEASED, Stage.QUARANTINED},
+    Stage.RAG_READY: {Stage.RELEASED, Stage.QUARANTINED},
+    Stage.EVAL_READY: {Stage.RELEASED, Stage.QUARANTINED},
+}
+
 
 def blockers(current: Stage, target: Stage, proof: Proof) -> list[str]:
-    if target not in ALLOWED.get(current,set()): return ["INVALID_TRANSITION"]
-    if target == Stage.QUARANTINED: return []
-    required = COMMON if target in {Stage.EXTRACTED,Stage.REVIEW} else VALIDATED
-    problems = [field.upper() for field in required if not getattr(proof,field)]
+    if target not in ALLOWED.get(current, set()):
+        return ["INVALID_TRANSITION"]
+    if target == Stage.QUARANTINED:
+        return []
+    required = COMMON if target in {Stage.EXTRACTED, Stage.REVIEW} else VALIDATED
+    problems = [field.upper() for field in required if not getattr(proof, field)]
     if target != Stage.EXTRACTED:
-        if proof.provenance != EvidenceState.VERIFIED: problems.append("PROVENANCE_NOT_VERIFIED")
-        if proof.rights != EvidenceState.VERIFIED: problems.append("RIGHTS_NOT_VERIFIED")
-        if not proof.rights_evidence_ref: problems.append("RIGHTS_EVIDENCE_MISSING")
-        if not proof.source_evidence_ref: problems.append("SOURCE_EVIDENCE_MISSING")
-    if target not in {Stage.EXTRACTED,Stage.REVIEW}:
-        if not proof.fidelity_review_ref: problems.append("FIDELITY_EVIDENCE_MISSING")
-        if not proof.family_manifest_ref: problems.append("FAMILY_EVIDENCE_MISSING")
+        if proof.provenance != EvidenceState.VERIFIED:
+            problems.append("PROVENANCE_NOT_VERIFIED")
+        if proof.rights != EvidenceState.VERIFIED:
+            problems.append("RIGHTS_NOT_VERIFIED")
+        if not proof.rights_evidence_ref:
+            problems.append("RIGHTS_EVIDENCE_MISSING")
+        if not proof.source_evidence_ref:
+            problems.append("SOURCE_EVIDENCE_MISSING")
+    if target not in {Stage.EXTRACTED, Stage.REVIEW}:
+        if not proof.fidelity_review_ref:
+            problems.append("FIDELITY_EVIDENCE_MISSING")
+        if not proof.family_manifest_ref:
+            problems.append("FAMILY_EVIDENCE_MISSING")
     readiness = current if target == Stage.RELEASED else target
-    extra = {Stage.SFT_READY:("question_complete","answer_verified","units_assumptions_checked","assistant_mask_verified"), Stage.RAG_READY:("citation_hash_offsets_verified",), Stage.EVAL_READY:("question_complete","answer_verified","units_assumptions_checked","independent_heldout","grader_verified","private_test_destination")}.get(readiness,())
-    problems.extend(field.upper() for field in extra if not getattr(proof,field))
-    if readiness in {Stage.SFT_READY,Stage.EVAL_READY} and not proof.answer_review_ref: problems.append("ANSWER_EVIDENCE_MISSING")
+    extra = {
+        Stage.SFT_READY: (
+            "question_complete",
+            "answer_verified",
+            "units_assumptions_checked",
+            "assistant_mask_verified",
+        ),
+        Stage.RAG_READY: ("citation_hash_offsets_verified",),
+        Stage.EVAL_READY: (
+            "question_complete",
+            "answer_verified",
+            "units_assumptions_checked",
+            "independent_heldout",
+            "grader_verified",
+            "private_test_destination",
+        ),
+    }.get(readiness, ())
+    problems.extend(field.upper() for field in extra if not getattr(proof, field))
+    if readiness in {Stage.SFT_READY, Stage.EVAL_READY} and not proof.answer_review_ref:
+        problems.append("ANSWER_EVIDENCE_MISSING")
     if target == Stage.RELEASED:
-        for field in ("release_manifest_verified","release_artifact_hash_verified"):
-            if not getattr(proof,field): problems.append(field.upper())
+        for field in ("release_manifest_verified", "release_artifact_hash_verified"):
+            if not getattr(proof, field):
+                problems.append(field.upper())
     return sorted(set(problems))
 
+
 def promote(current: Stage, target: Stage, proof: Proof) -> Stage:
-    reasons=blockers(current,target,proof)
-    if reasons: raise ValueError("promotion_denied:"+",".join(reasons))
+    reasons = blockers(current, target, proof)
+    if reasons:
+        raise ValueError("promotion_denied:" + ",".join(reasons))
     return target

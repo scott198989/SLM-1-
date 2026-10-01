@@ -20,7 +20,7 @@
     "status": "requires_measured_QLoRA_memory_benchmark"
   },
   "rag": {
-    "status": "bounded_full_private_review_index_in_progress_production_not_approved",
+    "status": "bounded_partial_private_index_incomplete_both_query_modes_reject_production_not_approved",
     "visual_policy": "exact_source_page_image_links_no_claim_of_pixel_understanding"
   },
   "automatic_checks": "canceled_by_user",

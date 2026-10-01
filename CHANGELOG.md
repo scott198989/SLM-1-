@@ -8,6 +8,9 @@
 - Transplanted the pinned model-independent engineering calculator; repaired Welch/ANOVA/regression contracts in new bounded statistics and added independent analytic/numeric/refusal tests.
 - Prepared private citation-RAG and 240-task sealed evaluation designs, an exact attention-only QLoRA proposal and honest unmeasured desktop memory limits.
 - Refreshed aggregate academic extraction counts and explicit OCR/format backlog; bounded private family/index work remains separately receipted. Initial frozen audit remains historical evidence.
+- Final bounded analysis and index stages both timed out; recorded partial committed index coverage, internal hash/metadata checks and missing full source/citation validation. Both query modes reject the incomplete artifact; ownership is empty and no retries were started.
+- Found 248 complete saved Stroud OCR envelopes outside active normalized units (247 nonblank); distinguished 1,207 review slots from at most 959 slots without a known complete cache.
+- Formatted 14 checked Python files with identical ASTs and preserved the calculator's exact bytes; undefined-name/import checks passed. No semantic or training change.
 
 - Audited pinned branches of Completions, LLM, SLM and SLM-1-, including all README variants and populated candidate rows.
 - Consolidated 34,463 unique repository conversations into review staging with full source aliases; removed 67,767 repeated row occurrences.

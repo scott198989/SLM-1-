@@ -11,6 +11,8 @@ The real Qwen tokenizer/template and assistant masks are CPU-tested. Model-indep
 
 Current settled academic extraction: **1,342 extracted-status sources, 341 blocked, 172 duplicates, 92 excluded, zero pending**. Only 1,311 extracted sources have nonblank text; 31 are inventory/visual/empty-only. [All subject/status counts](reports/ACADEMIC_AGGREGATE_COUNTS.md). Private family/index follow-up evidence is separate from the frozen initial report.
 
+**Bounded follow-up stopped:** both full analysis and review-index build reached their 40-minute limits. The incomplete private index has 43,205 committed chunks from 295 sources; chunk self-hashes/metadata passed, full raw-source/citation/context validation did not finish, and both query modes reject it. [Final bounded outcome](reports/academic-bounded-followup.json). No workers remain. The 1,207 active OCR/review page slots include 248 saved Stroud OCR envelopes awaiting reviewed reintegration; up to 959 page slots lack a known complete cache. This is not a training-ready delivery.
+
 - [Complete data and architecture audit](reports/FORGE_DATA_AND_ARCHITECTURE_REPORT.md).
 - [Deduplicated repository staging and lineage](data/sft/staging/consolidated-20261001-v2/README.md): 34,463 unique conversations, 29,153 awaiting review and 5,310 quarantined. **Zero approved SFT examples.**
 - [Final consolidated counts](reports/consolidated-audit.json), [all populated source files](manifests/repository-datasets-final.json), [all tracked paths](manifests/repository-files.json), [README review](manifests/readme-review.json).
