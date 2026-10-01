@@ -5,6 +5,12 @@
 
 Target: **Qwen/Qwen3-30B-A3B-Base**, SFT with QLoRA plus citation RAG. No from-scratch model or tokenizer training. The mission below describes the intended system; it is not a claim of completed implementation.
 
+**Latest preparation phase:** [Decision report](reports/FORGE_PHASE_DECISION_REPORT.md). The user attested synthetic origin for all Completions datasets and SLM conversations. The proposed engineering review curriculum contains **2,112 examples**, not an approved training set. Rights applicability, independent answer/fidelity review and whole-family splits remain required. See [provenance matrix](manifests/provenance-rights-matrix.json), [curriculum](reports/forge-v01-curriculum.json), [Qwen token audit](reports/qwen-token-audit.json) and [integrity receipt](reports/preparation-validation.json).
+
+The real Qwen tokenizer/template and assistant masks are CPU-tested. Model-independent engineering/statistics tools are implemented with independent fixtures. [Promotion contract](docs/PROMOTION_CONTRACT.md), [risk-tier policy](configs/validation-policy.json), [private citation-RAG design](docs/RAG_ARCHITECTURE.md), [sealed gold design](configs/gold-evaluation-design.json), [tool layer](docs/TOOL_LAYER.md) and [exact QLoRA proposal](configs/qwen-qlora-proposal.json) describe actual implementation versus proposed work. **Zero approved SFT, zero sealed gold tasks, no production RAG approval and no training.**
+
+Current settled academic extraction: **1,342 extracted-status sources, 341 blocked, 172 duplicates, 92 excluded, zero pending**. Only 1,311 extracted sources have nonblank text; 31 are inventory/visual/empty-only. [All subject/status counts](reports/ACADEMIC_AGGREGATE_COUNTS.md). Private family/index follow-up evidence is separate from the frozen initial report.
+
 - [Complete data and architecture audit](reports/FORGE_DATA_AND_ARCHITECTURE_REPORT.md).
 - [Deduplicated repository staging and lineage](data/sft/staging/consolidated-20261001-v2/README.md): 34,463 unique conversations, 29,153 awaiting review and 5,310 quarantined. **Zero approved SFT examples.**
 - [Final consolidated counts](reports/consolidated-audit.json), [all populated source files](manifests/repository-datasets-final.json), [all tracked paths](manifests/repository-files.json), [README review](manifests/readme-review.json).

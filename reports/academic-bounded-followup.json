@@ -1,0 +1,10 @@
+{
+  "academic_scope_only":true,
+  "extraction_settled":true,
+  "analysis":{"status":"BOUNDED_TIMEOUT","at":"2026-10-01T19:22:11.036083+00:00","limit_seconds":2400,"current_completed_manifests":false,"old_20260924_manifests":"STALE_NOT_CURRENT_EVIDENCE","candidate_pair_capacity_results":"UNKNOWN","family_isolation":"UNKNOWN","near_dedup_exhaustive":false},
+  "exact_ledger_dedup":{"duplicate_sources":172,"repeated_unit_text_hash_groups":5364,"characters_before":134628005,"characters_after":131523710},
+  "review_index":{"status":"CURRENT_BOUNDED_BUILD_IN_PROGRESS","production_approved":false,"citation_context_validation":"PENDING"},
+  "approved_sft":0,
+  "training":false,
+  "private_content_included":false
+}

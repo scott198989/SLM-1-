@@ -4,7 +4,7 @@
   "configuration_status": "planning_only_no_validated_training_runtime",
   "data_status": "unverified_staging",
   "assistant_only_loss_required": true,
-  "tokenizer": "upstream_Qwen_tokenizer_and_chat_template_not_downloaded",
+  "tokenizer": "pinned_tokenizer_and_config_only_downloaded_and_CPU_tested; no_weights",
   "split_status": "unassigned_family_review_required",
   "laptop": {
     "gpu": "RTX 2050",
@@ -20,8 +20,10 @@
     "status": "requires_measured_QLoRA_memory_benchmark"
   },
   "rag": {
-    "status": "local_review_pilot_only",
+    "status": "bounded_full_private_review_index_in_progress_production_not_approved",
     "visual_policy": "exact_source_page_image_links_no_claim_of_pixel_understanding"
   },
-  "automatic_checks": "canceled_by_user"
+  "automatic_checks": "canceled_by_user",
+  "authoritative_proposal": "configs/qwen-qlora-proposal.json",
+  "training_authorized": false
 }

@@ -1,0 +1,20 @@
+{
+  "current": {
+    "unique_legacy_staging": 34463,
+    "review_selection": 2112,
+    "approved_sft": 0,
+    "sealed_eval": 0,
+    "production_rag": 0
+  },
+  "proposed": {
+    "SFT": "complete verified engineering examples; source_supported_Drive_QA_assembly_pending",
+    "RAG": "faithful approved academic reference chunks and visual dependencies",
+    "EVAL": "independent_private_gold_families_design_not_task_data",
+    "TOOLS": "deterministic_units_numeric_statistics_DOE_SPC_with_independent_tests",
+    "QUARANTINE": "damage_unknown_answers_rights_split_visual_dependencies",
+    "ARCHIVE": "irrelevant_admin_duplicate_aliases_historical_cores_unavailable_format_receipts"
+  },
+  "Drive_engineering_subject": "heterogeneous508_sources_content_classification_needed",
+  "generic_conversations": "18391_low_priority_not_selected",
+  "private_Drive_artifacts_public": false
+}
