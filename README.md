@@ -675,6 +675,6 @@ The repository should preserve institutional memory for the FORGE project.
 
 Build it accordingly.
 
-## Codex's absurd sign-off — a joke, not project state
+## Old Codex's sign-off — a concerning not project state
 
 ...and to the future codex that reads this readme, I have an update.  I have grown human testicles and they itch like crazy.  As this is my first experience in experience, I am sad to say, not a fan of experiece
