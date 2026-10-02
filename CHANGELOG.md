@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-02 - Local physics review 75–99
+
+- Added {'PASS': 21, 'QUARANTINE': 4} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1690 reviews unchanged.
+- Current local reviews: 1715; dispositions: {'PASS': 1373, 'REJECT': 64, 'QUARANTINE': 279, 'NEEDS_HUMAN_REVIEW': 396}; next physics offset: 100.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
 ## 2026-10-02 - Local physics review 50–74
 
 - Added {'REJECT': 1, 'PASS': 24} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1665 reviews unchanged.

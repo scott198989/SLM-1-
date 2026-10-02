@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1352,
+    "PASS": 1373,
     "REJECT": 64,
-    "QUARANTINE": 275,
-    "NEEDS_HUMAN_REVIEW": 421
+    "QUARANTINE": 279,
+    "NEEDS_HUMAN_REVIEW": 396
   },
   "by_domain": {
     "circuits": {
@@ -62,10 +62,10 @@
       "NEEDS_HUMAN_REVIEW": 244
     },
     "physics": {
-      "PASS": 66,
+      "PASS": 87,
       "REJECT": 3,
-      "QUARANTINE": 6,
-      "NEEDS_HUMAN_REVIEW": 175
+      "QUARANTINE": 10,
+      "NEEDS_HUMAN_REVIEW": 150
     }
   },
   "risk_flags_overlap": {
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1690,
+  "agent_substantive_reviews": 1715,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "54f0b4914a8f5bff55c902cc58a5a72519a8caf08f51e2c48fc28d44d8f98830",
+  "technical_review_sha256": "91186533f25ae9722544f2c8a2ca45003c203a7119f488f1ad8c37ca008cddec",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 419,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 394,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1771,11 +1771,36 @@
     "Correct standard constant-inertia torque-versus-acceleration interpretation with a constant bias/friction intercept.": 1,
     "Correct mechanical power at the stated simultaneous torque-speed operating point.": 1,
     "Correct distinction between a pivot force and its zero torque about that pivot.": 1,
-    "Correct force-couple counterexample to zero force implying zero torque.": 1
+    "Correct force-couple counterexample to zero force implying zero torque.": 1,
+    "Equal opposite forces at different points do not necessarily form a nonzero couple; their lines of action must be non-collinear. The answer omits that essential condition.": 1,
+    "Correct lever-arm comparison for the same door and comparable force direction.": 1,
+    "Correct statics strategy of choosing a torque origin through unknown support-force lines.": 1,
+    "Correct conditional dependence of spin response on added inertia and the way mass arrives.": 1,
+    "Reasonable list of explanations for a flat plotted angular speed despite reported torque, including inertia and reference-axis issues.": 1,
+    "Correct distinction among inertia tensor, principal axes and applied torque in3D rigid-body dynamics.": 1,
+    "Correct ideal rolling energy split, no-slip relation and static-friction role without contact work on stationary rigid ground.": 1,
+    "Correct distinction between friction torque affecting motion and the separate source of mechanical energy in ideal pure rolling.": 1,
+    "Correct distinction between zero net external torque and absence of all forces.": 1,
+    "Correct separation of work, torque, angular-momentum conservation and inelastic energy loss.": 1,
+    "The inverse-spin trend for fixed geometry is correct, but the quoted scalar precession rate omits the angle between L and the precession axis. Fast spin and steady precession alone do not make that angle90 degrees.": 1,
+    "Faithful beginner analogy between torque changing angular momentum and force changing linear momentum.": 1,
+    "Correct typical longer-pole balancing explanation through slower angular response.": 1,
+    "Correct isolated reaction-wheel/body angular-momentum balance with an explicit common-axis sign convention.": 1,
+    "Correct explanation of origin-dependent torque and consistent angular-momentum accounting, including moving-pivot caution.": 1,
+    "Correct reference-point and external-torque qualifications on angular-momentum conservation.": 1,
+    "The need for transverse torque to redirect L is correct, but the answer muddles torque direction with axle motion. Angular-momentum change is along the torque vector; precession angular velocity is a different vector.": 1,
+    "Correct qualitative raw-versus-rigid egg spin and stop-release explanation through internal fluid motion and viscous coupling.": 1,
+    "The torque criterion is correct, but the opening rejects the sufficient condition actually asked. If no external forces act, external torque is zero about a fixed inertial origin and angular momentum is conserved. Nonzero central force shows that no force is unnecessary, not that it is insufficient.": 1,
+    "Correct introductory rejection of an outward centrifugal force as the support mechanism for a fast spinning top.": 1,
+    "Correct flywheel smoothing mechanism through rotational inertia and reversible energy storage.": 1,
+    "Correct answer that zero net torque permits continued nonzero rotation.": 1,
+    "Correct internal-shape-change mechanism for reorientation at zero total angular momentum.": 1,
+    "Correct distinction between no relative sliding and zero friction.": 1,
+    "Correct pre-slip ladder statics workflow combining forces, moments and friction bounds.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "9681b60f04939adfc2e99b28d752c048865e8b9bc918c7367325f6f5cf1d5f23",
-  "substantively_unreviewed": 419,
+  "published_decisions_sha256": "291e9b84ca0904f155641bf93cb28cc6c95c02ec696da8dac3b6ffec21f01c32",
+  "substantively_unreviewed": 394,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

@@ -51114,9 +51114,871 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/physics-0050-0075.json",
       "original_domain_ordinal": 74
+    },
+    {
+      "id": "repo-2cd127c2b77c0ce77e0fc151",
+      "messages_sha256": "2cd127c2b77c0ce77e0fc151c2e4511bc73693c183292550a6a2304ed3ec1034",
+      "state": "PASS",
+      "rationale": "Correct conditional dependence of spin response on added inertia and the way mass arrives.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For unchanged total L and a larger final I, omega=L/I decreases; with fixed final I and net torque, alpha=tau/I."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "While mass is actively entering, its angular-momentum flux and I_dot also enter the balance; the source begins by making the addition process relevant."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 84,
+      "assistant_tokens": 60,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 75
+    },
+    {
+      "id": "repo-ecf02cb25bd30d30f2d1fdbb",
+      "messages_sha256": "ecf02cb25bd30d30f2d1fdbb66487f62bb2c8d8b858e4ae77e3ceed3f7674aeb",
+      "state": "PASS",
+      "rationale": "Correct distinction between no relative sliding and zero friction.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A gravity-driven rolling cylinder can have nonzero static friction supplying torque while v_CM=R*omega."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The contact constraints and friction capacity must allow no slip; some ideal constant-speed rolling cases have zero friction, so nonzero is possible rather than mandatory."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 72,
+      "assistant_tokens": 55,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 76
+    },
+    {
+      "id": "repo-bbd1646167441dc8b4b4c736",
+      "messages_sha256": "bbd1646167441dc8b4b4c736e1a8a1c605f34a32656065938abf0627c4811446",
+      "state": "QUARANTINE",
+      "rationale": "The torque criterion is correct, but the opening rejects the sufficient condition actually asked. If no external forces act, external torque is zero about a fixed inertial origin and angular momentum is conserved. Nonzero central force shows that no force is unnecessary, not that it is insufficient.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a fixed inertial origin, every absent external force contributes zero r cross F, hence dL/dt=0. A nonzero central force is a separate example showing that zero force is not necessary."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold for the direction of the logical answer to the actual prompt, not for the correct zero-external-torque conservation criterion."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 70,
+      "assistant_tokens": 51,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 77
+    },
+    {
+      "id": "repo-2181c4e9137ace10493e45c9",
+      "messages_sha256": "2181c4e9137ace10493e45c9ce97a65f6fa465739fa60b872a5c8ecac0932919",
+      "state": "QUARANTINE",
+      "rationale": "Equal opposite forces at different points do not necessarily form a nonzero couple; their lines of action must be non-collinear. The answer omits that essential condition.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "title": "MIT4.441, Lecture12, Couples",
+          "url": "https://web.mit.edu/4.441/1_lectures/1_lecture12/1_lecture12.html",
+          "finding": "A nonzero force couple uses equal opposite forces on separated parallel lines of action, with a nonzero perpendicular distance."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "r1=(1,0,0),r2=(-1,0,0),F1=(1,0,0),F2=(-1,0,0) give zero resultant and zero torque despite distinct application points."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The example becomes correct for separated non-collinear force lines; preserve the original rather than inserting that condition into it."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 82,
+      "assistant_tokens": 55,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 78
+    },
+    {
+      "id": "repo-651c109d387483d91e98af6a",
+      "messages_sha256": "651c109d387483d91e98af6a96180a0905ffac824584cad543e1f5482b0258d8",
+      "state": "PASS",
+      "rationale": "Faithful beginner analogy between torque changing angular momentum and force changing linear momentum.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Spin-state is informal; angular momentum can also include orbital motion, and torque is a vector about a chosen reference point."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 85,
+      "assistant_tokens": 55,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 79
+    },
+    {
+      "id": "repo-22d9a9ff7bb6feb3e73efb25",
+      "messages_sha256": "22d9a9ff7bb6feb3e73efb253ae97c9c2d6be5d2715b4378adfe85280ab1d383",
+      "state": "PASS",
+      "rationale": "Correct lever-arm comparison for the same door and comparable force direction.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At fixed force angle, tau=r*F*sin(theta); the larger knob radius gives a larger torque and alpha=tau_net/I."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The comparison assumes the same force orientation and other torques; a force directed through the hinge gives no torque at either point."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 108,
+      "assistant_tokens": 70,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 80
+    },
+    {
+      "id": "repo-dcb19fb60913f82925724646",
+      "messages_sha256": "dcb19fb60913f829257246464a75e1648c2a6fc9d8aea255c5a9c6afa9e9312a",
+      "state": "PASS",
+      "rationale": "Correct answer that zero net torque permits continued nonzero rotation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A rigid body rotating about a principal fixed axis can have L constant and omega constant with no net external torque."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The word can is important. In general torque-free asymmetric motion, constant L need not imply a constant omega vector; spin in the final sentence should refer to angular momentum, not every aspect of orientation."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 77,
+      "assistant_tokens": 53,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 81
+    },
+    {
+      "id": "repo-79519ec4a159b0b472f3b7f2",
+      "messages_sha256": "79519ec4a159b0b472f3b7f26553d7a56d5b123070be636ed0429025ef6c6b4b",
+      "state": "PASS",
+      "rationale": "Correct typical longer-pole balancing explanation through slower angular response.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For comparable uniform rods about a lower end, I=m*L²/3 and gravitational torque near upright is approximately m*g*L*theta/2, so angular growth rate scales with sqrt(g/L)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Mass distribution, flexibility and hand control matter. The same-torque inertia comparison is sound, and the usual longer uniform rod also has a slower natural tipping scale despite its longer gravity lever arm."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 82,
+      "assistant_tokens": 58,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 82
+    },
+    {
+      "id": "repo-373b75f532121dff148540bc",
+      "messages_sha256": "373b75f532121dff148540bc179d1b81a17ce260c08584c530d021d463f9a634",
+      "state": "PASS",
+      "rationale": "Reasonable list of explanations for a flat plotted angular speed despite reported torque, including inertia and reference-axis issues.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For fixed-axis L=I*omega, tau=I*omega_dot+I_dot*omega; omega_dot=0 can coexist with nonzero tau when I changes."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Internal/external classification or mislabeled data is a diagnostic possibility, not a claim that a truly internal torque changes total system L. In3D the plotted component may omit direction changes."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "VISUAL_CONTEXT_CHECK"
+      ],
+      "qwen_tokens": 96,
+      "assistant_tokens": 67,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 83
+    },
+    {
+      "id": "repo-483c59b665de663bd3e19910",
+      "messages_sha256": "483c59b665de663bd3e1991064c24e650057aa55c704e82af082fc656f44bcd1",
+      "state": "PASS",
+      "rationale": "Correct distinction between zero net external torque and absence of all forces.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A nonzero force through the chosen origin has zero torque about it, while multiple force moments can also cancel."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The simple dL/dt statement assumes a suitable fixed inertial or center-of-mass reference."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 80,
+      "assistant_tokens": 53,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 84
+    },
+    {
+      "id": "repo-2aa8e4efa595e225d8c5d2ce",
+      "messages_sha256": "2aa8e4efa595e225d8c5d2ce81eb345cb88360b1876b659855b7d4916d2c809c",
+      "state": "PASS",
+      "rationale": "Correct statics strategy of choosing a torque origin through unknown support-force lines.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a force applied at the pivot, r=0 in r cross F, so it drops from that moment equation but remains in force balance."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is an algebraic simplification, not permission to omit contact forces from the FBD or ignore dynamic moving-origin terms."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 82,
+      "assistant_tokens": 54,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 85
+    },
+    {
+      "id": "repo-7bc648d2256289682ca33ebc",
+      "messages_sha256": "7bc648d2256289682ca33ebc5b54a129f2e03278a0befa414b31468863f5f113",
+      "state": "PASS",
+      "rationale": "Correct isolated reaction-wheel/body angular-momentum balance with an explicit common-axis sign convention.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For absolute inertial angular speeds, I_body*omega_body+I_wheel*omega_wheel=L_total. Starting from rest sets this sum to zero."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "If wheel speed is measured relative to the body, its inertial speed is omega_body+omega_relative and the balance must use that conversion. Constant inertias and a shared principal axis are assumed."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 181,
+      "assistant_tokens": 138,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 86
+    },
+    {
+      "id": "repo-7fcf74481e5b7b6ebafe6eb4",
+      "messages_sha256": "7fcf74481e5b7b6ebafe6eb481af141c91ae6da33b37da66e917d5a44359ec95",
+      "state": "PASS",
+      "rationale": "Correct explanation of origin-dependent torque and consistent angular-momentum accounting, including moving-pivot caution.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Changing origin by a constant displacement a gives tau_new=tau_old-a cross F_net. In static force equilibrium, this shift vanishes."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Dynamic reference-point motion changes the angular-momentum transport equation; the answer explicitly warns about this."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 171,
+      "assistant_tokens": 139,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 87
+    },
+    {
+      "id": "repo-3bbac5ce71f8620d15ea1c56",
+      "messages_sha256": "3bbac5ce71f8620d15ea1c569a2ae26670a61bd7f64af900bc5477e0e460d095",
+      "state": "PASS",
+      "rationale": "Correct ideal rolling energy split, no-slip relation and static-friction role without contact work on stationary rigid ground.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "K=0.5*m*v_CM²+0.5*I_CM*omega²; contact power F_friction dot v_contact=0 when v_contact=0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A moving belt, deformation or rolling resistance changes the work balance. Static friction can redistribute translational/rotational rates without providing the net energy."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 179,
+      "assistant_tokens": 146,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 88
+    },
+    {
+      "id": "repo-d92c656c6d9176738943e7b2",
+      "messages_sha256": "d92c656c6d9176738943e7b287d52253f3131a6ed18b3f59186c7527728a6c7c",
+      "state": "PASS",
+      "rationale": "Correct flywheel smoothing mechanism through rotational inertia and reversible energy storage.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "K=0.5*I*omega² gives DeltaK approximately I*omega*Deltaomega; a larger I reduces speed variation for a given small energy pulse."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A flywheel does not eliminate torque pulsations or losses; it buffers their speed effect, as the answer states."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 150,
+      "assistant_tokens": 130,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 89
+    },
+    {
+      "id": "repo-f8af70e07aaf132be66c1987",
+      "messages_sha256": "f8af70e07aaf132be66c1987a199a9dae6f69b9d8f908846ef56cb4a804da9d6",
+      "state": "PASS",
+      "rationale": "Correct pre-slip ladder statics workflow combining forces, moments and friction bounds.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Summing torques about the base eliminates forces applied there; horizontal/vertical balance and |f|<=mu_s*N determine feasible contact reactions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Weight at the center assumes a uniform ladder; loads shift the center of mass. At least one relevant friction bound can become active at impending slip, and both may do so."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 171,
+      "assistant_tokens": 145,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 90
+    },
+    {
+      "id": "repo-38f4fb30de15b723cddcc7c8",
+      "messages_sha256": "38f4fb30de15b723cddcc7c8afb8f35794451c1b75dd73be5c280edbab6ac785",
+      "state": "PASS",
+      "rationale": "Correct distinction among inertia tensor, principal axes and applied torque in3D rigid-body dynamics.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "L=I_tensor*omega; eigenvectors of the symmetric inertia tensor are principal axes. With tau=0, inertial L is fixed while body-frame components generally evolve by Euler equations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Angular velocity and angular momentum are parallel for rotation along a principal axis, not for arbitrary combined principal-axis components."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 184,
+      "assistant_tokens": 150,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 91
+    },
+    {
+      "id": "repo-5abee63f030446eb9eb68ded",
+      "messages_sha256": "5abee63f030446eb9eb68ded61f0e9fb2dd8bdc227716cd0a2e9f4803385d789",
+      "state": "QUARANTINE",
+      "rationale": "The inverse-spin trend for fixed geometry is correct, but the quoted scalar precession rate omits the angle between L and the precession axis. Fast spin and steady precession alone do not make that angle90 degrees.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT8.01, Three Dimensional Rotations and Gyroscopes, chapter22",
+          "url": "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/mit8_01scs22_chapter22.pdf",
+          "finding": "Steady precession obeys torque=Omega cross L, including the angle between the precession axis and L; torque and dL/dt point in the same direction."
+        },
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "From tau=Omega_p cross L, |tau|=Omega_p*L*sin(theta), so the azimuthal precession rate is |tau|/(L*sin(theta)). The instantaneous speed of the L unit-vector tip is |tau_perp|/L, a different quantity."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for the undefined geometry/rate convention in the displayed formula; at fixed theta the qualitative slower-precession-with-faster-spin conclusion remains valid."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 170,
+      "assistant_tokens": 141,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 92
+    },
+    {
+      "id": "repo-cdcac18570e5c333b021e7dd",
+      "messages_sha256": "cdcac18570e5c333b021e7dd93eec974be834cae617b7db4efd3bc2260289497",
+      "state": "PASS",
+      "rationale": "Correct introductory rejection of an outward centrifugal force as the support mechanism for a fast spinning top.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT8.01, Three Dimensional Rotations and Gyroscopes, chapter22",
+          "url": "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/mit8_01scs22_chapter22.pdf",
+          "finding": "Steady precession obeys torque=Omega cross L, including the angle between the precession axis and L; torque and dL/dt point in the same direction."
+        },
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Steady tilted precession, nutation and an upright sleeping top are distinct solutions; rapid spin can stabilize the appropriate motion, and low spin need not imply one universal failure trajectory."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 140,
+      "assistant_tokens": 118,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 93
+    },
+    {
+      "id": "repo-4308d73f8734a37906795010",
+      "messages_sha256": "4308d73f8734a3790679501089a54556db62bd6271f726d032c3b3a1e0f5d4e3",
+      "state": "PASS",
+      "rationale": "Correct distinction between friction torque affecting motion and the separate source of mechanical energy in ideal pure rolling.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Contact work is zero on fixed rigid ground because v_contact=0, while the friction moment about the center changes rotational energy in conjunction with its translational effect."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Gravity, a motor or another agent supplies the total energy increase; no-slip on a moving surface has a different contact-work condition."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 145,
+      "assistant_tokens": 116,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 94
+    },
+    {
+      "id": "repo-a4f40943fe6892c066a15be0",
+      "messages_sha256": "a4f40943fe6892c066a15be0c60ed3557e2ecfdba177cceb0dc6d4b16c59a77a",
+      "state": "PASS",
+      "rationale": "Correct reference-point and external-torque qualifications on angular-momentum conservation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a fixed inertial origin, dL/dt=tau_external. A reference-point shift changes L and torque through linear momentum and net force, so conservation need not be location-independent."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The center-of-mass angular-momentum balance also has its standard form; the answer appropriately recommends that reference and cautions about accelerating points."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 139,
+      "assistant_tokens": 116,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 95
+    },
+    {
+      "id": "repo-4f43628ca83f373075ba8acd",
+      "messages_sha256": "4f43628ca83f373075ba8acdb46f74ba18b46bada43a1455d8f98d7e4b63a678",
+      "state": "PASS",
+      "rationale": "Correct separation of work, torque, angular-momentum conservation and inelastic energy loss.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Negligible external torque fixes total L while internal dissipative processes can reduce mechanical kinetic energy during sticking."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "One component of kinetic energy, such as final common spin, can increase by conversion from relative translation; the invariant statement is loss of total mechanical kinetic energy in a passive inelastic impact, not monotonic decrease of every separately labeled component."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 193,
+      "assistant_tokens": 145,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 96
+    },
+    {
+      "id": "repo-ec6bfc3aeca8f0a9f32098ab",
+      "messages_sha256": "ec6bfc3aeca8f0a9f32098abdf5272ba8ae1191f8b6f907d842e971963d536ed",
+      "state": "PASS",
+      "rationale": "Correct internal-shape-change mechanism for reorientation at zero total angular momentum.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Symmetry, Stability, Geometric Phases, and Mechanical Integrators",
+          "url": "https://authors.library.caltech.edu/records/awqf6-dj319",
+          "finding": "Shape changes can produce net orientation change while total angular momentum remains zero, as in the falling-cat problem."
+        },
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A nonrigid body traces a path through configurations while balancing segment momenta; orientation is not determined solely by instantaneous total angular momentum."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 187,
+      "assistant_tokens": 147,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 97
+    },
+    {
+      "id": "repo-b26bf2181f73f06e080e42a4",
+      "messages_sha256": "b26bf2181f73f06e080e42a4422dde1c0d839e2bc0488cea6c3529b5e6cbe376",
+      "state": "PASS",
+      "rationale": "Correct qualitative raw-versus-rigid egg spin and stop-release explanation through internal fluid motion and viscous coupling.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The outcome depends on how briefly the shell is stopped and how much fluid momentum remains; the answer uses can and may rather than guaranteeing every trial."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 176,
+      "assistant_tokens": 138,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 98
+    },
+    {
+      "id": "repo-a6cdbb7d68c112bc827c7ad8",
+      "messages_sha256": "a6cdbb7d68c112bc827c7ad899835374105bda3962a13b5bef16ee4598185e9b",
+      "state": "QUARANTINE",
+      "rationale": "The need for transverse torque to redirect L is correct, but the answer muddles torque direction with axle motion. Angular-momentum change is along the torque vector; precession angular velocity is a different vector.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "OpenStax University Physics, Precession of a Gyroscope",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/11-4-precession-of-a-gyroscope",
+          "finding": "A transverse torque changes angular momentum in exactly the torque direction and generates precession in the fast-spin approximation."
+        },
+        {
+          "title": "MIT8.01, Three Dimensional Rotations and Gyroscopes, chapter22",
+          "url": "https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/mit8_01scs22_chapter22.pdf",
+          "finding": "Steady precession obeys torque=Omega cross L, including the angle between the precession axis and L; torque and dL/dt point in the same direction."
+        },
+        {
+          "method": "independent_rigid_body_and_conservation_derivation",
+          "finding": "Individually checked torque/force balance, inertia changes, angular-momentum transport, rolling-work identities, rigid-body precession and internal-energy exchange."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "dL/dt=tau means the L-vector tip moves in the torque direction. In the spin-dominated approximation the axle direction follows that change, while tau=Omega_precession cross L gives a different precession-axis vector."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for torque-versus-tipping direction. The support can mean individual bearing forces; a reaction couple still loads bearings, so do not reinterpret the answer as necessarily claiming a net resultant force."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 184,
+      "assistant_tokens": 140,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
+      "original_domain_ordinal": 99
     }
   ],
-  "reviewed": 1690,
+  "reviewed": 1715,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true
