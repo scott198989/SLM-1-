@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1373,
+    "PASS": 1391,
     "REJECT": 64,
-    "QUARANTINE": 279,
-    "NEEDS_HUMAN_REVIEW": 396
+    "QUARANTINE": 286,
+    "NEEDS_HUMAN_REVIEW": 371
   },
   "by_domain": {
     "circuits": {
@@ -62,10 +62,10 @@
       "NEEDS_HUMAN_REVIEW": 244
     },
     "physics": {
-      "PASS": 87,
+      "PASS": 105,
       "REJECT": 3,
-      "QUARANTINE": 10,
-      "NEEDS_HUMAN_REVIEW": 150
+      "QUARANTINE": 17,
+      "NEEDS_HUMAN_REVIEW": 125
     }
   },
   "risk_flags_overlap": {
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1715,
+  "agent_substantive_reviews": 1740,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "91186533f25ae9722544f2c8a2ca45003c203a7119f488f1ad8c37ca008cddec",
+  "technical_review_sha256": "0639efb01707129860116e2111ad1e1906cf66124842976dbfbda47e38294a87",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 394,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 369,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1796,11 +1796,36 @@
     "Correct answer that zero net torque permits continued nonzero rotation.": 1,
     "Correct internal-shape-change mechanism for reorientation at zero total angular momentum.": 1,
     "Correct distinction between no relative sliding and zero friction.": 1,
-    "Correct pre-slip ladder statics workflow combining forces, moments and friction bounds.": 1
+    "Correct pre-slip ladder statics workflow combining forces, moments and friction bounds.": 1,
+    "Correct classical medium-wave Doppler shift for a stationary source and observer moving radially toward it.": 1,
+    "Correct uniform Euler-Bernoulli cantilever length scaling with material and cross section held fixed.": 1,
+    "Correct practical distinction between stable damped forced resonance and self-excited linear instability, including flutter.": 1,
+    "The dAlembert general solution and need for two initial functions are correct, but the two component functions are not individually unique without a normalization: an arbitrary constant can be transferred between them.": 1,
+    "Correct finite damping-limited response at omega0 under a standard gamma=b/m viscous-coefficient convention.": 1,
+    "Correct simple-pendulum small-angle linearization and finite-amplitude period dependence.": 1,
+    "The energy-conservation conclusion is sound, but destructive displacement interference does not imply energy has necessarily shifted spatially. Kinetic or another local energy component can remain, and a finite beat-envelope region can exchange flux.": 1,
+    "Correct beat-frequency magnitude and cosine-sum identity.": 1,
+    "Correct high-frequency inertia-dominated and approximately opposite-phase asymptotic response.": 1,
+    "Correct ideal linear-spring period derivation.": 1,
+    "The parameter-modulation mechanism is correct, but comparing ordinary linearity in driving amplitude with parametric exponential growth conflates different variables. Exponential growth refers to time in an unstable Floquet regime, not generally an exponential dependence on pump amplitude.": 1,
+    "A narrow response peak can suggest a mode, but it does not establish a natural frequency or damping ratio without the input spectrum or a transfer/modal measurement. A narrow forcing line or artifact can also create a narrow output line.": 1,
+    "Damping removes energy in the passive model, but an unqualified slightly lower observed oscillation frequency does not cover strong damping or the loss of oscillation at critical/overdamping.": 1,
+    "Correct modern wave/particle explanation of light without treating it as simultaneously two classical objects.": 1,
+    "The qualitative sharpness explanation is right, but the bandwidth formula needs the half-power or half-squared-amplitude convention. An unspecified FWHM of a resonance peak could mean half amplitude and gives a different width.": 1,
+    "Correct distinction between instantaneous zero angular velocity and zero net torque.": 1,
+    "Correct phase-lag derivation at the explicitly stated natural-frequency/power-resonance condition omega=omega0.": 1,
+    "Overdamping removes sustained oscillation, but it does not guarantee a monotonic return for every initial state. The critical fastest-no-overshoot phrase also requires a specified initial-condition/response class.": 1,
+    "Correct undamped linear oscillator resonant secular growth.": 1,
+    "Correct fixed-end fundamental wavelength and frequency.": 1,
+    "Correct introductory energy-transfer resonance picture for a linearly driven damped oscillator.": 1,
+    "Correct qualitative finite buildup/ringdown response to a swept-frequency drive.": 1,
+    "Correct response-amplitude definition of resonance frequency with a light-damping qualification.": 1,
+    "Correct sinusoidal mean-power derivation and exact power-resonance frequency for constant viscous damping.": 1,
+    "Correct small-slope, constant-tension string wave-equation derivation.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "291e9b84ca0904f155641bf93cb28cc6c95c02ec696da8dac3b6ffec21f01c32",
-  "substantively_unreviewed": 394,
+  "published_decisions_sha256": "8a5c1722db7c1f6da6ee31d4d8f93da18a01392245b1b26b626ce44b2ddaa626",
+  "substantively_unreviewed": 369,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

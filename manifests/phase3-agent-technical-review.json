@@ -51976,9 +51976,931 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/physics-0075-0100.json",
       "original_domain_ordinal": 99
+    },
+    {
+      "id": "repo-8a770758dea503f65d0e2fee",
+      "messages_sha256": "8a770758dea503f65d0e2feed8adb3c2a4dfb9c5807f78ad84ee6a5df6587871",
+      "state": "PASS",
+      "rationale": "Correct distinction between instantaneous zero angular velocity and zero net torque.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For fixed-axis I, alpha=tau/I can be nonzero at omega=0, so a turning point or rest release need not be equilibrium."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The rod example assumes a pivot or constraint giving gravity a lever arm; a freely falling rod in uniform gravity has no gravity torque about its center of mass."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 166,
+      "assistant_tokens": 133,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 100
+    },
+    {
+      "id": "repo-c785134ce18d556593420558",
+      "messages_sha256": "c785134ce18d556593420558fc72500fbc5685580204b16b71f0e610544a4d29",
+      "state": "PASS",
+      "rationale": "Correct introductory energy-transfer resonance picture for a linearly driven damped oscillator.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT RES8.009, Driven Oscillators, Lecture5",
+          "url": "https://live.ocw.mit.edu/courses/res-8-009-introduction-to-oscillations-and-waves-summer-2017/mitres_8_009su17_lec5.pdf",
+          "finding": "Distinguishes free damped motion, displacement-amplitude resonance, power absorption and the phase at the undamped natural frequency."
+        },
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At omega=omega0, the driving force is in phase with velocity and time-averaged absorbed power is maximal for fixed force amplitude and viscous damping."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Maximum displacement amplitude occurs slightly below omega0 when damping is present. Growth saturates in the linear damped model rather than literally running away; failure examples require sufficient excitation and material limits."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 70,
+      "assistant_tokens": 55,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 101
+    },
+    {
+      "id": "repo-75abca2c306bbae87a186e85",
+      "messages_sha256": "75abca2c306bbae87a186e85893408afa397e8c517d5f2ed5dd8ac18b0a45324",
+      "state": "QUARANTINE",
+      "rationale": "Damping removes energy in the passive model, but an unqualified slightly lower observed oscillation frequency does not cover strong damping or the loss of oscillation at critical/overdamping.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT RES8.009, Driven Oscillators, Lecture5",
+          "url": "https://live.ocw.mit.edu/courses/res-8-009-introduction-to-oscillations-and-waves-summer-2017/mitres_8_009su17_lec5.pdf",
+          "finding": "Distinguishes free damped motion, displacement-amplitude resonance, power absorption and the phase at the undamped natural frequency."
+        },
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For x_doubleprime+2*beta*x_prime+omega0²*x=0, the underdamped frequency is sqrt(omega0²-beta²); it can approach zero, and at beta>=omega0 there is no oscillatory frequency."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for the unqualified frequency-change statement; small positive damping does produce the described small reduction."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 46,
+      "assistant_tokens": 29,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 102
+    },
+    {
+      "id": "repo-e7f52cb71f838af1675042ed",
+      "messages_sha256": "e7f52cb71f838af1675042ed326cc1a2332fb0a9a22ddf6c24c235a47ebf516b",
+      "state": "PASS",
+      "rationale": "Correct response-amplitude definition of resonance frequency with a light-damping qualification.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT RES8.009, Driven Oscillators, Lecture5",
+          "url": "https://live.ocw.mit.edu/courses/res-8-009-introduction-to-oscillations-and-waves-summer-2017/mitres_8_009su17_lec5.pdf",
+          "finding": "Distinguishes free damped motion, displacement-amplitude resonance, power absorption and the phase at the undamped natural frequency."
+        },
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For viscous damping coefficient gamma in x_doubleprime+gamma*x_prime+omega0²*x=F*cos(omega*t)/m, the nonzero displacement peak is at sqrt(omega0²-gamma²/2), near omega0 for weak damping."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Different observables such as power can peak elsewhere, and sufficiently large damping removes a nonzero-frequency amplitude maximum."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 43,
+      "assistant_tokens": 30,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 103
+    },
+    {
+      "id": "repo-88e6c09b3141cab5f1fbef6c",
+      "messages_sha256": "88e6c09b3141cab5f1fbef6c9b4577d5c74571554b6e7e690c63c9dc01168616",
+      "state": "QUARANTINE",
+      "rationale": "The qualitative sharpness explanation is right, but the bandwidth formula needs the half-power or half-squared-amplitude convention. An unspecified FWHM of a resonance peak could mean half amplitude and gives a different width.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT, Resonance lecture notes, section1.2.6",
+          "url": "https://www.lns.mit.edu/~kazuhiro/course_work/Classical.pdf",
+          "finding": "Bandwidth for the stated quality factor is measured at half peak squared amplitude, not half amplitude."
+        },
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a high-Q Lorentzian squared response 1/(delta²+a²), half-power width is2*a; the amplitude 1/sqrt(delta²+a²) reaches half its peak at |delta|=sqrt(3)*a, giving a width larger by sqrt(3)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold for the missing peak-observable convention, not the usual relation between highQ and weak damping/narrow bandwidth."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 58,
+      "assistant_tokens": 43,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 104
+    },
+    {
+      "id": "repo-2930d9cd20ce8213d3a2bd72",
+      "messages_sha256": "2930d9cd20ce8213d3a2bd72aafb9c89e4ba60f7c6903bc902ac46ccb3332353",
+      "state": "PASS",
+      "rationale": "Correct simple-pendulum small-angle linearization and finite-amplitude period dependence.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "sin(theta) approximately theta gives omega0=sqrt(g/L); finite librations have T=4*sqrt(L/g)*K(sin(theta_max/2))."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This assumes an ideal simple pendulum, no damping and oscillation below the separatrix. Rotations and driven motion are separate regimes."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 108,
+      "assistant_tokens": 87,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 105
+    },
+    {
+      "id": "repo-46175df093b70ce819a4804e",
+      "messages_sha256": "46175df093b70ce819a4804e89307edbf812b678c60ba4c253e2a70b87e4457e",
+      "state": "PASS",
+      "rationale": "Correct ideal linear-spring period derivation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "m*x_doubleprime=-k*x with m,k>0 has sinusoidal solutions at omega=sqrt(k/m), hence T=2*pi*sqrt(m/k)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The coordinate is measured from equilibrium and k is constant; damping or nonlinear springs alter the period/response."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 134,
+      "assistant_tokens": 109,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 106
+    },
+    {
+      "id": "repo-b963d4717558700b544926c2",
+      "messages_sha256": "b963d4717558700b544926c2220b714e17f22b0dfb36f0bdd2fedd324cb8f96f",
+      "state": "PASS",
+      "rationale": "Correct undamped linear oscillator resonant secular growth.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For x_doubleprime+omega0²*x=F0*cos(omega0*t)/m, a particular solution is F0*t*sin(omega0*t)/(2*m*omega0)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The drive has nonzero amplitude and sustained exact resonance. Finite-time amplitudes are finite; infinity means unbounded growth as time increases in the ideal model."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 89,
+      "assistant_tokens": 66,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 107
+    },
+    {
+      "id": "repo-3d2eded008c7908d30d21eff",
+      "messages_sha256": "3d2eded008c7908d30d21eff25f9674b714049d4a2487e43064158c63fa56d8a",
+      "state": "PASS",
+      "rationale": "Correct beat-frequency magnitude and cosine-sum identity.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The signed envelope cos(pi*(f1-f2)*t) changes sign, while its magnitude and intensity repeat at |f1-f2|, the audible beat rate."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The standard simple envelope picture assumes comparable nearby tones; unequal amplitudes leave incomplete minima."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 112,
+      "assistant_tokens": 98,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 108
+    },
+    {
+      "id": "repo-a804118f1a8d4b9feb672826",
+      "messages_sha256": "a804118f1a8d4b9feb67282662d465c883772975fea7ce3447f277dc30641146",
+      "state": "QUARANTINE",
+      "rationale": "Overdamping removes sustained oscillation, but it does not guarantee a monotonic return for every initial state. The critical fastest-no-overshoot phrase also requires a specified initial-condition/response class.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "OpenStax College Physics AP, Damped Harmonic Motion",
+          "url": "https://openstax.org/books/college-physics-ap-courses/pages/16-7-damped-harmonic-motion",
+          "finding": "Nonoscillatory critical motion can still cross equilibrium once depending on initial conditions; nonoscillation is not a universal no-overshoot guarantee."
+        },
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "x(t)=2*exp(-2*t)-exp(-t) solves x_doubleprime+3*x_prime+2*x=0, starts at x=1 with velocity-3, and crosses zero at t=ln2 despite being overdamped."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the universal monotonic/no-overshoot wording. The familiar zero-velocity displacement-release or standard step-response comparison is valid with its assumptions."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 85,
+      "assistant_tokens": 69,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 109
+    },
+    {
+      "id": "repo-c3cefeb2aca38a08cdafda5a",
+      "messages_sha256": "c3cefeb2aca38a08cdafda5ace1191169e34f4c98c09fc187fa99e81b1d1f162",
+      "state": "PASS",
+      "rationale": "Correct fixed-end fundamental wavelength and frequency.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "lambda1=2*L=1 m and f1=200 m/s divided by1 m=200 Hz."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Assumes the ordinary uniform taut string and ideal fixed ends."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 118,
+      "assistant_tokens": 81,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 110
+    },
+    {
+      "id": "repo-832d54b0ed7af93f6a01d299",
+      "messages_sha256": "832d54b0ed7af93f6a01d299c73990206f16460f99c39693a48f445db72d873c",
+      "state": "PASS",
+      "rationale": "Correct modern wave/particle explanation of light without treating it as simultaneously two classical objects.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Photoelectric and single-photon observations establish quantization in their appropriate experimental contexts; a full quantum field state can also contain many excitations or coherent superpositions."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 94,
+      "assistant_tokens": 77,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 111
+    },
+    {
+      "id": "repo-f467623e72cb68165994ebd3",
+      "messages_sha256": "f467623e72cb68165994ebd3808f5addf058d36a371a6d8db8dc94c75ff6a539",
+      "state": "PASS",
+      "rationale": "Correct small-slope, constant-tension string wave-equation derivation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Net transverse force=T*y_xx*dx and mass=mu*dx give y_tt=(T/mu)*y_xx and speed sqrt(T/mu)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The approximate transverse-force expression presumes small slopes and the usual uniform linear string, rather than large-strain motion."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 175,
+      "assistant_tokens": 153,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 112
+    },
+    {
+      "id": "repo-9bfe8f479c6f138f27fa8d3f",
+      "messages_sha256": "9bfe8f479c6f138f27fa8d3fedc6e43fe9481ced5c65d46898ac6d0c1f661d71",
+      "state": "PASS",
+      "rationale": "Correct phase-lag derivation at the explicitly stated natural-frequency/power-resonance condition omega=omega0.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT RES8.009, Driven Oscillators, Lecture5",
+          "url": "https://live.ocw.mit.edu/courses/res-8-009-introduction-to-oscillations-and-waves-summer-2017/mitres_8_009su17_lec5.pdf",
+          "finding": "Distinguishes free damped motion, displacement-amplitude resonance, power absorption and the phase at the undamped natural frequency."
+        },
+        {
+          "title": "MIT8.03SC, The Physics of Waves chapter2 sections2.3–2.3.1",
+          "url": "https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/782069da3820fc514c10c26ae0c15b01_MIT8_03SCF16_Text_Ch2.pdf",
+          "finding": "Defines driving at omega0 as on resonance and locates maximum absorbed power and pi/2 displacement phase there."
+        },
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At omega=omega0 with positive viscous damping, tan(phi)=gamma*omega/(omega0²-omega²) gives phi=pi/2; force and velocity are in phase and absorbed power is maximal."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Here resonance means omega=omega0, where absorbed power is maximal. For positive damping the nonzero displacement-amplitude maximum is below omega0 and has lag below pi/2; its lag approaches pi/2 in the weak-damping limit."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 144,
+      "assistant_tokens": 119,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 113
+    },
+    {
+      "id": "repo-3ed2a7946db3138e8c141293",
+      "messages_sha256": "3ed2a7946db3138e8c14129308a32db1f5994ada9585d3cedfe780213fe7f6d0",
+      "state": "PASS",
+      "rationale": "Correct high-frequency inertia-dominated and approximately opposite-phase asymptotic response.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT RES8.009, Driven Oscillators, Lecture5",
+          "url": "https://live.ocw.mit.edu/courses/res-8-009-introduction-to-oscillations-and-waves-summer-2017/mitres_8_009su17_lec5.pdf",
+          "finding": "Distinguishes free damped motion, displacement-amplitude resonance, power absorption and the phase at the undamped natural frequency."
+        },
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For fixed damping and stiffness, as omega tends to infinity the transfer function tends to -1/(m*omega²), so amplitude falls as omega^-2 and phase approaches pi."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Inertia domination requires frequency high relative to the damping scale as well as omega0; at extremely large damping, omega>>omega0 alone may not yet reach that asymptotic regime."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 112,
+      "assistant_tokens": 92,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 114
+    },
+    {
+      "id": "repo-5f066f24fef0bb0687e9b426",
+      "messages_sha256": "5f066f24fef0bb0687e9b42682a649aab6813778ed8bcbea14cbe647dc34e222",
+      "state": "QUARANTINE",
+      "rationale": "A narrow response peak can suggest a mode, but it does not establish a natural frequency or damping ratio without the input spectrum or a transfer/modal measurement. A narrow forcing line or artifact can also create a narrow output line.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For output spectrum Y(omega)=H(omega)*F(omega), a sharp line in F can make Y sharp even if H has no resonance there."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the definite47 Hz mode and light-damping diagnosis; the proposed follow-up excitation and modal checks are useful and should precede that conclusion."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 145,
+      "assistant_tokens": 110,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 115
+    },
+    {
+      "id": "repo-38d75b83fb801b1a150b60e9",
+      "messages_sha256": "38d75b83fb801b1a150b60e9a92b2dfdc5c78e8e412811bb7778552f4ae554c1",
+      "state": "QUARANTINE",
+      "rationale": "The energy-conservation conclusion is sound, but destructive displacement interference does not imply energy has necessarily shifted spatially. Kinetic or another local energy component can remain, and a finite beat-envelope region can exchange flux.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For x(t)=cos(omega1*t)+cos(omega2*t), zero displacement does not imply x_dot=0, so local kinetic energy can remain nonzero. Conservation applies to the complete closed system, not automatically any chosen finite envelope segment."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for the asserted spatial-only account and unqualified envelope integration; no claim is made that linear superposition destroys total energy."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 112,
+      "assistant_tokens": 89,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 116
+    },
+    {
+      "id": "repo-05393843f202b5dac34955fd",
+      "messages_sha256": "05393843f202b5dac34955fd49b201a00aa96c66ae404ed7e3a2f6f6fa73c8b0",
+      "state": "PASS",
+      "rationale": "Correct classical medium-wave Doppler shift for a stationary source and observer moving radially toward it.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Wavefront spacing remains lambda=v/f in the medium frame and encounter rate is(v+u)/lambda=f*(1+u/v)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is the sound-like medium model, not the relativistic light Doppler formula; for oblique motion use the velocity component along the arriving wave direction."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 136,
+      "assistant_tokens": 113,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 117
+    },
+    {
+      "id": "repo-4b80bd12c990cceff138bc39",
+      "messages_sha256": "4b80bd12c990cceff138bc39365c403e60d580ac93818d4709ed403078b22deb",
+      "state": "QUARANTINE",
+      "rationale": "The parameter-modulation mechanism is correct, but comparing ordinary linearity in driving amplitude with parametric exponential growth conflates different variables. Exponential growth refers to time in an unstable Floquet regime, not generally an exponential dependence on pump amplitude.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Parametric resonance with linear damping: excitation thresholds, Oxford repository",
+          "url": "https://ora.ox.ac.uk/objects/uuid%3Ab0d486db-0c2a-4d7c-94a2-653806abe00c",
+          "finding": "Damped parametric resonances have excitation thresholds determined through the Mathieu equation, not frequency matching alone."
+        },
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For x_doubleprime+2*beta*x_prime+omega0²*(1+h*cos(2*omega0*t))*x=0, small-modulation growth is approximately h*omega0/4-beta in the principal resonance approximation. Below threshold it does not grow exponentially."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The ending already acknowledges damping and nonlinearity; do not claim they are wholly ignored. Frequency placement, detuning and pump threshold determine the unstable regime; the listed slow-flow threshold check illustrates this scope."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 130,
+      "assistant_tokens": 109,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 118
+    },
+    {
+      "id": "repo-13737a5536ba73c7646f0111",
+      "messages_sha256": "13737a5536ba73c7646f0111b6ce45a20ce0a17923d501069e34d4d183e97c37",
+      "state": "PASS",
+      "rationale": "Correct finite damping-limited response at omega0 under a standard gamma=b/m viscous-coefficient convention.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT RES8.009, Driven Oscillators, Lecture5",
+          "url": "https://live.ocw.mit.edu/courses/res-8-009-introduction-to-oscillations-and-waves-summer-2017/mitres_8_009su17_lec5.pdf",
+          "finding": "Distinguishes free damped motion, displacement-amplitude resonance, power absorption and the phase at the undamped natural frequency."
+        },
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For m*x_doubleprime+m*gamma*x_prime+m*omega0²*x=F0*cos(omega0*t), steady amplitude is F0/(m*gamma*omega0)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Here gamma is damping coefficient divided by mass, whose free amplitude-decay rate is gamma/2. If gamma instead denotes that decay rate, the formula needs the corresponding factor2. The linear oscillator and sustained drive are assumed."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 76,
+      "assistant_tokens": 51,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 119
+    },
+    {
+      "id": "repo-0bb0c475c75ac8ffce2b5822",
+      "messages_sha256": "0bb0c475c75ac8ffce2b5822bca24980f87f5e0555e46eace7b3c7465f46881d",
+      "state": "PASS",
+      "rationale": "Correct uniform Euler-Bernoulli cantilever length scaling with material and cross section held fixed.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "f1=beta1²/(2*pi*L²)*sqrt(E*I/(rho*A)); doubling L gives120/4=30 Hz."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Changing cross section, attachments, material, shear/rotary-inertia effects or boundary compliance can change the scaling; the prompt implies the same beam apart from length."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 109,
+      "assistant_tokens": 71,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 120
+    },
+    {
+      "id": "repo-e017b73ae329cf75720da593",
+      "messages_sha256": "e017b73ae329cf75720da593d532375616ba1e2f4b9b8c95ad35d6b2ea0c0704",
+      "state": "PASS",
+      "rationale": "Correct qualitative finite buildup/ringdown response to a swept-frequency drive.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT RES8.009, Driven Oscillators, Lecture5",
+          "url": "https://live.ocw.mit.edu/courses/res-8-009-introduction-to-oscillations-and-waves-summer-2017/mitres_8_009su17_lec5.pdf",
+          "finding": "Distinguishes free damped motion, displacement-amplitude resonance, power absorption and the phase at the undamped natural frequency."
+        },
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "An amplitude relaxation scale is about2*Q/omega0, consistent with orderQ/omega0; quasi-steady tracking needs time within the linewidth much longer than that scale."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Compare sweep rate through a specified frequency width to the relaxation time, rather than comparing quantities with different units. Strongly nonadiabatic sweeps can have more than a small peak shift."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 134,
+      "assistant_tokens": 104,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 121
+    },
+    {
+      "id": "repo-0f09a5faf62977b271dc033b",
+      "messages_sha256": "0f09a5faf62977b271dc033bed8cb87c821dfd7f2a867754b7c7336b64b4d91c",
+      "state": "PASS",
+      "rationale": "Correct practical distinction between stable damped forced resonance and self-excited linear instability, including flutter.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Right-half-plane poles refer to the Laplace s convention. An undamped resonant drive can grow secularly, and parameter-driven instability may need external modulation; those extensions differ from the stable damped versus self-excited comparison described here."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 114,
+      "assistant_tokens": 95,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 122
+    },
+    {
+      "id": "repo-10406ab68c64a603257fd2ab",
+      "messages_sha256": "10406ab68c64a603257fd2ab48a327dd4cd8cabfbbc9e4c65bbddf4bf0f0386b",
+      "state": "QUARANTINE",
+      "rationale": "The dAlembert general solution and need for two initial functions are correct, but the two component functions are not individually unique without a normalization: an arbitrary constant can be transferred between them.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Replacing f by f+C and g by g-C leaves u=f(x-v*t)+g(x+v*t), its initial displacement and initial velocity unchanged."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for the unqualified uniqueness of the two components, not uniqueness of the total wave solution under suitable initial data."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 142,
+      "assistant_tokens": 123,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 123
+    },
+    {
+      "id": "repo-f309f778d690c5d52ca4b733",
+      "messages_sha256": "f309f778d690c5d52ca4b733ea5bc6843d65b48f214fa3aac19ad0a38268d7d8",
+      "state": "PASS",
+      "rationale": "Correct sinusoidal mean-power derivation and exact power-resonance frequency for constant viscous damping.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT RES8.009, Driven Oscillators, Lecture5",
+          "url": "https://live.ocw.mit.edu/courses/res-8-009-introduction-to-oscillations-and-waves-summer-2017/mitres_8_009su17_lec5.pdf",
+          "finding": "Distinguishes free damped motion, displacement-amplitude resonance, power absorption and the phase at the undamped natural frequency."
+        },
+        {
+          "method": "independent_oscillator_and_wave_derivation",
+          "finding": "Individually checked oscillator amplitude, phase, power and damping formulas; wave/string identities; beat-frequency and uniqueness caveats; explicit overdamped and spectral counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Averaging F0*cos(omega*t)*x_dot gives0.5*F0*A*omega*sin(phi). Differentiating omega²/[(omega0²-omega²)²+gamma²*omega²] gives a factor proportional to omega0^4-omega^4, so the positive-frequency maximum is omega0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The power maximum is exactly omega0 for this model. A small displacement-peak shift is weak-damping behavior; the nonzero displacement peak disappears when gamma²>=2*omega0²."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 267,
+      "assistant_tokens": 242,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
+      "original_domain_ordinal": 124
     }
   ],
-  "reviewed": 1715,
+  "reviewed": 1740,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

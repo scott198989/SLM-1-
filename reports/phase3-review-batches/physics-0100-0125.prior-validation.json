@@ -20,16 +20,16 @@
   "model_weights_downloaded_or_loaded": false,
   "training_or_paid_compute": false,
   "automatic_checks_recreated": false,
-  "test_log_sha256": "a7ad84cc71535224e91d49f12c527baaf7462d1ab8ae5c4b641acd14d95145d0",
+  "test_log_sha256": "dfff090e926cee5a1672f7d959e0e5f7f79218fcb46919e9d33443783d7f4a4a",
   "tested_code_sha256": {
     "scripts/phase3-verify-private-release.py": "64d76484b0852d041083301ce113ddc255b7906512def3dc12d0f92dc96910e1",
     "src/forge_data/citation_pilot.py": "9e17e50194ba8cb22eca0b431359d7aec1d870f8417e87b4938e3c1ff4c968d4",
     "tests/test_private_release_verifier.py": "e2a5854473e449455e9bc2ffcc207346f018a3bb49206a81546cd1cea2ace817"
   },
-  "base_commit": "d677d890c323ed136944aa9123b50a1ea4934e18",
+  "base_commit": "e1a570042b760c25cc761f7efc2f90b4cb14277a",
   "all_public_input_hashes_verified": 8,
   "candidate_message_hashes_verified": 2112,
-  "substantive_decisions_verified": 1740,
+  "substantive_decisions_verified": 1715,
   "earlier_374_decisions_unchanged": true,
   "unchanged_frozen_files": [
     "src/forge_tools/engineering.py",
@@ -46,15 +46,15 @@
     "QUARANTINE": 7
   },
   "current_dispositions": {
-    "PASS": 1391,
+    "PASS": 1373,
     "REJECT": 64,
-    "QUARANTINE": 286,
-    "NEEDS_HUMAN_REVIEW": 371
+    "QUARANTINE": 279,
+    "NEEDS_HUMAN_REVIEW": 396
   },
-  "substantively_unreviewed": 369,
+  "substantively_unreviewed": 394,
   "next_batch": {
     "domain": "physics",
-    "offset": 125,
+    "offset": 100,
     "limit": 25
   },
   "official_reader_executed": true,
@@ -65,15 +65,15 @@
   "earlier_392_decisions_unchanged": true,
   "latest_batch": {
     "domain": "physics",
-    "offset": 100,
+    "offset": 75,
     "limit": 25,
-    "selected_window_end_exclusive": 125,
+    "selected_window_end_exclusive": 100,
     "new_reviews": 25,
     "skipped_existing": 0,
     "preserved_structural_quarantines": [],
     "dispositions": {
-      "PASS": 18,
-      "QUARANTINE": 7
+      "PASS": 21,
+      "QUARANTINE": 4
     }
   },
   "independent_agent_qa_complete": true,
@@ -81,7 +81,7 @@
   "latest_batch_only_expected_ledger_rows_changed": true,
   "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
   "publication_status": "LOCAL_ONLY",
-  "earlier_decisions_unchanged": 1715,
+  "earlier_decisions_unchanged": 1690,
   "electrical_domain_complete": true,
   "electrical_records_verified": 300,
   "all_392_published_decisions_unchanged": true,
