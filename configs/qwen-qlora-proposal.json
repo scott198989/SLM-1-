@@ -4,11 +4,27 @@
   "current_approved_training_examples": 16,
   "current_planned_training_steps": 0,
   "desktop": {
-    "gpu": "RTX5090",
-    "proposed_environment": "WSL2_Linux_CUDA12.8_or_newer",
+    "cpu": "AMD Ryzen 7 9800X3D",
+    "physical_cores": 8,
+    "logical_processors": 16,
+    "gpu": "NVIDIA GeForce RTX 5090",
     "ram_gib": 64,
-    "source": "repository_README_not_live_runtime_verification",
-    "vram_gib": 32
+    "usable_ram_gib_reported": 61.6,
+    "vram_gib": 32,
+    "vram_mib_reported": 32607,
+    "nvidia_driver_reported": "591.86",
+    "driver_cuda_capability_reported": "13.1",
+    "os_reported": "Windows 11 Home 25H2 build 26200.9457",
+    "system_volume_reported": {
+      "volume": "C:",
+      "total_tb": 1.98,
+      "free_tb": 1.14
+    },
+    "source": "Gunner_relay_of_desktop_inventory_2026-10-02_not_cloud_GPU_inspection",
+    "proposed_environment": "WSL2_Linux_preferred_or_native_Windows_x86_64_with_pinned_cu128_candidate",
+    "wsl_installation_status": "NOT_VERIFIED",
+    "runtime_validated": false,
+    "installation_validation_plan": "docs/QWEN_PREPARATION.md"
   },
   "format": {
     "assistant_only_loss": true,

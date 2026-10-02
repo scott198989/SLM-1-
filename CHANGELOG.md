@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-02 - Document the desktop runtime candidate and validation gates
+
+- Researched official versioned PyTorch, NVIDIA, Microsoft, Transformers, PEFT and bitsandbytes sources against the supplied Windows/RTX 5090 inventory. Retained all runtime/model pins and recorded desktop metadata with its provenance.
+- Expanded the existing Qwen preparation plan with native Windows/WSL support, WSL RAM limits, unresolved transitive locking, MoE quantization/adapter coverage and known correctness caveats. Defined separate approval gates for setup, synthetic GPU checks, model loading and training.
+- Documentation/metadata only: no installation, GPU/model execution, system change, dataset change, release, publication or access-restriction retry. The prior CPU result remains 112 pass and five asset-blocked methods; no fresh suite pass is claimed.
+
 ## 2026-10-02 - Tighten evaluation preparation integrity and protocol
 
 - Fixed reproduced synthetic failures: required sealed questions/answers must be present and the exact authenticated bytes are consumed; duplicate/empty task IDs cannot inflate a score. Model JSON rejects duplicate keys and nonfinite overflow, exact citations preserve JSON types, oversized numeric answers fail without crashing, and terminal tool failures retain receipts.
