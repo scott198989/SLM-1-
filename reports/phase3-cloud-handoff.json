@@ -8,10 +8,10 @@
   "review": {
     "curriculum": 2112,
     "dispositions": {
-      "PASS": 1625,
+      "PASS": 1649,
       "REJECT": 70,
-      "QUARANTINE": 315,
-      "NEEDS_HUMAN_REVIEW": 102
+      "QUARANTINE": 316,
+      "NEEDS_HUMAN_REVIEW": 77
     },
     "by_domain": {
       "circuits": {
@@ -63,10 +63,10 @@
         "NEEDS_HUMAN_REVIEW": 0
       },
       "materials_manufacturing": {
-        "PASS": 130,
+        "PASS": 154,
         "REJECT": 4,
-        "QUARANTINE": 16,
-        "NEEDS_HUMAN_REVIEW": 100
+        "QUARANTINE": 17,
+        "NEEDS_HUMAN_REVIEW": 75
       },
       "physics": {
         "PASS": 212,
@@ -75,8 +75,8 @@
         "NEEDS_HUMAN_REVIEW": 0
       }
     },
-    "agent_substantive_reviews": 2009,
-    "substantively_unreviewed": 100,
+    "agent_substantive_reviews": 2034,
+    "substantively_unreviewed": 75,
     "reviewed_specialist_holds": 2,
     "complete_source_domains": [
       "circuits",
@@ -104,13 +104,13 @@
     },
     {
       "path": "data/review/phase3/technical-review.jsonl.gz",
-      "bytes": 604077,
-      "sha256": "27e44ead00b1493ae7bc4b7b17e6506e17eea52608d0c64c66681d96832fab84"
+      "bytes": 612157,
+      "sha256": "e405a742d95a61dc0296940f08b8fd0fee010f3c568cc1f7f613ba82a97640ee"
     },
     {
       "path": "manifests/phase3-agent-technical-review.json",
-      "bytes": 3402091,
-      "sha256": "8c08026418a62017c8e9f65a3cd32b3ed7ebab2fb6bc47ed5b9b825dd4e92427"
+      "bytes": 3454530,
+      "sha256": "571ebd73c0b10e46e741da3ddf371335ba3890b91197afc2a7e7faced7d7a171"
     },
     {
       "path": "manifests/phase3-release-families.json",
@@ -119,8 +119,8 @@
     },
     {
       "path": "reports/phase3-technical-review.json",
-      "bytes": 331423,
-      "sha256": "4d5c329c0a4d748aa7a0fe7a53e02b41ef4447fc5c7d00cd836134210f804f58"
+      "bytes": 334318,
+      "sha256": "3eef30bd81c5925ab6fe91ac03908928c235a7e1a1438a62e592a970bdced8c7"
     },
     {
       "path": "src/forge_tools/engineering.py",
@@ -225,7 +225,7 @@
   "next_domain": "materials_manufacturing",
   "next_batch": {
     "domain": "materials_manufacturing",
-    "offset": 150,
+    "offset": 175,
     "limit": 25
   },
   "workers": [],
@@ -236,9 +236,9 @@
   "latest_cloud_continuation": "reports/phase3-cloud-continuation-validation.json",
   "local_continuation": {
     "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
-    "local_predecessor_commit": "7fef86a77acd3dcafdf218e80ece477895f05765",
+    "local_predecessor_commit": "9877519933cfac2fcf58193bb6e0d81051854af1",
     "publication_status": "LOCAL_ONLY; do not claim these counts are on GitHub",
-    "latest_batch": "reports/phase3-review-batches/materials_manufacturing-0125-0150.json",
+    "latest_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
     "electrical_domain_complete": true,
     "trigonometry_pending_review_queue_complete": true,
     "trigonometry_preserved_structural_ordinals": [

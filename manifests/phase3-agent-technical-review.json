@@ -62770,9 +62770,935 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/materials_manufacturing-0125-0150.json",
       "original_domain_ordinal": 149
+    },
+    {
+      "id": "repo-8fa47727568889497af11a08",
+      "messages_sha256": "8fa47727568889497af11a081e35c45a8ee28da65f11f609abfd5b93c37d8a46",
+      "state": "PASS",
+      "rationale": "Correct non-unique interpretation of a short primary stage and explicit request for mechanism-sensitive evidence.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "David Roylance, MIT, Dislocation Basis of Yield and Creep",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/339d0d74796cc35538c78bbed818b629_MIT3_11F99_dn.pdf",
+          "finding": "Thermally activated creep mechanisms and stress/temperature dependence provide qualitative mechanism indicators."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Curve shape alone cannot distinguish all constitutive or prior-history effects, as the answer explicitly warns."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 97,
+      "assistant_tokens": 60,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 150
+    },
+    {
+      "id": "repo-2cf762877d4ebfd188c168f2",
+      "messages_sha256": "2cf762877d4ebfd188c168f29adae356ca1ef1ea5991fb8aead6b52a68f83fe4",
+      "state": "PASS",
+      "rationale": "Correct high-level distinctions between retirement-based, redundant-load-path and flaw/inspection-based philosophies.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "FAA, Airline and Passenger Safety report, Section 3.4.1.1–3",
+          "url": "https://www.faa.gov/sites/faa.gov/files/2021-11/FAA-190503-018-Airline-and-Passenger-Safety-P.L.-115-254-Sec.-328-COMPLETED-report.pdf",
+          "finding": "Separates safe-life retirement, fail-safe residual strength/load paths and damage-tolerance crack-growth/inspection approaches."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Safe-life retirement may be based on total tested fatigue life rather than predicted microscopic initiation; damage tolerance requires validated detectability and growth margins."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 110,
+      "assistant_tokens": 70,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 151
+    },
+    {
+      "id": "repo-1a2c7cfa1e763b128c2a58ac",
+      "messages_sha256": "1a2c7cfa1e763b128c2a58aca25c71a2de9703c2f573855e7c8aeefd7415dffc",
+      "state": "PASS",
+      "rationale": "Correct conditional particle-pinning, coarsening and competing creep-mechanism connections.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Bhadeshia, Cambridge, Zener Drag (2005)",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2005/Zener/Zener.html",
+          "finding": "Pinning pressure P=3*gamma*f/(2*r) decreases as particle radius grows or particle volume fraction falls."
+        },
+        {
+          "title": "MIT 3.40 Physical Metallurgy Lectures 10 and 11",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/c9dc86331e13d11e8dd5d5a32b44894d_MIT3_40JF09_lec1011.pdf",
+          "finding": "Recovery, boundary migration, particle effects and coarsening alter defect energy and microstructure."
+        },
+        {
+          "title": "MIT 3.40 Physical Metallurgy Lecture 18",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/3b9508adaba259c0d0628f6078f92349_MIT3_40JF09_lec18.pdf",
+          "finding": "Precipitate size/coherency and competing strengthening mechanisms make aging response state dependent."
+        },
+        {
+          "title": "David Roylance, MIT, Dislocation Basis of Yield and Creep",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/339d0d74796cc35538c78bbed818b629_MIT3_11F99_dn.pdf",
+          "finding": "Thermally activated creep mechanisms and stress/temperature dependence provide qualitative mechanism indicators."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Boundary-pinning particles and strengthening precipitates need not be the same population; the answer makes the net lifetime conditional rather than monotonic."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 116,
+      "assistant_tokens": 80,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 152
+    },
+    {
+      "id": "repo-a6b4a436254a3d680d749ff6",
+      "messages_sha256": "a6b4a436254a3d680d749ff6300b6e180f6e1539d4cc5e33d2bddc50fd01116e",
+      "state": "PASS",
+      "rationale": "Reasonable mechanism classification from the specified power-law and lattice-diffusion activation fingerprints.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Fischbach, Stress Dependence of Tensile Creep Rate in Carbons and Graphites, Nature (1968)",
+          "url": "https://www.nature.com/articles/217840a0",
+          "finding": "The abstract distinguishes diffusional n=1 from metal climb-associated n approximately 4–5; this is a mechanism fingerprint, not a unique diagnosis."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "A diffusion-controlled linear creep law has stress exponent near 1, while common climb-controlled power-law models have larger n; activation energy comparisons provide an independent check."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A diffusion-controlled linear creep law has stress exponent near 1, while common climb-controlled power-law models have larger n; activation energy comparisons provide an independent check."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "n near 5 is suggestive rather than uniquely diagnostic; threshold stresses, precipitates and mixed mechanisms can change apparent exponents."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 119,
+      "assistant_tokens": 78,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 153
+    },
+    {
+      "id": "repo-d71e4926fcfe0b355c1feb56",
+      "messages_sha256": "d71e4926fcfe0b355c1feb566145d15aaffa1a47446041a5f51131e22565f143",
+      "state": "PASS",
+      "rationale": "Reasonable high-level incremental workflow combining cycle- and time-dependent crack/damage evolution with a peak-load fracture check.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TWI, Creep Crack Growth Behaviour of P91 Weldments",
+          "url": "https://www.twi-global.com/technical-knowledge/published-papers/crack-growth-behaviour-of-p91-weldments",
+          "finding": "Steady creep crack growth can use C*, whereas predominantly elastic short-time growth can use K; stress state and geometry affect rates."
+        },
+        {
+          "title": "A novel creep–fatigue interaction damage model with the stress effect to simulate the creep–fatigue crack growth behavior (2017)",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0020740317301169",
+          "finding": "The studied creep-fatigue crack growth depends on dwell and nonlinear interaction; constituent rates require calibrated interaction/state treatment."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "Reasonable high-level incremental workflow combining cycle- and time-dependent crack/damage evolution with a peak-load fracture check."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Constituent growth/damage rates and their summation must be calibrated for interaction and evolving crack state; C*, Ct or other creep parameters may be needed. This is a workflow, not a complete approved vessel assessment."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 118,
+      "assistant_tokens": 78,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 154
+    },
+    {
+      "id": "repo-75e4b55411ac137ad9a6b2ab",
+      "messages_sha256": "75e4b55411ac137ad9a6b2ab22a2a5c6432894330b56bcfeca99575cddb45bd3",
+      "state": "PASS",
+      "rationale": "Correct explanation that hot tensile dwell adds time/environment dependence to cyclic crack damage.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "A novel creep–fatigue interaction damage model with the stress effect to simulate the creep–fatigue crack growth behavior (2017)",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0020740317301169",
+          "finding": "The studied creep-fatigue crack growth depends on dwell and nonlinear interaction; constituent rates require calibrated interaction/state treatment."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The answer says can and lists several possible mechanisms; it does not claim every dwell always shortens every alloy's life."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 114,
+      "assistant_tokens": 78,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 155
+    },
+    {
+      "id": "repo-42b34e3c9ae783ecf669064e",
+      "messages_sha256": "42b34e3c9ae783ecf669064eda7d3e464933e9d95cbf55a773b0517a70e95a8c",
+      "state": "PASS",
+      "rationale": "Correct competing temperature effects and conditional hazard ranking.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "David Roylance, MIT, Dislocation Basis of Yield and Creep",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/339d0d74796cc35538c78bbed818b629_MIT3_11F99_dn.pdf",
+          "finding": "Thermally activated creep mechanisms and stress/temperature dependence provide qualitative mechanism indicators."
+        },
+        {
+          "title": "David Roylance, MIT, Fatigue",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/f678e01017186c53d45845ad93c07938_MIT3_11F99_fatigue.pdf",
+          "finding": "Cyclic damage, crack growth and inspection/damage-tolerance concepts differ from static strength checks."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Ductile-brittle transition and oxidation response depend on alloy; temperature alone cannot choose a dominant mechanism."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 114,
+      "assistant_tokens": 83,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 156
+    },
+    {
+      "id": "repo-61e378a06d87d6686169ea4b",
+      "messages_sha256": "61e378a06d87d6686169ea4b1beab99bf90c3e1e9158778969fb71980d256203",
+      "state": "PASS",
+      "rationale": "Correct conditional strength-versus-stability tradeoff for intentional overaging.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT 3.40 Physical Metallurgy Lecture 18",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/3b9508adaba259c0d0628f6078f92349_MIT3_40JF09_lec18.pdf",
+          "finding": "Precipitate size/coherency and competing strengthening mechanisms make aging response state dependent."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Overaging may already produce an unfavorable state; the answer correctly requires service-specific evidence rather than universally recommending it."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 103,
+      "assistant_tokens": 73,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 157
+    },
+    {
+      "id": "repo-9874c253992132bd9ea800fa",
+      "messages_sha256": "9874c253992132bd9ea800fae8f97925c9f0bce7ba0f1b3656ae7ed0bfd02247",
+      "state": "PASS",
+      "rationale": "Correct possible mechanism-change explanation for failure of one time-temperature correlation across stress regimes.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Sawada et al., Catalog of NIMS creep data sheets (2019)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7006710/",
+          "finding": "Sections 4.1 and 4.5–4.6 show long/short-term slope changes, stress/temperature-dependent damage and microstructural evolution."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "Correct possible mechanism-change explanation for failure of one time-temperature correlation across stress regimes."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A poor collapse can also reflect scatter, calibration or extrapolation; suggests and may correctly avoid a unique diagnosis."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 107,
+      "assistant_tokens": 72,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 158
+    },
+    {
+      "id": "repo-82786ea5e9a7964ac3daaa58",
+      "messages_sha256": "82786ea5e9a7964ac3daaa580cfec75f349cb054ab37c10c58756e7c8f3598e1",
+      "state": "PASS",
+      "rationale": "Correct warning against applying an old rupture curve to a materially different evolving state.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Sawada et al., Catalog of NIMS creep data sheets (2019)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7006710/",
+          "finding": "Sections 4.1 and 4.5–4.6 show long/short-term slope changes, stress/temperature-dependent damage and microstructural evolution."
+        },
+        {
+          "title": "MIT 3.40 Physical Metallurgy Lecture 18",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/3b9508adaba259c0d0628f6078f92349_MIT3_40JF09_lec18.pdf",
+          "finding": "Precipitate size/coherency and competing strengthening mechanisms make aging response state dependent."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Creep rupture stress is tied to a duration and tested state; transformations can already be included in some calibrated data, so comparability must be checked."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 111,
+      "assistant_tokens": 77,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 159
+    },
+    {
+      "id": "repo-923ab6950aa3973c70afcec6",
+      "messages_sha256": "923ab6950aa3973c70afcec6fff7f57053c9af50d43fba05b2451228e418f592",
+      "state": "PASS",
+      "rationale": "Sound coupled-history account for a hot thermally cycled nickel-superalloy blade.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "David Roylance, MIT, Dislocation Basis of Yield and Creep",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/339d0d74796cc35538c78bbed818b629_MIT3_11F99_dn.pdf",
+          "finding": "Thermally activated creep mechanisms and stress/temperature dependence provide qualitative mechanism indicators."
+        },
+        {
+          "title": "A novel creep–fatigue interaction damage model with the stress effect to simulate the creep–fatigue crack growth behavior (2017)",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0020740317301169",
+          "finding": "The studied creep-fatigue crack growth depends on dwell and nonlinear interaction; constituent rates require calibrated interaction/state treatment."
+        },
+        {
+          "title": "MIT 3.40 Physical Metallurgy Lecture 18",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/3b9508adaba259c0d0628f6078f92349_MIT3_40JF09_lec18.pdf",
+          "finding": "Precipitate size/coherency and competing strengthening mechanisms make aging response state dependent."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The prompt does not specify a single crystal; grain-boundary damage applies only where relevant boundaries exist. Quantitative life needs actual loading and microstructure data."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 143,
+      "assistant_tokens": 101,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 160
+    },
+    {
+      "id": "repo-3b804ad1629132776c7920a2",
+      "messages_sha256": "3b804ad1629132776c7920a296f9646a24c13345f44a01355a55b302be087d6e",
+      "state": "PASS",
+      "rationale": "Correct nonconservatism risk from applying smooth-specimen calibration directly to a notched oxidizing component.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Bache et al., High temperature fatigue behaviour in an advanced nickel based superalloy (2016)",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0167844215302445",
+          "finding": "Directly studies oxidation and stress relaxation at notches, with conditional peak-dwell effects."
+        },
+        {
+          "title": "A novel creep–fatigue interaction damage model with the stress effect to simulate the creep–fatigue crack growth behavior (2017)",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0020740317301169",
+          "finding": "The studied creep-fatigue crack growth depends on dwell and nonlinear interaction; constituent rates require calibrated interaction/state treatment."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The response is conditional and requests local/interaction modeling, not an assertion that every smooth-specimen model necessarily underpredicts damage."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 119,
+      "assistant_tokens": 84,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 161
+    },
+    {
+      "id": "repo-5371e5e9fc6db747edbcfd9e",
+      "messages_sha256": "5371e5e9fc6db747edbcfd9ef0f6adde383f818866b9aa19163b7091bc2538a4",
+      "state": "PASS",
+      "rationale": "Faithful warning that SEM brightness/texture alone does not establish crystal phase.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "JEOL, Scanning Electron Microscope A to Z",
+          "url": "https://www.jeol.com/applications/pdf/sm/sem_atoz_all.pdf",
+          "finding": "Electron scattering gives a finite subsurface signal volume; increasing landing energy increases penetration, and topographic/image contrast is not a crystal-phase identification by itself."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Phase identification can combine diffraction and composition information; ordinary image contrast has several possible causes."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 49,
+      "assistant_tokens": 21,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 162
+    },
+    {
+      "id": "repo-110173784dcc4877735425b7",
+      "messages_sha256": "110173784dcc4877735425b736751882b3ce7c5acadae3a337948a3d18b3790f",
+      "state": "PASS",
+      "rationale": "Correct finite SEM signal-generation-volume definition and usual voltage/atomic-number trends.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "JEOL, Scanning Electron Microscope A to Z",
+          "url": "https://www.jeol.com/applications/pdf/sm/sem_atoz_all.pdf",
+          "finding": "Electron scattering gives a finite subsurface signal volume; increasing landing energy increases penetration, and topographic/image contrast is not a crystal-phase identification by itself."
+        },
+        {
+          "title": "SEM lecture, Izmir Institute of Technology",
+          "url": "https://web.iyte.edu.tr/~serifeyalcin/lectures/chem502/L8.pdf",
+          "finding": "The standard bulk-specimen trend is larger interaction volume at higher accelerating voltage and smaller volume with increasing atomic number."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Density, composition, beam geometry and signal escape depth also matter; EDS interaction volume and surface-secondary-electron resolution are different quantities."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 80,
+      "assistant_tokens": 52,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 163
+    },
+    {
+      "id": "repo-b8bdf8be9df418cddbf222d7",
+      "messages_sha256": "b8bdf8be9df418cddbf222d73012b79c5597a1577a784ce591e115558f234fe8",
+      "state": "PASS",
+      "rationale": "Correct staged interpretations of narrowing and lower-angle peak shift with explicit alternative causes.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "IUCr, Size-strain separation in diffraction line profile analysis (2018)",
+          "url": "https://journals.iucr.org/j/issues/2018/03/00/ks5592/index.html",
+          "finding": "Crystalline-domain size, microstrain, peak overlap and instrumental profiles must be separated; simple breadth methods can be unreliable without appropriate data."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "At fixed wavelength n*lambda=2*d*sin(theta), so dd/dtheta=-d*cot(theta), giving larger d for smaller theta in the usual diffraction range."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At fixed wavelength n*lambda=2*d*sin(theta), so dd/dtheta=-d*cot(theta), giving larger d for smaller theta in the usual diffraction range."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Compare the same reflection/wavelength after calibration and phase indexing; no unique source of expansion is diagnosed."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 100,
+      "assistant_tokens": 61,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 164
+    },
+    {
+      "id": "repo-a1a07d8e324ad095e904f7e3",
+      "messages_sha256": "a1a07d8e324ad095e904f7e3efcdbaef026c949ec2aae4a62f8072338e020843",
+      "state": "PASS",
+      "rationale": "Correct warning against attributing all peak broadening to crystallite size, with instrumental and strain separation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "IUCr, Size-strain separation in diffraction line profile analysis (2018)",
+          "url": "https://journals.iucr.org/j/issues/2018/03/00/ks5592/index.html",
+          "finding": "Crystalline-domain size, microstrain, peak overlap and instrumental profiles must be separated; simple breadth methods can be unreliable without appropriate data."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Williamson-Hall itself has assumptions and limitations; neither it nor Scherrer automatically yields a unique physical particle size."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 124,
+      "assistant_tokens": 75,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 165
+    },
+    {
+      "id": "repo-82d0972e3214e467a5423c5c",
+      "messages_sha256": "82d0972e3214e467a5423c5ca23e5a9e4497ac43a570de582411cc3bd69275f0",
+      "state": "PASS",
+      "rationale": "Reasonable consistent precipitation/coarsening/relaxation interpretation of the combined DSC, XRD and SEM evidence.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "IUCr, Size-strain separation in diffraction line profile analysis (2018)",
+          "url": "https://journals.iucr.org/j/issues/2018/03/00/ks5592/index.html",
+          "finding": "Crystalline-domain size, microstrain, peak overlap and instrumental profiles must be separated; simple breadth methods can be unreliable without appropriate data."
+        },
+        {
+          "title": "NETZSCH, Low-Temperature Differential Scanning Calorimetry Also for Metals",
+          "url": "https://analyzing-testing.netzsch.com/_Resources/Persistent/9/b/1/b/9b1b12cab4c0812cf322632301db4435a4fbadaa/AN%20275_Low-Temperature%20Differential%20Scanning%20Calorimetry%20Also%20for%20Metals.pdf",
+          "finding": "AN275 pages 2–4 show lower residual precipitation peak area after prior aging."
+        },
+        {
+          "title": "MIT 3.40 Physical Metallurgy Lecture 18",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/3b9508adaba259c0d0628f6078f92349_MIT3_40JF09_lec18.pdf",
+          "finding": "Precipitate size/coherency and competing strengthening mechanisms make aging response state dependent."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Not a unique diagnosis: the XRD reflection's phase, normalization and coherent-domain versus particle-size distinction must be checked. Can appropriately qualifies peak-sharpening mechanisms."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 149,
+      "assistant_tokens": 104,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 166
+    },
+    {
+      "id": "repo-00666e083bc09152d94aa73f",
+      "messages_sha256": "00666e083bc09152d94aa73f7f38f5735767c48aad4fa32e6d8fe850acfb2763",
+      "state": "PASS",
+      "rationale": "Correct distinction between measured phase fractions and unresolved stored energy released on a thermal path.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NETZSCH, Low-Temperature Differential Scanning Calorimetry Also for Metals",
+          "url": "https://analyzing-testing.netzsch.com/_Resources/Persistent/9/b/1/b/9b1b12cab4c0812cf322632301db4435a4fbadaa/AN%20275_Low-Temperature%20Differential%20Scanning%20Calorimetry%20Also%20for%20Metals.pdf",
+          "finding": "AN275 pages 2–4 show lower residual precipitation peak area after prior aging."
+        },
+        {
+          "title": "MIT 3.40 Physical Metallurgy Lectures 10 and 11",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/c9dc86331e13d11e8dd5d5a32b44894d_MIT3_40JF09_lec1011.pdf",
+          "finding": "Recovery, boundary migration, particle effects and coarsening alter defect energy and microstructure."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "Two specimens with the same phase fractions can have different defect/surface energy; heat release during relaxation need not therefore match."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Two specimens with the same phase fractions can have different defect/surface energy; heat release during relaxation need not therefore match."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "XRD phase fractions alone do not fully specify composition, defect density or amorphous content; a calibrated DSC comparison also needs mass and baseline normalization. Enthalpy remains a state function; different initial microstates and transformations explain different measured heat histories."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 146,
+      "assistant_tokens": 98,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 167
+    },
+    {
+      "id": "repo-502d5d4383ae6be1656c4e78",
+      "messages_sha256": "502d5d4383ae6be1656c4e78ae7d6421853b36abb9dcacd82b00d669e7006990",
+      "state": "PASS",
+      "rationale": "Correct classical laminate ABD constitutive matrix and block roles.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Alan T. Nettles, Basic Mechanics of Laminated Composite Plates, NASA-RP-1351 (1994)",
+          "url": "https://ntrs.nasa.gov/api/citations/19950009349/downloads/19950009349.pdf",
+          "finding": "Sections III.D–E give extensional, coupling and bending stiffness blocks and B cancellation under symmetry."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "The block relation [N;M]=[[A,B],[B,D]]*[epsilon0;kappa] has six generalized components."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The block relation [N;M]=[[A,B],[B,D]]*[epsilon0;kappa] has six generalized components."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Uses the conventional in-plane force/moment resultants and three membrane strain plus three curvature components; transverse shear requires additional terms in richer theories."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 61,
+      "assistant_tokens": 46,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 168
+    },
+    {
+      "id": "repo-8776171ec14cf8801bb09daa",
+      "messages_sha256": "8776171ec14cf8801bb09daa1a1fbd13b71afb62014175ba8223d2f446060e0c",
+      "state": "PASS",
+      "rationale": "Correct balance-versus-symmetry decoupling distinctions and example sequences under the conventional identical-ply material/thickness interpretation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "COMSOL, Composite Materials Module User Guide, laminate classifications",
+          "url": "https://doc.comsol.com/5.4/doc/com.comsol.help.compmat/CompositeMaterialsModuleUsersGuide.pdf",
+          "finding": "Defines symmetric and balanced laminates through matched material, thickness and mirrored/opposite ply orientations."
+        },
+        {
+          "title": "Alan T. Nettles, Basic Mechanics of Laminated Composite Plates, NASA-RP-1351 (1994)",
+          "url": "https://ntrs.nasa.gov/api/citations/19950009349/downloads/19950009349.pdf",
+          "finding": "Sections III.D–E give extensional, coupling and bending stiffness blocks and B cancellation under symmetry."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "Symmetric Qbar(z)=Qbar(-z) makes integral z*Qbar dz=0. Opposite-angle equal plies cancel odd Qbar16 and Qbar26 contributions to A."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Symmetric Qbar(z)=Qbar(-z) makes integral z*Qbar dz=0. Opposite-angle equal plies cancel odd Qbar16 and Qbar26 contributions to A."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The paired plies must also match material and thickness; balanced alone does not necessarily remove bend-twist coupling."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 121,
+      "assistant_tokens": 103,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 169
+    },
+    {
+      "id": "repo-452eb1d28fa8ba70b721a71c",
+      "messages_sha256": "452eb1d28fa8ba70b721a71c566f0c0f29f4198855e0f78576b13388abe20cbd",
+      "state": "PASS",
+      "rationale": "Correct introductory interlaminar-shear definition and matrix/interface-dominated weakness.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Unal and Bansal, interlaminar/in-plane shear strength of Hi-Nicalon/celsian composite (2000)",
+          "url": "https://ntrs.nasa.gov/citations/20010016113",
+          "finding": "Measures lower interlaminar than in-plane shear strength in the specified layered composite; does not establish a universal weakest-mode ranking."
+        },
+        {
+          "title": "COMSOL, Composite Materials Module User Guide, laminate classifications",
+          "url": "https://doc.comsol.com/5.4/doc/com.comsol.help.compmat/CompositeMaterialsModuleUsersGuide.pdf",
+          "finding": "Defines symmetric and balanced laminates through matched material, thickness and mirrored/opposite ply orientations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Weakest direction is a usual comparison for fiber laminates, not a universal strength ranking; through-thickness normal strength and mixed-mode delamination also matter."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 47,
+      "assistant_tokens": 30,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 170
+    },
+    {
+      "id": "repo-5c6f8ad37a0c28135021b62f",
+      "messages_sha256": "5c6f8ad37a0c28135021b62f4e67bd5a36d6d88822beb69d0f860adad52723f3",
+      "state": "QUARANTINE",
+      "rationale": "The free-edge mismatch explanation is plausible, but recommending unspecified ply-drop transitions as a generic remedy omits their own delamination-producing stress concentrations.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Design and manufacturing considerations for ply drops in composite structures (1999)",
+          "url": "https://www.montana.edu/composites/documents/17%201999Ply%20drops%20composites%20part%20B.pdf",
+          "finding": "Ply drops introduce local/interlaminar stress concentrations and can initiate delamination; geometry, placement and fabrication details matter."
+        },
+        {
+          "title": "COMSOL, Composite Materials Module User Guide, laminate classifications",
+          "url": "https://doc.comsol.com/5.4/doc/com.comsol.help.compmat/CompositeMaterialsModuleUsersGuide.pdf",
+          "finding": "Defines symmetric and balanced laminates through matched material, thickness and mirrored/opposite ply orientations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the remedy scope. Actual layup, loading and tapered-drop design need analysis; suitable transitions can help in particular designs, while abrupt drops can worsen the problem."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 107,
+      "assistant_tokens": 87,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 171
+    },
+    {
+      "id": "repo-61e8236ae39557b90413380c",
+      "messages_sha256": "61e8236ae39557b90413380c9d4876486420cd55d436072254ca68f1093fa070",
+      "state": "PASS",
+      "rationale": "Correct conventional fiber-dominated versus matrix/interface-dominated laminate failure classification.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Abaqus 2025, Damage Initiation for Fiber-Reinforced Composites",
+          "url": "https://docs.software.vt.edu/abaqusv2025/English/SIMACAEMATRefMap/simamat-c-damageinitfibercomposite.htm",
+          "finding": "Hashin-type criteria distinguish fiber/matrix tension/compression initiation modes; initiation is separate from subsequent damage evolution."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Relative first-failure stress depends on layup and load direction; lower/usually describes the ordinary weak transverse/shear response, not a universal first-ply theorem."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 84,
+      "assistant_tokens": 63,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 172
+    },
+    {
+      "id": "repo-d1c58d2c8fc910a925a6c395",
+      "messages_sha256": "d1c58d2c8fc910a925a6c395727de61427250792cd3622565428606915de71a1",
+      "state": "PASS",
+      "rationale": "Correct Hashin mode separation into fiber/matrix tension/compression criteria.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Abaqus 2025, Damage Initiation for Fiber-Reinforced Composites",
+          "url": "https://docs.software.vt.edu/abaqusv2025/English/SIMACAEMATRefMap/simamat-c-damageinitfibercomposite.htm",
+          "finding": "Hashin-type criteria distinguish fiber/matrix tension/compression initiation modes; initiation is separate from subsequent damage evolution."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "These equations predict initiation modes within the chosen formulation; they do not alone determine the full measured fracture history or post-initiation evolution."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 61,
+      "assistant_tokens": 44,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 173
+    },
+    {
+      "id": "repo-9bd8ef52f555727222f8ec35",
+      "messages_sha256": "9bd8ef52f555727222f8ec3572d2d6a6db6db23919eb4042cbd814d3018f117a",
+      "state": "PASS",
+      "rationale": "Correct introductory description of progressive stiffness-degradation damage simulation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Abaqus 2025, Damage Evolution and Element Removal for Fiber-Reinforced Composites",
+          "url": "https://docs.software.vt.edu/abaqusv2025/English/SIMACAEMATRefMap/simamat-c-damageevolfibercomposite.htm",
+          "finding": "Evolution variables degrade stiffness after initiation, with energy and regularization choices affecting progressive failure simulation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Accuracy through ultimate load requires calibrated evolution, regularization, mesh checks and relevant delamination/buckling treatment; definition of a model is not validation of a specific prediction."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 49,
+      "assistant_tokens": 35,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
+      "original_domain_ordinal": 174
     }
   ],
-  "reviewed": 2009,
+  "reviewed": 2034,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

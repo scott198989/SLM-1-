@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1625,
+    "PASS": 1649,
     "REJECT": 70,
-    "QUARANTINE": 315,
-    "NEEDS_HUMAN_REVIEW": 102
+    "QUARANTINE": 316,
+    "NEEDS_HUMAN_REVIEW": 77
   },
   "by_domain": {
     "circuits": {
@@ -56,10 +56,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "materials_manufacturing": {
-      "PASS": 130,
+      "PASS": 154,
       "REJECT": 4,
-      "QUARANTINE": 16,
-      "NEEDS_HUMAN_REVIEW": 100
+      "QUARANTINE": 17,
+      "NEEDS_HUMAN_REVIEW": 75
     },
     "physics": {
       "PASS": 212,
@@ -74,18 +74,18 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 2009,
+  "agent_substantive_reviews": 2034,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "aed38757071959a78ab21e84e643424114cdaa846d52fe0ef45376ee68f26dfa",
+  "technical_review_sha256": "76da6fceb0370a6bc7eb92a39af9c6ab28846fe33ba4a4fed290f10bd38351e5",
   "reasons": {
     "Faithful conceptual paraphrase that conservation and boundary requirements are integral to the coupled solution process. The prose does not explicitly assert exact feasibility of every internal numerical iterate.": 1,
     "Correct practical explanation of boundary data in an ordinary PDE discretization and their effect on closure, accuracy and stability.": 1,
     "Correct elementary local/absolute extrema distinction, including endpoint possibilities.": 1,
     "Universal three-phase-motor size, efficiency and self-starting comparison lacks machine type, rating and comparison conditions; synchronous motors are a counterexample to unqualified self-starting.": 1,
     "The basic inclusion of polynomials among rational expressions is correct, but the claim that polynomials always tend to infinity and can never have horizontal asymptotes fails for constant polynomials.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 100,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 75,
     "Accurate typical FMEA-entry checklist and appropriate acknowledgement that responsibility/action-status fields vary by team. It does not impose one universal risk-priority formula or imply FMEA alone validates safety.": 1,
     "Changing L/C reactance redistributes complex branch currents and voltages; response and cancellation are correctly circuit dependent rather than universally monotone.": 1,
     "Correct current-sign reversal of magnetic wire force and its role in mechanical commutation.": 1,
@@ -2090,11 +2090,36 @@
     "Correct concise yield-flow versus crack-extension distinction.": 1,
     "Correct embodied-energy stiffness index in the standard geometrically similar beam model and reasonable motivation for comparing renewable wood.": 1,
     "Reasonable description of coupled multiobjective material selection that cannot generally be reduced to one simple separable index.": 1,
-    "Correct conditional mechanism by which brittle grain-boundary phases promote intergranular fracture while the matrix can remain ductile.": 1
+    "Correct conditional mechanism by which brittle grain-boundary phases promote intergranular fracture while the matrix can remain ductile.": 1,
+    "Correct distinction between measured phase fractions and unresolved stored energy released on a thermal path.": 1,
+    "Correct finite SEM signal-generation-volume definition and usual voltage/atomic-number trends.": 1,
+    "Correct conditional particle-pinning, coarsening and competing creep-mechanism connections.": 1,
+    "Correct high-level distinctions between retirement-based, redundant-load-path and flaw/inspection-based philosophies.": 1,
+    "Correct nonconservatism risk from applying smooth-specimen calibration directly to a notched oxidizing component.": 1,
+    "Correct competing temperature effects and conditional hazard ranking.": 1,
+    "Correct introductory interlaminar-shear definition and matrix/interface-dominated weakness.": 1,
+    "Correct classical laminate ABD constitutive matrix and block roles.": 1,
+    "Faithful warning that SEM brightness/texture alone does not establish crystal phase.": 1,
+    "The free-edge mismatch explanation is plausible, but recommending unspecified ply-drop transitions as a generic remedy omits their own delamination-producing stress concentrations.": 1,
+    "Correct conditional strength-versus-stability tradeoff for intentional overaging.": 1,
+    "Correct conventional fiber-dominated versus matrix/interface-dominated laminate failure classification.": 1,
+    "Correct explanation that hot tensile dwell adds time/environment dependence to cyclic crack damage.": 1,
+    "Correct warning against applying an old rupture curve to a materially different evolving state.": 1,
+    "Reasonable consistent precipitation/coarsening/relaxation interpretation of the combined DSC, XRD and SEM evidence.": 1,
+    "Correct balance-versus-symmetry decoupling distinctions and example sequences under the conventional identical-ply material/thickness interpretation.": 1,
+    "Correct non-unique interpretation of a short primary stage and explicit request for mechanism-sensitive evidence.": 1,
+    "Sound coupled-history account for a hot thermally cycled nickel-superalloy blade.": 1,
+    "Correct possible mechanism-change explanation for failure of one time-temperature correlation across stress regimes.": 1,
+    "Correct introductory description of progressive stiffness-degradation damage simulation.": 1,
+    "Correct warning against attributing all peak broadening to crystallite size, with instrumental and strain separation.": 1,
+    "Reasonable mechanism classification from the specified power-law and lattice-diffusion activation fingerprints.": 1,
+    "Correct staged interpretations of narrowing and lower-angle peak shift with explicit alternative causes.": 1,
+    "Correct Hashin mode separation into fiber/matrix tension/compression criteria.": 1,
+    "Reasonable high-level incremental workflow combining cycle- and time-dependent crack/damage evolution with a peak-load fracture check.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "27e44ead00b1493ae7bc4b7b17e6506e17eea52608d0c64c66681d96832fab84",
-  "substantively_unreviewed": 100,
+  "published_decisions_sha256": "e405a742d95a61dc0296940f08b8fd0fee010f3c568cc1f7f613ba82a97640ee",
+  "substantively_unreviewed": 75,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
