@@ -31192,9 +31192,841 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
       "original_domain_ordinal": 74
+    },
+    {
+      "id": "repo-491a360abfb5cb82586eaed8",
+      "messages_sha256": "491a360abfb5cb82586eaed8623cfe611050ead02dd47e7a8866658e00d51fd7",
+      "state": "PASS",
+      "rationale": "Correct rejection of bounded-Hessian-alone global convergence and qualified explanation of local models and globalization safeguards.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Boyd and Vandenberghe, Convex Optimization, chapter10",
+          "url": "https://www.seas.ucla.edu/~vandenbe/cvxbook/bv_cvxbook.pdf",
+          "finding": "Equality-constrained Newton uses Hessian/Jacobian saddle-point blocks; globalization and conditioning require hypotheses beyond merely bounded Hessians."
+        },
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Exact integrals, derivative rules, convergence arguments, geometric rates and counterexamples are checked independently."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Damping or trust regions also require appropriate hypotheses; the answer explicitly says plus assumptions rather than guaranteeing convergence from a named safeguard alone."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 138,
+      "assistant_tokens": 115,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 75
+    },
+    {
+      "id": "repo-1d1e9c3734a315f407b9c329",
+      "messages_sha256": "1d1e9c3734a315f407b9c3290218871c8b839b41a0ae5a65e70c830c1461e563",
+      "state": "PASS",
+      "rationale": "Correct equality-constrained Newton KKT block structure, primal/multiplier solve and rank/scaling concerns.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Boyd and Vandenberghe, Convex Optimization, chapter10",
+          "url": "https://www.seas.ucla.edu/~vandenbe/cvxbook/bv_cvxbook.pdf",
+          "finding": "Equality-constrained Newton uses Hessian/Jacobian saddle-point blocks; globalization and conditioning require hypotheses beyond merely bounded Hessians."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Linearizing stationarity and constraints gives [[H_L,J^T],[J,0]]*[p;delta_lambda]=-[grad_x L;c]."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The constraint-Jacobian row enforces the linearized constraints; the lower-right zero records no direct multiplier dependence of the primal constraints."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 133,
+      "assistant_tokens": 114,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 76
+    },
+    {
+      "id": "repo-f1c562948983f4c10856e2c8",
+      "messages_sha256": "f1c562948983f4c10856e2c83acbf8024eee0a5a08c9aa16b32507015e5f97dc",
+      "state": "PASS",
+      "rationale": "Correct positive-term limit comparison test with both finite positive bounds specified.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Exact integrals, derivative rules, convergence arguments, geometric rates and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If a_n/b_n->L in(0,infinity), eventually (L/2)b_n<=a_n<=(3L/2)b_n; direct comparison yields the same convergence behavior."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 111,
+      "assistant_tokens": 94,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 77
+    },
+    {
+      "id": "repo-fb47ff7081b4cc9ed0283b96",
+      "messages_sha256": "fb47ff7081b4cc9ed0283b969839bb6861a56abb33977d86cc5d00afb9e19053",
+      "state": "PASS",
+      "rationale": "Correct zero-width integral property and an antiderivative illustration where available.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Exact integrals, derivative rules, convergence arguments, geometric rates and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "An integral over a degenerate interval is0; if an admissible antiderivative exists, F(a)-F(a)=0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The zero-width property does not require an elementary antiderivative or even continuity in a surrounding interval."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 66,
+      "assistant_tokens": 41,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 78
+    },
+    {
+      "id": "repo-88748224597993fe316b77f7",
+      "messages_sha256": "88748224597993fe316b77f7d090c8feb852b3e6c333eff088a55635761b231c",
+      "state": "PASS",
+      "rationale": "Correct definite integral and positivity justification for actual area.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Exact integrals, derivative rules, convergence arguments, geometric rates and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "[x³-x²+x]_0^1=1; discriminant(-2)²-4*3*1=-8<0 with positive leading coefficient."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 132,
+      "assistant_tokens": 102,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 79
+    },
+    {
+      "id": "repo-3851ae98552bb12145c3b69b",
+      "messages_sha256": "3851ae98552bb12145c3b69b9b5e223a526c8a97e45e03385f13af98de8cf1de",
+      "state": "PASS",
+      "rationale": "Correct half-Gaussian value and standard polar-coordinate evaluation strategy.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Exact integrals, derivative rules, convergence arguments, geometric rates and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "I²=integral_first_quadrant exp(-(x²+y²))dxdy=(pi/2)*integral_0^infinity r*exp(-r²)dr=pi/4, so I=sqrt(pi)/2."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A non-elementary antiderivative does exist via erf; the answer explicitly means no elementary antiderivative."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 97,
+      "assistant_tokens": 73,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 80
+    },
+    {
+      "id": "repo-6261f5714f99a5434f0846d3",
+      "messages_sha256": "6261f5714f99a5434f0846d37a655a9bde3fb2a3a76f98ca6bcbe1b18a1747fd",
+      "state": "PASS",
+      "rationale": "Correct height-rate explanation for the usual cone opening upward from a lower apex.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Exact integrals, derivative rules, convergence arguments, geometric rates and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If radius=c*h then V=(pi*c²/3)*h³ and h_prime=Q/(pi*c²*h²), decreasing with positive h for constant Q>0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The opening-upward orientation matters. A cone narrowing upward has the opposite area trend; the answer identifies a widening cone as its scenario."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 90,
+      "assistant_tokens": 61,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 81
+    },
+    {
+      "id": "repo-e8c66f3d80a936d10a2da42f",
+      "messages_sha256": "e8c66f3d80a936d10a2da42f73cd5a1d5de52e69bf3a1e281ccb74d7ddbb6c67",
+      "state": "PASS",
+      "rationale": "Correct rejection of the false proposed theorem with a valid conditionally convergent counterexample; the preliminary mistaken route is explicitly corrected.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Exact integrals, derivative rules, convergence arguments, geometric rates and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "a_n=(-1)^n/sqrt n gives convergent alternating sum, while a_n²=1/n has divergent harmonic sum."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Preserve the original self-correction; it concludes correctly that ordinary convergence is insufficient."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 166,
+      "assistant_tokens": 129,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 82
+    },
+    {
+      "id": "repo-7594bb799178a5ad01d65d4f",
+      "messages_sha256": "7594bb799178a5ad01d65d4f60e92bbb7f2ca9350bf070b7c38479f9427a4815",
+      "state": "QUARANTINE",
+      "rationale": "The global exponential-growth versus periodic-series distinction is useful, but the claim that standard Fourier series require boundedness is false in the usual L2 framework. Finite-window expansion is also distinct from representing the full growing signal.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Hunter and Nachtergaele, Applied Analysis, Fourier Series chapter",
+          "url": "https://www.math.ucdavis.edu/~hunter/book/ch7.pdf",
+          "finding": "Fourier series have an L2 framework that includes unbounded square-integrable periodic functions; boundedness is not a universal necessary hypothesis."
+        },
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Exact integrals, derivative rules, convergence arguments, geometric rates and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The periodic extension of f(x)=|x|^(-1/4) on[-pi,pi], with an arbitrary value at0, is unbounded but square-integrable because integral_0^pi x^(-1/2)dx is finite; it has an L2 Fourier series."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Laplace transforms are appropriate for suitable exponential-order signals. This hold does not claim exp(t) is globally periodic or has an ordinary periodic representation on the whole line."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 76,
+      "assistant_tokens": 55,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 83
+    },
+    {
+      "id": "repo-3bb140fe56ac4595a94d11f4",
+      "messages_sha256": "3bb140fe56ac4595a94d11f4a160238b0c92f3a82ca53f030a6116c4c8bfb322",
+      "state": "PASS",
+      "rationale": "Correct Dirichlet convergence criterion and alternating-series special case.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Exact integrals, derivative rules, convergence arguments, geometric rates and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Abel summation bounds tails of sum a_n*b_n when a_n decreases to0 and B_n=sum_{k<=n}b_k stays bounded."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 90,
+      "assistant_tokens": 71,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 84
+    },
+    {
+      "id": "repo-355fdea867a6732d9fb85218",
+      "messages_sha256": "355fdea867a6732d9fb85218c9eaf8aa9653a1c788c3f564b2ce06841a5f69d0",
+      "state": "PASS",
+      "rationale": "Correct small polar-sector geometry and first-order area element.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Exact integrals, derivative rules, convergence arguments, geometric rates and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Arc length at fixed radius is exactly r*dtheta; annular-sector area is((r+dr)²-r²)*dtheta/2=r*dr*dtheta+0.5*dr²*dtheta."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The differential approximation treats dr and dtheta as small; shrinking angle alone does not remove the relative radial-curvature error at fixed dr/r."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 94,
+      "assistant_tokens": 70,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 85
+    },
+    {
+      "id": "repo-093639fd4c13a6d8b01fc4e8",
+      "messages_sha256": "093639fd4c13a6d8b01fc4e8be7d2d977481a6631c7ddca0d9990607960f2cb9",
+      "state": "PASS",
+      "rationale": "Correct nonnegativity of ordinary geometric volume and useful reversed-bound diagnostic.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Exact integrals, derivative rules, convergence arguments, geometric rates and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Lebesgue/Riemann volume is integral_region1 with nonnegative measure, hence cannot be negative."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Oriented integrals can be signed, but the prompt explicitly asks volume and the answer specifies proper bounds."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 83,
+      "assistant_tokens": 53,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 86
+    },
+    {
+      "id": "repo-34a6dfb3175c918b4a08ee09",
+      "messages_sha256": "34a6dfb3175c918b4a08ee0942cd9cd383864affdf28328819d9d4dd7f3141b7",
+      "state": "PASS",
+      "rationale": "Correct substitution, transformed limits and exact logarithmic result.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Exact integrals, derivative rules, convergence arguments, geometric rates and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "u=1+exp x maps0->2 andln2->3, giving integral_2^3 du/u=ln(3/2)."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 98,
+      "assistant_tokens": 69,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 87
+    },
+    {
+      "id": "repo-e58abd4aca38c830b4c95421",
+      "messages_sha256": "e58abd4aca38c830b4c95421529e887479f31fd3e854f0e20fff2c59590ef65c",
+      "state": "PASS",
+      "rationale": "Correct recursive interpretation of integral reduction formulas.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Exact integrals, derivative rules, convergence arguments, geometric rates and counterexamples are checked independently."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The parameter reduction must terminate in an available base case for a finite computation; this describes the standard useful form rather than every possible recurrence."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 69,
+      "assistant_tokens": 51,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 88
+    },
+    {
+      "id": "repo-d79eafc0df89dff1fd5616cc",
+      "messages_sha256": "d79eafc0df89dff1fd5616cc7d37241c8557ab673ac170090e20a1da0ea56f31",
+      "state": "PASS",
+      "rationale": "Correct related-rates workflow that explicitly keeps the pool geometry variable.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Exact integrals, derivative rules, convergence arguments, geometric rates and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For volume-depth relation V(h), differentiating gives Q=V_prime(h)*h_prime and h_prime=Q/V_prime(h) where cross-sectional area is positive."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 98,
+      "assistant_tokens": 78,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 89
+    },
+    {
+      "id": "repo-205f6a989ee1592af494a585",
+      "messages_sha256": "205f6a989ee1592af494a5853281b7e7e7d1df0b416eff40f280182e2ceb58d3",
+      "state": "PASS",
+      "rationale": "Correct distinction between accumulation and antiderivatives, connected by the FTC.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Exact integrals, derivative rules, convergence arguments, geometric rates and counterexamples are checked independently."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The FTC connection requires its usual hypotheses and does not imply every integrable function has an elementary antiderivative."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 91,
+      "assistant_tokens": 67,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 90
+    },
+    {
+      "id": "repo-892b8b525baa53e764f978e6",
+      "messages_sha256": "892b8b525baa53e764f978e6a9a74d3c87c2d1e09150d2482fec143e27a6d10f",
+      "state": "PASS",
+      "rationale": "Clear and accurate introductory constrained-optimization example.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Exact integrals, derivative rules, convergence arguments, geometric rates and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With rectangular-yard perimeter P fixed, maximizing x*(P/2-x) gives the square."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The source describes the goal without fixing a shape class; the example check illustrates, rather than changes, that concept."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 80,
+      "assistant_tokens": 56,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 91
+    },
+    {
+      "id": "repo-117ff2e0f059ee54f9714d3b",
+      "messages_sha256": "117ff2e0f059ee54f9714d3b7cdf6e52bd692fd9c45619105ea9b1d2c2d90501",
+      "state": "PASS",
+      "rationale": "Valid epsilon-delta proof of the limit of a constant function.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Exact integrals, derivative rules, convergence arguments, geometric rates and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For every epsilon>0 anydelta>0 works since|c-c|=0<epsilon whenever0<|x-a|<delta."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 96,
+      "assistant_tokens": 76,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 92
+    },
+    {
+      "id": "repo-3b617ed500a8dc2567507b42",
+      "messages_sha256": "3b617ed500a8dc2567507b42f5c53ade4142b0f84aad03fb100da51eb5aef3b8",
+      "state": "PASS",
+      "rationale": "Correct identification of the missing denominator factor, derivative origin and constant-denominator check.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Exact integrals, derivative rules, convergence arguments, geometric rates and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For v=c!=0, erroneous (u_prime*c)/c=u_prime whereas correct derivative is u_prime/c; choosing c=2 distinguishes them."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 166,
+      "assistant_tokens": 131,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 93
+    },
+    {
+      "id": "repo-5666cfe98c50c08dc60253d5",
+      "messages_sha256": "5666cfe98c50c08dc60253d514e3e73e337d81a4e1f5171b9bb59ce42eca95b8",
+      "state": "PASS",
+      "rationale": "Accurate conceptual difference-quotient limit explanation of derivative existence.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Exact integrals, derivative rules, convergence arguments, geometric rates and counterexamples are checked independently."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "For an interior ordinary derivative the two-sided limit must agree and be finite; endpoints may use one-sided derivatives."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 73,
+      "assistant_tokens": 54,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 94
+    },
+    {
+      "id": "repo-edd65855578ad2aadb4694fb",
+      "messages_sha256": "edd65855578ad2aadb4694fb95d5d02790e6ef9e2972ff405a16354379f52f07",
+      "state": "PASS",
+      "rationale": "Sound conceptual reason localized wavelet coefficients can be useful for transient/nonstationary structure relative to a global Fourier spectrum.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Gilbert Strang, Wavelet transforms versus Fourier transforms, 1993",
+          "url": "https://arxiv.org/abs/math/9304214",
+          "finding": "Wavelet bases provide localized coefficients at different scales, contrasting with global Fourier sinusoidal components; representation choice depends on the signal and application."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A full complex Fourier transform retains time information through phase and inversion; lacks explicit time localization is not irreversible information loss. STFT also localizes time, and comparative interpretability/computational cost depend on representation and implementation."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 105,
+      "assistant_tokens": 84,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 95
+    },
+    {
+      "id": "repo-9673f77468b4feeaf783a7a8",
+      "messages_sha256": "9673f77468b4feeaf783a7a8974fbf39a7b1be4bbd5485d07b52186c821bf181",
+      "state": "PASS",
+      "rationale": "Correct gradient and steepest-ascent direction under the Euclidean metric.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Exact integrals, derivative rules, convergence arguments, geometric rates and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "grad f(1,2)=(2,4); unit direction=(1,2)/sqrt5 maximizes grad f dot u over||u||=1."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 99,
+      "assistant_tokens": 63,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 96
+    },
+    {
+      "id": "repo-0c2845237b0e544f39d93cf2",
+      "messages_sha256": "0c2845237b0e544f39d93cf20905822e6f26d551d4e7a97c4105dbd9fa3985b6",
+      "state": "QUARANTINE",
+      "rationale": "The requested proof is not completed: the answer names Fubini and promises the uniform-continuity estimates instead of establishing them. Separately, its unrestricted Riemann-integrability claim needs regular-region hypotheses; compactness alone is insufficient.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "UC Davis Math125B, multiple Riemann integration notes",
+          "url": "https://www.math.ucdavis.edu/~gravner/MAT125B/materials/mit.pdf",
+          "finding": "Riemann integration over sets requires Jordan-measurability/integrability conditions; a bounded compact set need not have a Riemann-integrable indicator."
+        },
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Exact integrals, derivative rules, convergence arguments, geometric rates and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a compact positive-measure nowhere-dense set E in a rectangle, f=1 is continuous on E, but its extension1_E is discontinuous on E and is not Riemann integrable. Jordan-measurable regions or an explicitly Lebesgue formulation need separate hypotheses."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Even for an ordinary regular region, the response is an outline rather than the requested proof. The pathological-region example is a secondary scope limitation; Lebesgue Fubini on a compact measurable region with bounded continuous integrand remains valid."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 138,
+      "assistant_tokens": 107,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 97
+    },
+    {
+      "id": "repo-ee86797121e99f87e2b59bc0",
+      "messages_sha256": "ee86797121e99f87e2b59bc098c0a83488fc0ea5ea8f8cc03dbcf61f0b89a391",
+      "state": "QUARANTINE",
+      "rationale": "The definition as a Taylor series centered at0 is correct, but writing an unrestricted equality f(x)=its series omits the convergence-to-f requirement. A smooth function need not equal its Maclaurin series.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "UCI Math140B, Differentiation and Taylor series",
+          "url": "https://webapps.math.uci.edu/~ndonalds/math140b/3diff.html",
+          "finding": "A smooth function can fail to equal its Taylor/Maclaurin series; analyticity or vanishing remainder is an additional requirement."
+        },
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Exact integrals, derivative rules, convergence arguments, geometric rates and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "f(x)=exp(-1/x²) forx!=0 andf(0)=0 has every derivative0 at0; its Maclaurin series is identically0, unlike f at any nonzero x."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for the unqualified equality, not the center-zero definition; analyticity or a vanishing remainder supplies the missing condition."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 80,
+      "assistant_tokens": 59,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 98
+    },
+    {
+      "id": "repo-7c352b23d6e0a186bcba04e8",
+      "messages_sha256": "7c352b23d6e0a186bcba04e81f2c17fd1d1d28b9c13db6599ed7c90166d6eb24",
+      "state": "PASS",
+      "rationale": "Correct inclusive description of explicit, implicit and numerical solution viewpoints while keeping equation/domain/extra-condition fidelity central.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Exact integrals, derivative rules, convergence arguments, geometric rates and counterexamples are checked independently."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A numerical approximation is checked with error/residual tolerances rather than literal exact equality; the answer explicitly labels that viewpoint approximate."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 167,
+      "assistant_tokens": 136,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+      "original_domain_ordinal": 99
     }
   ],
-  "reviewed": 1127,
+  "reviewed": 1152,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

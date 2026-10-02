@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 867,
+    "PASS": 889,
     "REJECT": 55,
-    "QUARANTINE": 206,
-    "NEEDS_HUMAN_REVIEW": 984
+    "QUARANTINE": 209,
+    "NEEDS_HUMAN_REVIEW": 959
   },
   "by_domain": {
     "circuits": {
@@ -38,10 +38,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "calculus": {
-      "PASS": 66,
+      "PASS": 88,
       "REJECT": 3,
-      "QUARANTINE": 6,
-      "NEEDS_HUMAN_REVIEW": 140
+      "QUARANTINE": 9,
+      "NEEDS_HUMAN_REVIEW": 115
     },
     "electrical_components": {
       "PASS": 232,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1127,
+  "agent_substantive_reviews": 1152,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "4efe6b7762157e9d4f4e10483cf1019909b00e603a38cbf5ec944037d098dab4",
+  "technical_review_sha256": "3489a820d4eabc561f143a15109c883f3bf3b3f25e2560c954aa547f6b227e3f",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 982,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 957,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1208,11 +1208,36 @@
     "Correct practical distinction between reading level and rate of change, including sign and threshold uses.": 1,
     "Correct antiderivative evaluation and odd-function cancellation.": 1,
     "Accurate conceptual links between integration techniques and derivative/antiderivative structure.": 1,
-    "Sound practical Stokes theorem interpretation linking boundary circulation to curl flux.": 1
+    "Sound practical Stokes theorem interpretation linking boundary circulation to curl flux.": 1,
+    "Correct nonnegativity of ordinary geometric volume and useful reversed-bound diagnostic.": 1,
+    "The requested proof is not completed: the answer names Fubini and promises the uniform-continuity estimates instead of establishing them. Separately, its unrestricted Riemann-integrability claim needs regular-region hypotheses; compactness alone is insufficient.": 1,
+    "Valid epsilon-delta proof of the limit of a constant function.": 1,
+    "Correct equality-constrained Newton KKT block structure, primal/multiplier solve and rank/scaling concerns.": 1,
+    "Correct distinction between accumulation and antiderivatives, connected by the FTC.": 1,
+    "Correct substitution, transformed limits and exact logarithmic result.": 1,
+    "Correct small polar-sector geometry and first-order area element.": 1,
+    "Correct half-Gaussian value and standard polar-coordinate evaluation strategy.": 1,
+    "Correct identification of the missing denominator factor, derivative origin and constant-denominator check.": 1,
+    "Correct Dirichlet convergence criterion and alternating-series special case.": 1,
+    "Correct rejection of bounded-Hessian-alone global convergence and qualified explanation of local models and globalization safeguards.": 1,
+    "Accurate conceptual difference-quotient limit explanation of derivative existence.": 1,
+    "Correct height-rate explanation for the usual cone opening upward from a lower apex.": 1,
+    "The global exponential-growth versus periodic-series distinction is useful, but the claim that standard Fourier series require boundedness is false in the usual L2 framework. Finite-window expansion is also distinct from representing the full growing signal.": 1,
+    "Correct inclusive description of explicit, implicit and numerical solution viewpoints while keeping equation/domain/extra-condition fidelity central.": 1,
+    "Correct definite integral and positivity justification for actual area.": 1,
+    "Clear and accurate introductory constrained-optimization example.": 1,
+    "Correct gradient and steepest-ascent direction under the Euclidean metric.": 1,
+    "Correct related-rates workflow that explicitly keeps the pool geometry variable.": 1,
+    "Correct recursive interpretation of integral reduction formulas.": 1,
+    "Correct rejection of the false proposed theorem with a valid conditionally convergent counterexample; the preliminary mistaken route is explicitly corrected.": 1,
+    "Sound conceptual reason localized wavelet coefficients can be useful for transient/nonstationary structure relative to a global Fourier spectrum.": 1,
+    "The definition as a Taylor series centered at0 is correct, but writing an unrestricted equality f(x)=its series omits the convergence-to-f requirement. A smooth function need not equal its Maclaurin series.": 1,
+    "Correct positive-term limit comparison test with both finite positive bounds specified.": 1,
+    "Correct zero-width integral property and an antiderivative illustration where available.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "e7d1c402e229e315b58b12dfae9af98de829de39d2cbe6c531cef32f506b2ea5",
-  "substantively_unreviewed": 982,
+  "published_decisions_sha256": "ae5424a79946c6b4b18cd681645382a253801b8c5d2ace2e87585bb8c988888a",
+  "substantively_unreviewed": 957,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
