@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 568,
-    "REJECT": 45,
-    "QUARANTINE": 169,
-    "NEEDS_HUMAN_REVIEW": 1330
+    "PASS": 589,
+    "REJECT": 47,
+    "QUARANTINE": 171,
+    "NEEDS_HUMAN_REVIEW": 1305
   },
   "by_domain": {
     "circuits": {
@@ -20,10 +20,10 @@
       "NEEDS_HUMAN_REVIEW": 194
     },
     "algebra": {
-      "PASS": 98,
-      "REJECT": 6,
-      "QUARANTINE": 23,
-      "NEEDS_HUMAN_REVIEW": 89
+      "PASS": 119,
+      "REJECT": 8,
+      "QUARANTINE": 25,
+      "NEEDS_HUMAN_REVIEW": 64
     },
     "thermal_process_engineering": {
       "PASS": 73,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 781,
+  "agent_substantive_reviews": 806,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "831eae5b46a318974c50a69182eddbee31ad270a62631823004594cd06dc9149",
+  "technical_review_sha256": "3b1c56f993aa540a7c6b2a2bae273cfa90addf5dba6551ac718766a3b3c9ff2c",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1328,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1303,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -862,11 +862,36 @@
     "The finite-dimensional module-theoretic connections are useful, but the required finite-dimensional/torsion hypotheses are not stated. A general operator on an arbitrary vector space need not have a minimal or characteristic polynomial, and a Jordan form also needs a splitting field.": 1,
     "Accurate description of solving a triangular system from its final equation upward.": 1,
     "Sound caution that physical structure, conservation, stiffness and expected behavior matter to solver selection and validation.": 1,
-    "Correct interpretation of duplicate constraints and complete real parametric solution.": 1
+    "Correct interpretation of duplicate constraints and complete real parametric solution.": 1,
+    "The basic inclusion of polynomials among rational expressions is correct, but the claim that polynomials always tend to infinity and can never have horizontal asymptotes fails for constant polynomials.": 1,
+    "Correct overview of elimination and row reduction as tools for solving systems, inverses, determinants and rank.": 1,
+    "Reasonable classical density-based topology-optimization approach: elasticity state solve, adjoint sensitivity and constrained design updates. The volume-multiplier bisection description matches common optimality-criteria implementations.": 1,
+    "Correct classical proof-by-contradiction description and a standard valid example.": 1,
+    "Valid distributive proof in a unital ring that (-1)a is the additive inverse of a.": 1,
+    "Sound introductory distinction between presenting a witness and proving existence without exhibiting one.": 1,
+    "Valid proof that a field is a commutative unital ring without zero divisors, using the inverse of a nonzero factor.": 1,
+    "Correct standard conceptual comparison of classical Uzawa with a full direct indefinite solve: a positive-definite primal subsolve and multiplier iteration versus direct treatment of the coupled saddle system. The robustness language describes a typical solver tradeoff rather than a guarantee of curing rank deficiency.": 1,
+    "Accurate description of induction over natural-number-indexed statements using a base case and successor step.": 1,
+    "Appropriate list of problem-dependent physical admissibility or selection criteria, with explicit recognition that more modeling information can be necessary.": 1,
+    "Correct leading-degree limit proof for a real rational function with smaller numerator degree, with nonzero leading denominator coefficient.": 1,
+    "Correctly recognizes the incomplete input and asks for the missing task rather than inventing an equation or result.": 1,
+    "Correct full parametric solution for dependent equations.": 1,
+    "The dimension subtraction is valid for three state variables and two independent regular constraints, but the prompt gives neither independence nor regularity or ODE order. The number of equations alone does not establish exactly one independent degree of freedom.": 1,
+    "Accurate conceptual connection: finite-matrix eigenvalue computation is algebraic, while differential equations, stability and operator spectral theory supply analytical uses.": 1,
+    "Correct illustration that an identity proved with commutative-ring axioms holds for every pair in every such ring.": 1,
+    "The architecture and larger-system tradeoff are correct, but a monolithic formulation does not prevent all convergence issues associated with strong coupling. Nonlinear conditioning, singularities, initialization and solver choices can still cause failure.": 1,
+    "Correct definition and invariant row space/rank. Row operations need not preserve the column space or determinant, as the answer explains.": 1,
+    "Correct polynomial long division and final slant asymptote.": 1,
+    "Correct plain-language restatement of simultaneous satisfaction of all equations.": 1,
+    "Correctly diagnoses a lost factor of two and gives a valid numerical counterexample.": 1,
+    "Writing a coupled residual as F(x)=0 does not discard its sparsity, blocks, constraints or physics. Those remain in F, its Jacobian and solver metadata; calling this notation computationally useless is false.": 1,
+    "Faithful paraphrase of iterative substructuring: local subdomain solves are coordinated through shared-interface conditions.": 1,
+    "Correct elementary order of operations for ordinary explicit arithmetic: parentheses, powers, equal-precedence multiplication/division left to right, then addition/subtraction left to right.": 1,
+    "Correct breakdown of induction into base case, arbitrary inductive hypothesis and successor implication.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "60a4b3d5cf36d1378412d1134e8478acc028902fd95b8cdbf5976debabffa2ba",
-  "substantively_unreviewed": 1328,
+  "published_decisions_sha256": "f6dbe3359435a4eff2292fdc92962bfe237a7ab34903bf4e2b16c728666ba5ab",
+  "substantively_unreviewed": 1303,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

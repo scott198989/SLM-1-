@@ -8,10 +8,10 @@
   "review": {
     "curriculum": 2112,
     "dispositions": {
-      "PASS": 568,
-      "REJECT": 45,
-      "QUARANTINE": 169,
-      "NEEDS_HUMAN_REVIEW": 1330
+      "PASS": 589,
+      "REJECT": 47,
+      "QUARANTINE": 171,
+      "NEEDS_HUMAN_REVIEW": 1305
     },
     "by_domain": {
       "circuits": {
@@ -27,10 +27,10 @@
         "NEEDS_HUMAN_REVIEW": 194
       },
       "algebra": {
-        "PASS": 98,
-        "REJECT": 6,
-        "QUARANTINE": 23,
-        "NEEDS_HUMAN_REVIEW": 89
+        "PASS": 119,
+        "REJECT": 8,
+        "QUARANTINE": 25,
+        "NEEDS_HUMAN_REVIEW": 64
       },
       "thermal_process_engineering": {
         "PASS": 73,
@@ -75,8 +75,8 @@
         "NEEDS_HUMAN_REVIEW": 242
       }
     },
-    "agent_substantive_reviews": 781,
-    "substantively_unreviewed": 1328,
+    "agent_substantive_reviews": 806,
+    "substantively_unreviewed": 1303,
     "reviewed_specialist_holds": 2,
     "complete_source_domains": [
       "circuits",
@@ -98,13 +98,13 @@
     },
     {
       "path": "data/review/phase3/technical-review.jsonl.gz",
-      "bytes": 286509,
-      "sha256": "60a4b3d5cf36d1378412d1134e8478acc028902fd95b8cdbf5976debabffa2ba"
+      "bytes": 293519,
+      "sha256": "f6dbe3359435a4eff2292fdc92962bfe237a7ab34903bf4e2b16c728666ba5ab"
     },
     {
       "path": "manifests/phase3-agent-technical-review.json",
-      "bytes": 1098533,
-      "sha256": "86b5fa72017137550b2cf7abdc23dde8de5bdf5ffced450a779115eb2baf240e"
+      "bytes": 1143085,
+      "sha256": "5caec0179769e542371dcfddc3ba7a6a89c7c3ac8dec8fd924955306818841bc"
     },
     {
       "path": "manifests/phase3-release-families.json",
@@ -113,8 +113,8 @@
     },
     {
       "path": "reports/phase3-technical-review.json",
-      "bytes": 175528,
-      "sha256": "37837bf073a1a61a6126bdd453c0778095c03adad994a64fe31106957b063c91"
+      "bytes": 179462,
+      "sha256": "4cf06f1311ad957deb28406c1d40d2e1df4c5239ca40c7e36054b3e6722444c5"
     },
     {
       "path": "src/forge_tools/engineering.py",
@@ -219,7 +219,7 @@
   "next_domain": "algebra",
   "next_batch": {
     "domain": "algebra",
-    "offset": 125,
+    "offset": 150,
     "limit": 25
   },
   "workers": [],
@@ -230,9 +230,9 @@
   "latest_cloud_continuation": "reports/phase3-cloud-continuation-validation.json",
   "local_continuation": {
     "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
-    "local_predecessor_commit": "3dd3c507c3bed8f74db8d73958252ba4718e4e7e",
+    "local_predecessor_commit": "0bc487dcaab8cb8b01487f1a91c3e82456e12832",
     "publication_status": "LOCAL_ONLY; do not claim these counts are on GitHub",
-    "latest_batch": "reports/phase3-review-batches/algebra-0100-0125.json",
+    "latest_batch": "reports/phase3-review-batches/algebra-0125-0150.json",
     "electrical_domain_complete": true
   }
 }

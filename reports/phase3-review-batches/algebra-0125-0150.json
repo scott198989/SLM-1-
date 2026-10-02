@@ -1,0 +1,565 @@
+{
+  "base_commit": "0bc487dcaab8cb8b01487f1a91c3e82456e12832",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "algebra",
+  "offset": 125,
+  "limit": 25,
+  "next_offset": 150,
+  "new_substantive_reviews": 25,
+  "skipped_existing": 0,
+  "preserved_structural_quarantines": [],
+  "dispositions_added": {
+    "PASS": 21,
+    "QUARANTINE": 2,
+    "REJECT": 2
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "independent_algebra_sixth_batch_agent",
+    "records_checked": 25,
+    "final_counts": {
+      "PASS": 21,
+      "QUARANTINE": 2,
+      "REJECT": 2
+    },
+    "disposition_changes": [
+      {
+        "ordinal": 140,
+        "from": "QUARANTINE",
+        "to": "PASS",
+        "basis": "Standard conceptual robustness tradeoff; original does not guarantee curing rank deficiency."
+      }
+    ],
+    "review_precision_corrections": [
+      "Correct arXiv 1408.5547 authors to Ito, Xiang and Zou.",
+      "140: add Nataf and Tournier direct-saddle-solver evidence and bounded scope."
+    ],
+    "full_prompt_and_answer_review": true,
+    "all_source_hashes_ids_ordinals_and_ledger_matches": true,
+    "source_sha256": "87dea8584252719990f16589465740a1fa9bfb4f2c161912e7c5e3bd2af2de07",
+    "reviewed_against_local_commit": "fedf9fc4f67b48d1086ab0ea0ada0794fca0443a",
+    "published_base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "independent_human_review": false,
+    "release_approved": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 781,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 589,
+    "REJECT": 47,
+    "QUARANTINE": 171,
+    "NEEDS_HUMAN_REVIEW": 1305
+  },
+  "agent_substantive_reviews": 806,
+  "substantively_unreviewed": 1303,
+  "records": [
+    {
+      "id": "repo-9952312048bccd0d1bbe71c8",
+      "ordinal": 125,
+      "messages_sha256": "9952312048bccd0d1bbe71c826cfdda608e6d0bf849647fc9530ba73a53675cc",
+      "state": "PASS",
+      "rationale": "Accurate conceptual connection: finite-matrix eigenvalue computation is algebraic, while differential equations, stability and operator spectral theory supply analytical uses.",
+      "evidence": [
+        {
+          "title": "James Demmel, Berkeley MA221 Lecture 15",
+          "url": "https://people.eecs.berkeley.edu/~demmel/ma221_Fall09/Lectures/Lecture_15.html",
+          "finding": "Defines eigenvalues through the characteristic determinant and nonzero null vectors; shows similarity preserves eigenvalues and presents unique Jordan blocks up to ordering."
+        },
+        {
+          "title": "MIT OpenCourseWare, Eigenvalues and Stability",
+          "url": "https://ocw.mit.edu/courses/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/94c0f5570a5430022f7a472a0b5d3005_GAOjfd5QJZE.pdf",
+          "finding": "For a continuous-time constant-coefficient linear differential equation, asymptotic stability is governed by negative real parts of eigenvalues, rather than their maximum modulus."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L684"
+    },
+    {
+      "id": "repo-c907414451da271fc67c35b2",
+      "ordinal": 126,
+      "messages_sha256": "c907414451da271fc67c35b2adfe3b694f69bd40fc1ef15b0c27bff2bac2b005",
+      "state": "PASS",
+      "rationale": "Correct plain-language restatement of simultaneous satisfaction of all equations.",
+      "evidence": [
+        {
+          "method": "independent_linear_combination_check",
+          "finding": "If the complete equation a_k x=b_k is a linear combination of remaining equations with the same coefficients on both sides, every solution of the remaining equations satisfies it. Deleting it preserves the solution set."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A complete solution can be a set or parametric family; the wording does not assert uniqueness or existence for every system."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L695"
+    },
+    {
+      "id": "repo-44aaf8386768c6d89eae955e",
+      "ordinal": 127,
+      "messages_sha256": "44aaf8386768c6d89eae955ec8b34523ddda1d25a556894ee32e0027801f83ce",
+      "state": "PASS",
+      "rationale": "Valid proof that a field is a commutative unital ring without zero divisors, using the inverse of a nonzero factor.",
+      "evidence": [
+        {
+          "method": "independent_axiom_and_subgroup_check",
+          "finding": "Group claims are checked directly against closure, inherited associativity, identity and inverses. No numerical example substitutes for the general proof."
+        },
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Each algebraic identity and counterexample is checked from the full original prompt and answer."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If ab=0 and a!=0, multiply by a^-1 to get b=0. The parenthetical derivation supplies the key fact even though the prose mentions an earlier proof."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L702"
+    },
+    {
+      "id": "repo-d1168fbe6d9bbeea1a814ee2",
+      "ordinal": 128,
+      "messages_sha256": "d1168fbe6d9bbeea1a814ee2e372e69ebac7a872ed6c08294db963b1cd82c417",
+      "state": "PASS",
+      "rationale": "Correctly diagnoses a lost factor of two and gives a valid numerical counterexample.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Each algebraic identity and counterexample is checked from the full original prompt and answer."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "(a+a)b=ab+ab=2ab. At a=3,b=4 the original is 24 and the incorrect replacement is 12."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L707"
+    },
+    {
+      "id": "repo-94b27d3605386e77f7089982",
+      "ordinal": 129,
+      "messages_sha256": "94b27d3605386e77f7089982e20c68fcaa16f238bfb343fc6c69c1bb96b09ab3",
+      "state": "QUARANTINE",
+      "rationale": "The dimension subtraction is valid for three state variables and two independent regular constraints, but the prompt gives neither independence nor regularity or ODE order. The number of equations alone does not establish exactly one independent degree of freedom.",
+      "evidence": [
+        {
+          "title": "MIT nonlinear programming, constrained optimality",
+          "url": "https://ocw.mit.edu/courses/15-084j-nonlinear-programming-spring-2004/21073fc1bb9e5f68b3319bec0895683f_lec6_constr_opt.pdf",
+          "finding": "Theorem 22 requires a feasible base point, continuously differentiable constraints and a nonsingular Jacobian block for local elimination; multipliers are introduced for constrained optimization with relevant regularity conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Two listed constraints x1=0 and 2*x1=0 remove only one degree of freedom from R^3. For independent constraints x1=0,x2=0, one remains."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The answer's reference to independent constraints is the right condition, but their independence is not established for the question asked."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L708"
+    },
+    {
+      "id": "repo-6ba593f94f18a2fd31d8edb6",
+      "ordinal": 130,
+      "messages_sha256": "6ba593f94f18a2fd31d8edb64b24cd873c360b9420547fda738b47b9c7a76d4a",
+      "state": "PASS",
+      "rationale": "Appropriate list of problem-dependent physical admissibility or selection criteria, with explicit recognition that more modeling information can be necessary.",
+      "evidence": [
+        {
+          "title": "MIT OpenCourseWare, Eigenvalues and Stability",
+          "url": "https://ocw.mit.edu/courses/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/94c0f5570a5430022f7a472a0b5d3005_GAOjfd5QJZE.pdf",
+          "finding": "For a continuous-time constant-coefficient linear differential equation, asymptotic stability is governed by negative real parts of eigenvalues, rather than their maximum modulus."
+        },
+        {
+          "title": "MIT nonlinear programming, constrained optimality",
+          "url": "https://ocw.mit.edu/courses/15-084j-nonlinear-programming-spring-2004/21073fc1bb9e5f68b3319bec0895683f_lec6_constr_opt.pdf",
+          "finding": "Theorem 22 requires a feasible base point, continuously differentiable constraints and a nonsingular Jacobian block for local elimination; multipliers are introduced for constrained optimization with relevant regularity conditions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Unstable states can still be physically meaningful or transiently observed; stability is one possible criterion, not proof of physical admissibility by itself."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L720"
+    },
+    {
+      "id": "repo-f87cd3a7db168386b0549596",
+      "ordinal": 131,
+      "messages_sha256": "f87cd3a7db168386b0549596a7283a7f1aed98444b12ad5d73a11ca56026eb14",
+      "state": "PASS",
+      "rationale": "Correct elementary order of operations for ordinary explicit arithmetic: parentheses, powers, equal-precedence multiplication/division left to right, then addition/subtraction left to right.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Each algebraic identity and counterexample is checked from the full original prompt and answer."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Ambiguous juxtaposition or fraction typography should be parenthesized; the answer gives the standard classroom convention."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L725"
+    },
+    {
+      "id": "repo-0065c372095553dfea9994df",
+      "ordinal": 132,
+      "messages_sha256": "0065c372095553dfea9994df69433b45e454470d4583a6789438cfd2ff423c05",
+      "state": "REJECT",
+      "rationale": "The basic inclusion of polynomials among rational expressions is correct, but the claim that polynomials always tend to infinity and can never have horizontal asymptotes fails for constant polynomials.",
+      "evidence": [
+        {
+          "title": "OpenStax, Precalculus 2e: Rational Functions",
+          "url": "https://openstax.org/books/precalculus-2e/pages/3-7-rational-functions",
+          "finding": "The degree-difference-one and polynomial-division method is stated specifically for rational functions."
+        },
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Each algebraic identity and counterexample is checked from the full original prompt and answer."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "p(x)=5 is a polynomial defined everywhere with limit 5 at both infinities, not +/-infinity. Its graph is the horizontal line y=5; under the standard limiting definition it has that horizontal asymptote."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L735"
+    },
+    {
+      "id": "repo-f4f2169040578b6d7d24fac1",
+      "ordinal": 133,
+      "messages_sha256": "f4f2169040578b6d7d24fac1dc3ca0741b3125472ab1c9473f43cdc8082b722d",
+      "state": "PASS",
+      "rationale": "Faithful paraphrase of iterative substructuring: local subdomain solves are coordinated through shared-interface conditions.",
+      "evidence": [
+        {
+          "title": "Tojaga et al., Hybrid of monolithic and staggered solution techniques",
+          "url": "https://arxiv.org/abs/2203.15924",
+          "finding": "This coupled fracture model has reduced monolithic robustness from non-positive-definite tangent stiffness; alternating solution avoids that difficulty but has suboptimal convergence, motivating a hybrid. The comparison is problem-dependent."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Independently describes each local solve given interface data; it does not mean the complete physical subproblems are uncoupled."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L738"
+    },
+    {
+      "id": "repo-ba76c735ba334e9329fcba05",
+      "ordinal": 134,
+      "messages_sha256": "ba76c735ba334e9329fcba05d01837e61a2bf5688b505f593dbf3e896c7b8d91",
+      "state": "PASS",
+      "rationale": "Correct definition and invariant row space/rank. Row operations need not preserve the column space or determinant, as the answer explains.",
+      "evidence": [
+        {
+          "method": "invertible_row_operation_proof",
+          "finding": "Elementary row operations are multiplication on the left by invertible matrices. They preserve row span and rank; they can transform the column span and change determinant by a known factor."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Left multiplication by invertible E gives row(EA)=row(A) and rank(EA)=rank(A). A=[[1,0],[0,0]] and its row-swapped matrix have distinct column spans."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "'Generally different' means not invariant, not that every row operation changes those quantities. Full-rank square matrices all have the full ambient column space; operations other than type 3 can also leave a determinant unchanged."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L751"
+    },
+    {
+      "id": "repo-3e0d08fe9b3e53cb0efa399a",
+      "ordinal": 135,
+      "messages_sha256": "3e0d08fe9b3e53cb0efa399a71315be05a9f684236ccb03a8078626d3d582e73",
+      "state": "PASS",
+      "rationale": "Sound introductory distinction between presenting a witness and proving existence without exhibiting one.",
+      "evidence": [
+        {
+          "method": "direct_mathematical_review",
+          "finding": "A symbolic identity or implication derived from stated algebraic axioms proves all covered instances; a finite list of numerical tests does not establish an unrestricted universal statement."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Constructive mathematics has stricter technical meanings; not every proof by contradiction is automatically nonconstructive, and the answer says 'often'."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L754"
+    },
+    {
+      "id": "repo-0d3eb25ad4d8d39ab897329d",
+      "ordinal": 136,
+      "messages_sha256": "0d3eb25ad4d8d39ab897329d22546d7082589464cac1f5190cd269f723a7af6b",
+      "state": "PASS",
+      "rationale": "Correct overview of elimination and row reduction as tools for solving systems, inverses, determinants and rank.",
+      "evidence": [
+        {
+          "method": "invertible_row_operation_proof",
+          "finding": "Elementary row operations are multiplication on the left by invertible matrices. They preserve row span and rank; they can transform the column span and change determinant by a known factor."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L756"
+    },
+    {
+      "id": "repo-a14e8f11ce70da7039000275",
+      "ordinal": 137,
+      "messages_sha256": "a14e8f11ce70da703900027597f6a21135a78561d44f85ebaed7bf342f4b7eae",
+      "state": "PASS",
+      "rationale": "Correct illustration that an identity proved with commutative-ring axioms holds for every pair in every such ring.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Each algebraic identity and counterexample is checked from the full original prompt and answer."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "(a+b)^2=a^2+ab+ba+b^2=a^2+2ab+b^2. This also holds in characteristic 2, where 2ab=0."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L760"
+    },
+    {
+      "id": "repo-6bb95a57e23529afce9271f6",
+      "ordinal": 138,
+      "messages_sha256": "6bb95a57e23529afce9271f6c9617aab5e9ec56b67a80f45828e269641299cf3",
+      "state": "PASS",
+      "rationale": "Correct leading-degree limit proof for a real rational function with smaller numerator degree, with nonzero leading denominator coefficient.",
+      "evidence": [
+        {
+          "title": "OpenStax, Precalculus 2e: Rational Functions",
+          "url": "https://openstax.org/books/precalculus-2e/pages/3-7-rational-functions",
+          "finding": "The degree-difference-one and polynomial-division method is stated specifically for rational functions."
+        },
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Each algebraic identity and counterexample is checked from the full original prompt and answer."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "After dividing by x^n, every numerator power has negative exponent while the denominator tends to b_n!=0, hence the ratio tends to zero in both directions."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L761"
+    },
+    {
+      "id": "repo-15017f655660defa891216cd",
+      "ordinal": 139,
+      "messages_sha256": "15017f655660defa891216cdb7370d928f567bffb5826aa367de0b800df791f1",
+      "state": "PASS",
+      "rationale": "Reasonable classical density-based topology-optimization approach: elasticity state solve, adjoint sensitivity and constrained design updates. The volume-multiplier bisection description matches common optimality-criteria implementations.",
+      "evidence": [
+        {
+          "title": "Andreassen et al., Efficient topology optimization using 88 lines of code",
+          "url": "https://www.topopt.mek.dtu.dk/-/media/subsites/topopt/apps/dokumenter-og-filer-til-apps/topopt88.pdf?hash=E80FAB2808804A29FFB181CA05D2EEFECAA86686&la=da",
+          "finding": "The density-based compliance example solves elasticity, computes sensitivities and uses an optimality-criteria multiplier update with bisection to enforce the prescribed volume. This is a specific classical formulation, not a universal projection algorithm."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A general objective and formulation determine the exact adjoint and update. MMA and OC are different methods; this conceptual overview does not certify every iterate as feasible or a global optimum."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L782"
+    },
+    {
+      "id": "repo-59142101daa43fd1af523121",
+      "ordinal": 140,
+      "messages_sha256": "59142101daa43fd1af523121d246fd94f2f25ccce3f8eaa2d2067d379f26bee1",
+      "state": "PASS",
+      "rationale": "Correct standard conceptual comparison of classical Uzawa with a full direct indefinite solve: a positive-definite primal subsolve and multiplier iteration versus direct treatment of the coupled saddle system. The robustness language describes a typical solver tradeoff rather than a guarantee of curing rank deficiency.",
+      "evidence": [
+        {
+          "title": "Ito, Xiang and Zou, An Inexact Uzawa Algorithm for Generalized Saddle-Point Problems",
+          "url": "https://arxiv.org/abs/1408.5547",
+          "finding": "Uzawa-type algorithms and robustness depend on block assumptions, parameters and preconditioning; variants cover symmetric and nonsymmetric saddle-point systems."
+        },
+        {
+          "title": "Nataf and Tournier, A GenEO Domain Decomposition method for Saddle Point problems",
+          "url": "https://comptes-rendus.academie-sciences.fr/mecanique/item/10.5802/crmeca.175.pdf",
+          "finding": "Section 1 describes direct solvers for suitably sized saddle-point problems as robust with predictable efficiency, with memory requirements limiting large problems. Iterative and preconditioned alternatives address that scaling."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For A positive definite and full-row-rank B, eliminating the primal variable gives the multiplier Schur complement B*A^-1*B^T. Uzawa acts iteratively on that multiplier equation, while a full indefinite factorization solves the coupled block system."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This comparison assumes a nonsingular well-posed saddle problem and the standard SPD-primal-block Uzawa setting. Direct-solver memory, conditioning and pivoting still matter; generalized Uzawa variants have other assumptions."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L784"
+    },
+    {
+      "id": "repo-7cf90191b8ccd8876867e95e",
+      "ordinal": 141,
+      "messages_sha256": "7cf90191b8ccd8876867e95e96682356d55b46c7c334a5965e26fb63db8cd8be",
+      "state": "PASS",
+      "rationale": "Correct full parametric solution for dependent equations.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Each algebraic identity and counterexample is checked from the full original prompt and answer."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For y=t,x=(7-3t)/2, the first left side is 7 and the second is 14 for every real t."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L792"
+    },
+    {
+      "id": "repo-79561f4e3fbe8bb4f699341e",
+      "ordinal": 142,
+      "messages_sha256": "79561f4e3fbe8bb4f699341ed07b58ca2cac72b1974380d9dd65ecc2b6114ee7",
+      "state": "PASS",
+      "rationale": "Correctly recognizes the incomplete input and asks for the missing task rather than inventing an equation or result.",
+      "evidence": [
+        {
+          "method": "independent_linear_combination_check",
+          "finding": "If the complete equation a_k x=b_k is a linear combination of remaining equations with the same coefficients on both sides, every solution of the remaining equations satisfies it. Deleting it preserves the solution set."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L805"
+    },
+    {
+      "id": "repo-5ae82a789e60fb888474cab3",
+      "ordinal": 143,
+      "messages_sha256": "5ae82a789e60fb888474cab322df839b35df3e0c3e1132940d80fa1e0370f919",
+      "state": "PASS",
+      "rationale": "Accurate description of induction over natural-number-indexed statements using a base case and successor step.",
+      "evidence": [
+        {
+          "method": "independent_induction_principle_check",
+          "finding": "A valid base case at n0 and an implication P(k)=>P(k+1) for all integers k>=n0 establish P(n) for every integer n>=n0."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L806"
+    },
+    {
+      "id": "repo-2d33dec0cbc710864fb91653",
+      "ordinal": 144,
+      "messages_sha256": "2d33dec0cbc710864fb916537eb08bc935ce017d3bc4faae392770dfb58e4280",
+      "state": "PASS",
+      "rationale": "Correct classical proof-by-contradiction description and a standard valid example.",
+      "evidence": [
+        {
+          "method": "direct_mathematical_review",
+          "finding": "A symbolic identity or implication derived from stated algebraic axioms proves all covered instances; a finite list of numerical tests does not establish an unrestricted universal statement."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The example is named rather than fully proved, as the prompt asks how the method works."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L808"
+    },
+    {
+      "id": "repo-c6e8a2e996a57d027de1fb45",
+      "ordinal": 145,
+      "messages_sha256": "c6e8a2e996a57d027de1fb4583f2c291a0e4c6792a5f688549447e0b7c7cdb11",
+      "state": "PASS",
+      "rationale": "Correct polynomial long division and final slant asymptote.",
+      "evidence": [
+        {
+          "title": "OpenStax, Precalculus 2e: Rational Functions",
+          "url": "https://openstax.org/books/precalculus-2e/pages/3-7-rational-functions",
+          "finding": "The degree-difference-one and polynomial-division method is stated specifically for rational functions."
+        },
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Each algebraic identity and counterexample is checked from the full original prompt and answer."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "(x+2)(2x-1)+3=2x^2+3x+1. The remainder term 3/(x+2) tends to zero as |x| grows."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L814"
+    },
+    {
+      "id": "repo-36c2f84aa91d606ff8ec2a34",
+      "ordinal": 146,
+      "messages_sha256": "36c2f84aa91d606ff8ec2a34f194552cad05ecc886af2add556ae01e774292fc",
+      "state": "PASS",
+      "rationale": "Valid distributive proof in a unital ring that (-1)a is the additive inverse of a.",
+      "evidence": [
+        {
+          "method": "independent_axiom_and_subgroup_check",
+          "finding": "Group claims are checked directly against closure, inherited associativity, identity and inverses. No numerical example substitutes for the general proof."
+        },
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Each algebraic identity and counterexample is checked from the full original prompt and answer."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "a+(-1)a=(1+(-1))a=0a=0; uniqueness of additive inverses gives (-1)a=-a."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The symbol 1 in the prompt presupposes a multiplicative identity."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L822"
+    },
+    {
+      "id": "repo-e0eb7bdaa4d024244cc46e24",
+      "ordinal": 147,
+      "messages_sha256": "e0eb7bdaa4d024244cc46e247b397dc1f4a37faa89764205e93911d02c8a1270",
+      "state": "REJECT",
+      "rationale": "Writing a coupled residual as F(x)=0 does not discard its sparsity, blocks, constraints or physics. Those remain in F, its Jacobian and solver metadata; calling this notation computationally useless is false.",
+      "evidence": [
+        {
+          "title": "PETSc SNES nonlinear solvers",
+          "url": "https://petsc.org/release/manual/snes/",
+          "finding": "The abstract residual form F(x)=0 coexists with explicit or matrix-free Jacobians, separate preconditioners and application-specific data structures; it does not erase exploitable system structure."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "F(x) can be explicitly block-partitioned as (F1(x1,x2),F2(x1,x2)) with a sparse block Jacobian. The same F=0 notation supports block preconditioning and matrix-free Newton-Krylov."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L828"
+    },
+    {
+      "id": "repo-fab83556905b48d6b948ebb1",
+      "ordinal": 148,
+      "messages_sha256": "fab83556905b48d6b948ebb1033545c2abf1bd806fcecf413c4de030f46561a3",
+      "state": "PASS",
+      "rationale": "Correct breakdown of induction into base case, arbitrary inductive hypothesis and successor implication.",
+      "evidence": [
+        {
+          "method": "independent_induction_principle_check",
+          "finding": "A valid base case at n0 and an implication P(k)=>P(k+1) for all integers k>=n0 establish P(n) for every integer n>=n0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The conclusion covers all indices at or above the chosen base; whether natural numbers begin at 0 or 1 determines the appropriate smallest base."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L832"
+    },
+    {
+      "id": "repo-b2116cfe6035e180c1bf0862",
+      "ordinal": 149,
+      "messages_sha256": "b2116cfe6035e180c1bf08625bf3e736cb14c86b6a5009249f62b4d0a8bb6d79",
+      "state": "QUARANTINE",
+      "rationale": "The architecture and larger-system tradeoff are correct, but a monolithic formulation does not prevent all convergence issues associated with strong coupling. Nonlinear conditioning, singularities, initialization and solver choices can still cause failure.",
+      "evidence": [
+        {
+          "title": "Tojaga et al., Hybrid of monolithic and staggered solution techniques",
+          "url": "https://arxiv.org/abs/2203.15924",
+          "finding": "This coupled fracture model has reduced monolithic robustness from non-positive-definite tangent stiffness; alternating solution avoids that difficulty but has suboptimal convergence, motivating a hybrid. The comparison is problem-dependent."
+        },
+        {
+          "title": "PETSc SNES nonlinear solvers",
+          "url": "https://petsc.org/release/manual/snes/",
+          "finding": "The abstract residual form F(x)=0 coexists with explicit or matrix-free Jacobians, separate preconditioners and application-specific data structures; it does not erase exploitable system structure."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "It avoids a particular outer subsystem fixed-point iteration; that is narrower than guaranteeing convergence of the monolithic nonlinear solve."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L833"
+    }
+  ]
+}
