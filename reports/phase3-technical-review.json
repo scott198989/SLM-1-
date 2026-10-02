@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1234,
-    "REJECT": 61,
-    "QUARANTINE": 263,
-    "NEEDS_HUMAN_REVIEW": 554
+    "PASS": 1255,
+    "REJECT": 63,
+    "QUARANTINE": 265,
+    "NEEDS_HUMAN_REVIEW": 529
   },
   "by_domain": {
     "circuits": {
@@ -50,10 +50,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "electromagnetism": {
-      "PASS": 75,
-      "REJECT": 4,
-      "QUARANTINE": 21,
-      "NEEDS_HUMAN_REVIEW": 66
+      "PASS": 96,
+      "REJECT": 6,
+      "QUARANTINE": 23,
+      "NEEDS_HUMAN_REVIEW": 41
     },
     "materials_manufacturing": {
       "PASS": 3,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1557,
+  "agent_substantive_reviews": 1582,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "cf55e4c173ae64695750e1f79df92c78668c8e078c0aa13dd2ee94d3201a34f3",
+  "technical_review_sha256": "5c3e6d44b6e2571af4836fb3296df87be9cb440136fda7b8f56c5a2bf9e93b01",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 552,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 527,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1638,11 +1638,36 @@
     "Correct source-free vacuum plane-wave transversality derivation.": 1,
     "Correct energy-accounting explanation of a current-driven motor despite the magnetic Lorentz force doing no work on an individual point charge.": 1,
     "The two potential definitions correctly enforce the homogeneous Maxwell equations, but the final fully determined potentials claim omits gauge freedom and necessary conditions.": 1,
-    "Correct ordinary potential-field relations, divergence identity and gauge invariance.": 1
+    "Correct ordinary potential-field relations, divergence identity and gauge invariance.": 1,
+    "Correct retarded-source time and finite light-travel delay in the Lorenz-gauge retarded solution.": 1,
+    "Correct Coulomb-force magnitude/signed radial coefficient, constants and charge/separation identification.": 1,
+    "The qualitative need for impedance weighting is right, but the quoted standard amplitude weightings are reversed. String displacement-wave power scales with impedance, while acoustic pressure-wave intensity scales inversely with impedance.": 1,
+    "Correct concise device-level description of two-way electromechanical coupling.": 1,
+    "Acceptable conceptual warning that a moving charged interface changes the naive normal-current continuity condition through surface-charge transport and changing geometry.": 1,
+    "The displayed real-part Kramers-Kronig relation has the correct sign under the usual Fourier convention, but analyticity alone does not justify dropping the large semicircle or using an unsubtracted relation. The requested derivation omits its necessary high-frequency condition.": 1,
+    "Correct symmetric field cancellation and positive scalar-potential addition at the midpoint.": 1,
+    "The standard phase-shift/count connection is correct in the ordinary noncritical short-range scattering case, but the unconditional displayed count omits threshold half-bound-state corrections and its operator/potential scope.": 1,
+    "Correct vacuum field-energy and Poynting-vector expressions, with an ordinary traveling-wave transport interpretation.": 1,
+    "Sound conditional horn/dish/patch comparison with relevant bandwidth, polarization, size and environment caveats.": 1,
+    "Correct pillbox and small-loop derivation of electromagnetic interface conditions.": 1,
+    "Correct small-parameter perturbation-theory overview.": 1,
+    "Correct vacuum electrostatic energy density and point-charge self-energy divergence.": 1,
+    "Correct reason that the magnetic divergence equation alone does not determine a magnetostatic field.": 1,
+    "Correct conceptual transformer sequence from primary current to shared changing flux, secondary emf and load power.": 1,
+    "Correct self-consistent dispersive-material/Maxwell modeling explanation with standard frequency-domain and auxiliary-polarization time-domain approaches.": 1,
+    "Electric repulsion does overwhelmingly dominate proton gravity, but both quoted force magnitudes at1 pm are numerically wrong by many orders of magnitude.": 1,
+    "Correct linear point-source Green-response and superposition intuition.": 1,
+    "Correct compatibility of steady interfacial charge with continuous normal conduction current.": 1,
+    "Correct introductory low-field conduction-current contrast between a metal and a good insulator.": 1,
+    "Correct principal-value/standing-wave interpretation in the standard real lossless scattering setting.": 1,
+    "Correct Faraday-induction and electric-work distinction for a time-varying magnetic field.": 1,
+    "Correct far-axis electric-dipole field and cancellation explanation with an explicit r much greater than separation assumption.": 1,
+    "Correct ordinary electrostatic Coulomb-force conservativeness argument.": 1,
+    "Correct qualified explanation of bending-induced antenna reactance and resonance shifts.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "96b4a2560a3bc13e0c8684763faf2f26d92e060711c217191d4cb6d843d0e4ec",
-  "substantively_unreviewed": 552,
+  "published_decisions_sha256": "2632c27d5792b9fa8c6468afb9e295c7ac056847788a67cb250130ad5495b5c9",
+  "substantively_unreviewed": 527,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
