@@ -36589,9 +36589,864 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/engineering_mathematics-0000-0025.json",
       "original_domain_ordinal": 24
+    },
+    {
+      "id": "repo-06b074c90d26f160001cd95f",
+      "messages_sha256": "06b074c90d26f160001cd95fb67fb39d34cc51851f0375fc680e1e21581a4cd1",
+      "state": "PASS",
+      "rationale": "Correct qualified connection between PDE type and appropriate initial/boundary information.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual algebraic, differential, inverse-transform, stability and geometric claims are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Laplace Dirichlet data specify the spatial boundary; a heat IVP adds initial data; advection needs inflow data along entering characteristics."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Order, geometry, boundary compatibility and the particular system determine the actual number/type of conditions; often/usually/may appropriately avoid a universal count."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 101,
+      "assistant_tokens": 76,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 25
+    },
+    {
+      "id": "repo-e99f5b4a2b0fd04448e106dd",
+      "messages_sha256": "e99f5b4a2b0fd04448e106dd0d0dc3f879ac97cb690435ac8035ab7110515e8c",
+      "state": "PASS",
+      "rationale": "Correct explanation that boundary data specify a physical/mathematical problem beyond the differential equation alone.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual algebraic, differential, inverse-transform, stability and geometric claims are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "y_second=0 has family Ax+B; prescribing y(0) and y(1) fixes the affine solution, while incompatible overdetermined data can remove existence."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Boundary conditions can determine well-posedness but do not automatically guarantee existence or uniqueness; the source says can."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 149,
+      "assistant_tokens": 123,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 26
+    },
+    {
+      "id": "repo-4fd31cb0dd9b5af993552c8b",
+      "messages_sha256": "4fd31cb0dd9b5af993552c8ba7776e760ad1b41f7a59ba0d4b7dafa372205707",
+      "state": "PASS",
+      "rationale": "Acceptable brief Fourier-convergence explanation under its explicit well-behaved-function qualification.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT ES.1803 Fourier-series notes",
+          "url": "https://ocw.mit.edu/courses/es-1803-differential-equations-spring-2024/mites_1803_s24_topic_full.pdf",
+          "finding": "Explains Fourier convergence for regular periodic data, midpoint limits at jumps and persistent local Gibbs overshoot."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Convergence is not necessarily monotone improvement at every point, and ordinary sums approach jump midpoints with Gibbs overshoot nearby. The almost-everywhere qualification does not assert equality at each discontinuity."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 57,
+      "assistant_tokens": 41,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 27
+    },
+    {
+      "id": "repo-093e26690b16c1f8bf8298e7",
+      "messages_sha256": "093e26690b16c1f8bf8298e76a84d1b724728b2fc1ca5988925051a2de577c0d",
+      "state": "PASS",
+      "rationale": "Correct partial-pivoting motivation and exact-row-equivalence interpretation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual algebraic, differential, inverse-transform, stability and geometric claims are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Swapping rows replaces Ax=b by PAx=Pb for invertible permutation P, preserving the exact solution set while changing pivot choices."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Complete pivoting can also permute columns; pivoting mitigates growth but cannot cure every ill-conditioned or rank-deficient system or guarantee uniformly large pivots."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 76,
+      "assistant_tokens": 60,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 28
+    },
+    {
+      "id": "repo-d2c25f14d7fe6dab702cfc63",
+      "messages_sha256": "d2c25f14d7fe6dab702cfc63e3812efb1b219e38931786fdb3e7bd3c37e97c5a",
+      "state": "PASS",
+      "rationale": "Correct short Jaumann-rate explanation and suitably qualified simple-shear caveat.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Z. Fiala, Engineering Mechanics2009, objective stress-rate discussion",
+          "url": "https://www.engmech.cz/improc/2009/Fiala-211-PT.pdf",
+          "finding": "Discusses the Jaumann spin correction, frame objectivity and documented oscillatory simple-shear response for particular rate-type constitutive laws."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A common form is sigma_J=sigma_dot+sigma*W-W*sigma, removing rigid-spin change from the ordinary derivative."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Oscillations depend on the constitutive law and loading; objectivity alone does not establish universal accuracy."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 62,
+      "assistant_tokens": 45,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 29
+    },
+    {
+      "id": "repo-45d869a73ae2d7cf7e099d04",
+      "messages_sha256": "45d869a73ae2d7cf7e099d0499be1818d5590a372a6d95d05cf8b71255b281f4",
+      "state": "PASS",
+      "rationale": "Correct single-right-hand-side coefficient versus augmented matrix distinction.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual algebraic, differential, inverse-transform, stability and geometric claims are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For Ax=b, the augmented matrix is[A|b] and the coefficient matrix isA."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Multiple right-hand sides can add several columns; the ordinary equation system in the question uses one right-hand-side vector."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 76,
+      "assistant_tokens": 57,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 30
+    },
+    {
+      "id": "repo-ef4e03492048cc2d7a0b31e2",
+      "messages_sha256": "ef4e03492048cc2d7a0b31e28755ba60032b191da6bee86e165cf71446d9a15f",
+      "state": "PASS",
+      "rationale": "Correct multiplier equations, solution and global constrained maximum.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Boyd and Vandenberghe, Convex Optimization, chapters5 and10",
+          "url": "https://www.seas.ucla.edu/~vandenbe/cvxbook/bv_cvxbook.pdf",
+          "finding": "Equality multipliers, inequality dual signs and complementary slackness distinguish active constraints from strictly slack ones. Active multipliers need not be strictly positive."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual algebraic, differential, inverse-transform, stability and geometric claims are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "On x+y=10, xy=x*(10-x)=25-(x-5)²<=25 for all real x, with equality only x=y=5."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 175,
+      "assistant_tokens": 155,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 31
+    },
+    {
+      "id": "repo-e793d6dc1d9f99f867a95094",
+      "messages_sha256": "e793d6dc1d9f99f867a95094f6a464cbb1985206596565447edd465edba896f7",
+      "state": "PASS",
+      "rationale": "Correct equality/inequality distinction and need for dual signs and complementary slackness.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Boyd and Vandenberghe, Convex Optimization, chapters5 and10",
+          "url": "https://www.seas.ucla.edu/~vandenbe/cvxbook/bv_cvxbook.pdf",
+          "finding": "Equality multipliers, inequality dual signs and complementary slackness distinguish active constraints from strictly slack ones. Active multipliers need not be strictly positive."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For g_i(x)<=0, KKT includes lambda_i>=0 andlambda_i*g_i(x)=0; strictly slack constraints have lambda_i=0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Constraint qualifications or convex sufficiency conditions are separate. An active inequality can still have a zero multiplier; bite describes tightness, not mandatory positive sensitivity."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 141,
+      "assistant_tokens": 120,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 32
+    },
+    {
+      "id": "repo-d4d4e26b19907fc59ae4b14d",
+      "messages_sha256": "d4d4e26b19907fc59ae4b14d6896ceb78837d301e3400d6f52123132ae871e9e",
+      "state": "QUARANTINE",
+      "rationale": "The Euler formula is correct, but the next sentence explicitly misidentifies exp(a) as the real part. It is the modulus; the real component is exp(a)*cos(b).",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual algebraic, differential, inverse-transform, stability and geometric claims are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At a=0,b=pi/2, exp(a+i*b)=i has real component0, while exp(a)=1."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for the magnitude-versus-real-component statement; do not rewrite the source or reject its correct Euler identity."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 76,
+      "assistant_tokens": 53,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 33
+    },
+    {
+      "id": "repo-8ef9428e438118693ffa1f83",
+      "messages_sha256": "8ef9428e438118693ffa1f83afd6a86e688a4d9698b1048a3ba2b059887a0186",
+      "state": "PASS",
+      "rationale": "Correct concise purpose of a Lyapunov function: proving stability through behavior along trajectories without an explicit solution.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual algebraic, differential, inverse-transform, stability and geometric claims are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For x_prime=-x, V=x²/2 is positive definite and V_dot=-x²<0 away from0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Decrease alone is insufficient; appropriate positivity, neighborhood/coercivity and derivative conditions are needed for a particular stability theorem. The prompt asks the purpose rather than a full theorem."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 48,
+      "assistant_tokens": 28,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 34
+    },
+    {
+      "id": "repo-f0e19c71f188413c4e82f5f2",
+      "messages_sha256": "f0e19c71f188413c4e82f5f227e4a41733ca7b9abf9d6dc36950b50764ae97dc",
+      "state": "PASS",
+      "rationale": "Sound qualitative contrast between analytically informed computation and unexamined simulation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual algebraic, differential, inverse-transform, stability and geometric claims are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A conserved quantity or asymptotic solution can serve as an independent diagnostic for a numerical trajectory."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Pure analysis does not literally stop applying to every nonlinear/high-dimensional model; often breaks describes practical limits of closed-form or tractable proofs, not a mathematical impossibility theorem."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 159,
+      "assistant_tokens": 137,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 35
+    },
+    {
+      "id": "repo-c802e23dece43b6ce6c9310d",
+      "messages_sha256": "c802e23dece43b6ce6c9310da798bc2ea66bb775662ce81c3a8eb6fef2ca4d9b",
+      "state": "PASS",
+      "rationale": "Correct qualitative pole/transient explanation in the standard causal linear-system setting.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual algebraic, differential, inverse-transform, stability and geometric claims are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Inverse Laplace of1/(s+3) is exp(-3t); complex-conjugate poles generate exponential-weighted real sinusoids."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Pole cancellations, multiplicities, input/initial conditions and the region of convergence matter; the source appropriately says in many problems and suggests."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 97,
+      "assistant_tokens": 79,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 36
+    },
+    {
+      "id": "repo-648abb2dd6897b03d2316724",
+      "messages_sha256": "648abb2dd6897b03d2316724c2a2daa410822d885baa77cfe2003f4be89044d9",
+      "state": "PASS",
+      "rationale": "Correct broad examples of residue/contour methods applied to physics and transforms.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NIST DLMF1.9, Calculus of a Complex Variable",
+          "url": "https://dlmf.nist.gov/1.9",
+          "finding": "Cauchy integral formulas and removable singularity results require their holomorphy/contour hypotheses; orientation and winding affect the contour factor."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The residue theorem replaces a valid contour integral by2pi*i times the enclosed residues; real/transform integrals need an appropriate closing-contour argument."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is an applications overview, not a promise that every dispersion or field-theory calculation reduces to a simple residue sum."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 69,
+      "assistant_tokens": 53,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 37
+    },
+    {
+      "id": "repo-d4e34c4eab3827a34135f16e",
+      "messages_sha256": "d4e34c4eab3827a34135f16e175ec9f79ae1f1ff25ebfd5043b6d03984b19164",
+      "state": "PASS",
+      "rationale": "Exact solution-difference/null-space explanation of a consistent linear system.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual algebraic, differential, inverse-transform, stability and geometric claims are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If Ax1=Ax2=b, then A(x1-x2)=0. Conversely A(xp+z)=b for every z inkerA, so the solution set is xp+kerA."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 149,
+      "assistant_tokens": 127,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 38
+    },
+    {
+      "id": "repo-1ac147c6a90c7adaaf0c3254",
+      "messages_sha256": "1ac147c6a90c7adaaf0c3254a3ec327196268888c1183caf28241bb6d75de436",
+      "state": "PASS",
+      "rationale": "Correct decomposition of the Laplace-transform IVP workflow, including initial-data terms and final inversion.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual algebraic, differential, inverse-transform, stability and geometric claims are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "L{y_prime}=sY-y(0), so the derivative and initial condition enter the transformed algebra together."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Transform existence and any needed uniqueness/region-of-convergence conditions remain required."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 163,
+      "assistant_tokens": 134,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 39
+    },
+    {
+      "id": "repo-cd1228da26a8886ac0772484",
+      "messages_sha256": "cd1228da26a8886ac07724841a86c804db4f9369dfcfef0dad31ce794ac4cf72",
+      "state": "PASS",
+      "rationale": "Correct pole and time-response deductions for the stated strictly proper rational expression.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual algebraic, differential, inverse-transform, stability and geometric claims are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "5/((s+2)(s+4))=(5/2)*(1/(s+2)-1/(s+4)), hence y(t)=(5/2)*(exp(-2t)-exp(-4t)) for the causal inverse."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Nonoscillatory does not mean monotone: this response initially rises then decays. Smooth refers to the positive-time response, not an arbitrary extension through switching at t=0."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 196,
+      "assistant_tokens": 152,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 40
+    },
+    {
+      "id": "repo-d1af114a1d94db7b9866ce40",
+      "messages_sha256": "d1af114a1d94db7b9866ce40495beab17215a9b033df5df5262686fa2fb4f211",
+      "state": "QUARANTINE",
+      "rationale": "The boundary-value principle is correct, but the displayed normalized Cauchy formula needs positive unit winding around the point. The standalone answer does not specify that contour condition.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT18.04, Topic4, Cauchy Integral Formula",
+          "url": "https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-spring-2018/b1a90df19f643b974555bbbb93138a48_MIT18_04S18_topic4.pdf",
+          "finding": "Gives the value formula for an analytic function on/inside an admissible positively oriented enclosing contour."
+        },
+        {
+          "title": "NIST DLMF1.9, Calculus of a Complex Variable",
+          "url": "https://dlmf.nist.gov/1.9",
+          "finding": "Cauchy integral formulas and removable singularity results require their holomorphy/contour hypotheses; orientation and winding affect the contour factor."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For f(z)=1 and a=0, a clockwise unit-circle integral of dz/z is-2pi*i; the stated1/(2pi*i) prefactor then gives-1 rather than f(0)=1."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold for the missing orientation/winding condition, with holomorphy on the relevant region still required; Cauchy integral formula itself is valid."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 105,
+      "assistant_tokens": 77,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 41
+    },
+    {
+      "id": "repo-c745078dbec7da0d88d2dbde",
+      "messages_sha256": "c745078dbec7da0d88d2dbde76a9574b3e93ea55d9c8799bd738b1a4f0434d51",
+      "state": "PASS",
+      "rationale": "Correct removable-singularity definition and entire extension of sin(z)/z.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NIST DLMF1.9, Calculus of a Complex Variable",
+          "url": "https://dlmf.nist.gov/1.9",
+          "finding": "Cauchy integral formulas and removable singularity results require their holomorphy/contour hypotheses; orientation and winding affect the contour factor."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "sin z/z=1-z²/3!+z⁴/5!-... extends holomorphically with value1 at0."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 105,
+      "assistant_tokens": 82,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 42
+    },
+    {
+      "id": "repo-ff78c37e44358f756bf797db",
+      "messages_sha256": "ff78c37e44358f756bf797db666aa4f211c427044bc43eabc3263ea8c7999525",
+      "state": "PASS",
+      "rationale": "Correct qualitative RC step-response Laplace story, including the initial capacitor voltage.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual algebraic, differential, inverse-transform, stability and geometric claims are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For RC*v_prime+v=V0*u(t), (RC*s+1)V(s)=V0/s+RC*v(0), giving an exponential approach toV0 for positiveR,C."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is the ordinary linear ideal RC model, not a claim that all circuits have a single exponential response."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 152,
+      "assistant_tokens": 130,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 43
+    },
+    {
+      "id": "repo-92f83c649a2bb791769dcf1f",
+      "messages_sha256": "92f83c649a2bb791769dcf1f304eb8e4f992d561084bc5078aad7a770bd96300",
+      "state": "PASS",
+      "rationale": "Correct simple harmonic-frequency definition and higher-harmonic examples.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual algebraic, differential, inverse-transform, stability and geometric claims are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For fundamental100Hz, integer orders2 and3 are200 and300Hz."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The fundamental itself is the first harmonic; the listed examples are higher harmonics, not a claim excluding order1."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 60,
+      "assistant_tokens": 44,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 44
+    },
+    {
+      "id": "repo-0d75e607a73147c0cde90095",
+      "messages_sha256": "0d75e607a73147c0cde90095d5b44fbe75c6d85fe6dda87c6e85699578160c48",
+      "state": "QUARANTINE",
+      "rationale": "The slack-constraint part is sound, but active means tight rather than necessarily outcome-determining. An active constraint can be redundant and its relaxation can leave the feasible set and optimum unchanged.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Boyd and Vandenberghe, Convex Optimization, chapters5 and10",
+          "url": "https://www.seas.ucla.edu/~vandenbe/cvxbook/bv_cvxbook.pdf",
+          "finding": "Equality multipliers, inequality dual signs and complementary slackness distinguish active constraints from strictly slack ones. Active multipliers need not be strictly positive."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With x<=1 and y<=1, the inequality x+y<=2 is redundant yet active at(1,1). Relaxing only that third inequality changes neither feasible directions nor a maximum of x+y at(1,1)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Could does not justify defining active as helping determine the optimum. Hold narrowly for tightness versus influence; an active KKT multiplier may be zero."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 79,
+      "assistant_tokens": 58,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 45
+    },
+    {
+      "id": "repo-b97acf7caa687483a29bebf0",
+      "messages_sha256": "b97acf7caa687483a29bebf01caf04f573525540879be58a570db74fedf0972e",
+      "state": "PASS",
+      "rationale": "Correct invariant-based classical two-parameter Mooney-Rivlin energy description.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "A. F. Bower, Applied Mechanics of Solids3.5, Hyperelastic Materials",
+          "url": "https://solidmechanics.org/Text/Chapter3_5/Chapter3_5.php",
+          "finding": "Describes invariant-based Mooney-Rivlin energy and its compressible modified-invariant/volumetric extension; the familiar two-parameter expression is the incompressible form."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "B=F F^T has I1=tr B andI2=((tr B)²-tr(B²))/2; W=C1(I1-3)+C2(I2-3) is the familiar incompressible two-parameter form."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Compressible variants use isochoric modified invariants plus a volumetric term. The answer is an introductory model description, not a complete law for every Mooney-Rivlin extension."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 87,
+      "assistant_tokens": 67,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 46
+    },
+    {
+      "id": "repo-86387a33f5b59f11a439ac60",
+      "messages_sha256": "86387a33f5b59f11a439ac608a7df36b1d996eddd748b35b38da7c7c15253f76",
+      "state": "PASS",
+      "rationale": "Correct reason engineers value ergodicity, explicitly limited to the statistic of interest.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT6.011 Signals, Systems and Inference notes",
+          "url": "https://ocw.mit.edu/courses/6-011-introduction-to-communication-control-and-signal-processing-spring-2010/a6bddaee5966f6e73450e6fe79ab0566_MIT6_011S10_notes.pdf",
+          "finding": "Ergodicity for the statistic of interest is what permits suitable time averages to represent ensemble averages, beyond stationarity alone."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Finite-record convergence and estimation error remain practical issues; stationarity alone does not supply ergodicity."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 79,
+      "assistant_tokens": 61,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 47
+    },
+    {
+      "id": "repo-783976fd1180d56f73f5bbea",
+      "messages_sha256": "783976fd1180d56f73f5bbea36505a9c2120dc80ec3039b795b29d62c97888f9",
+      "state": "PASS",
+      "rationale": "Correct conceptual connection between constrained mechanical forces, optimization dual variables and economic shadow-price interpretations.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Boyd and Vandenberghe, Convex Optimization, chapters5 and10",
+          "url": "https://www.seas.ucla.edu/~vandenbe/cvxbook/bv_cvxbook.pdf",
+          "finding": "Equality multipliers, inequality dual signs and complementary slackness distinguish active constraints from strictly slack ones. Active multipliers need not be strictly positive."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A Lagrange multiplier enters stationarity through the constraint gradient; under appropriate sensitivity conditions it differentiates the optimal value with respect to a constraint bound."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Multiplier signs, scaling and physical units depend on the formulation; the source explicitly avoids identifying every interpretation as the same physical object."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 145,
+      "assistant_tokens": 121,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 48
+    },
+    {
+      "id": "repo-10315f8c0baa5fdb44db62a3",
+      "messages_sha256": "10315f8c0baa5fdb44db62a3f9e265f6c59a4cc7af158d01c32ed8834c1ba0b1",
+      "state": "PASS",
+      "rationale": "Valid qualitative weakly damped nonlinear-oscillator example of combining analytical approximations and numerical trajectories.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual algebraic, differential, inverse-transform, stability and geometric claims are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a weakly nonlinear Duffing-type oscillator, perturbative frequency/amplitude approximations can be compared with numerical integration of the full forced equation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The source does not specify a numerical oscillator or claim a universal accuracy improvement; this is an illustrative methods contrast, not a solved quantitative example."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 85,
+      "assistant_tokens": 68,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
+      "original_domain_ordinal": 49
     }
   ],
-  "reviewed": 1286,
+  "reviewed": 1311,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

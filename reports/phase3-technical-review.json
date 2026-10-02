@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1005,
+    "PASS": 1027,
     "REJECT": 56,
-    "QUARANTINE": 226,
-    "NEEDS_HUMAN_REVIEW": 825
+    "QUARANTINE": 229,
+    "NEEDS_HUMAN_REVIEW": 800
   },
   "by_domain": {
     "circuits": {
@@ -14,10 +14,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "engineering_mathematics": {
-      "PASS": 23,
+      "PASS": 45,
       "REJECT": 0,
-      "QUARANTINE": 2,
-      "NEEDS_HUMAN_REVIEW": 175
+      "QUARANTINE": 5,
+      "NEEDS_HUMAN_REVIEW": 150
     },
     "algebra": {
       "PASS": 176,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1286,
+  "agent_substantive_reviews": 1311,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "f042e0a24d65c1f625fd1e111de585a44970a87e405d6c26a514f01909e72fe7",
+  "technical_review_sha256": "a960d66b2a6782153bcddb9a8159a956bef4ae6bae52aefb6a4346f99a6e8600",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 823,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 798,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1367,11 +1367,36 @@
     "Correct classical Cauchy-continuum stress symmetry from angular-momentum balance when couple effects are absent.": 1,
     "Correct existence claim that contour integration and residues can evaluate many real integrals.": 1,
     "Correct practical guidance about common first-order ODE interfaces, while explicitly acknowledging specialized second-order methods.": 1,
-    "Correct objective-rate motivation and examples, with appropriate emphasis on constitutive consequences.": 1
+    "Correct objective-rate motivation and examples, with appropriate emphasis on constitutive consequences.": 1,
+    "Correct qualified connection between PDE type and appropriate initial/boundary information.": 1,
+    "Correct partial-pivoting motivation and exact-row-equivalence interpretation.": 1,
+    "The slack-constraint part is sound, but active means tight rather than necessarily outcome-determining. An active constraint can be redundant and its relaxation can leave the feasible set and optimum unchanged.": 1,
+    "Valid qualitative weakly damped nonlinear-oscillator example of combining analytical approximations and numerical trajectories.": 1,
+    "Correct decomposition of the Laplace-transform IVP workflow, including initial-data terms and final inversion.": 1,
+    "Correct single-right-hand-side coefficient versus augmented matrix distinction.": 1,
+    "Acceptable brief Fourier-convergence explanation under its explicit well-behaved-function qualification.": 1,
+    "Correct broad examples of residue/contour methods applied to physics and transforms.": 1,
+    "Correct conceptual connection between constrained mechanical forces, optimization dual variables and economic shadow-price interpretations.": 1,
+    "Correct reason engineers value ergodicity, explicitly limited to the statistic of interest.": 1,
+    "Correct concise purpose of a Lyapunov function: proving stability through behavior along trajectories without an explicit solution.": 1,
+    "Correct simple harmonic-frequency definition and higher-harmonic examples.": 1,
+    "Correct invariant-based classical two-parameter Mooney-Rivlin energy description.": 1,
+    "Correct removable-singularity definition and entire extension of sin(z)/z.": 1,
+    "Correct qualitative pole/transient explanation in the standard causal linear-system setting.": 1,
+    "Correct pole and time-response deductions for the stated strictly proper rational expression.": 1,
+    "The boundary-value principle is correct, but the displayed normalized Cauchy formula needs positive unit winding around the point. The standalone answer does not specify that contour condition.": 1,
+    "Correct short Jaumann-rate explanation and suitably qualified simple-shear caveat.": 1,
+    "The Euler formula is correct, but the next sentence explicitly misidentifies exp(a) as the real part. It is the modulus; the real component is exp(a)*cos(b).": 1,
+    "Exact solution-difference/null-space explanation of a consistent linear system.": 1,
+    "Correct equality/inequality distinction and need for dual signs and complementary slackness.": 1,
+    "Correct explanation that boundary data specify a physical/mathematical problem beyond the differential equation alone.": 1,
+    "Correct multiplier equations, solution and global constrained maximum.": 1,
+    "Sound qualitative contrast between analytically informed computation and unexamined simulation.": 1,
+    "Correct qualitative RC step-response Laplace story, including the initial capacitor voltage.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "b958354f7b4f2e117dad0347cc3ba6972f5d9d9e8f64b44553fdf10962f6f588",
-  "substantively_unreviewed": 823,
+  "published_decisions_sha256": "7347beb6a8fbde8afaa49e7434a04bfa2a29100c93e15270e304ee7d459a1162",
+  "substantively_unreviewed": 798,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
