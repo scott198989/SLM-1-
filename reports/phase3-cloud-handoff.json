@@ -8,10 +8,10 @@
   "review": {
     "curriculum": 2112,
     "dispositions": {
-      "PASS": 1698,
+      "PASS": 1703,
       "REJECT": 72,
-      "QUARANTINE": 340,
-      "NEEDS_HUMAN_REVIEW": 2
+      "QUARANTINE": 337,
+      "NEEDS_HUMAN_REVIEW": 0
     },
     "by_domain": {
       "circuits": {
@@ -27,21 +27,21 @@
         "NEEDS_HUMAN_REVIEW": 0
       },
       "algebra": {
-        "PASS": 176,
+        "PASS": 178,
         "REJECT": 8,
-        "QUARANTINE": 32,
+        "QUARANTINE": 30,
         "NEEDS_HUMAN_REVIEW": 0
       },
       "thermal_process_engineering": {
-        "PASS": 73,
+        "PASS": 75,
         "REJECT": 5,
         "QUARANTINE": 24,
-        "NEEDS_HUMAN_REVIEW": 2
+        "NEEDS_HUMAN_REVIEW": 0
       },
       "trigonometry": {
-        "PASS": 168,
+        "PASS": 169,
         "REJECT": 7,
-        "QUARANTINE": 25,
+        "QUARANTINE": 24,
         "NEEDS_HUMAN_REVIEW": 0
       },
       "calculus": {
@@ -75,23 +75,32 @@
         "NEEDS_HUMAN_REVIEW": 0
       }
     },
-    "agent_substantive_reviews": 2109,
+    "agent_substantive_reviews": 2112,
     "substantively_unreviewed": 0,
-    "reviewed_specialist_holds": 2,
+    "reviewed_specialist_holds": 0,
     "complete_source_domains": [
       "circuits",
+      "engineering_mathematics",
+      "algebra",
       "thermal_process_engineering",
-      "electrical_components"
+      "trigonometry",
+      "calculus",
+      "electrical_components",
+      "electromagnetism",
+      "materials_manufacturing",
+      "physics"
     ],
     "release_approved": 0,
-    "algebra_review_status": "203 previously pending records substantively reviewed; 11 prior reviews and 2 structural-only quarantines preserved",
-    "trigonometry_review_status": "189 previously pending records reviewed; 10 prior substantive reviews and original structural-only quarantine 24 preserved",
+    "algebra_review_status": "All 216 selected records have substantive technical dispositions, including separately reviewed original structural holds 170 and 211.",
+    "trigonometry_review_status": "All 200 selected records have substantive technical dispositions, including separately reviewed original structural hold 24.",
     "calculus_review_status": "208 previously pending records reviewed; 7 prior substantive reviews preserved; all215 selected calculus records have substantive dispositions",
     "engineering_mathematics_review_status": "194 previously pending records reviewed; 6 prior substantive reviews preserved; all200 selected engineering_mathematics records have substantive dispositions",
     "electromagnetism_review_status": "162 previously pending records reviewed; four prior substantive reviews preserved; all 166 selected records have substantive dispositions",
     "physics_review_status": "242 previously pending records reviewed; eight prior substantive reviews preserved; all 250 selected records have substantive dispositions",
     "materials_review_status": "244 previously pending records reviewed; six prior reviews preserved; all 250 materials records have substantive dispositions",
-    "ordinary_queue_status": "COMPLETE: zero substantively unreviewed records; two specialist and three structural holds remain"
+    "ordinary_queue_status": "COMPLETE: all 2112 selected records have substantive technical dispositions; zero residual specialist or structural-only holds. Existing 337 technical quarantines remain.",
+    "structural_only_quarantines": 0,
+    "review_all_substantive_completed": true
   },
   "public_input_files": [
     {
@@ -106,13 +115,13 @@
     },
     {
       "path": "data/review/phase3/technical-review.jsonl.gz",
-      "bytes": 632237,
-      "sha256": "ac717cb6a76905db1dca729599ae88f9bb9feff295307aa0367884d14dbdb2ca"
+      "bytes": 634129,
+      "sha256": "60a54d26a614609b6f6a95fed769c4ac9a8688fcb373a472c1274c9690695cf1"
     },
     {
       "path": "manifests/phase3-agent-technical-review.json",
-      "bytes": 3613441,
-      "sha256": "a5e1c910288e65a098b97260efd902cf72a7298517df73e5344ecf235083ee4f"
+      "bytes": 3623996,
+      "sha256": "17d8edd38dd63952c9000ecd30441addfa199d83dfa85fd904732f2b1ef0431c"
     },
     {
       "path": "manifests/phase3-release-families.json",
@@ -121,8 +130,8 @@
     },
     {
       "path": "reports/phase3-technical-review.json",
-      "bytes": 344607,
-      "sha256": "d2e970c7991b5f288e2406c083b712cca6ca4175af8cdd108f9953d3783e3882"
+      "bytes": 346262,
+      "sha256": "faa611c6c9addd7b574bf2edbf463d660573dc83d085bd6ffa2f0429bde95e5f"
     },
     {
       "path": "src/forge_tools/engineering.py",
@@ -230,24 +239,19 @@
   "automatic_checks": "DELETED_DO_NOT_RECREATE",
   "model_weights_downloaded": false,
   "training_authorized": false,
-  "cloud_missing_private_files_behavior": "Continue public repository technical review. Mark private-source qualification unavailable; never replace sealed artifacts or infer validation from metadata.",
+  "cloud_missing_private_files_behavior": "Report missing original private inputs; never reconstruct sealed artifacts or infer qualification from public metadata. Repository technical review is complete.",
   "latest_cloud_continuation": "reports/phase3-cloud-continuation-validation.json",
   "local_continuation": {
     "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
-    "local_predecessor_commit": "42b4de5e20ffdcdda159e8ba6e9ef9eac8fa1247",
+    "local_predecessor_commit": "7fab175a4f0ef997810ef768621855a3d16c51be",
     "publication_status": "LOCAL_ONLY; do not claim these counts are on GitHub",
-    "latest_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+    "latest_batch": "reports/phase3-review-batches/residual-five-20261002.json",
     "electrical_domain_complete": true,
     "trigonometry_pending_review_queue_complete": true,
-    "trigonometry_preserved_structural_ordinals": [
-      24
-    ],
+    "trigonometry_preserved_structural_ordinals": [],
     "trigonometry_checkpoint": "reports/phase3-trigonometry-domain-checkpoint.json",
     "algebra_pending_review_queue_complete": true,
-    "algebra_preserved_structural_ordinals": [
-      170,
-      211
-    ],
+    "algebra_preserved_structural_ordinals": [],
     "algebra_checkpoint": "reports/phase3-algebra-domain-checkpoint.json",
     "calculus_pending_review_queue_complete": true,
     "calculus_checkpoint": "reports/phase3-calculus-domain-checkpoint.json",
@@ -259,7 +263,9 @@
     "physics_checkpoint": "reports/phase3-physics-domain-checkpoint.json",
     "materials_pending_review_queue_complete": true,
     "all_ordinary_pending_review_queues_complete": true,
-    "ordinary_completion_checkpoint": "reports/phase3-ordinary-review-completion.json"
+    "ordinary_completion_checkpoint": "reports/phase3-ordinary-review-completion.json",
+    "technical_completion_checkpoint": "reports/phase3-technical-review-completion.json",
+    "all_selected_records_substantively_reviewed": true
   },
-  "next_action": "STOP: ordinary technical-review queue exhausted. Preserve all holds and request separately scoped direction for remaining gates; do not repeat old batches or start private qualification/training."
+  "next_action": "STOP: all selected repository records have substantive technical dispositions. Continue only separately scoped purpose-specific evidence or source-family/evaluation work; technical PASS does not authorize release or training."
 }

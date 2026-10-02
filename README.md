@@ -1,15 +1,15 @@
 # SLM-1-
 # FORGE — Training Data & Knowledge Repository
 
-Cloud continuation: read [HANDOFF_README.md](HANDOFF_README.md) first; use branch `codex/forge-data-consolidation` / draft PR3. The selected circuits, thermal and electrical source-domain reviews are complete as dispositions in the local checkpoint; no legacy SFT released.
+Cloud continuation: read [HANDOFF_README.md](HANDOFF_README.md) first; use branch `codex/forge-data-consolidation` / draft PR3. All ten selected source domains have complete agent technical dispositions in the local checkpoint; no legacy SFT released.
 
-Cloud continuation, October 2: all ordinary selected-curriculum technical review is complete locally: 2,109 substantive reviews, zero ordinary unreviewed records, two specialist holds and three preserved structural-only quarantines. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. [Completion and remaining gates](reports/phase3-ordinary-review-completion.json).
+Cloud continuation, October 2: all 2,112 selected records now have substantive agent technical dispositions. Separately scoped primary-source review resolved the five inherited residual holds. GitHub remains at the last verified published base 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. [Current completion and remaining gates](reports/phase3-technical-review-completion.json).
 
 ## Phase 3 pilot — current gate
 
 Private release: **16 calculator protocol SFT examples / 4,430 Qwen tokens / 2,793 assistant tokens**; **12 sealed statistics/DOE/SPC tasks**; **9 qualified private reference-RAG chunks** with 10/10 demonstration query hits in top 3; **69 software tests pass**. [Complete gate report](reports/FORGE_PHASE3_GATE_REPORT.md), [released pilot receipt](reports/phase3-pilot-release.json), [technical review](reports/phase3-technical-review.json), [family evidence](reports/phase3-family-analysis.json), [sealed composition](reports/phase3-sealed-gold.json), [RAG results](reports/phase3-rag-pilot.json).
 
-The 2,112 legacy review curriculum is **not fully technically validated**:1698 technical PASS,72 REJECT,340 QUARANTINE,2 NEEDS HUMAN REVIEW (0 unreviewed substantively; two specialist holds). No legacy or Drive SFT released. Whole-source owned pilot train/gold overlap 0; broader semantic independence remains unknown. The pilot is small JSON calculator integration data, not a broad engineering specialization set. No independent model-development examples, no stock Qwen scores, no GPU certification. **Training is not recommended or authorized; no weights or training.** Siemens follow-up is being handled by the user. Drive content and private evaluation remain outside Git; automatic checks remain canceled.
+The 2,112-record legacy review curriculum has **complete agent technical dispositions: 1,703 PASS, 72 REJECT, 337 QUARANTINE and zero NEEDS_HUMAN_REVIEW**. The rejected and quarantined records remain withheld. No legacy or Drive SFT released. Whole-source owned pilot train/gold overlap is zero; broader semantic independence remains unknown. The pilot is small JSON calculator integration data, not a broad engineering specialization set. Independent human review, model-development coverage, stock Qwen scores and GPU certification remain absent. **Training is not recommended or authorized; no weights or training.** Siemens follow-up is being handled by the user. Drive content and private evaluation remain outside Git; automatic checks remain canceled.
 
 ## Phase 2 snapshot — historical preparation status
 

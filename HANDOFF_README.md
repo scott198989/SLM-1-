@@ -8,7 +8,7 @@ Repository: **scott198989/SLM-1-**. Continue branch **`codex/forge-data-consolid
 
 The last published commit before this handoff was `600da559e4a14b825876321c5566b0a089a7cf0e`. This handoff is a descendant on the same branch. Record the actual checked-out commit with `git rev-parse HEAD`; verify the input SHA256 values in [the checkpoint manifest](reports/phase3-cloud-handoff.json). The repository branch and verified file hashes are the resume point, not a recollection of this chat.
 
-Cloud continuation completed every ordinary selected-curriculum review queue. STOP at the remaining specialist, structural, rights/family and release gates; no next technical-review batch is scheduled. No automation or model run was started.
+Cloud continuation completed all 2,112 selected-record substantive reviews, including a separately scoped review of the five inherited residual holds. STOP at rights/family, independent human review, release and runtime/training gates; no next technical-review batch is scheduled.
 
 ## The actual objective
 
@@ -27,11 +27,11 @@ The original Phase 3 plan is recorded below. The ordinary technical-review step 
 
 ## Exact saved review state
 
-All 2,112 candidates received structural/context/privacy screening and pinned-Qwen format checks. **2109 received substantive agent review**. The selected circuits source domain (**211 records**), thermal/process source domain (**104 records**) and electrical-components source domain (**300 records**) have substantive dispositions. An agent review is not independent human review or a rights/family approval.
+All 2,112 candidates received structural/context/privacy screening and pinned-Qwen format checks. **2112 received substantive agent review**, covering all ten source-file domains. An agent technical disposition is not independent human review or rights, source-family, release or training approval.
 
 | Source-file domain | PASS | REJECT | QUARANTINE | NEEDS HUMAN REVIEW |
 |---|---:|---:|---:|---:|
-| algebra | 176 | 8 | 32 | 0 |
+| algebra | 178 | 8 | 30 | 0 |
 | calculus | 185 | 4 | 26 | 0 |
 | circuits | 139 | 12 | 60 | 0 |
 | electrical_components | 232 | 14 | 54 | 0 |
@@ -39,11 +39,11 @@ All 2,112 candidates received structural/context/privacy screening and pinned-Qw
 | engineering_mathematics | 179 | 3 | 18 | 0 |
 | materials_manufacturing | 203 | 6 | 41 | 0 |
 | physics | 212 | 7 | 31 | 0 |
-| thermal_process_engineering | 73 | 5 | 24 | 2 |
-| trigonometry | 168 | 7 | 25 | 0 |
-| **Total** | **1698** | **72** | **340** | **2** |
+| thermal_process_engineering | 75 | 5 | 24 | 0 |
+| trigonometry | 169 | 7 | 24 | 0 |
+| **Total** | **1703** | **72** | **337** | **0** |
 
-Of the 2 NEEDS_HUMAN_REVIEW entries, **0 are substantively unreviewed**, and two are reviewed specialist holds. The queue label does not require that humans perform every ordinary check. Three additional quarantines are structural-screen dispositions rather than substantive reviews. Counts total 2,112; **released legacy/Drive curriculum examples remain zero**. Source-file domain labels do not certify semantic coverage. Targeted review is not a random sample, so do not extrapolate a usable percentage.
+There are zero NEEDS_HUMAN_REVIEW records and zero structural-only records after the separately scoped five-record review. The 337 remaining technical quarantines and 72 rejections retain their individual reasons. Counts total 2,112; **released legacy/Drive curriculum examples remain zero**. Source-file labels do not certify semantic coverage. Targeted review is not a random accuracy sample.
 
 Important circuit findings include incorrect PF-versus-efficiency claims, motor shaft-kW confused with electrical input, capacitor sizing without enough data, high Q confused with instability, triplen definition errors, unbalanced load-flow omissions, and incomplete prior-context prompts. The row-specific reasons, original-message hashes and preserved answers are authoritative; do not replace them with blanket approval.
 
@@ -56,7 +56,7 @@ These files are present in this local checkpoint. The published GitHub branch re
 | `data/sft/staging/consolidated-20261001-v2/candidates.jsonl.gz` | 34,463 consolidated unique repository candidates with messages and lineage; **unverified staging**, not approved training data. |
 | `data/sft/staging/forge-v01-review-curriculum.jsonl.gz` | Proposed selection and original source-domain allocation; use `proposed_v01_review_selection` to select the 2,112. |
 | `data/review/phase3/technical-review.jsonl.gz` | Full 2,112-row latest disposition ledger, canonical message hashes, reasons, risk flags and Qwen counts. Plain JSONL is ignored/local. |
-| `manifests/phase3-agent-technical-review.json` | 2109 substantive agent decisions and hashes; do not rereview these accidentally. |
+| `manifests/phase3-agent-technical-review.json` | 2112 substantive agent decisions and hashes; do not rereview these accidentally. |
 | `reports/phase3-technical-review.json` | Current counts, review scope and compressed/plain ledger hashes. |
 | `reports/phase3-cloud-handoff.json` | Exact availability/checksum checkpoint and local-only inventory. |
 | `manifests/phase3-rights-dispositions.json` | Purpose-specific held/released provenance decisions. |
@@ -68,15 +68,11 @@ These files are present in this local checkpoint. The published GitHub branch re
 | `docs/sessions/2026-10-01-data-audit.md`, `CHANGELOG.md` | Session history and logical changes. Earlier counts are historical snapshots. |
 | `manifests/readme-review.json` | Earlier README audit evidence across all four repositories. Read repository README files; revisit pinned external README sources only if required for a concrete provenance/context issue. |
 
-Latest local bounded review: materials_manufacturing ordinals 225–249 added {'PASS': 11, 'QUARANTINE': 12, 'REJECT': 2}, with 0 earlier substantive decisions skipped and 0 original structural quarantines preserved. Current local manifest 2109; materials_manufacturing ends at 250 and no next ordinary batch remains. [Batch receipt](reports/phase3-review-batches/materials_manufacturing-0225-0250.json). GitHub remains at 392 reviews on 917a9d3bb68ceae5f320004e67b1129202bd7fed; later local decisions are unpublished.
+Latest local bounded review: five inherited residual holds received independently checked technical PASS with unchanged original answers and explicit superseding provenance. Three new substantive records were added and two earlier substantive holds were replaced; all 2,107 non-target ledger rows are unchanged. [Residual review receipt](reports/phase3-review-batches/residual-five-20261002.json). [Current completion](reports/phase3-technical-review-completion.json). The last verified published GitHub base remains 917a9d3bb68ceae5f320004e67b1129202bd7fed; this update is local only.
 
 ## Resume without repeating work
 
-First check out the correct branch and compare the hashes in `reports/phase3-cloud-handoff.json`. Read the reports above. The selected electrical domain is complete. Original offset 300 is the end of its 300-record selection, not a request to restart it. The pending algebra review queue is now exhausted. Its selected domain has 216 records; 214 have substantive reviews and two original structural-only quarantines remain at ordinals 170 and 211. The next nominal reader offset is 225, which yields no rows. Earlier windows intentionally still emit those two preserved structural holds; do not repeatedly reinterpret them as unreviewed work. The trigonometry queue is also exhausted, preserving original structural hold 24. The calculus queue is also exhausted. The engineering mathematics queue is also exhausted. The electromagnetism queue is also exhausted. The physics queue is also exhausted. The materials/manufacturing queue is also exhausted. There is no next ordinary review window. The portable reader uses the repository root relative to its own file and needs only Python's standard library:
-
-```sh
-python scripts/phase3-review-batch.py materials_manufacturing --offset 250 --limit 25
-```
+First check out the correct branch and compare the hashes in `reports/phase3-cloud-handoff.json`. All 2,112 selected records are now in the substantive manifest. Every bounded reader window in all ten source domains is empty. The former algebra ordinals 170/211 and trigonometry ordinal 24 were separately reviewed and now skip correctly. There is no next technical-review window. Historical domain receipts retain their original counts and holds; the current five-record receipt explicitly supersedes those five decisions without rewriting any source answer.
 
 Historical reader semantics (not a request to start another batch): advance offsets by the batch size. Ordinals refer to **all** selected rows in the source domain, including previously reviewed rows. Already-substantively-reviewed IDs are skipped; a batch may output fewer than 25. This is deliberate and prevents resume drift. Circuits should produce no remaining rows. Do not use printed-row count as the next offset.
 
@@ -150,7 +146,7 @@ Private training/public redistribution/RAG purposes have separate dispositions i
 
 ## Suggested first message to the cloud task
 
-> Continue FORGE Phase 3 from scott198989/SLM-1-, branch codex/forge-data-consolidation, draft PR3. Read HANDOFF_README.md completely, root README, reports/phase3-cloud-handoff.json and the current gate report. Verify checkpoint hashes. The ordinary 2,112-record selected-curriculum queue is exhausted. Preserve all 2,109 substantive reviews, original answers, the two specialist holds and the three structural-only quarantines. Stop and obtain separately scoped direction for remaining gates. Technical decisions remain distinct from release approval. Remote publication is paused after an upload denial; preserve local review checkpoints and do not retry or use an alternate route without a resolved authorization path. Private local Drive/gold/pilot artifacts are not in Git: do not reconstruct or claim to validate unavailable files. No broad discovery, model weights, loading, training, paid services or automatic checks. Stop at the training authorization gate with exact counts and remaining blockers.
+> Continue FORGE Phase 3 from scott198989/SLM-1-, branch codex/forge-data-consolidation, draft PR3. Read the full READMEs, machine handoff and current gate report; verify checkpoint hashes. All 2,112 selected repository candidates have substantive agent dispositions. Preserve the 337 quarantines, 72 rejections, original answers and purpose-specific gates. Stop before independently scoped rights/family/private qualification, model weights/loading/training or paid work. Remote publication remains blocked; do not retry or use another route. Private Drive/gold/pilot inputs are not transferred by these public receipts. Historical next-domain instructions must not restart completed review.
 
 ## Codex's absurd sign-off — a joke, not project state
 
@@ -192,6 +188,11 @@ All 162 previously pending electromagnetism records received individual technica
 All 242 previously pending physics records received individual technical review and independent agent QA. With eight preserved prior reviews, all 250 selected records have substantive dispositions. Local total: 1,865 substantive reviews; 244 ordinary records remain unreviewed, plus two existing specialist holds. Original answers, tokens, all earlier decisions and the three original structural-only quarantines are unchanged. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. See [checkpoint](reports/phase3-physics-domain-checkpoint.json). All earlier reader windows are empty; offset 250 is also empty and the selected domain ends at 250. Materials/manufacturing has 244 pending records and is next; at that checkpoint no new record from that queue was included; current materials_manufacturing progress is recorded above.
 
 
-## All ordinary selected-curriculum review complete
+## All ordinary selected-curriculum review complete (historical checkpoint)
 
 All 244 previously pending materials/manufacturing records received individual technical review and independent agent QA. With six preserved prior reviews, all 250 selected materials records have substantive dispositions. The ordinary selected-curriculum queue is exhausted: 2,109 substantive reviews among 2,112 records; zero ordinary unreviewed records. Two earlier specialist holds and three original structural-only quarantines remain unchanged. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. All source answers, tokens, prior decisions, rights/family metadata and frozen receipts are unchanged. Technical PASS does not authorize release or training. See [completion](reports/phase3-ordinary-review-completion.json). The materials reader emits nothing through offset 250. Machine handoff next_domain and next_batch are null. Historical next-domain directions above describe earlier checkpoints only and must not restart extraction, review, private verification or training.
+
+
+## Completed residual technical review
+
+The five inherited holds were explicitly reassessed from their complete original pairs and primary evidence, with independent agent QA. All five now receive technical PASS. Current totals are 2,112 substantive reviews: 1,703 PASS, 72 REJECT and 337 QUARANTINE, with no NEEDS_HUMAN_REVIEW or structural-only records. Historical receipts and all original answers remain unchanged. See [current completion](reports/phase3-technical-review-completion.json) and [superseding review](reports/phase3-review-batches/residual-five-20261002.json). Release, human-review, rights/family and training gates remain held.

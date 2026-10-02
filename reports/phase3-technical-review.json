@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1698,
+    "PASS": 1703,
     "REJECT": 72,
-    "QUARANTINE": 340,
-    "NEEDS_HUMAN_REVIEW": 2
+    "QUARANTINE": 337,
+    "NEEDS_HUMAN_REVIEW": 0
   },
   "by_domain": {
     "circuits": {
@@ -20,21 +20,21 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "algebra": {
-      "PASS": 176,
+      "PASS": 178,
       "REJECT": 8,
-      "QUARANTINE": 32,
+      "QUARANTINE": 30,
       "NEEDS_HUMAN_REVIEW": 0
     },
     "thermal_process_engineering": {
-      "PASS": 73,
+      "PASS": 75,
       "REJECT": 5,
       "QUARANTINE": 24,
-      "NEEDS_HUMAN_REVIEW": 2
+      "NEEDS_HUMAN_REVIEW": 0
     },
     "trigonometry": {
-      "PASS": 168,
+      "PASS": 169,
       "REJECT": 7,
-      "QUARANTINE": 25,
+      "QUARANTINE": 24,
       "NEEDS_HUMAN_REVIEW": 0
     },
     "calculus": {
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 2109,
-  "review_all_substantive_completed": false,
+  "agent_substantive_reviews": 2112,
+  "review_all_substantive_completed": true,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "21a7463cb6a16e0aaca5485961948f2d4f54c13d6e9532b2c8a225f595bb5cdc",
+  "technical_review_sha256": "36623a796179c1d85b0101e9ccc8585ab6025fe83758a87c8b19b1f3c03f5d4d",
   "reasons": {
     "Faithful conceptual paraphrase that conservation and boundary requirements are integral to the coupled solution process. The prose does not explicitly assert exact feasibility of every internal numerical iterate.": 1,
     "Correct practical explanation of boundary data in an ordinary PDE discretization and their effect on closure, accuracy and stability.": 1,
@@ -344,7 +344,6 @@
     "More turbine stages may reduce stage loading but benefits conditional and mechanical/cost penalties explicit.": 1,
     "Faithful restatement of the specified cosine equation and all-solution goal.": 1,
     "Correct lever-arm comparison for the same door and comparable force direction.": 1,
-    "STANDALONE_CONTEXT_DEPENDENCY_UNRESOLVED": 3,
     "Correct conceptual explanation of momentum transfer through electromagnetic fields and radiation without mechanical contact.": 1,
     "Correct standard subgroup test, with the properties required for arbitrary elements and associativity inherited from the ambient group.": 1,
     "Correct convolution theorem and standard equal-length dense direct-versus-FFT complexity comparison.": 1,
@@ -1003,7 +1002,6 @@
     "Correct anisotropic Ohm-law tensor relation and possible nonparallel J and E.": 1,
     "Cable parasitics/distributed effects are qualified hypotheses; grounding/termination/measurement confounds explicitly remain.": 1,
     "Correct conceptual connection between constrained mechanical forces, optimization dual variables and economic shadow-price interpretations.": 1,
-    "Read complete response; mixture retrograde phase-envelope temperature-versus-pressure conditions need specialist/property-source confirmation before correctness approval.": 1,
     "Correct standard instrumentation distinction: range is an interval with lower/upper limits, and span is their difference. The 0-to-100 example is arithmetically correct and does not presume physical units that were not given.": 1,
     "Correct midline definition and y=D formula for the stated sinusoidal example.": 1,
     "Correct diagnosis of an unjustified one-way implication from an assumed conclusion and useful distinction between discovery and proof presentation.": 1,
@@ -1056,7 +1054,6 @@
     "UV-driven chalking, discoloration, embrittlement and loss of protective integrity are credible. The added claim that consequences occur often months after installation lacks material, stabilizer, UV dose or exposure evidence. Manufacturer literature explicitly rejects universal durability/service-life statements across those variables. Hold the unchanged record for its unsupported time-to-failure generalization; the mechanism itself is not rejected.": 1,
     "Correct intuitive energy-consistency explanation for the opposing sign of passive electromagnetic induction.": 1,
     "Correct right Cauchy-Green definition and role in reference-configuration strain measures.": 1,
-    "Read complete response; fundamental Helmholtz approach plausible but provider-wide all-properties/all-table claims and fitting count require source-qualified specialist confirmation.": 1,
     "The contrast with augmented Lagrangian methods is useful, but primal-dual interior-point iterates need not remain strictly feasible for the original inequalities. Positive slack variables can coexist with nonzero primal residuals.": 1,
     "Correct symbolic-itinerary and horseshoe connection to rigorous chaotic orbit structure.": 1,
     "Correct origin-relative position-vector definition and coordinate example.": 1,
@@ -2189,16 +2186,31 @@
     "The distinction between laboratory performance and qualified service is sound, but the asserted minimum 15–25-year certification period and dated wholesale-replacement forecast are not supported by a specified program or evidence.": 1,
     "The morphology/rafting explanation is useful, but the parenthetical sequence says spherical gamma-prime forms first before solution treatment tunes its shape. Solution treatment dissolves gamma-prime, and subsequent cooling/aging and misfit establish its morphology.": 1,
     "Melting point alone is insufficient to rank creep resistance, but the stated tungsten-versus-nickel-superalloy ranking at 1000 C lacks specified stress, material state and supporting creep data.": 1,
-    "Rhenium can improve wire handling, but its role is not solely ductility: different tungsten-rhenium compositions also provide the distinct thermoelectric responses used for temperature sensing.": 1
+    "Rhenium can improve wire handling, but its role is not solely ductility: different tungsten-rhenium compositions also provide the distinct thermoelectric responses used for temperature sensing.": 1,
+    "Correct module interpretation of the eigenvalue equation: with x acting as T, multiplication by x-lambda is T-lambda I, and its kernel is the lambda-eigenspace. Its elements are annihilated by a nonzero polynomial, providing the stated connection to torsion and the structure theorem in the standard finite-dimensional setting.": 1,
+    "Correct conceptual explanation of multicomponent retrograde condensation. Isothermal depressurization across a dew boundary between the mixture critical temperature and cricondentherm can form liquid; isobaric heating can also do so under appropriate conditions. The original qualifies its conditions and explicitly identifies the subsequent example as isothermal, with real-fluid phase modeling required.": 1,
+    "Accurately describes the standard high-accuracy Helmholtz-explicit reference-EOS approach: ideal-plus-residual specific or molar Helmholtz energy generates the listed equilibrium thermodynamic properties through derivative relations and is widely used by NIST/REFPROP. Original reference-EOS literature substantiates representative fits using thousands of measurements. The answer does not assert universal use by every model or derivation of transport properties.": 1,
+    "Correctly explains ordinary circular reasoning as assuming the intended conclusion within its proof. The explicit Usually qualification avoids claiming certainty about the teacher's particular intended proof; the general question is self-contained.": 1,
+    "Correctly distinguishes rewriting an expression in an equivalent simpler form from finding values satisfying an equation. The complete conceptual prompt supplies enough context; a teacher-specific exercise is not needed.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "ac717cb6a76905db1dca729599ae88f9bb9feff295307aa0367884d14dbdb2ca",
+  "published_decisions_sha256": "60a54d26a614609b6f6a95fed769c4ac9a8688fcb373a472c1274c9690695cf1",
   "substantively_unreviewed": 0,
-  "reviewed_specialist_holds": 2,
+  "reviewed_specialist_holds": 0,
   "complete_source_domains": [
     "circuits",
+    "engineering_mathematics",
+    "algebra",
     "thermal_process_engineering",
-    "electrical_components"
+    "trigonometry",
+    "calculus",
+    "electrical_components",
+    "electromagnetism",
+    "materials_manufacturing",
+    "physics"
   ],
-  "electrical_domain_complete": true
+  "electrical_domain_complete": true,
+  "structural_only_quarantines": 0,
+  "latest_completion_receipt": "reports/phase3-technical-review-completion.json",
+  "publication_status": "LOCAL_ONLY; published base remains separately pinned"
 }

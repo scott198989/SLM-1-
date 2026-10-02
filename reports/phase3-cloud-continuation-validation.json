@@ -20,17 +20,16 @@
   "model_weights_downloaded_or_loaded": false,
   "training_or_paid_compute": false,
   "automatic_checks_recreated": false,
-  "test_log_sha256": "c0c184c06e5fd6b9cb0e10a5c3dc8a28028c8c52488bb9db32a025a646ec29f6",
+  "test_log_sha256": "a7ad84cc71535224e91d49f12c527baaf7462d1ab8ae5c4b641acd14d95145d0",
   "tested_code_sha256": {
     "scripts/phase3-verify-private-release.py": "64d76484b0852d041083301ce113ddc255b7906512def3dc12d0f92dc96910e1",
     "src/forge_data/citation_pilot.py": "9e17e50194ba8cb22eca0b431359d7aec1d870f8417e87b4938e3c1ff4c968d4",
     "tests/test_private_release_verifier.py": "e2a5854473e449455e9bc2ffcc207346f018a3bb49206a81546cd1cea2ace817"
   },
-  "base_commit": "9aa843814666d78c0830f16ef40e2f832ba34bd2",
+  "base_commit": "7fab175a4f0ef997810ef768621855a3d16c51be",
   "all_public_input_hashes_verified": 8,
   "candidate_message_hashes_verified": 2112,
-  "substantive_decisions_verified": 2109,
-  "earlier_374_decisions_unchanged": true,
+  "substantive_decisions_verified": 2112,
   "unchanged_frozen_files": [
     "src/forge_tools/engineering.py",
     "src/forge_tools/statistics.py",
@@ -46,10 +45,10 @@
     "QUARANTINE": 7
   },
   "current_dispositions": {
-    "PASS": 1698,
+    "PASS": 1703,
     "REJECT": 72,
-    "QUARANTINE": 340,
-    "NEEDS_HUMAN_REVIEW": 2
+    "QUARANTINE": 337,
+    "NEEDS_HUMAN_REVIEW": 0
   },
   "substantively_unreviewed": 0,
   "next_batch": null,
@@ -58,48 +57,36 @@
   "training_authorized": false,
   "sqlite_sidecars_rejected": true,
   "sqlite_reads_immutable_read_only": true,
-  "earlier_392_decisions_unchanged": true,
   "latest_batch": {
-    "domain": "materials_manufacturing",
-    "offset": 225,
-    "limit": 25,
-    "selected_window_end_exclusive": 250,
-    "new_reviews": 25,
-    "skipped_existing": 0,
-    "preserved_structural_quarantines": [],
+    "kind": "explicit_residual_review",
+    "records_checked": 5,
+    "new_substantive_reviews": 3,
+    "superseded_substantive_holds": 2,
     "dispositions": {
-      "PASS": 11,
-      "QUARANTINE": 12,
-      "REJECT": 2
+      "PASS": 5
     }
   },
   "independent_agent_qa_complete": true,
-  "latest_batch_original_hashes_verified": 25,
+  "latest_batch_original_hashes_verified": 5,
   "latest_batch_only_expected_ledger_rows_changed": true,
   "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
   "publication_status": "LOCAL_ONLY",
-  "earlier_decisions_unchanged": 2084,
+  "earlier_decisions_unchanged": 2107,
   "electrical_domain_complete": true,
   "electrical_records_verified": 300,
-  "all_392_published_decisions_unchanged": true,
   "all_token_and_rights_fields_unchanged": true,
-  "completion_receipt": "reports/phase3-electrical-domain-completion.json",
+  "completion_receipt": "reports/phase3-technical-review-completion.json",
   "final_code_format_check": "PASS",
   "final_code_undefined_name_lint": "PASS",
   "algebra_pending_review_queue_complete": true,
   "algebra_source_records_checked": 216,
-  "algebra_substantive_reviews": 214,
-  "algebra_structural_holds_preserved": [
-    170,
-    211
-  ],
+  "algebra_substantive_reviews": 216,
+  "algebra_structural_holds_preserved": [],
   "algebra_checkpoint": "reports/phase3-algebra-domain-checkpoint.json",
   "trigonometry_pending_review_queue_complete": true,
   "trigonometry_source_records_checked": 200,
-  "trigonometry_substantive_reviews": 199,
-  "trigonometry_structural_holds_preserved": [
-    24
-  ],
+  "trigonometry_substantive_reviews": 200,
+  "trigonometry_structural_holds_preserved": [],
   "trigonometry_checkpoint": "reports/phase3-trigonometry-domain-checkpoint.json",
   "calculus_pending_review_queue_complete": true,
   "calculus_source_records_checked": 215,
@@ -126,5 +113,115 @@
   "ordinary_completion_cpu_tests": 69,
   "ordinary_completion_format_check": "3 files already formatted",
   "ordinary_completion_lint_check": "F821,F822,F823: all checks passed",
-  "ordinary_completion_log": "forge-pr3-tests-ordinary-complete.log"
+  "ordinary_completion_log": "forge-pr3-tests-ordinary-complete.log",
+  "reviewed_specialist_holds": 0,
+  "structural_only_quarantines": 0,
+  "prior_substantive_holds_explicitly_superseded": 2,
+  "published_substantive_decisions_unchanged": 390,
+  "published_substantive_holds_explicitly_superseded": 2,
+  "technical_completion_checkpoint": "reports/phase3-technical-review-completion.json",
+  "all_selected_records_substantively_reviewed": true,
+  "complete_source_domains": [
+    "circuits",
+    "engineering_mathematics",
+    "algebra",
+    "thermal_process_engineering",
+    "trigonometry",
+    "calculus",
+    "electrical_components",
+    "electromagnetism",
+    "materials_manufacturing",
+    "physics"
+  ],
+  "residual_completion_validation": {
+    "tests": 69,
+    "test_result": "PASS",
+    "test_log_sha256": "a7ad84cc71535224e91d49f12c527baaf7462d1ab8ae5c4b641acd14d95145d0",
+    "format": "3 files already formatted",
+    "undefined_name_lint": "F821,F822,F823: all checks passed",
+    "integrity": {
+      "base": "7fab175a4f0ef997810ef768621855a3d16c51be",
+      "rows": 2112,
+      "changed_rows": 5,
+      "unchanged_ledger_rows": 2107,
+      "substantive_records": 2112,
+      "unchanged_prior_substantive_records": 2107,
+      "superseded_prior_substantive_holds": 2,
+      "new_substantive_records": 3,
+      "all_original_hashes_verified": 2112,
+      "all_tokens_rights_and_authorization_flags_unchanged": true,
+      "frozen_files_verified": 12,
+      "historical_batch_receipts_byte_preserved": 145,
+      "reader_checks": {
+        "circuits": {
+          "selected_records": 211,
+          "windows_checked": 10,
+          "all_windows_empty": true
+        },
+        "engineering_mathematics": {
+          "selected_records": 200,
+          "windows_checked": 9,
+          "all_windows_empty": true
+        },
+        "algebra": {
+          "selected_records": 216,
+          "windows_checked": 10,
+          "all_windows_empty": true
+        },
+        "thermal_process_engineering": {
+          "selected_records": 104,
+          "windows_checked": 6,
+          "all_windows_empty": true
+        },
+        "trigonometry": {
+          "selected_records": 200,
+          "windows_checked": 9,
+          "all_windows_empty": true
+        },
+        "calculus": {
+          "selected_records": 215,
+          "windows_checked": 10,
+          "all_windows_empty": true
+        },
+        "electrical_components": {
+          "selected_records": 300,
+          "windows_checked": 13,
+          "all_windows_empty": true
+        },
+        "electromagnetism": {
+          "selected_records": 166,
+          "windows_checked": 8,
+          "all_windows_empty": true
+        },
+        "materials_manufacturing": {
+          "selected_records": 250,
+          "windows_checked": 11,
+          "all_windows_empty": true
+        },
+        "physics": {
+          "selected_records": 250,
+          "windows_checked": 11,
+          "all_windows_empty": true
+        }
+      },
+      "dispositions": {
+        "PASS": 1703,
+        "REJECT": 72,
+        "QUARANTINE": 337,
+        "NEEDS_HUMAN_REVIEW": 0
+      }
+    }
+  },
+  "independent_integration_qa": {
+    "result": "PASS",
+    "base_commit": "7fab175a4f0ef997810ef768621855a3d16c51be",
+    "five_target_changes_verified": true,
+    "non_target_ledger_records_unchanged": 2107,
+    "all_2112_canonical_hashes_verified": true,
+    "pilot_section_byte_equivalent_to_base": true,
+    "historical_receipts_unchanged": true,
+    "all_eight_handoff_input_pins_match": true,
+    "all_protected_fields_unchanged": true,
+    "tests_rerun_by_independent_integration_reviewer": false
+  }
 }

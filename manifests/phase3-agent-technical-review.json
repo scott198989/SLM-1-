@@ -3521,12 +3521,27 @@
     {
       "id": "repo-7886618e589bccad28f0bd96",
       "messages_sha256": "7886618e589bccad28f0bd961f890290c41e2391f2bc39410310e8ecc2d4fd0e",
-      "state": "NEEDS_HUMAN_REVIEW",
-      "rationale": "Read complete response; mixture retrograde phase-envelope temperature-versus-pressure conditions need specialist/property-source confirmation before correctness approval.",
-      "reviewer": "Codex_agent_technical_review_20261001",
+      "state": "PASS",
+      "rationale": "Correct conceptual explanation of multicomponent retrograde condensation. Isothermal depressurization across a dew boundary between the mixture critical temperature and cricondentherm can form liquid; isobaric heating can also do so under appropriate conditions. The original qualifies its conditions and explicitly identifies the subsequent example as isothermal, with real-fluid phase modeling required.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
       "independent_human_review": false,
-      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; no_rewrite",
-      "tool_evidence": [],
+      "review_scope": "complete_visible_prompt_and_answer_read; primary_sources_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "primary_source_review",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0021961418304944",
+          "title": "Abdulagatov et al., PVTx and thermal-pressure coefficient measurements of the binary CO2 + n-decane mixtures in the critical and retrograde regions",
+          "finding": "Original experimental introduction supports retrograde condensation during isothermal pressure decrease or isobaric temperature increase, conditioned on mixture composition and phase-envelope region."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Pressure-reduction and temperature-increase paths are distinct conditional traversals of a mixture phase envelope. The original does not infer a heating path from its expressly isothermal example or claim every pressure/temperature change condenses a mixture."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Phase topology, overall composition and path endpoints matter. Activity or fugacity models are alternatives, not a requirement to combine every listed method; detailed flash calculations are outside the concise concept prompt."
+        }
+      ],
       "domain": "thermal_process_engineering",
       "primary_source": "D_Thermodynamics.jsonl",
       "risk_flags": [
@@ -3535,17 +3550,47 @@
       "qwen_tokens": 166,
       "assistant_tokens": 140,
       "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
-      "training_authorized": false
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/residual-five-20261002.json",
+      "original_domain_ordinal": 66
     },
     {
       "id": "repo-7e650062f278ca4669500987",
       "messages_sha256": "7e650062f278ca4669500987a988e32d6f9efbda7702df2698056357eee18c6c",
-      "state": "NEEDS_HUMAN_REVIEW",
-      "rationale": "Read complete response; fundamental Helmholtz approach plausible but provider-wide all-properties/all-table claims and fitting count require source-qualified specialist confirmation.",
-      "reviewer": "Codex_agent_technical_review_20261001",
+      "state": "PASS",
+      "rationale": "Accurately describes the standard high-accuracy Helmholtz-explicit reference-EOS approach: ideal-plus-residual specific or molar Helmholtz energy generates the listed equilibrium thermodynamic properties through derivative relations and is widely used by NIST/REFPROP. Original reference-EOS literature substantiates representative fits using thousands of measurements. The answer does not assert universal use by every model or derivation of transport properties.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
       "independent_human_review": false,
-      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; no_rewrite",
-      "tool_evidence": [],
+      "review_scope": "complete_visible_prompt_and_answer_read; primary_sources_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "primary_source_review",
+          "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=934606",
+          "title": "NIST, The NIST REFPROP Database for Highly Accurate Properties of Industrially Important Fluids, section 2.2",
+          "finding": "Describes fundamental derivative-based equations of state and Helmholtz formulations as the prevailing high-accuracy REFPROP approach."
+        },
+        {
+          "method": "primary_source_review",
+          "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=907386",
+          "title": "Span et al., nitrogen reference equation of state, sections 4.2.1 and 4.3",
+          "finding": "The primary reference EOS supplies the ideal/residual split and derivative property relations. Its fitting set includes 3649 pressure-density-temperature and 1175 sound-speed observations, supporting the representative thousands-of-measurements statement."
+        },
+        {
+          "method": "primary_source_review",
+          "url": "https://pages.nist.gov/teqp-docs/en/latest/derivs/derivs.html",
+          "title": "NIST teqp derivative documentation",
+          "finding": "Independent QA corroborated pressure, entropy, enthalpy and heat-capacity derivative relations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For specific a(T,rho), p=rho^2*a_rho, s=-a_T, u=a+Ts, h=u+p/rho and cv=-T*a_TT; heat-capacity and sound-speed relations combine thermodynamic derivatives. Thus derived as partial derivatives is conventional shorthand for derivative relations and algebraic combinations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Use specific or molar a with consistent density units. Mixture composition and two-phase equilibrium calculations require further inputs. Thousands is a representative reference-EOS fitting scale, not a verified count for every fluid or provider."
+        }
+      ],
       "domain": "thermal_process_engineering",
       "primary_source": "D_Thermodynamics.jsonl",
       "risk_flags": [
@@ -3555,7 +3600,10 @@
       "qwen_tokens": 153,
       "assistant_tokens": 124,
       "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
-      "training_authorized": false
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/residual-five-20261002.json",
+      "original_domain_ordinal": 102
     },
     {
       "id": "repo-5ca0c171152b9a1d34762040",
@@ -66547,9 +66595,120 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
       "original_domain_ordinal": 249
+    },
+    {
+      "id": "repo-ba110a948fcfd763580a0637",
+      "messages_sha256": "ba110a948fcfd763580a063773a2f5d84a0ecdad2738b74b396544410c1adfa0",
+      "state": "PASS",
+      "rationale": "Correctly distinguishes rewriting an expression in an equivalent simpler form from finding values satisfying an equation. The complete conceptual prompt supplies enough context; a teacher-specific exercise is not needed.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; primary_sources_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "primary_source_review",
+          "url": "https://openstax.org/books/prealgebra-2e/pages/2-2-evaluate-simplify-and-translate-expressions",
+          "title": "OpenStax, Prealgebra 2e, section 2.2",
+          "finding": "Defines simplification and illustrates combining like terms while distinguishing expressions from equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "3x+2x=(3+2)x=5x for every x; 5x=20 has solution x=4. Simplification preserves an expression, while solving identifies a satisfying value."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is a general explanation of the quoted instruction, not a claim about an unseen exercise."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 92,
+      "assistant_tokens": 70,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/residual-five-20261002.json",
+      "original_domain_ordinal": 170
+    },
+    {
+      "id": "repo-a29c2810f6df5627c04ccab8",
+      "messages_sha256": "a29c2810f6df5627c04ccab84726d0d4fbfb7d6428415a5cfde07f1e4dae0fe3",
+      "state": "PASS",
+      "rationale": "Correctly explains ordinary circular reasoning as assuming the intended conclusion within its proof. The explicit Usually qualification avoids claiming certainty about the teacher's particular intended proof; the general question is self-contained.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; primary_sources_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "primary_source_review",
+          "url": "https://www.cs.purdue.edu/homes/spa/courses/sa12/mod3.pdf",
+          "title": "Purdue, proof-techniques course notes, page 6",
+          "finding": "Independent QA verified the mathematical definition of circular reasoning. The writer's later direct fetch returned an internal tool error; no separate successful writer fetch is claimed."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "An argument that takes P as a premise to establish P provides no independent justification of P. The answer correctly warns against this circular structure."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Independent chains establishing A=C and B=C are valid; the original does not prohibit them or claim to inspect a missing proof."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 49,
+      "assistant_tokens": 24,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/residual-five-20261002.json",
+      "original_domain_ordinal": 24
+    },
+    {
+      "id": "repo-2308b4e2dc495dfb6b2f12f3",
+      "messages_sha256": "2308b4e2dc495dfb6b2f12f3f7902222528d4e723e795b250607f235837c4600",
+      "state": "PASS",
+      "rationale": "Correct module interpretation of the eigenvalue equation: with x acting as T, multiplication by x-lambda is T-lambda I, and its kernel is the lambda-eigenspace. Its elements are annihilated by a nonzero polynomial, providing the stated connection to torsion and the structure theorem in the standard finite-dimensional setting.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; primary_sources_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "primary_source_review",
+          "url": "https://sites.math.northwestern.edu/scg479/courses/notes/lecture-notes-331-2.pdf",
+          "title": "Northwestern, algebra course notes, pages 102-103",
+          "finding": "Connects annihilation by x-lambda, the eigenvector equation, elementary divisors and the F[x]-module viewpoint."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For every polynomial p, (T-lambda I)p(T)=p(T)(T-lambda I), so multiplication by x-lambda is an F[x]-module homomorphism. Its kernel is exactly {v:Tv=lambda v} and is closed under p(T)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Lambda belongs to F. The usual structure theorem requires finite generation, as in the standard finite-dimensional linear-algebra setting; the concise answer does not assert it for arbitrary infinite-dimensional modules."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 118,
+      "assistant_tokens": 89,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/residual-five-20261002.json",
+      "original_domain_ordinal": 211
     }
   ],
-  "reviewed": 2109,
+  "reviewed": 2112,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

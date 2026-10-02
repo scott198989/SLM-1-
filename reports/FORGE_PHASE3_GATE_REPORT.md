@@ -1,6 +1,6 @@
 # FORGE Phase 3 pilot and training authorization gate â€” October 1, 2026
 
-A private, actually released **16-example calculator protocol pilot** now exists. It has **4,430 pinned-Qwen tokens**, including **2,793 assistant-target tokens**. **12 private statistics/DOE/SPC tasks are sealed**, and a **9-chunk private engineering-reference RAG pilot** is released. These are small integration deliverables. **The requested full 2,112-example technical validation is not complete, the 240-task/12-domain gold design is not filled, no model baseline has run, and training should not be authorized.** No model weights were downloaded or loaded; no training, paid service, broad discovery or automatic check was started.
+A private, actually released **16-example calculator protocol pilot** now exists. It has **4,430 pinned-Qwen tokens**, including **2,793 assistant-target tokens**. **12 private statistics/DOE/SPC tasks are sealed**, and a **9-chunk private engineering-reference RAG pilot** is released. These are small integration deliverables. **The selected 2,112-record curriculum now has complete agent technical dispositions; legacy release, independent human review, broader evaluation, model baseline and runtime/training gates remain unresolved.** No model weights were downloaded or loaded; no training, paid service, broad discovery or automatic check was started.
 
 ## Released SFT: precise scope
 
@@ -21,13 +21,13 @@ Source/oracle/mask/family/rights/seal hashes and release receipts: [pilot releas
 
 ## Proposed legacy curriculum: exact current dispositions
 
-All 2,112 records received structural/context/privacy and actual Qwen-format screening. **2109** received substantive agent review; the complete selected 211-record circuits, 104-record thermal/process and 300-record electrical-components batches are included. Of the remaining 2 NEEDS_HUMAN_REVIEW records, **0 have not yet received substantive technical verification** and two were read but require specialist confirmation. This queue label is not a claim that a human must perform every simple check. The requested curriculum-wide technical review remains outstanding; structural/tool agreement never supplied correctness approval. No answers were silently changed.
+All 2,112 records received structural/context/privacy and actual Qwen-format screening and **all 2,112 now have substantive agent technical dispositions across all ten source domains**. Separately scoped primary-source review and independent agent QA resolved the three inherited structural-only holds and two specialist holds. No NEEDS_HUMAN_REVIEW records remain. The 337 technical quarantines and 72 rejections remain withheld. Technical PASS is separate from human review, applicable terms, source-family qualification and release/training approval. No original answers were changed.
 
 Domain labels here are originating-file classifications, not certified semantic capabilities. These counts are not a random sample, corpus accuracy estimate or approved training count.
 
 | Source domain | Technical PASS | REJECT | QUARANTINE | NEEDS HUMAN REVIEW |
 |---|---:|---:|---:|---:|
-| algebra | 176 | 8 | 32 | 0 |
+| algebra | 178 | 8 | 30 | 0 |
 | calculus | 185 | 4 | 26 | 0 |
 | circuits | 139 | 12 | 60 | 0 |
 | electrical_components | 232 | 14 | 54 | 0 |
@@ -35,9 +35,9 @@ Domain labels here are originating-file classifications, not certified semantic 
 | engineering_mathematics | 179 | 3 | 18 | 0 |
 | materials_manufacturing | 203 | 6 | 41 | 0 |
 | physics | 212 | 7 | 31 | 0 |
-| thermal_process_engineering | 73 | 5 | 24 | 2 |
-| trigonometry | 168 | 7 | 25 | 0 |
-| **Total** | **1698** | **72** | **340** | **2** |
+| thermal_process_engineering | 75 | 5 | 24 | 0 |
+| trigonometry | 169 | 7 | 24 | 0 |
+| **Total** | **1703** | **72** | **337** | **0** |
 
 **Released legacy curriculum examples:0.** Technical PASS is separate from applicable contract and family qualification. Row-specific unchanged-message hashes/reasons are in [technical decisions](../data/review/phase3/technical-review.jsonl.gz), [substantive receipts](../manifests/phase3-agent-technical-review.json) and [aggregate report](phase3-technical-review.json). Rejections include wrong energy/departure signs, defective-matrix claims, missing equilibria and false optimization rules. Quarantine covers incomplete prior context, unit/model conditions, missing chart values, unresolved visual dependencies and contradictory scratch reasoning. Overlapping risk flags:1110 equation/calculation/proof;792 units/model;23 visual prompts;187 operations/diagnosis. No sampled usable-percentage extrapolation is justified.
 
@@ -93,14 +93,14 @@ Proposed model/revision: Qwen/Qwen3-30B-A3B-Base /1b75feb79f60b8dc6c5bc769a898c2
 
 The 16-record pilot would give **one optimizer update** at effective batch 16, not a useful engineering-specialization run. No update is scheduled. Desktop 5090/32 GiB/64 GiB is README-derived until checked live; laptop 2050/4 GiB/16 GiB is preparation-only. GPU package stack/expert quantization, exact transitive lock, memory estimate 20â€“29 GiB and resume behavior are unmeasured. The eventual model-load/memory pilot must be separately authorized and cannot count as already run.
 
-**Reasons not to authorize training:** requested 0-record substantive review outstanding; two specialist judgments; applicable legacy contracts unresolved;16 narrow protocol records inadequate for broad FORGE specialization; independent model-development set absent; gold is only 12 tasks/one domain and not an independently human-reviewed broad benchmark; no stock-model scores; academic OCR/equation/visual fidelity and production-source rights remain unqualified; desktop/GPU/runtime/quantized-expert/memory/resume gates not verified.
+**Reasons not to authorize training:** applicable legacy terms and source-family qualification remain unresolved; independent human review and legacy release approval are absent; 16 narrow protocol records are inadequate for broad FORGE specialization; independent model-development data is absent; gold is only 12 tasks in one domain; there are no stock-model scores; academic OCR/equation/visual fidelity and source rights remain unqualified; desktop/GPU/runtime/quantized-expert/memory/resume gates are unverified.
 
-The next work is checkpointed review of the held curriculum (not broad discovery), applicable generation-use evidence, independent engineering development/gold source families, and targeted source-qualified academic RAG/task assembly. Never repair answers silently or expand into unrelated corpora to satisfy counts. Siemens is user-owned follow-up. This is a released small pilot and transparent gate report, **not completion of all Phase 3 validation**. Stop before model weights or training.
+Remaining work concerns purpose-specific generation-use evidence, source/problem-family qualification, independent engineering development/evaluation coverage and separately scoped academic RAG/task assembly. The selected repository technical queue is complete; do not repeat it or silently repair held answers. Siemens remains user-owned follow-up. This is not completion of all Phase 3 validation. Stop before model weights or training.
 
 
 ## Cloud continuation checkpoint
 
-The circuit review is complete as dispositions:139 PASS /12 REJECT /60 QUARANTINE /0 NEEDS HUMAN REVIEW. Technical PASS remains separate from training release. [Cloud handoff and exact next steps](../HANDOFF_README.md), [machine-readable checkpoint](phase3-cloud-handoff.json). Private artifacts remain local and must not be reconstructed or declared verified from public receipts alone.
+All ten selected source domains have complete agent technical dispositions. [Current completion](phase3-technical-review-completion.json), [cloud handoff](../HANDOFF_README.md) and [machine checkpoint](phase3-cloud-handoff.json) give the current state. The sections below preserve historical checkpoints; their counts and next-domain directions do not override the current completion. Private artifacts must not be reconstructed or declared verified from public receipts alone.
 
 
 ## October 2 first cloud checkpoint (historical)
@@ -503,6 +503,11 @@ This unpublished local batch added {'PASS': 25} after independent agent QA; 0 ea
 This unpublished local batch added {'PASS': 11, 'QUARANTINE': 12, 'REJECT': 2} after independent agent QA; 0 earlier substantive decisions were skipped and 0 original structural quarantines were preserved. Current local substantive reviews: 2109; remaining unreviewed: 0; next materials_manufacturing offset: 250. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. Original answers, prior 2084 decisions and all release gates are unchanged. [Batch receipt](phase3-review-batches/materials_manufacturing-0225-0250.json).
 
 
-## All ordinary selected-curriculum review complete
+## All ordinary selected-curriculum review complete (historical checkpoint)
 
 All 244 previously pending materials/manufacturing records received individual technical review and independent agent QA. With six preserved prior reviews, all 250 selected materials records have substantive dispositions. The ordinary selected-curriculum queue is exhausted: 2,109 substantive reviews among 2,112 records; zero ordinary unreviewed records. Two earlier specialist holds and three original structural-only quarantines remain unchanged. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. All source answers, tokens, prior decisions, rights/family metadata and frozen receipts are unchanged. Technical PASS does not authorize release or training. See [completion](phase3-ordinary-review-completion.json). Publication is local only and remaining gates are held.
+
+
+## October 2 residual technical-review completion
+
+Five inherited holds received independently checked technical PASS. Three structural-only rows entered the substantive manifest and two specialist holds were explicitly superseded. Current totals: 2,112 substantive records, 1,703 PASS, 72 REJECT, 337 QUARANTINE and zero NEEDS_HUMAN_REVIEW. All original messages, hashes, tokens, rights/family fields and historical receipts remain unchanged; the 2,107 non-target ledger rows are identical. [Superseding receipt](phase3-review-batches/residual-five-20261002.json). This is a local update with no publication, release or training approval.

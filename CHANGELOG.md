@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-02 - Resolve five residual technical holds locally
+
+- Independently reviewed all five complete original pairs with primary evidence: five technical PASS, with three new substantive reviews and two explicitly superseded specialist holds.
+- Current total: 2,112 substantive records; 1,703 PASS, 72 REJECT, 337 QUARANTINE and zero NEEDS_HUMAN_REVIEW. All ten selected source domains are complete.
+- Preserved all original messages/tokens, 2,107 non-target ledger records, frozen inputs, historical receipts and previously delivered packages. Updated current aggregate and gate prose.
+- Local only; no publication retry, human approval, private requalification, release or training. The residual receipt stores each prior decision and the exact superseding evidence.
+
+
 ## 2026-10-02 - Ordinary selected-curriculum review complete
 
 - Reviewed 244 pending materials records in ten independently checked windows; preserved six earlier materials reviews.
