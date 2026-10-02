@@ -20,7 +20,7 @@
   "model_weights_downloaded_or_loaded": false,
   "training_or_paid_compute": false,
   "automatic_checks_recreated": false,
-  "test_log_sha256": "21a7d4b849f8ef004b181f23b47598d9fa5d321d210fae24bb447a02e7679837",
+  "test_log_sha256": "53897cd067ce50d151bbe56fbdb6e28a92b013dfee1f4dccfa0cdaa42f7de6b1",
   "tested_code_sha256": {
     "scripts/phase3-verify-private-release.py": "64d76484b0852d041083301ce113ddc255b7906512def3dc12d0f92dc96910e1",
     "src/forge_data/citation_pilot.py": "9e17e50194ba8cb22eca0b431359d7aec1d870f8417e87b4938e3c1ff4c968d4",
@@ -53,8 +53,8 @@
   },
   "substantively_unreviewed": 842,
   "next_batch": {
-    "domain": "calculus",
-    "offset": 225,
+    "domain": "engineering_mathematics",
+    "offset": 0,
     "limit": 25
   },
   "official_reader_executed": true,
@@ -103,5 +103,9 @@
   "trigonometry_structural_holds_preserved": [
     24
   ],
-  "trigonometry_checkpoint": "reports/phase3-trigonometry-domain-checkpoint.json"
+  "trigonometry_checkpoint": "reports/phase3-trigonometry-domain-checkpoint.json",
+  "calculus_pending_review_queue_complete": true,
+  "calculus_source_records_checked": 215,
+  "calculus_substantive_reviews": 215,
+  "calculus_checkpoint": "reports/phase3-calculus-domain-checkpoint.json"
 }

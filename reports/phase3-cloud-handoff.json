@@ -85,7 +85,8 @@
     ],
     "release_approved": 0,
     "algebra_review_status": "203 previously pending records substantively reviewed; 11 prior reviews and 2 structural-only quarantines preserved",
-    "trigonometry_review_status": "189 previously pending records reviewed; 10 prior substantive reviews and original structural-only quarantine 24 preserved"
+    "trigonometry_review_status": "189 previously pending records reviewed; 10 prior substantive reviews and original structural-only quarantine 24 preserved",
+    "calculus_review_status": "208 previously pending records reviewed; 7 prior substantive reviews preserved; all215 selected calculus records have substantive dispositions"
   },
   "public_input_files": [
     {
@@ -218,10 +219,10 @@
     "incomplete_review_index_chunks": 43205,
     "incomplete_review_index_production_approved": false
   },
-  "next_domain": "calculus",
+  "next_domain": "engineering_mathematics",
   "next_batch": {
-    "domain": "calculus",
-    "offset": 225,
+    "domain": "engineering_mathematics",
+    "offset": 0,
     "limit": 25
   },
   "workers": [],
@@ -232,7 +233,7 @@
   "latest_cloud_continuation": "reports/phase3-cloud-continuation-validation.json",
   "local_continuation": {
     "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
-    "local_predecessor_commit": "628742ca03e044a1b876c596d4c6d835f9269346",
+    "local_predecessor_commit": "2c0a0875fc9dbb779eab14145677202e0b69d8f2",
     "publication_status": "LOCAL_ONLY; do not claim these counts are on GitHub",
     "latest_batch": "reports/phase3-review-batches/calculus-0200-0225.json",
     "electrical_domain_complete": true,
@@ -246,6 +247,8 @@
       170,
       211
     ],
-    "algebra_checkpoint": "reports/phase3-algebra-domain-checkpoint.json"
+    "algebra_checkpoint": "reports/phase3-algebra-domain-checkpoint.json",
+    "calculus_pending_review_queue_complete": true,
+    "calculus_checkpoint": "reports/phase3-calculus-domain-checkpoint.json"
   }
 }

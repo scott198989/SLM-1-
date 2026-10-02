@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-02 - Pending calculus queue completion
+
+- Reviewed 208 pending calculus records with independent agent QA; preserved seven prior substantive decisions. All 215 selected calculus records have substantive dispositions.
+- Local total 1,267 substantive reviews; 842 still unreviewed, plus two reviewed specialist holds. Public branch remains at 392 reviews.
+- Preserved original messages, hashes, tokens, all earlier 1,059 decisions, all three structural holds, rights/family metadata and frozen receipts.
+
+
 ## 2026-10-02 - Local calculus review 200–214
 
 - Added {'PASS': 14, 'QUARANTINE': 1} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1252 reviews unchanged.
