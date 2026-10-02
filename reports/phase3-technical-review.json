@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1535,
+    "PASS": 1557,
     "REJECT": 68,
-    "QUARANTINE": 307,
-    "NEEDS_HUMAN_REVIEW": 202
+    "QUARANTINE": 310,
+    "NEEDS_HUMAN_REVIEW": 177
   },
   "by_domain": {
     "circuits": {
@@ -56,10 +56,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "materials_manufacturing": {
-      "PASS": 40,
+      "PASS": 62,
       "REJECT": 2,
-      "QUARANTINE": 8,
-      "NEEDS_HUMAN_REVIEW": 200
+      "QUARANTINE": 11,
+      "NEEDS_HUMAN_REVIEW": 175
     },
     "physics": {
       "PASS": 212,
@@ -74,18 +74,18 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1909,
+  "agent_substantive_reviews": 1934,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "c12abf6a3ab91bf11636349af481e1efa79c4462ddfdc35ef91ad5b041c108d2",
+  "technical_review_sha256": "96e541001d0db44769500b5ec3f4ddf2d4473677f614d5d903b5100a6b43154e",
   "reasons": {
     "Faithful conceptual paraphrase that conservation and boundary requirements are integral to the coupled solution process. The prose does not explicitly assert exact feasibility of every internal numerical iterate.": 1,
     "Correct practical explanation of boundary data in an ordinary PDE discretization and their effect on closure, accuracy and stability.": 1,
     "Correct elementary local/absolute extrema distinction, including endpoint possibilities.": 1,
     "Universal three-phase-motor size, efficiency and self-starting comparison lacks machine type, rating and comparison conditions; synchronous motors are a counterexample to unqualified self-starting.": 1,
     "The basic inclusion of polynomials among rational expressions is correct, but the claim that polynomials always tend to infinity and can never have horizontal asymptotes fails for constant polynomials.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 200,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 175,
     "Accurate typical FMEA-entry checklist and appropriate acknowledgement that responsibility/action-status fields vary by team. It does not impose one universal risk-priority formula or imply FMEA alone validates safety.": 1,
     "Changing L/C reactance redistributes complex branch currents and voltages; response and cancellation are correctly circuit dependent rather than universally monotone.": 1,
     "Correct current-sign reversal of magnetic wire force and its role in mechanical commutation.": 1,
@@ -1990,11 +1990,36 @@
     "Correct qualitative RC step-response Laplace story, including the initial capacitor voltage.": 1,
     "Reasonable explanation of genuine or apparent circularity: assuming the conclusion or leaving dependency structure unclear. The advice to state assumptions and use justified facts is sound.": 1,
     "Correct distinction between free thermal strain and stress from uniaxial restraint.": 1,
-    "Sound practical Stokes theorem interpretation linking boundary circulation to curl flux.": 1
+    "Sound practical Stokes theorem interpretation linking boundary circulation to curl flux.": 1,
+    "Correct definition and physical distinction of corrosion fatigue from fatigue without a corrosive environment.": 1,
+    "Correct ordinary sharp-indentation plastic-zone, surrounding elastic constraint and surface-response overview.": 1,
+    "Reasonable ordinary polycrystalline grain-growth tradeoff between Hall-Petch strength and grain-boundary-controlled high-temperature creep.": 1,
+    "Correct conceptual coherency-to-semicoherency-to-incoherency competition between lattice matching, elastic strain and interfacial energy.": 1,
+    "Correct compact thermodynamics/kinetics/heat-flow decomposition of solidification microstructure.": 1,
+    "Sound plain-language compatibility explanation for geometrically necessary dislocations.": 1,
+    "Correct dislocation-carrier versus dislocation-obstacle explanation of work hardening.": 1,
+    "Correct conditional microstructural interactions explaining why nominal strengthening treatments need not combine monotonically.": 1,
+    "Thermally activated positive rate sensitivity is sound, but the unqualified final stronger-at-lower-temperature claim is not implied by it; rate sensitivity depends jointly on temperature and activation volume.": 1,
+    "Correct Cottrell-atmosphere explanation of ordinary static strain aging in low-carbon steel.": 1,
+    "Correct explanatory paraphrase of a standard GND-based indentation-size-effect mechanism.": 1,
+    "Correct microstructure- and scale-dependent reasons empirical hardness/tensile-strength conversions are not unique.": 1,
+    "Correct qualitative pH effects on passive-film stability and electrochemical corrosion reactions.": 1,
+    "Correct line-compound explanation within its explicit stoichiometric-intermetallic scope.": 1,
+    "Correct size/modulus-misfit interaction mechanism for ordinary solid-solution strengthening of copper.": 1,
+    "Correct lever-rule mass balance and fractions.": 1,
+    "The size-mismatch tendency is valid, but atomic size alone does not establish the asserted limited-solubility phase diagram for the hypothetical Cu-Ni system.": 1,
+    "Correct mechanism inventory and non-independent-superposition warning for a cold-worked precipitation-hardened alloy.": 1,
+    "Correct GND/net-curvature versus statistically stored/canceling-dislocation distinction at representative-volume scale.": 1,
+    "Correct conditional alternatives when ordinary glide is obstructed by particles.": 1,
+    "The mechanical-cracking versus corrosion distinction is correct, but the clause saying corrosion supplies the damaging environment reverses process and environment: corrosion is degradation caused by reaction with an environment.": 1,
+    "Correct decomposition of indentation response and test-dependent hardness measurement.": 1,
+    "Correct standard carbon-steel martensite hardening explanation.": 1,
+    "Correct mechanism-level link from tensile loading to crack opening and environmentally assisted fracture.": 1,
+    "Correct terms and forest-spacing origin of the Taylor hardening scale.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "cd4ec67414cbf0fa930b4d73e077602d02a1e93a8b012dc2fda484c2dd093012",
-  "substantively_unreviewed": 200,
+  "published_decisions_sha256": "8799e2a6c002f5d90839cc3845ce343e11e234de62444b272fb3a58dbee40f37",
+  "substantively_unreviewed": 175,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

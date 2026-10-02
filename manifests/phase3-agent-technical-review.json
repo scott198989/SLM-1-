@@ -59075,9 +59075,916 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/materials_manufacturing-0025-0050.json",
       "original_domain_ordinal": 49
+    },
+    {
+      "id": "repo-a4707019b28db6951cefca03",
+      "messages_sha256": "a4707019b28db6951cefca035a6da108988d4c9664b7e27b82279b659599d8f4",
+      "state": "PASS",
+      "rationale": "Correct size/modulus-misfit interaction mechanism for ordinary solid-solution strengthening of copper.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT 3.40 Physical Metallurgy Lecture 16",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/613623af5c60a58694cab425892aa9b0_MIT3_40JF09_lec16.pdf",
+          "finding": "Pages 2–6 cover size/modulus interactions, solute atmospheres, pinning and strain aging."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Solute concentration, chemistry, temperature and the relevant dislocation character determine the actual magnitude; not every alloying change increases every strength measure."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 75,
+      "assistant_tokens": 58,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 50
+    },
+    {
+      "id": "repo-61ffd8b9c8e569cb115a136b",
+      "messages_sha256": "61ffd8b9c8e569cb115a136b66566fe9fa87c0570e0f902755e9e468278a3819",
+      "state": "PASS",
+      "rationale": "Correct explanatory paraphrase of a standard GND-based indentation-size-effect mechanism.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Nix and Gao (1998), Indentation size effects in crystalline materials: A law for strain gradient plasticity",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0022509697000860",
+          "finding": "GND-based strain-gradient modeling gives increasing hardness at small indentation depth in studied copper and silver crystals; this is a physical model with a specified crystalline-material scope."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Nix-Gao scaling H/H0=sqrt(1+h_star/h) increases as h decreases within its model regime."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Can appropriately avoids asserting the mechanism is universal across all shallow contacts, surface artifacts or material classes."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 61,
+      "assistant_tokens": 37,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 51
+    },
+    {
+      "id": "repo-e44f0ec55c46af28004528d0",
+      "messages_sha256": "e44f0ec55c46af28004528d0ddf85f0a95acb01cbf31223d10b05f6441ac8a1f",
+      "state": "PASS",
+      "rationale": "Correct decomposition of indentation response and test-dependent hardness measurement.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Oliver and Pharr (1992), Improved technique for determining hardness and elastic modulus using load and displacement sensing indentation experiments",
+          "url": "https://web.mit.edu/cortiz/www/3.052/3.052CourseReader/45_OliverPharr1992Nanoindentation.pdf",
+          "finding": "Elastic unloading stiffness, plastic impressions, contact-area determination and indenter calibration."
+        },
+        {
+          "method": "independent_dislocation_and_phase_equilibrium_checks",
+          "finding": "Individually checked dislocation-spacing and Taylor-stress scaling, hardness units and contact work, phase-composition balance, strain-gradient compatibility and the limits of predicting phase equilibrium from atomic size alone."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Hardness is load divided by an appropriate contact area; elastic recovery and pile-up/sink-in change the inferred area and unloading stiffness."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A named standardized hardness method can be reproducible; the answer rejects an invariant value across methods/conditions, not material characterization itself."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 89,
+      "assistant_tokens": 69,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 52
+    },
+    {
+      "id": "repo-d9bac6c556892abe276a67ae",
+      "messages_sha256": "d9bac6c556892abe276a67aed86b35e329d782eca194a6161f8ab2efcb1e9545",
+      "state": "PASS",
+      "rationale": "Correct conditional alternatives when ordinary glide is obstructed by particles.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT 3.40 Physical Metallurgy Lecture 8",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/d5c8cf6303cce79bedcdb66175cf51ff_MIT3_40JF09_lec08.pdf",
+          "finding": "Dislocation interactions, work hardening and obstacle bypass/cross-slip/climb routes."
+        },
+        {
+          "title": "MIT 3.40 Physical Metallurgy Lecture 18",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/3b9508adaba259c0d0628f6078f92349_MIT3_40JF09_lec18.pdf",
+          "finding": "Fixed-composition compounds, particle cutting/bowing and coherent/semicoherent/incoherent interfaces."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Which path becomes accessible depends on stress, particle properties, temperature and available dislocation systems; the list does not claim every mechanism operates simultaneously."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 84,
+      "assistant_tokens": 65,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 53
+    },
+    {
+      "id": "repo-5331fe39444f7b116e27ba4e",
+      "messages_sha256": "5331fe39444f7b116e27ba4e4f7954ecf321194f38c53ed00d4b0acd963976c7",
+      "state": "PASS",
+      "rationale": "Correct Cottrell-atmosphere explanation of ordinary static strain aging in low-carbon steel.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT 3.40 Physical Metallurgy Lecture 16",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/613623af5c60a58694cab425892aa9b0_MIT3_40JF09_lec16.pdf",
+          "finding": "Pages 2–6 cover size/modulus interactions, solute atmospheres, pinning and strain aging."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Aging kinetics, solute availability and prior deformation matter; yield-point/Luders behavior is qualified as often rather than necessary."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 83,
+      "assistant_tokens": 62,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 54
+    },
+    {
+      "id": "repo-45edb57751f3c2c9016b6933",
+      "messages_sha256": "45edb57751f3c2c9016b6933ea718b4dead662c56c5a221fcb5549a7d310cdba",
+      "state": "PASS",
+      "rationale": "Sound plain-language compatibility explanation for geometrically necessary dislocations.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Nix and Gao (1998), Indentation size effects in crystalline materials: A law for strain gradient plasticity",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0022509697000860",
+          "finding": "GND-based strain-gradient modeling gives increasing hardness at small indentation depth in studied copper and silver crystals; this is a physical model with a specified crystalline-material scope."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The precise continuum object is lattice/plastic-distortion curl; arbitrary compatible elastic strain gradients alone do not mandate dislocations."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 60,
+      "assistant_tokens": 35,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 55
+    },
+    {
+      "id": "repo-f68590aa9a5db0fc16620249",
+      "messages_sha256": "f68590aa9a5db0fc16620249456cafcfa0cab583838fbedfdc794c4db55b04f3",
+      "state": "PASS",
+      "rationale": "Correct terms and forest-spacing origin of the Taylor hardening scale.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT 3.40 Physical Metallurgy Lecture 8",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/d5c8cf6303cce79bedcdb66175cf51ff_MIT3_40JF09_lec08.pdf",
+          "finding": "Dislocation interactions, work hardening and obstacle bypass/cross-slip/climb routes."
+        },
+        {
+          "method": "independent_dislocation_and_phase_equilibrium_checks",
+          "finding": "Individually checked dislocation-spacing and Taylor-stress scaling, hardness units and contact work, phase-composition balance, strain-gradient compatibility and the limits of predicting phase equilibrium from atomic size alone."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "rho has units 1/m^2, so G*b*sqrt(rho) has stress units and an obstacle spacing proportional to 1/sqrt(rho)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The coefficient and mapping from shear to tensile flow stress depend on microstructure and texture."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 90,
+      "assistant_tokens": 65,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 56
+    },
+    {
+      "id": "repo-ec6574decd782fc40ef13996",
+      "messages_sha256": "ec6574decd782fc40ef139961e513c16af05db77c7e4fc5ac6e282726d7df0ad",
+      "state": "PASS",
+      "rationale": "Correct standard carbon-steel martensite hardening explanation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Bhadeshia, Tempered Martensite",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2004/Tempered.Martensite/tempered.martensite.html",
+          "finding": "Virgin martensite morphology, carbon supersaturation, high dislocation density and tempering recovery."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Martensite also names transformations in other alloys; in the answer's explicit iron/carbon scope tetragonality varies with carbon content and the full strength includes interfaces and defect substructure."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 86,
+      "assistant_tokens": 68,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 57
+    },
+    {
+      "id": "repo-52f847cc07b58e6d22822d36",
+      "messages_sha256": "52f847cc07b58e6d22822d367383fc810e0f9449987c5a71541182511216e95e",
+      "state": "QUARANTINE",
+      "rationale": "Thermally activated positive rate sensitivity is sound, but the unqualified final stronger-at-lower-temperature claim is not implied by it; rate sensitivity depends jointly on temperature and activation volume.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Okubo et al., Materials Transactions 55 (2014), Section 3.2",
+          "url": "https://www.jstage.jst.go.jp/article/matertrans/55/10/55_M2014172/_pdf",
+          "finding": "Page 1526 reports a rate-induced stress increment increasing with temperature, contradicting a universal stronger-at-lower-temperature trend."
+        },
+        {
+          "method": "independent_dislocation_and_phase_equilibrium_checks",
+          "finding": "Individually checked dislocation-spacing and Taylor-stress scaling, hardness units and contact work, phase-composition balance, strain-gradient compatibility and the limits of predicting phase equilibrium from atomic size alone."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a simple activation-volume law, d(tau)/d ln(rate)=k*T/V_star. A lower-temperature strengthening of this increment does not follow without knowing V_star(T)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold only the final temperature trend, preserving the positive rate-sensitivity mechanism for suitable metals and regimes."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 87,
+      "assistant_tokens": 65,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 58
+    },
+    {
+      "id": "repo-c3c76cb7affe62725484d8b7",
+      "messages_sha256": "c3c76cb7affe62725484d8b7f863f28816b2ed2a6201195ac6af05143fa1c7b4",
+      "state": "PASS",
+      "rationale": "Correct mechanism inventory and non-independent-superposition warning for a cold-worked precipitation-hardened alloy.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT 3.40 Physical Metallurgy Lecture 8",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/d5c8cf6303cce79bedcdb66175cf51ff_MIT3_40JF09_lec08.pdf",
+          "finding": "Dislocation interactions, work hardening and obstacle bypass/cross-slip/climb routes."
+        },
+        {
+          "title": "MIT 3.40 Physical Metallurgy Lecture 18",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/3b9508adaba259c0d0628f6078f92349_MIT3_40JF09_lec18.pdf",
+          "finding": "Fixed-composition compounds, particle cutting/bowing and coherent/semicoherent/incoherent interfaces."
+        },
+        {
+          "title": "MIT 3.40 Physical Metallurgy Lectures 10 and 11",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/c9dc86331e13d11e8dd5d5a32b44894d_MIT3_40JF09_lec1011.pdf",
+          "finding": "Climb, dislocation annihilation, recovery and coarsening change stored defect contributions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The answer explicitly treats additive stress increments as approximate and asks which mechanisms control at the stated conditions."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 141,
+      "assistant_tokens": 115,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 59
+    },
+    {
+      "id": "repo-4765cfe86a486323f7626813",
+      "messages_sha256": "4765cfe86a486323f7626813ff9b2beb1a34fd6694b712a1c63f13edf721989e",
+      "state": "PASS",
+      "rationale": "Correct dislocation-carrier versus dislocation-obstacle explanation of work hardening.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT 3.40 Physical Metallurgy Lecture 8",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/d5c8cf6303cce79bedcdb66175cf51ff_MIT3_40JF09_lec08.pdf",
+          "finding": "Dislocation interactions, work hardening and obstacle bypass/cross-slip/climb routes."
+        },
+        {
+          "method": "independent_dislocation_and_phase_equilibrium_checks",
+          "finding": "Individually checked dislocation-spacing and Taylor-stress scaling, hardness units and contact work, phase-composition balance, strain-gradient compatibility and the limits of predicting phase equilibrium from atomic size alone."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Taylor forest resistance scales as alpha*G*b*sqrt(rho) under the stated obstacle-spacing model."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Barriers even faster is a qualitative account of increasing resistance, not a quantified population-growth law; dynamic recovery or softening can dominate other regimes."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 141,
+      "assistant_tokens": 112,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 60
+    },
+    {
+      "id": "repo-1cc2d1ade511c4b620ff9319",
+      "messages_sha256": "1cc2d1ade511c4b620ff931960c59dc4ae299ba8c2f66c8ce39cd256c782529b",
+      "state": "PASS",
+      "rationale": "Correct ordinary sharp-indentation plastic-zone, surrounding elastic constraint and surface-response overview.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Oliver and Pharr (1992), Improved technique for determining hardness and elastic modulus using load and displacement sensing indentation experiments",
+          "url": "https://web.mit.edu/cortiz/www/3.052/3.052CourseReader/45_OliverPharr1992Nanoindentation.pdf",
+          "finding": "Elastic unloading stiffness, plastic impressions, contact-area determination and indenter calibration."
+        },
+        {
+          "title": "Primary constrained-indentation analysis",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0167663603000759",
+          "finding": "Surrounding elastic material constrains the plastic region and raises mean contact pressure above uniaxial yield."
+        },
+        {
+          "title": "Nix and Gao (1998), Indentation size effects in crystalline materials: A law for strain gradient plasticity",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0022509697000860",
+          "finding": "GND-based strain-gradient modeling gives increasing hardness at small indentation depth in studied copper and silver crystals; this is a physical model with a specified crystalline-material scope."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The driving stress is the nonuniform deviatoric contact field, not hydrostatic pressure alone; pressure above uniaxial yield is shorthand for the constrained-contact scale."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 131,
+      "assistant_tokens": 110,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 61
+    },
+    {
+      "id": "repo-d5adf27d5b15708397905845",
+      "messages_sha256": "d5adf27d5b15708397905845b070c39e5019ac7ca2709802c68e2533dd576dfa",
+      "state": "PASS",
+      "rationale": "Correct GND/net-curvature versus statistically stored/canceling-dislocation distinction at representative-volume scale.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Nix and Gao (1998), Indentation size effects in crystalline materials: A law for strain gradient plasticity",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0022509697000860",
+          "finding": "GND-based strain-gradient modeling gives increasing hardness at small indentation depth in studied copper and silver crystals; this is a physical model with a specified crystalline-material scope."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The distinction is scale dependent, and a plastic-strain gradient is shorthand for incompatible plastic distortion rather than every possible compatible strain gradient."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 128,
+      "assistant_tokens": 100,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 62
+    },
+    {
+      "id": "repo-74c273957648a514fb84a1cc",
+      "messages_sha256": "74c273957648a514fb84a1ccf95c5450d8b9f792f2ab8d131c320aa97f5bc0e5",
+      "state": "PASS",
+      "rationale": "Correct microstructure- and scale-dependent reasons empirical hardness/tensile-strength conversions are not unique.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Pavlina and Van Tyne, Correlation of Yield Strength and Tensile Strength with Hardness for Steels",
+          "url": "https://wpfiles.mines.edu/aspprc/ResearchMaterials/Publications/386-Pavlina.pdf",
+          "finding": "Empirical hardness-strength correlations span several steel microstructures rather than establishing a unique test-independent identity."
+        },
+        {
+          "title": "Oliver and Pharr (1992), Improved technique for determining hardness and elastic modulus using load and displacement sensing indentation experiments",
+          "url": "https://web.mit.edu/cortiz/www/3.052/3.052CourseReader/45_OliverPharr1992Nanoindentation.pdf",
+          "finding": "Elastic unloading stiffness, plastic impressions, contact-area determination and indenter calibration."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Ultimate tensile strength and flow stress differ; any conversion needs a calibrated material/test regime."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 147,
+      "assistant_tokens": 119,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 63
+    },
+    {
+      "id": "repo-4959765b75f445b86d0cd1e0",
+      "messages_sha256": "4959765b75f445b86d0cd1e04926308e06ec8b77e3cc52a461b97f2079bb630e",
+      "state": "PASS",
+      "rationale": "Correct conditional microstructural interactions explaining why nominal strengthening treatments need not combine monotonically.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT 3.40 Physical Metallurgy Lectures 10 and 11",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/c9dc86331e13d11e8dd5d5a32b44894d_MIT3_40JF09_lec1011.pdf",
+          "finding": "Climb, dislocation annihilation, recovery and coarsening change stored defect contributions."
+        },
+        {
+          "title": "MIT 3.40 Physical Metallurgy Lecture 18",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/3b9508adaba259c0d0628f6078f92349_MIT3_40JF09_lec18.pdf",
+          "finding": "Fixed-composition compounds, particle cutting/bowing and coherent/semicoherent/incoherent interfaces."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Premature cracking reduces usable structural strength rather than necessarily lowering matrix flow stress; the answer distinguishes the controlling failure path."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 137,
+      "assistant_tokens": 114,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 64
+    },
+    {
+      "id": "repo-86358ea5ed73e4d8e02fd61e",
+      "messages_sha256": "86358ea5ed73e4d8e02fd61ed801d3467315b69e59a8b0a2ec7c0f16397b4df7",
+      "state": "PASS",
+      "rationale": "Correct line-compound explanation within its explicit stoichiometric-intermetallic scope.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT 3.40 Physical Metallurgy Lecture 18",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/3b9508adaba259c0d0628f6078f92349_MIT3_40JF09_lec18.pdf",
+          "finding": "Fixed-composition compounds, particle cutting/bowing and coherent/semicoherent/incoherent interfaces."
+        },
+        {
+          "method": "independent_dislocation_and_phase_equilibrium_checks",
+          "finding": "Individually checked dislocation-spacing and Taylor-stress scaling, hardness units and contact work, phase-composition balance, strain-gradient compatibility and the limits of predicting phase equilibrium from atomic size alone."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Some intermetallics have finite homogeneity ranges and appear as phase fields; the answer specifically identifies the fixed-composition case."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 78,
+      "assistant_tokens": 54,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 65
+    },
+    {
+      "id": "repo-b6e40e9c4428069b155c9239",
+      "messages_sha256": "b6e40e9c4428069b155c92394dcccd7f645960a91b8b4c761de64447ca3be647",
+      "state": "QUARANTINE",
+      "rationale": "The size-mismatch tendency is valid, but atomic size alone does not establish the asserted limited-solubility phase diagram for the hypothetical Cu-Ni system.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Bhadeshia, Cambridge, Solid Solutions: The Hume-Rothery Rules",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2004/titanium/hume.rothery.html",
+          "finding": "A size mismatch above approximately 15 percent makes low solubility likely; the rules are empirical tendencies rather than a full free-energy/phase-diagram specification."
+        },
+        {
+          "method": "independent_dislocation_and_phase_equilibrium_checks",
+          "finding": "Individually checked dislocation-spacing and Taylor-stress scaling, hardness units and contact work, phase-composition balance, strain-gradient compatibility and the limits of predicting phase equilibrium from atomic size alone."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A regular-solution model has DeltaG_mix=Omega*x*(1-x)+R*T*[x*ln(x)+(1-x)*ln(1-x)]; stability depends on Omega, T and competing phase free energies, not size percentage alone."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the definite prediction, preserving the empirical unfavorable-size-factor rationale and the explicitly tentative eutectic/peritectic suggestion."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 89,
+      "assistant_tokens": 61,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 66
+    },
+    {
+      "id": "repo-42e0c767612c7e8d03110629",
+      "messages_sha256": "42e0c767612c7e8d03110629a2a259085e15c9fc7874736f60c00984dba42471",
+      "state": "PASS",
+      "rationale": "Correct compact thermodynamics/kinetics/heat-flow decomposition of solidification microstructure.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Kurz, Cambridge-hosted solidification lecture",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2002/kurz.pdf",
+          "finding": "Thermal gradient, growth velocity, undercooling and nucleation-site density affect solidification microstructure."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The list is an introductory organization of coupled effects; convection, composition gradients and interface anisotropy enter more detailed models."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 89,
+      "assistant_tokens": 69,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 67
+    },
+    {
+      "id": "repo-3de2878c924c02412e527f22",
+      "messages_sha256": "3de2878c924c02412e527f220a1a4b8d3e71bf20b12fac7f1559996046f2e0a3",
+      "state": "PASS",
+      "rationale": "Correct conceptual coherency-to-semicoherency-to-incoherency competition between lattice matching, elastic strain and interfacial energy.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT 3.40 Physical Metallurgy Lecture 18",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/3b9508adaba259c0d0628f6078f92349_MIT3_40JF09_lec18.pdf",
+          "finding": "Fixed-composition compounds, particle cutting/bowing and coherent/semicoherent/incoherent interfaces."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "High/low strain and interface energy are comparative tendencies, not universal numerical rankings; size, shape, orientation and chemistry govern transitions."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 101,
+      "assistant_tokens": 73,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 68
+    },
+    {
+      "id": "repo-adccfb076ed39a340919f564",
+      "messages_sha256": "adccfb076ed39a340919f564095576a81847d41238aa09acaea64016ef2b37b0",
+      "state": "PASS",
+      "rationale": "Correct lever-rule mass balance and fractions.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_dislocation_and_phase_equilibrium_checks",
+          "finding": "Individually checked dislocation-spacing and Taylor-stress scaling, hardness units and contact work, phase-composition balance, strain-gradient compatibility and the limits of predicting phase equilibrium from atomic size alone."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With f_s=(50-30)/(50-20)=2/3, mass balance is (2/3)*20+(1/3)*50=30 percent B."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Both endpoints and overall composition must use the same mass or mole basis; the fraction follows that basis."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 130,
+      "assistant_tokens": 73,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 69
+    },
+    {
+      "id": "repo-2b3531b6d7451863107f7f46",
+      "messages_sha256": "2b3531b6d7451863107f7f46023dcbe40e2beb1b0c9a50943da83c0289daff85",
+      "state": "PASS",
+      "rationale": "Reasonable ordinary polycrystalline grain-growth tradeoff between Hall-Petch strength and grain-boundary-controlled high-temperature creep.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Bhadeshia, Nickel Based Superalloys",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2003/Superalloys/superalloys.html",
+          "finding": "Grain boundaries influence creep behavior; single-crystal turbine materials avoid boundary-related weaknesses."
+        },
+        {
+          "method": "independent_dislocation_and_phase_equilibrium_checks",
+          "finding": "Individually checked dislocation-spacing and Taylor-stress scaling, hardness units and contact work, phase-composition balance, strain-gradient compatibility and the limits of predicting phase equilibrium from atomic size alone."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "sigma_y=sigma0+k/sqrt(d) decreases with increasing d when the ordinary Hall-Petch law with k>0 applies."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Strength/toughness trends are conventional regimes rather than universal laws, especially at nanograin scales or with different fracture mechanisms. Turbine single crystals remove boundary-controlled weaknesses."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 73,
+      "assistant_tokens": 60,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 70
+    },
+    {
+      "id": "repo-e2c082cdbd172f0481e34d3c",
+      "messages_sha256": "e2c082cdbd172f0481e34d3c1aea3512a22a316d0ef9e043df1663fc43e88cd2",
+      "state": "QUARANTINE",
+      "rationale": "The mechanical-cracking versus corrosion distinction is correct, but the clause saying corrosion supplies the damaging environment reverses process and environment: corrosion is degradation caused by reaction with an environment.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "AMPP, What is Corrosion?",
+          "url": "https://www.ampp.org/technical-research/what-is-corrosion",
+          "finding": "Corrosion is environmentally driven degradation, frequently involving coupled anodic and cathodic electrochemical processes."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold that clause without rewriting it as an environmental contribution; do not infer that all stress cracking is stress-corrosion cracking."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 39,
+      "assistant_tokens": 22,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 71
+    },
+    {
+      "id": "repo-81ee3e5f109ea87fc463ab88",
+      "messages_sha256": "81ee3e5f109ea87fc463ab8860032bb37496ec789fa6ae168f51d65f6dbdde88",
+      "state": "PASS",
+      "rationale": "Correct qualitative pH effects on passive-film stability and electrochemical corrosion reactions.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NIST, primary Zn–Ni pH/passivation study",
+          "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=934249",
+          "finding": "pH-dependent surface passivation and corrosion rate provide direct evidence for the qualified pH mechanism."
+        },
+        {
+          "method": "independent_dislocation_and_phase_equilibrium_checks",
+          "finding": "Individually checked dislocation-spacing and Taylor-stress scaling, hardness units and contact work, phase-composition balance, strain-gradient compatibility and the limits of predicting phase equilibrium from atomic size alone."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Nernst equilibria for reactions involving H+ shift with pH, while kinetic/passive-film effects determine actual rates."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "No monotonic pH-to-corrosion-rate rule is asserted; the metal, potential, species and transport regime matter."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 40,
+      "assistant_tokens": 24,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 72
+    },
+    {
+      "id": "repo-edd6072e280e66d8ed4b0a02",
+      "messages_sha256": "edd6072e280e66d8ed4b0a027b77becf1c238110293a6ce24b08960be54cd61c",
+      "state": "PASS",
+      "rationale": "Correct mechanism-level link from tensile loading to crack opening and environmentally assisted fracture.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "AMPP, Stress Corrosion Cracking",
+          "url": "https://www.ampp.org/technical-research/impact/corrosion-basics/group-3/stress-corrosion-cracking",
+          "finding": "Tensile stress and a susceptible material/environment combination jointly drive SCC, including applied or residual stress."
+        },
+        {
+          "title": "Primary stress-corrosion/mechanochemical study (2024)",
+          "url": "https://link.springer.com/article/10.1007/s44251-024-00034-9",
+          "finding": "Section 4 discusses stress/free-energy effects and their limits; stored-energy changes alone need not significantly alter active dissolution."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "SCC needs a susceptible alloy/environment pair; tensile stress alone does not guarantee corrosion, and the chemical-potential contribution is stress-state and species dependent."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 41,
+      "assistant_tokens": 22,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 73
+    },
+    {
+      "id": "repo-029e1b9a7526c631ce4b0794",
+      "messages_sha256": "029e1b9a7526c631ce4b079455f47df543eea12e1dc4650b2297a68fccc74338",
+      "state": "PASS",
+      "rationale": "Correct definition and physical distinction of corrosion fatigue from fatigue without a corrosive environment.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "AMPP, Corrosion Fatigue",
+          "url": "https://www.ampp.org/technical-research/impact/corrosion-basics/group-3/corrosion-fatigue",
+          "finding": "Combined cyclic stress and a corrosive environment can accelerate cracking and reduce fatigue resistance relative to noncorrosive conditions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The lifetime reduction depends on environment, cycle frequency, chemistry and crack mechanism; this is the ordinary synergistic mechanism, not a numerical lifetime prediction."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 74,
+      "assistant_tokens": 53,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0050-0075.json",
+      "original_domain_ordinal": 74
     }
   ],
-  "reviewed": 1909,
+  "reviewed": 1934,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true
