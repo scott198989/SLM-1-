@@ -30340,9 +30340,861 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
       "original_domain_ordinal": 49
+    },
+    {
+      "id": "repo-7c3c489317cea9a8609bb4c2",
+      "messages_sha256": "7c3c489317cea9a8609bb4c2454344282deaedf4ca1c4e76c65b2eea1d2a4fbf",
+      "state": "PASS",
+      "rationale": "Correct scalar surface integral using areal mass density rather than a volume or flux integral.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_vector_calculus",
+          "finding": "Surface integrals, Stokes and divergence statements are checked with orientation, regularity and physical-density conventions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "rho has mass/area units and dS has area units, so the integral has mass units."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 72,
+      "assistant_tokens": 43,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 50
+    },
+    {
+      "id": "repo-30ecec13908759cd7c4e8291",
+      "messages_sha256": "30ecec13908759cd7c4e8291078f9e851217c7b611d62c692e81c31e29d38d3c",
+      "state": "PASS",
+      "rationale": "Correct basic derivative-based optimization overview with explicit classification after finding stationary candidates.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivatives, integrals, geometric Jacobians, limits and sequence/series statements are checked on their appropriate domains."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Endpoints, nondifferentiable points and constraints may also matter; derivative-zero candidates alone are not a complete global optimization algorithm."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 77,
+      "assistant_tokens": 58,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 51
+    },
+    {
+      "id": "repo-f4851a36078ffa48dc1a1384",
+      "messages_sha256": "f4851a36078ffa48dc1a13843ee2686f9e65144e184c0dcf621eddec0c12fac5",
+      "state": "PASS",
+      "rationale": "Correct antiderivative evaluation and odd-function cancellation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivatives, integrals, geometric Jacobians, limits and sequence/series statements are checked on their appropriate domains."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "[x^4/4]_-1^1=0."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 91,
+      "assistant_tokens": 65,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 52
+    },
+    {
+      "id": "repo-65fa74f81ed991f350838d8b",
+      "messages_sha256": "65fa74f81ed991f350838d8b0506db65de2ff3e031a2126209c39a36feefeaa3",
+      "state": "PASS",
+      "rationale": "Correct product rule and first-order explanation of its two contributions.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivatives, integrals, geometric Jacobians, limits and sequence/series statements are checked on their appropriate domains."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Delta(fg)=g*Delta f+f*Delta g+Delta f*Delta g; the final product is higher order for differentiable factors."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 161,
+      "assistant_tokens": 136,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 53
+    },
+    {
+      "id": "repo-9e51917407ffb7f0075a0a10",
+      "messages_sha256": "9e51917407ffb7f0075a0a104ca24b61ac62fddd917f8624d61f6b52691890ee",
+      "state": "PASS",
+      "rationale": "Correct rotational-symmetry motivation for cylindrical coordinates and an often trivial angular integral.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivatives, integrals, geometric Jacobians, limits and sequence/series statements are checked on their appropriate domains."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A rotation-invariant solid about z has full angular range[0,2pi), and an angle-independent volume integrand contributes factor2pi."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Cross-sections may be disks, annuli or unions of circular rings, not only filled disks. The informal circles wording need not exclude annular solids."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 100,
+      "assistant_tokens": 72,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 54
+    },
+    {
+      "id": "repo-1a88b4318673b8227dc19eb2",
+      "messages_sha256": "1a88b4318673b8227dc19eb21341c358b1fd6ac67a60430cabef6eb5797f867d",
+      "state": "PASS",
+      "rationale": "Correct monotonicity and concavity interpretation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivatives, integrals, geometric Jacobians, limits and sequence/series statements are checked on their appropriate domains."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "f_prime>0 makes f increasing; f_second<0 makes its positive slope decrease."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 90,
+      "assistant_tokens": 57,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 55
+    },
+    {
+      "id": "repo-8991f11637c4e5dee30bed1b",
+      "messages_sha256": "8991f11637c4e5dee30bed1b647b108a68f56d76cd902e399d2809047e69c0b3",
+      "state": "PASS",
+      "rationale": "Correct plain-language FTC antiderivative-evaluation method in its ordinary theorem setting.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivatives, integrals, geometric Jacobians, limits and sequence/series statements are checked on their appropriate domains."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Under the FTC hypotheses, integral_a^b f=F(b)-F(a) for an antiderivative F on the relevant interval."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "One must have the needed integrability/regularity and an antiderivative across the whole interval; this shorthand does not authorize subtracting across an interior singularity or prove an antiderivative exists in elementary form."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 78,
+      "assistant_tokens": 54,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 56
+    },
+    {
+      "id": "repo-6931743085dd188a134a8970",
+      "messages_sha256": "6931743085dd188a134a8970c359fd1c4b8bd64449129a0b0244582ffd12396f",
+      "state": "QUARANTINE",
+      "rationale": "The frequency-folding idea is correct, but the answer unconditionally equates sampling below twice the highest frequency with overlapping spectra and irrecoverable information. Appropriate known-bandpass sampling is a counterexample to that unqualified threshold.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices, Basics of Band-Limited Sampling and Aliasing",
+          "url": "https://www.analog.com/en/resources/technical-articles/basics-of-bandlimited-sampling-and-aliasing.html",
+          "finding": "Distinguishes the twice-highest-frequency baseband criterion from bandpass sampling. Appropriate bandpass sampling can have separated spectral replicas and recover information at a rate below twice the upper band edge."
+        },
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivatives, integrals, geometric Jacobians, limits and sequence/series statements are checked on their appropriate domains."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A real signal confined to bands[91,99] and[-99,-91] Hz sampled at30 Hz folds to disjoint[1,9] and[-9,-1] Hz bands. Knowing its original band permits reconstruction without overlap, although30<2*99."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for missing baseband/reconstruction assumptions. The ordinary full-baseband Nyquist explanation and high-to-low folding mechanism remain valid."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 73,
+      "assistant_tokens": 54,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 57
+    },
+    {
+      "id": "repo-e38016d8d500f8f06b621935",
+      "messages_sha256": "e38016d8d500f8f06b6219359dc0331b7090dda28b11273277ae59d6cf5c0c56",
+      "state": "PASS",
+      "rationale": "Correct Lipschitz estimate and continuity proof for the explicitly chosen Riemann-integrable setting.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivatives, integrals, geometric Jacobians, limits and sequence/series statements are checked on their appropriate domains."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A Riemann-integrable f on compact[a,b] is bounded by M; |integral_x^(x+h) f|<=M*|h|."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "General Lebesgue-integrable functions may be unbounded and give absolutely continuous primitives without a global Lipschitz bound. The answer explicitly states its Riemann hypothesis."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 145,
+      "assistant_tokens": 103,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 58
+    },
+    {
+      "id": "repo-9202c6e4294e6b574a752129",
+      "messages_sha256": "9202c6e4294e6b574a75212962db993af4aabc1a33a483b05b34b0d1e875941e",
+      "state": "PASS",
+      "rationale": "Correct domain-decomposition strategy using additivity of integrals.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivatives, integrals, geometric Jacobians, limits and sequence/series statements are checked on their appropriate domains."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For disjoint interiors, integral_R f=sum integral_Rj f; shared boundary sets of measure zero do not double-count area."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Use integrable pieces and avoid positive-measure overlap; not every arbitrary pathological region admits a convenient finite simple decomposition."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 84,
+      "assistant_tokens": 61,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 59
+    },
+    {
+      "id": "repo-b1edf5946d8604963366aed0",
+      "messages_sha256": "b1edf5946d8604963366aed0fbe7f5c5310175afbbd8795284735fab450fb699",
+      "state": "PASS",
+      "rationale": "Correct explanation of the tangent-half-angle rationalization and its algebraic tradeoff.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivatives, integrals, geometric Jacobians, limits and sequence/series statements are checked on their appropriate domains."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "t=tan(x/2) gives sin x=2t/(1+t²), cos x=(1-t²)/(1+t²), dx=2dt/(1+t²), producing a rational integrand."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Use local intervals avoiding x=(2k+1)pi where the substitution is singular; ordinary substitution is broader than a literal visible-derivative pattern."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 172,
+      "assistant_tokens": 132,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 60
+    },
+    {
+      "id": "repo-e3324993af919d0bf697ac4d",
+      "messages_sha256": "e3324993af919d0bf697ac4df7a4a99e4fb4b0511945f6f5a05b603f056459c8",
+      "state": "PASS",
+      "rationale": "Correct cylindrical volume Jacobian and area-times-height explanation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivatives, integrals, geometric Jacobians, limits and sequence/series statements are checked on their appropriate domains."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Absolute Jacobian of(r,theta,z)->(r cos theta,r sin theta,z) is r for r>=0."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 75,
+      "assistant_tokens": 56,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 61
+    },
+    {
+      "id": "repo-ff898d11391f72ea20117135",
+      "messages_sha256": "ff898d11391f72ea2011713547b19f01f1349e94447feedae350a1f25dc41415",
+      "state": "PASS",
+      "rationale": "Sound practical Stokes theorem interpretation linking boundary circulation to curl flux.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_vector_calculus",
+          "finding": "Surface integrals, Stokes and divergence statements are checked with orientation, regularity and physical-density conventions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "integral_boundaryS F dot dr=integral_S curl F dot n dS with consistent orientation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Any spanning surface must be admissible and lie in a region where the field has the needed regularity; singularities and topology cannot be ignored."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 75,
+      "assistant_tokens": 53,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 62
+    },
+    {
+      "id": "repo-0b94a814afd1e7f2c0938607",
+      "messages_sha256": "0b94a814afd1e7f2c093860749424667c824a716844912236adb196fd9546fd5",
+      "state": "QUARANTINE",
+      "rationale": "The KKT/null-space comparison is broadly useful, but saying the null-space method eliminates feasible directions reverses the construction: it parametrizes those directions and eliminates the equality constraints. Hold this technical wording for clarification.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Boyd and Vandenberghe, Convex Optimization, chapter10",
+          "url": "https://www.seas.ucla.edu/~vandenbe/cvxbook/bv_cvxbook.pdf",
+          "finding": "For Ax=b, a null-space basis F parametrizes feasible points x=xhat+Fz and feasible directions F*dz. It eliminates equality constraints from the reduced problem rather than eliminating the feasible directions."
+        },
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivatives, integrals, geometric Jacobians, limits and sequence/series statements are checked on their appropriate domains."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For constraint x1+x2=0, Z=(1,-1)^T spans feasible directions. A null-space method optimizes over p=Z*z; it retains, rather than removes, those feasible movements."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Do not reject the qualified claim that neither strategy dominates or infer zero computational cost from the idiom that multiplier estimates come for free."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 133,
+      "assistant_tokens": 109,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 63
+    },
+    {
+      "id": "repo-58e5511ff78fee4d49481f9d",
+      "messages_sha256": "58e5511ff78fee4d49481f9d7b9819c4de9d5d1762e0afdc4131ba5b674d1b06",
+      "state": "PASS",
+      "rationale": "Correct real power-series radius/interior/endpoint workflow.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivatives, integrals, geometric Jacobians, limits and sequence/series statements are checked on their appropriate domains."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The root-test radius is R=1/limsup |c_n|^(1/n); within R absolute convergence holds, and finite endpoints require separate tests."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The ratio limit need not exist, while root limsup handles that case. R=0 or infinity changes which finite endpoints exist."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 89,
+      "assistant_tokens": 67,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 64
+    },
+    {
+      "id": "repo-1de16586370a5fae4fd68544",
+      "messages_sha256": "1de16586370a5fae4fd68544f4fc0ce6ebc1fa6349d4e136bf1d335878016e10",
+      "state": "PASS",
+      "rationale": "Correct divergence-theorem statement of Gauss law for magnetism in classical Maxwell theory.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "Maxwell_Gauss_magnetism_contract",
+          "finding": "In classical Maxwell electromagnetism without magnetic monopoles, div B=0 and closed-surface magnetic flux vanishes wherever the divergence theorem applies."
+        },
+        {
+          "method": "independent_vector_calculus",
+          "finding": "Surface integrals, Stokes and divergence statements are checked with orientation, regularity and physical-density conventions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "integral_closedS B dot n dS=integral_V div B dV=0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The stated no-monopole Maxwell model supplies the physics; this does not claim an experimental proof excluding every hypothetical magnetic charge theory."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 91,
+      "assistant_tokens": 70,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 65
+    },
+    {
+      "id": "repo-67aa7654d568e5955875b1bb",
+      "messages_sha256": "67aa7654d568e5955875b1bb3d5febb48dc2ee4c8607e2ae58fbf2ef7e96688f",
+      "state": "PASS",
+      "rationale": "Correct Cauchy definition and equivalence to convergence in the complete real-number space.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivatives, integrals, geometric Jacobians, limits and sequence/series statements are checked on their appropriate domains."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For any epsilon>0 there is N such that every n,m>N satisfy|a_n-a_m|<epsilon; completeness of R supplies a real limit."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The equivalence can fail in incomplete spaces such as Q, but the answer explicitly says real numbers."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 114,
+      "assistant_tokens": 89,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 66
+    },
+    {
+      "id": "repo-c067a41459e753ff52aa181d",
+      "messages_sha256": "c067a41459e753ff52aa181d85062f7b77178354f8b373b9710abb731c5e0a23",
+      "state": "PASS",
+      "rationale": "Correct explanation of how similarity relations supply geometric constraints before differentiating related rates.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivatives, integrals, geometric Jacobians, limits and sequence/series statements are checked on their appropriate domains."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Parallel-line/shadow assumptions must be satisfied in the particular diagram; the answer describes common constructions, not every related-rates problem."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 76,
+      "assistant_tokens": 54,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 67
+    },
+    {
+      "id": "repo-c516bb32f978991792b27b5f",
+      "messages_sha256": "c516bb32f978991792b27b5f6a42558170d92ec7833606592f8c3ad5ad12f6d9",
+      "state": "PASS",
+      "rationale": "Correct absolute-convergence criterion for equality of double and iterated sums, and appropriate warning when absolute convergence is absent.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "John Hunter, UC Davis Introduction to Analysis, chapter4",
+          "url": "https://www.math.ucdavis.edu/~hunter/intro_analysis_pdf/ch4.pdf",
+          "finding": "Absolute convergence of a double series ensures both iterated sums exist and equal the unordered sum; checking an iterated sum of absolute values suffices through Tonelli/Fubini."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Tonelli applied to |a_ij| makes finite iterated absolute sum equal the product sum; Fubini then permits interchanging the signed/complex sums."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The direct signed-sum equality is usually called Fubini or Fubini-Tonelli; the answer uses Tonelli as shorthand for the combined argument. Lack of absolute convergence can, but need not, change the sum."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 113,
+      "assistant_tokens": 92,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 68
+    },
+    {
+      "id": "repo-fde50f6a3ba6c5b92397475a",
+      "messages_sha256": "fde50f6a3ba6c5b92397475a551547530bfd6567555284aafa5dca4a04a75d7f",
+      "state": "PASS",
+      "rationale": "Accurate conceptual links between integration techniques and derivative/antiderivative structure.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivatives, integrals, geometric Jacobians, limits and sequence/series statements are checked on their appropriate domains."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Substitution reverses the chain rule and parts reverses the product rule; rational partial fractions yield elementary polynomial/log/arctangent pieces."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "No claim that every integrand has an elementary antiderivative or that every listed strategy succeeds."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 150,
+      "assistant_tokens": 123,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 69
+    },
+    {
+      "id": "repo-8cf98731ea88241d21d7db27",
+      "messages_sha256": "8cf98731ea88241d21d7db27707842efed6198fcd7ebb295b97369a79ae03774",
+      "state": "PASS",
+      "rationale": "Correct concise geometric reason unconstrained partial derivatives alone are insufficient for a constrained optimum.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivatives, integrals, geometric Jacobians, limits and sequence/series statements are checked on their appropriate domains."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For f(x,y)=x+y on unit circle, an unconstrained gradient(1,1) need not vanish at a constrained extremum; its tangential projection must vanish."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is a feasibility/optimality explanation, not a rule that every numerical intermediate iterate must be exactly feasible."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 48,
+      "assistant_tokens": 23,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 70
+    },
+    {
+      "id": "repo-8c08913d2a4201b995730272",
+      "messages_sha256": "8c08913d2a4201b99573027228fb8d9e8635206186c43ca2133f302d7a7ecc4f",
+      "state": "PASS",
+      "rationale": "Correct scalar accumulation and vector work/circulation line-integral descriptions.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_vector_calculus",
+          "finding": "Surface integrals, Stokes and divergence statements are checked with orientation, regularity and physical-density conventions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Scalar integral is integral f(r(t))*|r_prime(t)|dt; work integral is integral F(r(t)) dot r_prime(t)dt."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A generic vector-field line integral need not represent physical work unless the field is force; the answer says typically."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 82,
+      "assistant_tokens": 67,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 71
+    },
+    {
+      "id": "repo-67d29872377e2d4f6da6ec6a",
+      "messages_sha256": "67d29872377e2d4f6da6ec6ab8382da8100778bd889f3829c8d5d082fec1c8b8",
+      "state": "QUARANTINE",
+      "rationale": "The standard nonzero geometric-series derivation is correct, but the categorical divergence claim for |r|>=1 omits the a=0 degenerate case, where every term and partial sum is zero.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivatives, integrals, geometric Jacobians, limits and sequence/series statements are checked on their appropriate domains."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With a=0,r=2, sum a*r^n=0 and a/(1-r)=0 despite|r|>1. For nonzero a the stated convergence threshold is correct."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for the missing nonzero-first-term qualification; do not reject the ordinary nontrivial geometric-series rule."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 115,
+      "assistant_tokens": 85,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 72
+    },
+    {
+      "id": "repo-ddc917d4ff94469f2ab8165a",
+      "messages_sha256": "ddc917d4ff94469f2ab8165a1be8b89e458fac38e60a6bf62368ff77765a2208",
+      "state": "PASS",
+      "rationale": "Correct distinction between the divergent two-sided improper integral and its zero Cauchy principal value.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivatives, integrals, geometric Jacobians, limits and sequence/series statements are checked on their appropriate domains."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "integral_epsilon^1 1/x dx=-ln epsilon->+infinity; integral_-1^-epsilon 1/x dx=ln epsilon->-infinity. Symmetric truncation cancels but independent improper limits do not exist finitely."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Changing a function value at a single point can be harmless for integration; here the essential problem is the nonintegrable neighborhood singularity, which the answer explains."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 134,
+      "assistant_tokens": 111,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 73
+    },
+    {
+      "id": "repo-ebc436d7a8e3510457d07961",
+      "messages_sha256": "ebc436d7a8e3510457d079617abbea96c3b20f2e2fcf3ea21de280ed7b781476",
+      "state": "PASS",
+      "rationale": "Correct practical distinction between reading level and rate of change, including sign and threshold uses.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivatives, integrals, geometric Jacobians, limits and sequence/series statements are checked on their appropriate domains."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a smooth reading s(t), ds/dt measures reading units per time; large magnitude indicates rapid change."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Sampled/noisy measurements need estimation/filtering and appropriate thresholds; the conceptual explanation does not prescribe a safety-certified alarm design."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 137,
+      "assistant_tokens": 110,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0050-0075.json",
+      "original_domain_ordinal": 74
     }
   ],
-  "reviewed": 1102,
+  "reviewed": 1127,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

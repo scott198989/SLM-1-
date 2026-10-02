@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 845,
+    "PASS": 867,
     "REJECT": 55,
-    "QUARANTINE": 203,
-    "NEEDS_HUMAN_REVIEW": 1009
+    "QUARANTINE": 206,
+    "NEEDS_HUMAN_REVIEW": 984
   },
   "by_domain": {
     "circuits": {
@@ -38,10 +38,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "calculus": {
-      "PASS": 44,
+      "PASS": 66,
       "REJECT": 3,
-      "QUARANTINE": 3,
-      "NEEDS_HUMAN_REVIEW": 165
+      "QUARANTINE": 6,
+      "NEEDS_HUMAN_REVIEW": 140
     },
     "electrical_components": {
       "PASS": 232,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1102,
+  "agent_substantive_reviews": 1127,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "0f408ba53f68f7ae48dd5e9234f633a47425216f04b4d9379e69a0ed88934a2a",
+  "technical_review_sha256": "4efe6b7762157e9d4f4e10483cf1019909b00e603a38cbf5ec944037d098dab4",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1007,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 982,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1183,11 +1183,36 @@
     "Correct ordinary Fourier partial-sum Gibbs description and asymptotic jump-relative overshoot.": 1,
     "Correct material-weighted cost, volume elimination and unique positive minimizing radius. The displayed constraint and cost expression determine height and cost at that radius.": 1,
     "Correct cylindrical bounds, radial Jacobian and paraboloid-cap volume.": 1,
-    "Correct overlapping-series continuation concept and rational transfer-function illustration away from genuine poles.": 1
+    "Correct overlapping-series continuation concept and rational transfer-function illustration away from genuine poles.": 1,
+    "The KKT/null-space comparison is broadly useful, but saying the null-space method eliminates feasible directions reverses the construction: it parametrizes those directions and eliminates the equality constraints. Hold this technical wording for clarification.": 1,
+    "Correct monotonicity and concavity interpretation.": 1,
+    "Correct divergence-theorem statement of Gauss law for magnetism in classical Maxwell theory.": 1,
+    "Correct basic derivative-based optimization overview with explicit classification after finding stationary candidates.": 1,
+    "Correct real power-series radius/interior/endpoint workflow.": 1,
+    "Correct product rule and first-order explanation of its two contributions.": 1,
+    "Correct Cauchy definition and equivalence to convergence in the complete real-number space.": 1,
+    "The standard nonzero geometric-series derivation is correct, but the categorical divergence claim for |r|>=1 omits the a=0 degenerate case, where every term and partial sum is zero.": 1,
+    "The frequency-folding idea is correct, but the answer unconditionally equates sampling below twice the highest frequency with overlapping spectra and irrecoverable information. Appropriate known-bandpass sampling is a counterexample to that unqualified threshold.": 1,
+    "Correct scalar surface integral using areal mass density rather than a volume or flux integral.": 1,
+    "Correct plain-language FTC antiderivative-evaluation method in its ordinary theorem setting.": 1,
+    "Correct scalar accumulation and vector work/circulation line-integral descriptions.": 1,
+    "Correct concise geometric reason unconstrained partial derivatives alone are insufficient for a constrained optimum.": 1,
+    "Correct domain-decomposition strategy using additivity of integrals.": 1,
+    "Correct rotational-symmetry motivation for cylindrical coordinates and an often trivial angular integral.": 1,
+    "Correct explanation of the tangent-half-angle rationalization and its algebraic tradeoff.": 1,
+    "Correct explanation of how similarity relations supply geometric constraints before differentiating related rates.": 1,
+    "Correct absolute-convergence criterion for equality of double and iterated sums, and appropriate warning when absolute convergence is absent.": 1,
+    "Correct distinction between the divergent two-sided improper integral and its zero Cauchy principal value.": 1,
+    "Correct cylindrical volume Jacobian and area-times-height explanation.": 1,
+    "Correct Lipschitz estimate and continuity proof for the explicitly chosen Riemann-integrable setting.": 1,
+    "Correct practical distinction between reading level and rate of change, including sign and threshold uses.": 1,
+    "Correct antiderivative evaluation and odd-function cancellation.": 1,
+    "Accurate conceptual links between integration techniques and derivative/antiderivative structure.": 1,
+    "Sound practical Stokes theorem interpretation linking boundary circulation to curl flux.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "98a3c2980f1c7b369260364f57b82ede5d08ac81cc4826fd2f381cbf75328409",
-  "substantively_unreviewed": 1007,
+  "published_decisions_sha256": "e7d1c402e229e315b58b12dfae9af98de829de39d2cbe6c531cef32f506b2ea5",
+  "substantively_unreviewed": 982,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
