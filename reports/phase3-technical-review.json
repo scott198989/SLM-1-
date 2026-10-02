@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 700,
+    "PASS": 721,
     "REJECT": 49,
-    "QUARANTINE": 186,
-    "NEEDS_HUMAN_REVIEW": 1177
+    "QUARANTINE": 190,
+    "NEEDS_HUMAN_REVIEW": 1152
   },
   "by_domain": {
     "circuits": {
@@ -32,10 +32,10 @@
       "NEEDS_HUMAN_REVIEW": 2
     },
     "trigonometry": {
-      "PASS": 62,
+      "PASS": 83,
       "REJECT": 2,
-      "QUARANTINE": 11,
-      "NEEDS_HUMAN_REVIEW": 125
+      "QUARANTINE": 15,
+      "NEEDS_HUMAN_REVIEW": 100
     },
     "calculus": {
       "PASS": 5,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 934,
+  "agent_substantive_reviews": 959,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "30232e015c13ed584cc469487b1901a3e680f9cf79b8387783d8d1805abc9a3f",
+  "technical_review_sha256": "fe7e5ac3f748ad31b14c4ec8fe4b93439f835837ecb7376c9a32ec092268954f",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1175,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1150,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1015,11 +1015,36 @@
     "Correct two-angle cosine explanation and periodic solution families.": 1,
     "Correct warning that squaring can introduce extraneous sign branches, illustrated by a valid trig example.": 1,
     "Plausible engineering decision example connecting nonlinear-load harmonics with heating, control interference and site-specific mitigation choices.": 1,
-    "Correct triple-angle identity and conclusion that every real angle satisfies the equation.": 1
+    "Correct triple-angle identity and conclusion that every real angle satisfies the equation.": 1,
+    "Correct practical advice for the standard one-step triangle-solving use of the sine rule: a known angle-opposite-side pair is needed, while the cosine rule directly handles SSS.": 1,
+    "The rotation-and-scaling description is correct for a nonzero multiplier, but the unrestricted complex number can be zero. In that case the plane collapses and the shape-preserving similarity conclusion fails.": 1,
+    "Faithful restatement of the specified cosine equation and all-solution goal.": 1,
+    "Correct meaning of no real solution, with valid range and contradiction examples.": 1,
+    "Correct separation of half-angle magnitude from the quadrant-dependent sign of the actual cosine.": 1,
+    "Correct sine-equality branches and the two exact periodic families.": 1,
+    "Correct parity identities and reasonable conditional simplification heuristics.": 1,
+    "The final solution x=n*pi is correct, but the nonzero-sine branch is not handled logically: the derived cos x=1 forces sin x=0 and therefore gives no solutions under that branch assumption. Those points belong only to the separate zero-sine case.": 1,
+    "Correct word-only description of a positive pi-radian half-turn.": 1,
+    "Correct vector-proof strategy and centroid example, with the cleaner-proof statement understood as qualitative guidance.": 1,
+    "Valid comparison proof of positive divergence and the corresponding negative divergence of sinh.": 1,
+    "Sound ideal Fourier-series description in terms of a base period and harmonic amplitudes/phases.": 1,
+    "Correct amplitude-envelope description, zeros and product-to-sum expression.": 1,
+    "Correct vector derivation of the cosine rule from two common-vertex side vectors.": 1,
+    "The auxiliary-angle method is correct, but tan(phi)=b/a alone does not choose the quadrant and is undefined for a=0. The coefficient signs require cos(phi)=a/R and sin(phi)=b/R, or an atan2 choice.": 1,
+    "Correct factorization and solution union, with tangent-domain exclusions explicitly addressed.": 1,
+    "Correct supplementary-angle explanation of SSA ambiguity, with the essential triangle-existence check explicitly included.": 1,
+    "Correct distinction between testing a few angles and proving an unrestricted trig identity over its intended real domain.": 1,
+    "Correct dot product, lengths, cosine, approximate angle, area and signed connecting-side vectors under the standard common-vertex interpretation.": 1,
+    "Correct unit-circle explanation of sine/cosine repetition after a full turn.": 1,
+    "Correct derivation by division on the common domain sin x!=0.": 1,
+    "Correct warning that selected numerical examples are not a symbolic proof of a universal identity.": 1,
+    "The exact one-dimensional zero-field Ising decimation formula is correct, and tracing over exponential spin weights explains the hyperbolic functions. Its fixed-point discussion is acceptable conceptual RG motivation.": 1,
+    "Correct complete real solution families for cosine equal to one half.": 1,
+    "The waveform examples are appropriate, but an unrestricted claim about any periodic function requires integrability/regularity and a stated convergence interpretation. At jumps, the ordinary series need not reproduce the chosen function value.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "0f1d70db281c0e7df3c7fe9c009cc21ec4d10fa0e97a7d07b18db77ea79cb969",
-  "substantively_unreviewed": 1175,
+  "published_decisions_sha256": "9e68a6c89cbeadc7169fc1d473153dcfa95b2569bcfb0f6b9c6a7d622458bd99",
+  "substantively_unreviewed": 1150,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

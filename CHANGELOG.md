@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-02 - Local trigonometry review 75–99
+
+- Added {'PASS': 21, 'QUARANTINE': 4} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 934 reviews unchanged.
+- Current local reviews: 959; dispositions: {'PASS': 721, 'REJECT': 49, 'QUARANTINE': 190, 'NEEDS_HUMAN_REVIEW': 1152}; next trigonometry offset: 100.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
 ## 2026-10-02 - Local trigonometry review 50–74
 
 - Added {'PASS': 24, 'QUARANTINE': 1} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 909 reviews unchanged.

@@ -24705,9 +24705,801 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/trigonometry-0050-0075.json",
       "original_domain_ordinal": 74
+    },
+    {
+      "id": "repo-74e232c6a06087e063dd0631",
+      "messages_sha256": "74e232c6a06087e063dd0631634fe93ff288a63120494594d53f9c081fe2cb49",
+      "state": "PASS",
+      "rationale": "Correct vector-proof strategy and centroid example, with the cleaner-proof statement understood as qualitative guidance.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_vector_geometry",
+          "finding": "Dot products, signed two-dimensional determinants and affine combinations give angle, area and centroid formulas."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For vertices a,b,c, g=(a+b+c)/3 lies on the median a+t*((b+c)/2-a) with t=2/3, and similarly on the other two medians."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 94,
+      "assistant_tokens": 74,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 75
+    },
+    {
+      "id": "repo-e31fc39a6d29caa79db16424",
+      "messages_sha256": "e31fc39a6d29caa79db1642411a6d78396971992764046e789fbcc262733f70e",
+      "state": "PASS",
+      "rationale": "Correct unit-circle explanation of sine/cosine repetition after a full turn.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_vector_geometry",
+          "finding": "Dot products, signed two-dimensional determinants and affine combinations give angle, area and centroid formulas."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The point (cos theta,sin theta) is unchanged when theta increases by 2pi."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 72,
+      "assistant_tokens": 52,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 76
+    },
+    {
+      "id": "repo-22cd86bc6c892e544f6658e2",
+      "messages_sha256": "22cd86bc6c892e544f6658e2152164fd8370cbc99a324a3b5a4e263cf654c926",
+      "state": "PASS",
+      "rationale": "Faithful restatement of the specified cosine equation and all-solution goal.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Equations, identities and branch conditions are checked symbolically on their stated/common domains; numerical checks are supplementary."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 57,
+      "assistant_tokens": 35,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 77
+    },
+    {
+      "id": "repo-d0ecffd3f29b3d68fe60d9e0",
+      "messages_sha256": "d0ecffd3f29b3d68fe60d9e08ca6aebee5a58cc6555fa38c9c0cd5556c8844f5",
+      "state": "PASS",
+      "rationale": "Correct distinction between testing a few angles and proving an unrestricted trig identity over its intended real domain.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_proof_logic_review",
+          "finding": "Finite spot checks do not establish an unrestricted identity over real angles; algebraic manipulations must preserve assumptions and domains."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Finite verification can prove a finite-domain claim or work with an independently established finite-determination theorem; that is different from the few-angle testing in this prompt."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 82,
+      "assistant_tokens": 56,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 78
+    },
+    {
+      "id": "repo-2cff9a8a940d71670f963a99",
+      "messages_sha256": "2cff9a8a940d71670f963a99172f482e59f53e3eacd656f1a3a1ace320437584",
+      "state": "PASS",
+      "rationale": "Correct meaning of no real solution, with valid range and contradiction examples.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Equations, identities and branch conditions are checked symbolically on their stated/common domains; numerical checks are supplementary."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For every real x, -1<=sin x<=1, so sin x=5 has no real solution."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 80,
+      "assistant_tokens": 51,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 79
+    },
+    {
+      "id": "repo-deffcbc137744e2ab9727260",
+      "messages_sha256": "deffcbc137744e2ab9727260bbaaa3578cfd37a83cb9be5ad4ac17896b42cc80",
+      "state": "PASS",
+      "rationale": "Correct dot product, lengths, cosine, approximate angle, area and signed connecting-side vectors under the standard common-vertex interpretation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_vector_geometry",
+          "finding": "Dot products, signed two-dimensional determinants and affine combinations give angle, area and centroid formulas."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "u dot v=-2, |u|=5, |v|=sqrt(5), determinant=-11. The area is 11/2 and the connecting displacement is u-v=(3,5) or its negative."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The third-side difference assumes both given vectors originate at the same triangle vertex; a head-to-tail directed-edge convention would use a different closing-vector expression."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 217,
+      "assistant_tokens": 162,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 80
+    },
+    {
+      "id": "repo-cbb92df8cc0891a5aeb0fac7",
+      "messages_sha256": "cbb92df8cc0891a5aeb0fac798453eb860197ac623436919239a6292812f8576",
+      "state": "QUARANTINE",
+      "rationale": "The auxiliary-angle method is correct, but tan(phi)=b/a alone does not choose the quadrant and is undefined for a=0. The coefficient signs require cos(phi)=a/R and sin(phi)=b/R, or an atan2 choice.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Equations, identities and branch conditions are checked symbolically on their stated/common domains; numerical checks are supplementary."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With a=-1,b=0, R=1 and tan(phi)=0 allow phi=0, which gives +sin x instead of -sin x. phi=pi is the compatible choice."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This hold concerns the missing phase-selection condition, not the amplitude-combination identity."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 90,
+      "assistant_tokens": 72,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 81
+    },
+    {
+      "id": "repo-e3a2182c14243e70e63b492f",
+      "messages_sha256": "e3a2182c14243e70e63b492fa42ff610f125eaa6aacc8ab4ab4c3c328e9cdc8e",
+      "state": "PASS",
+      "rationale": "Correct derivation by division on the common domain sin x!=0.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Equations, identities and branch conditions are checked symbolically on their stated/common domains; numerical checks are supplementary."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "(sin²x+cos²x)/sin²x=1+cot²x=csc²x."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 81,
+      "assistant_tokens": 58,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 82
+    },
+    {
+      "id": "repo-8534016a9ed4c09dd21bd546",
+      "messages_sha256": "8534016a9ed4c09dd21bd546204386610044baa8072427ce631691c148461f90",
+      "state": "PASS",
+      "rationale": "Sound ideal Fourier-series description in terms of a base period and harmonic amplitudes/phases.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT ES.1803 topic notes, Fourier approximation",
+          "url": "https://ocw.mit.edu/courses/es-1803-differential-equations-spring-2024/mites_1803_s24_topic_full.pdf",
+          "finding": "Fourier expansions use harmonics and require a convergence interpretation. At a jump, ordinary partial sums converge to the midpoint under standard regularity hypotheses."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Include a zero-frequency mean component when needed, and specify the convergence sense at jumps. The phrase idealized model avoids a general numerical reconstruction guarantee."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 80,
+      "assistant_tokens": 57,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 83
+    },
+    {
+      "id": "repo-8a7c5eda90147604da082fed",
+      "messages_sha256": "8a7c5eda90147604da082fedaf43df1fb4138ce3cc6de4bdfab2220a67ddcf7b",
+      "state": "PASS",
+      "rationale": "Correct amplitude-envelope description, zeros and product-to-sum expression.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Equations, identities and branch conditions are checked symbolically on their stated/common domains; numerical checks are supplementary."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "sin x*sin(10x)=(cos(9x)-cos(11x))/2 and |y|<=|sin x|."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The bound is an envelope; individual rapid extrema need not exactly touch it at every slow-phase value."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 134,
+      "assistant_tokens": 106,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 84
+    },
+    {
+      "id": "repo-5087d5bc810e5ad15f8a6fc1",
+      "messages_sha256": "5087d5bc810e5ad15f8a6fc12be017e22ad99ea7dadbc5b4156e052e4809cba0",
+      "state": "PASS",
+      "rationale": "Correct parity identities and reasonable conditional simplification heuristics.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Equations, identities and branch conditions are checked symbolically on their stated/common domains; numerical checks are supplementary."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "sin(-x)=-sin x and cos(-x)=cos x. The later suggestions use often/may and do not assert every even or odd function has one fixed algebraic form."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 167,
+      "assistant_tokens": 138,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 85
+    },
+    {
+      "id": "repo-639ade9317e897309a417e19",
+      "messages_sha256": "639ade9317e897309a417e19def925dac2389af64b93aacd2b68bdffc389dc76",
+      "state": "PASS",
+      "rationale": "Correct word-only description of a positive pi-radian half-turn.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_vector_geometry",
+          "finding": "Dot products, signed two-dimensional determinants and affine combinations give angle, area and centroid formulas."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 56,
+      "assistant_tokens": 38,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 86
+    },
+    {
+      "id": "repo-545296d75f7121f269990ca0",
+      "messages_sha256": "545296d75f7121f269990ca0b1b04b1e2654cf8f367b13cae7edb079208ec29c",
+      "state": "QUARANTINE",
+      "rationale": "The final solution x=n*pi is correct, but the nonzero-sine branch is not handled logically: the derived cos x=1 forces sin x=0 and therefore gives no solutions under that branch assumption. Those points belong only to the separate zero-sine case.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Equations, identities and branch conditions are checked symbolically on their stated/common domains; numerical checks are supplementary."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Under sin x!=0, dividing gives cos x=1, a contradiction with the branch assumption. Independently sin x=0 gives x=n*pi, all valid in the tangent domain."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold for the branch argument rather than claiming the final solution set is wrong."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 156,
+      "assistant_tokens": 138,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 87
+    },
+    {
+      "id": "repo-300fc7a3e08a497025fefd25",
+      "messages_sha256": "300fc7a3e08a497025fefd25d0378cc839aee1f0af4fc4699c7223c21babc6c0",
+      "state": "PASS",
+      "rationale": "Correct separation of half-angle magnitude from the quadrant-dependent sign of the actual cosine.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Equations, identities and branch conditions are checked symbolically on their stated/common domains; numerical checks are supplementary."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "|cos(x/2)|=sqrt((1+cos x)/2); the sign then follows the location of x/2."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "On quadrant boundaries the cosine may be zero; the magnitude formula handles that without a positive/negative assignment."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 154,
+      "assistant_tokens": 126,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 88
+    },
+    {
+      "id": "repo-e587610aea0db7c987b043fc",
+      "messages_sha256": "e587610aea0db7c987b043fc43d05db4cf0e2156c05e64aa75b9bb5c0bfbbbdf",
+      "state": "PASS",
+      "rationale": "Correct warning that selected numerical examples are not a symbolic proof of a universal identity.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_proof_logic_review",
+          "finding": "Finite spot checks do not establish an unrestricted identity over real angles; algebraic manipulations must preserve assumptions and domains."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 91,
+      "assistant_tokens": 56,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 89
+    },
+    {
+      "id": "repo-e6d510ab3404a70f3ee53144",
+      "messages_sha256": "e6d510ab3404a70f3ee531443ee1e0764d11ff7bd72e8fb41c8db1a8520b9285",
+      "state": "PASS",
+      "rationale": "The exact one-dimensional zero-field Ising decimation formula is correct, and tracing over exponential spin weights explains the hyperbolic functions. Its fixed-point discussion is acceptable conceptual RG motivation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_zero_field_Ising_decimation",
+          "finding": "Summing an intermediate spin gives sum_s exp(K*s*(s1+s3))=2cosh(K*(s1+s3)). Matching equal/opposite endpoint spins gives exp(2K')=cosh(2K), hence K'=0.5ln cosh(2K) and tanh(K')=tanh²(K)."
+        },
+        {
+          "title": "UCSD Physics 217, Homework 3 solutions, p.1",
+          "url": "https://mcgreevy.physics.ucsd.edu/f18/217-2018F-hw03-sol.pdf",
+          "finding": "Exact zero-field one-dimensional decimation gives exp(2J_prime)=cosh(2J) and v_prime=v² for v=tanh J. This supports the exact recursion, not a separate asymptotic theorem."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For endpoint spins equal, A*exp(K')=2cosh(2K); for opposite spins A*exp(-K')=2. Thus K'=0.5ln cosh(2K), and t=tanh K evolves as t'=t²."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The zero-field nearest-neighbor decimation relation is exact. Its tanh connection is t=tanh(K), t_prime=t²; the original asymptotically wording is loose, not a separately verified theorem. No finite-temperature transition or mean-field equation is inferred."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 142,
+      "assistant_tokens": 114,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 90
+    },
+    {
+      "id": "repo-7b246116bf3db57b6210e464",
+      "messages_sha256": "7b246116bf3db57b6210e464f652cf483dc2319d95cabd073ab8d7d8707ddf04",
+      "state": "PASS",
+      "rationale": "Valid comparison proof of positive divergence and the corresponding negative divergence of sinh.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Equations, identities and branch conditions are checked symbolically on their stated/common domains; numerical checks are supplementary."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For x>0, exp(-x)<1 gives sinh x>(exp x-1)/2 -> infinity; sinh is odd."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 86,
+      "assistant_tokens": 72,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 91
+    },
+    {
+      "id": "repo-cb92cb4460a8e686fceb52a9",
+      "messages_sha256": "cb92cb4460a8e686fceb52a9b436a865bb045fba6c14c83f61a49096d0308d5c",
+      "state": "PASS",
+      "rationale": "Correct vector derivation of the cosine rule from two common-vertex side vectors.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_vector_geometry",
+          "finding": "Dot products, signed two-dimensional determinants and affine combinations give angle, area and centroid formulas."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "|a-b|²=|a|²+|b|²-2a dot b=|a|²+|b|²-2|a||b|cos C."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 117,
+      "assistant_tokens": 101,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 92
+    },
+    {
+      "id": "repo-f766ce7730b86a80205160a7",
+      "messages_sha256": "f766ce7730b86a80205160a7d4b8c959af0f18ae1ae98631f4e7e513a4e1e126",
+      "state": "QUARANTINE",
+      "rationale": "The waveform examples are appropriate, but an unrestricted claim about any periodic function requires integrability/regularity and a stated convergence interpretation. At jumps, the ordinary series need not reproduce the chosen function value.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT ES.1803 topic notes, Fourier approximation",
+          "url": "https://ocw.mit.edu/courses/es-1803-differential-equations-spring-2024/mites_1803_s24_topic_full.pdf",
+          "finding": "Fourier expansions use harmonics and require a convergence interpretation. At a jump, ordinary partial sums converge to the midpoint under standard regularity hypotheses."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Changing the value at one jump of a square wave does not change any Fourier coefficient. Under the standard convergence theorem the series converges there to the midpoint, not an arbitrary assigned value."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This hold does not dispute Fourier representation in L2 or for standard piecewise-smooth waveforms with appropriate convergence meaning."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 90,
+      "assistant_tokens": 70,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 93
+    },
+    {
+      "id": "repo-cbe14d8b821e4e67a0f877a6",
+      "messages_sha256": "cbe14d8b821e4e67a0f877a6c327de96d70632c8a8b606a48ab671727e281c92",
+      "state": "PASS",
+      "rationale": "Correct factorization and solution union, with tangent-domain exclusions explicitly addressed.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Equations, identities and branch conditions are checked symbolically on their stated/common domains; numerical checks are supplementary."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The common domain cos x!=0 permits multiplication by cos x. sin x=0 yields all x=k*pi and includes the cos x=1 subset."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 125,
+      "assistant_tokens": 106,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 94
+    },
+    {
+      "id": "repo-d09a1c5401a20dbda75f18fa",
+      "messages_sha256": "d09a1c5401a20dbda75f18faa11a138837dd205a3919af0c4b40bf9acc104684",
+      "state": "PASS",
+      "rationale": "Correct supplementary-angle explanation of SSA ambiguity, with the essential triangle-existence check explicitly included.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Equations, identities and branch conditions are checked symbolically on their stated/common domains; numerical checks are supplementary."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For 0<theta<pi, sin theta=sin(pi-theta); the remaining angle and side constraints decide which candidates are possible."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 86,
+      "assistant_tokens": 65,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 95
+    },
+    {
+      "id": "repo-e965a0a2212db4b3d7170921",
+      "messages_sha256": "e965a0a2212db4b3d7170921ade65b22aed5da590396620e6104cbfb6b0430aa",
+      "state": "PASS",
+      "rationale": "Correct complete real solution families for cosine equal to one half.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Equations, identities and branch conditions are checked symbolically on their stated/common domains; numerical checks are supplementary."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The base angles are ±pi/3 modulo 2pi."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 69,
+      "assistant_tokens": 50,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 96
+    },
+    {
+      "id": "repo-1738cb2030896b08184a5a0a",
+      "messages_sha256": "1738cb2030896b08184a5a0a0ed27e565dec9acaff7dc89fc0868951a18f37ab",
+      "state": "PASS",
+      "rationale": "Correct practical advice for the standard one-step triangle-solving use of the sine rule: a known angle-opposite-side pair is needed, while the cosine rule directly handles SSS.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Equations, identities and branch conditions are checked symbolically on their stated/common domains; numerical checks are supplementary."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The sine rule can be combined with other identities and the angle-sum condition to derive an SSS solution indirectly; the explanation should not be read as a theorem of absolute impossibility."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 95,
+      "assistant_tokens": 71,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 97
+    },
+    {
+      "id": "repo-1b94d3d2106aca7378a2a522",
+      "messages_sha256": "1b94d3d2106aca7378a2a522be2f0fcfb69aea102cf2327b42f52cb94675463b",
+      "state": "QUARANTINE",
+      "rationale": "The rotation-and-scaling description is correct for a nonzero multiplier, but the unrestricted complex number can be zero. In that case the plane collapses and the shape-preserving similarity conclusion fails.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_complex_multiplication_geometry",
+          "finding": "Multiplication by a nonzero s*exp(i phi) scales lengths by s and rotates arguments by phi. Multiplication by zero collapses the plane and is not an invertible similarity."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At w=0, every point maps to the origin; a unit square and a nonzero-radius circle become one point rather than a similar shape."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 108,
+      "assistant_tokens": 78,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 98
+    },
+    {
+      "id": "repo-4d4888bbef1e66d37c0cc7af",
+      "messages_sha256": "4d4888bbef1e66d37c0cc7af323c332bb11a551296c86be82e1613c5579ce824",
+      "state": "PASS",
+      "rationale": "Correct sine-equality branches and the two exact periodic families.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Equations, identities and branch conditions are checked symbolically on their stated/common domains; numerical checks are supplementary."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "sin x=sin(pi/3) gives x=pi/3+2n*pi or 2pi/3+2n*pi."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 95,
+      "assistant_tokens": 74,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0075-0100.json",
+      "original_domain_ordinal": 99
     }
   ],
-  "reviewed": 934,
+  "reviewed": 959,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true
