@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1328,
-    "REJECT": 63,
+    "PASS": 1352,
+    "REJECT": 64,
     "QUARANTINE": 275,
-    "NEEDS_HUMAN_REVIEW": 446
+    "NEEDS_HUMAN_REVIEW": 421
   },
   "by_domain": {
     "circuits": {
@@ -62,10 +62,10 @@
       "NEEDS_HUMAN_REVIEW": 244
     },
     "physics": {
-      "PASS": 42,
-      "REJECT": 2,
+      "PASS": 66,
+      "REJECT": 3,
       "QUARANTINE": 6,
-      "NEEDS_HUMAN_REVIEW": 200
+      "NEEDS_HUMAN_REVIEW": 175
     }
   },
   "risk_flags_overlap": {
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1665,
+  "agent_substantive_reviews": 1690,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "6dcbd5a0970af71331d4d53a3fd6972481de3bdbf2b87c841bd7ad3d816067c1",
+  "technical_review_sha256": "54f0b4914a8f5bff55c902cc58a5a72519a8caf08f51e2c48fc28d44d8f98830",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 444,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 419,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1746,11 +1746,36 @@
     "Correctly rejects the absolute premise and gives the common contact-mechanics intuition.": 1,
     "The inverse relation between average force and contact time at fixed impulse is correct, but the answer assumes a fixed transferred momentum and reduces an entire strike to minimizing contact time. Those quantities depend on the coupled hand/target response and contact geometry.": 1,
     "Correct coordinate-description interpretation of vector decomposition.": 1,
-    "Correct dissipative explanation of a freely rolling ball slowing on an ordinary level surface.": 1
+    "Correct dissipative explanation of a freely rolling ball slowing on an ordinary level surface.": 1,
+    "Correct moment-arm guidance for opening an ordinary hinged door.": 1,
+    "Correct nonrelativistic two-body CM-to-lab angle relation and mass-dependent accessible scattering range.": 1,
+    "Correct angular-momentum law and fixed-axis constant-inertia reduction.": 1,
+    "Correct conceptual explanation of momentum transfer through electromagnetic fields and radiation without mechanical contact.": 1,
+    "Correct time-integrated momentum theorem and distinction between mean and peak force.": 1,
+    "Correct upslope static-friction direction for gravity-driven no-slip rolling under the specified conditions.": 1,
+    "Correct qualitative rotational-inertia explanation without using the prohibited word.": 1,
+    "Correct finite-torque continuity versus ideal angular-impulse distinction.": 1,
+    "Correct fixed-axis rotational power analogy.": 1,
+    "Correct sign-convention distinction between negative torque and deceleration.": 1,
+    "Correct torque inventory for an ordinary circular wheel about its center.": 1,
+    "Correct massless energy-momentum relation and vacuum radiation momentum density.": 1,
+    "Correct ordinary fixed-axis rotational analogue of Newton second law.": 1,
+    "Correct hinge torque for a push at the specified 0.5 m lever arm and 30-degree force angle.": 1,
+    "The product derivative and constant-mass reduction are correct, but identifying the v*dm/dt term as rocket thrust and claiming the same remaining-body F=dp/dt law covers mass exchange omits the momentum flux of entering or leaving matter.": 1,
+    "Correct signed net-torque and angular-acceleration calculation.": 1,
+    "Correct angular acceleration from net torque and inertia.": 1,
+    "Correct moment-of-momentum and moment-of-force structural analogy.": 1,
+    "Correct torque-free skater angular-momentum argument with external-torque caveat.": 1,
+    "Correct definition of a force couple with zero resultant force and nonzero moment from separated lines of action.": 1,
+    "Correct decomposition and lower bound on final kinetic energy at fixed total momentum.": 1,
+    "Correct standard constant-inertia torque-versus-acceleration interpretation with a constant bias/friction intercept.": 1,
+    "Correct mechanical power at the stated simultaneous torque-speed operating point.": 1,
+    "Correct distinction between a pivot force and its zero torque about that pivot.": 1,
+    "Correct force-couple counterexample to zero force implying zero torque.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "7911c88ecdbe011186bb40191cee02c5a0cfd902ed84b5e1dca0e4b1d4e5e15f",
-  "substantively_unreviewed": 444,
+  "published_decisions_sha256": "9681b60f04939adfc2e99b28d752c048865e8b9bc918c7367325f6f5cf1d5f23",
+  "substantively_unreviewed": 419,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
