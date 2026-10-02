@@ -20,16 +20,16 @@
   "model_weights_downloaded_or_loaded": false,
   "training_or_paid_compute": false,
   "automatic_checks_recreated": false,
-  "test_log_sha256": "c0c184c06e5fd6b9cb0e10a5c3dc8a28028c8c52488bb9db32a025a646ec29f6",
+  "test_log_sha256": "77d7530f4cbe4b96d152b95d962352950a9d41af83410e9cbf0a9669ef3cb6cd",
   "tested_code_sha256": {
     "scripts/phase3-verify-private-release.py": "64d76484b0852d041083301ce113ddc255b7906512def3dc12d0f92dc96910e1",
     "src/forge_data/citation_pilot.py": "9e17e50194ba8cb22eca0b431359d7aec1d870f8417e87b4938e3c1ff4c968d4",
     "tests/test_private_release_verifier.py": "e2a5854473e449455e9bc2ffcc207346f018a3bb49206a81546cd1cea2ace817"
   },
-  "base_commit": "36f11ab43e146540ba3fb3c269e95d3c8e15a1e2",
+  "base_commit": "dd2eda8c98819430cd23372b27e442945ed58c06",
   "all_public_input_hashes_verified": 8,
   "candidate_message_hashes_verified": 2112,
-  "substantive_decisions_verified": 1984,
+  "substantive_decisions_verified": 1959,
   "earlier_374_decisions_unchanged": true,
   "unchanged_frozen_files": [
     "src/forge_tools/engineering.py",
@@ -46,15 +46,15 @@
     "QUARANTINE": 7
   },
   "current_dispositions": {
-    "PASS": 1604,
-    "REJECT": 69,
+    "PASS": 1580,
+    "REJECT": 68,
     "QUARANTINE": 312,
-    "NEEDS_HUMAN_REVIEW": 127
+    "NEEDS_HUMAN_REVIEW": 152
   },
-  "substantively_unreviewed": 125,
+  "substantively_unreviewed": 150,
   "next_batch": {
     "domain": "materials_manufacturing",
-    "offset": 125,
+    "offset": 100,
     "limit": 25
   },
   "official_reader_executed": true,
@@ -65,15 +65,15 @@
   "earlier_392_decisions_unchanged": true,
   "latest_batch": {
     "domain": "materials_manufacturing",
-    "offset": 100,
+    "offset": 75,
     "limit": 25,
-    "selected_window_end_exclusive": 125,
+    "selected_window_end_exclusive": 100,
     "new_reviews": 25,
     "skipped_existing": 0,
     "preserved_structural_quarantines": [],
     "dispositions": {
-      "PASS": 24,
-      "REJECT": 1
+      "PASS": 23,
+      "QUARANTINE": 2
     }
   },
   "independent_agent_qa_complete": true,
@@ -81,7 +81,7 @@
   "latest_batch_only_expected_ledger_rows_changed": true,
   "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
   "publication_status": "LOCAL_ONLY",
-  "earlier_decisions_unchanged": 1959,
+  "earlier_decisions_unchanged": 1934,
   "electrical_domain_complete": true,
   "electrical_records_verified": 300,
   "all_392_published_decisions_unchanged": true,

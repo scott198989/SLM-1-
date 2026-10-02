@@ -60862,9 +60862,976 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/materials_manufacturing-0075-0100.json",
       "original_domain_ordinal": 99
+    },
+    {
+      "id": "repo-1843709174528a8e59def6f7",
+      "messages_sha256": "1843709174528a8e59def6f7c3aa4ff12ead7ca05a272bf41f6b9aac89c575d5",
+      "state": "PASS",
+      "rationale": "Correct crack-length intuition in the standard fixed-geometry-factor LEFM comparison.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "David Roylance, MIT, Introduction to Fracture Mechanics",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/e5bca953e1dbd0cd0376f0f77033dc0d_MIT3_11F99_frac.pdf",
+          "finding": "LEFM connects loading and crack geometry to intensity and energy release; fatigue growth and ductile/brittle mechanisms require their applicable regimes."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "K=Y*sigma*sqrt(pi*a) and G=K^2/E_prime imply greater crack driving force as a grows at fixed Y and sigma."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "K=Y*sigma*sqrt(pi*a) and G=K^2/E_prime imply greater crack driving force as a grows at fixed Y and sigma."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Loading control and geometry factor can change during growth; the answer compares the same remote stress and otherwise similar geometry."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 101,
+      "assistant_tokens": 64,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 100
+    },
+    {
+      "id": "repo-ba15a6b06df6354eeba5a048",
+      "messages_sha256": "ba15a6b06df6354eeba5a048d121522aad107ba9b8ff6ea702221b23350652ed",
+      "state": "PASS",
+      "rationale": "Correct practical elastic-versus-plastic cycling distinction.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT Unified Engineering, Fatigue notes, page 6",
+          "url": "https://ocw.mit.edu/courses/16-01-unified-engineering-i-ii-iii-iv-fall-2005-spring-2006/f46ab73b31f6a4622ba62ab4e5366e95_gm19_20notes2.pdf",
+          "finding": "Distinguishes nominal bulk-plastic low-cycle and bulk-elastic high-cycle fatigue."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The cycle-count boundary is not universal and local notch plasticity can exist despite mostly elastic nominal loading."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 49,
+      "assistant_tokens": 25,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 101
+    },
+    {
+      "id": "repo-f9cfdbbe1b145dbe05e79624",
+      "messages_sha256": "f9cfdbbe1b145dbe05e7962401708d429d560853a583716bc9813416b763e486",
+      "state": "PASS",
+      "rationale": "Correct high-level known-crack inspection-planning workflow with uncertainty and detection considerations.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT Unified Engineering, Fatigue notes, pages 7–10",
+          "url": "https://ocw.mit.edu/courses/16-01-unified-engineering-i-ii-iii-iv-fall-2005-spring-2006/f46ab73b31f6a4622ba62ab4e5366e95_gm19_20notes2.pdf",
+          "finding": "Integrates crack-growth laws to a critical crack size and places inspections earlier."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "N=integral from a0 to ac of da/[C*(DeltaK(a))^m] for the stated constant-amplitude Paris model."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "N=integral from a0 to ac of da/[C*(DeltaK(a))^m] for the stated constant-amplitude Paris model."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Paris law is only an example in its calibrated growth regime; variable amplitude, closure, threshold and near-instability behavior need appropriate models. This is not an actual approved inspection interval."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 125,
+      "assistant_tokens": 94,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 102
+    },
+    {
+      "id": "repo-3316cb5805bdd663be505cf7",
+      "messages_sha256": "3316cb5805bdd663be505cf74ccc08ec46e233ad844be54498213d9758ceaa63",
+      "state": "PASS",
+      "rationale": "Correct caution against identifying a failure mechanism from beach marks alone.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "David Roylance, MIT, Fatigue",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/f678e01017186c53d45845ad93c07938_MIT3_11F99_fatigue.pdf",
+          "finding": "Pages 1–2 discuss irreversible slip, intrusions/extrusions, interrupted propagation marks and final rapid fracture; later pages cover cyclic crack growth."
+        },
+        {
+          "title": "Striation lines in intermittent fatigue crack growth in an Al alloy",
+          "url": "https://arxiv.org/abs/2305.07460",
+          "finding": "Measured striation-spacing statistics need not directly reproduce average crack-growth rates; quantitative interpretation requires care."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Fractography must be reconciled with loading/environment history; the answer expressly makes this a multi-evidence diagnosis."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 100,
+      "assistant_tokens": 69,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 103
+    },
+    {
+      "id": "repo-877d6a434afbf4359778c7d0",
+      "messages_sha256": "877d6a434afbf4359778c7d011658be131d7e7dee1d82ba485691371e1828d31",
+      "state": "PASS",
+      "rationale": "Correct cycle-driven versus environmental contributions and their overlap in corrosion fatigue.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "AMPP, Corrosion Fatigue",
+          "url": "https://www.ampp.org/technical-research/impact/corrosion-basics/group-3/corrosion-fatigue",
+          "finding": "Corrosive environments can accelerate cyclic crack development and reduce fatigue resistance."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Fatigue includes initiation as well as growth; environment can affect both stages and the answer is a conceptual distinction."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 97,
+      "assistant_tokens": 67,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 104
+    },
+    {
+      "id": "repo-60cf2143593403f40b047fd8",
+      "messages_sha256": "60cf2143593403f40b047fd80846af15f645e8e4dbe72c3f0d499e9c3c88d10e",
+      "state": "PASS",
+      "rationale": "Correct concise distinction between absorbed notch-impact energy and a fracture-mechanics toughness parameter.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NIST, Charpy Machine Verification Program",
+          "url": "https://www.nist.gov/programs-projects/charpy-machine-verification-program",
+          "finding": "Charpy measures high-rate absorbed fracture energy, an indirect impact-toughness measure rather than a K-based property."
+        },
+        {
+          "title": "David Roylance, MIT, Introduction to Fracture Mechanics",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/e5bca953e1dbd0cd0376f0f77033dc0d_MIT3_11F99_frac.pdf",
+          "finding": "LEFM connects loading and crack geometry to intensity and energy release; fatigue growth and ductile/brittle mechanisms require their applicable regimes."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Toughness requires specified mode, temperature, constraint and test validity; empirical correlations do not make the two measurements interchangeable."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 59,
+      "assistant_tokens": 29,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 105
+    },
+    {
+      "id": "repo-ecad9e5f5b5b5cbe2b812e17",
+      "messages_sha256": "ecad9e5f5b5b5cbe2b812e176cdca9e702a4889cf925ef20e3e650fe3c191c0b",
+      "state": "PASS",
+      "rationale": "Correct LEFM separation of global loading/geometry from the local singular field and plane-strain toughness condition.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "David Roylance, MIT, Introduction to Fracture Mechanics",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/e5bca953e1dbd0cd0376f0f77033dc0d_MIT3_11F99_frac.pdf",
+          "finding": "LEFM connects loading and crack geometry to intensity and energy release; fatigue growth and ductile/brittle mechanisms require their applicable regimes."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "The leading elastic field is sigma_ij=K*f_ij(theta)/sqrt(2*pi*r), with angular functions and a finite near-tip validity annulus."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The leading elastic field is sigma_ij=K*f_ij(theta)/sqrt(2*pi*r), with angular functions and a finite near-tip validity annulus."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The explanation implicitly uses Mode I; mixed-mode and large-scale yielding require corresponding criteria. Failure is not determined by nominal stress alone."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 136,
+      "assistant_tokens": 105,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 106
+    },
+    {
+      "id": "repo-0e58a5564ee5fcb4b488f9d0",
+      "messages_sha256": "0e58a5564ee5fcb4b488f9d0a251289d6c852236b76806d4bbd4284576b58238",
+      "state": "PASS",
+      "rationale": "Correct explicitly qualified saltwater corrosion-fatigue mechanism and controlling variables.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "AMPP, Corrosion Fatigue",
+          "url": "https://www.ampp.org/technical-research/impact/corrosion-basics/group-3/corrosion-fatigue",
+          "finding": "Corrosive environments can accelerate cyclic crack development and reduce fatigue resistance."
+        },
+        {
+          "title": "NASA, environmental-fatigue study of Al-Li alloys",
+          "url": "https://ntrs.nasa.gov/citations/19920023179",
+          "finding": "Alloy-specific crack closure was associated with tortuous paths and corrosion products; no universal environment multiplier follows."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The answer acknowledges closure and environment dependence instead of asserting every alloy always has the same life reduction."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 104,
+      "assistant_tokens": 70,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 107
+    },
+    {
+      "id": "repo-58e3de325c6715c94ca09db1",
+      "messages_sha256": "58e3de325c6715c94ca09db1beab520e644f49da317de91c401de6f57be9c0fa",
+      "state": "PASS",
+      "rationale": "Correct caution that microscopic striations need calibrated interpretation before service-cycle counting.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Striation lines in intermittent fatigue crack growth in an Al alloy",
+          "url": "https://arxiv.org/abs/2305.07460",
+          "finding": "Measured striation-spacing statistics need not directly reproduce average crack-growth rates; quantitative interpretation requires care."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A resolvable striation can correspond to one cycle under suitable conditions; the answer rejects an unconditional service-history counting rule, not that common interpretation."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 111,
+      "assistant_tokens": 76,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 108
+    },
+    {
+      "id": "repo-381e0cbc054bae1275306450",
+      "messages_sha256": "381e0cbc054bae1275306450def77ff66a955d27b4312ff7f82955c8cb2b5af7",
+      "state": "PASS",
+      "rationale": "Correct ordinary brittle-material tension/compression asymmetry, including compressive splitting and frictional mechanisms.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NASA CARES/Life technical basis, printed page 97",
+          "url": "https://ntrs.nasa.gov/api/citations/20050237907/downloads/20050237907.pdf",
+          "finding": "Flaw-based ceramic fracture exhibits substantially different tensile and compressive strengths."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "Tensile crack-face normal traction opens a flaw; compression closes faces and introduces contact/friction, although local tensile splitting can remain possible."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Tensile crack-face normal traction opens a flaw; compression closes faces and introduces contact/friction, although local tensile splitting can remain possible."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The nominal strength ratio is flaw-, confinement- and material-dependent; compression is not a guarantee of crack suppression."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 99,
+      "assistant_tokens": 68,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 109
+    },
+    {
+      "id": "repo-55e2c5034c5edb311e477e57",
+      "messages_sha256": "55e2c5034c5edb311e477e57b6a91cbdb75c85fe0a30939323edfb46c7005986",
+      "state": "PASS",
+      "rationale": "Correct conventional irreversible cyclic-slip/persistent-slip-band route to fatigue initiation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT Unified Engineering, Fatigue notes, pages 1–3",
+          "url": "https://ocw.mit.edu/courses/16-01-unified-engineering-i-ii-iii-iv-fall-2005-spring-2006/f46ab73b31f6a4622ba62ab4e5366e95_gm19_20notes2.pdf",
+          "finding": "Describes irreversible persistent slip, surface extrusions and initially shear cracks growing under tensile loading."
+        },
+        {
+          "title": "David Roylance, MIT, Fatigue",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/f678e01017186c53d45845ad93c07938_MIT3_11F99_fatigue.pdf",
+          "finding": "Pages 1–2 discuss irreversible slip, intrusions/extrusions, interrupted propagation marks and final rapid fracture; later pages cover cyclic crack growth."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Other initiation routes include inclusions, pores and environmental damage; the requested mechanism bridge does not claim exclusivity."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 118,
+      "assistant_tokens": 85,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 110
+    },
+    {
+      "id": "repo-0e83543f627e19d1347ceaa2",
+      "messages_sha256": "0e83543f627e19d1347ceaa2d5d826355800c4aa2013fe174f57900fe43984c2",
+      "state": "PASS",
+      "rationale": "Sound evidence-combining workflow for fatigue, creep and final overload in a hot fastener.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "David Roylance, MIT, Fatigue",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/f678e01017186c53d45845ad93c07938_MIT3_11F99_fatigue.pdf",
+          "finding": "Pages 1–2 discuss irreversible slip, intrusions/extrusions, interrupted propagation marks and final rapid fracture; later pages cover cyclic crack growth."
+        },
+        {
+          "title": "Evaluation of local stress state due to grain-boundary sliding during creep (2021)",
+          "url": "https://arxiv.org/abs/2103.00308",
+          "finding": "Modeled/calibrated grain-boundary sliding in Type 316 polycrystals changes local stress near triple junctions and transverse boundaries."
+        },
+        {
+          "title": "Primary Ni–18Cr–18Fe creep-fracture experiment",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1359645497001833",
+          "finding": "Boundary-carbide-associated cavities, vacancy-condensation growth and predominantly intergranular fracture were observed."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Fracture is the final separation event shared by mechanisms; the first sentence uses it informally for an isolated overload, while the remainder distinguishes final fracture from prior damage."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 149,
+      "assistant_tokens": 116,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 111
+    },
+    {
+      "id": "repo-b1020a4eae8895515b291465",
+      "messages_sha256": "b1020a4eae8895515b291465c890350440b7c8b01c191d93a714a5910381ed33",
+      "state": "PASS",
+      "rationale": "Correct usual surface-compression benefit and explicit limits from relaxation and crack depth.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Primary in-situ X-ray study of residual stress during steel fatigue",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0142112323004905",
+          "finding": "Documents fatigue-induced relaxation of compressive residual stress in the tested steel."
+        },
+        {
+          "title": "NASA, residual-stress relaxation study",
+          "url": "https://ntrs.nasa.gov/api/citations/20110008275/downloads/20110008275.pdf",
+          "finding": "Discusses thermal/cyclic relaxation and the finite extent of a compressed surface layer."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "Elastic superposition gives sigma_total=sigma_service+sigma_residual and K_total=K_service+K_residual. A negative residual K lowers opening/maximum intensity; nominal full-cycle DeltaK need not fall unless closure is involved."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Elastic superposition gives sigma_total=sigma_service+sigma_residual and K_total=K_service+K_residual. A negative residual K lowers opening/maximum intensity; nominal full-cycle DeltaK need not fall unless closure is involved."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The residual stress is self-equilibrated, and deeper balancing tension or overloads can matter; no unconditional improvement is claimed."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 117,
+      "assistant_tokens": 81,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 112
+    },
+    {
+      "id": "repo-91b7dc197bbcb3c1b64473ce",
+      "messages_sha256": "91b7dc197bbcb3c1b64473ce9489561a9f6dcc14b328e2e7c3221c33879b6478",
+      "state": "PASS",
+      "rationale": "Correct crack-tip competition between plastic accommodation and cleavage at low temperature or high rate.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT Fracture and Fatigue problem-set solutions",
+          "url": "https://ocw.mit.edu/courses/3-35-fracture-and-fatigue-fall-2003/308d771dcfc727dc11307cc1717e8d8a_ps2_soln.pdf",
+          "finding": "Increasing strain rate can raise steel transition temperature by reducing time available for dislocation motion."
+        },
+        {
+          "title": "David Roylance, MIT, Yield and Plastic Flow",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/913c0305981479e7474e1a229f53d2d9_MIT3_11F99_yield.pdf",
+          "finding": "Reduced dislocation mobility competes with fracture as temperature falls."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is a can explanation, especially relevant to susceptible crystal structures; it is not a universal ductile-brittle transition for every metal."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 105,
+      "assistant_tokens": 78,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 113
+    },
+    {
+      "id": "repo-8421f5160326a02ad6ca4a54",
+      "messages_sha256": "8421f5160326a02ad6ca4a54165cc1131c017e1b8c24f84141844feee43ba614",
+      "state": "PASS",
+      "rationale": "Correct possible grain-boundary sliding, local concentration, diffusion-assisted cavity growth and intergranular linking chain.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Evaluation of local stress state due to grain-boundary sliding during creep (2021)",
+          "url": "https://arxiv.org/abs/2103.00308",
+          "finding": "Modeled/calibrated grain-boundary sliding in Type 316 polycrystals changes local stress near triple junctions and transverse boundaries."
+        },
+        {
+          "title": "Primary Ni–18Cr–18Fe creep-fracture experiment",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1359645497001833",
+          "finding": "Boundary-carbide-associated cavities, vacancy-condensation growth and predominantly intergranular fracture were observed."
+        },
+        {
+          "title": "Primary grain-boundary sliding and cavity-nucleation experiment",
+          "url": "https://www.sciencedirect.com/science/article/pii/0001616075900814",
+          "finding": "Documents the relation between sliding and cavity nucleation at boundary particles, without establishing universality."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Cavity nucleation and transport paths vary by alloy and regime; often appropriately allows other creep-fracture mechanisms."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 130,
+      "assistant_tokens": 89,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 114
+    },
+    {
+      "id": "repo-b9c512fb4843ef7320498e6a",
+      "messages_sha256": "b9c512fb4843ef7320498e6ae9c8ed9e7b8ee79278868cf9382614ea593bcd58",
+      "state": "PASS",
+      "rationale": "Correct conditional creep-fatigue/environment interaction rationale for high-temperature strain holds.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Hold-Time Effects on Low-Cycle-Fatigue Behavior of Hastelloy X at High Temperatures",
+          "url": "https://www.tms.org/superalloys/10.7449/2004/superalloys_2004_241_250.pdf",
+          "finding": "Tensile-strain hold experiments connect relaxation, inelastic strain and oxidation with temperature/hold-dependent cyclic-life reduction."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "At fixed total strain and constant temperature, epsilon_total=sigma/E+epsilon_creep gives sigma_dot=-E*epsilon_creep_dot; stress relaxation does not imply absence of inelastic damage."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At fixed total strain and constant temperature, epsilon_total=sigma/E+epsilon_creep gives sigma_dot=-E*epsilon_creep_dot; stress relaxation does not imply absence of inelastic damage."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A quantitative dwell-life ranking requires the actual waveform, stress relaxation and alloy/environment data; the response lists these dependencies."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 157,
+      "assistant_tokens": 124,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 115
+    },
+    {
+      "id": "repo-a6c8ed751878c132aea56b6f",
+      "messages_sha256": "a6c8ed751878c132aea56b6f3a09b2e066362b5f92a31f1a923c2a8e7648a5d1",
+      "state": "PASS",
+      "rationale": "Correct limiting-regime interpretation of the Kitagawa-Takahashi construction.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Modified Kitagawa-Takahashi diagram accounting for finite notch depths (2015)",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0142112314002035",
+          "finding": "Combines the small-defect fatigue-strength limit with the large-crack stress-intensity threshold and a transition length."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "For a long crack DeltaSigma_threshold=DeltaK_th/[Y*sqrt(pi*a)], while the small-defect branch approaches the plain-specimen fatigue strength."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a long crack DeltaSigma_threshold=DeltaK_th/[Y*sqrt(pi*a)], while the small-defect branch approaches the plain-specimen fatigue strength."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Fatigue limits and thresholds must be measured for compatible conditions; small cracks can have thresholds below long-crack values."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "VISUAL_CONTEXT_CHECK"
+      ],
+      "qwen_tokens": 145,
+      "assistant_tokens": 113,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 116
+    },
+    {
+      "id": "repo-339e8dee0d86de7f07fe97d5",
+      "messages_sha256": "339e8dee0d86de7f07fe97d5597d6180b724b5275301ce4654baac54ab3b3197",
+      "state": "PASS",
+      "rationale": "Correct classical tertiary-creep acceleration mechanisms after an approximately balanced secondary stage.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "IAEA Training Course Series 11, creep section",
+          "url": "https://www-pub.iaea.org/MTCD/publications/PDF/TCS-11.pdf",
+          "finding": "Discusses secondary hardening/recovery balance and tertiary section loss, voiding and coarsening."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "Under fixed tensile force, sigma_true=F/A grows as the effective area decreases."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Under fixed tensile force, sigma_true=F/A grows as the effective area decreases."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "True-stress increase from area reduction is the ordinary sustained-load interpretation; damage/softening can also accelerate strain under other controls."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 123,
+      "assistant_tokens": 87,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 117
+    },
+    {
+      "id": "repo-8e8db4089f798983d905d580",
+      "messages_sha256": "8e8db4089f798983d905d58022a73912b48282e0a331a02c4cbe40c2540890b9",
+      "state": "PASS",
+      "rationale": "Correct motivation for probabilistic local cleavage models and constraint-sensitive crack-tip stresses beyond a single K threshold.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TWI, A New Statistical Local Criterion for Cleavage Fracture in Steel, Part I (2005)",
+          "url": "https://www.twi-global.com/technical-knowledge/published-papers/a-new-statistical-local-criterion-for-cleavage-fracture-in-steel-part-i-model-presentation-february-2005",
+          "finding": "Presents microcrack propagation conditions within a weakest-link probability framework for local cleavage prediction."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "Equal leading K does not fix higher-order T-stress or the elastoplastic constraint field."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Equal leading K does not fix higher-order T-stress or the elastoplastic constraint field."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The leading K field is common only in its asymptotic domain; higher-order constraint terms and plasticity can differ. The answer does not claim that valid K_IC ceases to be useful."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 136,
+      "assistant_tokens": 102,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 118
+    },
+    {
+      "id": "repo-9c301f73eeb380927ba06c76",
+      "messages_sha256": "9c301f73eeb380927ba06c769f7566e41d1c12ec9c3a7ac30de0e84c54a92061",
+      "state": "PASS",
+      "rationale": "Reasonable first diagnostic hypothesis for the stated hot single-crystal coated blade and dwell loading, with evidence that could change it.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NASA, Creep-fatigue behavior of NiCoCrAlY coated PWA1480 superalloy single crystals (1985)",
+          "url": "https://ntrs.nasa.gov/citations/19860000844",
+          "finding": "Tests coated single crystals under fatigue/creep dwell; observed pore initiation illustrates the need for evidence rather than one universal origin hypothesis."
+        },
+        {
+          "title": "Hafez Haghighat et al. (2013), single-crystal superalloy creep",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1359645413001973",
+          "finding": "Analyzes dislocation glide and climb mechanisms in a single-crystal superalloy."
+        },
+        {
+          "title": "Matan et al. (1999), rafting and creep-dislocation study",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S1359645499000932",
+          "finding": "Experimental evidence links rafting and dislocation behavior during single-crystal creep."
+        },
+        {
+          "title": "Cooling-hole superalloy fatigue experiments (2025)",
+          "url": "https://www.sciencedirect.com/science/article/pii/S014211232400505X",
+          "finding": "Observed oxidation and stress-concentration crack initiation at cooling-hole edges."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A true single-crystal substrate has no ordinary internal grain-boundary network; the answer confines intergranular-looking environmental paths to coated regions. This is a workflow, not a measured dominant failure-mode determination."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 213,
+      "assistant_tokens": 157,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 119
+    },
+    {
+      "id": "repo-7db46adb6b827bfb4314a6d1",
+      "messages_sha256": "7db46adb6b827bfb4314a6d1e2083d9284ffba607254aeebd11e80307ac9a643",
+      "state": "PASS",
+      "rationale": "Correct interacting-defect fatigue-investigation workflow for the stated AM titanium bracket.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NIST, Fatigue Properties of EBM Ti-6Al-4V: Internal Porosity and Residual Stress (2017)",
+          "url": "https://www.nist.gov/publications/fatigue-properties-titanium-alloy-ti-6al-4v-fabricated-electron-beam-melting-ebm",
+          "finding": "The tested EBM Ti alloy initiated fatigue at voids and benefited from pore closure. The study measured no residual stress in those specimens; it is not evidence that all AM material retains tension."
+        },
+        {
+          "title": "David Roylance, MIT, Fatigue",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/f678e01017186c53d45845ad93c07938_MIT3_11F99_fatigue.pdf",
+          "finding": "Pages 1–2 discuss irreversible slip, intrusions/extrusions, interrupted propagation marks and final rapid fracture; later pages cover cyclic crack growth."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "Correct interacting-defect fatigue-investigation workflow for the stated AM titanium bracket."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A fracture origin at a surface need not uniquely prove roughness, and pores can intersect surfaces; the listed evidence must be checked rather than used as a deterministic classifier."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 190,
+      "assistant_tokens": 148,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 120
+    },
+    {
+      "id": "repo-12ce372c08ff3fa5da7d844f",
+      "messages_sha256": "12ce372c08ff3fa5da7d844fae2ebe3bd506b011501d4c3586292435884c7e7f",
+      "state": "PASS",
+      "rationale": "Correct function/objective/constraint definition and standard stiffness-limited beam material-index example.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_row_specific_check",
+          "finding": "For a similar-section family I=k*A^2, fixed E*I requires A proportional to E^(-1/2), so mass proportional to rho/E^(1/2)."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a similar-section family I=k*A^2, fixed E*I requires A proportional to E^(-1/2), so mass proportional to rho/E^(1/2)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The square-root beam index assumes fixed length and geometrically similar cross-sections with a free scale; other free dimensions produce different exponents."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 60,
+      "assistant_tokens": 48,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 121
+    },
+    {
+      "id": "repo-03e957dba82ecfa1095c9362",
+      "messages_sha256": "03e957dba82ecfa1095c93623ba81fc656552f2d13c64dfc4a24dee3cd401122",
+      "state": "REJECT",
+      "rationale": "The standard square-root material index can be correct, but the stated second-moment scaling with thickness squared is incorrect.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_row_specific_check",
+          "finding": "A square section has I=t^4/12; a fixed-width rectangle has I=b*t^3/12. I scales as A^2 for geometrically similar sections, not as thickness squared."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A square section has I=t^4/12; a fixed-width rectangle has I=b*t^3/12. I scales as A^2 for geometrically similar sections, not as thickness squared."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the derivation rather than replacing its words with area squared; fixed-width rectangular beams instead produce an E^(1/3)/rho stiffness index."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 73,
+      "assistant_tokens": 51,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 122
+    },
+    {
+      "id": "repo-03bb10067323a972364f35ce",
+      "messages_sha256": "03bb10067323a972364f35ce175c7f6a35c8abbc4c7508582bed55fae83af40a",
+      "state": "PASS",
+      "rationale": "Correct explanation that the free geometric variable produces different stiffness-limited material-index exponents.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_row_specific_check",
+          "finding": "Axial stiffness EA/L with m=rho*A*L gives m proportional to rho/E. Similar-section bending I proportional to t^4 and A proportional to t^2 gives m proportional to rho/sqrt(E)."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Axial stiffness EA/L with m=rho*A*L gives m proportional to rho/E. Similar-section bending I proportional to t^4 and A proportional to t^2 gives m proportional to rho/sqrt(E)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The beam square-root exponent is for geometrically similar scaled sections; fixed width with variable depth gives a different exponent, consistent with the answer's geometry-dependent principle."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 124,
+      "assistant_tokens": 90,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 123
+    },
+    {
+      "id": "repo-16c895a40f18fd7ef2fab00d",
+      "messages_sha256": "16c895a40f18fd7ef2fab00d7e3c2f3df166a2daff3826ffd8490a89a70d921f",
+      "state": "PASS",
+      "rationale": "Correct material/manufacturing/shape-factor motivation in the ordinary contrast with rolled steel I-sections.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Fraunhofer IKTS, Extrusion",
+          "url": "https://www.ikts.fraunhofer.de/en/departments/structural_ceramics/processes_and_components/shaping/extrusion.html",
+          "finding": "Ceramics can be formed into varied long profiles by powder/binder extrusion; their shaping route differs from rolling ductile metal."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "For similar efficient sections I=k_shape*A^2, the stiffness-limited index is sqrt(k_shape*E)/rho; attainable section shape therefore affects the ranking."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For similar efficient sections I=k_shape*A^2, the stiffness-limited index is sqrt(k_shape*E)/rho; attainable section shape therefore affects the ranking."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Cannot be shaped that way is accepted as referring to metal rolling, not a universal claim that ceramic I-shaped profiles cannot be manufactured by any process. Ceramic extrusion/molding is possible and requires its own attainable-shape factors."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 74,
+      "assistant_tokens": 56,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0100-0125.json",
+      "original_domain_ordinal": 124
     }
   ],
-  "reviewed": 1959,
+  "reviewed": 1984,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

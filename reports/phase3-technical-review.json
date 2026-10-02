@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1580,
-    "REJECT": 68,
+    "PASS": 1604,
+    "REJECT": 69,
     "QUARANTINE": 312,
-    "NEEDS_HUMAN_REVIEW": 152
+    "NEEDS_HUMAN_REVIEW": 127
   },
   "by_domain": {
     "circuits": {
@@ -56,10 +56,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "materials_manufacturing": {
-      "PASS": 85,
-      "REJECT": 2,
+      "PASS": 109,
+      "REJECT": 3,
       "QUARANTINE": 13,
-      "NEEDS_HUMAN_REVIEW": 150
+      "NEEDS_HUMAN_REVIEW": 125
     },
     "physics": {
       "PASS": 212,
@@ -74,18 +74,18 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1959,
+  "agent_substantive_reviews": 1984,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "a0f37664790d9906418cdf569c034902f89e6c2aa30e4a06e4f76a7025776630",
+  "technical_review_sha256": "7ce37cc63478dfa0b465caafb1945ea01aac2fca6f11e977adfac3eb62039d0e",
   "reasons": {
     "Faithful conceptual paraphrase that conservation and boundary requirements are integral to the coupled solution process. The prose does not explicitly assert exact feasibility of every internal numerical iterate.": 1,
     "Correct practical explanation of boundary data in an ordinary PDE discretization and their effect on closure, accuracy and stability.": 1,
     "Correct elementary local/absolute extrema distinction, including endpoint possibilities.": 1,
     "Universal three-phase-motor size, efficiency and self-starting comparison lacks machine type, rating and comparison conditions; synchronous motors are a counterexample to unqualified self-starting.": 1,
     "The basic inclusion of polynomials among rational expressions is correct, but the claim that polynomials always tend to infinity and can never have horizontal asymptotes fails for constant polynomials.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 150,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 125,
     "Accurate typical FMEA-entry checklist and appropriate acknowledgement that responsibility/action-status fields vary by team. It does not impose one universal risk-priority formula or imply FMEA alone validates safety.": 1,
     "Changing L/C reactance redistributes complex branch currents and voltages; response and cancellation are correctly circuit dependent rather than universally monotone.": 1,
     "Correct current-sign reversal of magnetic wire force and its role in mechanical commutation.": 1,
@@ -2040,11 +2040,36 @@
     "Correct kinetic-barrier paraphrase distinguishing passivity from thermodynamic immunity.": 1,
     "Correct equilibrium two-phase fraction use of the lever rule.": 1,
     "The likely causes are sensible, but the surface-martensite/contraction sequence blurs thermal shrinkage with transformation strain. Martensite formation itself increases volume, so the proposed stress history needs clarification.": 1,
-    "Correct conditional fatigue-life explanation via larger cyclic crack-driving range.": 1
+    "Correct conditional fatigue-life explanation via larger cyclic crack-driving range.": 1,
+    "Correct explanation that the free geometric variable produces different stiffness-limited material-index exponents.": 1,
+    "The standard square-root material index can be correct, but the stated second-moment scaling with thickness squared is incorrect.": 1,
+    "Correct explicitly qualified saltwater corrosion-fatigue mechanism and controlling variables.": 1,
+    "Sound evidence-combining workflow for fatigue, creep and final overload in a hot fastener.": 1,
+    "Correct function/objective/constraint definition and standard stiffness-limited beam material-index example.": 1,
+    "Correct material/manufacturing/shape-factor motivation in the ordinary contrast with rolled steel I-sections.": 1,
+    "Correct crack-length intuition in the standard fixed-geometry-factor LEFM comparison.": 1,
+    "Correct caution against identifying a failure mechanism from beach marks alone.": 1,
+    "Correct classical tertiary-creep acceleration mechanisms after an approximately balanced secondary stage.": 1,
+    "Correct ordinary brittle-material tension/compression asymmetry, including compressive splitting and frictional mechanisms.": 1,
+    "Correct conventional irreversible cyclic-slip/persistent-slip-band route to fatigue initiation.": 1,
+    "Correct caution that microscopic striations need calibrated interpretation before service-cycle counting.": 1,
+    "Correct concise distinction between absorbed notch-impact energy and a fracture-mechanics toughness parameter.": 1,
+    "Correct interacting-defect fatigue-investigation workflow for the stated AM titanium bracket.": 1,
+    "Correct possible grain-boundary sliding, local concentration, diffusion-assisted cavity growth and intergranular linking chain.": 1,
+    "Correct cycle-driven versus environmental contributions and their overlap in corrosion fatigue.": 1,
+    "Correct motivation for probabilistic local cleavage models and constraint-sensitive crack-tip stresses beyond a single K threshold.": 1,
+    "Correct crack-tip competition between plastic accommodation and cleavage at low temperature or high rate.": 1,
+    "Reasonable first diagnostic hypothesis for the stated hot single-crystal coated blade and dwell loading, with evidence that could change it.": 1,
+    "Correct limiting-regime interpretation of the Kitagawa-Takahashi construction.": 1,
+    "Correct usual surface-compression benefit and explicit limits from relaxation and crack depth.": 1,
+    "Correct conditional creep-fatigue/environment interaction rationale for high-temperature strain holds.": 1,
+    "Correct practical elastic-versus-plastic cycling distinction.": 1,
+    "Correct LEFM separation of global loading/geometry from the local singular field and plane-strain toughness condition.": 1,
+    "Correct high-level known-crack inspection-planning workflow with uncertainty and detection considerations.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "6f44f8365308b7a038a288a8b7fa631738b652a93ba02454a2f3a3d7c3b13e9a",
-  "substantively_unreviewed": 150,
+  "published_decisions_sha256": "a8cecce83fd729d49b7f7e7eef00dc33eae0e09bb0e601306b78e47d7f6eb1e2",
+  "substantively_unreviewed": 125,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
