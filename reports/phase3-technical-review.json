@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 491,
-    "REJECT": 41,
-    "QUARANTINE": 152,
-    "NEEDS_HUMAN_REVIEW": 1428
+    "PASS": 509,
+    "REJECT": 42,
+    "QUARANTINE": 156,
+    "NEEDS_HUMAN_REVIEW": 1405
   },
   "by_domain": {
     "circuits": {
@@ -20,10 +20,10 @@
       "NEEDS_HUMAN_REVIEW": 194
     },
     "algebra": {
-      "PASS": 21,
-      "REJECT": 2,
-      "QUARANTINE": 6,
-      "NEEDS_HUMAN_REVIEW": 187
+      "PASS": 39,
+      "REJECT": 3,
+      "QUARANTINE": 10,
+      "NEEDS_HUMAN_REVIEW": 164
     },
     "thermal_process_engineering": {
       "PASS": 73,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 683,
+  "agent_substantive_reviews": 706,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "0d1a3a1e8927a672df416c8156d2c183a3ef2be9ce8d1cc97f22e92ac14dcf9b",
+  "technical_review_sha256": "f1b7e98aefaada4229bb8f7dc8c9cf1fffbea95aa307444b594963ee4dfc93fc",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1426,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1403,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -764,11 +764,34 @@
     "The list names useful approaches, but the proposed implicit-function elimination omits the regularity and nonsingular constraint-Jacobian hypotheses required to invoke the standard implicit-function theorem. The visible prompt gives only a nonlinear system, and does not establish an optimization or variational setting for the multiplier suggestion. Hold for those scope conditions rather than rejecting the methods themselves.": 1,
     "Complete standard proof that integers under addition form a group: closure, associativity, additive identity and additive inverse all hold.": 1,
     "Correct symbolic eigenvalue workflow using the characteristic determinant, followed by null-space computation of eigenvectors. The extra eigenvector step is useful and does not alter the eigenvalue procedure.": 1,
-    "Correctly identifies the monic characteristic polynomial, the identity as the only diagonalizable matrix with every eigenvalue 1, and possible nontrivial unipotent Jordan structure. The nonuniqueness conclusion is correct.": 1
+    "Correctly identifies the monic characteristic polynomial, the identity as the only diagonalizable matrix with every eigenvalue 1, and possible nontrivial unipotent Jordan structure. The nonuniqueness conclusion is correct.": 1,
+    "Correct uniqueness proof: if two elements are identities, evaluating their sum in the two ways forces equality.": 1,
+    "The direction-dependent limiting behavior is useful, but denominator zeros are described too uniformly as curves analogous to vertical asymptotes. A nonzero real bivariate polynomial can have isolated real zeros, and bounded rational behavior or cancellation can occur instead of divergence.": 1,
+    "The elimination and substitution are correct, and the final solution satisfies both equations.": 1,
+    "Correct answer to the logical question: a proof over positive integers does not automatically cover zero, and a separate check is needed when domain-specific operations or assumptions fail there.": 1,
+    "Valid group-theoretic proof of Euler's theorem using the unit group modulo n, its totient order and Lagrange's theorem.": 1,
+    "The active/inactive distinction is broadly correct, but arbitrary equality sets need not be manifolds without regularity, and inequalities do not inherently make every problem combinatorial or significantly harder. The answer overstates these generalizations for the unspecified coupled system.": 1,
+    "Correct introductory distinction between determinant-ratio solution and elimination, with the conventional practical preference for Gaussian elimination on large systems.": 1,
+    "The negative- and positive-real-part criteria are correct for the stated constant-coefficient linear ODE. However, the blanket claim that eigenvalues determine stability needs qualification on the imaginary axis: Jordan block sizes also matter. The answer does not distinguish that case from a simple oscillatory mode.": 1,
+    "Correct trace definition and 2 by 2 characteristic polynomial. Trace and determinant are respectively the eigenvalue sum and product, so they contain different spectral information.": 1,
+    "Correct standard group-homomorphism proof using the image of the identity and cancellation by its inverse.": 1,
+    "Correct extension of the determinant of a square matrix to commutative rings, including polynomial entries. The algebraic formula uses addition, additive inverses and multiplication, with no division requirement.": 1,
+    "Sound conceptual motivation: elimination explains rank, consistency and nonuniqueness and underlies common computer solvers. This is educational guidance rather than a claim that knowing elimination alone certifies every numerical result.": 1,
+    "Valid proof that the center contains the identity, is closed under products and inverses, and therefore is a subgroup. The inverse manipulation follows by multiplying the commuting relation on the appropriate sides.": 1,
+    "The intermediate-value proof is correct for a real-coefficient cubic. That essential coefficient restriction is absent from the standalone claim and is not stated in the answer; the sign and real-continuity argument does not apply to a general complex-coefficient cubic.": 1,
+    "Correct plain-language definition and factorization of a difference of squares, with the cancellation mechanism accurately described.": 1,
+    "Correctly explains the role of introducing variables and assumptions, and of reasoning with an arbitrary element to establish generality.": 1,
+    "Correct relationship between elementary elimination and equivalent systems: reversible row operations preserve the solution set.": 1,
+    "Accurate short description of Baumgarte stabilization: position-constraint error and its derivative enter a damped error-dynamics correction that counters numerical drift.": 1,
+    "The requested exhaustive explanation is not valid. The prompt does not restrict the equations to nondegenerate linear lines, and even within linear systems the explanation ignores inconsistent zero rows. Different raw constants alone do not establish distinct parallel lines when coefficients have been rescaled.": 1,
+    "Correct exhaustive argument for coprime real polynomials: a real denominator root cannot also be a numerator root, hence gives a pole; absence of real denominator roots means no real vertical asymptote.": 1,
+    "Accurate introductory explanation of the differentiation index and why index reduction matters to numerical constraint handling.": 1,
+    "Reasonable adaptive-solver strategy at conceptual scope: weak coupling can suit partitioning, strong coupling can impair it, and monitored switching can balance cost and robustness. The answer frames adaptation as an option that can help.": 1,
+    "Both substitution and elimination steps are correct, and the reported pair satisfies both original equations.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "52bb5860b111282b7055a4e17a7569196b19d0033ee709f2802f8cfcc72c2052",
-  "substantively_unreviewed": 1426,
+  "published_decisions_sha256": "90adfeaf9bb9e6259bfa82a897496ade5159acdd456e1cc076376bdbae6226f7",
+  "substantively_unreviewed": 1403,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
