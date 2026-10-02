@@ -391,3 +391,8 @@ This unpublished local batch added {'PASS': 21, 'QUARANTINE': 4} after independe
 ## Local electromagnetism checkpoint 150–165
 
 This unpublished local batch added {'PASS': 14, 'QUARANTINE': 2} after independent agent QA; 0 earlier substantive decisions were skipped and 0 original structural quarantines were preserved. Current local substantive reviews: 1623; remaining unreviewed: 486; next electromagnetism offset: 175. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. Original answers, prior 1607 decisions and all release gates are unchanged. [Batch receipt](phase3-review-batches/electromagnetism-0150-0175.json).
+
+
+## Completed pending electromagnetism review
+
+All 162 previously pending electromagnetism records received individual technical review and independent agent QA. With four preserved prior reviews, all 166 selected records have substantive dispositions. Local total: 1,623 substantive reviews; 486 ordinary records remain unreviewed, plus two existing specialist holds. Original answers, tokens, all earlier decisions and the three original structural-only quarantines are unchanged. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. See [checkpoint](phase3-electromagnetism-domain-checkpoint.json). Technical PASS does not authorize release or training.

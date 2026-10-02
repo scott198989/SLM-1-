@@ -3,7 +3,7 @@
 
 Cloud continuation: read [HANDOFF_README.md](HANDOFF_README.md) first; use branch `codex/forge-data-consolidation` / draft PR3. The selected circuits, thermal and electrical source-domain reviews are complete as dispositions in the local checkpoint; no legacy SFT released.
 
-Cloud continuation, October 2: the local reviewed checkpoint has 1623 substantive decisions. Electrical review and the pending algebra/trigonometry/calculus/engineering mathematics queues are complete, with structural holds preserved; electromagnetism review has advanced through original ordinal 165. The published GitHub branch remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. Later local batches await publication; next local electromagnetism offset is 175.
+Cloud continuation, October 2: the local checkpoint has 1,623 substantive reviews. Electrical, algebra, trigonometry, calculus, engineering mathematics and electromagnetism pending review are complete, with three original structural holds preserved. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. [Electromagnetism checkpoint](reports/phase3-electromagnetism-domain-checkpoint.json).
 
 ## Phase 3 pilot — current gate
 

@@ -20,7 +20,7 @@
   "model_weights_downloaded_or_loaded": false,
   "training_or_paid_compute": false,
   "automatic_checks_recreated": false,
-  "test_log_sha256": "045866ee5ae82a79d02b8e5b7e660125d41ccb69df2cb9a95621fa1a4437f4d8",
+  "test_log_sha256": "c0c184c06e5fd6b9cb0e10a5c3dc8a28028c8c52488bb9db32a025a646ec29f6",
   "tested_code_sha256": {
     "scripts/phase3-verify-private-release.py": "64d76484b0852d041083301ce113ddc255b7906512def3dc12d0f92dc96910e1",
     "src/forge_data/citation_pilot.py": "9e17e50194ba8cb22eca0b431359d7aec1d870f8417e87b4938e3c1ff4c968d4",
@@ -53,8 +53,8 @@
   },
   "substantively_unreviewed": 486,
   "next_batch": {
-    "domain": "electromagnetism",
-    "offset": 175,
+    "domain": "physics",
+    "offset": 0,
     "limit": 25
   },
   "official_reader_executed": true,
@@ -113,5 +113,9 @@
   "engineering_mathematics_substantive_reviews": 200,
   "engineering_mathematics_checkpoint": "reports/phase3-engineering_mathematics-domain-checkpoint.json",
   "completion_cpu_tests": 69,
-  "completion_cpu_test_log": "forge-pr3-engineering-math-final-tests.log"
+  "completion_cpu_test_log": "forge-pr3-electromagnetism-final-tests.log",
+  "electromagnetism_pending_review_queue_complete": true,
+  "electromagnetism_source_records_checked": 166,
+  "electromagnetism_substantive_reviews": 166,
+  "electromagnetism_checkpoint": "reports/phase3-electromagnetism-domain-checkpoint.json"
 }

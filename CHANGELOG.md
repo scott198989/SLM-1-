@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-02 - Pending electromagnetism queue completion
+
+- Reviewed 162 pending records with independent agent QA; preserved four prior decisions. All 166 selected electromagnetism records have substantive dispositions.
+- Local total 1,623 reviews; 486 still unreviewed, plus two reviewed specialist holds. Public branch remains at 392 reviews.
+- Preserved source messages, hashes, tokens, all earlier 1,461 decisions, all three structural holds, rights metadata and frozen receipts.
+
+
 ## 2026-10-02 - Local electromagnetism review 150–165
 
 - Added {'PASS': 14, 'QUARANTINE': 2} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1607 reviews unchanged.
