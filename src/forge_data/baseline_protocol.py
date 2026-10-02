@@ -5,12 +5,28 @@ This module does not implement an inference backend or authorize training.
 """
 
 import json
-from pathlib import Path
-from .sealed_eval import verify_seal
+import math
+from .sealed_eval import read_sealed_member
 from .citation_pilot import source_slice
 from forge_tools.router import execute
 from forge_tools.engineering import tool_catalog
 from forge_tools.router import TOOLS
+
+
+def _finite_float(value):
+    number = float(value)
+    if not math.isfinite(number):
+        raise ValueError("nonfinite_json")
+    return number
+
+
+def _unique_object(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError("duplicate_json_key")
+        result[key] = value
+    return result
 
 
 def run_task(task, generate, *, reference_root=None, max_tool_calls=3):
@@ -59,17 +75,25 @@ def run_task(task, generate, *, reference_root=None, max_tool_calls=3):
         try:
             request = json.loads(
                 output,
+                object_pairs_hook=_unique_object,
+                parse_float=_finite_float,
                 parse_constant=lambda _: (_ for _ in ()).throw(
                     ValueError("nonfinite_json")
                 ),
             )
         except (ValueError, TypeError):
-            return {"status": "INVALID_JSON", "answer": None, "tool_calls": len(traces)}
+            return {
+                "status": "INVALID_JSON",
+                "answer": None,
+                "tool_calls": len(traces),
+                "tool_receipts": traces,
+            }
         if not isinstance(request, dict):
             return {
                 "status": "INVALID_PROTOCOL",
                 "answer": None,
                 "tool_calls": len(traces),
+                "tool_receipts": traces,
             }
         if request.get("kind") == "final" and set(request) == {"kind", "answer"}:
             return {
@@ -88,12 +112,14 @@ def run_task(task, generate, *, reference_root=None, max_tool_calls=3):
                 "status": "DISALLOWED_REQUEST",
                 "answer": None,
                 "tool_calls": len(traces),
+                "tool_receipts": traces,
             }
         if turn == max_tool_calls:
             return {
                 "status": "TOOL_BUDGET_EXHAUSTED",
                 "answer": None,
                 "tool_calls": len(traces),
+                "tool_receipts": traces,
             }
         try:
             receipt = execute(request["name"], request["arguments"])
@@ -118,13 +144,13 @@ def run_task(task, generate, *, reference_root=None, max_tool_calls=3):
 
 def prepare_tasks(folder, expected_seal_sha256):
     """Read sealed question-only inputs. Never exposes answers to inference."""
-    verify_seal(folder, expected_seal_sha256)
+    data = read_sealed_member(folder, expected_seal_sha256, "questions.jsonl")
     tasks = [
         json.loads(line)
-        for line in (Path(folder) / "questions.jsonl")
-        .read_text(encoding="utf-8")
-        .splitlines()
+        for line in data.decode("utf-8").splitlines()
     ]
+    if not tasks:
+        raise ValueError("empty_task_set")
     if len({x["id"] for x in tasks}) != len(tasks):
         raise ValueError("duplicate_task_ids")
     return tasks

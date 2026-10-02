@@ -1,6 +1,8 @@
 {
   "version":"FORGE_private_gold_design_v0.1",
-  "status":"DESIGN_ONLY_NO_SEALED_TASKS_CREATED",
+  "status":"DESIGN_ONLY_240_TASK_BENCHMARK_NOT_CREATED",
+  "existing_narrow_diagnostic_receipt":"reports/phase3-sealed-gold.json",
+  "execution_and_comparison_protocol":"docs/PHASE3_BASELINE_EXPERIMENT.md",
   "proposed_tasks":240,
   "domains":["statics_strength","circuits","motors_drives","controls","instrumentation","plc_ladder","siemens_tia","thermal_process","materials_manufacturing","troubleshooting","data_analysis_doe_spc","engineering_problem_solving"],
   "tasks_per_domain":20,

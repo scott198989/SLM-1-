@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-02 - Tighten evaluation preparation integrity and protocol
+
+- Fixed reproduced synthetic failures: required sealed questions/answers must be present and the exact authenticated bytes are consumed; duplicate/empty task IDs cannot inflate a score. Model JSON rejects duplicate keys and nonfinite overflow, exact citations preserve JSON types, oversized numeric answers fail without crashing, and terminal tool failures retain receipts.
+- Extended the existing baseline experiment with paired base/adapter modes, independent family/development requirements, scoring denominators, proposed thresholds and explicit missing-input gates. Frozen-reference evaluation is distinguished from retrieval; 16 integration examples and 12 single-domain diagnostic tasks do not establish broad specialization.
+- Corrected the preparation runbook: historical artifact-generating commands are not read-only verification, the 37-test expectation is stale, and blocked asset downloads must not be retried.
+- Added 13 synthetic regression methods; independent code/protocol review completed. Fresh CPU suite: 112 pass, five Qwen methods blocked by absent pinned assets (one class-setup error). No full-suite pass or private requalification is claimed.
+- Preserved a45ec19, original messages, frozen artifacts, historical receipts and all source/release holds. No private gold inspection, model load, training, paid compute, network fetch or publication.
+
 ## 2026-10-02 - Add bounded academic reconciliation preflight
 
 - Added a read-only nine-source intake validator with a pinned external scope digest, full metadata preflight before original/cache reads, gold/alias/split/rights gates, safe confined paths, byte pins and region/link checks. All outputs remain HOLD; rights declarations do not establish permission or fidelity.
