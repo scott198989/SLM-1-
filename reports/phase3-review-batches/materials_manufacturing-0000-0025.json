@@ -39,7 +39,8 @@
     "review_precision_corrections": [
       "7 retains pre-neck measure difference as caveat without inventing first/only claims.",
       "20 accepts the standard closed-cylinder instructional scope.",
-      "Add direct thermal-strain and ionic/covalent-bonding evidence."
+      "Add direct thermal-strain and ionic/covalent-bonding evidence.",
+      "Final evidence audit corrects the phase-transitions textbook title and uses directly matched primary sources/row-specific checks without changing any disposition, rationale, source message or token count."
     ],
     "full_prompt_and_answer_review": true,
     "all_source_hashes_ids_ordinals_and_ledger_matches": true,
@@ -74,13 +75,13 @@
       "rationale": "Correct thermodynamic explanation of temperature-dependent crystal stability.",
       "evidence": [
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "At fixed temperature, pressure and composition, the stable phase minimizes Gibbs free energy G=H-T*S; competing phase free energies can cross with temperature."
         },
         {
-          "title": "Bhadeshia, Cambridge, engineering materials text",
+          "title": "Bhadeshia and Yan, Phase Transitions: An introduction with worked examples",
           "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
-          "finding": "Discusses the iron-carbon system and carbon interactions with dislocation motion as a strengthening mechanism."
+          "finding": "Phase equilibria and steel phase-transformation examples; this is not a general all-topic engineering-materials handbook."
         },
         {
           "method": "independent_analytical_check",
@@ -101,9 +102,9 @@
       "rationale": "Correct introductory interstitial-carbon/dislocation strengthening mechanism with phase dependence noted.",
       "evidence": [
         {
-          "title": "Bhadeshia, Cambridge, engineering materials text",
-          "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
-          "finding": "Discusses the iron-carbon system and carbon interactions with dislocation motion as a strengthening mechanism."
+          "title": "MIT Physical Metallurgy Lecture 16",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/613623af5c60a58694cab425892aa9b0_MIT3_40JF09_lec16.pdf",
+          "finding": "Solute size/modulus interactions and interstitial atmosphere/dislocation pinning support the strengthening mechanism."
         },
         {
           "method": "scope_caveat",
@@ -120,8 +121,8 @@
       "rationale": "Correct rejection of a one-to-one bond-type lookup rule for crystal structure.",
       "evidence": [
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "conceptual_scope_review",
+          "finding": "Correct rejection of a one-to-one bond-type lookup rule for crystal structure."
         },
         {
           "method": "scope_caveat",
@@ -138,8 +139,8 @@
       "rationale": "Correct introductory units and deformation-versus-loading distinction.",
       "evidence": [
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "Stress has force/area units Pa, while a simple engineering strain is DeltaL/L0 and is dimensionless."
         },
         {
           "method": "independent_analytical_check",
@@ -165,8 +166,8 @@
           "finding": "Defines elastic slope, yield and maximum engineering tensile stress in the standard ductile tensile-test setting."
         },
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "For a linear uniaxial curve through the unloaded origin, slope d(sigma)/d(epsilon)=sigma/epsilon=E."
         },
         {
           "method": "independent_analytical_check",
@@ -211,8 +212,8 @@
           "finding": "Distinguishes engineering and true measures before necking and gives the Considere construction and power-law necking strain."
         },
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "During homogeneous approximately volume-conserving extension, A=A0/(1+e), so sigma_true=sigma_engineering*(1+e) before neck formation."
         },
         {
           "method": "independent_analytical_check",
@@ -233,9 +234,9 @@
       "rationale": "Correct warning about fatigue damage and failure below macroscopic yield, with endurance behavior acknowledged.",
       "evidence": [
         {
-          "title": "David Roylance, MIT, Introduction to Fracture Mechanics",
-          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/e5bca953e1dbd0cd0376f0f77033dc0d_MIT3_11F99_frac.pdf",
-          "finding": "Describes linear-elastic crack-tip stress intensity, geometry factors and the distinct plane-strain Mode-I toughness condition."
+          "title": "David Roylance, MIT, Fatigue",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/f678e01017186c53d45845ad93c07938_MIT3_11F99_fatigue.pdf",
+          "finding": "Cyclic slip, initiation and growth permit fatigue failure below macroscopic static yield."
         },
         {
           "method": "scope_caveat",
@@ -257,8 +258,8 @@
           "finding": "Distinguishes engineering and true measures before necking and gives the Considere construction and power-law necking strain."
         },
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "At maximum load F=sigma*A, dF=0 and plastic volume conservation dA/A=-d(epsilon_true) yield d(sigma)/d(epsilon)=sigma. For sigma=K*epsilon^n this gives epsilon=n."
         },
         {
           "method": "independent_analytical_check",
@@ -279,8 +280,8 @@
       "rationale": "Plastic residual strain is one valid explanation, but zero stress with nonzero strain does not uniquely establish prior plastic loading. Free thermal strain and other eigenstrains can give the same observation.",
       "evidence": [
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "A freely heated linear bar has epsilon=alpha*DeltaT and sigma=E*(epsilon-alpha*DeltaT)=0 without yielding."
         },
         {
           "title": "MIT Lagace, Structural Mechanics Unit 9, page 5",
@@ -306,8 +307,8 @@
       "rationale": "Correct nominal single-shear stress and von-Mises pure-shear yield ratio.",
       "evidence": [
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "For pure shear tau, von Mises equivalent stress=sqrt(3)*|tau|, so shear yield is sigma_y/sqrt(3)=0.57735*sigma_y."
         },
         {
           "method": "independent_analytical_check",
@@ -333,8 +334,8 @@
           "finding": "Distinguishes ordinary nondirectional ionic bonding from directional covalent bonding."
         },
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "An ideal ionic Coulomb interaction depends on charge separation, not an orbital bond angle. Ionic slip barriers involve lattice geometry and unfavorable like-charge alignment, not a blanket covalent-style directionality rule."
         },
         {
           "method": "independent_analytical_check",
@@ -374,8 +375,8 @@
       "rationale": "Correct pressure-insensitive von-Mises distortion-energy interpretation for ordinary ductile-metal yielding.",
       "evidence": [
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "sigma_equiv²=[(sigma1-sigma2)²+(sigma2-sigma3)²+(sigma3-sigma1)²]/2, so an equal hydrostatic addition cancels."
         },
         {
           "method": "independent_analytical_check",
@@ -401,8 +402,8 @@
           "finding": "Pressure-loaded end-cap force balance gives the axial pr/(2t) membrane stress; hoop force balance gives pr/t."
         },
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "Closed-end axial balance gives sigma_a*(2*pi*r*t)=p*pi*r². An open-ended tube without transmitted end thrust does not acquire that axial stress from pressure alone; flaw geometry and material anisotropy can change the failure direction."
         },
         {
           "title": "University of Colorado, Physical Models and Demonstrations in Engineering Education, printed pages 99–100",
@@ -433,8 +434,8 @@
           "finding": "Describes linear-elastic crack-tip stress intensity, geometry factors and the distinct plane-strain Mode-I toughness condition."
         },
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "The leading crack-tip stress field scales as K/sqrt(2*pi*r), and a geometry/loading factor gives K=Y*sigma*sqrt(pi*a)."
         },
         {
           "method": "independent_analytical_check",
@@ -460,8 +461,8 @@
           "finding": "Describes linear-elastic crack-tip stress intensity, geometry factors and the distinct plane-strain Mode-I toughness condition."
         },
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "0.7*sqrt(2)=0.989949..., while 0.7*sqrt(4)=1.4, giving the quoted near-threshold and above-threshold values in that model."
         },
         {
           "method": "independent_analytical_check",
@@ -506,8 +507,8 @@
       "rationale": "Correct viscoelastic history dependence, recoverable and dissipative contributions, and standard creep/relaxation/hysteresis manifestations.",
       "evidence": [
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "A linear viscoelastic stress can be written as a history integral over a relaxation modulus, combining storage and time dependence."
         },
         {
           "method": "independent_analytical_check",

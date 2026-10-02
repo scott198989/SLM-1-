@@ -104,13 +104,13 @@
     },
     {
       "path": "data/review/phase3/technical-review.jsonl.gz",
-      "bytes": 612157,
-      "sha256": "e405a742d95a61dc0296940f08b8fd0fee010f3c568cc1f7f613ba82a97640ee"
+      "bytes": 610121,
+      "sha256": "6b95077c849764030b34971c593bae45a3a5fa3336976656e316d951a5cdbf9c"
     },
     {
       "path": "manifests/phase3-agent-technical-review.json",
-      "bytes": 3454530,
-      "sha256": "571ebd73c0b10e46e741da3ddf371335ba3890b91197afc2a7e7faced7d7a171"
+      "bytes": 3450388,
+      "sha256": "feb114597eb3d7a5a79f543392e6a264e9875d3dba6c4b520e3b51962f021f95"
     },
     {
       "path": "manifests/phase3-release-families.json",
@@ -120,7 +120,7 @@
     {
       "path": "reports/phase3-technical-review.json",
       "bytes": 334318,
-      "sha256": "3eef30bd81c5925ab6fe91ac03908928c235a7e1a1438a62e592a970bdced8c7"
+      "sha256": "4d56bab0e7585fc92d494a26b303b77a6a7e3c11bf3e500c85c5e403ebf2cd11"
     },
     {
       "path": "src/forge_tools/engineering.py",

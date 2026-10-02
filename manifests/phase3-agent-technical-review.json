@@ -57449,13 +57449,13 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "At fixed temperature, pressure and composition, the stable phase minimizes Gibbs free energy G=H-T*S; competing phase free energies can cross with temperature."
         },
         {
-          "title": "Bhadeshia, Cambridge, engineering materials text",
+          "title": "Bhadeshia and Yan, Phase Transitions: An introduction with worked examples",
           "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
-          "finding": "Discusses the iron-carbon system and carbon interactions with dislocation motion as a strengthening mechanism."
+          "finding": "Phase equilibria and steel phase-transformation examples; this is not a general all-topic engineering-materials handbook."
         },
         {
           "method": "independent_analytical_check",
@@ -57489,9 +57489,9 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "title": "Bhadeshia, Cambridge, engineering materials text",
-          "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
-          "finding": "Discusses the iron-carbon system and carbon interactions with dislocation motion as a strengthening mechanism."
+          "title": "MIT Physical Metallurgy Lecture 16",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/613623af5c60a58694cab425892aa9b0_MIT3_40JF09_lec16.pdf",
+          "finding": "Solute size/modulus interactions and interstitial atmosphere/dislocation pinning support the strengthening mechanism."
         },
         {
           "method": "scope_caveat",
@@ -57521,8 +57521,8 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "conceptual_scope_review",
+          "finding": "Correct rejection of a one-to-one bond-type lookup rule for crystal structure."
         },
         {
           "method": "scope_caveat",
@@ -57552,8 +57552,8 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "Stress has force/area units Pa, while a simple engineering strain is DeltaL/L0 and is dimensionless."
         },
         {
           "method": "independent_analytical_check",
@@ -57592,8 +57592,8 @@
           "finding": "Defines elastic slope, yield and maximum engineering tensile stress in the standard ductile tensile-test setting."
         },
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "For a linear uniaxial curve through the unloaded origin, slope d(sigma)/d(epsilon)=sigma/epsilon=E."
         },
         {
           "method": "independent_analytical_check",
@@ -57666,8 +57666,8 @@
           "finding": "Distinguishes engineering and true measures before necking and gives the Considere construction and power-law necking strain."
         },
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "During homogeneous approximately volume-conserving extension, A=A0/(1+e), so sigma_true=sigma_engineering*(1+e) before neck formation."
         },
         {
           "method": "independent_analytical_check",
@@ -57701,9 +57701,9 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "title": "David Roylance, MIT, Introduction to Fracture Mechanics",
-          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/e5bca953e1dbd0cd0376f0f77033dc0d_MIT3_11F99_frac.pdf",
-          "finding": "Describes linear-elastic crack-tip stress intensity, geometry factors and the distinct plane-strain Mode-I toughness condition."
+          "title": "David Roylance, MIT, Fatigue",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/f678e01017186c53d45845ad93c07938_MIT3_11F99_fatigue.pdf",
+          "finding": "Cyclic slip, initiation and growth permit fatigue failure below macroscopic static yield."
         },
         {
           "method": "scope_caveat",
@@ -57739,8 +57739,8 @@
           "finding": "Distinguishes engineering and true measures before necking and gives the Considere construction and power-law necking strain."
         },
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "At maximum load F=sigma*A, dF=0 and plastic volume conservation dA/A=-d(epsilon_true) yield d(sigma)/d(epsilon)=sigma. For sigma=K*epsilon^n this gives epsilon=n."
         },
         {
           "method": "independent_analytical_check",
@@ -57775,8 +57775,8 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "A freely heated linear bar has epsilon=alpha*DeltaT and sigma=E*(epsilon-alpha*DeltaT)=0 without yielding."
         },
         {
           "title": "MIT Lagace, Structural Mechanics Unit 9, page 5",
@@ -57815,8 +57815,8 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "For pure shear tau, von Mises equivalent stress=sqrt(3)*|tau|, so shear yield is sigma_y/sqrt(3)=0.57735*sigma_y."
         },
         {
           "method": "independent_analytical_check",
@@ -57857,8 +57857,8 @@
           "finding": "Distinguishes ordinary nondirectional ionic bonding from directional covalent bonding."
         },
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "An ideal ionic Coulomb interaction depends on charge separation, not an orbital bond angle. Ionic slip barriers involve lattice geometry and unfavorable like-charge alignment, not a blanket covalent-style directionality rule."
         },
         {
           "method": "independent_analytical_check",
@@ -57925,8 +57925,8 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "sigma_equiv²=[(sigma1-sigma2)²+(sigma2-sigma3)²+(sigma3-sigma1)²]/2, so an equal hydrostatic addition cancels."
         },
         {
           "method": "independent_analytical_check",
@@ -57965,8 +57965,8 @@
           "finding": "Pressure-loaded end-cap force balance gives the axial pr/(2t) membrane stress; hoop force balance gives pr/t."
         },
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "Closed-end axial balance gives sigma_a*(2*pi*r*t)=p*pi*r². An open-ended tube without transmitted end thrust does not acquire that axial stress from pressure alone; flaw geometry and material anisotropy can change the failure direction."
         },
         {
           "title": "University of Colorado, Physical Models and Demonstrations in Engineering Education, printed pages 99–100",
@@ -58011,8 +58011,8 @@
           "finding": "Describes linear-elastic crack-tip stress intensity, geometry factors and the distinct plane-strain Mode-I toughness condition."
         },
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "The leading crack-tip stress field scales as K/sqrt(2*pi*r), and a geometry/loading factor gives K=Y*sigma*sqrt(pi*a)."
         },
         {
           "method": "independent_analytical_check",
@@ -58052,8 +58052,8 @@
           "finding": "Describes linear-elastic crack-tip stress intensity, geometry factors and the distinct plane-strain Mode-I toughness condition."
         },
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "0.7*sqrt(2)=0.989949..., while 0.7*sqrt(4)=1.4, giving the quoted near-threshold and above-threshold values in that model."
         },
         {
           "method": "independent_analytical_check",
@@ -58125,8 +58125,8 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "method": "independent_constitutive_and_fracture_derivation",
-          "finding": "Individually checked free-energy stability, stress/strain units, engineering-to-true stress conversion, necking criterion, thermal strain, pure-shear yield, pressure-vessel force balance and square-root crack scaling."
+          "method": "independent_row_specific_check",
+          "finding": "A linear viscoelastic stress can be written as a history integral over a relaxation modulus, combining storage and time dependence."
         },
         {
           "method": "independent_analytical_check",
@@ -58165,8 +58165,8 @@
           "finding": "Linear viscoelastic networks describe relaxation, creep, temperature dependence and dissipative cyclic response."
         },
         {
-          "method": "independent_mechanics_and_constitutive_checks",
-          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+          "method": "independent_row_specific_check",
+          "finding": "A Maxwell branch under fixed strain satisfies sigma_dot=-(E/eta)*sigma; generalized networks give a sum of relaxation modes."
         },
         {
           "method": "independent_analytical_check",
@@ -58205,8 +58205,8 @@
           "finding": "Linear viscoelastic networks describe relaxation, creep, temperature dependence and dissipative cyclic response."
         },
         {
-          "method": "independent_mechanics_and_constitutive_checks",
-          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+          "method": "independent_row_specific_check",
+          "finding": "The signed loop integral integral(sigma d epsilon) is work dissipated per unit volume in a closed stabilized cycle."
         },
         {
           "method": "independent_analytical_check",
@@ -58241,8 +58241,8 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "method": "independent_mechanics_and_constitutive_checks",
-          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+          "method": "independent_row_specific_check",
+          "finding": "Sigma_c=sum(V_i*sigma_i)=epsilon*sum(V_i*E_i), so E_c=sum(V_i*E_i)."
         },
         {
           "method": "independent_analytical_check",
@@ -58282,8 +58282,8 @@
           "finding": "Axially compressed brittle rock specimens can split parallel to the compression direction; shear failure and its angle depend on flaws and confinement."
         },
         {
-          "method": "independent_mechanics_and_constitutive_checks",
-          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+          "method": "independent_row_specific_check",
+          "finding": "Maximum shear under uniaxial stress lies at 45 degrees, but this does not prove that brittle crack propagation must follow that plane."
         },
         {
           "method": "independent_analytical_check",
@@ -58323,8 +58323,8 @@
           "finding": "Directly distinguishes isotropic yield-surface expansion, kinematic translation and the Bauschinger-related cyclic limitation."
         },
         {
-          "method": "independent_mechanics_and_constitutive_checks",
-          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+          "method": "independent_row_specific_check",
+          "finding": "For a uniaxial translated yield interval [alpha-R,alpha+R], reverse yielding changes with backstress alpha; pure isotropic growth changes R with alpha fixed."
         },
         {
           "method": "independent_analytical_check",
@@ -58358,9 +58358,9 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "title": "Bhadeshia, Cambridge, Engineering Materials text",
-          "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
-          "finding": "Dislocations, slip systems, strengthening mechanisms, material classes and microstructure-property tradeoffs underlie these introductory explanations."
+          "title": "David Roylance, MIT, Dislocation Basis of Yield and Creep",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/339d0d74796cc35538c78bbed818b629_MIT3_11F99_dn.pdf",
+          "finding": "Dislocation motion accounts for ordinary crystalline-metal yielding and plastic slip."
         },
         {
           "method": "scope_caveat",
@@ -58396,13 +58396,13 @@
           "finding": "The H900 typical room-temperature entries give Young modulus 196 GPa and 0.2%-offset yield strength 1240 MPa, contradicting a universal E/1000 upper bound."
         },
         {
-          "title": "Bhadeshia, Cambridge, Engineering Materials text",
-          "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
-          "finding": "Dislocations, slip systems, strengthening mechanisms, material classes and microstructure-property tradeoffs underlie these introductory explanations."
+          "title": "David Roylance, MIT, Dislocation Basis of Yield and Creep",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/339d0d74796cc35538c78bbed818b629_MIT3_11F99_dn.pdf",
+          "finding": "Dislocation motion accounts for ordinary crystalline-metal yielding and plastic slip."
         },
         {
-          "method": "independent_mechanics_and_constitutive_checks",
-          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+          "method": "independent_row_specific_check",
+          "finding": "ATI H900 typical values give 1240/196000=0.00632653, over six times 0.001."
         },
         {
           "method": "independent_analytical_check",
@@ -58442,8 +58442,8 @@
           "finding": "Plane-strain constraint reduces the crack-tip plastic zone and maximum principal-stress difference; it does not make every triaxial state hydrostatic. Plastic blunting and flaw sensitivity explain ordinary ductile/brittle contrasts."
         },
         {
-          "method": "independent_mechanics_and_constitutive_checks",
-          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+          "method": "independent_row_specific_check",
+          "finding": "Principal stresses (100,100,60) MPa are all tensile yet give tau_max=(100-60)/2=20 MPa. Plane strain gives sigma_z=nu*(sigma_x+sigma_y), not equality of all three stresses."
         },
         {
           "method": "independent_analytical_check",
@@ -58477,8 +58477,8 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "method": "independent_mechanics_and_constitutive_checks",
-          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+          "method": "independent_row_specific_check",
+          "finding": "t=sigma*(n dot e_x)*e_x; subtracting (t dot n)*n gives shear magnitude |sigma sin(theta)cos(theta)|, maximized at 45 degrees modulo symmetry."
         },
         {
           "method": "independent_analytical_check",
@@ -58518,8 +58518,8 @@
           "finding": "Plane-strain constraint reduces the crack-tip plastic zone and maximum principal-stress difference; it does not make every triaxial state hydrostatic. Plastic blunting and flaw sensitivity explain ordinary ductile/brittle contrasts."
         },
         {
-          "method": "independent_mechanics_and_constitutive_checks",
-          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+          "method": "independent_row_specific_check",
+          "finding": "For sigma=100*diag(1,0,0) and n=(1,1,0)/sqrt(2), the shear traction q=(50,-50,0)/sqrt(2) has q dot n=0."
         },
         {
           "method": "independent_analytical_check",
@@ -58555,9 +58555,9 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "title": "Bhadeshia, Cambridge, Engineering Materials text",
-          "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
-          "finding": "Dislocations, slip systems, strengthening mechanisms, material classes and microstructure-property tradeoffs underlie these introductory explanations."
+          "title": "Cambridge Materials Database, Porcelain entry",
+          "url": "https://www-materials.eng.cam.ac.uk/mpsite/materialsdb/default.html",
+          "finding": "Porcelain material-class properties support the ordinary ceramic-tableware comparison; entry was independently checked by QA."
         },
         {
           "method": "scope_caveat",
@@ -58585,9 +58585,9 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "title": "Bhadeshia, Cambridge, Engineering Materials text",
-          "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
-          "finding": "Dislocations, slip systems, strengthening mechanisms, material classes and microstructure-property tradeoffs underlie these introductory explanations."
+          "title": "David Roylance, MIT, Dislocation Basis of Yield and Creep",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/339d0d74796cc35538c78bbed818b629_MIT3_11F99_dn.pdf",
+          "finding": "Dislocation motion accounts for ordinary crystalline-metal yielding and plastic slip."
         },
         {
           "title": "David Roylance, MIT, Introduction to Fracture Mechanics",
@@ -58622,9 +58622,14 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "title": "Bhadeshia, Cambridge, Engineering Materials text",
-          "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
-          "finding": "Dislocations, slip systems, strengthening mechanisms, material classes and microstructure-property tradeoffs underlie these introductory explanations."
+          "title": "NASA Kennedy Space Center, Forms of Corrosion",
+          "url": "https://public.ksc.nasa.gov/corrosion/forms-of-corrosion/",
+          "finding": "General and localized corrosion can remove section and create pits."
+        },
+        {
+          "title": "NASA electrical-contact corrosion guidance, page 13",
+          "url": "https://ntrs.nasa.gov/api/citations/20205007983/downloads/20205007983%20c10.pdf",
+          "finding": "Contact corrosion can increase electrical-contact resistance."
         },
         {
           "method": "scope_caveat",
@@ -58654,13 +58659,13 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "method": "independent_mechanics_and_constitutive_checks",
-          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+          "title": "BASF, Ultramid B3EG6 datasheet",
+          "url": "https://pmtools-na.basf.com/products/datasheet.php?param=Ultramid+B3EG6&type=iso",
+          "finding": "Glass-reinforced nylon has high stiffness in the specified material and test regime."
         },
         {
-          "title": "Bhadeshia, Cambridge, Engineering Materials text",
-          "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
-          "finding": "Dislocations, slip systems, strengthening mechanisms, material classes and microstructure-property tradeoffs underlie these introductory explanations."
+          "method": "independent_row_specific_check",
+          "finding": "In the common-strain idealization E_c=V_f*E_f+(1-V_f)*E_m, which increases with V_f when E_f>E_m."
         },
         {
           "method": "independent_analytical_check",
@@ -58694,13 +58699,13 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "method": "independent_mechanics_and_constitutive_checks",
-          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+          "title": "NIST, primary ceramic thermo-mechanical discussion",
+          "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=920070",
+          "finding": "Independently checked ceramic flaw sensitivity and thermal-stress caveats support the qualitative thermal-shock/tension-compression discussion."
         },
         {
-          "title": "David Roylance, MIT, Introduction to Fracture Mechanics",
-          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/e5bca953e1dbd0cd0376f0f77033dc0d_MIT3_11F99_frac.pdf",
-          "finding": "Plane-strain constraint reduces the crack-tip plastic zone and maximum principal-stress difference; it does not make every triaxial state hydrostatic. Plastic blunting and flaw sensitivity explain ordinary ductile/brittle contrasts."
+          "method": "independent_row_specific_check",
+          "finding": "A constrained thermal mismatch produces stresses of order E*alpha*DeltaT, even below the melting temperature."
         },
         {
           "method": "independent_analytical_check",
@@ -58734,8 +58739,13 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "method": "independent_mechanics_and_constitutive_checks",
-          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+          "title": "Parker, O-Ring Handbook, Section 2.4",
+          "url": "https://www.parker.com/content/dam/Parker-com/Literature/O-Ring-Division-Literature/ORD-5700.pdf",
+          "finding": "Hardness/compliance affect seal conformability; highest modulus is not a universal seal objective."
+        },
+        {
+          "method": "conceptual_scope_review",
+          "finding": "Correct rejection of modulus alone as a universal design objective, with compliant-seal example."
         },
         {
           "method": "scope_caveat",
@@ -58765,9 +58775,9 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "title": "David Roylance, MIT, Introduction to Fracture Mechanics",
-          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/e5bca953e1dbd0cd0376f0f77033dc0d_MIT3_11F99_frac.pdf",
-          "finding": "Plane-strain constraint reduces the crack-tip plastic zone and maximum principal-stress difference; it does not make every triaxial state hydrostatic. Plastic blunting and flaw sensitivity explain ordinary ductile/brittle contrasts."
+          "title": "NIST, primary ceramic thermo-mechanical discussion",
+          "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=920070",
+          "finding": "Independently checked ceramic flaw sensitivity and thermal-stress caveats support the qualitative thermal-shock/tension-compression discussion."
         },
         {
           "method": "scope_caveat",
@@ -58829,13 +58839,9 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "title": "Bhadeshia, Cambridge, Engineering Materials text",
-          "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
-          "finding": "Dislocations, slip systems, strengthening mechanisms, material classes and microstructure-property tradeoffs underlie these introductory explanations."
-        },
-        {
-          "method": "independent_mechanics_and_constitutive_checks",
-          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+          "title": "FAA, composite-material design guidance",
+          "url": "https://www.faa.gov/media/33921",
+          "finding": "Composite structural performance requires laminate, load, environment, damage tolerance and manufacturing considerations rather than a single coupon property."
         },
         {
           "method": "scope_caveat",
@@ -58866,8 +58872,8 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "method": "independent_mechanics_and_constitutive_checks",
-          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+          "method": "independent_row_specific_check",
+          "finding": "Elastic axial deflection F*L/(A*E) and nominal stress F/A illustrate separate stiffness and strength criteria."
         },
         {
           "method": "independent_analytical_check",
@@ -58906,8 +58912,8 @@
           "finding": "Thin closed cylindrical vessels have hoop pr/t and axial pr/(2t); the stresses follow geometry and end-cap force balance, not a shape-independent pressure-vessel rule."
         },
         {
-          "method": "independent_mechanics_and_constitutive_checks",
-          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+          "method": "independent_row_specific_check",
+          "finding": "For a thin spherical shell, pressure force p*pi*r^2 balances 2*pi*r*t*sigma, giving equal in-surface stresses pr/(2t), not a two-to-one ratio."
         },
         {
           "method": "independent_analytical_check",
@@ -58973,13 +58979,9 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "title": "Bhadeshia, Cambridge, Engineering Materials text",
-          "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
-          "finding": "Dislocations, slip systems, strengthening mechanisms, material classes and microstructure-property tradeoffs underlie these introductory explanations."
-        },
-        {
-          "method": "independent_mechanics_and_constitutive_checks",
-          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+          "title": "FAA, composite-material design guidance",
+          "url": "https://www.faa.gov/media/33921",
+          "finding": "Composite structural performance requires laminate, load, environment, damage tolerance and manufacturing considerations rather than a single coupon property."
         },
         {
           "method": "scope_caveat",
@@ -59009,13 +59011,13 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "method": "independent_mechanics_and_constitutive_checks",
-          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+          "title": "MIT Physical Metallurgy Lecture 6",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/cab57a8fff3d28dbf93eb993f8d5bd46_MIT3_40JF09_lec06.pdf",
+          "finding": "Resolved slip shear depends on the applied load direction, slip-plane normal and slip direction."
         },
         {
-          "title": "Bhadeshia, Cambridge, Engineering Materials text",
-          "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
-          "finding": "Dislocations, slip systems, strengthening mechanisms, material classes and microstructure-property tradeoffs underlie these introductory explanations."
+          "method": "independent_row_specific_check",
+          "finding": "Resolved slip shear is tau=sigma*cos(phi)*cos(lambda), with angles to the slip-plane normal and slip direction."
         },
         {
           "method": "independent_analytical_check",
@@ -59048,11 +59050,6 @@
       "independent_human_review": false,
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
-        {
-          "title": "Bhadeshia, Cambridge, Engineering Materials text",
-          "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
-          "finding": "Dislocations, slip systems, strengthening mechanisms, material classes and microstructure-property tradeoffs underlie these introductory explanations."
-        },
         {
           "title": "Sun et al., Acta Materialia preprint, pages 28–29",
           "url": "https://www.phase-trans.msm.cam.ac.uk/2018/shaft_Sun_Acta_2018_preprint.pdf",

@@ -78,7 +78,7 @@
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "76da6fceb0370a6bc7eb92a39af9c6ab28846fe33ba4a4fed290f10bd38351e5",
+  "technical_review_sha256": "8b6377f835decb17d7002927dfcb77921650cd25a987c813942b7221afca9540",
   "reasons": {
     "Faithful conceptual paraphrase that conservation and boundary requirements are integral to the coupled solution process. The prose does not explicitly assert exact feasibility of every internal numerical iterate.": 1,
     "Correct practical explanation of boundary data in an ordinary PDE discretization and their effect on closure, accuracy and stability.": 1,
@@ -2118,7 +2118,7 @@
     "Reasonable high-level incremental workflow combining cycle- and time-dependent crack/damage evolution with a peak-load fracture check.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "e405a742d95a61dc0296940f08b8fd0fee010f3c568cc1f7f613ba82a97640ee",
+  "published_decisions_sha256": "6b95077c849764030b34971c593bae45a3a5fa3336976656e316d951a5cdbf9c",
   "substantively_unreviewed": 75,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [

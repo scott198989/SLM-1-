@@ -20,7 +20,7 @@
   "model_weights_downloaded_or_loaded": false,
   "training_or_paid_compute": false,
   "automatic_checks_recreated": false,
-  "test_log_sha256": "7a0b17e0e916dd0ec530622bf24e51b994175f683928fc33a5020f55c7d21758",
+  "test_log_sha256": "68615a20bfb054a9940b310a3cedd51d04b94dbaad9ebdf199ac131a48749fae",
   "tested_code_sha256": {
     "scripts/phase3-verify-private-release.py": "64d76484b0852d041083301ce113ddc255b7906512def3dc12d0f92dc96910e1",
     "src/forge_data/citation_pilot.py": "9e17e50194ba8cb22eca0b431359d7aec1d870f8417e87b4938e3c1ff4c968d4",
