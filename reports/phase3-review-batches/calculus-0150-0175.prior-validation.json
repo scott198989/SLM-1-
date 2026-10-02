@@ -20,16 +20,16 @@
   "model_weights_downloaded_or_loaded": false,
   "training_or_paid_compute": false,
   "automatic_checks_recreated": false,
-  "test_log_sha256": "4b5cc3e98a4c3f1a4715e9bd4843a2393e64cb58d866f4587154ba56d922e88f",
+  "test_log_sha256": "4143aeae846a3018b19f972f3798ffdb584559c72bb81f6e92da13538e5588de",
   "tested_code_sha256": {
     "scripts/phase3-verify-private-release.py": "64d76484b0852d041083301ce113ddc255b7906512def3dc12d0f92dc96910e1",
     "src/forge_data/citation_pilot.py": "9e17e50194ba8cb22eca0b431359d7aec1d870f8417e87b4938e3c1ff4c968d4",
     "tests/test_private_release_verifier.py": "e2a5854473e449455e9bc2ffcc207346f018a3bb49206a81546cd1cea2ace817"
   },
-  "base_commit": "5a93ecd7514fd175b61b34792d77343d2fc61dff",
+  "base_commit": "bd9ee887ff852375f57b3fd3f4c8ff761401d694",
   "all_public_input_hashes_verified": 8,
   "candidate_message_hashes_verified": 2112,
-  "substantive_decisions_verified": 1227,
+  "substantive_decisions_verified": 1202,
   "earlier_374_decisions_unchanged": true,
   "unchanged_frozen_files": [
     "src/forge_tools/engineering.py",
@@ -46,15 +46,15 @@
     "QUARANTINE": 7
   },
   "current_dispositions": {
-    "PASS": 950,
+    "PASS": 930,
     "REJECT": 56,
-    "QUARANTINE": 222,
-    "NEEDS_HUMAN_REVIEW": 884
+    "QUARANTINE": 217,
+    "NEEDS_HUMAN_REVIEW": 909
   },
-  "substantively_unreviewed": 882,
+  "substantively_unreviewed": 907,
   "next_batch": {
     "domain": "calculus",
-    "offset": 175,
+    "offset": 150,
     "limit": 25
   },
   "official_reader_executed": true,
@@ -65,15 +65,16 @@
   "earlier_392_decisions_unchanged": true,
   "latest_batch": {
     "domain": "calculus",
-    "offset": 150,
+    "offset": 125,
     "limit": 25,
-    "selected_window_end_exclusive": 175,
+    "selected_window_end_exclusive": 150,
     "new_reviews": 25,
     "skipped_existing": 0,
     "preserved_structural_quarantines": [],
     "dispositions": {
-      "QUARANTINE": 5,
-      "PASS": 20
+      "QUARANTINE": 6,
+      "PASS": 18,
+      "REJECT": 1
     }
   },
   "independent_agent_qa_complete": true,
@@ -81,7 +82,7 @@
   "latest_batch_only_expected_ledger_rows_changed": true,
   "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
   "publication_status": "LOCAL_ONLY",
-  "earlier_decisions_unchanged": 1202,
+  "earlier_decisions_unchanged": 1177,
   "electrical_domain_complete": true,
   "electrical_records_verified": 300,
   "all_392_published_decisions_unchanged": true,

@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 930,
+    "PASS": 950,
     "REJECT": 56,
-    "QUARANTINE": 217,
-    "NEEDS_HUMAN_REVIEW": 909
+    "QUARANTINE": 222,
+    "NEEDS_HUMAN_REVIEW": 884
   },
   "by_domain": {
     "circuits": {
@@ -38,10 +38,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "calculus": {
-      "PASS": 129,
+      "PASS": 149,
       "REJECT": 4,
-      "QUARANTINE": 17,
-      "NEEDS_HUMAN_REVIEW": 65
+      "QUARANTINE": 22,
+      "NEEDS_HUMAN_REVIEW": 40
     },
     "electrical_components": {
       "PASS": 232,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1202,
+  "agent_substantive_reviews": 1227,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "6ffccef0d36068d2390e1d846cb4eebff8481bcb019db2292a1893f0690d7b2b",
+  "technical_review_sha256": "cf374f71cb6eb49cbcf8c04a0c216877c343f14c3845642f823effe1384a68c6",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 907,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 882,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1283,11 +1283,36 @@
     "Correct qualified claim that no universal terminating mechanical algorithm decides convergence for every effectively specified series.": 1,
     "The ceiling/floor intuition omits the nonnegative-term hypothesis needed by the usual direct comparison test. Being below a convergent positive series does not alone force an arbitrary signed series to converge.": 1,
     "Counting constraints alone does not justify unique determination or nothing left to optimize. The answer omits equality, independence, regularity and multiple-solution qualifications; inequalities can leave a full-dimensional feasible set.": 1,
-    "The high-order local-basis/geometry explanation is useful, but the unqualified exponential rate for smooth solutions confuses smoothness with analyticity. Smooth nonanalytic functions need not have exponential spectral convergence.": 1
+    "The high-order local-basis/geometry explanation is useful, but the unqualified exponential rate for smooth solutions confuses smoothness with analyticity. Smooth nonanalytic functions need not have exponential spectral convergence.": 1,
+    "Correct elementary local/absolute extrema distinction, including endpoint possibilities.": 1,
+    "Valid nonnegative Riemann-sum proof of integral monotonicity.": 1,
+    "The Raabe threshold is appropriate for positive terms or absolute convergence, but the answer uses absolute ratios and concludes the original series diverges whenR<1. Conditional convergence is not excluded.": 1,
+    "Correct distinction between a set accumulation point and the output value of a function limit.": 1,
+    "The geometric sum is correct, but the explanation conflates a decline in actual payment amounts with discounting their present-value contributions. Those are distinct factors in a present-value calculation.": 1,
+    "Correct conceptual combination of a truncated Fourier ansatz, nonlinear-term expansion and harmonic coefficient matching in a Taylor-based harmonic-balance approach.": 1,
+    "Correct three-factor product rule explanation with one differentiated factor per term.": 1,
+    "Correct split, two triangular contributions and exact value.": 1,
+    "The prompt specifies a constraint equation, but one equation does not generally reduce a multivariable objective to one variable. The answer omits the variable-count and independence assumptions needed for that reduction.": 1,
+    "Exact cylindrical-coordinate cylinder-volume calculation.": 1,
+    "Correct work line integral and height-change result in the usual uniform-gravity projectile model.": 1,
+    "The one-line proof that convergent series have terms tending to zero is correct. The final sentence misidentifies its logical relationship to the nth-term divergence test: this theorem is the contrapositive itself, not the converse of that contrapositive.": 1,
+    "Sound qualified guidance about periodic harmonic versus time/Laplace approaches to linear thermal excitation.": 1,
+    "The linear frequency-domain workflow is useful, but its stated reason for independent frequency solves is wrong: stiffness and damping matrices need not depend on frequency. Decoupling is due to linear time-invariant structure, with the dynamic operator depending on frequency.": 1,
+    "Correct one-sentence local-versus-global optimum distinction.": 1,
+    "Correct real Bolzano-Weierstrass statement and its role in compactness, extrema and Cauchy-completeness arguments.": 1,
+    "Correct motivation for a first-order local approximation enabling linear analysis tools.": 1,
+    "Correct reciprocal derivative and product-rule derivation of the quotient rule.": 1,
+    "Correct practical Stokes conversion from curl flux to boundary circulation.": 1,
+    "Correct standard linear heat-equation modal-superposition explanation.": 1,
+    "Correct accumulation-over-volume meaning and volume/mass examples.": 1,
+    "Correct structural relationship between product, quotient and chain rules.": 1,
+    "Correct multivariable chain-rule pathway/sensitivity explanation.": 1,
+    "Correct Taylor-matching order argument and Euler/RK4 one-step-error examples.": 1,
+    "Valid real engineering FFT application in real-time spectrum analyzers.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "ace706cd8342cbd6d594644fae34891beba47ffcacf25d2c80f8d8da2023a653",
-  "substantively_unreviewed": 907,
+  "published_decisions_sha256": "e8dbe5f899bff883957481f8a05c5c694bd50df09d07ff9c69d2e11257c0b389",
+  "substantively_unreviewed": 882,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

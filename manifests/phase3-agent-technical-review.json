@@ -33711,9 +33711,867 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
       "original_domain_ordinal": 149
+    },
+    {
+      "id": "repo-74f3f8a3d6ff3e5be8ea716b",
+      "messages_sha256": "74f3f8a3d6ff3e5be8ea716b8f7bd60ce5fe31f87c4bf626f56e20391e545ace",
+      "state": "QUARANTINE",
+      "rationale": "The prompt specifies a constraint equation, but one equation does not generally reduce a multivariable objective to one variable. The answer omits the variable-count and independence assumptions needed for that reduction.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative identities, exact integrals, local-error powers, constraint dimensions and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The regular equality x+y+z=1 in three variables leaves two local free variables, not one."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A single solvable equality in a two-variable elementary example can permit the described one-variable reduction, but that scope is absent here."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 75,
+      "assistant_tokens": 55,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 150
+    },
+    {
+      "id": "repo-9c1dd6206f2b570342ba23cd",
+      "messages_sha256": "9c1dd6206f2b570342ba23cd702473508b7e56a2c5e8fe9cfe6e389647f11785",
+      "state": "PASS",
+      "rationale": "Correct real Bolzano-Weierstrass statement and its role in compactness, extrema and Cauchy-completeness arguments.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative identities, exact integrals, local-error powers, constraint dimensions and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A Cauchy sequence is bounded, hence has a convergent subsequence; the Cauchy property forces the full sequence to the same limit."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A bounded sequence need not itself converge; the source correctly says subsequence."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 94,
+      "assistant_tokens": 69,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 151
+    },
+    {
+      "id": "repo-de68bfeb633ac2f80efb3ddb",
+      "messages_sha256": "de68bfeb633ac2f80efb3ddb00a7f0cd01a83c5e483f992621a00e8d1a3c3bfe",
+      "state": "PASS",
+      "rationale": "Correct standard linear heat-equation modal-superposition explanation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT ES.1803 differential-equation notes, heat equation",
+          "url": "https://ocw.mit.edu/courses/es-1803-differential-equations-spring-2024/mites_1803_s24_topic_full.pdf",
+          "finding": "Linear constant-coefficient heat problems admit eigenfunction expansions with independently evolving modal amplitudes; the homogeneous positive-eigenvalue modes decay exponentially."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For u_t=k*u_xx with homogeneous Dirichlet boundaries, a_n_prime=-k*(n*pi/L)²*a_n, so each positive mode decays exponentially."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The usual homogeneous linear model is intended. A zero eigenmode can remain constant, and forcing or nonlinear temperature-dependent coefficients change modal evolution; the answer is not a universal thermal-model theorem."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 81,
+      "assistant_tokens": 63,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 152
+    },
+    {
+      "id": "repo-9b0688cc236ed0e791956caa",
+      "messages_sha256": "9b0688cc236ed0e791956caa781925bfebb7a127277b4dd0aeec22a31d5adc0a",
+      "state": "PASS",
+      "rationale": "Correct one-sentence local-versus-global optimum distinction.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative identities, exact integrals, local-error powers, constraint dimensions and counterexamples are checked independently."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Finding an optimum is the goal/definition; a particular numerical algorithm may not guarantee either result."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 50,
+      "assistant_tokens": 28,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 153
+    },
+    {
+      "id": "repo-294fe3e37c75f526cbd28907",
+      "messages_sha256": "294fe3e37c75f526cbd289076cd24781e8f8948f0efba1e0fb46a9294875373e",
+      "state": "QUARANTINE",
+      "rationale": "The geometric sum is correct, but the explanation conflates a decline in actual payment amounts with discounting their present-value contributions. Those are distinct factors in a present-value calculation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "OpenStax Principles of Finance8.1, Perpetuities",
+          "url": "https://openstax.org/books/principles-finance/pages/8-1-perpetuities",
+          "finding": "Present value sums cash flows after discounting them to the valuation date. Payment timing and nominal growth/decline are distinct from the discount factor."
+        },
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative identities, exact integrals, local-error powers, constraint dimensions and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For level cash payments C starting today, discount q=1/(1+i) gives PV=C/(1-q). If the actual payments instead decline by g each period, their discounted sum uses ratio g*q, not merely g or q. Payments starting one period later have an extra q factor."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for the cash-flow/discount interpretation. The leading C already defines a valid first undiscounted term; implicit timing alone is not a defect. This is generic educational content, not a personal financial recommendation."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 99,
+      "assistant_tokens": 77,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 154
+    },
+    {
+      "id": "repo-7f8602bb4d9169c07691f337",
+      "messages_sha256": "7f8602bb4d9169c07691f3378c3a1d55348e12dcaae929dc9dcc91e09b2f77c1",
+      "state": "PASS",
+      "rationale": "Correct work line integral and height-change result in the usual uniform-gravity projectile model.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative identities, exact integrals, local-error powers, constraint dimensions and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With F=(0,0,-mg), integral_C F dot dr=-mg*integral dz=-mg*(z_final-z_initial)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Constant g is the ordinary near-surface approximation. General central gravity remains conservative but uses potential difference rather than this globally constant-mg formula."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 94,
+      "assistant_tokens": 65,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 155
+    },
+    {
+      "id": "repo-fad6907a42ce58429c937769",
+      "messages_sha256": "fad6907a42ce58429c9377698a641db673cb408e1bb8f0686edb96e71de6a9ca",
+      "state": "PASS",
+      "rationale": "Correct Taylor-matching order argument and Euler/RK4 one-step-error examples.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative identities, exact integrals, local-error powers, constraint dimensions and counterexamples are checked independently."
+        },
+        {
+          "title": "MIT10.10 study guide, Differential Equations",
+          "url": "https://web.mit.edu/10.10/www/Study_Guide/DiffEq.html",
+          "finding": "Uses the unnormalized one-step local-error convention, giving forward Euler O(h²), consistent with the source explanation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Matching terms through h^p leaves an O(h^(p+1)) one-step defect under sufficient smoothness; Euler givesh² and classical RK4 h⁵."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This uses the unnormalized per-step local-error convention explicitly stated. Some texts divide the defect by h and call that local truncation error; global order additionally requires stability hypotheses."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 186,
+      "assistant_tokens": 157,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 156
+    },
+    {
+      "id": "repo-eef5459b203922e2beadf221",
+      "messages_sha256": "eef5459b203922e2beadf221bf19e2b14a6f29864a1e329b39c3e0fca801f531",
+      "state": "PASS",
+      "rationale": "Correct structural relationship between product, quotient and chain rules.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative identities, exact integrals, local-error powers, constraint dimensions and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "d(f*g^(-1))=f_prime/g-f*g_prime/g² whereverg!=0, deriving quotient from product and chain rules."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 158,
+      "assistant_tokens": 126,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 157
+    },
+    {
+      "id": "repo-681d3d197b62aafec040ba1e",
+      "messages_sha256": "681d3d197b62aafec040ba1e71b30146e180e79eab0c3c82c3812cdc645a4516",
+      "state": "PASS",
+      "rationale": "Correct three-factor product rule explanation with one differentiated factor per term.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative identities, exact integrals, local-error powers, constraint dimensions and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "d(x² sin x exp x)=2x sin x exp x+x² cos x exp x+x² sin x exp x."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 161,
+      "assistant_tokens": 134,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 158
+    },
+    {
+      "id": "repo-941cc059d4dcfc51f04c5ad0",
+      "messages_sha256": "941cc059d4dcfc51f04c5ad05ccc21bd6167130cb606651955b51c68d1406ed0",
+      "state": "QUARANTINE",
+      "rationale": "The linear frequency-domain workflow is useful, but its stated reason for independent frequency solves is wrong: stiffness and damping matrices need not depend on frequency. Decoupling is due to linear time-invariant structure, with the dynamic operator depending on frequency.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Ansys Theory Reference15.4, Harmonic Analysis",
+          "url": "https://ansyshelp.ansys.com/public/Views/Secured/corp/v261/en/ans_thry/thy_anproc4.html",
+          "finding": "Harmonic analysis allows constant or frequency-dependent stiffness, damping and mass effects. Frequency-domain decoupling follows the linear harmonic problem rather than requiring frequency-dependent material matrices."
+        },
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative identities, exact integrals, local-error powers, constraint dimensions and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For constant M,C,K, Fourier transformation gives (K+i*omega*C-omega²*M)*U(omega)=F(omega). Each frequency is independent although K and C are constant."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Frequency-dependent viscoelastic properties can also be modeled. Hold the unqualified matrix-dependence/causality claim, not frequency-domain FEA itself."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 107,
+      "assistant_tokens": 84,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 159
+    },
+    {
+      "id": "repo-7b3a4eccc3a2c48f63b3806f",
+      "messages_sha256": "7b3a4eccc3a2c48f63b3806f19ef3102e4ef26e14e25e3356f42be815c7154cf",
+      "state": "PASS",
+      "rationale": "Exact cylindrical-coordinate cylinder-volume calculation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative identities, exact integrals, local-error powers, constraint dimensions and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "integral_0^(2pi) integral_0^R integral_0^h r dz dr dtheta=2pi*h*R²/2=pi*R²*h forR,h>=0."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 97,
+      "assistant_tokens": 71,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 160
+    },
+    {
+      "id": "repo-28859ec07cb506ec87148ea5",
+      "messages_sha256": "28859ec07cb506ec87148ea559cc03146a3e8782e9050122131d43ead881f151",
+      "state": "PASS",
+      "rationale": "Correct distinction between a set accumulation point and the output value of a function limit.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative identities, exact integrals, local-error powers, constraint dimensions and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A domain accumulation point has other domain points arbitrarily nearby, enabling a nonvacuous punctured-neighborhood limit."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The usual unique function-limit definition uses a domain accumulation point; definitions permitting isolated-point limits become vacuous/nonunique."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 87,
+      "assistant_tokens": 68,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 161
+    },
+    {
+      "id": "repo-484a578be08ea220606f419e",
+      "messages_sha256": "484a578be08ea220606f419e35d98074a4266e67b520205a89d63020132fff62",
+      "state": "PASS",
+      "rationale": "Correct conceptual combination of a truncated Fourier ansatz, nonlinear-term expansion and harmonic coefficient matching in a Taylor-based harmonic-balance approach.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Harmonic Balance for Differential Constitutive Models under Oscillatory Shear",
+          "url": "https://arxiv.org/abs/2403.05971",
+          "finding": "Describes harmonic balance as Fourier-Galerkin analysis for nonlinear periodic response and an alternating-frequency/time treatment of nonlinear terms; Taylor expansion is one possible approximation, not an intrinsic requirement."
+        },
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative identities, exact integrals, local-error powers, constraint dimensions and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a polynomial/Taylor approximation of a nonlinearity, products of Fourier harmonics generate other harmonics; projecting the residual onto retained modes gives algebraic coefficient equations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Taylor expansion is optional rather than required by harmonic balance; AFT methods can evaluate nonlinearities directly in time. Convergence of a Taylor approximation and a periodic solution must be checked for the actual model."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 108,
+      "assistant_tokens": 84,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 162
+    },
+    {
+      "id": "repo-db5c6c8d51cef957a531e23c",
+      "messages_sha256": "db5c6c8d51cef957a531e23ccdeb58354393ae85ee8598246f84f8d098e4676c",
+      "state": "PASS",
+      "rationale": "Correct practical Stokes conversion from curl flux to boundary circulation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative identities, exact integrals, local-error powers, constraint dimensions and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "integral_S curl F dot n dS=integral_boundaryS F dot dr under the theorem hypotheses."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Orientation is not the only hypothesis: field smoothness, admissible oriented surface/boundary and absence of excluded singularities are also required in the ordinary theorem setting."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 97,
+      "assistant_tokens": 70,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 163
+    },
+    {
+      "id": "repo-6895d371d12f29906c6bbb1a",
+      "messages_sha256": "6895d371d12f29906c6bbb1a4f2a722089faee5f69bfd0aef7537554c20c981c",
+      "state": "PASS",
+      "rationale": "Correct split, two triangular contributions and exact value.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative identities, exact integrals, local-error powers, constraint dimensions and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "integral_0^1(1-x)dx=1/2 andintegral_1^2(x-1)dx=1/2; total1."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 156,
+      "assistant_tokens": 136,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 164
+    },
+    {
+      "id": "repo-0055e14776393c6ed3472d40",
+      "messages_sha256": "0055e14776393c6ed3472d402a05dd305339e8b13fa61b6c90a871ced1e66e65",
+      "state": "PASS",
+      "rationale": "Correct elementary local/absolute extrema distinction, including endpoint possibilities.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative identities, exact integrals, local-error powers, constraint dimensions and counterexamples are checked independently."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Under the relative-domain definition every global extremum is local; some introductory conventions reserve local extrema for interior points, motivating the endpoint alternative."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 69,
+      "assistant_tokens": 54,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 165
+    },
+    {
+      "id": "repo-1752d355f86ac47a9903eb56",
+      "messages_sha256": "1752d355f86ac47a9903eb568ad848f08ba0d4a7fef054f9a3e25b1c52f1e48c",
+      "state": "PASS",
+      "rationale": "Valid nonnegative Riemann-sum proof of integral monotonicity.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative identities, exact integrals, local-error powers, constraint dimensions and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For integrablef,g and a<=b, h=f-g>=0 has nonnegative tagged sums; integralh>=0 gives integralf>=integralg."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The integrals must exist and the interval use its ordinary increasing orientation; these are standard prerequisites for the requested comparison property."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 144,
+      "assistant_tokens": 98,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 166
+    },
+    {
+      "id": "repo-9407c0d157d597319ce5f2e7",
+      "messages_sha256": "9407c0d157d597319ce5f2e76ece713585d6756d61011216af107cbc251143d8",
+      "state": "PASS",
+      "rationale": "Sound qualified guidance about periodic harmonic versus time/Laplace approaches to linear thermal excitation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT ES.1803 differential-equation notes, heat equation",
+          "url": "https://ocw.mit.edu/courses/es-1803-differential-equations-spring-2024/mites_1803_s24_topic_full.pdf",
+          "finding": "Linear constant-coefficient heat problems admit eigenfunction expansions with independently evolving modal amplitudes; the homogeneous positive-eigenvalue modes decay exponentially."
+        },
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative identities, exact integrals, local-error powers, constraint dimensions and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "In a homogeneous semi-infinite diffusion model, a harmonic temperature has penetration scale sqrt(2*kappa/omega) with matching phase lag; linear superposition applies."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Arbitrary transients can also be represented by Fourier transforms, and nonlinear material behavior can break independent harmonic superposition. The answer says may and sometimes, not an exclusive rule."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 117,
+      "assistant_tokens": 93,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 167
+    },
+    {
+      "id": "repo-17e0604bf885c7a340e15a13",
+      "messages_sha256": "17e0604bf885c7a340e15a13649f5effea1590705a418dc36bef1b3b7c2f7b03",
+      "state": "QUARANTINE",
+      "rationale": "The Raabe threshold is appropriate for positive terms or absolute convergence, but the answer uses absolute ratios and concludes the original series diverges whenR<1. Conditional convergence is not excluded.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Frantisek Duris, On Kummer test of convergence and its relation to basic comparison tests",
+          "url": "https://arxiv.org/abs/1612.05167",
+          "finding": "Kummer/Raabe comparisons concern positive target terms. Applying their divergence branch to absolute term ratios does not rule out conditional convergence of the signed series."
+        },
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative identities, exact integrals, local-error powers, constraint dimensions and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a_n=(-1)^n/sqrt n, n*(1-|a_(n+1)/a_n|)=n*(1-sqrt(n/(n+1)))->1/2<1, yet the alternating series converges."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold for the missing positive-term/absolute-series qualification, not the valid finer ratio-test threshold."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 99,
+      "assistant_tokens": 83,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 168
+    },
+    {
+      "id": "repo-d267787164062a640966e94d",
+      "messages_sha256": "d267787164062a640966e94dc4077d29ec7aa9ae3080ba702d7bc97b57b3c8e6",
+      "state": "PASS",
+      "rationale": "Correct reciprocal derivative and product-rule derivation of the quotient rule.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative identities, exact integrals, local-error powers, constraint dimensions and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "d(g^-1)=-g_prime/g² andd(f/g)=f_prime/g-f*g_prime/g² for g!=0."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 104,
+      "assistant_tokens": 80,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 169
+    },
+    {
+      "id": "repo-9e0ef7458e53fa069f6314b1",
+      "messages_sha256": "9e0ef7458e53fa069f6314b1511859eff2d135c23ad2e8a6ed82874e07a925c8",
+      "state": "PASS",
+      "rationale": "Correct motivation for a first-order local approximation enabling linear analysis tools.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative identities, exact integrals, local-error powers, constraint dimensions and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For differentiableF, F(x0+delta)=F(x0)+J_F(x0)*delta+o(||delta||)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The perturbation model is linear after subtracting the operating-point offset, and accuracy/stability conclusions depend on staying within the valid neighborhood."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 68,
+      "assistant_tokens": 50,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 170
+    },
+    {
+      "id": "repo-f94f87a57582e67325b25de5",
+      "messages_sha256": "f94f87a57582e67325b25de5bc4ddf86976b0dba4f3e9b8a5c7655415b7fe027",
+      "state": "PASS",
+      "rationale": "Correct multivariable chain-rule pathway/sensitivity explanation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative identities, exact integrals, local-error powers, constraint dimensions and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For differentiable f(x,y), x(t),y(t), df/dt=f_x*x_prime+f_y*y_prime."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 154,
+      "assistant_tokens": 127,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 171
+    },
+    {
+      "id": "repo-e6516b74d32fb1f8e43e4c07",
+      "messages_sha256": "e6516b74d32fb1f8e43e4c07492d0bfa28c098bd8ef6f142d1002ab357c67b5c",
+      "state": "PASS",
+      "rationale": "Correct accumulation-over-volume meaning and volume/mass examples.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative identities, exact integrals, local-error powers, constraint dimensions and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "integral_V1dV=Volume(V), andintegral_Vrho dV=mass for volumetric mass density."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "An average additionally needs normalization by volume, which can be included in the integrand; integrating an arbitrary f alone gives its total rather than its average."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 71,
+      "assistant_tokens": 55,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 172
+    },
+    {
+      "id": "repo-8ac9f14e69a44aafc58022f7",
+      "messages_sha256": "8ac9f14e69a44aafc58022f7dd9101e957a86a75637e20783ad4702cc4f08e92",
+      "state": "QUARANTINE",
+      "rationale": "The one-line proof that convergent series have terms tending to zero is correct. The final sentence misidentifies its logical relationship to the nth-term divergence test: this theorem is the contrapositive itself, not the converse of that contrapositive.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative identities, exact integrals, local-error powers, constraint dimensions and counterexamples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Divergence test: not(a_n->0) implies not(series converges). Its contrapositive is(series converges) implies(a_n->0), exactly what was proved. The converse(a_n->0 implies convergence) is false for the harmonic series."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for the closing logical label; do not reject or alter the correct proof."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 114,
+      "assistant_tokens": 87,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 173
+    },
+    {
+      "id": "repo-fcce293122603ea1bd18ad63",
+      "messages_sha256": "fcce293122603ea1bd18ad63b6cdc9e9249ba3da5608dd3881f050de6bd70f20",
+      "state": "PASS",
+      "rationale": "Valid real engineering FFT application in real-time spectrum analyzers.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Keysight Spectrum Analyzer FAQ, Real-Time Spectrum Analyzer",
+          "url": "https://www.keysight.com/us/en/products/spectrum-analyzers-signal-analyzers.a.html",
+          "finding": "Keysight explicitly describes real-time analyzers acquiring time-domain data and converting it by FFT to frequency-domain content."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Not every spectrum-analyzer architecture is FFT-based; the example is supported by the real-time analyzer subclass and does not require a purchasing recommendation."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 46,
+      "assistant_tokens": 28,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0150-0175.json",
+      "original_domain_ordinal": 174
     }
   ],
-  "reviewed": 1202,
+  "reviewed": 1227,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true
