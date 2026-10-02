@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 509,
-    "REJECT": 42,
-    "QUARANTINE": 156,
-    "NEEDS_HUMAN_REVIEW": 1405
+    "PASS": 531,
+    "REJECT": 43,
+    "QUARANTINE": 158,
+    "NEEDS_HUMAN_REVIEW": 1380
   },
   "by_domain": {
     "circuits": {
@@ -20,10 +20,10 @@
       "NEEDS_HUMAN_REVIEW": 194
     },
     "algebra": {
-      "PASS": 39,
-      "REJECT": 3,
-      "QUARANTINE": 10,
-      "NEEDS_HUMAN_REVIEW": 164
+      "PASS": 61,
+      "REJECT": 4,
+      "QUARANTINE": 12,
+      "NEEDS_HUMAN_REVIEW": 139
     },
     "thermal_process_engineering": {
       "PASS": 73,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 706,
+  "agent_substantive_reviews": 731,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "f1b7e98aefaada4229bb8f7dc8c9cf1fffbea95aa307444b594963ee4dfc93fc",
+  "technical_review_sha256": "5a139d8d22d9a327636dbe84e46f44e7149050f8f4e834034cdcbe5001becf72",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1403,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1378,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -787,11 +787,36 @@
     "Correct exhaustive argument for coprime real polynomials: a real denominator root cannot also be a numerator root, hence gives a pole; absence of real denominator roots means no real vertical asymptote.": 1,
     "Accurate introductory explanation of the differentiation index and why index reduction matters to numerical constraint handling.": 1,
     "Reasonable adaptive-solver strategy at conceptual scope: weak coupling can suit partitioning, strong coupling can impair it, and monitored switching can balance cost and robustness. The answer frames adaptation as an option that can help.": 1,
-    "Both substitution and elimination steps are correct, and the reported pair satisfies both original equations.": 1
+    "Both substitution and elimination steps are correct, and the reported pair satisfies both original equations.": 1,
+    "Correct first-principles setup and inverse formula with the essential nonzero determinant condition explicitly included.": 1,
+    "Faithful conceptual paraphrase of systematically solving interacting equations while honoring model constraints. It makes no numerical convergence or physical correctness guarantee.": 1,
+    "Correct standard subgroup test, with the properties required for arbitrary elements and associativity inherited from the ambient group.": 1,
+    "Valid left-cancellation proof using the inverse and associativity, without assuming commutativity.": 1,
+    "Correct invariant-factor description of rational canonical form: divisibility chain, product equal to characteristic polynomial, largest factor equal to minimal polynomial, and no field-splitting requirement.": 1,
+    "Correct substitution and final solution; the explanation of alternative elimination is appropriate.": 1,
+    "Correct positivity argument for the real denominator, establishing continuity at every finite real input and no vertical asymptote.": 1,
+    "The dependence and infinite-solution diagnosis is correct, but the requested solve is left unfinished. The answer introduces z=t and then asks the reader to solve x and y rather than giving the full solution set.": 1,
+    "The paraphrase preserves the given statement's elimination and reduced-system meaning. It does not introduce a universal claim about all Schur complements.": 1,
+    "Correct distributive-law and additive-cancellation proof of a times zero equals zero, adequate for the ordinary scalar zero-product question.": 1,
+    "Correct finite-injection argument behind the theorem. For each nonzero multiplier, absence of zero divisors gives injectivity, and finiteness gives surjectivity and a multiplicative inverse.": 1,
+    "Appropriately begins with a conditional answer and names real tradeoffs: constraints can remove degrees of freedom, conflict or worsen conditioning. The under/over-constrained shorthand is reasonable at the requested conceptual scope.": 1,
+    "Both directions of the modular invertibility criterion are correctly established using Bezout's identity and the fact that any common divisor divides every integer linear combination.": 1,
+    "Valid proof that a homomorphism image is nonempty, multiplicatively closed and inverse-closed.": 1,
+    "The final combined ODE does not follow from the two substituted equations, and dropping one equation is not an equivalent reduction. A holonomic constraint generally requires reaction forces or a compatibility analysis; the original unconstrained equations plus the imposed constraint can be inconsistent.": 1,
+    "Sound high-level rigid multibody modeling option: joint reactions can be enforced by multipliers and unilateral contact by complementarity with specialized switching-aware integration.": 1,
+    "Appropriate conditional options for uncertain measured constraints: weighted soft penalties or a probabilistic likelihood model, with the modeling choices acknowledged.": 1,
+    "Correct elimination arithmetic and final pair, checked in both original equations.": 1,
+    "Correct representation of a finite linear system by a coefficient matrix, unknown vector and constant vector.": 1,
+    "Correct relationship between algebraic proof and logical inference from definitions, assumptions and established results.": 1,
+    "Accurate geometric interpretation of rank-nullity with the required finite-dimensional domain specified. The R^3 example gives the correct one-dimensional kernel.": 1,
+    "The direct even-square calculation is correct and the stated odd-square implication is exactly its logical contrapositive, providing the requested contrast.": 1,
+    "The homotopy and predictor-corrector outline is useful, but arc-length continuation is presented as handling bifurcations without distinguishing the additional detection and branch-switching operations. Arc-length parameterization alone does not supply those operations.": 1,
+    "Correct definitions and inequality between geometric and algebraic multiplicity. A deficit for any eigenvalue prevents diagonalizability.": 1,
+    "Reasonable explanation of genuine or apparent circularity: assuming the conclusion or leaving dependency structure unclear. The advice to state assumptions and use justified facts is sound.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "90adfeaf9bb9e6259bfa82a897496ade5159acdd456e1cc076376bdbae6226f7",
-  "substantively_unreviewed": 1403,
+  "published_decisions_sha256": "4737548c91d770a3f941bd5da28d52825982ad40bf03584ca24a12f2be38491d",
+  "substantively_unreviewed": 1378,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

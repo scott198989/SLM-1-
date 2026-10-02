@@ -21,13 +21,13 @@ Source/oracle/mask/family/rights/seal hashes and release receipts: [pilot releas
 
 ## Proposed legacy curriculum: exact current dispositions
 
-All 2,112 records received structural/context/privacy and actual Qwen-format screening. **706** received substantive agent review; the complete selected 211-record circuits, 104-record thermal/process and 300-record electrical-components batches are included. Of the remaining 1405 NEEDS_HUMAN_REVIEW records, **1403 have not yet received substantive technical verification** and two were read but require specialist confirmation. This queue label is not a claim that a human must perform every simple check. The requested curriculum-wide technical review remains outstanding; structural/tool agreement never supplied correctness approval. No answers were silently changed.
+All 2,112 records received structural/context/privacy and actual Qwen-format screening. **731** received substantive agent review; the complete selected 211-record circuits, 104-record thermal/process and 300-record electrical-components batches are included. Of the remaining 1380 NEEDS_HUMAN_REVIEW records, **1378 have not yet received substantive technical verification** and two were read but require specialist confirmation. This queue label is not a claim that a human must perform every simple check. The requested curriculum-wide technical review remains outstanding; structural/tool agreement never supplied correctness approval. No answers were silently changed.
 
 Domain labels here are originating-file classifications, not certified semantic capabilities. These counts are not a random sample, corpus accuracy estimate or approved training count.
 
 | Source domain | Technical PASS | REJECT | QUARANTINE | NEEDS HUMAN REVIEW |
 |---|---:|---:|---:|---:|
-| algebra | 39 | 3 | 10 | 164 |
+| algebra | 61 | 4 | 12 | 139 |
 | calculus | 5 | 2 | 0 | 208 |
 | circuits | 139 | 12 | 60 | 0 |
 | electrical_components | 232 | 14 | 54 | 0 |
@@ -37,7 +37,7 @@ Domain labels here are originating-file classifications, not certified semantic 
 | physics | 4 | 2 | 2 | 242 |
 | thermal_process_engineering | 73 | 5 | 24 | 2 |
 | trigonometry | 8 | 0 | 3 | 189 |
-| **Total** | **509** | **42** | **156** | **1405** |
+| **Total** | **531** | **43** | **158** | **1380** |
 
 **Released legacy curriculum examples:0.** Technical PASS is separate from applicable contract and family qualification. Row-specific unchanged-message hashes/reasons are in [technical decisions](../data/review/phase3/technical-review.jsonl.gz), [substantive receipts](../manifests/phase3-agent-technical-review.json) and [aggregate report](phase3-technical-review.json). Rejections include wrong energy/departure signs, defective-matrix claims, missing equilibria and false optimization rules. Quarantine covers incomplete prior context, unit/model conditions, missing chart values, unresolved visual dependencies and contradictory scratch reasoning. Overlapping risk flags:1110 equation/calculation/proof;792 units/model;23 visual prompts;187 operations/diagnosis. No sampled usable-percentage extrapolation is justified.
 
@@ -93,7 +93,7 @@ Proposed model/revision: Qwen/Qwen3-30B-A3B-Base /1b75feb79f60b8dc6c5bc769a898c2
 
 The 16-record pilot would give **one optimizer update** at effective batch 16, not a useful engineering-specialization run. No update is scheduled. Desktop 5090/32 GiB/64 GiB is README-derived until checked live; laptop 2050/4 GiB/16 GiB is preparation-only. GPU package stack/expert quantization, exact transitive lock, memory estimate 20â€“29 GiB and resume behavior are unmeasured. The eventual model-load/memory pilot must be separately authorized and cannot count as already run.
 
-**Reasons not to authorize training:** requested 1403-record substantive review outstanding; two specialist judgments; applicable legacy contracts unresolved;16 narrow protocol records inadequate for broad FORGE specialization; independent model-development set absent; gold is only 12 tasks/one domain and not an independently human-reviewed broad benchmark; no stock-model scores; academic OCR/equation/visual fidelity and production-source rights remain unqualified; desktop/GPU/runtime/quantized-expert/memory/resume gates not verified.
+**Reasons not to authorize training:** requested 1378-record substantive review outstanding; two specialist judgments; applicable legacy contracts unresolved;16 narrow protocol records inadequate for broad FORGE specialization; independent model-development set absent; gold is only 12 tasks/one domain and not an independently human-reviewed broad benchmark; no stock-model scores; academic OCR/equation/visual fidelity and production-source rights remain unqualified; desktop/GPU/runtime/quantized-expert/memory/resume gates not verified.
 
 The next work is checkpointed review of the held curriculum (not broad discovery), applicable generation-use evidence, independent engineering development/gold source families, and targeted source-qualified academic RAG/task assembly. Never repair answers silently or expand into unrelated corpora to satisfy counts. Siemens is user-owned follow-up. This is a released small pilot and transparent gate report, **not completion of all Phase 3 validation**. Stop before model weights or training.
 
@@ -176,3 +176,8 @@ This unpublished local batch added {'PASS': 12, 'QUARANTINE': 4} after independe
 ## Local algebra checkpoint 25–49
 
 This unpublished local batch added {'PASS': 18, 'REJECT': 1, 'QUARANTINE': 4} after independent agent QA; 2 earlier decisions were skipped. Current local substantive reviews: 706; remaining unreviewed: 1403; next algebra offset: 50. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. Original answers, prior 683 decisions and all release gates are unchanged. [Batch receipt](phase3-review-batches/algebra-0025-0050.json).
+
+
+## Local algebra checkpoint 50–74
+
+This unpublished local batch added {'PASS': 22, 'REJECT': 1, 'QUARANTINE': 2} after independent agent QA; 0 earlier decisions were skipped. Current local substantive reviews: 731; remaining unreviewed: 1378; next algebra offset: 75. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. Original answers, prior 706 decisions and all release gates are unchanged. [Batch receipt](phase3-review-batches/algebra-0050-0075.json).
