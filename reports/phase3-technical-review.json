@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 823,
-    "REJECT": 54,
-    "QUARANTINE": 201,
-    "NEEDS_HUMAN_REVIEW": 1034
+    "PASS": 845,
+    "REJECT": 55,
+    "QUARANTINE": 203,
+    "NEEDS_HUMAN_REVIEW": 1009
   },
   "by_domain": {
     "circuits": {
@@ -38,10 +38,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "calculus": {
-      "PASS": 22,
-      "REJECT": 2,
-      "QUARANTINE": 1,
-      "NEEDS_HUMAN_REVIEW": 190
+      "PASS": 44,
+      "REJECT": 3,
+      "QUARANTINE": 3,
+      "NEEDS_HUMAN_REVIEW": 165
     },
     "electrical_components": {
       "PASS": 232,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1077,
+  "agent_substantive_reviews": 1102,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "6c31210239076cbf626cf4340316e37ffcfaced6632558e385cbd00af04f56fb",
+  "technical_review_sha256": "0f408ba53f68f7ae48dd5e9234f633a47425216f04b4d9379e69a0ed88934a2a",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1032,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1007,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1158,11 +1158,36 @@
     "Acceptable casual description of a flat, non-optimal saddle-like region with escape directions.": 1,
     "Correct optimization derivation of Snell law for the standard two-homogeneous-media crossing geometry.": 1,
     "Correct engineering Fourier-series meaning of harmonic analysis and its diagnostic motivation.": 1,
-    "Faithful explanation that local existence/uniqueness results do not supply a familiar closed form.": 1
+    "Faithful explanation that local existence/uniqueness results do not supply a familiar closed form.": 1,
+    "Correct brief separation/integration/initial-condition workflow.": 1,
+    "Revenue as price times demand is correct, but setting its derivative to zero identifies stationary candidates, not necessarily a maximizing price. Boundary and curvature/global checks are missing.": 1,
+    "Correct first-order linear approximation and distinction between differentiability and continuity.": 1,
+    "Correct triangular region, reversed integration order, substitution and exact result.": 1,
+    "Correct upward graph normal, disk projection and flux integral.": 1,
+    "Correct geometric polar area element and regional integration interpretation.": 1,
+    "Correct basic constrained-rectangle optimization workflow, with fixed perimeter as the explicit example.": 1,
+    "Correct concrete path-dependent field and curl diagnosis; both suggested paths indeed produce different integrals.": 1,
+    "Exact agreement of chain-rule and product-rule derivations for the squared composite.": 1,
+    "Correct statement that the usual nth-term divergence test cannot establish convergence from a zero term limit.": 1,
+    "The ladder geometry and stationary-angle equation are correct, but the final approximate minimum 14.8 feet is numerically wrong. The stated model gives about14.9922 feet, which rounds to15.0 feet at one decimal.": 1,
+    "Correct ingredients and linear-system form of a Newton optimization step.": 1,
+    "Correct physical interpretation of outward-oriented velocity flux as net volumetric flow rate.": 1,
+    "Accurate beginner explanation of differentiating outer and inner layers.": 1,
+    "Correct integration-by-parts definition, formula description and practical choice guidance.": 1,
+    "Correct gradient-vector versus directional-derivative-scalar distinction in the differentiable setting.": 1,
+    "Correct derivation of integration by parts from product rule plus the FTC.": 1,
+    "Correct standard role of Fourier eigenfunction expansion in separable linear PDE problems.": 1,
+    "Correct zero divergence/curl computation and identification of the remaining trace-free symmetric deformation.": 1,
+    "The displayed Lagrange formula is the degree-N remainder, but the text calls it truncation after N terms and then speaks of convergence without needed derivative/remainder control. Hold for clarifying indexing and the conditions under which the error tends to zero.": 1,
+    "Correct engineering Parseval energy/mean-power interpretation across Fourier representations.": 1,
+    "Correct ordinary Fourier partial-sum Gibbs description and asymptotic jump-relative overshoot.": 1,
+    "Correct material-weighted cost, volume elimination and unique positive minimizing radius. The displayed constraint and cost expression determine height and cost at that radius.": 1,
+    "Correct cylindrical bounds, radial Jacobian and paraboloid-cap volume.": 1,
+    "Correct overlapping-series continuation concept and rational transfer-function illustration away from genuine poles.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "a66f5fa47807ff3b6003ceeb8dc13286e52c62776175982faf40095cce6e6da9",
-  "substantively_unreviewed": 1032,
+  "published_decisions_sha256": "98a3c2980f1c7b369260364f57b82ede5d08ac81cc4826fd2f381cbf75328409",
+  "substantively_unreviewed": 1007,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

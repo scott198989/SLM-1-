@@ -29488,9 +29488,861 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/calculus-0000-0025.json",
       "original_domain_ordinal": 24
+    },
+    {
+      "id": "repo-4d67b2183e651c1107c82802",
+      "messages_sha256": "4d67b2183e651c1107c828025d2203d6ad030084aded9f531e73aa189209f952",
+      "state": "PASS",
+      "rationale": "Correct statement that the usual nth-term divergence test cannot establish convergence from a zero term limit.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "All stated derivatives, exact integrals, optimization stationary conditions and convergence arguments are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The harmonic terms1/n tend to0 but their series diverges; a nonzero or nonexistent term limit rules out convergence."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This concerns the named nth-term test, not an assertion that no additional structure of a sequence can establish convergence."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 62,
+      "assistant_tokens": 43,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 25
+    },
+    {
+      "id": "repo-59dc3401db8e9a09cbfd04ee",
+      "messages_sha256": "59dc3401db8e9a09cbfd04ee4a5c0a693731c210f43cfa21498a4425737a518f",
+      "state": "REJECT",
+      "rationale": "The ladder geometry and stationary-angle equation are correct, but the final approximate minimum 14.8 feet is numerically wrong. The stated model gives about14.9922 feet, which rounds to15.0 feet at one decimal.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "All stated derivatives, exact integrals, optimization stationary conditions and convergence arguments are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "L_min=(8^(2/3)+3^(2/3))^(3/2)=14.992164888286 ft, obtained at tan(theta)=(8/3)^(1/3); L diverges as theta approaches0 or pi/2."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Reject the numerical output, not the setup or derivative; an exact radical expression exists even though it is not an integer."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 175,
+      "assistant_tokens": 140,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 26
+    },
+    {
+      "id": "repo-02e240c291813cc8ff10c39b",
+      "messages_sha256": "02e240c291813cc8ff10c39b608c238482dd5e98f62d93f5b6c51074ae61a446",
+      "state": "PASS",
+      "rationale": "Correct brief separation/integration/initial-condition workflow.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "All stated derivatives, exact integrals, optimization stationary conditions and convergence arguments are independently checked."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "When separation divides by a function of y, constant equilibrium solutions at its zeros must be checked separately. The prompt requests a brief outline rather than a complete case-handling algorithm."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 67,
+      "assistant_tokens": 47,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 27
+    },
+    {
+      "id": "repo-351e0c830f292fe5f5efbcc1",
+      "messages_sha256": "351e0c830f292fe5f5efbcc13ec120187b76a820469c5ec54f948af46bfe2a55",
+      "state": "PASS",
+      "rationale": "Exact agreement of chain-rule and product-rule derivations for the squared composite.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "All stated derivatives, exact integrals, optimization stationary conditions and convergence arguments are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Both give d(g²)/dx=2g*g_prime when g is differentiable."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 172,
+      "assistant_tokens": 137,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 28
+    },
+    {
+      "id": "repo-a157645dbe1e36f708a8be21",
+      "messages_sha256": "a157645dbe1e36f708a8be211b77d1d80e94d5e75b127b6a06501e49f825df42",
+      "state": "PASS",
+      "rationale": "Correct zero divergence/curl computation and identification of the remaining trace-free symmetric deformation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_vector_calculus",
+          "finding": "Divergence, curl, line and surface flux integrals are calculated in the original coordinates and orientations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Jacobian=diag(1,-1,0); trace0 and antisymmetric part0, but the symmetric part is nonzero. The flow is x(t)=x0*e^t,y(t)=y0*e^(-t),z=z0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Pure shear-like here denotes trace-free strain with principal extension/compression, not the usual nonsymmetric simple-shear velocity field."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 160,
+      "assistant_tokens": 130,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 29
+    },
+    {
+      "id": "repo-841b9b1e5b9dc0e280f23c5f",
+      "messages_sha256": "841b9b1e5b9dc0e280f23c5f10628e1a063beb58d5a7a9c1b881deecd39492f3",
+      "state": "PASS",
+      "rationale": "Correct derivation of integration by parts from product rule plus the FTC.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "All stated derivatives, exact integrals, optimization stationary conditions and convergence arguments are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Integrate (uv)_prime=u_prime*v+u*v_prime and rearrange boundary term [uv]_a^b."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Use the regularity/integrability hypotheses needed for the product rule and FTC."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 114,
+      "assistant_tokens": 93,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 30
+    },
+    {
+      "id": "repo-3211f1453c9c9368cbb73bd1",
+      "messages_sha256": "3211f1453c9c9368cbb73bd1d0eda7989ec479652de449d9362c4ec7150db1f0",
+      "state": "PASS",
+      "rationale": "Correct concrete path-dependent field and curl diagnosis; both suggested paths indeed produce different integrals.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_vector_calculus",
+          "finding": "Divergence, curl, line and surface flux integrals are calculated in the original coordinates and orientations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Along r(t)=(t,t), integral y dx=integral_0^1 t dt=1/2. Along the x-axis then vertical, y dx is identically0; scalar curl=-1."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 107,
+      "assistant_tokens": 88,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 31
+    },
+    {
+      "id": "repo-8231bda621fc83b593584dfa",
+      "messages_sha256": "8231bda621fc83b593584dfa0c773ae7665e9577871bdfff42c0dfdaf98fbc35",
+      "state": "PASS",
+      "rationale": "Accurate beginner explanation of differentiating outer and inner layers.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "All stated derivatives, exact integrals, optimization stationary conditions and convergence arguments are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "d(3x+1)^5/dx=15(3x+1)^4 and d sin(x²)/dx=2x cos(x²)."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 86,
+      "assistant_tokens": 63,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 32
+    },
+    {
+      "id": "repo-65c09e730c8953de1470067b",
+      "messages_sha256": "65c09e730c8953de1470067b8d3d1a4483bd1b5631e4aba4decfae127511c6eb",
+      "state": "PASS",
+      "rationale": "Correct ingredients and linear-system form of a Newton optimization step.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "All stated derivatives, exact integrals, optimization stationary conditions and convergence arguments are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The stationary point of the local quadratic model g^T p+0.5p^T H p obeys H*p=-g."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A usable solve and suitable curvature/regularization are required; an indefinite or singular Hessian does not automatically yield a descent step. Often with damping is appropriate."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 74,
+      "assistant_tokens": 48,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 33
+    },
+    {
+      "id": "repo-c374d17ff1ee2f3bbc90603f",
+      "messages_sha256": "c374d17ff1ee2f3bbc90603fc1b0d9fc8dfd8a0f2de55fe383a26ea37c984785",
+      "state": "PASS",
+      "rationale": "Correct ordinary Fourier partial-sum Gibbs description and asymptotic jump-relative overshoot.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT ES.1803 Fourier approximation notes, section 22.6",
+          "url": "https://ocw.mit.edu/courses/es-1803-differential-equations-spring-2024/mites_1803_s24_topic_full.pdf",
+          "finding": "Ordinary Fourier partial sums at a jump have asymptotic overshoot about 8.949 percent of the jump, while the affected neighborhood narrows."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The9 percent figure is an asymptotic limit under standard jump regularity, not the exact overshoot for every finite order or filtered summation scheme."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 82,
+      "assistant_tokens": 67,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 34
+    },
+    {
+      "id": "repo-79918c006669eafd0c75886c",
+      "messages_sha256": "79918c006669eafd0c75886c08e384c4457948a73597ddb02676c46410947fc1",
+      "state": "PASS",
+      "rationale": "Correct physical interpretation of outward-oriented velocity flux as net volumetric flow rate.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_vector_calculus",
+          "finding": "Divergence, curl, line and surface flux integrals are calculated in the original coordinates and orientations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "integral_surface v dot n dS has units(length/time)*area=volume/time and equals integral_volume div v dV."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Mass flow would require density weighting, and orientation determines the sign."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 72,
+      "assistant_tokens": 43,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 35
+    },
+    {
+      "id": "repo-c8ccb68993046c2731debca8",
+      "messages_sha256": "c8ccb68993046c2731debca85db43f54a1a6d358cf63b1f4fd43552d2d961193",
+      "state": "PASS",
+      "rationale": "Correct material-weighted cost, volume elimination and unique positive minimizing radius. The displayed constraint and cost expression determine height and cost at that radius.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "All stated derivatives, exact integrals, optimization stationary conditions and convergence arguments are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "r=3.413920316276 cm; h=4r=13.655681265106 cm; C=12pi*r²=439.377566268457 cents. C_second=8pi+2000/r³>0 and cost diverges at both positive-domain ends."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The source leaves final substitution of h and cost to the reader; it nevertheless supplies their expressions and the exact optimal radius. No source values are filled in or rewritten."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 198,
+      "assistant_tokens": 144,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 36
+    },
+    {
+      "id": "repo-a870f59691ceadaa0c51a1f1",
+      "messages_sha256": "a870f59691ceadaa0c51a1f1a7e1e9ee964eff845cc156ea2cdaea23bfb4bc93",
+      "state": "QUARANTINE",
+      "rationale": "The displayed Lagrange formula is the degree-N remainder, but the text calls it truncation after N terms and then speaks of convergence without needed derivative/remainder control. Hold for clarifying indexing and the conditions under which the error tends to zero.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "UCI Math 140B, Differentiation and Taylor series",
+          "url": "https://webapps.math.uci.edu/~ndonalds/math140b/3diff.html",
+          "finding": "Taylor remainders and smooth nonanalytic examples distinguish finite-order approximation from convergence of a Taylor series to its function."
+        },
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "All stated derivatives, exact integrals, optimization stationary conditions and convergence arguments are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A degree-N Taylor polynomial normally has N+1 terms from order0 throughN. Smooth f(x)=exp(-1/x²) for x!=0, f(0)=0, has all Taylor coefficients0 at0 but is positive elsewhere; differentiability of every order alone does not make its remainders tend to0 at fixed nonzero x."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Finite-order Lagrange remainder is valid under its standard hypotheses. Do not reject that formula or claim every application lacks convergence."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 94,
+      "assistant_tokens": 75,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 37
+    },
+    {
+      "id": "repo-061a92c1db964025e03d43ca",
+      "messages_sha256": "061a92c1db964025e03d43caa65f7c7619c4bf3affad014cf7e94ff80c98cf06",
+      "state": "QUARANTINE",
+      "rationale": "Revenue as price times demand is correct, but setting its derivative to zero identifies stationary candidates, not necessarily a maximizing price. Boundary and curvature/global checks are missing.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "All stated derivatives, exact integrals, optimization stationary conditions and convergence arguments are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "On price interval[1.8,2.2], positive decreasing demand D(p)=p-4+5/p gives R(p)=p²-4p+5=1+(p-2)². R_prime(2)=0 is a strict minimum, not the maximum."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is a mathematical optimization hold, not personalized financial advice or a denial that derivatives are useful in pricing models."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 77,
+      "assistant_tokens": 59,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 38
+    },
+    {
+      "id": "repo-841746f9631e63e4e3692258",
+      "messages_sha256": "841746f9631e63e4e36922585c8f8f7c299e2f502966ff39085712520ce48134",
+      "state": "PASS",
+      "rationale": "Correct gradient-vector versus directional-derivative-scalar distinction in the differentiable setting.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "All stated derivatives, exact integrals, optimization stationary conditions and convergence arguments are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For unit direction u, D_u f=grad f dot u."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Existence of partial derivatives alone need not guarantee differentiability or this formula; the usual differentiable setting is presumed by the introductory comparison."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 71,
+      "assistant_tokens": 54,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 39
+    },
+    {
+      "id": "repo-ff0f6823cf3de125590b775c",
+      "messages_sha256": "ff0f6823cf3de125590b775c7cf256ce3bf870c3fda7eb9e7b21f30d6a542661",
+      "state": "PASS",
+      "rationale": "Correct overlapping-series continuation concept and rational transfer-function illustration away from genuine poles.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rational_analytic_continuation_example",
+          "finding": "For a>0, 1/(s+a) has a geometric Taylor series at zero only for |s|<a; overlapping expansions continue the same rational function on the complex plane minus its genuine pole -a."
+        },
+        {
+          "title": "MIT18.04, Topic13, Analytic Continuation",
+          "url": "https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-spring-2018/af8c9c78c3915aaf3fd1695f8d32a3b3_MIT18_04S18_topic13.pdf",
+          "finding": "Overlapping analytic elements extend a local power-series representation while genuine singularities remain excluded."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "1/(s+a)=(1/a)*sum(-s/a)^n for |s|<a, yet the rational function is analytic for all complex s except -a."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Analytic continuation goes around rather than through a genuine pole. A rational function is single-valued on its punctured domain; arbitrary analytic functions may have branch/monodromy issues."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 145,
+      "assistant_tokens": 113,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 40
+    },
+    {
+      "id": "repo-c3523a0674f807fea015f984",
+      "messages_sha256": "c3523a0674f807fea015f9840d17b4cc0e2a1e709b9af5b2a742d7a375f62db2",
+      "state": "PASS",
+      "rationale": "Correct engineering Parseval energy/mean-power interpretation across Fourier representations.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_Fourier_normalization_and_projection",
+          "finding": "Parseval is equality of squared norms in an orthogonal Fourier representation with its normalization. Eigenfunction diagonalization turns standard separable linear evolution problems into independent modal ODEs."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With an orthonormal basis, ||f||²=sum|c_n|²; conventional Fourier coefficients introduce their fixed period/normalization factors."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Periodic signals normally use average power over one period, whereas finite-energy signals use the Fourier-transform integral. The answer explicitly allows energy or power."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 91,
+      "assistant_tokens": 69,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 41
+    },
+    {
+      "id": "repo-885b73be9bb4d6469a3fbc18",
+      "messages_sha256": "885b73be9bb4d6469a3fbc186e2902bc6e07bd7627fd1bdc1f9ae44336a5a72e",
+      "state": "PASS",
+      "rationale": "Correct standard role of Fourier eigenfunction expansion in separable linear PDE problems.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT ES.1803 full notes, section25, pp218-225",
+          "url": "https://ocw.mit.edu/courses/es-1803-differential-equations-spring-2024/mites_1803_s24_topic_full.pdf",
+          "finding": "Heat-equation separation and Fourier eigenfunction expansion produce independently evolving modes under the standard homogeneous-boundary setting."
+        },
+        {
+          "method": "independent_Fourier_normalization_and_projection",
+          "finding": "Parseval is equality of squared norms in an orthogonal Fourier representation with its normalization. Eigenfunction diagonalization turns standard separable linear evolution problems into independent modal ODEs."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For u_t=k*u_xx on[0,L] with homogeneous Dirichlet boundaries, sin(n*pi*x/L) modes satisfy a_n_prime=-k*(n*pi/L)²*a_n independently."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The diagonalization requires an appropriate operator/eigenbasis and boundary conditions. Arbitrary nonseparable or time-varying linear operators are not automatically independent sine modes."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 85,
+      "assistant_tokens": 64,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 42
+    },
+    {
+      "id": "repo-0ff3fb54f18b50372b8a77f5",
+      "messages_sha256": "0ff3fb54f18b50372b8a77f53fcab3b59d63ff1bb4f214f79c64edff073b040e",
+      "state": "PASS",
+      "rationale": "Correct first-order linear approximation and distinction between differentiability and continuity.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "All stated derivatives, exact integrals, optimization stationary conditions and convergence arguments are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Differentiability means f(a+h)=f(a)+f_prime(a)*h+o(h)."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 147,
+      "assistant_tokens": 121,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 43
+    },
+    {
+      "id": "repo-2ee76e5b4cd5d166e69909dd",
+      "messages_sha256": "2ee76e5b4cd5d166e69909ddffca5f52d13b7e6debaf3835b0823715ef8bf414",
+      "state": "PASS",
+      "rationale": "Correct geometric polar area element and regional integration interpretation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "All stated derivatives, exact integrals, optimization stationary conditions and convergence arguments are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Jacobian determinant of(x,y)=(r cos theta,r sin theta) is r for r>=0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Choose coordinate bounds without unintended multiple covering and use the usual nonnegative radial coordinate."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 84,
+      "assistant_tokens": 59,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 44
+    },
+    {
+      "id": "repo-8318346fa5de7298a556bd48",
+      "messages_sha256": "8318346fa5de7298a556bd4863fa1a0a980500c51d2c389771da8f75c8ba3422",
+      "state": "PASS",
+      "rationale": "Correct integration-by-parts definition, formula description and practical choice guidance.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "All stated derivatives, exact integrals, optimization stationary conditions and convergence arguments are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Integral u dv=u*v-integral v du, directly from d(uv)=u dv+v du."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "It is a strategy, not a guarantee that every product becomes simpler."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 133,
+      "assistant_tokens": 109,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 45
+    },
+    {
+      "id": "repo-11732ae86a3136d92e7ea284",
+      "messages_sha256": "11732ae86a3136d92e7ea284e5b2b5f1395505df7e6605ded1bec86078c4e61e",
+      "state": "PASS",
+      "rationale": "Correct triangular region, reversed integration order, substitution and exact result.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "All stated derivatives, exact integrals, optimization stationary conditions and convergence arguments are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "0<=y<=x<=1 gives integral_0^1 x*sin(x²) dx=(1-cos1)/2."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 172,
+      "assistant_tokens": 138,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 46
+    },
+    {
+      "id": "repo-31646b8188876bcc79186d1d",
+      "messages_sha256": "31646b8188876bcc79186d1d1cd9bdd2560669f32017fe210c6c863ca1ba83c1",
+      "state": "PASS",
+      "rationale": "Correct basic constrained-rectangle optimization workflow, with fixed perimeter as the explicit example.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "All stated derivatives, exact integrals, optimization stationary conditions and convergence arguments are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For perimeter P>0, area=x*(P/2-x) on[0,P/2], a concave quadratic maximized at x=P/4."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "For other constraints, stationary candidates and endpoints still require comparison; the example itself has a unique interior maximum."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 70,
+      "assistant_tokens": 49,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 47
+    },
+    {
+      "id": "repo-fdb55881897f444b763fd86a",
+      "messages_sha256": "fdb55881897f444b763fd86a8ec2486a48440118c5d030eadcd611c62bc7f44a",
+      "state": "PASS",
+      "rationale": "Correct cylindrical bounds, radial Jacobian and paraboloid-cap volume.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "All stated derivatives, exact integrals, optimization stationary conditions and convergence arguments are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "V=2pi*integral_0^2 r*(4-r²) dr=2pi*4=8pi."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 139,
+      "assistant_tokens": 108,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 48
+    },
+    {
+      "id": "repo-2006508fabcb761dd042b687",
+      "messages_sha256": "2006508fabcb761dd042b687a680b993cff6ff6f24962b4939d981fdd06776dc",
+      "state": "PASS",
+      "rationale": "Correct upward graph normal, disk projection and flux integral.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_vector_calculus",
+          "finding": "Divergence, curl, line and surface flux integrals are calculated in the original coordinates and orientations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "F dot(-g_x,-g_y,1)=1-r², so flux=2pi*integral_0^1(r-r³)dr=pi/2."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 195,
+      "assistant_tokens": 155,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0025-0050.json",
+      "original_domain_ordinal": 49
     }
   ],
-  "reviewed": 1077,
+  "reviewed": 1102,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

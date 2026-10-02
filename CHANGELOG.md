@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-02 - Local calculus review 25–49
+
+- Added {'PASS': 22, 'REJECT': 1, 'QUARANTINE': 2} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1077 reviews unchanged.
+- Current local reviews: 1102; dispositions: {'PASS': 845, 'REJECT': 55, 'QUARANTINE': 203, 'NEEDS_HUMAN_REVIEW': 1009}; next calculus offset: 50.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
 ## 2026-10-02 - Local calculus review 0–24
 
 - Added {'PASS': 17, 'QUARANTINE': 1} after independent agent QA; 7 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1059 reviews unchanged.
