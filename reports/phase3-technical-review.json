@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1433,
+    "PASS": 1454,
     "REJECT": 66,
-    "QUARANTINE": 292,
-    "NEEDS_HUMAN_REVIEW": 321
+    "QUARANTINE": 296,
+    "NEEDS_HUMAN_REVIEW": 296
   },
   "by_domain": {
     "circuits": {
@@ -62,10 +62,10 @@
       "NEEDS_HUMAN_REVIEW": 244
     },
     "physics": {
-      "PASS": 147,
+      "PASS": 168,
       "REJECT": 5,
-      "QUARANTINE": 23,
-      "NEEDS_HUMAN_REVIEW": 75
+      "QUARANTINE": 27,
+      "NEEDS_HUMAN_REVIEW": 50
     }
   },
   "risk_flags_overlap": {
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1790,
+  "agent_substantive_reviews": 1815,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "50fbb07f0e93e36acc98f381f67acddf77e33d4863cce434506a01290b1ae54e",
+  "technical_review_sha256": "7933d4430c57741947d2d61f395b8dbacb345cc3be1bc1d9253444e790849c68",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 319,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 294,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1871,11 +1871,36 @@
     "Correct inversion of gamma and numerical speed.": 1,
     "Correct central role of relativity of simultaneity in consistent Lorentz measurements.": 1,
     "Correct magnetic stored-energy derivation for an ideal constant-inductance element.": 1,
-    "Correct concise distinction between system modal frequencies and externally selected drive frequency.": 1
+    "Correct concise distinction between system modal frequencies and externally selected drive frequency.": 1,
+    "Correct state-continuity and new-modal-projection explanation after an ideal finite stiffness step.": 1,
+    "Correct qualitative eddy-current braking and near-terminal gravitational-power-to-heat explanation.": 1,
+    "Correct cylindrical-Gauss result with charge-sign direction stated.": 1,
+    "The rejection of total mode destruction is right, but exact undamped-basis decoupling does not wait for damping to mix modes strongly enough. Any nonzero off-diagonal modal damping term breaks exact decoupling, although a weak term can be a good approximation.": 1,
+    "Reasonable qualitative account of lossy, generally imperfect energy exchange when damping acts on one member of a coupled pair.": 1,
+    "Correct distinction between symmetry-forbidden excitation and simultaneous participation of two compatible modes.": 1,
+    "Correct counterexample to inferring absence of coupling from one unstretched in-phase motion.": 1,
+    "The battery versus transformer-induction distinction is useful, but induced emf is not exclusively a nonconservative electric field from changing B. Motional induction can occur in a static magnetic field.": 1,
+    "Correct separation between a system modal shape and the coefficient set by excitation or initial data.": 1,
+    "Correct qualitative two-mode beating and unequal-decay picture in the underdamped modal regime.": 1,
+    "Correct compatibility criterion for classical damping and the consequence of modal cross terms.": 1,
+    "The Faraday nonconservative-work idea is correct, but a changing B does not force nonzero circulation around every selected loop, and it is work along a path rather than the local force itself that is path dependent in this sense.": 1,
+    "Correct SI distinction and magnetization relation among B,H and M.": 1,
+    "Correct qualified single-mode inference for equal initial displacements in a symmetric identical pair, with damping and imperfections acknowledged.": 1,
+    "Correct intuitive energy-consistency explanation for the opposing sign of passive electromagnetic induction.": 1,
+    "Correct modal-participation explanation for a local force producing motion elsewhere in a coupled system.": 1,
+    "The distinction between split modes and observed beating is correct, but frequency separation alone does not prove that an interaction caused it. Detuning uncoupled oscillators also gives separated frequencies.": 1,
+    "Correct field-line uniqueness intuition at nonzero regular field points, with the zero-field exception explicitly recognized.": 1,
+    "Correct single-loop center-field integration and axial direction.": 1,
+    "Correct symmetry shortcut for identifying a candidate mode shape and reducing the calculation.": 1,
+    "Correct statement that total enclosed-charge flux is independent of Gaussian-surface shape while extracting a local E value depends on symmetry.": 1,
+    "Correct electrostatic conservative-field interpretation and ordinary Faraday-induction contrast.": 1,
+    "Correct hypothetical symmetric Maxwell extension under the stated magnetic-charge convention and Dirac quantization motivation.": 1,
+    "Correct flux-linkage change and average induced-emf magnitude.": 1,
+    "Correct plain-language meaning of lifting an initially shared frequency degeneracy by a coupling-induced split.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "10308f517bed313670f056f057977cb8db7bf02ba7640b79baba97cfb8f59842",
-  "substantively_unreviewed": 319,
+  "published_decisions_sha256": "0c1eb015622fbb37e93ab05e76803eea524f6cb8efb14ff36b5c000ac976376b",
+  "substantively_unreviewed": 294,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
