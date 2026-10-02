@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 422,
-    "REJECT": 37,
-    "QUARANTINE": 134,
-    "NEEDS_HUMAN_REVIEW": 1519
+    "PASS": 443,
+    "REJECT": 38,
+    "QUARANTINE": 137,
+    "NEEDS_HUMAN_REVIEW": 1494
   },
   "by_domain": {
     "circuits": {
@@ -44,10 +44,10 @@
       "NEEDS_HUMAN_REVIEW": 208
     },
     "electrical_components": {
-      "PASS": 175,
-      "REJECT": 10,
-      "QUARANTINE": 40,
-      "NEEDS_HUMAN_REVIEW": 75
+      "PASS": 196,
+      "REJECT": 11,
+      "QUARANTINE": 43,
+      "NEEDS_HUMAN_REVIEW": 50
     },
     "electromagnetism": {
       "PASS": 2,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 592,
+  "agent_substantive_reviews": 617,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "e867c2fbfd24538203bacba348d040a0208cd34e9b30e97678a1cedeadbba22f",
+  "technical_review_sha256": "0ee5231b8c4c55f1e27017b6d60bfe4aee1869c72ce351893254ff0d291a5c93",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1517,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1492,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -673,11 +673,36 @@
     "Correct explanation of source/load/reference impedances, return paths and layout influencing filter behavior. It recognizes bypass/coupling/mode-conversion effects and gives no universal grounding prescription.": 1,
     "The electrical shock-protection distinction is broadly sound, but the complete prompt says only class I vs class II with no product/domain referent. Several unrelated classifications use those labels. Hold the missing context rather than deriving appliance-protection intent from the source filename.": 1,
     "Reasonable multi-stress design-margin explanation covering variation, aging and harsh conditions instead of equating a datasheet maximum with robust service. The final survival language expresses the objective, not a quantified reliability guarantee for an actual part.": 1,
-    "LED photodetection and the wavelength relationship are correct, but the blanket claim that LEDs are much less sensitive than purpose-built photodiodes is unsupported. ADI reports comparable sensitivity in many cases; the actual device, illumination spectrum, packaging and characterization determine performance. Hold narrowly for that comparative claim rather than rejecting the LED-as-sensor concept.": 1
+    "LED photodetection and the wavelength relationship are correct, but the blanket claim that LEDs are much less sensitive than purpose-built photodiodes is unsupported. ADI reports comparable sensitivity in many cases; the actual device, illumination spectrum, packaging and characterization determine performance. Hold narrowly for that comparative claim rather than rejecting the LED-as-sensor concept.": 1,
+    "Correct in the stated optocoupler-feedback/primary-side-regulated isolated-supply context: eliminating the feedback optocoupler does not remove the transformer insulation barrier or its requirements. It does not assert that all nonisolated regulators require isolation.": 1,
+    "Correct conceptual distinction between an approved-vendor list's sourcing flexibility and inventory's time buffer, with appropriate complementarity. It does not equate a listed vendor with immediately available capacity or promise stock covers indefinite disruption.": 1,
+    "Faithful simpler rewrite of the causal statement supplied by the user, preserving the near-threshold repeated-switching meaning. It is not an independent diagnosis of an unseen relay installation.": 1,
+    "Correctly declines to infer full-switch capability at 3.3 V from a 2–4 V threshold range. Rds(on) at the available drive and fan current determine conduction loss; threshold is a low-current test condition, not a guaranteed useful on-state.": 1,
+    "Correct foundational reliability definition with required function, time and stated conditions, and a useful distinction from manufacturing quality. It supplies no ungrounded reliability percentage or mission-life claim.": 1,
+    "MOV/TVS/GDT options and clearing a hard MOV short are sensible, but the mains MOV-plus-fuse recommendation omits thermal-runaway coordination. A degraded MOV can overheat under sustained abnormal voltage below a conventional current fuse clearing threshold. Hold that safety-relevant incompleteness; no assertion is made that every properly coordinated MOV/fuse design is unsafe.": 1,
+    "Gravity-based accelerometer roll/pitch sensing is correct, but adding a gyro is framed as long-term accuracy improvement without motion or fusion conditions. A gyro can improve dynamic estimation, while gyro bias drifts and stationary tilt may already be better referenced to gravity. Hold that unqualified recommendation rather than rejecting sensor fusion generally.": 1,
+    "The definition incorrectly equates a safety rating/certification with predictable safe failure. Recognized components are assessed against specific requirements and conditions of acceptability within a system; failure-mode behavior depends on the component and standard. The central fail-safe definition is materially misleading.": 1,
+    "Correct reason threshold range is a weak predictor of practical MOSFET switching at 3.3 V: test current and transfer/on-resistance characteristics differ. No actual device suitability is inferred from threshold similarity alone.": 1,
+    "Reasonable conditional prioritization of alternate-source effort by shipment/redesign vulnerability rather than company size alone. It does not mandate costly dual qualification for every passive or assume a specific vendor failure probability.": 1,
+    "Correct rough base-resistor estimate using the explicitly approximate 0.7 V junction drop and the requested 10 mA current. The suggested nearby standard values match first-estimate scope; it is not a complete guarantee of transistor saturation or MCU drive capability.": 1,
+    "Correct qualified consequences of excessive output-capacitor ESR: ripple, transient degradation and possible loop instability depend on the regulator/control design. It does not claim all regulators want zero ESR or that high ESR always produces oscillation.": 1,
+    "Appropriately conditional relay-chatter diagnosis with BJT/MOSFET drive and supply-sag hypotheses. It acknowledges that a high pin voltage and working indicator do not uniquely determine coil current and explicitly leaves multiple possibilities without a schematic.": 1,
+    "Faithful plain-language description of gyro integration drift. Position estimate is read as angular position/orientation in the gyroscope context, not a claim that integrating angular rate once produces linear displacement.": 1,
+    "Insulation erosion and eventual breakdown are valid concerns, but the answer reduces PD to an internal process and broadly says it is hard to detect until too late. Surface/interface discharges also occur, and established PD diagnostics can detect defects early. Hold the overgeneralized detectability/location wording, not the core degradation mechanism.": 1,
+    "Correct common series/current-control versus shunt/voltage-clamp architecture and their complementary roles. Good designs use both is read as explaining coordinated protection, not a requirement that every circuit must contain every listed device.": 1,
+    "Correct usual thermistor-versus-thermocouple trade-off in sensitivity, useful temperature range and conditioning. Mentioning thermistor nonlinearity does not imply thermocouples are perfectly linear; no specific temperature accuracy or sensor type is selected.": 1,
+    "Correct distinction between near-zero-voltage turn-on suited to burst switching and random turn-on needed for firing-angle control. Load and stress/noise qualifications are retained; it does not claim arbitrary turn-off of a latched AC triac or that zero-cross is best for every inductive load.": 1,
+    "Correct qualified statement that body diodes can participate in recirculation, particularly with motor/half-bridge current paths. Can avoids claiming the body diode in every isolated low-side switch provides the needed load clamp.": 1,
+    "Correct conventional full-wave rectifier topologies and comparison with half-wave rectification of a comparable AC waveform. The output is pulsating DC with both halves used; smoother does not claim ripple-free output without filtering.": 1,
+    "Reasonable conditional EMC entry strategy for a plastic enclosure, focusing on a defined low-inductance shield/current-return structure and separation from sensitive references. It explicitly leaves safety/frequency/cable requirements open instead of instructing an arbitrary protective-earth or capacitor connection.": 1,
+    "Sound explanation that extended/unstable lead time can create inventory, freight, cash-timing and disruption costs beyond unit price. Can preserves contingent outcomes rather than claiming every long lead automatically incurs all costs.": 1,
+    "Correct basic load-cell definition with strain gauges as a common rather than exclusive implementation. It describes force/weight transduction without claiming the cell alone performs calibration, display or complete weighing-system compensation.": 1,
+    "Correct qualitative Class-II DC-bias-loss explanation and comparative benefit of operating a capacitor at lower applied voltage. Closer does not assert near-nominal capacitance, a guaranteed retention percentage, or improvement merely from substituting a higher-rated part.": 1,
+    "Correct link between bipolar-transistor local electrothermal/current-concentration failure and an SOA boundary stricter than independent voltage/current limits. It does not transfer that exact BJT mechanism to every MOSFET technology or derive an actual allowable point without a datasheet.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "d6d016df3c2386657548c6455b07e29a0c5ad91d8141c535ebfad211ff19a50b",
-  "substantively_unreviewed": 1517,
+  "published_decisions_sha256": "26b78122e79cc19f9eb6b7ce11973ec7d89fcd6399a3bdb3f1324cc64f371a45",
+  "substantively_unreviewed": 1492,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

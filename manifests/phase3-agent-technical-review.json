@@ -13793,9 +13793,769 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
       "original_domain_ordinal": 224
+    },
+    {
+      "id": "repo-530719b65a41c2b95f40c09d",
+      "messages_sha256": "530719b65a41c2b95f40c09d92f63bdd740b21eae9576112ec2c939ad9aebbc2",
+      "state": "PASS",
+      "rationale": "Reasonable conditional prioritization of alternate-source effort by shipment/redesign vulnerability rather than company size alone. It does not mandate costly dual qualification for every passive or assume a specific vendor failure probability.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "Low purchasing volume does not eliminate the consequence of losing a uniquely qualified critical part; prioritization can depend on consequence and recovery options instead of volume alone."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 98,
+      "assistant_tokens": 74,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 225
+    },
+    {
+      "id": "repo-e7a22ab6fb365b791c8cdcb6",
+      "messages_sha256": "e7a22ab6fb365b791c8cdcb677ec8d084d039ffe53357130dc6fac0d3015d45d",
+      "state": "PASS",
+      "rationale": "Correct qualitative Class-II DC-bias-loss explanation and comparative benefit of operating a capacitor at lower applied voltage. Closer does not assert near-nominal capacitance, a guaranteed retention percentage, or improvement merely from substituting a higher-rated part.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices ceramic capacitance versus DC bias",
+          "url": "https://www.analog.com/en/resources/technical-articles/temperature-and-voltage-variation-ceramic-capacitor.html",
+          "finding": "Examples show capacitance loss strongly depends on construction/package and rated voltage alone may not predict it; actual part curves are needed."
+        },
+        {
+          "title": "Murata voltage dependence of capacitance",
+          "url": "https://article.murata.com/en-us/article/voltage-characteristics-of-electrostatic-capacitance",
+          "finding": "The DC-bias section confirms less capacitance decrease at lower applied voltage, while actual selection requires characteristic data."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 79,
+      "assistant_tokens": 62,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 226
+    },
+    {
+      "id": "repo-56a042c42b6eda7d32cc6f73",
+      "messages_sha256": "56a042c42b6eda7d32cc6f73703ccc7b34542cadc09660cbbbd871af917977fa",
+      "state": "PASS",
+      "rationale": "Correct rough base-resistor estimate using the explicitly approximate 0.7 V junction drop and the requested 10 mA current. The suggested nearby standard values match first-estimate scope; it is not a complete guarantee of transistor saturation or MCU drive capability.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "R=(5-0.7)/0.010=430 ohms. A 470-ohm resistor under the same approximation gives 4.3/470=9.15 mA."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 105,
+      "assistant_tokens": 73,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 227
+    },
+    {
+      "id": "repo-ac33274e4774db1670b857d0",
+      "messages_sha256": "ac33274e4774db1670b857d07bb4acbb9456e515608966c694ac58ac0760487c",
+      "state": "PASS",
+      "rationale": "Correct usual thermistor-versus-thermocouple trade-off in sensitivity, useful temperature range and conditioning. Mentioning thermistor nonlinearity does not imply thermocouples are perfectly linear; no specific temperature accuracy or sensor type is selected.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices temperature sensor selection",
+          "url": "https://www.analog.com/en/resources/design-notes/selecting-temperature-sensors-for-system-measurement-and-protection.html",
+          "finding": "Thermistors offer high sensitivity over a narrower practical range; thermocouples support wide/high-temperature ranges with low voltage and cold-junction conditioning."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 64,
+      "assistant_tokens": 48,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 228
+    },
+    {
+      "id": "repo-e426ead481a986b923a6de90",
+      "messages_sha256": "e426ead481a986b923a6de90740c2fdd66fe6882cd130a2f1d044d8eef2ab0b9",
+      "state": "PASS",
+      "rationale": "Sound explanation that extended/unstable lead time can create inventory, freight, cash-timing and disruption costs beyond unit price. Can preserves contingent outcomes rather than claiming every long lead automatically incurs all costs.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "A longer replenishment horizon can require more buffer or earlier commitment under the same demand uncertainty, while stockout/expediting costs depend on the actual operating plan."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 87,
+      "assistant_tokens": 67,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 229
+    },
+    {
+      "id": "repo-834d1bbc610ae945131697e3",
+      "messages_sha256": "834d1bbc610ae945131697e3d9e17afa245b208ac43937121259c7230e978e94",
+      "state": "PASS",
+      "rationale": "Appropriately conditional relay-chatter diagnosis with BJT/MOSFET drive and supply-sag hypotheses. It acknowledges that a high pin voltage and working indicator do not uniquely determine coil current and explicitly leaves multiple possibilities without a schematic.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "OMRON relay troubleshooting",
+          "url": "https://www.ia.omron.com/support/guide/36/troubleshooting.html",
+          "finding": "Mechanical relays have multiple failure mechanisms, including contact welding, wear, intermittent contact and coil deterioration."
+        },
+        {
+          "title": "Infineon IRLML6402 datasheet",
+          "url": "https://www.infineon.com/dgdl/irlml6402pbf.pdf?fileId=5546d462533600a401535668d5c2263c",
+          "finding": "Separate threshold, on-resistance and transconductance entries have different gate/drain/current test conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "An unloaded or lightly loaded control indication cannot prove adequate voltage/current at the coil under pull-in load; the coil's supply may sag during engagement."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 181,
+      "assistant_tokens": 145,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 230
+    },
+    {
+      "id": "repo-9c150362ce8fe3230f3e778b",
+      "messages_sha256": "9c150362ce8fe3230f3e778b9e2566ee53243ac9c6d6102557daef61ca83bb25",
+      "state": "QUARANTINE",
+      "rationale": "Insulation erosion and eventual breakdown are valid concerns, but the answer reduces PD to an internal process and broadly says it is hard to detect until too late. Surface/interface discharges also occur, and established PD diagnostics can detect defects early. Hold the overgeneralized detectability/location wording, not the core degradation mechanism.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "OMICRON partial discharge diagnostic principles",
+          "url": "https://www.omicronenergy.com/download/document/21E1E097-778D-435C-B271-71A93209AD0C/",
+          "finding": "PD may occur within or on insulation and can degrade it; measurement can detect defects before major damage or breakdown."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 65,
+      "assistant_tokens": 46,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 231
+    },
+    {
+      "id": "repo-7a4e28a00055a8134f8b0e93",
+      "messages_sha256": "7a4e28a00055a8134f8b0e934ecf64dedd6552699d149dbc6dcc2b7dcfd51083",
+      "state": "PASS",
+      "rationale": "Correct qualified consequences of excessive output-capacitor ESR: ripple, transient degradation and possible loop instability depend on the regulator/control design. It does not claim all regulators want zero ESR or that high ESR always produces oscillation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TI LDO stability and output capacitance",
+          "url": "https://www.ti.com/lit/an/slva115a/slva115a.pdf",
+          "finding": "Output capacitance and ESR influence feedback-loop poles/zeros and regulator stability."
+        },
+        {
+          "title": "TI switching regulator fundamentals",
+          "url": "https://www.ti.com/lit/an/snva559c/snva559c.pdf",
+          "finding": "Page 14 explains increased ripple and possible loop instability from high output-capacitor ESR."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Ripple current produces ESR voltage Iripple*ESR and heat Irms²*ESR; ESR also introduces a zero that can alter loop compensation."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 88,
+      "assistant_tokens": 62,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 232
+    },
+    {
+      "id": "repo-e4f7ab7c68c3038692f5aa46",
+      "messages_sha256": "e4f7ab7c68c3038692f5aa469627471e99a6a85e855e0af11de89dcfc58c4e89",
+      "state": "PASS",
+      "rationale": "Correct basic load-cell definition with strain gauges as a common rather than exclusive implementation. It describes force/weight transduction without claiming the cell alone performs calibration, display or complete weighing-system compensation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "Applied force elastically strains the load member; in a strain-gauge cell that changes bridge resistance/output, providing an electrical signal related to force."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 51,
+      "assistant_tokens": 37,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 233
+    },
+    {
+      "id": "repo-49b1a01b22caec8a584b6776",
+      "messages_sha256": "49b1a01b22caec8a584b6776db82445bdc7641ed9a1d868e30e37a2869c5bc19",
+      "state": "REJECT",
+      "rationale": "The definition incorrectly equates a safety rating/certification with predictable safe failure. Recognized components are assessed against specific requirements and conditions of acceptability within a system; failure-mode behavior depends on the component and standard. The central fail-safe definition is materially misleading.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "UL component testing and certification",
+          "url": "https://www.ul.com/industries/components",
+          "finding": "Recognition assesses applicable requirements under defined conditions of acceptability within an end product; it does not guarantee every component fails safely under arbitrary faults."
+        },
+        {
+          "title": "TI Power Supply Design insulation definitions",
+          "url": "https://www.ti.com/lit/ml/slup421/slup421.pdf",
+          "finding": "Reinforced insulation is one insulation system providing protection equivalent to double insulation, which combines basic and supplementary insulation for normal, abnormal and single-fault conditions."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 58,
+      "assistant_tokens": 41,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 234
+    },
+    {
+      "id": "repo-94bdfc92aae0fed3b3cea591",
+      "messages_sha256": "94bdfc92aae0fed3b3cea5918fc335bbc6a637d4c06d49df7dc47ca24ab17795",
+      "state": "PASS",
+      "rationale": "Faithful plain-language description of gyro integration drift. Position estimate is read as angular position/orientation in the gyroscope context, not a claim that integrating angular rate once produces linear displacement.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices AN-1057 inclination sensing",
+          "url": "https://www.analog.com/en/resources/app-notes/2020/07/22/16/49/an-1057.html",
+          "finding": "An accelerometer gives a gravity-based tilt reference only under appropriate acceleration assumptions; sustained non-gravity acceleration biases tilt, while gyro integration accumulates drift."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Integrating a constant angular-rate bias b over time t adds an angular error b*t; zero-mean rate noise can also accumulate uncertainty."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 53,
+      "assistant_tokens": 31,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 235
+    },
+    {
+      "id": "repo-c00a6e2dbcca5f60c771cdad",
+      "messages_sha256": "c00a6e2dbcca5f60c771cdad95a9a1741efcb66d7aaf7352b9887d8c218300f4",
+      "state": "PASS",
+      "rationale": "Correct conventional full-wave rectifier topologies and comparison with half-wave rectification of a comparable AC waveform. The output is pulsating DC with both halves used; smoother does not claim ripple-free output without filtering.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "For an ideal sine of peak Vm, average |sin| output is 2*Vm/pi versus Vm/pi for half-wave, and pulse repetition is twice the input frequency."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 69,
+      "assistant_tokens": 55,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 236
+    },
+    {
+      "id": "repo-2be5077ffe9459cc40a7b14c",
+      "messages_sha256": "2be5077ffe9459cc40a7b14c4a02245f702716e103f9961ac3c02e99fba82dff",
+      "state": "QUARANTINE",
+      "rationale": "MOV/TVS/GDT options and clearing a hard MOV short are sensible, but the mains MOV-plus-fuse recommendation omits thermal-runaway coordination. A degraded MOV can overheat under sustained abnormal voltage below a conventional current fuse clearing threshold. Hold that safety-relevant incompleteness; no assertion is made that every properly coordinated MOV/fuse design is unsafe.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Littelfuse integrated overcurrent/overtemperature protection",
+          "url": "https://www.littelfuse.com/assetdocs/integrated-overcurrent-overvoltage-overtemperature-solutions-for-industrial-application-note?assetguid=345d7dbb-dcc4-48e4-8549-67fd402752e7",
+          "finding": "MOVs can overheat under abnormal sustained voltage even with upstream fusing; coordinated thermal protection may be required."
+        },
+        {
+          "title": "Littelfuse technical application guide",
+          "url": "https://www.littelfuse.com/assetdocs/powr-gard-catalog?assetguid=85d36235-a32b-4608-bfed-f9878aa43af0",
+          "finding": "Interrupting rating is the available fault current the fuse can interrupt safely at its rated voltage and specified test conditions."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 66,
+      "assistant_tokens": 51,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 237
+    },
+    {
+      "id": "repo-4351b5a9ae249b26fa2d848f",
+      "messages_sha256": "4351b5a9ae249b26fa2d848f2b2adb96ddfee87a1fd11feb84a3b3dc54845fa3",
+      "state": "QUARANTINE",
+      "rationale": "Gravity-based accelerometer roll/pitch sensing is correct, but adding a gyro is framed as long-term accuracy improvement without motion or fusion conditions. A gyro can improve dynamic estimation, while gyro bias drifts and stationary tilt may already be better referenced to gravity. Hold that unqualified recommendation rather than rejecting sensor fusion generally.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices AN-1057 inclination sensing",
+          "url": "https://www.analog.com/en/resources/app-notes/2020/07/22/16/49/an-1057.html",
+          "finding": "An accelerometer gives a gravity-based tilt reference only under appropriate acceleration assumptions; sustained non-gravity acceleration biases tilt, while gyro integration accumulates drift."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 58,
+      "assistant_tokens": 41,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 238
+    },
+    {
+      "id": "repo-af78bd0bbeb51a91af2bde77",
+      "messages_sha256": "af78bd0bbeb51a91af2bde7707792b6786f127e0f9a2b86f1428f032bdcad56d",
+      "state": "PASS",
+      "rationale": "Correct distinction between near-zero-voltage turn-on suited to burst switching and random turn-on needed for firing-angle control. Load and stress/noise qualifications are retained; it does not claim arbitrary turn-off of a latched AC triac or that zero-cross is best for every inductive load.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "OMRON zero-cross SSR function",
+          "url": "https://www.ia.omron.com/support/faq/answer/18/faq02083/",
+          "finding": "Zero-cross turn-on waits near zero AC load voltage to reduce switching noise, which differs from arbitrary phase-angle triggering."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A zero-cross gate waits near the start of a half-cycle, preventing freely chosen within-half-cycle firing angles; a random-turn-on gate can trigger at the commanded phase."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 163,
+      "assistant_tokens": 139,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 239
+    },
+    {
+      "id": "repo-07bd1056cf0d3f8d73ab6941",
+      "messages_sha256": "07bd1056cf0d3f8d73ab69413a2f82e6d90585e45ae4d7ef5aac6342418295d1",
+      "state": "PASS",
+      "rationale": "Correct in the stated optocoupler-feedback/primary-side-regulated isolated-supply context: eliminating the feedback optocoupler does not remove the transformer insulation barrier or its requirements. It does not assert that all nonisolated regulators require isolation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TI flyback output regulation concepts",
+          "url": "https://www.ti.com/document-viewer/lit/html/SLVAFK6",
+          "finding": "Primary-side regulation uses information such as an auxiliary transformer winding instead of an optocoupler feedback path while retaining the isolated converter power stage."
+        },
+        {
+          "title": "TI Power Supply Design insulation definitions",
+          "url": "https://www.ti.com/lit/ml/slup421/slup421.pdf",
+          "finding": "Reinforced insulation is one insulation system providing protection equivalent to double insulation, which combines basic and supplementary insulation for normal, abnormal and single-fault conditions."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 60,
+      "assistant_tokens": 39,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 240
+    },
+    {
+      "id": "repo-188e7cc62de7869e15d72fe4",
+      "messages_sha256": "188e7cc62de7869e15d72fe43ce7a2cc7ef22fe895647c795e701ad13cef503c",
+      "state": "PASS",
+      "rationale": "Correct foundational reliability definition with required function, time and stated conditions, and a useful distinction from manufacturing quality. It supplies no ungrounded reliability percentage or mission-life claim.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "Reliability is conventionally R(t)=P(Tfailure>t) for a defined function and environment; changing mission conditions changes the relevant distribution."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 79,
+      "assistant_tokens": 52,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 241
+    },
+    {
+      "id": "repo-a9c7f6e643dc165fff66ab4f",
+      "messages_sha256": "a9c7f6e643dc165fff66ab4fb2f430c48d2e3212e273d86fab20d48baff55d5e",
+      "state": "PASS",
+      "rationale": "Correct common series/current-control versus shunt/voltage-clamp architecture and their complementary roles. Good designs use both is read as explaining coordinated protection, not a requirement that every circuit must contain every listed device.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Littelfuse technical application guide",
+          "url": "https://www.littelfuse.com/assetdocs/powr-gard-catalog?assetguid=85d36235-a32b-4608-bfed-f9878aa43af0",
+          "finding": "Interrupting rating is the available fault current the fuse can interrupt safely at its rated voltage and specified test conditions."
+        },
+        {
+          "title": "Littelfuse integrated overcurrent/overtemperature protection",
+          "url": "https://www.littelfuse.com/assetdocs/integrated-overcurrent-overvoltage-overtemperature-solutions-for-industrial-application-note?assetguid=345d7dbb-dcc4-48e4-8549-67fd402752e7",
+          "finding": "MOVs can overheat under abnormal sustained voltage even with upstream fusing; coordinated thermal protection may be required."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Series impedance/interruption controls delivered fault current, while a shunt clamp provides an alternate path limiting terminal voltage; energy and ratings must be coordinated."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 76,
+      "assistant_tokens": 60,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 242
+    },
+    {
+      "id": "repo-eee8f29f749a2e4d1736e7e3",
+      "messages_sha256": "eee8f29f749a2e4d1736e7e341d4e57ae1b3b8f4165a863b1e680d30550004b6",
+      "state": "PASS",
+      "rationale": "Correct link between bipolar-transistor local electrothermal/current-concentration failure and an SOA boundary stricter than independent voltage/current limits. It does not transfer that exact BJT mechanism to every MOSFET technology or derive an actual allowable point without a datasheet.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "onsemi AN1628 power transistor breakdown",
+          "url": "https://www.onsemi.com/pub/Collateral/AN1628-D.PDF",
+          "finding": "Discusses localized current/thermal instability in bipolar power transistors and the resulting second-breakdown limits."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 70,
+      "assistant_tokens": 54,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 243
+    },
+    {
+      "id": "repo-c4ce4bed6c2695f7f268f2c3",
+      "messages_sha256": "c4ce4bed6c2695f7f268f2c34551ea7ab4112339cb17b031aaf47f6b76f230e1",
+      "state": "PASS",
+      "rationale": "Reasonable conditional EMC entry strategy for a plastic enclosure, focusing on a defined low-inductance shield/current-return structure and separation from sensitive references. It explicitly leaves safety/frequency/cable requirements open instead of instructing an arbitrary protective-earth or capacitor connection.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Würth Elektronik cable shielding",
+          "url": "https://www.we-online.com/en/components/productnavigator/cable-solutions",
+          "finding": "Pigtail impedance creates shield-to-housing RF voltage; circumferential shield coverage supports a low-impedance high-frequency bond."
+        },
+        {
+          "title": "TI Power Supply Design insulation definitions",
+          "url": "https://www.ti.com/lit/ml/slup421/slup421.pdf",
+          "finding": "Reinforced insulation is one insulation system providing protection equivalent to double insulation, which combines basic and supplementary insulation for normal, abnormal and single-fault conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A short broad termination reduces inductance compared with a long pigtail; high-frequency common-mode/ESD current needs a controlled path rather than sensitive signal-trace impedance."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 185,
+      "assistant_tokens": 156,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 244
+    },
+    {
+      "id": "repo-12ffbe4fc96ade4ba3da3aa7",
+      "messages_sha256": "12ffbe4fc96ade4ba3da3aa718d084b907125e6f402b681bdaaa0c027a1ddbc3",
+      "state": "PASS",
+      "rationale": "Correctly declines to infer full-switch capability at 3.3 V from a 2–4 V threshold range. Rds(on) at the available drive and fan current determine conduction loss; threshold is a low-current test condition, not a guaranteed useful on-state.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Infineon IRLML6402 datasheet",
+          "url": "https://www.infineon.com/dgdl/irlml6402pbf.pdf?fileId=5546d462533600a401535668d5c2263c",
+          "finding": "Separate threshold, on-resistance and transconductance entries have different gate/drain/current test conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At a given load current, conduction loss is approximately I²*Rds(on); neither that resistance at 3.3 V nor its temperature rise is specified by Vgs(th) alone."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 113,
+      "assistant_tokens": 67,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 245
+    },
+    {
+      "id": "repo-0e6f3ed3137bdb38fd5d4f2e",
+      "messages_sha256": "0e6f3ed3137bdb38fd5d4f2ed2f7451b86d3ef872f2d8e94291d0e650e59d003",
+      "state": "PASS",
+      "rationale": "Faithful simpler rewrite of the causal statement supplied by the user, preserving the near-threshold repeated-switching meaning. It is not an independent diagnosis of an unseen relay installation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "No extra physical cause or component-specific threshold has been added to the user's stated premise."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 51,
+      "assistant_tokens": 25,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 246
+    },
+    {
+      "id": "repo-b7e44547284aaec99a944177",
+      "messages_sha256": "b7e44547284aaec99a944177e2fa166b454718f219c32c0015313653f8b6ddd7",
+      "state": "PASS",
+      "rationale": "Correct qualified statement that body diodes can participate in recirculation, particularly with motor/half-bridge current paths. Can avoids claiming the body diode in every isolated low-side switch provides the needed load clamp.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TI solenoid driving topologies",
+          "url": "https://www.ti.com/lit/an/slvae59a/slvae59a.pdf?ts=1776259564837",
+          "finding": "Discusses low-side/high-side and bridge switching, recirculation and clamp choices for inductive solenoid loads."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Whether a particular body diode conducts depends on current polarity and node voltage; bridge topology can provide a diode path during dead time."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 53,
+      "assistant_tokens": 28,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 247
+    },
+    {
+      "id": "repo-0c8646c296c0568b3c0bf4fe",
+      "messages_sha256": "0c8646c296c0568b3c0bf4fe59ff35e756c4ecaeb7ed02c28669dec8e7e66acd",
+      "state": "PASS",
+      "rationale": "Correct conceptual distinction between an approved-vendor list's sourcing flexibility and inventory's time buffer, with appropriate complementarity. It does not equate a listed vendor with immediately available capacity or promise stock covers indefinite disruption.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "An alternate source changes available replenishment paths; stock extends the time before demand exhausts supply. These are related but distinct controls."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 72,
+      "assistant_tokens": 51,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 248
+    },
+    {
+      "id": "repo-51534d8e2e40206ffeb3f0b8",
+      "messages_sha256": "51534d8e2e40206ffeb3f0b86385fcd25b132dc753e50df41a23e657a7da2d4b",
+      "state": "PASS",
+      "rationale": "Correct reason threshold range is a weak predictor of practical MOSFET switching at 3.3 V: test current and transfer/on-resistance characteristics differ. No actual device suitability is inferred from threshold similarity alone.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Infineon IRLML6402 datasheet",
+          "url": "https://www.infineon.com/dgdl/irlml6402pbf.pdf?fileId=5546d462533600a401535668d5c2263c",
+          "finding": "Separate threshold, on-resistance and transconductance entries have different gate/drain/current test conditions."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 91,
+      "assistant_tokens": 63,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
+      "original_domain_ordinal": 249
     }
   ],
-  "reviewed": 592,
+  "reviewed": 617,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true
