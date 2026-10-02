@@ -20,16 +20,16 @@
   "model_weights_downloaded_or_loaded": false,
   "training_or_paid_compute": false,
   "automatic_checks_recreated": false,
-  "test_log_sha256": "b710c52ac121a7271b6a47f3e09d93e87839ab233875c7830e6f0cfe21ad952f",
+  "test_log_sha256": "4b5cc3e98a4c3f1a4715e9bd4843a2393e64cb58d866f4587154ba56d922e88f",
   "tested_code_sha256": {
     "scripts/phase3-verify-private-release.py": "64d76484b0852d041083301ce113ddc255b7906512def3dc12d0f92dc96910e1",
     "src/forge_data/citation_pilot.py": "9e17e50194ba8cb22eca0b431359d7aec1d870f8417e87b4938e3c1ff4c968d4",
     "tests/test_private_release_verifier.py": "e2a5854473e449455e9bc2ffcc207346f018a3bb49206a81546cd1cea2ace817"
   },
-  "base_commit": "9b307915c18c38942b8fc3c5f4a0d6b5bf23105e",
+  "base_commit": "33da9fee6a405ebc56ea8632c179cc460af3cfcc",
   "all_public_input_hashes_verified": 8,
   "candidate_message_hashes_verified": 2112,
-  "substantive_decisions_verified": 1009,
+  "substantive_decisions_verified": 984,
   "earlier_374_decisions_unchanged": true,
   "unchanged_frozen_files": [
     "src/forge_tools/engineering.py",
@@ -46,15 +46,15 @@
     "QUARANTINE": 7
   },
   "current_dispositions": {
-    "PASS": 763,
-    "REJECT": 52,
-    "QUARANTINE": 195,
-    "NEEDS_HUMAN_REVIEW": 1102
+    "PASS": 743,
+    "REJECT": 50,
+    "QUARANTINE": 192,
+    "NEEDS_HUMAN_REVIEW": 1127
   },
-  "substantively_unreviewed": 1100,
+  "substantively_unreviewed": 1125,
   "next_batch": {
     "domain": "trigonometry",
-    "offset": 150,
+    "offset": 125,
     "limit": 25
   },
   "official_reader_executed": true,
@@ -65,16 +65,16 @@
   "earlier_392_decisions_unchanged": true,
   "latest_batch": {
     "domain": "trigonometry",
-    "offset": 125,
+    "offset": 100,
     "limit": 25,
-    "selected_window_end_exclusive": 150,
+    "selected_window_end_exclusive": 125,
     "new_reviews": 25,
     "skipped_existing": 0,
     "preserved_structural_quarantines": [],
     "dispositions": {
-      "PASS": 20,
-      "QUARANTINE": 3,
-      "REJECT": 2
+      "PASS": 22,
+      "QUARANTINE": 2,
+      "REJECT": 1
     }
   },
   "independent_agent_qa_complete": true,
@@ -82,7 +82,7 @@
   "latest_batch_only_expected_ledger_rows_changed": true,
   "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
   "publication_status": "LOCAL_ONLY",
-  "earlier_decisions_unchanged": 984,
+  "earlier_decisions_unchanged": 959,
   "electrical_domain_complete": true,
   "electrical_records_verified": 300,
   "all_392_published_decisions_unchanged": true,

@@ -26335,9 +26335,861 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/trigonometry-0100-0125.json",
       "original_domain_ordinal": 124
+    },
+    {
+      "id": "repo-bbcc7d09b4024eae08c6c414",
+      "messages_sha256": "bbcc7d09b4024eae08c6c41428891e2aa945803599df0fdfb316d267a09ba4fb",
+      "state": "PASS",
+      "rationale": "Correct unit-circle derivation of the Pythagorean identity.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identity, branch, domain and exact-value calculations are verified directly on the original domain."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The squared norm of (cos theta,sin theta) is the squared unit radius, 1."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 99,
+      "assistant_tokens": 74,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 125
+    },
+    {
+      "id": "repo-6526fe3514ca951f1163c525",
+      "messages_sha256": "6526fe3514ca951f1163c52538cf7d4f83f798ed6cc1fc1617d382dc8bdadd14",
+      "state": "PASS",
+      "rationale": "Correct coordinate-sign basis and ordinary ASTC mnemonic for the three primary trig functions.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identity, branch, domain and exact-value calculations are verified directly on the original domain."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "sin=y, cos=x, tan=y/x; reciprocals have their corresponding signs."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The mnemonic lists the primary positive function in each open quadrant; csc/sec/cot share the reciprocal signs. Axis values need separate treatment."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 110,
+      "assistant_tokens": 89,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 126
+    },
+    {
+      "id": "repo-81fdb19ca579e2d0e5c1ff25",
+      "messages_sha256": "81fdb19ca579e2d0e5c1ff253da317f7c5fb17bc7973507402b373ddf308087d",
+      "state": "PASS",
+      "rationale": "Both difference-of-squares and sine/cosine derivations are valid on the common original domain.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identity, branch, domain and exact-value calculations are verified directly on the original domain."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For cos x!=0, sec²x-tan²x=(1-sin²x)/cos²x=1."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The constant simplification does not define the original expression at cosine zeros."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 193,
+      "assistant_tokens": 161,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 127
+    },
+    {
+      "id": "repo-50272d5de07b7b557fc111d9",
+      "messages_sha256": "50272d5de07b7b557fc111d9ea81b2d800f17ac0c1b41dfccdd872bafb3d0856",
+      "state": "PASS",
+      "rationale": "Sound qualified comparison of vector and angle-based methods, explicitly recognizing unit-vector angle encoding.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_vector_geometry",
+          "finding": "Coordinate sums, equal lengths, dot products and scale invariance establish the vector geometry statements with their stated conventions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For unit vectors u,v, u dot v=cos theta carries the angle without prescribing physical lengths."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 85,
+      "assistant_tokens": 59,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 128
+    },
+    {
+      "id": "repo-3ae65bbb936be3fd3cbcb9a5",
+      "messages_sha256": "3ae65bbb936be3fd3cbcb9a5af925e2bcd48d87162d1718d5e8ab1a2a5794e30",
+      "state": "PASS",
+      "rationale": "Correct distinction between two genuinely incommensurate periodic components and a single fundamental harmonic ladder.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identity, branch, domain and exact-value calculations are verified directly on the original domain."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A common period would be n*T1=m*T2 for nonzero integers n,m, forcing T1/T2=m/n rational."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Assumes both stated cycles are actual nondegenerate components of the motion. Finite-record resolution does not establish mathematical irrationality."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 171,
+      "assistant_tokens": 132,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 129
+    },
+    {
+      "id": "repo-8fdf707ff6507a5bcc3192c3",
+      "messages_sha256": "8fdf707ff6507a5bcc3192c36a9d8ddaf20b5c992f0196c3788da4236d39eaa3",
+      "state": "QUARANTINE",
+      "rationale": "The equilibrium equations are useful, but the requested derived shape is left at a differential relation and the claim that nonzero-alpha solutions require numerical methods or series is too restrictive. An exact parametric quadrature follows directly.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_variable_load_equilibrium_and_quadrature",
+          "finding": "For H>0 and V(s)=w0*s+alpha*s²/2 measured from a horizontal-tangent point, dx/ds=H/sqrt(H²+V²) and dy/ds=V/sqrt(H²+V²). Their integrals provide an exact parametric quadrature, without requiring a cosh expression."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With V(s)=w0*s+alpha*s²/2, x(s)=x0+integral_0^s H/sqrt(H²+V(u)²) du and y(s)=y0+integral_0^s V(u)/sqrt(H²+V(u)²) du. Differentiating gives dy/dx=V/H and unit arc-length speed."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "These integrals may need numerical evaluation for particular endpoints. The hold does not claim a generic elementary closed form or reject numerical methods."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 166,
+      "assistant_tokens": 137,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 130
+    },
+    {
+      "id": "repo-b8059f4494b5aabd757c5601",
+      "messages_sha256": "b8059f4494b5aabd757c560132d87ca12beb3884fa4d638dbf2506de593f70d2",
+      "state": "PASS",
+      "rationale": "Correct component proof and intended same-resultant parallelogram construction of vector commutativity.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_vector_geometry",
+          "finding": "Coordinate sums, equal lengths, dot products and scale invariance establish the vector geometry statements with their stated conventions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "(a1+b1,a2+b2)=(b1+a1,b2+a2); both tip-to-tail paths end at a+b."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The final diagonal wording should mean the same resultant diagonal reached by either path, not that the two distinct diagonals of a general parallelogram are equal."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 83,
+      "assistant_tokens": 64,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 131
+    },
+    {
+      "id": "repo-e2cd76255bd87ce327b1a209",
+      "messages_sha256": "e2cd76255bd87ce327b1a20998bb9dbf4bcd44c691782a4b48b9e4f4df0a8851",
+      "state": "PASS",
+      "rationale": "Correct basic method-selection guidance for opposite pairs, SAS/SSS and right triangles.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identity, branch, domain and exact-value calculations are verified directly on the original domain."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Enough independent data and SSA ambiguity still need checking; identifying a promising rule alone does not ensure a unique triangle."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 89,
+      "assistant_tokens": 66,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 132
+    },
+    {
+      "id": "repo-27e8a1112cf0960eee69699f",
+      "messages_sha256": "27e8a1112cf0960eee69699f0a40d0c5a3a2e6c114078dea87b1ec803b5e8ac6",
+      "state": "PASS",
+      "rationale": "Exact sine-difference computation and sound explanation of the standard-angle choice.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identity, branch, domain and exact-value calculations are verified directly on the original domain."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "sin(45-30)=(sqrt6-sqrt2)/4."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 184,
+      "assistant_tokens": 157,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 133
+    },
+    {
+      "id": "repo-879f348ec4022fdd9f1249d6",
+      "messages_sha256": "879f348ec4022fdd9f1249d6370a12a212515c23d76706a867e112ec7994d1b5",
+      "state": "PASS",
+      "rationale": "Correct derivation of the cosine half-angle formula including the sign ambiguity.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identity, branch, domain and exact-value calculations are verified directly on the original domain."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "cos²alpha=(1+cos2alpha)/2; taking roots requires the sign from alpha."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The displayed plus/minus is selected by the half-angle quadrant rather than chosen independently."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 105,
+      "assistant_tokens": 80,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 134
+    },
+    {
+      "id": "repo-a303a4072fdc0565bfac3963",
+      "messages_sha256": "a303a4072fdc0565bfac396365d3bae6f0d0ac70383571727d35d9944026305b",
+      "state": "PASS",
+      "rationale": "Correct elimination of the second sine branch by the positive-cosine condition.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identity, branch, domain and exact-value calculations are verified directly on the original domain."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "cos(pi/6)>0 and cos(5pi/6)<0, so only pi/6+2n*pi remains."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 118,
+      "assistant_tokens": 89,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 135
+    },
+    {
+      "id": "repo-5683cf163ab5a7a99558bc74",
+      "messages_sha256": "5683cf163ab5a7a99558bc74354e92420c3f78272fe6bab527ba35f6038fdc18",
+      "state": "PASS",
+      "rationale": "Correct two solutions and explicit check that dividing by cosine discards no valid roots.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identity, branch, domain and exact-value calculations are verified directly on the original domain."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "cos x=0 implies sin x=±1, so no excluded zero-cosine angle solves sin x=cos x; tan x=1 gives pi/4,5pi/4 in the interval."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 145,
+      "assistant_tokens": 119,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 136
+    },
+    {
+      "id": "repo-f1026b493543584c56085ddf",
+      "messages_sha256": "f1026b493543584c56085ddf4059764165af748fede25137566f1515dd3410f2",
+      "state": "PASS",
+      "rationale": "Valid real-part integration technique and exponential example.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_complex_exponential_algebra",
+          "finding": "Euler expressions and differentiation verify the real-part integration example."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Re(exp((1+i)x)/(1+i))=0.5*exp(x)*(cos x+sin x), whose derivative is exp(x)*cos x."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 98,
+      "assistant_tokens": 80,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 137
+    },
+    {
+      "id": "repo-8e8b22d1e178ccac157ed48b",
+      "messages_sha256": "8e8b22d1e178ccac157ed48b7bc9cfaeee89a5ab98b490376d65ca78a0158f67",
+      "state": "PASS",
+      "rationale": "Correct double-angle identity proof on the original tangent domain.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identity, branch, domain and exact-value calculations are verified directly on the original domain."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "cos x!=0 allows multiplying numerator and denominator by cos²x; sin²+cos²=1."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The right-hand expression extends to more points than the original tangent quotient; retain the original domain."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 112,
+      "assistant_tokens": 81,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 138
+    },
+    {
+      "id": "repo-5815b9a3f388d0ac148131b7",
+      "messages_sha256": "5815b9a3f388d0ac148131b755ae18656b789fedab6c395280b77c73db5f2b8a",
+      "state": "PASS",
+      "rationale": "Accurate definition of equivalence-preserving simplification and a valid domain-revealing example.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identity, branch, domain and exact-value calculations are verified directly on the original domain."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "tan x sec x=sin x/cos²x wherever cos x!=0."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 162,
+      "assistant_tokens": 139,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 139
+    },
+    {
+      "id": "repo-24aa53155ab4a2a839c61a08",
+      "messages_sha256": "24aa53155ab4a2a839c61a0850a488c97a18465c62195e5d6cafa4bf8dbe7194",
+      "state": "QUARANTINE",
+      "rationale": "The example is correct, but the stated rule to negate any term containing two sinh factors is incomplete for terms containing multiple pairs, and general trig quotients must first expose their sine factors. Hold for specifying the paired sign accounting.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "UCL MATH6501 sheet 3 solutions, 2016",
+          "url": "https://www.ucl.ac.uk/~zcahge7/files/sheet3_solutions.pdf",
+          "finding": "UCL derives the hyperbolic triple-angle formula and demonstrates the single paired-sine sign change. Multi-pair parity in this review is independently verified from sin(ix)=i*sinh(x), not attributed as an explicit UCL statement."
+        },
+        {
+          "method": "independent_complex_exponential_algebra",
+          "finding": "Euler expressions and differentiation verify the real-part integration example."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "cos(4x)=cos^4x-6cos²x sin²x+sin^4x transforms to cosh(4x)=cosh^4x+6cosh²x sinh²x+sinh^4x. Four sinh factors contribute i^4=+1, rather than one minus sign merely because the term contains a pair."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is a scope/wording hold on the general recipe, not a rejection of the displayed cosh²-sinh² example."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 97,
+      "assistant_tokens": 75,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 140
+    },
+    {
+      "id": "repo-372fbdbc5890f7cba5b6ac1c",
+      "messages_sha256": "372fbdbc5890f7cba5b6ac1ca62bc804cce9d5855382ef7aaa8455b1d23a0ca3",
+      "state": "REJECT",
+      "rationale": "The absolute claim that cross-multiplication assumes the desired equality and is necessarily circular is false. One may prove the cross-product equality independently and use reversible nonzero-denominator equivalence.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_equivalence_and_counterexample",
+          "finding": "A reversible equivalence can prove an identity backward from an independently established equality if denominators are nonzero. Cross-multiplication alone is not intrinsically circular."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For x!=±1, 1/(1+x)=(1-x)/(1-x²) follows from the independently verified identity 1-x²=(1-x)(1+x) and nonzero denominators."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "An unqualified assume-and-manipulate argument can be circular; that risk does not make all cross-multiplication proofs invalid."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 71,
+      "assistant_tokens": 49,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 141
+    },
+    {
+      "id": "repo-b05ee5cb77d80c9de5c50a72",
+      "messages_sha256": "b05ee5cb77d80c9de5c50a7284caaf589e08626027879d91d1364bd2c434e8d8",
+      "state": "PASS",
+      "rationale": "Correct factorization and cancellation proof throughout the original common domain.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identity, branch, domain and exact-value calculations are verified directly on the original domain."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "sin2theta!=0 forces sin theta and cos theta nonzero, so 2sin²theta/(2sin theta cos theta)=tan theta."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Do not add theta=n*pi as original solutions merely because tan theta is defined there."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 102,
+      "assistant_tokens": 78,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 142
+    },
+    {
+      "id": "repo-d64ae67bc2fd149becc79e85",
+      "messages_sha256": "d64ae67bc2fd149becc79e85260bf93c3bbfb0f2650573a153aea25d247c0c8b",
+      "state": "PASS",
+      "rationale": "Correct real Gudermannian formulas and Mercator connection.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NIST DLMF 4.23(viii), Gudermannian Function",
+          "url": "https://dlmf.nist.gov/4.23#viii",
+          "finding": "Defines gd(x) by the integral of sech and gives equivalent arcsin(tanh x) and arctan(sinh x) relations."
+        },
+        {
+          "title": "PROJ documentation, Mercator mathematical definition",
+          "url": "https://proj.org/en/stable/operations/projections/merc.html#mathematical-definition",
+          "finding": "Official spherical Mercator inverse gives phi=atan(sinh psi), matching the real Gudermannian/NIST relation."
+        },
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identity, branch, domain and exact-value calculations are verified directly on the original domain."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Set t=tanh(x/2) and g=2atan(t). Then tan g=2t/(1-t²)=sinh x, sin g=2t/(1+t²)=tanh x, and sec g=(1+t²)/(1-t²)=cosh x."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "For real x, g lies in (-pi/2,pi/2), fixing the real branches; the Mercator relation is the spherical normalized-coordinate version."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 124,
+      "assistant_tokens": 97,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 143
+    },
+    {
+      "id": "repo-35f6840f2c766e553d6b2066",
+      "messages_sha256": "35f6840f2c766e553d6b2066a97e6337e244273cdfbf6e2b897ec1789e55169b",
+      "state": "PASS",
+      "rationale": "Correct shape-versus-scale explanation for bearings specifying the directions of a triangle sides.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_vector_geometry",
+          "finding": "Coordinate sums, equal lengths, dot products and scale invariance establish the vector geometry statements with their stated conventions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Scaling all triangle vertex differences by any positive lambda preserves their directions/bearings while multiplying all side lengths by lambda."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The bearing measurements must actually identify the triangle side directions. Three arbitrary sight bearings from an unspecified station are not automatically three interior-angle constraints."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 88,
+      "assistant_tokens": 62,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 144
+    },
+    {
+      "id": "repo-ebbad9ea34b7bccd02492d3c",
+      "messages_sha256": "ebbad9ea34b7bccd02492d3cddfa381024d6a78cf12dbe85df17a4a9ea63a47f",
+      "state": "REJECT",
+      "rationale": "The rF*sin(theta) magnitude is correct, but rotation alone does not make that force angle equal omega*t or torque sinusoidal. The answer also incorrectly presents sinusoidal torque as the reason for the generator emf waveform.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "OpenStax Physics, Motors, Generators, and Transformers",
+          "url": "https://openstax.org/books/physics/pages/20-2-motors-generators-and-transformers",
+          "finding": "For a loop rotating at constant speed in a uniform magnetic field, induced emf follows the changing magnetic flux and equals NAB*omega*sin(omega*t). Torque is a separate r cross F quantity."
+        },
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identity, branch, domain and exact-value calculations are verified directly on the original domain."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A tangential driving force has theta=pi/2 and constant rF torque during rotation. For an ideal rotating resistively loaded coil, emf=C sin(omega*t), current=emf/R, and electromagnetic torque magnitude emf*current/omega is proportional to sin²(omega*t), not sin(omega*t)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Sinusoidal emf in the standard generator follows the flux derivative under uniform-field, constant-speed geometry; load torque depends on current and operating conditions."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 95,
+      "assistant_tokens": 74,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 145
+    },
+    {
+      "id": "repo-d8c9de02b19510950348b291",
+      "messages_sha256": "d8c9de02b19510950348b29127ea8dc550d8dd232cc4379d30f8966264c3d46e",
+      "state": "QUARANTINE",
+      "rationale": "The stated value and positive quadratic root are correct, but the requested proof never derives why cos(36 degrees) satisfies that quadratic. Merely attributing it to pentagon geometry leaves the key justification absent.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identity, branch, domain and exact-value calculations are verified directly on the original domain."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The quadratic roots are (1±sqrt5)/4, and positivity selects (1+sqrt5)/4 if the equation is first established."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold for missing derivation rather than an incorrect value; the original self-reconsideration does not itself make the final result wrong."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 147,
+      "assistant_tokens": 114,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 146
+    },
+    {
+      "id": "repo-4cdd2b630e9eca33162afef7",
+      "messages_sha256": "4cdd2b630e9eca33162afef7047da4ecb9fd587363a3377c0ada504a378ab912",
+      "state": "PASS",
+      "rationale": "Exact product-to-sum and double-angle proof.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identity, branch, domain and exact-value calculations are verified directly on the original domain."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "sin(x+y)sin(x-y)=0.5*(cos2y-cos2x)=cos²y-cos²x."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 147,
+      "assistant_tokens": 117,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 147
+    },
+    {
+      "id": "repo-d18bb7daf2e6b188ce35d12e",
+      "messages_sha256": "d18bb7daf2e6b188ce35d12e130ec77d0febe49a0b6c1937ccf37a605b020e0e",
+      "state": "PASS",
+      "rationale": "Exact complete solution set after the double-angle substitution.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identity, branch, domain and exact-value calculations are verified directly on the original domain."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "sin2x=1 iff 2x=pi/2+2n*pi, hence x=pi/4+n*pi."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 80,
+      "assistant_tokens": 58,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 148
+    },
+    {
+      "id": "repo-37902250107d56666fa4ac3f",
+      "messages_sha256": "37902250107d56666fa4ac3fb0932b6e6111c2dcc8ffb737b3a72a08a9f1dc26",
+      "state": "PASS",
+      "rationale": "Valid dot-product proof that the center lies on the perpendicular-bisector locus.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_vector_geometry",
+          "finding": "Coordinate sums, equal lengths, dot products and scale invariance establish the vector geometry statements with their stated conventions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a genuine chord A!=B, its bisector is {X:(X-M) dot(B-A)=0}; equal |A| and |B| make X=0 satisfy it."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "For a diameter, M=O and the phrase line from center to midpoint is degenerate; the dot-product locus argument still establishes membership without requiring a nonzero OM direction."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 143,
+      "assistant_tokens": 114,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0125-0150.json",
+      "original_domain_ordinal": 149
     }
   ],
-  "reviewed": 984,
+  "reviewed": 1009,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

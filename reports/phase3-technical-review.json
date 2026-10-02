@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 743,
-    "REJECT": 50,
-    "QUARANTINE": 192,
-    "NEEDS_HUMAN_REVIEW": 1127
+    "PASS": 763,
+    "REJECT": 52,
+    "QUARANTINE": 195,
+    "NEEDS_HUMAN_REVIEW": 1102
   },
   "by_domain": {
     "circuits": {
@@ -32,10 +32,10 @@
       "NEEDS_HUMAN_REVIEW": 2
     },
     "trigonometry": {
-      "PASS": 105,
-      "REJECT": 3,
-      "QUARANTINE": 17,
-      "NEEDS_HUMAN_REVIEW": 75
+      "PASS": 125,
+      "REJECT": 5,
+      "QUARANTINE": 20,
+      "NEEDS_HUMAN_REVIEW": 50
     },
     "calculus": {
       "PASS": 5,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 984,
+  "agent_substantive_reviews": 1009,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "697b51f4fcb2fb1251ac4f049ca260f599f9410906abe9ef4a35c17acddc2ee1",
+  "technical_review_sha256": "6eb3347df5c80270ce17106f268b49841bf21ee8d07182046c0e1058097cd369",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1125,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1100,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1065,11 +1065,36 @@
     "Exact complete real solution set for sine zero.": 1,
     "Correct explanation that the double-angle cosine generally determines only a squared value and loses sign information.": 1,
     "Correct introductory inverse dependence of double-slit fringe spacing on separation and its phase-difference explanation.": 1,
-    "The asymptote and increasing-branch description is correct, but the opening sine-wave-direction steepness analogy is undefined and can confuse the ratio sin(x)/cos(x) with waveform slope. Hold for clarifying the geometric quantity being described.": 1
+    "The asymptote and increasing-branch description is correct, but the opening sine-wave-direction steepness analogy is undefined and can confuse the ratio sin(x)/cos(x) with waveform slope. Hold for clarifying the geometric quantity being described.": 1,
+    "The example is correct, but the stated rule to negate any term containing two sinh factors is incomplete for terms containing multiple pairs, and general trig quotients must first expose their sine factors. Hold for specifying the paired sign accounting.": 1,
+    "Exact sine-difference computation and sound explanation of the standard-angle choice.": 1,
+    "Correct shape-versus-scale explanation for bearings specifying the directions of a triangle sides.": 1,
+    "The absolute claim that cross-multiplication assumes the desired equality and is necessarily circular is false. One may prove the cross-product equality independently and use reversible nonzero-denominator equivalence.": 1,
+    "Valid dot-product proof that the center lies on the perpendicular-bisector locus.": 1,
+    "Correct distinction between two genuinely incommensurate periodic components and a single fundamental harmonic ladder.": 1,
+    "Exact product-to-sum and double-angle proof.": 1,
+    "Sound qualified comparison of vector and angle-based methods, explicitly recognizing unit-vector angle encoding.": 1,
+    "Correct two solutions and explicit check that dividing by cosine discards no valid roots.": 1,
+    "Accurate definition of equivalence-preserving simplification and a valid domain-revealing example.": 1,
+    "Correct coordinate-sign basis and ordinary ASTC mnemonic for the three primary trig functions.": 1,
+    "Both difference-of-squares and sine/cosine derivations are valid on the common original domain.": 1,
+    "Correct derivation of the cosine half-angle formula including the sign ambiguity.": 1,
+    "Correct double-angle identity proof on the original tangent domain.": 1,
+    "The equilibrium equations are useful, but the requested derived shape is left at a differential relation and the claim that nonzero-alpha solutions require numerical methods or series is too restrictive. An exact parametric quadrature follows directly.": 1,
+    "Correct elimination of the second sine branch by the positive-cosine condition.": 1,
+    "Correct factorization and cancellation proof throughout the original common domain.": 1,
+    "Correct component proof and intended same-resultant parallelogram construction of vector commutativity.": 1,
+    "Correct unit-circle derivation of the Pythagorean identity.": 1,
+    "Exact complete solution set after the double-angle substitution.": 1,
+    "Correct real Gudermannian formulas and Mercator connection.": 1,
+    "The stated value and positive quadratic root are correct, but the requested proof never derives why cos(36 degrees) satisfies that quadratic. Merely attributing it to pentagon geometry leaves the key justification absent.": 1,
+    "Correct basic method-selection guidance for opposite pairs, SAS/SSS and right triangles.": 1,
+    "The rF*sin(theta) magnitude is correct, but rotation alone does not make that force angle equal omega*t or torque sinusoidal. The answer also incorrectly presents sinusoidal torque as the reason for the generator emf waveform.": 1,
+    "Valid real-part integration technique and exponential example.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "452420f3c924f34a80229a042b522ca7b1d75685bf260fffc116d571ae41349f",
-  "substantively_unreviewed": 1125,
+  "published_decisions_sha256": "abd9662a65e0109453c03fd9bb01b16b4d8a1014b1dff0f8a50260d7755dac8e",
+  "substantively_unreviewed": 1100,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
