@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1306,
+    "PASS": 1328,
     "REJECT": 63,
-    "QUARANTINE": 272,
-    "NEEDS_HUMAN_REVIEW": 471
+    "QUARANTINE": 275,
+    "NEEDS_HUMAN_REVIEW": 446
   },
   "by_domain": {
     "circuits": {
@@ -62,10 +62,10 @@
       "NEEDS_HUMAN_REVIEW": 244
     },
     "physics": {
-      "PASS": 20,
+      "PASS": 42,
       "REJECT": 2,
-      "QUARANTINE": 3,
-      "NEEDS_HUMAN_REVIEW": 225
+      "QUARANTINE": 6,
+      "NEEDS_HUMAN_REVIEW": 200
     }
   },
   "risk_flags_overlap": {
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1640,
+  "agent_substantive_reviews": 1665,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "19f2cbad085d140a2315eb4e8d28d8a3e37f2e45b87cdf84f827a1f37ec3969d",
+  "technical_review_sha256": "6dcbd5a0970af71331d4d53a3fd6972481de3bdbf2b87c841bd7ad3d816067c1",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 469,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 444,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1721,11 +1721,36 @@
     "Correct chain-rule conversion for one-dimensional position-dependent acceleration and its energy-like first integral.": 1,
     "Correct explanation of the equal-height restriction and the general vertical-flight-time procedure.": 1,
     "Correct Galilean moving-frame simplification of ideal projectile motion.": 1,
-    "The trajectory equation and quadratic in tan(theta) are correct, but the answer stops at solve the quadratic and states two distinct trajectories without the discriminant qualification. The requested angle is not fully resolved.": 1
+    "The trajectory equation and quadratic in tan(theta) are correct, but the answer stops at solve the quadratic and states two distinct trajectories without the discriminant qualification. The requested angle is not fully resolved.": 1,
+    "Correct parallel constant-force work and sign.": 1,
+    "Correct one-dimensional elastic-collision derivation and post-collision velocities for positive masses.": 1,
+    "Correct magnitude/angle decomposition of constant-force work and its limiting signs.": 1,
+    "The degree/radian bug mechanism is real, but the claim that a range factor near3.3 is suggestive because of the listed conversion constants is unsupported. None of the cited numbers is3.3, and a trigonometric argument error has angle-dependent effects rather than a fixed conversion factor.": 1,
+    "Correct ideal smooth-table chain equation and rest-release cosh solution while part of the chain remains on the table.": 1,
+    "Correct strong statement about the limits of dimensions in distinguishing physical quantities.": 1,
+    "Correct inverse-time dimensions and useful named-radian unit distinction.": 1,
+    "Correct average lifting power for the specified constant200 N load.": 1,
+    "Correct distinction between torque as a rotational tendency and work as energy transfer.": 1,
+    "Correct chosen-system method and cancellation of internal Newtonian forces.": 1,
+    "Correct ideal static-friction acceleration threshold for a box on a horizontal accelerating bed.": 1,
+    "Correct warning that numerical range and a normalization label do not prove dimensional cancellation.": 1,
+    "Correct introductory need to include torque and application points when analyzing rotation.": 1,
+    "Correct distinction between dimensionless strain and its percent numerical representation.": 1,
+    "The impulse-momentum decomposition is correct, but saying force tells peak stress omits the contact area and spatial stress distribution. Force history can determine peak force, not peak stress by itself.": 1,
+    "Correct Newton-third-law pair statement for the ordinary Newtonian interaction model and separate-body free-body diagrams.": 1,
+    "Correct contrast in the standard horizontal pushed-block Coulomb-friction model with fixed normal load.": 1,
+    "Correct necessary force-equilibrium condition for three forces.": 1,
+    "Correct dot-product work calculation.": 1,
+    "Correct conditional dominant-impulse reasoning for the ordinary short-impact approximation.": 1,
+    "Correct dimensional diagnosis and appropriate suspicion about confusing wave speed with modal frequency.": 1,
+    "Correctly rejects the absolute premise and gives the common contact-mechanics intuition.": 1,
+    "The inverse relation between average force and contact time at fixed impulse is correct, but the answer assumes a fixed transferred momentum and reduces an entire strike to minimizing contact time. Those quantities depend on the coupled hand/target response and contact geometry.": 1,
+    "Correct coordinate-description interpretation of vector decomposition.": 1,
+    "Correct dissipative explanation of a freely rolling ball slowing on an ordinary level surface.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "4b36ea3a42015ef4d0afe142cff846b0dfec9c902d6b2634785636cb457fcfc8",
-  "substantively_unreviewed": 469,
+  "published_decisions_sha256": "7911c88ecdbe011186bb40191cee02c5a0cfd902ed84b5e1dca0e4b1d4e5e15f",
+  "substantively_unreviewed": 444,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

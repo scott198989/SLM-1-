@@ -49279,9 +49279,928 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/physics-0000-0025.json",
       "original_domain_ordinal": 24
+    },
+    {
+      "id": "repo-86f4d20ed07cded0cd3815ff",
+      "messages_sha256": "86f4d20ed07cded0cd3815ff3aee0c50dfc66dbf564dd9ca587f7aeb36d29473",
+      "state": "PASS",
+      "rationale": "Correct distinction between dimensionless strain and its percent numerical representation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NIST Guide to the SI, chapter4",
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes",
+          "finding": "Pascal is N/m²=kg/(m*s²); energy and torque share dimensions while their customary unit names distinguish physical quantities."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A strain ratio0.012 equals1.2 percent; a formula expecting a raw ratio must not receive the unconverted number1.2."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A percent sign is itself a scale factor; an implementation that correctly parses1.2 percent may convert automatically. The answer targets the stored numeric convention."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "VISUAL_CONTEXT_CHECK"
+      ],
+      "qwen_tokens": 144,
+      "assistant_tokens": 114,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 25
+    },
+    {
+      "id": "repo-e9efd2bc7f2879c4f7765591",
+      "messages_sha256": "e9efd2bc7f2879c4f776559167416c225b2d35e3acf4d5a24e5c0d95387915c7",
+      "state": "PASS",
+      "rationale": "Correct coordinate-description interpretation of vector decomposition.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Changing basis transforms components inversely to basis vectors so the geometric vector remains the same."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The displayed Cartesian i,j representation is two-dimensional and uses a known independent basis; no physical splitting is implied."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 151,
+      "assistant_tokens": 118,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 26
+    },
+    {
+      "id": "repo-3dcdeea8c42f8ae9607f86f1",
+      "messages_sha256": "3dcdeea8c42f8ae9607f86f19504143ee8acb3f0810b5963c11bfbd52b0ea23e",
+      "state": "PASS",
+      "rationale": "Correct inverse-time dimensions and useful named-radian unit distinction.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NIST Guide to the SI, chapter4",
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes",
+          "finding": "Pascal is N/m²=kg/(m*s²); energy and torque share dimensions while their customary unit names distinguish physical quantities."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "theta=arc length/radius is dimensionless and omega=dtheta/dt has dimension T^-1. A cyclic frequency f is related by omega=2*pi*f."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Radian notation communicates the angular convention even though it adds no independent SI dimension."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 141,
+      "assistant_tokens": 108,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 27
+    },
+    {
+      "id": "repo-2d803694839e9c7f93982315",
+      "messages_sha256": "2d803694839e9c7f93982315d47ba4d7ad147e48192d1b4252e3cd86f742f28e",
+      "state": "QUARANTINE",
+      "rationale": "The degree/radian bug mechanism is real, but the claim that a range factor near3.3 is suggestive because of the listed conversion constants is unsupported. None of the cited numbers is3.3, and a trigonometric argument error has angle-dependent effects rather than a fixed conversion factor.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For intended45 degrees treated as45 radians in the ideal range formula, the ratio is sin(90 radians)/sin(pi/2)=0.8939966636, or reciprocal1.118572407, not3.3. Other angles can yield different factors."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the proposed numerical diagnostic link, not the general advice to inspect angle units or double conversions."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 202,
+      "assistant_tokens": 155,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 28
+    },
+    {
+      "id": "repo-61bdbd8ae22dae65bf8928f2",
+      "messages_sha256": "61bdbd8ae22dae65bf8928f2750839dfa349be8d76f958c2c7bf6e2bdf365651",
+      "state": "PASS",
+      "rationale": "Correct warning that numerical range and a normalization label do not prove dimensional cancellation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Dividing v by a reference speed cancels L/T units, while clipping a speed to0–1 m/s changes its range without removing units."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A ratio of like-dimension quantities is one route, not the only possible construction; the answer explicitly also allows other complete cancellations."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 155,
+      "assistant_tokens": 116,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 29
+    },
+    {
+      "id": "repo-dcb7c836280bbc5dcfab3a6a",
+      "messages_sha256": "dcb7c836280bbc5dcfab3a6ae7a7ccb163d77c6a7b63b1bdfbb17dcabbf708eb",
+      "state": "PASS",
+      "rationale": "Correct dimensional diagnosis and appropriate suspicion about confusing wave speed with modal frequency.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "[Tension/(linear density*length)]=L*T^-2, so its square root is L^(1/2)*T^-1 rather than speed. sqrt(Tension/linear density) has L*T^-1."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Dimensional consistency does not prove a physical formula, but it decisively rejects the proposed one with the stated definitions."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 193,
+      "assistant_tokens": 137,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 30
+    },
+    {
+      "id": "repo-3ce5925b7a4970834072a83d",
+      "messages_sha256": "3ce5925b7a4970834072a83dfaa302347372a427c122b2fce769659d9ed56e62",
+      "state": "PASS",
+      "rationale": "Correct strong statement about the limits of dimensions in distinguishing physical quantities.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NIST Guide to the SI, chapter4",
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes",
+          "finding": "Pascal is N/m²=kg/(m*s²); energy and torque share dimensions while their customary unit names distinguish physical quantities."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Energy and torque both have M*L²*T^-2 dimensions but different transformation and work roles."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The extra scalar/axial-vector or balance-law information is physical structure beyond dimensional analysis alone."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 154,
+      "assistant_tokens": 116,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 31
+    },
+    {
+      "id": "repo-9f74ed6aa4f61a976c4ea243",
+      "messages_sha256": "9f74ed6aa4f61a976c4ea243cb010768360cc6edc27d9e45c6d5e86fc5b620b9",
+      "state": "PASS",
+      "rationale": "Correct Newton-third-law pair statement for the ordinary Newtonian interaction model and separate-body free-body diagrams.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "F_A_on_B=-F_B_on_A; one body receives one member, not both."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A combined-system balance cancels internal pairs, and field momentum matters in some electromagnetic settings. The source contrasts separate objects on a single-body FBD."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 66,
+      "assistant_tokens": 50,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 32
+    },
+    {
+      "id": "repo-f931d43972d18e548db1606b",
+      "messages_sha256": "f931d43972d18e548db1606b2112d858052378f20d2aaace2305dd3bffb58e1b",
+      "state": "PASS",
+      "rationale": "Correct dissipative explanation of a freely rolling ball slowing on an ordinary level surface.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Rolling resistance, deformation and drag remove mechanical energy; slowing translational motion has a net force opposite its velocity."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Ideal static rolling friction need not dissipate energy by itself; rolling-resistance torques and contact mechanics supply the losses. Other slopes or driving forces would change the behavior."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 80,
+      "assistant_tokens": 62,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 33
+    },
+    {
+      "id": "repo-464c4d32388308606565615a",
+      "messages_sha256": "464c4d32388308606565615a1519139bdb6e304d9312ca0c2cfb93f09ccb342f",
+      "state": "PASS",
+      "rationale": "Correct chosen-system method and cancellation of internal Newtonian forces.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a fixed-mass system, sum F_external=M_total*a_center_of_mass; separate body equations recover internal interactions with constraints."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "One common acceleration can be used only when the connection/coordinate arrangement justifies it. Otherwise the system acceleration is the center-of-mass acceleration, not every block vector."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 84,
+      "assistant_tokens": 64,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 34
+    },
+    {
+      "id": "repo-a5c20686477f37c1a908bb6f",
+      "messages_sha256": "a5c20686477f37c1a908bb6fbb1043d32eec342394cedc19a0e000dd2ab8a9a6",
+      "state": "PASS",
+      "rationale": "Correct contrast in the standard horizontal pushed-block Coulomb-friction model with fixed normal load.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "OpenStax University Physics volume1, Friction",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/6-2-friction",
+          "finding": "The static friction of the elementary pushed-block model adjusts below its maximum; ideal kinetic friction is proportional to the normal force."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "While the block remains at rest, horizontal force balance gives f_s=F_applied up to mu_s*N; once sliding, the ideal magnitude is mu_k*N."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Static friction does not generally equal one applied force in accelerating or multi-force settings, and real kinetic friction can depend on speed and temperature. The comparison is the usual fixed-load elementary example."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 98,
+      "assistant_tokens": 71,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 35
+    },
+    {
+      "id": "repo-b1975af27e40e5127db32c53",
+      "messages_sha256": "b1975af27e40e5127db32c5314197e998b4b0d0851aaab87d5c1989ef2343c0a",
+      "state": "PASS",
+      "rationale": "Correct necessary force-equilibrium condition for three forces.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "F1+F2+F3=0 means their head-to-tail vector polygon closes as a triangle, possibly degenerate."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A rigid body also needs torque balance; a closed force triangle alone does not establish complete equilibrium."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 72,
+      "assistant_tokens": 42,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 36
+    },
+    {
+      "id": "repo-dd0f1d373d37c1db6b579444",
+      "messages_sha256": "dd0f1d373d37c1db6b57944498fabfda300fb34aa0652e27ba20a60a3b7f0224",
+      "state": "PASS",
+      "rationale": "Correctly rejects the absolute premise and gives the common contact-mechanics intuition.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "OpenStax University Physics volume1, Friction",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/6-2-friction",
+          "finding": "The static friction of the elementary pushed-block model adjusts below its maximum; ideal kinetic friction is proportional to the normal force."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Static-to-kinetic friction ordering is empirical and model-dependent; the original explicitly says most pairs and not a fundamental requirement."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 87,
+      "assistant_tokens": 63,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 37
+    },
+    {
+      "id": "repo-379e9bdc0d0c05ee0297fc95",
+      "messages_sha256": "379e9bdc0d0c05ee0297fc95f172810cf282bc5cd26285b812d3b959a8ba02d9",
+      "state": "PASS",
+      "rationale": "Correct ideal smooth-table chain equation and rest-release cosh solution while part of the chain remains on the table.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "title": "Behroozi, Sliding chain, European Journal of Physics18 (1997)15–17",
+          "url": "https://users.manchester.edu/facstaff/gwclark/PHYS320/Downloads/ABSTRACT%2002%20Eur.%20J.%20Phys%201997.pdf",
+          "finding": "Supports the ideal smooth-table falling-chain equation and notes the guide needed for vertical descent."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "K=0.5*lambda*L*x_dot² and U=-0.5*lambda*g*x² give L*x_doubleprime=g*x. With x(0)=x0 and x_dot(0)=0, x=x0*cosh(sqrt(g/L)*t)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A nonzero initial speed adds a sinh term. All links share speed, not a common velocity vector around the bend; the scalar equation is the generalized-coordinate/tangential balance. Ideal smooth redirection and inextensibility are assumed."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 166,
+      "assistant_tokens": 140,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 38
+    },
+    {
+      "id": "repo-5d8b2840181cb684b818aa89",
+      "messages_sha256": "5d8b2840181cb684b818aa89cc08c53160bbdc4e9f1e7361a9b63474431c52ee",
+      "state": "PASS",
+      "rationale": "Correct ideal static-friction acceleration threshold for a box on a horizontal accelerating bed.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "OpenStax University Physics volume1, Friction",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/6-2-friction",
+          "finding": "The static friction of the elementary pushed-block model adjusts below its maximum; ideal kinetic friction is proportional to the normal force."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Required horizontal force m*a must not exceed mu_s*m*g, giving |a|<=mu_s*g for no relative sliding in this model."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This classroom criterion is not a real cargo-restraint recommendation: turns, braking, bumps, tilt, uncertainty and applicable securement requirements are outside the calculation."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 91,
+      "assistant_tokens": 62,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 39
+    },
+    {
+      "id": "repo-6574b79504d90442e054d122",
+      "messages_sha256": "6574b79504d90442e054d12201e4a8ccdaa031234bfeec8d2f1884d3555aaa25",
+      "state": "PASS",
+      "rationale": "Correct introductory need to include torque and application points when analyzing rotation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Translation obeys sum F=M*a_CM, while rotation about an appropriate fixed axis uses sum tau=I*alpha."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A force contributes torque according to its line of action and cross product, not simply the label off-center; net torque can cancel. Full rigid-body motion can require both balances."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 88,
+      "assistant_tokens": 68,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 40
+    },
+    {
+      "id": "repo-4429605aacb3607b0011df72",
+      "messages_sha256": "4429605aacb3607b0011df72541bc16b29b8d390523af80a906195cffd34466f",
+      "state": "PASS",
+      "rationale": "Correct distinction between torque as a rotational tendency and work as energy transfer.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NIST Guide to the SI, chapter4",
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes",
+          "finding": "Pascal is N/m²=kg/(m*s²); energy and torque share dimensions while their customary unit names distinguish physical quantities."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Rotational work is integral tau dot dtheta; torque can be nonzero with no angular displacement and hence no work."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The relevant torque component along the angular displacement determines the transferred energy."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 51,
+      "assistant_tokens": 28,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 41
+    },
+    {
+      "id": "repo-0acfd0ae4cde65b29ed9e19f",
+      "messages_sha256": "0acfd0ae4cde65b29ed9e19ff99519534e7484484d8fc97c31a24c2d4bb6e3d7",
+      "state": "PASS",
+      "rationale": "Correct parallel constant-force work and sign.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "W=10 N*3 m*cos0=30 J."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is work by the specified force, not necessarily total net work if other forces act."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 79,
+      "assistant_tokens": 49,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 42
+    },
+    {
+      "id": "repo-409097ec546c59124bd7f373",
+      "messages_sha256": "409097ec546c59124bd7f373a9ec30e78e077664aae5e11ce3818ac62f8fcedd",
+      "state": "PASS",
+      "rationale": "Correct average lifting power for the specified constant200 N load.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "W=200 N*5 m=1000 J and P_average=1000 J/4 s=250 W."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is mechanical output to the load; electrical input and transient kinetic-energy changes require additional data."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 90,
+      "assistant_tokens": 60,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 43
+    },
+    {
+      "id": "repo-bda3faa30dc78bdb033ce7b4",
+      "messages_sha256": "bda3faa30dc78bdb033ce7b48afe114a9dec20d251e70d50693947f0052948a2",
+      "state": "PASS",
+      "rationale": "Correct dot-product work calculation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "W=50 N*8 m*cos60 degrees=200 J."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The angle is between the constant force and displacement, as the example intends."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 93,
+      "assistant_tokens": 63,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 44
+    },
+    {
+      "id": "repo-2593b52d6de62e9b4b7f74d5",
+      "messages_sha256": "2593b52d6de62e9b4b7f74d53bd3feed90036f3ba12157f20e904963fffc5333",
+      "state": "PASS",
+      "rationale": "Correct magnitude/angle decomposition of constant-force work and its limiting signs.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "F dot delta_r=|F|*|delta_r|*cos(theta); perpendicular force has zero work and opposite force negative work."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Variable force along a curved path requires the line integral rather than one endpoint dot product."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 98,
+      "assistant_tokens": 66,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 45
+    },
+    {
+      "id": "repo-8ffd1bcc0ff63bb412612d1a",
+      "messages_sha256": "8ffd1bcc0ff63bb412612d1aeff989a3b21fa324329c156e45b6619641f07307",
+      "state": "QUARANTINE",
+      "rationale": "The impulse-momentum decomposition is correct, but saying force tells peak stress omits the contact area and spatial stress distribution. Force history can determine peak force, not peak stress by itself.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "OpenStax College Physics, Impulse",
+          "url": "https://openstax.org/books/college-physics/pages/8-2-impulse",
+          "finding": "Impulse is the integral of net force and equals average net force times the interval; peak force and stress require more detail."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A10 N load distributed uniformly over1 m² gives10 Pa, while the same load over1e-4 m² gives100000 Pa. The force alone cannot distinguish them."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for force-versus-stress identification. Momentum change gives velocity change only with the appropriate mass/model, and the force integral remains valid."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 107,
+      "assistant_tokens": 86,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 46
+    },
+    {
+      "id": "repo-e8b217a3c557e2d5d60d4783",
+      "messages_sha256": "e8b217a3c557e2d5d60d4783338079f3f13d62fda71ac6aa8db18c0cfc14d05c",
+      "state": "QUARANTINE",
+      "rationale": "The inverse relation between average force and contact time at fixed impulse is correct, but the answer assumes a fixed transferred momentum and reduces an entire strike to minimizing contact time. Those quantities depend on the coupled hand/target response and contact geometry.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "OpenStax College Physics, Impulse",
+          "url": "https://openstax.org/books/college-physics/pages/8-2-impulse",
+          "finding": "Impulse is the integral of net force and equals average net force times the interval; peak force and stress require more detail."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "F_average=Delta_p/Delta_t is an average, not a general peak-force law. Equal impulse and duration can have different force-time peaks, and changing stiffness can change the transferred impulse."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold for the unqualified fixed-impulse/whole-technique account, not for rejecting the impulse-momentum principle. This review does not supply technique instructions."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 75,
+      "assistant_tokens": 58,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 47
+    },
+    {
+      "id": "repo-1bf7fef330fa8dcea1514ab0",
+      "messages_sha256": "1bf7fef330fa8dcea1514ab0ef0c9030af74f5cffacb2a2da1000595f2699317",
+      "state": "PASS",
+      "rationale": "Correct one-dimensional elastic-collision derivation and post-collision velocities for positive masses.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Substituting v1_prime=(m1-m2)*v1/(m1+m2) and v2_prime=2*m1*v1/(m1+m2) conserves both momentum and kinetic energy. Equal masses exchange the incident velocity."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Dividing the conservation equations assumes a nonzero interacting momentum transfer; the no-collision/trivial branch is excluded by the stated collision setup."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 211,
+      "assistant_tokens": 175,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 48
+    },
+    {
+      "id": "repo-ca20ab45e6636e980547d053",
+      "messages_sha256": "ca20ab45e6636e980547d0538767576139f6b6cfce70833e2aca1a97d61507b7",
+      "state": "PASS",
+      "rationale": "Correct conditional dominant-impulse reasoning for the ordinary short-impact approximation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "OpenStax College Physics, Impulse",
+          "url": "https://openstax.org/books/college-physics/pages/8-2-impulse",
+          "finding": "Impulse is the integral of net force and equals average net force times the interval; peak force and stress require more detail."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked dimensional relations, angle-unit effects, force/work/impulse relations, the ideal chain ODE and elastic-collision conservation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The neglected impulse error is bounded by an external-force scale times contact duration; relative to a dominant collision impulse it is of order F_external/F_collision when representative scales are used."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Short duration alone is not sufficient, and impulsive friction can be part of the collision force rather than negligible. The quoted large-force range is illustrative can language, not a universal measured ratio."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 135,
+      "assistant_tokens": 107,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0025-0050.json",
+      "original_domain_ordinal": 49
     }
   ],
-  "reviewed": 1640,
+  "reviewed": 1665,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true
