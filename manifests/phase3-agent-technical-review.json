@@ -41784,9 +41784,872 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/engineering_mathematics-0150-0175.json",
       "original_domain_ordinal": 174
+    },
+    {
+      "id": "repo-337d156dac15103cb746efeb",
+      "messages_sha256": "337d156dac15103cb746efebff13ccfb27e35545a0f6e14d3a66912f8cd3ebd8",
+      "state": "PASS",
+      "rationale": "Correct Euler-Almansi formula and current-configuration interpretation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "b=F*F^T gives b^-1=F^(-T)*F^-1, so e=(I-b^-1)/2. For a uniaxial stretch lambda, e11=(1-lambda^-2)/2."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "F must be invertible; it is the spatial counterpart of the Green-Lagrange strain, not the same numerical tensor in a different label."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 71,
+      "assistant_tokens": 55,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 175
+    },
+    {
+      "id": "repo-2d328a4ba0f54cc073353f68",
+      "messages_sha256": "2d328a4ba0f54cc073353f68dd933ad80d1c9f700ad3412a05cab81d3f345f67",
+      "state": "PASS",
+      "rationale": "Correct conceptual contrast between eliminating variables and retaining multiplier equations, with a reasonable multi-constraint motivation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Scaling better is a typical formulation tradeoff, not an unconditional runtime or conditioning theorem; constraint regularity, sparsity and reduction structure matter."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 76,
+      "assistant_tokens": 60,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 176
+    },
+    {
+      "id": "repo-8a53dbd108920d971b51d849",
+      "messages_sha256": "8a53dbd108920d971b51d84961b14cc95b0fc9da0fac2f26611cfbc5adf98a1d",
+      "state": "PASS",
+      "rationale": "Correct distinction between local Lyapunov stability and asymptotic stability.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Asymptotic stability combines Lyapunov stability with attraction from a neighborhood; Lyapunov stability alone permits nearby trajectories that never converge."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Local attraction is for sufficiently close initial states; global attraction requires a separate global statement."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 56,
+      "assistant_tokens": 35,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 177
+    },
+    {
+      "id": "repo-f94530db635e1c8249e8e50d",
+      "messages_sha256": "f94530db635e1c8249e8e50d1c9cad8f1cd740903c67f36b8b8028d6cf681ee7",
+      "state": "PASS",
+      "rationale": "Correct defective-matrix definition and explicit two-by-two Jordan-block example.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A-I=[[0,1],[0,0]] has nullspace span((1,0)), dimension one, while the algebraic multiplicity of eigenvalue 1 is two."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Diagonalization is considered over a field containing the eigenvalues; the given real example fails over both real and complex fields."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 165,
+      "assistant_tokens": 142,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 178
+    },
+    {
+      "id": "repo-f6e6d52b76ae8bb49fca1536",
+      "messages_sha256": "f6e6d52b76ae8bb49fca1536ebb498e2156ce0860858ae9512e8a97ce1a584ed",
+      "state": "PASS",
+      "rationale": "Correct high-level idea of the undetermined-coefficients method.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a suitable constant-coefficient linear equation and exponential-polynomial forcing, substitute a finite-dimensional trial family and match coefficients."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The ansatz needs the appropriate forcing class and a resonance adjustment; the answer is an idea overview rather than a claim of universal applicability."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 44,
+      "assistant_tokens": 26,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 179
+    },
+    {
+      "id": "repo-ab033114e3d2c67141575ee2",
+      "messages_sha256": "ab033114e3d2c67141575ee20f0f4e3e9dd0994d660c20a19df26c7182f492a6",
+      "state": "PASS",
+      "rationale": "Correct nuanced underdetermined linear-system explanation, including consistency, rank and free variables.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a consistent m-by-n linear system with n>m, rank r<=m<n leaves nullity n-r>=1; solutions form an affine space of positive dimension."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The complete answer explicitly invokes matrices, rank and column combinations, providing the linear setting. Nonlinear equation counting alone would not establish loss of uniqueness."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 155,
+      "assistant_tokens": 129,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 180
+    },
+    {
+      "id": "repo-98c51ab030594357cf97aee1",
+      "messages_sha256": "98c51ab030594357cf97aee19152caeb9acbd13bc2059cd09b8721ca530e321b",
+      "state": "QUARANTINE",
+      "rationale": "The near-simple-root quadratic-error idea is right, but the answer misidentifies the linearized object as the derivative. Root-finding Newton linearizes the function using its derivative, and its Taylor remainder controls the new error.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT 10.001, Newton Method for Nonlinear Algebraic Equations",
+          "url": "https://web.mit.edu/10.001/Web/Course_Notes/Newton2.htm",
+          "finding": "Newton root finding uses a first-order Taylor approximation to the function, with the derivative or Jacobian determining the linearized correction."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For f(x)=x²-a, Newton solves f(x_n)+f_prime(x_n)*(x_(n+1)-x_n)=0. Linearizing f_prime instead would target a different equation. Under ordinary smoothness e_(n+1) approximately [f_doubleprime(r)/(2*f_prime(r))]*e_n²."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for the derivative-versus-function wording; the simple-root, local quadratic-convergence explanation itself is not rejected."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 64,
+      "assistant_tokens": 43,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 181
+    },
+    {
+      "id": "repo-8c9325a99560492a1fa67816",
+      "messages_sha256": "8c9325a99560492a1fa6781665998c1b29e44f6d79a19759b616d8e1c7d929ef",
+      "state": "QUARANTINE",
+      "rationale": "The usual hyperbolic planar classifications are useful, but eigenvalue type alone does not settle nonhyperbolic equilibrium cases, including the center claim.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "title": "MIT 18.385, Problem Set 3 answers, section 3",
+          "url": "https://math.mit.edu/classes/18.385/PSetAnswers/AnswerPSet_2020_03.pdf",
+          "finding": "Purely imaginary linearization eigenvalues do not settle the nonlinear center-versus-spiral behavior; higher-order terms can determine radial growth or decay."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The planar systems x_prime=-y-x*(x²+y²), y_prime=x-y*(x²+y²) and the sign-reversed cubic version both linearize to eigenvalues +/-i, yet their radii satisfy r_prime=-r³ and +r³. Neither is a center."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "For a linear planar system with a nonzero purely imaginary pair the center conclusion is valid. Zero real eigenvalues and nonlinear nonhyperbolic points require further information. Repeated nonzero real eigenvalues can still give a hyperbolic node; eigenvectors distinguish its subtypes."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 50,
+      "assistant_tokens": 33,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 182
+    },
+    {
+      "id": "repo-0ce2b0bae9a6d613e7f0da42",
+      "messages_sha256": "0ce2b0bae9a6d613e7f0da42d603ade2db23dd6b3ec537dbc6a64131f2c6dd3b",
+      "state": "PASS",
+      "rationale": "Correct ordinary separable-PDE explanation of boundary conditions defining the spatial eigenproblem and its modes.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "On an interval, a fixed-end spatial problem selects sine modes while a free-end derivative condition selects cosine modes; eigenvalues feed the temporal equation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Not every PDE separates or has a complete discrete eigenfunction basis. The answer explicitly uses usually and when separation is used."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 137,
+      "assistant_tokens": 116,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 183
+    },
+    {
+      "id": "repo-74d3c9ab3fc69e9d18994e23",
+      "messages_sha256": "74d3c9ab3fc69e9d18994e2342dc36a1ff4fa62dd10a11750c3598151c398b98",
+      "state": "PASS",
+      "rationale": "Correct classical boundary-element relationship to a fundamental Green representation and boundary-only discretization.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Stephen Kirkup, Helmholtz Boundary Element Method, chapter 5 introduction",
+          "url": "https://www.boundary-element-method.com/helmholtz/manual/chap5/chap5intro.htm",
+          "finding": "The classical Helmholtz boundary integral formulation solves boundary unknowns and recovers interior/exterior values from boundary integration."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This describes the standard linear homogeneous formulation with an available fundamental solution. Inhomogeneous source terms can require domain integrals, and nonlinear or variable-coefficient extensions may need domain unknowns or additional techniques."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 97,
+      "assistant_tokens": 75,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 184
+    },
+    {
+      "id": "repo-cd2ce4b9ea4022108e3dd5bc",
+      "messages_sha256": "cd2ce4b9ea4022108e3dd5bcfd129faadbc23fe662d354cd86344ddd3a5925f1",
+      "state": "PASS",
+      "rationale": "Correct possibility of computing parameter-dependent integrals through parameter-dependent residues.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a>0, integral over R of 1/(x²+a²) is pi/a, from the upper pole ia with residue 1/(2ia)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Pole crossings, contours and convergence can change with the parameter; the answer says can, not that a single formula applies through every singular parameter value."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 57,
+      "assistant_tokens": 37,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 185
+    },
+    {
+      "id": "repo-f272cec30a404c2dbe835d37",
+      "messages_sha256": "f272cec30a404c2dbe835d378fea9333f063f8cb5aa63f6ebc5bcca87e381e5b",
+      "state": "PASS",
+      "rationale": "Correct mean-normal-stress and tension-positive pressure convention.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "A. F. Bower, Applied Mechanics of Solids2.3, Forces in Solids",
+          "url": "https://solidmechanics.org/Text/Chapter2_3/Chapter2_3.php",
+          "finding": "Defines current Cauchy and reference Piola stress measures and their deformation-gradient/Jacobian transformation, supporting the power-conjugacy identity."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Decompose sigma=s-p*I with trace(s)=0; then trace(sigma)=-3p and mean normal stress=trace(sigma)/3."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hydrostatic pressure is positive in compression under this sign convention; tensor dimension three is explicit in the factor."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 69,
+      "assistant_tokens": 47,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 186
+    },
+    {
+      "id": "repo-dbc83908653235efde34e1da",
+      "messages_sha256": "dbc83908653235efde34e1da0355079215f02a6df458e22b5583bd0410386b24",
+      "state": "PASS",
+      "rationale": "Acceptable introductory predictor-corrector description: an explicit prediction supplies a starting value for a correction based on an implicit formula.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For the trapezoidal corrector, y_correct=y_n+(h/2)*(f_n+f(t_(n+1),y_predict)); repeated corrections can solve the implicit relation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A single predictor evaluation makes the combined PECE update explicit; the corrector formula being implicit does not imply an exact implicit solve or unconditional stability. Families can use multiple correction iterations or multistep history."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 49,
+      "assistant_tokens": 34,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 187
+    },
+    {
+      "id": "repo-21dab09e2ac2473fb7941d4b",
+      "messages_sha256": "21dab09e2ac2473fb7941d4bd10c7cd01b044aa6ec76f5e898ef5cca07f4b08a",
+      "state": "PASS",
+      "rationale": "Correct qualified use of symmetry as a boundary condition on a reduced domain.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If smooth scalar u(-x,y)=u(x,y), then u_x(0,y)=0; solving half the symmetric domain can use that zero-normal-derivative condition."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Vector fields, antisymmetry and nonsymmetric forcing require their appropriate component conditions; the answer says sometimes."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 86,
+      "assistant_tokens": 65,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 188
+    },
+    {
+      "id": "repo-bc1083ceedb4ef2abd09550c",
+      "messages_sha256": "bc1083ceedb4ef2abd09550cc2c54b3f3bfd68d65f2e8b5a0d97ffc1b77b7949",
+      "state": "REJECT",
+      "rationale": "The categorical denial of rigorous computational existence proofs is false. Validated numerics combines mathematical inclusion theorems with rigorously bounded computation to certify existence, rather than merely reporting an approximate solve.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Siegfried Rump, Verification Methods, Acta Numerica 2010, Theorem 13.2 pp.88–89",
+          "url": "https://www.tuhh.de/ti3/rump/intlab/ActaNumerica2010.pdf",
+          "finding": "Interval inclusion theorems give rigorous existence and uniqueness guarantees for zeros, implemented using verified arithmetic rather than mere approximate convergence."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For f(x)=x²-2 on X=[1,2], interval Newton from m=1.5 gives N=1.5-0.25/[2,4]=[1.375,1.4375], strictly inside X. Interval inclusion theorems certify a unique zero in X."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Ordinary unvalidated numerical convergence alone is not a proof; the rejection concerns excluding rigorous verified computation altogether."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 49,
+      "assistant_tokens": 32,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 189
+    },
+    {
+      "id": "repo-2f05f9db19eca1fa0bd295ff",
+      "messages_sha256": "2f05f9db19eca1fa0bd295ffc980cfddddc4ddf9121c4f204e5418e3f9576dcd",
+      "state": "PASS",
+      "rationale": "Correct balanced explanation of the complementary roles of a PDE and its boundary data.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The wording is appropriately qualified by equation class and rejects a general ranking without asserting that every boundary has equal influence everywhere."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 164,
+      "assistant_tokens": 135,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 190
+    },
+    {
+      "id": "repo-b0cc261e81f0bcda99f5849d",
+      "messages_sha256": "b0cc261e81f0bcda99f5849db985771530dc0f1479256920de335d6b09f628c1",
+      "state": "PASS",
+      "rationale": "Correct constrained-problem feasibility requirement.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A point outside the feasible set is not an admissible optimizer regardless of its objective value."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Numerical algorithms may use infeasible intermediate iterates and finite feasibility tolerances; the prompt asks whether to keep the point as the solution."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 90,
+      "assistant_tokens": 60,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 191
+    },
+    {
+      "id": "repo-86d1ab0047323dd4c3b8d33d",
+      "messages_sha256": "86d1ab0047323dd4c3b8d33d20728f69fe75198e0d2841de22bf1f61db0c5f63",
+      "state": "PASS",
+      "rationale": "Sound casual overview of analytical structure guiding numerical solution of complex models.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Exact solutions being unrealistic and hand calculations being impractical are contextual descriptions, not proofs of mathematical nonexistence or formal impossibility."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 160,
+      "assistant_tokens": 138,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 192
+    },
+    {
+      "id": "repo-b54bfd4e53c63efd6693ef9c",
+      "messages_sha256": "b54bfd4e53c63efd6693ef9cc9450bb30e6f68cc0dc27364ed578a081b70b143",
+      "state": "PASS",
+      "rationale": "Correct qualified expectation that larger measurement-noise variance worsens scatter and often estimation or detection performance.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "In a fixed linear unbiased observation model with independent noise, increasing its variance increases propagated estimator variance; signal-to-noise ratio falls at fixed signal power."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The source explicitly says usually, often and depends; it does not assert monotonic degradation for every nonlinear detection scheme or noise distribution."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 80,
+      "assistant_tokens": 61,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 193
+    },
+    {
+      "id": "repo-d4400982f51d49a56456886b",
+      "messages_sha256": "d4400982f51d49a56456886b7d14bcd6db2946ece412baeee74dd18d80cb28ad",
+      "state": "PASS",
+      "rationale": "Correct sensor-alarm illustration of conditioning rather than confusing it with the unconditional failure rate.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "P(failure|alarm)=P(failure and alarm)/P(alarm), when the alarm event has positive probability."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A numeric answer needs base rate, alarm sensitivity and false-alarm behavior; the request asks for an example of the concept, not a numerical calculation."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 81,
+      "assistant_tokens": 63,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 194
+    },
+    {
+      "id": "repo-8c4b4101270d888a69b9430e",
+      "messages_sha256": "8c4b4101270d888a69b9430e7ce09dd25e73877d2998ef3404a7bb2f8e87e6db",
+      "state": "PASS",
+      "rationale": "Correct distinction between treating a multiplier as an independent constant in a primal partial derivative and solving for its unknown value jointly.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For L(x,lambda)=f(x)+lambda*g(x), partial_x L holds lambda fixed; stationarity and feasibility jointly determine candidate x and lambda."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "For multiple constraints there is a multiplier vector; differentiating a solved lambda(x) is a different total-derivative calculation."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 86,
+      "assistant_tokens": 60,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 195
+    },
+    {
+      "id": "repo-03432e12a7af836dbca4f24c",
+      "messages_sha256": "03432e12a7af836dbca4f24c8ab46c283fecfe52db03a442ccb7537c26065c93",
+      "state": "PASS",
+      "rationale": "Sound analytical-model, numerical-design and cross-check teaching workflow.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Agreement increases confidence but is not itself proof; the answer explicitly calls for investigating both analyses and computations when they disagree."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 160,
+      "assistant_tokens": 142,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 196
+    },
+    {
+      "id": "repo-191b8a6efb1ec82d272730ba",
+      "messages_sha256": "191b8a6efb1ec82d272730ba8a6e452619d82b043751d1f7d9d71e1fcc6e2a35",
+      "state": "PASS",
+      "rationale": "Correct qualified value of analysis even when no usable exact closed form is available.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "No exact solution is interpreted in its engineering closed-form sense rather than absence of any mathematical solution. May outperform is appropriately conditional, not a universal ranking."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 92,
+      "assistant_tokens": 71,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 197
+    },
+    {
+      "id": "repo-e16a21ba943983ba5112ba5a",
+      "messages_sha256": "e16a21ba943983ba5112ba5af5aac4c46ecf05f6012104185c3a910f27d46afb",
+      "state": "PASS",
+      "rationale": "Correct push-forward/pull-back concept and Jacobian-scaled relation among referential and spatial stress measures.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "A. F. Bower, Applied Mechanics of Solids2.3, Forces in Solids",
+          "url": "https://solidmechanics.org/Text/Chapter2_3/Chapter2_3.php",
+          "finding": "Defines current Cauchy and reference Piola stress measures and their deformation-gradient/Jacobian transformation, supporting the power-conjugacy identity."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "F*S*F^T=J*sigma is the push-forward of second Piola stress to Kirchhoff stress; dividing by J gives Cauchy stress."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The source explicitly notes the J scaling. Tensor variance and density conventions determine the exact transformation; invertible F is required."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 81,
+      "assistant_tokens": 66,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 198
+    },
+    {
+      "id": "repo-115bee8c6f49cee5bd0ba6a5",
+      "messages_sha256": "115bee8c6f49cee5bd0ba6a5f8c0adb09b7212b38db58a891c05faf636fcd8e4",
+      "state": "PASS",
+      "rationale": "Correct second-order tensor symmetry, antisymmetry and decomposition.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each tensor identity, eigenvalue example, differential-equation method, constraint statement and probability relation is individually checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "T=(T+T^T)/2+(T-T^T)/2, with the first term symmetric and the second antisymmetric."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The displayed two-index notation fixes second-order tensors over a field of characteristic not two; higher-order tensors have multiple index-permutation symmetries."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 73,
+      "assistant_tokens": 57,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0175-0200.json",
+      "original_domain_ordinal": 199
     }
   ],
-  "reviewed": 1436,
+  "reviewed": 1461,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

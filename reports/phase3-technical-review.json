@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1139,
-    "REJECT": 58,
-    "QUARANTINE": 240,
-    "NEEDS_HUMAN_REVIEW": 675
+    "PASS": 1161,
+    "REJECT": 59,
+    "QUARANTINE": 242,
+    "NEEDS_HUMAN_REVIEW": 650
   },
   "by_domain": {
     "circuits": {
@@ -14,10 +14,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "engineering_mathematics": {
-      "PASS": 157,
-      "REJECT": 2,
-      "QUARANTINE": 16,
-      "NEEDS_HUMAN_REVIEW": 25
+      "PASS": 179,
+      "REJECT": 3,
+      "QUARANTINE": 18,
+      "NEEDS_HUMAN_REVIEW": 0
     },
     "algebra": {
       "PASS": 176,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1436,
+  "agent_substantive_reviews": 1461,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "a991086afbedf7ac24020f3d83fba1ff0b9eb130f90e2701ba3285342bfb807f",
+  "technical_review_sha256": "ab3e898680d29a1377341f3a86b9838fdfc93ea43cb8cee41c7996397c495e8a",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 673,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 648,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1517,11 +1517,36 @@
     "Correct general observation in the standard linear constant-coefficient ODE setting.": 1,
     "Sound constrained-optimization troubleshooting order and plausible explanations for surprising stationarity results.": 1,
     "Reasonable musician-oriented frequency-spectrum analogy distinguishing component strength from the waveform.": 1,
-    "Correct finite-second-moment linear covariance propagation and independent additive-noise rule.": 1
+    "Correct finite-second-moment linear covariance propagation and independent additive-noise rule.": 1,
+    "Sound analytical-model, numerical-design and cross-check teaching workflow.": 1,
+    "Correct ordinary separable-PDE explanation of boundary conditions defining the spatial eigenproblem and its modes.": 1,
+    "Correct second-order tensor symmetry, antisymmetry and decomposition.": 1,
+    "Correct qualified value of analysis even when no usable exact closed form is available.": 1,
+    "Correct qualified use of symmetry as a boundary condition on a reduced domain.": 1,
+    "Correct conceptual contrast between eliminating variables and retaining multiplier equations, with a reasonable multi-constraint motivation.": 1,
+    "Correct balanced explanation of the complementary roles of a PDE and its boundary data.": 1,
+    "Correct Euler-Almansi formula and current-configuration interpretation.": 1,
+    "Correct classical boundary-element relationship to a fundamental Green representation and boundary-only discretization.": 1,
+    "Sound casual overview of analytical structure guiding numerical solution of complex models.": 1,
+    "Correct distinction between local Lyapunov stability and asymptotic stability.": 1,
+    "Correct distinction between treating a multiplier as an independent constant in a primal partial derivative and solving for its unknown value jointly.": 1,
+    "The usual hyperbolic planar classifications are useful, but eigenvalue type alone does not settle nonhyperbolic equilibrium cases, including the center claim.": 1,
+    "The near-simple-root quadratic-error idea is right, but the answer misidentifies the linearized object as the derivative. Root-finding Newton linearizes the function using its derivative, and its Taylor remainder controls the new error.": 1,
+    "Correct nuanced underdetermined linear-system explanation, including consistency, rank and free variables.": 1,
+    "Correct constrained-problem feasibility requirement.": 1,
+    "Correct qualified expectation that larger measurement-noise variance worsens scatter and often estimation or detection performance.": 1,
+    "The categorical denial of rigorous computational existence proofs is false. Validated numerics combines mathematical inclusion theorems with rigorously bounded computation to certify existence, rather than merely reporting an approximate solve.": 1,
+    "Correct possibility of computing parameter-dependent integrals through parameter-dependent residues.": 1,
+    "Correct sensor-alarm illustration of conditioning rather than confusing it with the unconditional failure rate.": 1,
+    "Acceptable introductory predictor-corrector description: an explicit prediction supplies a starting value for a correction based on an implicit formula.": 1,
+    "Correct push-forward/pull-back concept and Jacobian-scaled relation among referential and spatial stress measures.": 1,
+    "Correct mean-normal-stress and tension-positive pressure convention.": 1,
+    "Correct high-level idea of the undetermined-coefficients method.": 1,
+    "Correct defective-matrix definition and explicit two-by-two Jordan-block example.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "77e39292d3c069c534daa740b06d96ab7f17a2654274a4d0750653b7f0eec619",
-  "substantively_unreviewed": 673,
+  "published_decisions_sha256": "351577d9fc8dfb7ee19570b4fb22617c325aa33077c706e8b7163a92520b4d2a",
+  "substantively_unreviewed": 648,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
