@@ -388,6 +388,112 @@ class AcademicReconciliationTests(unittest.TestCase):
         self.scope["sources"].pop()
         self.assert_metadata_blocked("exact_nine_sources_required")
 
+    def test_coordinated_original_ledger_and_scope_changes_cannot_replace_trusted_pin(self):
+        trusted_scope_digest = reconciliation.SCOPE_SHA256
+        source = self.scope["sources"][0]
+        ledger = self.intake["ledger"][0]
+        replacement = b"%PDF-1.7\nCOORDINATED SYNTHETIC REPLACEMENT\n%%EOF\n"
+        (self.root / ledger["original_path"]).write_bytes(replacement)
+        source["expected_raw_sha256"] = ledger["raw_sha256"] = digest(replacement)
+        source["expected_raw_byte_size"] = ledger["raw_byte_size"] = len(replacement)
+        self.intake["cache_descriptors"][0]["raw_sha256"] = digest(replacement)
+        self.payloads[0]["raw_sha256"] = digest(replacement)
+        self.write_cache()
+        # The independent trusted fixture pin is intentionally not refreshed.
+        self.assertEqual(reconciliation.SCOPE_SHA256, trusted_scope_digest)
+        self.assertNotEqual(reconciliation.scope_digest(self.scope["sources"]), trusted_scope_digest)
+        result = self.assert_metadata_blocked("scope_pin_mismatch")
+        self.assertEqual(result["sources"], [])
+
+    def test_post_preflight_symlink_substitution_never_reads_forbidden_target(self):
+        isolated = self.root / "isolated-source"
+        isolated.mkdir()
+        original = isolated / "synthetic-original.pdf"
+        old_original = self.root / self.intake["ledger"][0]["original_path"]
+        original.write_bytes(old_original.read_bytes())
+        self.intake["ledger"][0]["original_path"] = "isolated-source/synthetic-original.pdf"
+        forbidden_directory = self.root.parent / "synthetic-forbidden-directory"
+        forbidden_directory.mkdir()
+        forbidden = forbidden_directory / original.name
+        forbidden.write_bytes(b"SYNTHETIC FORBIDDEN TARGET: MUST NEVER BE READ")
+        forbidden_stat = forbidden.stat()
+        forbidden_identity = (forbidden_stat.st_dev, forbidden_stat.st_ino)
+        real_reader = reconciliation._read_confined
+        real_os_read = reconciliation.os.read
+
+        for substitution in ("file", "directory"):
+            with self.subTest(substitution=substitution):
+                substituted = False
+                read_identities = []
+                saved = self.root / ("saved-file" if substitution == "file" else "saved-directory")
+
+                def guarded_read(fd, amount):
+                    info = reconciliation.os.fstat(fd)
+                    identity = (info.st_dev, info.st_ino)
+                    read_identities.append(identity)
+                    self.assertNotEqual(identity, forbidden_identity, "forbidden target read attempted")
+                    return real_os_read(fd, amount)
+
+                def substitute_then_read(root, relative, *args):
+                    nonlocal substituted
+                    if not substituted:
+                        # Content starts only after all eighteen original/cache paths pass.
+                        self.assertEqual(metadata.call_count, 18)
+                        self.assertEqual(relative, self.intake["ledger"][0]["original_path"])
+                        if substitution == "file":
+                            original.rename(saved)
+                            original.symlink_to(forbidden)
+                        else:
+                            isolated.rename(saved)
+                            isolated.symlink_to(forbidden_directory, target_is_directory=True)
+                        substituted = True
+                    return real_reader(root, relative, *args)
+
+                try:
+                    with mock.patch.object(reconciliation, "_path_metadata", wraps=reconciliation._path_metadata) as metadata, mock.patch.object(reconciliation, "_read_confined", side_effect=substitute_then_read), mock.patch.object(reconciliation.os, "read", side_effect=guarded_read):
+                        result = self.run_reconciliation()
+                    self.assertTrue(substituted)
+                    self.assertTrue(read_identities)
+                    self.assertNotIn(forbidden_identity, read_identities)
+                    self.assert_hold(result)
+                    self.assertTrue(result["metadata_eligible"])
+                    self.assertEqual(result["content_checked_sources"], 8)
+                    self.assertEqual(result["sources"][0]["comparison"], "COMPARISON_BLOCKED")
+                    self.assertIn("content_missing_changed_or_inaccessible", {item["code"] for item in result["diagnostics"]})
+                    self.assertNotIn("SYNTHETIC FORBIDDEN TARGET", json.dumps(result))
+                finally:
+                    if substituted:
+                        link = original if substitution == "file" else isolated
+                        link.unlink()
+                        saved.rename(link)
+
+    def test_coordinated_cache_and_descriptor_change_reports_unverified_provenance(self):
+        """Declared adapter integrity is a limitation, never authentication."""
+        descriptor = self.intake["cache_descriptors"][0]
+        prior_cache_hash = descriptor["cache_sha256"]
+        prior_scope_digest = reconciliation.scope_digest(self.scope["sources"])
+        original_hashes = {
+            row["original_path"]: digest((self.root / row["original_path"]).read_bytes())
+            for row in self.intake["ledger"]
+        }
+        for region in self.payloads[0]["regions"]:
+            # Keep valid link offsets while changing every synthetic region text.
+            region["cached_text_for_selected_regions_only"] = region["cached_text_for_selected_regions_only"].replace("Synthetic", "Rewritten")
+        self.write_cache()
+        self.assertNotEqual(descriptor["cache_sha256"], prior_cache_hash)
+        result = self.run_reconciliation()
+        self.assert_hold(result)
+        self.assertTrue(result["metadata_eligible"])
+        self.assertEqual(result["content_checked_sources"], 9)
+        self.assertEqual(result["diagnostics"], [])
+        self.assertEqual(result["cache_provenance"], "DECLARED_ADAPTER_PIN_ONLY_NATIVE_PROVENANCE_UNVERIFIED")
+        self.assertEqual(result["metadata_authenticity"], "NOT_INDEPENDENTLY_VERIFIED")
+        self.assertEqual(reconciliation.scope_digest(self.scope["sources"]), prior_scope_digest)
+        self.assertEqual(original_hashes, {
+            row["original_path"]: digest((self.root / row["original_path"]).read_bytes())
+            for row in self.intake["ledger"]
+        })
+
     def test_original_byte_hash_and_size_mismatches_are_rejected(self):
         path = self.root / self.intake["ledger"][0]["original_path"]
         before = path.read_bytes()
@@ -526,6 +632,13 @@ class AcademicReconciliationTests(unittest.TestCase):
             with self.subTest(raw=raw):
                 with self.assertRaisesRegex(reconciliation.InputError, code):
                     reconciliation.parse_json(raw)
+
+    def test_json_exponent_overflow_is_rejected_as_nonfinite(self):
+        for raw in (b'{"value":1e999}', b'{"value":-1e999}', b'[0,{"nested":[1e999]}]'):
+            with self.subTest(raw=raw):
+                with self.assertRaisesRegex(reconciliation.InputError, "^nonfinite_json$"):
+                    reconciliation.parse_json(raw)
+        self.assertEqual(reconciliation.parse_json(b'{"value":1e308}'), {"value": 1e308})
 
 
 if __name__ == "__main__":

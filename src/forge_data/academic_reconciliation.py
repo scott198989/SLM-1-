@@ -8,6 +8,7 @@ remains HOLD. Private source identifiers and text are not bundled with the code.
 import argparse
 import hashlib
 import json
+import math
 import os
 from pathlib import Path, PurePosixPath
 import re
@@ -91,8 +92,14 @@ def _pairs(pairs):
 
 
 def parse_json(data):
+    def finite_float(value):
+        number = float(value)
+        _require(math.isfinite(number), "nonfinite_json")
+        return number
+
     try:
         return json.loads(data, object_pairs_hook=_pairs,
+                          parse_float=finite_float,
                           parse_constant=lambda _: (_ for _ in ()).throw(InputError("nonfinite_json")))
     except (ValueError, UnicodeError) as exc:
         if isinstance(exc, InputError):
@@ -331,6 +338,8 @@ def reconcile(scope, intake, data_root, *, read_content=False):
     """Two-phase preflight; one metadata failure blocks all content reads."""
     report = {"status": "HOLD", "metadata_eligible": False, "content_checked_sources": 0,
               "sources": [], "diagnostics": [], "release_authorized": False,
+              "metadata_authenticity": "NOT_INDEPENDENTLY_VERIFIED",
+              "cache_provenance": "DECLARED_ADAPTER_PIN_ONLY_NATIVE_PROVENANCE_UNVERIFIED",
               "fidelity": "NOT_ASSESSED_REQUIRES_ORIGINAL_REGION_REVIEW",
               "rights": "DECLARATIONS_ONLY_NO_RIGHTS_DECISION"}
 
@@ -451,6 +460,8 @@ def main(argv=None):
                            read_content=args.read_content)
     except (InputError, OSError) as exc:
         result = {"status": "HOLD", "release_authorized": False,
+                  "metadata_authenticity": "NOT_INDEPENDENTLY_VERIFIED",
+                  "cache_provenance": "DECLARED_ADAPTER_PIN_ONLY_NATIVE_PROVENANCE_UNVERIFIED",
                   "diagnostics": [{"code": str(exc) if isinstance(exc, InputError)
                                    else "scope_or_intake_missing_or_inaccessible",
                                    "action": "Supply readable metadata-only --scope and --intake files; do not substitute source or gold content."}]}

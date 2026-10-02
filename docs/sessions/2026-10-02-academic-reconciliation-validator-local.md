@@ -18,11 +18,19 @@ authenticity require independent evidence.
 
 Independent review identified external-alias metadata gaps, link-span containment
 and purpose-disposition reporting. These were corrected; final review found no
-remaining must-fix findings. Thirty-one synthetic tests pass, including no-content-
+remaining must-fix findings. Thirty-five synthetic tests pass, including no-content-
 read assertions for late cohort conflicts and unknown gold, safe paths, altered
-bytes, malformed links and source preservation. The expanded CPU suite ran 95
+bytes, malformed links and source preservation. The expanded CPU suite ran 99
 passing methods; five existing Qwen tests remain blocked by absent pinned
 tokenizer assets, producing one class-setup error. No full-suite pass is claimed.
+
+Final acceptance review added coordinated original-pin forgery and post-preflight
+file/directory symlink-swap regressions, including a forbidden-inode read guard.
+JSON exponent overflow is rejected alongside NaN and Boolean offsets. Reports
+explicitly distinguish fixed original pins from declared adapter-cache integrity
+and unauthenticated metadata. Replacing cache bytes plus their declared hash can
+pass structure checks; falsified gold declarations cannot be authenticated here.
+Both limitations remain visible and never authorize release.
 
 The actual private extraction schema/version/path is not available. The intake
 is an explicitly new adapter contract requiring a reviewed mapping, not a claim

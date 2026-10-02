@@ -5,7 +5,7 @@ Cloud continuation: read [HANDOFF_README.md](HANDOFF_README.md) first; use branc
 
 Cloud continuation, October 2: all 2,112 selected records now have substantive agent technical dispositions. Separately scoped primary-source review resolved the five inherited residual holds. GitHub remains at the last verified published base 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. [Current completion and remaining gates](reports/phase3-technical-review-completion.json).
 
-Bounded academic preparation: [metadata-first reconciliation validator](docs/ACADEMIC_RECONCILIATION.md) checks the pinned nine-source intake with synthetic-only regressions. It grants no release approval; private originals/cache/family/rights inputs remain required and every result stays HOLD. Fresh preparation verification: 31 new tests pass; the expanded suite has 95 passing methods and five tokenizer-dependent methods blocked. Prior 69-test passing receipts remain historical.
+Bounded academic preparation: [metadata-first reconciliation validator](docs/ACADEMIC_RECONCILIATION.md) checks the pinned nine-source intake with synthetic-only regressions. It grants no release approval; private originals/cache/family/rights inputs remain required and every result stays HOLD. Fresh preparation verification: 35 new tests pass; the expanded suite has 99 passing methods and five tokenizer-dependent methods blocked. Prior 69-test passing receipts remain historical.
 
 ## Phase 3 pilot — current gate
 

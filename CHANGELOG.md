@@ -4,7 +4,7 @@
 
 - Added a read-only nine-source intake validator with a pinned external scope digest, full metadata preflight before original/cache reads, gold/alias/split/rights gates, safe confined paths, byte pins and region/link checks. All outputs remain HOLD; rights declarations do not establish permission or fidelity.
 - Kept the missing private extraction schema explicit: the documented intake is an adapter contract, not fabricated native records. No academic originals, cache text, IDs, gold or approvals were added to Git.
-- Added 31 synthetic regressions; independent code review completed and findings corrected. Expanded CPU suite: 95 tests pass, with five Qwen tests blocked by missing pinned tokenizer assets (one class-setup error). This is not a complete suite pass.
+- Added 35 synthetic regressions; independent code review completed and findings corrected, including fixed-pin forgery, post-preflight symlink swaps and explicit unverified cache/metadata provenance. Expanded CPU suite: 99 tests pass, with five Qwen tests blocked by missing pinned tokenizer assets (one class-setup error). This is not a complete suite pass.
 - Preserved checkpoint 601df14, all dataset/review/source/frozen artifacts and historical receipts on a separate local preparation branch. No remote operation, tokenizer retry, model load, training or paid compute.
 
 ## 2026-10-02 - Resolve five residual technical holds locally

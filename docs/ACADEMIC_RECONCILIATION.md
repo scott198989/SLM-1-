@@ -13,6 +13,21 @@ stay outside Git. The source manifest is supplied externally; production code
 pins the canonical digest of its exact nine-source scope. There is no CLI option
 to replace that pin. Synthetic tests patch it only inside temporary fixtures.
 
+Original hashes, sizes, revisions and scope are anchored to that fixed digest.
+Cache hashes and extraction versions are supplied by the intake adapter; they
+are **not independently authenticated native-cache provenance**. Replacing an
+adapter cache and its declared hash together can pass structural comparison.
+Reports therefore label cache provenance
+`DECLARED_ADAPTER_PIN_ONLY_NATIVE_PROVENANCE_UNVERIFIED` and metadata
+authenticity `NOT_INDEPENDENTLY_VERIFIED` even when checks pass.
+
+Gold gating rejects supplied true, unknown or conflicting declarations before
+content access. It cannot authenticate deliberately falsified `gold=false`
+metadata. Use only an independently reviewed metadata export and an explicitly
+scoped data root containing no gold content; those prerequisites cannot be
+established from this adapter alone. Neither comparison success nor a declared
+rights permission resolves these evidence requirements.
+
 ## What is and is not available
 
 The verified public checkpoint and handoff scope are available. The authoritative
