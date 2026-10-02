@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1094,
+    "PASS": 1118,
     "REJECT": 57,
-    "QUARANTINE": 236,
-    "NEEDS_HUMAN_REVIEW": 725
+    "QUARANTINE": 237,
+    "NEEDS_HUMAN_REVIEW": 700
   },
   "by_domain": {
     "circuits": {
@@ -14,10 +14,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "engineering_mathematics": {
-      "PASS": 112,
+      "PASS": 136,
       "REJECT": 1,
-      "QUARANTINE": 12,
-      "NEEDS_HUMAN_REVIEW": 75
+      "QUARANTINE": 13,
+      "NEEDS_HUMAN_REVIEW": 50
     },
     "algebra": {
       "PASS": 176,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1386,
+  "agent_substantive_reviews": 1411,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "7c0a1406bd16ac641df1ffc5f7666042349a827aa7a57f4a000fb039943fc493",
+  "technical_review_sha256": "da958ef3f60759c17f19b68b0f971efdae9a057a9fbbad64489e4f74dd345707",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 723,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 698,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1467,11 +1467,36 @@
     "Correct qualified practical advantages of Laplace methods for linear systems with switching, impulses and initial data.": 1,
     "Correct residual-waiting-time memorylessness and exponential example, with realistic scope caution.": 1,
     "Correct spatial balance of linear momentum with body force per unit mass.": 1,
-    "Sine and cosine are not eigenfunctions of the first-derivative operator as stated. Differentiation sends sine to cosine and cosine to negative sine rather than a constant multiple of itself.": 1
+    "Sine and cosine are not eigenfunctions of the first-derivative operator as stated. Differentiation sends sine to cosine and cosine to negative sine rather than a constant multiple of itself.": 1,
+    "Correct examples distinguishing surface-distributed totals and vector flux through a surface.": 1,
+    "Correct short motivation for series methods with variable coefficients near ordinary and regular singular points.": 1,
+    "Correct qualified explanation of why constitutive-rate choice matters, including known Jaumann simple-shear artifacts in some models.": 1,
+    "Correct polar conversion, tenth power and angle reduction.": 1,
+    "Correct definition of an equilibrium and appropriate numerical-preservation and local-stability checks.": 1,
+    "Correct floating-point motivation for pivoting and qualified numerical-stability benefit.": 1,
+    "Correct geometric first-order equality-constraint explanation with explicit regularity caveats.": 1,
+    "Correct qualified conditioning warning for nearly parallel linear constraints.": 1,
+    "Sound explicitly conditional example of learning from an analytically solvable geometry before numerical modeling of the actual geometry.": 1,
+    "Correct qualitative explanation for the importance of surrounding boundary constraints in ordinary elliptic equilibrium problems.": 1,
+    "Faithful feasible-set paraphrase of a constraint shaping the optimization problem.": 1,
+    "Arithmetic and right-hand-side evaluations can execute numerical ODE methods, but the unqualified Not symbolically conflates the calculus underlying a method with what the person applying it must perform. Exact equilibrium solutions can be obtained from f(y)=0 algebraically, and symbolic methods can be executed from prederived rules. The answer needs a qualified statement about generally deriving symbolic solutions; the numerical-method claim remains correct.": 1,
+    "Correct exponential-power rule in the conventional integer-n setting of Euler-form/De Moivre calculations.": 1,
+    "Correct qualified account of changing statistics, stationary-model mismatch and context-dependent adaptations.": 1,
+    "Sound conceptual description of analytically justified model reduction and its practical interaction with computation.": 1,
+    "Correct brief Rivlin-Ericksen kinematic hierarchy, first tensor and second-tensor description.": 1,
+    "Correct classical distinction among current Cauchy stress, mixed first Piola stress and referential second Piola stress.": 1,
+    "Faithful paraphrase of diffusion with zero prescribed boundary values.": 1,
+    "Correct explanation that membrane boundary conditions help select the physical system and its vibration modes.": 1,
+    "Correct model-based Monte Carlo overview with sampling, variance and rare-event limitations explicitly acknowledged.": 1,
+    "Correct resolvent convention and its conceptual relationship to a Green integral kernel.": 1,
+    "Correct qualified engineering motivation for Gaussian approximations to sums under central-limit conditions.": 1,
+    "Correct scope-sensitive comparison of elimination, matrix factorization and explicit inversion.": 1,
+    "Correct introductory contrast of frequentist repeated-trial interpretation and Bayesian updating with prior information.": 1,
+    "Correct reason and standard construction for reducing higher-order ODEs to first-order systems.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "0438722accb716c96d3e1083307fff73d9a08760811226ccfcb0884bdb84fc72",
-  "substantively_unreviewed": 723,
+  "published_decisions_sha256": "766271dc55850071c6f5141d8c42706ce06502e4e3231496ddee251894a740b6",
+  "substantively_unreviewed": 698,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

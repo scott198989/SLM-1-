@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-02 - Local engineering_mathematics review 125–149
+
+- Added {'PASS': 24, 'QUARANTINE': 1} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1386 reviews unchanged.
+- Current local reviews: 1411; dispositions: {'PASS': 1118, 'REJECT': 57, 'QUARANTINE': 237, 'NEEDS_HUMAN_REVIEW': 700}; next engineering_mathematics offset: 150.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
 ## 2026-10-02 - Local engineering_mathematics review 100–124
 
 - Added {'QUARANTINE': 2, 'PASS': 22, 'REJECT': 1} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1361 reviews unchanged.

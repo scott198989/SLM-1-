@@ -1,0 +1,633 @@
+{
+  "base_commit": "60fc7e63205bbf21f252580a2021fb3c7fd2681a",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "engineering_mathematics",
+  "offset": 125,
+  "limit": 25,
+  "next_offset": 150,
+  "selected_window_end_exclusive": 150,
+  "selected_rows_in_window": 25,
+  "new_substantive_reviews": 25,
+  "skipped_existing": 0,
+  "preserved_structural_quarantines": [],
+  "dispositions_added": {
+    "PASS": 24,
+    "QUARANTINE": 1
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "/root/review_engineering_math_sixth_batch",
+    "records_checked": 25,
+    "final_counts": {
+      "PASS": 24,
+      "QUARANTINE": 1
+    },
+    "disposition_changes": [
+      {
+        "ordinal": 143,
+        "from": "PASS",
+        "to": "QUARANTINE",
+        "basis": "The categorical symbolic impossibility is overbroad; preserve the correct numerical arithmetic claim."
+      }
+    ],
+    "review_precision_corrections": [
+      "Retain conventional integer-n scope and complex branch caveat at145.",
+      "Replace failed Sandia LAPACK link with directly relevant netlib documentation."
+    ],
+    "full_prompt_and_answer_review": true,
+    "all_source_hashes_ids_ordinals_and_ledger_matches": true,
+    "source_sha256": "91e1adbb4db662e463ecf96f3c21455639802c9be71e42a23f51e464a06f6cc9",
+    "candidate_preparation_predecessor_commit": "1846fa04acd0e1d43f8e4d5ac6c1cee676456ce8",
+    "reviewed_against_local_commit": "60fc7e63205bbf21f252580a2021fb3c7fd2681a",
+    "published_base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "independent_human_review": false,
+    "release_approved": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 1386,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 1118,
+    "REJECT": 57,
+    "QUARANTINE": 237,
+    "NEEDS_HUMAN_REVIEW": 700
+  },
+  "agent_substantive_reviews": 1411,
+  "substantively_unreviewed": 698,
+  "records": [
+    {
+      "id": "repo-111298d5204d54c0f35dc3a9",
+      "ordinal": 125,
+      "messages_sha256": "111298d5204d54c0f35dc3a972f75f4d302a6e213d3911e42ce63881dea92c60",
+      "state": "PASS",
+      "rationale": "Correct short motivation for series methods with variable coefficients near ordinary and regular singular points.",
+      "evidence": [
+        {
+          "title": "NIST DLMF 2.7, Differential Equations",
+          "url": "https://dlmf.nist.gov/2.7",
+          "finding": "Ordinary points admit Taylor solutions; regular singular points use Frobenius expansions, with logarithmic terms in some cases."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Equating coefficients of a Taylor or Frobenius ansatz supplies a recurrence."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "At a regular singular point the generalized power series may need a noninteger leading exponent or logarithmic companion; the answer is a use-case overview, not a plain-Taylor guarantee."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L929"
+    },
+    {
+      "id": "repo-2ec0ff301c9e9367cd341df4",
+      "ordinal": 126,
+      "messages_sha256": "2ec0ff301c9e9367cd341df47a233c0871a0039e14490c0738610e1a356042ea",
+      "state": "PASS",
+      "rationale": "Correct qualified conditioning warning for nearly parallel linear constraints.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each local linear-algebra, differential-equation, probability, boundary-value and complex-number claim was checked individually."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For x+y=1 and x+(1+epsilon)y=1+delta, y=delta/epsilon, exposing sensitivity as epsilon approaches zero."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Conditioning belongs to the problem; instability of a particular algorithm is distinct. The answer correctly uses can and distinguishes exact uniqueness."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L957"
+    },
+    {
+      "id": "repo-22c1393c0b859cc1842186fb",
+      "ordinal": 127,
+      "messages_sha256": "22c1393c0b859cc1842186fb691884987ffa52ca4b60d32be03831e4f073987d",
+      "state": "PASS",
+      "rationale": "Correct definition of an equilibrium and appropriate numerical-preservation and local-stability checks.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each local linear-algebra, differential-equation, probability, boundary-value and complex-number claim was checked individually."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For y_prime=f(y), f(y_star)=0 makes y(t)=y_star constant; a standard explicit Runge-Kutta step has zero stage slopes there."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Should preserve states an accuracy/design goal, not a theorem that every numerical scheme or nonlinear solve preserves equilibria exactly."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L958"
+    },
+    {
+      "id": "repo-736d5224cff43fc1bf57f272",
+      "ordinal": 128,
+      "messages_sha256": "736d5224cff43fc1bf57f2725db72884cbf651a7ecd461ff17b4fc930232a9b7",
+      "state": "PASS",
+      "rationale": "Sound conceptual description of analytically justified model reduction and its practical interaction with computation.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each local linear-algebra, differential-equation, probability, boundary-value and complex-number claim was checked individually."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Preservation is the reduction objective within a specified regime, not an exact universal claim for every reduced model; validation and error assessment remain necessary."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L963"
+    },
+    {
+      "id": "repo-1ec331b6e2d6cc726ccd6acd",
+      "ordinal": 129,
+      "messages_sha256": "1ec331b6e2d6cc726ccd6acd91b42548501d3188165d5858abde9a4823762301",
+      "state": "PASS",
+      "rationale": "Correct qualified explanation of why constitutive-rate choice matters, including known Jaumann simple-shear artifacts in some models.",
+      "evidence": [
+        {
+          "title": "Z. Fiala, Engineering Mechanics2009, objective stress-rate discussion",
+          "url": "https://www.engmech.cz/improc/2009/Fiala-211-PT.pdf",
+          "finding": "Discusses the Jaumann spin correction, frame objectivity and documented oscillatory simple-shear response for particular rate-type constitutive laws."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The original explicitly makes the preference material-, model- and regime-dependent; objectivity alone does not identify a unique physically correct rate."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L977"
+    },
+    {
+      "id": "repo-cc3d646ecd631e22e6017292",
+      "ordinal": 130,
+      "messages_sha256": "cc3d646ecd631e22e6017292e5352d5ce140319d713d8438dca7a5ed2551b6c8",
+      "state": "PASS",
+      "rationale": "Correct qualified engineering motivation for Gaussian approximations to sums under central-limit conditions.",
+      "evidence": [
+        {
+          "title": "MIT 18.175, Central limit theorem variants",
+          "url": "https://math.mit.edu/~sheffield/2016175/Lecture11.pdf",
+          "finding": "Central-limit theorems give Gaussian limits under variance and negligibility hypotheses, with convergence dependent on the summand distributions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For iid finite-variance terms, (sum X_i-n*mu)/(sigma*sqrt(n)) converges in distribution to a standard Gaussian."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The answer says many, not all; finite variance and suitable independence/negligibility conditions matter, and heavy tails or dominant terms can invalidate a Gaussian approximation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L978"
+    },
+    {
+      "id": "repo-23dce9fd512ac0e34dcb1ff3",
+      "ordinal": 131,
+      "messages_sha256": "23dce9fd512ac0e34dcb1ff33f5000e58b69eba0904c205b4f4f34f557853af2",
+      "state": "PASS",
+      "rationale": "Correct floating-point motivation for pivoting and qualified numerical-stability benefit.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each local linear-algebra, differential-equation, probability, boundary-value and complex-number claim was checked individually."
+        },
+        {
+          "title": "LAPACK, Linear-equation drivers",
+          "url": "https://www.netlib.org/lapack/lug/node38.html",
+          "finding": "LAPACK documents pivoted factorizations and separate factor, solve and invert operations, supporting the distinction between solving a system and explicitly forming an inverse."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Elimination without pivoting on [[epsilon,1],[1,1]] uses a multiplier 1/epsilon; row interchange avoids that small initial pivot."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Partial pivoting is not an unconditional stability guarantee and does not cure intrinsic ill-conditioning."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L983"
+    },
+    {
+      "id": "repo-81ec6da9a32dab2749bc84e9",
+      "ordinal": 132,
+      "messages_sha256": "81ec6da9a32dab2749bc84e96e546ffa7edeef0a849b060bdfda830c7ae2a2be",
+      "state": "PASS",
+      "rationale": "Correct brief Rivlin-Ericksen kinematic hierarchy, first tensor and second-tensor description.",
+      "evidence": [
+        {
+          "title": "Destrade et al., author manuscript on Rivlin-Ericksen constitutive tensors",
+          "url": "https://maths.nuigalway.ie/~destrade/Publis/destrade_c04.pdf",
+          "finding": "Defines A1=L+L^T and A2=A1_dot+A1 L+L^T A1, supporting the kinematic hierarchy description."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A1=L+L^T=2D; A2=A1_dot+A1*L+L^T*A1 includes the material derivative and velocity-gradient products."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The derivative is material and tensor-product ordering depends on the stated velocity-gradient convention."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L985"
+    },
+    {
+      "id": "repo-71b123658e986b1d1fe34a2e",
+      "ordinal": 133,
+      "messages_sha256": "71b123658e986b1d1fe34a2e38a44bc21d3d3c3eb022a8cbd00c66dc0e5229a2",
+      "state": "PASS",
+      "rationale": "Correct qualified account of changing statistics, stationary-model mismatch and context-dependent adaptations.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each local linear-algebra, differential-equation, probability, boundary-value and complex-number claim was checked individually."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For X_t=mu(t)+epsilon_t with stationary zero-mean noise, a drifting mu(t) changes window means even if the noise law is unchanged."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Detrending or segmentation is not a guarantee of stationarity or predictive validity; the answer explicitly makes treatment depend on the type of change."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L986"
+    },
+    {
+      "id": "repo-092d6f11e55f6a9c9fcc8106",
+      "ordinal": 134,
+      "messages_sha256": "092d6f11e55f6a9c9fcc8106d844e95b5896120af1c7cdca1d73fe4839b83756",
+      "state": "PASS",
+      "rationale": "Correct examples distinguishing surface-distributed totals and vector flux through a surface.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each local linear-algebra, differential-equation, probability, boundary-value and complex-number claim was checked individually."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Scalar surface density integrates as integral_S rho_s dS; oriented flux integrates as integral_S F dot n dS."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The surface and orientation must be specified for a signed flux."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L988"
+    },
+    {
+      "id": "repo-c04d5b65fbdd81641f8ee140",
+      "ordinal": 135,
+      "messages_sha256": "c04d5b65fbdd81641f8ee1401c9ea542a7d5b2136427496abaaad4bfbc563a54",
+      "state": "PASS",
+      "rationale": "Correct resolvent convention and its conceptual relationship to a Green integral kernel.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each local linear-algebra, differential-equation, probability, boundary-value and complex-number claim was checked individually."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For lambda in the resolvent set, (L-lambda I)R(lambda)=I; at lambda=0 an invertible L has R(0)=L^-1."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Some authors use (lambda I-L)^-1. Existence, operator domains and an appropriate kernel representation are needed; the short definition does not assert all operators have ordinary kernels."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L993"
+    },
+    {
+      "id": "repo-f019c59466eabb4ceb2bfadd",
+      "ordinal": 136,
+      "messages_sha256": "f019c59466eabb4ceb2bfadda240fc9f8c06d8414b3dabb4391990fc975c3e6f",
+      "state": "PASS",
+      "rationale": "Correct scope-sensitive comparison of elimination, matrix factorization and explicit inversion.",
+      "evidence": [
+        {
+          "title": "LAPACK, Linear-equation drivers",
+          "url": "https://www.netlib.org/lapack/lug/node38.html",
+          "finding": "LAPACK documents pivoted factorizations and separate factor, solve and invert operations, supporting the distinction between solving a system and explicitly forming an inverse."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each local linear-algebra, differential-equation, probability, boundary-value and complex-number claim was checked individually."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "When A is square invertible, elimination and A^-1*b solve the same system; elimination also diagnoses rank and consistency in rectangular systems."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The usual practical preference is correctly qualified; special repeated-use or hardware circumstances can change the cost tradeoff."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L994"
+    },
+    {
+      "id": "repo-a17b48b891f9156b2e5fa7ae",
+      "ordinal": 137,
+      "messages_sha256": "a17b48b891f9156b2e5fa7aefcb7e253a27de9c4d430e17adf8949da1ceb6fa6",
+      "state": "PASS",
+      "rationale": "Faithful paraphrase of diffusion with zero prescribed boundary values.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each local linear-algebra, differential-equation, probability, boundary-value and complex-number claim was checked individually."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Homogeneous Dirichlet data are u restricted to the boundary equal to zero."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Initial data are also needed for a complete time-dependent diffusion problem, but the requested sentence was about the boundary condition."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L996"
+    },
+    {
+      "id": "repo-ac43a04ddf1a874d3926a4e3",
+      "ordinal": 138,
+      "messages_sha256": "ac43a04ddf1a874d3926a4e3425073648f01cf4c7ae55befe5e04a3881c9ef58",
+      "state": "PASS",
+      "rationale": "Correct explanation that membrane boundary conditions help select the physical system and its vibration modes.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each local linear-algebra, differential-equation, probability, boundary-value and complex-number claim was checked individually."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Separation gives a spatial eigenproblem whose admissible eigenfunctions and frequencies depend on the edge conditions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Initial displacement and velocity are additionally required to select a particular transient solution; this answer explains why the PDE alone is insufficient."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L998"
+    },
+    {
+      "id": "repo-2b3831378c39755492329cbe",
+      "ordinal": 139,
+      "messages_sha256": "2b3831378c39755492329cbe3c6e5e25dfa0a6f0aedc0be038f18700e63e9431",
+      "state": "PASS",
+      "rationale": "Correct geometric first-order equality-constraint explanation with explicit regularity caveats.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each local linear-algebra, differential-equation, probability, boundary-value and complex-number claim was checked individually."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a regular single equality g=0, feasible tangent vectors v obey grad(g) dot v=0. Stationarity of f along that tangent space makes grad(f) a scalar multiple of grad(g)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Parallel includes a zero objective gradient. Multiple constraints require their normal span rather than one gradient; the answer concerns the one-surface geometric picture."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1004"
+    },
+    {
+      "id": "repo-fd0d880ae545ecc7b0f8214d",
+      "ordinal": 140,
+      "messages_sha256": "fd0d880ae545ecc7b0f8214d09b91e64d7a1b52fcbc60f95ad3eeced3e2c1261",
+      "state": "PASS",
+      "rationale": "Correct introductory contrast of frequentist repeated-trial interpretation and Bayesian updating with prior information.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each local linear-algebra, differential-equation, probability, boundary-value and complex-number claim was checked individually."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Bayes updating uses p(theta|data) proportional to p(data|theta)*p(theta); frequentist procedures assess repeated-sampling properties at fixed parameters."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "These are broad conceptual interpretations, not an exclusive partition of engineering applications or a claim that frequentist methods cannot use domain information."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1005"
+    },
+    {
+      "id": "repo-b93d8a48a4dbaeb2ea175d89",
+      "ordinal": 141,
+      "messages_sha256": "b93d8a48a4dbaeb2ea175d89823dacf729db0624f8dd7e33de5cb568a9db20cc",
+      "state": "PASS",
+      "rationale": "Correct model-based Monte Carlo overview with sampling, variance and rare-event limitations explicitly acknowledged.",
+      "evidence": [
+        {
+          "title": "NIST, Computational Uncertainty",
+          "url": "https://physics.nist.gov/VSC/Help/Uncertainty/Computational_Uncertainty.html",
+          "finding": "Monte Carlo propagates uncertainty by repeated sampling from input distributions; sampling quality and the assumed model remain material."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each local linear-algebra, differential-equation, probability, boundary-value and complex-number claim was checked individually."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For iid finite-variance outputs, the sample mean variance is sigma^2/N; importance sampling changes the sampling law and applies likelihood weights."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Correlated samples need effective-sample-size analysis and some distributions lack finite variance; usually and the model-validity warning avoid an unconditional convergence guarantee."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1011"
+    },
+    {
+      "id": "repo-43ee610d03b8477bc0aaaf71",
+      "ordinal": 142,
+      "messages_sha256": "43ee610d03b8477bc0aaaf71824be62165ef24c27eaf7404869e27ca90d68ec4",
+      "state": "PASS",
+      "rationale": "Correct qualitative explanation for the importance of surrounding boundary constraints in ordinary elliptic equilibrium problems.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each local linear-algebra, differential-equation, probability, boundary-value and complex-number claim was checked individually."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a well-posed bounded-domain Dirichlet Laplace problem, boundary values determine the harmonic interior."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Mixed/Neumann problems require their compatibility and normalization; some unbounded or special problems use additional conditions instead of a closed boundary. The original says generally and so often."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1015"
+    },
+    {
+      "id": "repo-6a0aef9b284ef800d9584b1c",
+      "ordinal": 143,
+      "messages_sha256": "6a0aef9b284ef800d9584b1c9c7176d5a31c2102ade7cbaab2aa398daecdc20c",
+      "state": "QUARANTINE",
+      "rationale": "Arithmetic and right-hand-side evaluations can execute numerical ODE methods, but the unqualified Not symbolically conflates the calculus underlying a method with what the person applying it must perform. Exact equilibrium solutions can be obtained from f(y)=0 algebraically, and symbolic methods can be executed from prederived rules. The answer needs a qualified statement about generally deriving symbolic solutions; the numerical-method claim remains correct.",
+      "evidence": [
+        {
+          "title": "SciPy integration tutorial",
+          "url": "https://docs.scipy.org/doc/scipy/tutorial/integrate.html",
+          "finding": "Numerical initial-value solvers evaluate the first-order vector right-hand side; higher-order ODEs are converted by introducing derivative variables."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each local linear-algebra, differential-equation, probability, boundary-value and complex-number claim was checked individually."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For y_prime=y*(1-y) and y(0)=1, the equilibrium y(t)=1 follows from the algebraic root y=1."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold for ambiguity or overstatement, not for claiming that general ODE theory or verification is calculus-free."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1017"
+    },
+    {
+      "id": "repo-8d658eaa4a91589de860ba18",
+      "ordinal": 144,
+      "messages_sha256": "8d658eaa4a91589de860ba189a72d0f4e6993963944d41a5bc5a35dca97689fa",
+      "state": "PASS",
+      "rationale": "Correct classical distinction among current Cauchy stress, mixed first Piola stress and referential second Piola stress.",
+      "evidence": [
+        {
+          "title": "A. F. Bower, Applied Mechanics of Solids2.3",
+          "url": "https://solidmechanics.org/Text/Chapter2_3/Chapter2_3.php",
+          "finding": "Defines first Piola and Cauchy stresses and the Piola transformation, along with principal-stress interpretation in a classical symmetric stress tensor."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each local linear-algebra, differential-equation, probability, boundary-value and complex-number claim was checked individually."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "P=J*sigma*F^(-T); S=F^-1*P. Symmetric sigma implies symmetric S, while P need not be symmetric."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Cauchy symmetry assumes the ordinary balance of angular momentum without independent body couples or couple stresses; stress conventions and reference/current areas must be consistent."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1020"
+    },
+    {
+      "id": "repo-6e4bbf56ddc3c3e7444d6df3",
+      "ordinal": 145,
+      "messages_sha256": "6e4bbf56ddc3c3e7444d6df37197d4f125aa728abc254b8d3076b44f72da334b",
+      "state": "PASS",
+      "rationale": "Correct exponential-power rule in the conventional integer-n setting of Euler-form/De Moivre calculations.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each local linear-algebra, differential-equation, probability, boundary-value and complex-number claim was checked individually."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For integer n, repeated multiplication of exp(i*theta) gives exp(i*n*theta), extending to negative n by inversion."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "For unrestricted noninteger complex powers, branch choices can invalidate the unqualified power-of-power rule; n is read in its standard integer-power context here."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1035"
+    },
+    {
+      "id": "repo-229a3de573b2876b5f433db0",
+      "ordinal": 146,
+      "messages_sha256": "229a3de573b2876b5f433db0f918622030cb58d6c3d559b092aaa06dd606a20f",
+      "state": "PASS",
+      "rationale": "Correct polar conversion, tenth power and angle reduction.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each local linear-algebra, differential-equation, probability, boundary-value and complex-number claim was checked individually."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "(sqrt(2))^10=32 and 10*pi/4=5*pi/2 is congruent to pi/2 modulo 2*pi; independently (1+i)^2=2i, so (1+i)^10=(2i)^5=32i."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1040"
+    },
+    {
+      "id": "repo-41cf67069587aefd5d92493e",
+      "ordinal": 147,
+      "messages_sha256": "41cf67069587aefd5d92493ef7d6d48cc60a9b0c08d17307df893abe36bf15ea",
+      "state": "PASS",
+      "rationale": "Sound explicitly conditional example of learning from an analytically solvable geometry before numerical modeling of the actual geometry.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each local linear-algebra, differential-equation, probability, boundary-value and complex-number claim was checked individually."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The simplified geometry is a source of insight rather than automatic validation of the real-geometry result; boundary and model differences must be checked."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1055"
+    },
+    {
+      "id": "repo-512d9e3a6513ab0077607211",
+      "ordinal": 148,
+      "messages_sha256": "512d9e3a6513ab0077607211d11aec65dafcdeabcb612f34e9a6a53d4f8c3fc4",
+      "state": "PASS",
+      "rationale": "Faithful feasible-set paraphrase of a constraint shaping the optimization problem.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each local linear-algebra, differential-equation, probability, boundary-value and complex-number claim was checked individually."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A constrained optimum minimizes f over the feasible set rather than over the ambient space."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "From the start describes the mathematical problem, not a guarantee that every intermediate numerical iterate is feasible."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1068"
+    },
+    {
+      "id": "repo-fdea7dc95645f199b0ac2a5c",
+      "ordinal": 149,
+      "messages_sha256": "fdea7dc95645f199b0ac2a5c1f7a244d7614d6998a0063844724e9d807d20cb4",
+      "state": "PASS",
+      "rationale": "Correct reason and standard construction for reducing higher-order ODEs to first-order systems.",
+      "evidence": [
+        {
+          "title": "SciPy integration tutorial",
+          "url": "https://docs.scipy.org/doc/scipy/tutorial/integrate.html",
+          "finding": "Numerical initial-value solvers evaluate the first-order vector right-hand side; higher-order ODEs are converted by introducing derivative variables."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each local linear-algebra, differential-equation, probability, boundary-value and complex-number claim was checked individually."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For y^(m)=F(t,y,...,y^(m-1)), set z=(y,y_prime,...,y^(m-1)); z_prime=(z2,...,zm,F(t,z))."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "An implicit or singular highest-derivative relation may instead require a differential-algebraic formulation; many methods, not all, are first-order interfaces."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1069"
+    }
+  ]
+}
