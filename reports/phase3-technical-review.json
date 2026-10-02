@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1687,
-    "REJECT": 70,
-    "QUARANTINE": 328,
-    "NEEDS_HUMAN_REVIEW": 27
+    "PASS": 1698,
+    "REJECT": 72,
+    "QUARANTINE": 340,
+    "NEEDS_HUMAN_REVIEW": 2
   },
   "by_domain": {
     "circuits": {
@@ -56,10 +56,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "materials_manufacturing": {
-      "PASS": 192,
-      "REJECT": 4,
-      "QUARANTINE": 29,
-      "NEEDS_HUMAN_REVIEW": 25
+      "PASS": 203,
+      "REJECT": 6,
+      "QUARANTINE": 41,
+      "NEEDS_HUMAN_REVIEW": 0
     },
     "physics": {
       "PASS": 212,
@@ -74,18 +74,17 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 2084,
+  "agent_substantive_reviews": 2109,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "3f05fb92e72354df6687cd317bd9abf66ce361a3a4d3214d4552934bcbdf94a6",
+  "technical_review_sha256": "21a7463cb6a16e0aaca5485961948f2d4f54c13d6e9532b2c8a225f595bb5cdc",
   "reasons": {
     "Faithful conceptual paraphrase that conservation and boundary requirements are integral to the coupled solution process. The prose does not explicitly assert exact feasibility of every internal numerical iterate.": 1,
     "Correct practical explanation of boundary data in an ordinary PDE discretization and their effect on closure, accuracy and stability.": 1,
     "Correct elementary local/absolute extrema distinction, including endpoint possibilities.": 1,
     "Universal three-phase-motor size, efficiency and self-starting comparison lacks machine type, rating and comparison conditions; synchronous motors are a counterexample to unqualified self-starting.": 1,
     "The basic inclusion of polynomials among rational expressions is correct, but the claim that polynomials always tend to infinity and can never have horizontal asymptotes fails for constant polynomials.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 25,
     "Accurate typical FMEA-entry checklist and appropriate acknowledgement that responsibility/action-status fields vary by team. It does not impose one universal risk-priority formula or imply FMEA alone validates safety.": 1,
     "Changing L/C reactance redistributes complex branch currents and voltages; response and cancellation are correctly circuit dependent rather than universally monotone.": 1,
     "Correct current-sign reversal of magnetic wire force and its role in mechanical commutation.": 1,
@@ -2165,11 +2164,36 @@
     "Correct distinction between mean density and defect severity/location statistics relevant to fatigue.": 1,
     "Correct explanation that a mean precipitate radius omits spatial extremes and other fatigue-controlling state.": 1,
     "Correct explanation that omitted strong feedback is a physical modeling approximation, not just numerical error.": 1,
-    "Correct consequence of imposing spatially uniform recrystallization on a nonuniform deformation history.": 1
+    "Correct consequence of imposing spatially uniform recrystallization on a nonuniform deformation history.": 1,
+    "The void-nucleation/growth analogy is useful, but the concluding claim that microscopic voids in a loaded continuum are necessarily catastrophic is too strong.": 1,
+    "Correct warning that hard coatings require substrate support and suitable adhesion/residual stress.": 1,
+    "Exposure and elapsed time do not establish chloride SCC as the failure mechanism or justify the proposed substitute-grade strength equivalence and corrosion-immunity assurances.": 1,
+    "Correct grain-boundary versus through-grain SCC distinction and qualified examples.": 1,
+    "Orientation-dependent creep is real, but [001] does not universally maximize creep life across alloys, stress states and temperatures.": 1,
+    "Correct localization-based explanation of why a weak layer can govern failure despite an acceptable mean.": 1,
+    "CMAS infiltration and compliance loss are valid, but the stated generic reprecipitation of a denser non-strain-tolerant phase on cooling conflates distinct high-temperature reaction and cooling-transformation mechanisms.": 1,
+    "The weldability mechanism inventory is useful, but NbC is a carbide participant in constitutional liquation, not itself a low-melting eutectic as the wording implies.": 1,
+    "Reasonable explanation of the common high-temperature ferritic-versus-austenitic stainless-strength tradeoff.": 1,
+    "Reasonable decomposition of TBC oxide growth, sintering, infiltrant attack and eventual interfacial cracking.": 1,
+    "Wear-mode selection and brittleness tradeoffs are useful, but hardness-dependent scaling is not exclusive to abrasive wear; standard adhesive-contact wear models also use inverse hardness.": 1,
+    "The explanation reverses the octahedral slip-system count: [001] has more equally resolved nonzero systems than [011] or [111], not fewer.": 1,
+    "NTE phases can tune expansion, but tuning a bulk coefficient does not guarantee zero joint residual stress or elimination of cyclic spallation.": 1,
+    "Reasonable multidisciplinary compressor-disk design workflow linking loads, thermal history, microstructure, fatigue and inspection.": 1,
+    "The high-temperature SiC/protective-silica explanation is reasonable, but identifying ordinary electrical aging with recrystallization misstates the documented oxidation-driven resistance increase.": 1,
+    "Cold work can increase chloride SCC susceptibility, but it does not necessarily create residual tensile stress; the actual stress sign and microstructural response depend on the process and alloy.": 1,
+    "Correct physical state-memory account for cold-work/anneal processing.": 1,
+    "Sound shared high-energy-impact, mixing and defect-generation explanation of mechanical alloying and mechanochemical synthesis.": 1,
+    "Correct mechanical surface-compression explanation for improved contact-fatigue/pitting resistance in suitable peened surfaces.": 1,
+    "Correct definition and conventional first-pass Pilling-Bedworth screening trends.": 1,
+    "Sound causal/state-variable formulation and cross-route validation warning.": 1,
+    "The distinction between laboratory performance and qualified service is sound, but the asserted minimum 15–25-year certification period and dated wholesale-replacement forecast are not supported by a specified program or evidence.": 1,
+    "The morphology/rafting explanation is useful, but the parenthetical sequence says spherical gamma-prime forms first before solution treatment tunes its shape. Solution treatment dissolves gamma-prime, and subsequent cooling/aging and misfit establish its morphology.": 1,
+    "Melting point alone is insufficient to rank creep resistance, but the stated tungsten-versus-nickel-superalloy ranking at 1000 C lacks specified stress, material state and supporting creep data.": 1,
+    "Rhenium can improve wire handling, but its role is not solely ductility: different tungsten-rhenium compositions also provide the distinct thermoelectric responses used for temperature sensing.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "cc272e1fdbd7f00cb24bf06a5536951a4884e5bd39d28f6dc3d40c33d4bb4604",
-  "substantively_unreviewed": 25,
+  "published_decisions_sha256": "ac717cb6a76905db1dca729599ae88f9bb9feff295307aa0367884d14dbdb2ca",
+  "substantively_unreviewed": 0,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

@@ -65605,9 +65605,951 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/materials_manufacturing-0200-0225.json",
       "original_domain_ordinal": 224
+    },
+    {
+      "id": "repo-5d615bbd86b20720f9700d5c",
+      "messages_sha256": "5d615bbd86b20720f9700d5c5973ba25c1010e5b08119ae77f31ac804e760853",
+      "state": "PASS",
+      "rationale": "Correct localization-based explanation of why a weak layer can govern failure despite an acceptable mean.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Slater et al., Multiscale correlative tomography: an investigation of creep cavitation in 316 stainless steel (2017)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5544716/",
+          "finding": "Documents boundary cavities, growth/coalescence and cracking; cavity evolution depends on stress and microstructure."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Often and can preserve mechanism dependence; a crack may arrest in tougher material, so cannot average it away is a warning against using the mean as a fracture criterion."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 107,
+      "assistant_tokens": 70,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 225
+    },
+    {
+      "id": "repo-c5a0b126f39c7e2c6723cad4",
+      "messages_sha256": "c5a0b126f39c7e2c6723cad4dfd00f5769a7463a894c68754f536cecfe60983d",
+      "state": "PASS",
+      "rationale": "Correct physical state-memory account for cold-work/anneal processing.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT Physical Metallurgy Lectures 10 and 11",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/c9dc86331e13d11e8dd5d5a32b44894d_MIT3_40JF09_lec1011.pdf",
+          "finding": "Stored deformation energy, recovery and recrystallization carry prior processing into later state evolution."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A sufficient set of state variables is a modeling choice; it need not encode a uniquely recoverable complete processing history."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 125,
+      "assistant_tokens": 91,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 226
+    },
+    {
+      "id": "repo-e30fe7d49cc5625be2cd67f6",
+      "messages_sha256": "e30fe7d49cc5625be2cd67f6c986630d058de90321352e0ed7b3143b3dd9daa5",
+      "state": "PASS",
+      "rationale": "Sound causal/state-variable formulation and cross-route validation warning.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT Physical Metallurgy Lectures 10 and 11",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/c9dc86331e13d11e8dd5d5a32b44894d_MIT3_40JF09_lec1011.pdf",
+          "finding": "Stored deformation energy, recovery and recrystallization carry prior processing into later state evolution."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Incomplete descriptors raise failure risk rather than making every empirical prediction wrong; the answer defines the desired rigorous model rather than proving any model has achieved it."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 136,
+      "assistant_tokens": 100,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 227
+    },
+    {
+      "id": "repo-1089beae89dca2c9912ba1a5",
+      "messages_sha256": "1089beae89dca2c9912ba1a535c30341df096d46cf997c0a07321cfaf9ce986c",
+      "state": "PASS",
+      "rationale": "Correct warning that hard coatings require substrate support and suitable adhesion/residual stress.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Box et al., Cloaking by coating: how effectively does a thin, stiff coating hide a soft substrate? (2020)",
+          "url": "https://pubs.rsc.org/en/content/articlehtml/2020/sm/c9sm02511a",
+          "finding": "Coating/substrate response depends on both materials and contact scale, so a stiff surface alone does not remove substrate deformation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The source directly supports coupled substrate/contact response; fracture itself also requires a coating strain/adhesion criterion. A coating is not guaranteed to crack merely because it is harder."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 86,
+      "assistant_tokens": 61,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 228
+    },
+    {
+      "id": "repo-d2c6a03cf59df60630f5651e",
+      "messages_sha256": "d2c6a03cf59df60630f5651e866d3aeb8fcb3a5aaa1ec618f15fc721f48a4333",
+      "state": "PASS",
+      "rationale": "Correct definition and conventional first-pass Pilling-Bedworth screening trends.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "The Pilling-Bedworth Ratio of Oxides Formed From Precipitated Phases in Magnesium Alloys (2021)",
+          "url": "https://www.frontiersin.org/journals/materials/articles/10.3389/fmats.2021.761052/full",
+          "finding": "Defines the oxide/consumed-metal volume screen and its conventional low/intermediate/high ratio protective trends."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The explicitly stated first-pass screen is not a guarantee: oxide chemistry, transport, adhesion, growth stress and complex alloy scales can override the simple volume ratio."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 89,
+      "assistant_tokens": 68,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 229
+    },
+    {
+      "id": "repo-23d9cd6bd78eac2544786eef",
+      "messages_sha256": "23d9cd6bd78eac2544786eef14103c283b8e1329d223394d34e642b1568e7af6",
+      "state": "PASS",
+      "rationale": "Correct grain-boundary versus through-grain SCC distinction and qualified examples.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "AMPP, Stress Corrosion Cracking",
+          "url": "https://www.ampp.org/technical-research/impact/corrosion-basics/group-3/stress-corrosion-cracking",
+          "finding": "SCC requires a susceptible material, tensile stress and corrosive environment; intergranular/transgranular paths depend on the system."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The cited mechanisms are common associations, not exclusive mappings of one path to one chemistry; mitigation requires the actual alloy/environment."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 92,
+      "assistant_tokens": 70,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 230
+    },
+    {
+      "id": "repo-cafe8323ef46e17380a0744b",
+      "messages_sha256": "cafe8323ef46e17380a0744bbac4fc07ce0bca0da3f18658422baa4b1957937c",
+      "state": "PASS",
+      "rationale": "Correct mechanical surface-compression explanation for improved contact-fatigue/pitting resistance in suitable peened surfaces.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Hayama et al., Estimation of residual stress relaxation in low alloy steel with different hardness during fatigue by in situ X-ray measurement (2024)",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0142112323004905",
+          "finding": "Surface compression and its cyclic evolution matter to fatigue response; the effect depends on retained stress and loading."
+        },
+        {
+          "title": "The effect of shot peening on rolling contact fatigue behaviour and its crack initiation and propagation in carburized steel (1991)",
+          "url": "https://doi.org/10.1016/0043-1648(91)90347-W",
+          "finding": "Direct rolling-contact experiments show longer fatigue life and slower crack propagation after shot peening in the tested system."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is not a universal improvement for every wear mode; roughness, hardening, surface integrity and stress relaxation can alter net performance."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 71,
+      "assistant_tokens": 54,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 231
+    },
+    {
+      "id": "repo-a49e7b6dc1043e858c077b00",
+      "messages_sha256": "a49e7b6dc1043e858c077b007e9e6b361ffae7ec30e35b4520bf1e4e7efd60db",
+      "state": "QUARANTINE",
+      "rationale": "The high-temperature SiC/protective-silica explanation is reasonable, but identifying ordinary electrical aging with recrystallization misstates the documented oxidation-driven resistance increase.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Kanthal Globar SDA Elements, element failure mode",
+          "url": "https://www.kanthal.com/globalassets/kanthal-global/downloads/kanthal-globar-sda-elements.pdf",
+          "finding": "Ordinary SiC element aging involves oxidation to silica and a progressive increase in electrical resistance, rather than simply recrystallization."
+        },
+        {
+          "title": "Kanthal Globar silicon-carbide heating elements",
+          "url": "https://www.kanthal.com/products/furnace-products-and-heating-systems/electric-heating-elements/silicon-carbide-heating-elements/",
+          "finding": "Commercial self-supporting SiC elements operate at high temperatures, with application/atmosphere-dependent element limits."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the parenthetical aging mechanism; atmosphere, loading and chemical attack affect actual life."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 88,
+      "assistant_tokens": 68,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 232
+    },
+    {
+      "id": "repo-77b1b3e128009aef411c242a",
+      "messages_sha256": "77b1b3e128009aef411c242aaed449b8ff9e4496642bd72e8699ae7800a84f66",
+      "state": "PASS",
+      "rationale": "Reasonable decomposition of TBC oxide growth, sintering, infiltrant attack and eventual interfacial cracking.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Durability of Gadolinium Zirconate/YSZ Double-Layered Thermal Barrier Coatings under Different Thermal Cyclic Test Conditions (2019)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6678775/",
+          "finding": "Thermal cycling combines oxide-growth/expansion-mismatch stresses with sintering/phase effects and interfacial fracture resistance."
+        },
+        {
+          "title": "Zhou et al., Thermal cycling performances of multilayered yttria-stabilized zirconia/gadolinium zirconate thermal barrier coatings (2020)",
+          "url": "https://doi.org/10.1111/jace.16862",
+          "finding": "Experiments examine GZO/YSZ architectures and CMAS resistance, including the tradeoff between infiltration resistance and fracture/interfacial properties."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Not every crack runs exactly along the TGO; topcoat/bondcoat interfaces, TGO morphology and mixed-mode fracture can govern. The energy statement is the qualitative driving-force/resistance comparison."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 140,
+      "assistant_tokens": 119,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 233
+    },
+    {
+      "id": "repo-488e112d78696f41dc1eaa43",
+      "messages_sha256": "488e112d78696f41dc1eaa43a8d6836ffb6b5c2717b1dc740450755844692987",
+      "state": "QUARANTINE",
+      "rationale": "Orientation-dependent creep is real, but [001] does not universally maximize creep life across alloys, stress states and temperatures.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Microstructure evolution and its effect on creep behavior of single crystal Ni-based superalloys with various orientations (2016)",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0921509316305378",
+          "finding": "Reports eight, four and six activated octahedral slip systems for [001], [011] and [111]; creep rankings depend on conditions and alloy."
+        },
+        {
+          "title": "Lukas, Cadek, Kunz and Sustek, Creep behaviour of CMSX-4 superalloy single crystals (1997)",
+          "url": "https://kovmat.sav.sk/article.php?cc=2&rr=35&ss=120",
+          "finding": "At 950 C and 250 MPa, [111] gives the highest tensile creep resistance while [001] gives the highest compressive creep resistance in the tested material."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "Published tests at 950 C/250 MPa give highest tensile creep resistance for [111] and highest compressive resistance for [001] in that material."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Published tests at 950 C/250 MPa give highest tensile creep resistance for [111] and highest compressive resistance for [001] in that material."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the unqualified optimum, preserving the common engineering use of [001] and orientation-dependent slip."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 89,
+      "assistant_tokens": 67,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 234
+    },
+    {
+      "id": "repo-7dde7280ab7d8e3665d5d467",
+      "messages_sha256": "7dde7280ab7d8e3665d5d467268a79a9adeb0e306e8cc6b57580736145e0d4b9",
+      "state": "QUARANTINE",
+      "rationale": "Wear-mode selection and brittleness tradeoffs are useful, but hardness-dependent scaling is not exclusive to abrasive wear; standard adhesive-contact wear models also use inverse hardness.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Improving Archard's Wear Model: An Energy-Based Approach (2024)",
+          "url": "https://link.springer.com/article/10.1007/s11249-024-01888-8",
+          "finding": "Studies adhesive-contact wear using a hardness-dependent Archard model and its limits; hardness dependence is not exclusive to abrasive wear."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "Archard-type adhesive wear V=k*W*L/H depends inversely on hardness when its coefficient/regime are held fixed."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Archard-type adhesive wear V=k*W*L/H depends inversely on hardness when its coefficient/regime are held fixed."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold only the exclusive classification, without claiming Archard behavior universally predicts any wear mechanism."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 97,
+      "assistant_tokens": 71,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 235
+    },
+    {
+      "id": "repo-7001837f8c5f8b6bc3a39681",
+      "messages_sha256": "7001837f8c5f8b6bc3a39681dc722d81368d61a55f55bcfd15bf54482f3ae7ae",
+      "state": "PASS",
+      "rationale": "Reasonable explanation of the common high-temperature ferritic-versus-austenitic stainless-strength tradeoff.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Outokumpu, High-temperature stainless steel grades",
+          "url": "https://www.outokumpu.com/en/expertise/stainless-basics/high-temperature-grades",
+          "finding": "Describes lower high-temperature strength of common ferritic heat-resistant grades relative to austenitic grades, balanced against oxidation and thermal-shock advantages."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The exact 600 C scale and embrittlement windows are grade/time dependent; oxidation performance and thermal shock can favor ferritic grades, and austenitic grades can also precipitate sigma."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 134,
+      "assistant_tokens": 99,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 236
+    },
+    {
+      "id": "repo-ab963ab5d7ca123aa1356281",
+      "messages_sha256": "ab963ab5d7ca123aa13562819cb9a4a57955ca49950b1cc8d40c3de6e5618ce1",
+      "state": "QUARANTINE",
+      "rationale": "Cold work can increase chloride SCC susceptibility, but it does not necessarily create residual tensile stress; the actual stress sign and microstructural response depend on the process and alloy.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "AMPP, Stress Corrosion Cracking",
+          "url": "https://www.ampp.org/technical-research/impact/corrosion-basics/group-3/stress-corrosion-cracking",
+          "finding": "SCC requires a susceptible material, tensile stress and corrosive environment; intergranular/transgranular paths depend on the system."
+        },
+        {
+          "title": "A method of modeling residual stress distribution in turning for different materials (2002)",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0890695502000317",
+          "finding": "Machining stress sign/depth depend on process, material and tool geometry; tensile residual stress cannot be assumed for every cold-work route."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the unqualified residual-tension mechanism and prescriptive mitigation scope, preserving the valid possibility of cold-work-assisted SCC."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 97,
+      "assistant_tokens": 80,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 237
+    },
+    {
+      "id": "repo-638e3cf69d0ba81d39c25ef0",
+      "messages_sha256": "638e3cf69d0ba81d39c25ef0dc3f7214f27af0ef82c64ecb6b1187e667672f59",
+      "state": "QUARANTINE",
+      "rationale": "CMAS infiltration and compliance loss are valid, but the stated generic reprecipitation of a denser non-strain-tolerant phase on cooling conflates distinct high-temperature reaction and cooling-transformation mechanisms.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Kramer et al., CMAS interaction with zirconia thermal barrier coatings (2006)",
+          "url": "https://doi.org/10.1111/j.1551-2916.2006.01209.x",
+          "finding": "Distinguishes high-temperature dissolution/reprecipitation from cooling-related transformations and stiffening of infiltrated material."
+        },
+        {
+          "title": "Wu et al., Microstructure and thermo-physical properties of yttria stabilized zirconia coatings with CMAS deposits (2011)",
+          "url": "https://doi.org/10.1016/j.jeurceramsoc.2011.04.006",
+          "finding": "Composition-dependent reprecipitation and zirconia transformation do not justify a generic denser-phase-on-cooling mechanism."
+        },
+        {
+          "title": "Zhou et al., Thermal cycling performances of multilayered yttria-stabilized zirconia/gadolinium zirconate thermal barrier coatings (2020)",
+          "url": "https://doi.org/10.1111/jace.16862",
+          "finding": "Experiments examine GZO/YSZ architectures and CMAS resistance, including the tradeoff between infiltration resistance and fracture/interfacial properties."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold that specific phase/timing description. Dissolution/reprecipitation can occur during hot exposure, while Y-depleted zirconia can transform on cooling with expansion; infiltrant solidification also reduces compliance. GZO mitigation remains a valid possibility."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 137,
+      "assistant_tokens": 119,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 238
+    },
+    {
+      "id": "repo-f5d80ea6d88180e6ed5376e9",
+      "messages_sha256": "f5d80ea6d88180e6ed5376e955301490e24c042da06860535c1f7e92a391b28f",
+      "state": "REJECT",
+      "rationale": "Rhenium can improve wire handling, but its role is not solely ductility: different tungsten-rhenium compositions also provide the distinct thermoelectric responses used for temperature sensing.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Omega, Fine-gage Tungsten-Rhenium Thermocouples",
+          "url": "https://mx.omega.com/pptst_eng/WWW26_W5W26_W3W25.html",
+          "finding": "W/W26Re, W5Re/W26Re and W3Re/W25Re have distinct calibrated emf responses; rhenium improves handling and changes the thermoelectric response."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "A thermocouple voltage is integral(S_A(T)-S_B(T)) dT. Omega reports different emf for W/W26Re, W5Re/W26Re and W3Re/W25Re pairs, so alloy composition directly participates in sensing."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A thermocouple voltage is integral(S_A(T)-S_B(T)) dT. Omega reports different emf for W/W26Re, W5Re/W26Re and W3Re/W25Re pairs, so alloy composition directly participates in sensing."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The mechanical/metallurgical benefit is retained; high-temperature service limits depend on atmosphere, wire condition and calibration."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 130,
+      "assistant_tokens": 106,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 239
+    },
+    {
+      "id": "repo-0b9c3b8ac42ecfd879b6ce5f",
+      "messages_sha256": "0b9c3b8ac42ecfd879b6ce5f21d310e60d2a1fa9adf1f1547800a0cc9ecf3f0f",
+      "state": "QUARANTINE",
+      "rationale": "The void-nucleation/growth analogy is useful, but the concluding claim that microscopic voids in a loaded continuum are necessarily catastrophic is too strong.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Brennen, Cavitation and Bubble Dynamics, Chapter 1",
+          "url": "https://media.library.caltech.edu/CaltechBOOK%3A1995.001/chap1.htm",
+          "finding": "Fluid cavitation involves pressure-dependent growth of pre-existing or nucleated vapor/gas cavities; nuclei can persist without immediate catastrophic growth."
+        },
+        {
+          "title": "Slater et al., Multiscale correlative tomography: an investigation of creep cavitation in 316 stainless steel (2017)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5544716/",
+          "finding": "Documents boundary cavities, growth/coalescence and cracking; cavity evolution depends on stress and microstructure."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the categorical outcome, preserving the structural analogy and the distinct liquid-collapse versus solid-coalescence mechanisms. Stable/subcritical cavities do not automatically cause component failure."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 139,
+      "assistant_tokens": 114,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 240
+    },
+    {
+      "id": "repo-f101f563ee0e8a9f841b0159",
+      "messages_sha256": "f101f563ee0e8a9f841b0159014445269fe5d100a2e8d999dd430128e05072aa",
+      "state": "QUARANTINE",
+      "rationale": "Melting point alone is insufficient to rank creep resistance, but the stated tungsten-versus-nickel-superalloy ranking at 1000 C lacks specified stress, material state and supporting creep data.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Bhadeshia, Nickel Based Superalloys",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2003/Superalloys/superalloys.html",
+          "finding": "Describes coherent gamma-prime, matrix channels, misfit, solution/aging treatments and condition-dependent rafting contributions."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "At 1000 C tungsten is at roughly 1273/3695=0.345 of its melting temperature; that number alone cannot establish a creep-rate ordering against an unspecified superalloy."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At 1000 C tungsten is at roughly 1273/3695=0.345 of its melting temperature; that number alone cannot establish a creep-rate ordering against an unspecified superalloy."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold that concrete ranking rather than the valid need for microstructural engineering. Homologous temperature is relevant but is not a complete quantitative comparison."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 173,
+      "assistant_tokens": 141,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 241
+    },
+    {
+      "id": "repo-90d00fb89a4419822e1d6de0",
+      "messages_sha256": "90d00fb89a4419822e1d6de0ee2c1521c911ab313e427b986a646004131d8ac5",
+      "state": "QUARANTINE",
+      "rationale": "NTE phases can tune expansion, but tuning a bulk coefficient does not guarantee zero joint residual stress or elimination of cyclic spallation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Chen et al., Effectively control negative thermal expansion of single-phase ferroelectrics of PbTiO3-(Bi,La)FeO3 over a giant range (2013)",
+          "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=914480",
+          "finding": "NTE phases can tune effective expansion, but interface reaction, binding and thermal stresses can remain in composites."
+        },
+        {
+          "title": "Durability of Gadolinium Zirconate/YSZ Double-Layered Thermal Barrier Coatings under Different Thermal Cyclic Test Conditions (2019)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6678775/",
+          "finding": "Thermal cycling combines oxide-growth/expansion-mismatch stresses with sintering/phase effects and interfacial fracture resistance."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "Matching one effective thermal-expansion coefficient does not remove local phase mismatch, temperature gradients, oxidation-growth strain or pre-existing residual stress."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Matching one effective thermal-expansion coefficient does not remove local phase mismatch, temperature gradients, oxidation-growth strain or pre-existing residual stress."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the unconditional engineering outcomes, not the existence or potential uses of negative expansion."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 133,
+      "assistant_tokens": 108,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 242
+    },
+    {
+      "id": "repo-edab0f39c7ac2f142d3656c4",
+      "messages_sha256": "edab0f39c7ac2f142d3656c48e2fd396ca64bd443be9f50ef9a8f370ebaf8476",
+      "state": "QUARANTINE",
+      "rationale": "The morphology/rafting explanation is useful, but the parenthetical sequence says spherical gamma-prime forms first before solution treatment tunes its shape. Solution treatment dissolves gamma-prime, and subsequent cooling/aging and misfit establish its morphology.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Bhadeshia, Nickel Based Superalloys",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2003/Superalloys/superalloys.html",
+          "finding": "Describes coherent gamma-prime, matrix channels, misfit, solution/aging treatments and condition-dependent rafting contributions."
+        },
+        {
+          "title": "Microstructure Quantification in Nickel-Based Superalloy Udimet 720Li (2019)",
+          "url": "https://www.jstage.jst.go.jp/article/matertrans/60/4/60_M2018389/_html/-char/en",
+          "finding": "Measures post-solution cooling/aging-dependent gamma-prime morphology; complements dissolution followed by precipitation during aging."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the stated process sequence rather than silently correcting it to dissolution followed by aging; cuboidal strengthening and condition-dependent rafting remain valid concepts."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 149,
+      "assistant_tokens": 123,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 243
+    },
+    {
+      "id": "repo-69c57fb98d4f3a8f94a92d44",
+      "messages_sha256": "69c57fb98d4f3a8f94a92d4435280e740e81f1692c7287af56496c7d697799be",
+      "state": "QUARANTINE",
+      "rationale": "The weldability mechanism inventory is useful, but NbC is a carbide participant in constitutional liquation, not itself a low-melting eutectic as the wording implies.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Keyhole TIG welding of newly developed nickel-based superalloy VDM Alloy 780 (2022)",
+          "url": "https://link.springer.com/article/10.1007/s40194-022-01425-y",
+          "finding": "Distinguishes constitutional liquation of Nb-rich MC carbides from the resulting gamma/Laves eutectic liquid/resolidified product."
+        },
+        {
+          "title": "TWI, Welding of Nickel Alloys, Part 1",
+          "url": "https://www.twi-global.com/technical-knowledge/job-knowledge/welding-of-nickel-alloys-part-1-107",
+          "finding": "Weld/HAZ hot cracking depends on composition, structure, heat-treatment history and welding conditions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold that phase/reaction classification; strain-age cracking can also arise during later heat treatment and actual mitigation is alloy/process-specific."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 194,
+      "assistant_tokens": 172,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 244
+    },
+    {
+      "id": "repo-c7c4e06f5ea879269a62c1a0",
+      "messages_sha256": "c7c4e06f5ea879269a62c1a0102c0d07c37d8ecada08fea3589ea28a9cdf2c4e",
+      "state": "PASS",
+      "rationale": "Sound shared high-energy-impact, mixing and defect-generation explanation of mechanical alloying and mechanochemical synthesis.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Suryanarayana, Mechanical Alloying: A Novel Technique to Synthesize Advanced Materials (2019)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6750099/",
+          "finding": "Repeated cold welding, fracture and rewelding produce intimate mixing and metastable/nanostructured states; indexed author text supports the process analogy."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Non-equilibrium describes the emphasized defect-rich/metastable products, not a theorem that milling cannot form an equilibrium crystalline phase; mechanical energy and local heating can both contribute."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 149,
+      "assistant_tokens": 122,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 245
+    },
+    {
+      "id": "repo-8b9d255a9afcd00a6eef1acf",
+      "messages_sha256": "8b9d255a9afcd00a6eef1acf537bf0f15d24df68e401ee9e1424198a9f52814f",
+      "state": "REJECT",
+      "rationale": "The explanation reverses the octahedral slip-system count: [001] has more equally resolved nonzero systems than [011] or [111], not fewer.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Microstructure evolution and its effect on creep behavior of single crystal Ni-based superalloys with various orientations (2016)",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0921509316305378",
+          "finding": "Reports eight, four and six activated octahedral slip systems for [001], [011] and [111]; creep rankings depend on conditions and alloy."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "Enumerating the 12 unique {111}<110> systems gives 8 nonzero systems for [001], 4 for [011], and 6 for [111]. Maximum Schmid factors are approximately 0.40825,0.40825,0.27217 respectively."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Enumerating the 12 unique {111}<110> systems gives 8 nonzero systems for [001], 4 for [011], and 6 for [111]. Maximum Schmid factors are approximately 0.40825,0.40825,0.27217 respectively."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Creep ranking and the claimed 30-percent life difference also require a named alloy/test condition; orientation dependence itself is valid."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 162,
+      "assistant_tokens": 135,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 246
+    },
+    {
+      "id": "repo-12c6a2e74a5a948ea558b12f",
+      "messages_sha256": "12c6a2e74a5a948ea558b12f58787cf8a301ea314fee5a83e597c77acd155273",
+      "state": "QUARANTINE",
+      "rationale": "Exposure and elapsed time do not establish chloride SCC as the failure mechanism or justify the proposed substitute-grade strength equivalence and corrosion-immunity assurances.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "FHWA, Corrosion Monitoring Research for City of New York Bridges, FHWA-HRT-14-023 (May 2014), Chapter 1",
+          "url": "https://www.fhwa.dot.gov/publications/research/infrastructure/structures/bridge/14023/001.cfm",
+          "finding": "Bridge-wire deterioration includes pitting, corrosion fatigue, stress corrosion and hydrogen embrittlement; cathodic protection of high-strength steel requires hydrogen-risk control. The report index confirms this title; the chapter HTML title is mislabeled Deep Mixing."
+        },
+        {
+          "title": "AMPP, Stress Corrosion Cracking",
+          "url": "https://www.ampp.org/technical-research/impact/corrosion-basics/group-3/stress-corrosion-cracking",
+          "finding": "SCC requires a susceptible material, tensile stress and corrosive environment; intergranular/transgranular paths depend on the system."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the component-specific replacement guidance pending forensic/load/anchorage evidence and qualified structural assessment; cathodic protection can introduce hydrogen risk for high-strength wires. No actual bridge replacement is approved."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 167,
+      "assistant_tokens": 134,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 247
+    },
+    {
+      "id": "repo-a236625831e020c7835125b5",
+      "messages_sha256": "a236625831e020c7835125b5c0cd441f6482100ba42b96e139405bd8839aebfa",
+      "state": "PASS",
+      "rationale": "Reasonable multidisciplinary compressor-disk design workflow linking loads, thermal history, microstructure, fatigue and inspection.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Bhadeshia, Nickel Based Superalloys",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2003/Superalloys/superalloys.html",
+          "finding": "Describes coherent gamma-prime, matrix channels, misfit, solution/aging treatments and condition-dependent rafting contributions."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "A damage-tolerant design needs a detectable flaw smaller than the critical flaw under the chosen loading, with inspection-growth margins; critical size follows K_c/(Y*sigma), squared and divided by pi in a simple LEFM model."
+        },
+        {
+          "title": "FAA AC33.15-1A, Manufacturing Process of Premium Quality Titanium Alloy Rotating Engine Components (2025)",
+          "url": "https://www.faa.gov/documentLibrary/media/Advisory_Circular/AC_33.15-1A.pdf",
+          "finding": "Sections 10.3.1–10.3.2 link titanium macrotexture, ultrasonic inspection sensitivity and component lifing."
+        },
+        {
+          "title": "Bache et al., Ti-6Al-4V fan-disc microtexture/dwell-fatigue study (2023)",
+          "url": "https://doi.org/10.1016/j.ijfatigue.2023.107589",
+          "finding": "Supports microtexture-sensitive titanium dwell fatigue, including a cold/near-room-temperature debit rather than only high-temperature creep."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A damage-tolerant design needs a detectable flaw smaller than the critical flaw under the chosen loading, with inspection-growth margins; critical size follows K_c/(Y*sigma), squared and divided by pi in a simple LEFM model."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Temperature and alloy capability are component-specific; the quoted range is not a Ti-6Al-4V service approval. Inspection detectability constrains the minimum acceptable critical flaw size in design; it does not physically determine fracture toughness. Dwell-fatigue debit can also occur under cold or near-room-temperature loading."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 291,
+      "assistant_tokens": 257,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 248
+    },
+    {
+      "id": "repo-e3e4c8eeabb25e4b097af92f",
+      "messages_sha256": "e3e4c8eeabb25e4b097af92f4a7714ee0781f8ffccb93e5bd8a5c11fb8511f77",
+      "state": "QUARANTINE",
+      "rationale": "The distinction between laboratory performance and qualified service is sound, but the asserted minimum 15–25-year certification period and dated wholesale-replacement forecast are not supported by a specified program or evidence.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Bhadeshia, Nickel Based Superalloys",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2003/Superalloys/superalloys.html",
+          "finding": "Describes coherent gamma-prime, matrix channels, misfit, solution/aging treatments and condition-dependent rafting contributions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold those quantitative/time-bound claims; this is not a contrary prediction that HEAs will necessarily replace conventional alloys. Actual maturity, alloy family, cost and service evidence need current qualified sources."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 304,
+      "assistant_tokens": 273,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
+      "original_domain_ordinal": 249
     }
   ],
-  "reviewed": 2084,
+  "reviewed": 2109,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true
