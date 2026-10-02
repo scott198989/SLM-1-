@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1072,
-    "REJECT": 56,
-    "QUARANTINE": 234,
-    "NEEDS_HUMAN_REVIEW": 750
+    "PASS": 1094,
+    "REJECT": 57,
+    "QUARANTINE": 236,
+    "NEEDS_HUMAN_REVIEW": 725
   },
   "by_domain": {
     "circuits": {
@@ -14,10 +14,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "engineering_mathematics": {
-      "PASS": 90,
-      "REJECT": 0,
-      "QUARANTINE": 10,
-      "NEEDS_HUMAN_REVIEW": 100
+      "PASS": 112,
+      "REJECT": 1,
+      "QUARANTINE": 12,
+      "NEEDS_HUMAN_REVIEW": 75
     },
     "algebra": {
       "PASS": 176,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1361,
+  "agent_substantive_reviews": 1386,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "eec0f418a97bd90b8ac9c6eb1c1c0cf121ce9f1f6d63d112a70db2a59567abaa",
+  "technical_review_sha256": "7c0a1406bd16ac641df1ffc5f7666042349a827aa7a57f4a000fb039943fc493",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 748,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 723,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1442,11 +1442,36 @@
     "Correct room-wall analogies for Dirichlet, insulated Neumann and convective Robin data.": 1,
     "Correct constrained-rectangle illustration and square optimum.": 1,
     "Correct first-Piola/Cauchy transformation with the volume Jacobian.": 1,
-    "Correct qualified possibility of half-line residue evaluation using non-semicircular contours.": 1
+    "Correct qualified possibility of half-line residue evaluation using non-semicircular contours.": 1,
+    "Correct auxiliary-variable role and conditional sensitivity/dual-value interpretation of a multiplier.": 1,
+    "Correct reason elementary symbolic integration cannot solve every antiderivative problem in elementary terms.": 1,
+    "Correct conceptual Green-function dependence on operator, geometry and boundary conditions.": 1,
+    "The fixed-point/periodic-orbit connection is valid for an appropriate Poincare or period map, but the answer does not specify that construction. An arbitrary map reduction or time discretization need not preserve periodic orbits and stability this way.": 1,
+    "Correct value-versus-normal-derivative distinction and qualified pure-Neumann nonuniqueness example.": 1,
+    "Correct qualified Laplace/Fourier relationship and engineering use comparison.": 1,
+    "Correct plain-language Dirichlet, normal-derivative Neumann and mixed Robin distinctions.": 1,
+    "Correct tangent-modulus derivative and Newton-linearization role in a standard constitutive setting.": 1,
+    "Correct independent-bit complement calculation and approximate packet-error probability.": 1,
+    "Correct short description of the second-order implicit trapezoidal/Crank-Nicolson update.": 1,
+    "Correct local-equilibrium linearization motivation.": 1,
+    "Correct qualified engineering distinction between undamped Fourier integrals and exponentially weighted Laplace transforms.": 1,
+    "The source integral is correct for an invertible homogeneous-boundary problem, but it is not the full solution for arbitrary prescribed boundary data. The answer omits any nonhomogeneous boundary or complementary homogeneous contribution.": 1,
+    "Correct introductory transformation distinction and metric index-raising/lowering role.": 1,
+    "Correct zero-state versus zero-input decomposition for linear systems in the Laplace domain.": 1,
+    "Correct beginner matrix-algebra explanation with qualified noncommutativity.": 1,
+    "Sound qualitative example of analytical balances and conservation constraints informing numerical weather modeling. The answer describes complementary roles rather than asserting that theory alone guarantees a correct discretization.": 1,
+    "Correct statement that a transfer function alone does not specify a unique output without excitation and initial-state assumptions.": 1,
+    "Correct zero-column/free-variable conclusion for a consistent unconstrained linear system.": 1,
+    "Clear and reasonable distinction between structured approximation with analytic feedback and approximation without such checks.": 1,
+    "Correct contour-selection intuition based on poles and decay.": 1,
+    "Correct qualified practical advantages of Laplace methods for linear systems with switching, impulses and initial data.": 1,
+    "Correct residual-waiting-time memorylessness and exponential example, with realistic scope caution.": 1,
+    "Correct spatial balance of linear momentum with body force per unit mass.": 1,
+    "Sine and cosine are not eigenfunctions of the first-derivative operator as stated. Differentiation sends sine to cosine and cosine to negative sine rather than a constant multiple of itself.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "6f9e3c7452f6f34be845850cb6b0e6538e26c35801a3e9fe22e90088fdfbf5d8",
-  "substantively_unreviewed": 748,
+  "published_decisions_sha256": "0438722accb716c96d3e1083307fff73d9a08760811226ccfcb0884bdb84fc72",
+  "substantively_unreviewed": 723,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

@@ -39171,9 +39171,869 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
       "original_domain_ordinal": 99
+    },
+    {
+      "id": "repo-2862fe4e6878bff82edac073",
+      "messages_sha256": "2862fe4e6878bff82edac0730a621c6d6f46a39a761751a083fbd49ee17df409",
+      "state": "QUARANTINE",
+      "rationale": "The fixed-point/periodic-orbit connection is valid for an appropriate Poincare or period map, but the answer does not specify that construction. An arbitrary map reduction or time discretization need not preserve periodic orbits and stability this way.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Sigurd Angenent, Wisconsin Math519, Poincare Map",
+          "url": "https://people.math.wisc.edu/~angenent/519.2016s/notes/poincare-map.html",
+          "finding": "A specifically constructed return/period map has fixed points corresponding to periodic solutions; arbitrary numerical maps do not automatically have that correspondence."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic, differential, transform, probability and counterexample calculation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For x_prime=-x, the equilibrium is asymptotically stable. Forward Euler with h=3 gives x_(n+1)=-2*x_n, whose same fixed point is unstable. Stability correspondence requires the appropriate return-map construction, not arbitrary discretization."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold for the missing return-map scope, not for denying the usefulness or correct periodic-orbit correspondence of a genuine Poincare map."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 49,
+      "assistant_tokens": 33,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 100
+    },
+    {
+      "id": "repo-9760f53381467f44134acc92",
+      "messages_sha256": "9760f53381467f44134acc92ca4f5e3bfb3875a8b6842b3b8ebae005f04d5e0a",
+      "state": "PASS",
+      "rationale": "Correct beginner matrix-algebra explanation with qualified noncommutativity.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic, differential, transform, probability and counterexample calculation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Matrix products compose linear maps, and AB can differ from BA even when both dimensions fit."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 83,
+      "assistant_tokens": 63,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 101
+    },
+    {
+      "id": "repo-38efc28f6730f803f1f4a316",
+      "messages_sha256": "38efc28f6730f803f1f4a3160064f936739e9266f8c9d23a763bb0a50b1be622",
+      "state": "PASS",
+      "rationale": "Correct tangent-modulus derivative and Newton-linearization role in a standard constitutive setting.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "A. F. Bower, Applied Mechanics of Solids8.3, Tangent moduli and Newton procedure",
+          "url": "https://solidmechanics.org/Text/Chapter8_3/Chapter8_3.php",
+          "finding": "Tangent constitutive moduli differentiate stress response and enter Newton linearizations of the finite-element problem."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A differentiable stress map has deltaS=C_tan:deltaE to first order, with components C_ijkl=partial S_ij/partial E_kl."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Stress/strain measures and objective-rate conventions must match. A consistent algorithmic tangent differentiates the implemented update, which can differ from an instantaneous continuum tangent."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 67,
+      "assistant_tokens": 52,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 102
+    },
+    {
+      "id": "repo-6434f4a57ee56f1212a7d575",
+      "messages_sha256": "6434f4a57ee56f1212a7d575362002fdb873fd91f0014a402e1ffe72ea42e421",
+      "state": "PASS",
+      "rationale": "Correct qualified engineering distinction between undamped Fourier integrals and exponentially weighted Laplace transforms.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic, differential, transform, probability and counterexample calculation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The bilateral Laplace transform F(s) integrates f(t)*exp(-s*t); on s=i*omega it reduces to the Fourier transform when that line is in the convergence domain."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Generalized/distributional transforms extend beyond ordinary integral convergence, and unilateral initial-condition formulas use their own convention."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 83,
+      "assistant_tokens": 64,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 103
+    },
+    {
+      "id": "repo-26bf3aa9cdbf37da80767f39",
+      "messages_sha256": "26bf3aa9cdbf37da80767f392cb7fd7bc3adbd3a60101cfff2452881df32aa4b",
+      "state": "PASS",
+      "rationale": "Correct conceptual Green-function dependence on operator, geometry and boundary conditions.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Russell Herman, Greens Functions and Nonhomogeneous Problems",
+          "url": "https://people.uncw.edu/hermanr/pde1/pdebook/green.pdf",
+          "finding": "The source-integral Green representation uses homogeneous boundary conditions; prescribed nonhomogeneous data require their additional solution contribution."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The difference between two fundamental solutions for the same point source is homogeneous away from singular support; boundary data select the needed correction where a Green problem is well posed."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Nullspaces and Neumann compatibility can prevent uniqueness or require normalization; boundary data do not guarantee an invertible operator in every problem."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 75,
+      "assistant_tokens": 58,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 104
+    },
+    {
+      "id": "repo-d932e66afa91cc4cb1add1d1",
+      "messages_sha256": "d932e66afa91cc4cb1add1d1152a4c22f23aca152832a3d63e856c6cbe447ba3",
+      "state": "PASS",
+      "rationale": "Clear and reasonable distinction between structured approximation with analytic feedback and approximation without such checks.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic, differential, transform, probability and counterexample calculation is independently checked."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The answer describes a workflow with might/may qualifiers rather than promising that analytic input eliminates all numerical error."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 165,
+      "assistant_tokens": 141,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 105
+    },
+    {
+      "id": "repo-3666ebe94a167b4b56c2550f",
+      "messages_sha256": "3666ebe94a167b4b56c2550f22d2ace87ea8634a265f099b3992200b43f5a8eb",
+      "state": "PASS",
+      "rationale": "Correct plain-language Dirichlet, normal-derivative Neumann and mixed Robin distinctions.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic, differential, transform, probability and counterexample calculation is independently checked."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Flux is proportional to the normal derivative for an appropriate isotropic constitutive law; anisotropic media can use a conormal flux involving a tensor."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 90,
+      "assistant_tokens": 66,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 106
+    },
+    {
+      "id": "repo-520d7717c4766d5dad70b472",
+      "messages_sha256": "520d7717c4766d5dad70b472301e7fee2687930a844ecd238649eaa5298830bc",
+      "state": "PASS",
+      "rationale": "Correct short description of the second-order implicit trapezoidal/Crank-Nicolson update.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic, differential, transform, probability and counterexample calculation is independently checked."
+        },
+        {
+          "title": "Waterloo CS370, Numerical computation notes, pp.104–105",
+          "url": "https://cs.uwaterloo.ca/~kogeddes/cs370/cs370_notes_f08.pdf",
+          "finding": "The implicit trapezoidal method averages endpoint slopes, giving the standard second-order update."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "y_(n+1)=y_n+(h/2)*(f(t_n,y_n)+f(t_(n+1),y_(n+1))) averages endpoint slopes and is second order under smoothness."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Averaging Euler means the endpoint slope formulas, not averaging two independently completed step solutions. It is A-stable for the linear test problem but not L-stable and can retain stiff oscillations."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 48,
+      "assistant_tokens": 33,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 107
+    },
+    {
+      "id": "repo-f1dbf20d943a7fd6369b2afb",
+      "messages_sha256": "f1dbf20d943a7fd6369b2afb627b5cbca0afefe5976254454591ef1acc240d68",
+      "state": "PASS",
+      "rationale": "Correct spatial balance of linear momentum with body force per unit mass.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "A. F. Bower, Applied Mechanics of Solids2.3",
+          "url": "https://solidmechanics.org/Text/Chapter2_3/Chapter2_3.php",
+          "finding": "Local spatial linear-momentum balance combines divergence of Cauchy stress, body force per current volume and acceleration density."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "div(sigma)+rho*b=rho*a has force per current volume on both sides."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "rho is current density and div is the spatial divergence; reference-configuration balances use Piola stress and reference density."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 59,
+      "assistant_tokens": 43,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 108
+    },
+    {
+      "id": "repo-b75152cf68cef5b847abbdf8",
+      "messages_sha256": "b75152cf68cef5b847abbdf8188f7ab7e90672bd7bfdadc4b0ad84cd69a4ded4",
+      "state": "PASS",
+      "rationale": "Sound qualitative example of analytical balances and conservation constraints informing numerical weather modeling. The answer describes complementary roles rather than asserting that theory alone guarantees a correct discretization.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "ECMWF, Atmospheric dynamics",
+          "url": "https://www.ecmwf.int/en/research/modelling-and-prediction/atmospheric-dynamics",
+          "finding": "Analytical atmospheric balances and physical constraints are combined with numerical formulations in weather models."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Implementing the constraints and checking numerical stability, conservation and physical consistency remain necessary."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 80,
+      "assistant_tokens": 64,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 109
+    },
+    {
+      "id": "repo-445e9b4f1a7ec67835050601",
+      "messages_sha256": "445e9b4f1a7ec6783505060121c37be29cd3fb35eea31f29d10bfe9534efc435",
+      "state": "PASS",
+      "rationale": "Correct independent-bit complement calculation and approximate packet-error probability.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic, differential, transform, probability and counterexample calculation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For100 independent bits with p=0.01, P(any error)=1-(1-p)^100=0.6339676587, consistent with0.634."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The independence assumption is explicit; correlated errors or coding change the packet model."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 176,
+      "assistant_tokens": 153,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 110
+    },
+    {
+      "id": "repo-35ae36b171139b500d40d7a6",
+      "messages_sha256": "35ae36b171139b500d40d7a69d230a9ffda55e9ab92905d03c67eae5dfcf0053",
+      "state": "PASS",
+      "rationale": "Correct qualified Laplace/Fourier relationship and engineering use comparison.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic, differential, transform, probability and counterexample calculation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The ordinary Fourier transform is the bilateral Laplace transform on Re(s)=0 when that line is admissible; other vertical lines correspond to Fourier transforms of exponentially weighted signals."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The answer says a specific vertical line with needed conditions, not every line. Unilateral transform/initial-data conventions remain separate."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 152,
+      "assistant_tokens": 131,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 111
+    },
+    {
+      "id": "repo-2e18e9d6541c41da80d2cdc8",
+      "messages_sha256": "2e18e9d6541c41da80d2cdc860be02a09f644fbd1b5ee761495c707cb15e726b",
+      "state": "PASS",
+      "rationale": "Correct value-versus-normal-derivative distinction and qualified pure-Neumann nonuniqueness example.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic, differential, transform, probability and counterexample calculation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For Laplace with pure Neumann data on a connected domain, adding a constant preserves the equation and normal derivative, while compatibility of total flux is required."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Coefficient-dependent flux and disconnected-domain nullspaces require their particular formulation; sometimes is appropriate."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 159,
+      "assistant_tokens": 125,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 112
+    },
+    {
+      "id": "repo-884bd4dfc1b9054d3ab2ab91",
+      "messages_sha256": "884bd4dfc1b9054d3ab2ab916ce499e83a1feaf868fceaf177c102c4dfa5c2a2",
+      "state": "PASS",
+      "rationale": "Correct introductory transformation distinction and metric index-raising/lowering role.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic, differential, transform, probability and counterexample calculation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With coordinate basis e_i and dual basis dx^i, vector components transform by the coordinate Jacobian while covector components transform by its inverse; a nondegenerate metric identifies the two via v_i=g_ij*v^j."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Same/opposite refers to the corresponding basis transformation with consistent index placement, not an arbitrary matrix convention; a metric is needed for the stated identification."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 70,
+      "assistant_tokens": 53,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 113
+    },
+    {
+      "id": "repo-d5ddccfe4f58364f87eed997",
+      "messages_sha256": "d5ddccfe4f58364f87eed9978e2deebbf02bdb27e94adb8a4b6321ea43996a56",
+      "state": "PASS",
+      "rationale": "Correct zero-column/free-variable conclusion for a consistent unconstrained linear system.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic, differential, transform, probability and counterexample calculation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If columnj of A is0, then A*e_j=0, and adding any multiple ofe_j to a particular solution leaves Ax unchanged."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "An inconsistent system has no solutions; external constraints not represented in A could separately restrict that variable."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 77,
+      "assistant_tokens": 56,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 114
+    },
+    {
+      "id": "repo-df47a3723a6c3660dd4d0a31",
+      "messages_sha256": "df47a3723a6c3660dd4d0a31e3de5ab6aec8174d796ce34e0f24aceca67d44d8",
+      "state": "PASS",
+      "rationale": "Correct qualified practical advantages of Laplace methods for linear systems with switching, impulses and initial data.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic, differential, transform, probability and counterexample calculation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A step input transforms into1/s, a unit impulse into1 under the standard unilateral convention, and derivatives introduce initial values."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The transformed relation is algebraic for suitable linear constant-coefficient systems; arbitrary nonlinear or variable-coefficient equations do not automatically reduce to elementary algebra."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 87,
+      "assistant_tokens": 69,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 115
+    },
+    {
+      "id": "repo-de236e2cbb8ae4ebf3c4fb04",
+      "messages_sha256": "de236e2cbb8ae4ebf3c4fb0456519481978bb0d9090e00b0f6c3869d5c8b6719",
+      "state": "PASS",
+      "rationale": "Correct contour-selection intuition based on poles and decay.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic, differential, transform, probability and counterexample calculation is independently checked."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Closing below reverses the usual contour orientation and residue sign. Pole convenience cannot substitute for proving the auxiliary arc vanishes or handling branch cuts."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 83,
+      "assistant_tokens": 55,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 116
+    },
+    {
+      "id": "repo-7cfeac11e677c56d2bd3be9f",
+      "messages_sha256": "7cfeac11e677c56d2bd3be9fb435fd249e6e39be35259be77ab817d36538100f",
+      "state": "QUARANTINE",
+      "rationale": "The source integral is correct for an invertible homogeneous-boundary problem, but it is not the full solution for arbitrary prescribed boundary data. The answer omits any nonhomogeneous boundary or complementary homogeneous contribution.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Russell Herman, Greens Functions and Nonhomogeneous Problems",
+          "url": "https://people.uncw.edu/hermanr/pde1/pdebook/green.pdf",
+          "finding": "The source-integral Green representation uses homogeneous boundary conditions; prescribed nonhomogeneous data require their additional solution contribution."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic, differential, transform, probability and counterexample calculation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For u_second=0 on[0,1] with u(0)=0,u(1)=1, f=0 but u=x. The stated integral ofG*f is identically0 for every G and cannot produce that boundary-driven solution."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold for missing homogeneous-boundary/invertibility scope; do not reject the standard Green representation under those conditions."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 59,
+      "assistant_tokens": 39,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 117
+    },
+    {
+      "id": "repo-5a794ed70a364782c752d9ba",
+      "messages_sha256": "5a794ed70a364782c752d9bac3d528b573d8590bcb9f6c02fdf3bdc985eaa301",
+      "state": "PASS",
+      "rationale": "Correct local-equilibrium linearization motivation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic, differential, transform, probability and counterexample calculation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For x_prime=f(x) near f(x_star)=0, setting delta=x-x_star gives delta_prime=Df(x_star)*delta+o(||delta||)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Nonhyperbolic linearizations can be inconclusive for nonlinear stability, so tractable does not mean decisive in every case."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 45,
+      "assistant_tokens": 26,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 118
+    },
+    {
+      "id": "repo-1ffde8fde1e9b663ddbc92b7",
+      "messages_sha256": "1ffde8fde1e9b663ddbc92b7a8d97be6978628ff4acf0c9034909543d775d517",
+      "state": "PASS",
+      "rationale": "Correct reason elementary symbolic integration cannot solve every antiderivative problem in elementary terms.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic, differential, transform, probability and counterexample calculation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The Gaussian exp(-x²) has no elementary antiderivative, although it defines the error function."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Lack of an elementary primitive does not forbid exact special-function or definite-integral representations, and it is not the same as numerical noncomputability."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 41,
+      "assistant_tokens": 23,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 119
+    },
+    {
+      "id": "repo-894f34f316b72ea634cca401",
+      "messages_sha256": "894f34f316b72ea634cca401fa603a1481b7e6cd2d7c453adbfb61b18fc435d8",
+      "state": "PASS",
+      "rationale": "Correct zero-state versus zero-input decomposition for linear systems in the Laplace domain.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic, differential, transform, probability and counterexample calculation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For y_prime+a*y=b*u, Y=(b/(s+a))*U+y(0)/(s+a); the two terms show input and initial-state contributions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The full state realization and initial state may be needed to recover a general zero-input contribution; a transfer function alone encodes the zero-state map."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 147,
+      "assistant_tokens": 125,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 120
+    },
+    {
+      "id": "repo-e23ea8c49c4907783e3d5cae",
+      "messages_sha256": "e23ea8c49c4907783e3d5cae1809417cd1dfcb331bd701ba3d3b2c0430f3ef95",
+      "state": "PASS",
+      "rationale": "Correct residual-waiting-time memorylessness and exponential example, with realistic scope caution.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic, differential, transform, probability and counterexample calculation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For T exponential with rate lambda>0, P(T>s+t|T>s)=exp(-lambda*t)=P(T>t)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The conditioning is on survival/waiting beyonds; discrete waiting times use the geometric analogue."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 79,
+      "assistant_tokens": 61,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 121
+    },
+    {
+      "id": "repo-bbb0716ab8e7480e07de166f",
+      "messages_sha256": "bbb0716ab8e7480e07de166f455203196021b5cf4f2c29fc0f20c8332f6e0f31",
+      "state": "PASS",
+      "rationale": "Correct statement that a transfer function alone does not specify a unique output without excitation and initial-state assumptions.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic, differential, transform, probability and counterexample calculation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The same H(s)=1/(s+1) gives different outputs for a zero input, a step or an impulse; nonzero initial state adds another term."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Knowing numerical initial conditions requires a compatible state realization for their effect; the source correctly says additional information is needed."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 149,
+      "assistant_tokens": 126,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 122
+    },
+    {
+      "id": "repo-151b71def6b188a10441bcd9",
+      "messages_sha256": "151b71def6b188a10441bcd9cac0a70d8608a6f170dfdbd817c4b9069388e55b",
+      "state": "PASS",
+      "rationale": "Correct auxiliary-variable role and conditional sensitivity/dual-value interpretation of a multiplier.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic, differential, transform, probability and counterexample calculation is independently checked."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The interpretation depends on sign conventions, scaling and regularity; the source expressly says depending on the application."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 78,
+      "assistant_tokens": 56,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 123
+    },
+    {
+      "id": "repo-fb2423dd6a8f66356dfa024f",
+      "messages_sha256": "fb2423dd6a8f66356dfa024f9b62ac152a1064ca34de8536303a584acf54ca64",
+      "state": "REJECT",
+      "rationale": "Sine and cosine are not eigenfunctions of the first-derivative operator as stated. Differentiation sends sine to cosine and cosine to negative sine rather than a constant multiple of itself.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic, differential, transform, probability and counterexample calculation is independently checked."
+        },
+        {
+          "title": "MIT 18.06, Operators",
+          "url": "https://www.mit.edu/~18.06/Fall07/operators.pdf",
+          "finding": "Differentiation maps sine to cosine and cosine to negative sine; they are eigenfunctions of second differentiation, not first differentiation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "D sin x=cos x cannot equal lambda*sin x for allx, since at0 the left side is1 and the right side0. Both are eigenfunctions of D² with eigenvalue-1; exp(±i*x) are eigenfunctions ofD."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Their importance in wave/heat problems is valid, but replacing differentiation with second differentiation would rewrite the incorrect source claim."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 59,
+      "assistant_tokens": 39,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0100-0125.json",
+      "original_domain_ordinal": 124
     }
   ],
-  "reviewed": 1361,
+  "reviewed": 1386,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true
