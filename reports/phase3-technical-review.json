@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1048,
+    "PASS": 1072,
     "REJECT": 56,
-    "QUARANTINE": 233,
-    "NEEDS_HUMAN_REVIEW": 775
+    "QUARANTINE": 234,
+    "NEEDS_HUMAN_REVIEW": 750
   },
   "by_domain": {
     "circuits": {
@@ -14,10 +14,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "engineering_mathematics": {
-      "PASS": 66,
+      "PASS": 90,
       "REJECT": 0,
-      "QUARANTINE": 9,
-      "NEEDS_HUMAN_REVIEW": 125
+      "QUARANTINE": 10,
+      "NEEDS_HUMAN_REVIEW": 100
     },
     "algebra": {
       "PASS": 176,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1336,
+  "agent_substantive_reviews": 1361,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "2685e90c7ebf57f94befc02ca2bdedb2a958c3d2cbe280ff335ff7a110798fba",
+  "technical_review_sha256": "eec0f418a97bd90b8ac9c6eb1c1c0cf121ce9f1f6d63d112a70db2a59567abaa",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 773,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 748,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1417,11 +1417,36 @@
     "The dependence on method, step size and problem is right, but numerical stability is not characterized merely by the absence of exponential error growth. Unbounded polynomial amplification can also violate zero stability.": 1,
     "The Green-Lagrange tensor and finite-rotation motivation are correct, but the answer conflates scalar engineering strain with the infinitesimal strain tensor. Engineering strain is still an exact finite length-change measure, even when a small-strain tensor approximation is inappropriate.": 1,
     "Correct importance of boundary/time prescriptions in selecting a Green function and its physical interpretation.": 1,
-    "Correct unilateral Laplace derivative and initial-value explanation.": 1
+    "Correct unilateral Laplace derivative and initial-value explanation.": 1,
+    "Correct hyperelastic second-Piola/Green-strain energy conjugacy in its reference-volume convention.": 1,
+    "Correct Fourier-series coefficient/projection explanation.": 1,
+    "Sound qualitative fracture-mechanics example of using near-tip analytic structure to inform numerical resolution and interpretation.": 1,
+    "Correct mechanical constitutive-law definition and linear-elastic tensor example.": 1,
+    "Correct principal-stress definition and zero-shear plane interpretation in classical continuum mechanics.": 1,
+    "Correct contrast between unexamined numerical output and computation informed by analytic structure.": 1,
+    "Appropriate differential diagnosis of a BER mismatch without claiming one unsupported cause.": 1,
+    "Clear and technically reasonable description of analytically informed scientific computation.": 1,
+    "Correct distinction and equivalence relationships among determinant, rank and square-matrix inverse.": 1,
+    "Correct warning that multiplier equations generally identify candidates, with convexity improving global-optimality conclusions.": 1,
+    "Correct common-cause dependence warning for shared-supply redundancy, with a qualified series-system comparison.": 1,
+    "Exact principal-stretch extraction from the right Cauchy-Green tensor.": 1,
+    "Correct distinction between asymptotic order and practical error/cost/stability behavior.": 1,
+    "Correct conditional symmetry-adapted coordinate reduction example.": 1,
+    "The motivation for suitable implicit stiff solvers is sound, but the answer assigns numerical stability regions to stiff problems. Stability regions belong to discretization methods; the problem supplies eigenvalues and time scales that interact with the chosen region.": 1,
+    "Correct introductory Riemannian metric-tensor meaning.": 1,
+    "Correct qualified statement of the value of partial theory when closed-form solutions are unavailable.": 1,
+    "Correct reason Newton-based implicit solvers use Jacobian information for efficient local linearized solves.": 1,
+    "Correct basic explicit-versus-implicit distinction and common stability tradeoff.": 1,
+    "Correct plain-language forward Euler description.": 1,
+    "Correct indexed-family definition and useful engineering joint-statistics motivations.": 1,
+    "Correct room-wall analogies for Dirichlet, insulated Neumann and convective Robin data.": 1,
+    "Correct constrained-rectangle illustration and square optimum.": 1,
+    "Correct first-Piola/Cauchy transformation with the volume Jacobian.": 1,
+    "Correct qualified possibility of half-line residue evaluation using non-semicircular contours.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "4a2c228d41c68740b15e8d5e8534928a8590bf1ce80067e6e77838a39a22ec17",
-  "substantively_unreviewed": 773,
+  "published_decisions_sha256": "6f9e3c7452f6f34be845850cb6b0e6538e26c35801a3e9fe22e90088fdfbf5d8",
+  "substantively_unreviewed": 748,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

@@ -38287,9 +38287,893 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
       "original_domain_ordinal": 74
+    },
+    {
+      "id": "repo-2747e1a86fb91dadfc613794",
+      "messages_sha256": "2747e1a86fb91dadfc613794738b68e8851264d989cc57fb0374e336b1169e64",
+      "state": "PASS",
+      "rationale": "Correct contrast between unexamined numerical output and computation informed by analytic structure.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Every algebraic identity, local model, stability example, conditional probability and geometrical relation is independently checked."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The opening Not exactly is awkward for the question form, but the substantive explanation is clear and self-contained; simulation itself can also be well explained."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 85,
+      "assistant_tokens": 65,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 75
+    },
+    {
+      "id": "repo-a014fb2ced086e14eae005e1",
+      "messages_sha256": "a014fb2ced086e14eae005e186d31cd4e4dda888614cc7878de8f0ed7ad38955",
+      "state": "PASS",
+      "rationale": "Correct qualified statement of the value of partial theory when closed-form solutions are unavailable.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Every algebraic identity, local model, stability example, conditional probability and geometrical relation is independently checked."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Existence, bounds and asymptotic arguments require actual model assumptions; the answer describes possible roles rather than guaranteeing every listed result."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 157,
+      "assistant_tokens": 134,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 76
+    },
+    {
+      "id": "repo-4cd6c0a0915e002af0b7b8c3",
+      "messages_sha256": "4cd6c0a0915e002af0b7b8c384786ea73ba1c902b791aaee7b635635ff3b10b3",
+      "state": "PASS",
+      "rationale": "Correct warning that multiplier equations generally identify candidates, with convexity improving global-optimality conclusions.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Every algebraic identity, local model, stability example, conditional probability and geometrical relation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Minimizing a differentiable convex objective over a convex feasible set has no nonglobal local minima; stationary multiplier candidates in nonconvex problems need further checks."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Applicable KKT conditions/constraint qualifications and feasibility must still be verified; convexity is not a claim that an arbitrary root of any equations is optimal."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 84,
+      "assistant_tokens": 61,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 77
+    },
+    {
+      "id": "repo-63a0be03cac9c3595f5c3d5e",
+      "messages_sha256": "63a0be03cac9c3595f5c3d5e40b55b1d77bd62724b3f8138da8e6db3625a276a",
+      "state": "PASS",
+      "rationale": "Correct distinction between asymptotic order and practical error/cost/stability behavior.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Every algebraic identity, local model, stability example, conditional probability and geometrical relation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Errors C1*h^p and C2*h^q with q>p can be ordered either way at a fixed h because constants differ; the higher power is the asymptotic advantage."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Assumes the claimed asymptotic expansion is valid in the tested step regime."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 62,
+      "assistant_tokens": 43,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 78
+    },
+    {
+      "id": "repo-ddcf30cfbe6934a4fd219443",
+      "messages_sha256": "ddcf30cfbe6934a4fd2194435b429356ab08040b41d52b002c29a2b92032f69b",
+      "state": "PASS",
+      "rationale": "Correct first-Piola/Cauchy transformation with the volume Jacobian.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "A. F. Bower, Applied Mechanics of Solids2.3",
+          "url": "https://solidmechanics.org/Text/Chapter2_3/Chapter2_3.php",
+          "finding": "Defines first Piola and Cauchy stresses and the Piola transformation, along with principal-stress interpretation in a classical symmetric stress tensor."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "P=J*sigma*F^-T implies P*F^T=J*sigma, consistent with traction-area transformation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Requires an invertible deformation gradient and consistent stress/index conventions."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 64,
+      "assistant_tokens": 52,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 79
+    },
+    {
+      "id": "repo-cfa85f7c7cff23dd540a0a62",
+      "messages_sha256": "cfa85f7c7cff23dd540a0a62410e4261e06c4c617ab9634576bba43ae67c189b",
+      "state": "PASS",
+      "rationale": "Correct room-wall analogies for Dirichlet, insulated Neumann and convective Robin data.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Every algebraic identity, local model, stability example, conditional probability and geometrical relation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For conductive heat flux q=-k grad T, fixedT is Dirichlet, q dot n=0 is homogeneous Neumann, and q dot n=h*(T-Tambient) is Robin."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The air/room example is an analogy for a suitable heat model; bulk flow or radiation may require additional terms."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "VISUAL_CONTEXT_CHECK"
+      ],
+      "qwen_tokens": 152,
+      "assistant_tokens": 128,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 80
+    },
+    {
+      "id": "repo-d23138ee5c04b79548ebe51e",
+      "messages_sha256": "d23138ee5c04b79548ebe51ef24526c4013902ca452c875efda087823dba4b58",
+      "state": "PASS",
+      "rationale": "Correct constrained-rectangle illustration and square optimum.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Every algebraic identity, local model, stability example, conditional probability and geometrical relation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With2(x+y)=P and positive sides, xy<=((x+y)/2)²=P²/16, with equality x=y=P/4."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 88,
+      "assistant_tokens": 61,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 81
+    },
+    {
+      "id": "repo-afdd229de74f07157e987260",
+      "messages_sha256": "afdd229de74f07157e9872609f7a91b1bc72b96053238ff2634b20160c58a5a7",
+      "state": "PASS",
+      "rationale": "Correct basic explicit-versus-implicit distinction and common stability tradeoff.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "SciPy solve_ivp reference",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html",
+          "finding": "Recommends explicit RK methods for nonstiff problems and implicit Radau/BDF for stiff problems; documents Jacobians and finite-difference alternatives used in those implementations."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Every algebraic identity, local model, stability example, conditional probability and geometrical relation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For y_prime=lambda*y, forward Euler gives R(z)=1+z while backward Euler gives R(z)=1/(1-z), illustrating the larger left-half-plane stability region of a standard implicit method."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Better stability is typical guidance for appropriate implicit schemes, not a theorem that every implicit method dominates every explicit one; nonlinear-solve convergence and accuracy still limit usable steps."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 48,
+      "assistant_tokens": 31,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 82
+    },
+    {
+      "id": "repo-43c7a174a4d7fb9ab2e48aa2",
+      "messages_sha256": "43c7a174a4d7fb9ab2e48aa224e517d1a62130474863d57da3d7cd33d36f0f36",
+      "state": "PASS",
+      "rationale": "Clear and technically reasonable description of analytically informed scientific computation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Every algebraic identity, local model, stability example, conditional probability and geometrical relation is independently checked."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Theory and numerics each have limitations; the answer outlines a methodology rather than certifying every hybrid output."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 159,
+      "assistant_tokens": 140,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 83
+    },
+    {
+      "id": "repo-ad3e7c919d1784a5dea2689a",
+      "messages_sha256": "ad3e7c919d1784a5dea2689a58b80c5d52a76bf7ad15691f0f603eb21d6834c0",
+      "state": "PASS",
+      "rationale": "Correct reason Newton-based implicit solvers use Jacobian information for efficient local linearized solves.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "SciPy solve_ivp reference",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html",
+          "finding": "Recommends explicit RK methods for nonstiff problems and implicit Radau/BDF for stiff problems; documents Jacobians and finite-difference alternatives used in those implementations."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Every algebraic identity, local model, stability example, conditional probability and geometrical relation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Newton updates for residual R(y)=0 solve J_R(y)*delta=-R(y); implicit ODE steps produce such residual equations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Some implicit methods can use fixed-point iteration, approximate Jacobians or matrix-free products. The prompt asks why some methods need the Jacobian, not whether every implicit implementation must form it explicitly."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 55,
+      "assistant_tokens": 36,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 84
+    },
+    {
+      "id": "repo-584af89898d4dfbee27ef2cc",
+      "messages_sha256": "584af89898d4dfbee27ef2ccf11faa206e77ab7ea5914518f9ab51286492de21",
+      "state": "PASS",
+      "rationale": "Correct common-cause dependence warning for shared-supply redundancy, with a qualified series-system comparison.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NASA, Common Cause Failures Dominate and Defeat Redundancy",
+          "url": "https://ntrs.nasa.gov/citations/20240013667",
+          "finding": "Common-cause dependent failures limit the reliability gain from redundancy that an independent model would predict."
+        },
+        {
+          "method": "independent_random_process_and_sampling_review",
+          "finding": "A stochastic process is an indexed family with joint-distribution structure; finite-sample probability estimates and model mismatch can explain deviations from theoretical performance."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If a common supply event has probabilityq and fails both components, joint failure is at leastq; treating two marginal failures nearq as independent would instead predict approximatelyq²."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Sharing a supply does not quantify the dependence by itself; event definitions, mission time and architecture still need a model. The source says may and can rather than assigning a failure rate."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 166,
+      "assistant_tokens": 138,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 85
+    },
+    {
+      "id": "repo-b62a9da00ba1205c8b561bca",
+      "messages_sha256": "b62a9da00ba1205c8b561bca67564ed2250bc9aecb2ff5aa0eb3a13d5325e0fd",
+      "state": "PASS",
+      "rationale": "Correct plain-language forward Euler description.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Every algebraic identity, local model, stability example, conditional probability and geometrical relation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "y_(n+1)=y_n+h*f(t_n,y_n) uses the current slope as the local linear extrapolation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The simplest phrasing is introductory; accuracy and stability depend on step choice and the ODE."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 49,
+      "assistant_tokens": 33,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 86
+    },
+    {
+      "id": "repo-30b6433a89ff91e075696522",
+      "messages_sha256": "30b6433a89ff91e07569652274b59d10f007d0f7264e4dfa0c6e8b8b2e39e4f1",
+      "state": "PASS",
+      "rationale": "Appropriate differential diagnosis of a BER mismatch without claiming one unsupported cause.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_random_process_and_sampling_review",
+          "finding": "A stochastic process is an indexed family with joint-distribution structure; finite-sample probability estimates and model mismatch can explain deviations from theoretical performance."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For independent binary error observations with probabilityp, variance of p_hat is p*(1-p)/N; finite samples, detector/noise assumptions and SNR normalization can change a comparison."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Low-SNR error rates are often easier to estimate than rare high-SNR errors, but an insufficient sample can still matter. No dataset or particular diagnosis is asserted."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 168,
+      "assistant_tokens": 137,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 87
+    },
+    {
+      "id": "repo-0dac5750bc72d0219e1e5225",
+      "messages_sha256": "0dac5750bc72d0219e1e5225f4d5f3215b94f5ea9c72ebf40e406246c9081148",
+      "state": "PASS",
+      "rationale": "Correct Fourier-series coefficient/projection explanation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Every algebraic identity, local model, stability example, conditional probability and geometrical relation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For period2pi, a_n=(1/pi)*integral f(x)cos(nx)dx and b_n=(1/pi)*integral f(x)sin(nx)dx over one period, with the corresponding mean convention."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Normalization depends on period and basis, and integrability/convergence assumptions still apply."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 55,
+      "assistant_tokens": 37,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 88
+    },
+    {
+      "id": "repo-99504015b8695534159243f7",
+      "messages_sha256": "99504015b8695534159243f71904a1e3b0ea1b78b56c8096e42549fbc7f6fe58",
+      "state": "PASS",
+      "rationale": "Correct introductory Riemannian metric-tensor meaning.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Every algebraic identity, local model, stability example, conditional probability and geometrical relation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A positive-definite symmetric metric gives squared length g(v,v), angles through g(v,w), and coordinate volume density sqrt(det g)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Pseudo-Riemannian metrics in relativity require a signed interval interpretation rather than a positive distance; the answer uses the ordinary geometric metric setting."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 60,
+      "assistant_tokens": 45,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 89
+    },
+    {
+      "id": "repo-1da723922b19e822c52b1f8e",
+      "messages_sha256": "1da723922b19e822c52b1f8e379f6fcd901e6d485473e6982276c9594833f9aa",
+      "state": "PASS",
+      "rationale": "Correct principal-stress definition and zero-shear plane interpretation in classical continuum mechanics.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "A. F. Bower, Applied Mechanics of Solids2.3",
+          "url": "https://solidmechanics.org/Text/Chapter2_3/Chapter2_3.php",
+          "finding": "Defines first Piola and Cauchy stresses and the Piola transformation, along with principal-stress interpretation in a classical symmetric stress tensor."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Every algebraic identity, local model, stability example, conditional probability and geometrical relation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If sigma*n=lambda*n for a unit eigenvector, traction is entirely normal with magnitude/signlambda and has zero tangential component."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The usual symmetric Cauchy tensor gives real eigenvalues and orthogonal principal axes; generalized nonsymmetric couple-stress settings require separate treatment."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 46,
+      "assistant_tokens": 32,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 90
+    },
+    {
+      "id": "repo-b695d4e5b170041748e922b7",
+      "messages_sha256": "b695d4e5b170041748e922b796a80010382e3ee960ff597558a0d4affda62723",
+      "state": "PASS",
+      "rationale": "Correct indexed-family definition and useful engineering joint-statistics motivations.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_random_process_and_sampling_review",
+          "finding": "A stochastic process is an indexed family with joint-distribution structure; finite-sample probability estimates and model mismatch can explain deviations from theoretical performance."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Mean/variance/PSD need their moment and stationarity conditions where applicable; the answer lists questions one may ask rather than asserting all processes have every statistic."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 168,
+      "assistant_tokens": 143,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 91
+    },
+    {
+      "id": "repo-13c90f31b2f5c179fabb6882",
+      "messages_sha256": "13c90f31b2f5c179fabb6882fbc052e4852481e3777bf008c65df844c0725a46",
+      "state": "PASS",
+      "rationale": "Correct mechanical constitutive-law definition and linear-elastic tensor example.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "A. F. Bower, Applied Mechanics of Solids2.3",
+          "url": "https://solidmechanics.org/Text/Chapter2_3/Chapter2_3.php",
+          "finding": "Defines first Piola and Cauchy stresses and the Piola transformation, along with principal-stress interpretation in a classical symmetric stress tensor."
+        },
+        {
+          "title": "A. F. Bower, Applied Mechanics of Solids3.2, Linear Elasticity",
+          "url": "https://solidmechanics.org/Text/Chapter3_2/Chapter3_2.php",
+          "finding": "Gives the linear elastic stress-strain relation using a fourth-order stiffness tensor."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For small-strain linear elasticity, sigma_ij=C_ijkl*epsilon_kl is a fourth-order stiffness mapping."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Constitutive laws more broadly also relate heat flux, electric current and other physical responses; this answer uses the stress/deformation mechanics context."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 68,
+      "assistant_tokens": 53,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 92
+    },
+    {
+      "id": "repo-469195648bd209e387a0ccdd",
+      "messages_sha256": "469195648bd209e387a0ccddbb21128f62605613c7a4f43a0277977f680b10e3",
+      "state": "PASS",
+      "rationale": "Correct distinction and equivalence relationships among determinant, rank and square-matrix inverse.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Every algebraic identity, local model, stability example, conditional probability and geometrical relation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For an n-by-n matrix over a field, det A!=0 iff rank A=n iff A has a two-sided inverse; rectangular matrices still have rank."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Generalized or one-sided inverses are separate concepts; the source explicitly discusses a true square inverse."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 168,
+      "assistant_tokens": 142,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 93
+    },
+    {
+      "id": "repo-e64b5b79bfb5ebcbd6d8c4c6",
+      "messages_sha256": "e64b5b79bfb5ebcbd6d8c4c6aa996ba00448de719c504a9558a3e9308bdb5ffa",
+      "state": "PASS",
+      "rationale": "Correct qualified possibility of half-line residue evaluation using non-semicircular contours.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Every algebraic identity, local model, stability example, conditional probability and geometrical relation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A wedge contour can relate integrals on two rays via analytic continuation; residue contributions and arc bounds determine the remaining real integral."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Branch cuts and nonvanishing arcs must be handled; the answer says often and identifies the contour-design requirement."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 77,
+      "assistant_tokens": 48,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 94
+    },
+    {
+      "id": "repo-7da01eca95bd875621659f5f",
+      "messages_sha256": "7da01eca95bd875621659f5f5857e032d348c0603835908e101d97d9a8af3509",
+      "state": "QUARANTINE",
+      "rationale": "The motivation for suitable implicit stiff solvers is sound, but the answer assigns numerical stability regions to stiff problems. Stability regions belong to discretization methods; the problem supplies eigenvalues and time scales that interact with the chosen region.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "SciPy solve_ivp reference",
+          "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html",
+          "finding": "Recommends explicit RK methods for nonstiff problems and implicit Radau/BDF for stiff problems; documents Jacobians and finite-difference alternatives used in those implementations."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Every algebraic identity, local model, stability example, conditional probability and geometrical relation is independently checked."
+        },
+        {
+          "title": "ETH Zurich, Stability of ODE Solvers, slides5 and8-12",
+          "url": "https://ethz.ch/content/dam/ethz/special-interest/chab/icb/shih-lab-dam/documents/Numerics/2025/ex7/SNM_Ex07_presentation.pdf",
+          "finding": "Defines stability regions through each numerical method amplification factor and compares them against the ODE eigenvalues scaled by step size."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For the same problem y_prime=-1000*y and step h=.01, forward Euler has amplification1+h*lambda=-9, while backward Euler has1/(1-h*lambda)=1/11."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for the method-versus-problem attribution, not the standard advantage of appropriate implicit stiff schemes or their nonlinear-solve overhead."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 63,
+      "assistant_tokens": 43,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 95
+    },
+    {
+      "id": "repo-0e9de907e01f68379ee64dd5",
+      "messages_sha256": "0e9de907e01f68379ee64dd581131006c23bc00dda440a93b52c3292d5f0257f",
+      "state": "PASS",
+      "rationale": "Sound qualitative fracture-mechanics example of using near-tip analytic structure to inform numerical resolution and interpretation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Every algebraic identity, local model, stability example, conditional probability and geometrical relation is independently checked."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The singular asymptotic field belongs to an appropriate elastic idealization; a real process/plastic zone can regularize it. The source says may and does not certify a fracture prediction."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 88,
+      "assistant_tokens": 70,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 96
+    },
+    {
+      "id": "repo-5bd47f0de663d543e79cd304",
+      "messages_sha256": "5bd47f0de663d543e79cd304d0d77ec66f113b680b1eed5394002f88b249dc75",
+      "state": "PASS",
+      "rationale": "Exact principal-stretch extraction from the right Cauchy-Green tensor.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "A. F. Bower, Applied Mechanics of Solids2.1.14",
+          "url": "https://solidmechanics.org/text/Chapter2_1/Chapter2_1.htm",
+          "finding": "Principal stretches are square roots of the eigenvalues of C=F^T F or B=F F^T, equivalently the singular values of F."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "C=F^T F is positive definite for nonsingular F; its positive eigenvalues are the squares of the singular values/principal stretches."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 58,
+      "assistant_tokens": 40,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 97
+    },
+    {
+      "id": "repo-074b690c2f10f2fcaf91c233",
+      "messages_sha256": "074b690c2f10f2fcaf91c233176904f166a29632f17f37b0067d0b0dc40567fc",
+      "state": "PASS",
+      "rationale": "Correct hyperelastic second-Piola/Green-strain energy conjugacy in its reference-volume convention.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "A. F. Bower, Applied Mechanics of Solids3.5",
+          "url": "https://solidmechanics.org/Text/Chapter3_5/Chapter3_5.php",
+          "finding": "Stress is obtained by differentiating stored energy with its conjugate strain/deformation measure, with the appropriate reference-volume convention."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Since C=2E+I, S=2*partial W/partial C=partial W/partial E for the elastic energy representation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "W is energy per reference volume. Incompressibility or other ideal constraints add multiplier reaction stresses not fixed by the isochoric energy derivative alone."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 72,
+      "assistant_tokens": 57,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 98
+    },
+    {
+      "id": "repo-6e461ec4c33945d7f134f549",
+      "messages_sha256": "6e461ec4c33945d7f134f549863fbec701a7f96ddfaf7508ed95ffe86a94024f",
+      "state": "PASS",
+      "rationale": "Correct conditional symmetry-adapted coordinate reduction example.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Every algebraic identity, local model, stability example, conditional probability and geometrical relation is independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a genuinely radial scalar field u(r) in3D, the Laplacian reduces to u_second+(2/r)*u_prime rather than depending on angular coordinates."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The equations, geometry and data must share the spherical symmetry; spherical coordinates alone do not turn an arbitrary3D problem into1D."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 73,
+      "assistant_tokens": 57,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
+      "original_domain_ordinal": 99
     }
   ],
-  "reviewed": 1336,
+  "reviewed": 1361,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

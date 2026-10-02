@@ -20,16 +20,16 @@
   "model_weights_downloaded_or_loaded": false,
   "training_or_paid_compute": false,
   "automatic_checks_recreated": false,
-  "test_log_sha256": "21a7d4b849f8ef004b181f23b47598d9fa5d321d210fae24bb447a02e7679837",
+  "test_log_sha256": "c058234119b004ac84010309433dad059cd3a7989d8455466a9444520e017012",
   "tested_code_sha256": {
     "scripts/phase3-verify-private-release.py": "64d76484b0852d041083301ce113ddc255b7906512def3dc12d0f92dc96910e1",
     "src/forge_data/citation_pilot.py": "9e17e50194ba8cb22eca0b431359d7aec1d870f8417e87b4938e3c1ff4c968d4",
     "tests/test_private_release_verifier.py": "e2a5854473e449455e9bc2ffcc207346f018a3bb49206a81546cd1cea2ace817"
   },
-  "base_commit": "6c5e817608b65f8cf1cf289eee1946f7bc2bf6b8",
+  "base_commit": "a966d05799d2194a06cda94756934fec0688df34",
   "all_public_input_hashes_verified": 8,
   "candidate_message_hashes_verified": 2112,
-  "substantive_decisions_verified": 1361,
+  "substantive_decisions_verified": 1336,
   "earlier_374_decisions_unchanged": true,
   "unchanged_frozen_files": [
     "src/forge_tools/engineering.py",
@@ -46,15 +46,15 @@
     "QUARANTINE": 7
   },
   "current_dispositions": {
-    "PASS": 1072,
+    "PASS": 1048,
     "REJECT": 56,
-    "QUARANTINE": 234,
-    "NEEDS_HUMAN_REVIEW": 750
+    "QUARANTINE": 233,
+    "NEEDS_HUMAN_REVIEW": 775
   },
-  "substantively_unreviewed": 748,
+  "substantively_unreviewed": 773,
   "next_batch": {
     "domain": "engineering_mathematics",
-    "offset": 100,
+    "offset": 75,
     "limit": 25
   },
   "official_reader_executed": true,
@@ -65,15 +65,15 @@
   "earlier_392_decisions_unchanged": true,
   "latest_batch": {
     "domain": "engineering_mathematics",
-    "offset": 75,
+    "offset": 50,
     "limit": 25,
-    "selected_window_end_exclusive": 100,
+    "selected_window_end_exclusive": 75,
     "new_reviews": 25,
     "skipped_existing": 0,
     "preserved_structural_quarantines": [],
     "dispositions": {
-      "PASS": 24,
-      "QUARANTINE": 1
+      "PASS": 21,
+      "QUARANTINE": 4
     }
   },
   "independent_agent_qa_complete": true,
@@ -81,7 +81,7 @@
   "latest_batch_only_expected_ledger_rows_changed": true,
   "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
   "publication_status": "LOCAL_ONLY",
-  "earlier_decisions_unchanged": 1336,
+  "earlier_decisions_unchanged": 1311,
   "electrical_domain_complete": true,
   "electrical_records_verified": 300,
   "all_392_published_decisions_unchanged": true,

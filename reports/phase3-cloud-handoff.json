@@ -8,10 +8,10 @@
   "review": {
     "curriculum": 2112,
     "dispositions": {
-      "PASS": 1048,
+      "PASS": 1072,
       "REJECT": 56,
-      "QUARANTINE": 233,
-      "NEEDS_HUMAN_REVIEW": 775
+      "QUARANTINE": 234,
+      "NEEDS_HUMAN_REVIEW": 750
     },
     "by_domain": {
       "circuits": {
@@ -21,10 +21,10 @@
         "NEEDS_HUMAN_REVIEW": 0
       },
       "engineering_mathematics": {
-        "PASS": 66,
+        "PASS": 90,
         "REJECT": 0,
-        "QUARANTINE": 9,
-        "NEEDS_HUMAN_REVIEW": 125
+        "QUARANTINE": 10,
+        "NEEDS_HUMAN_REVIEW": 100
       },
       "algebra": {
         "PASS": 176,
@@ -75,8 +75,8 @@
         "NEEDS_HUMAN_REVIEW": 242
       }
     },
-    "agent_substantive_reviews": 1336,
-    "substantively_unreviewed": 773,
+    "agent_substantive_reviews": 1361,
+    "substantively_unreviewed": 748,
     "reviewed_specialist_holds": 2,
     "complete_source_domains": [
       "circuits",
@@ -101,13 +101,13 @@
     },
     {
       "path": "data/review/phase3/technical-review.jsonl.gz",
-      "bytes": 410319,
-      "sha256": "4a2c228d41c68740b15e8d5e8534928a8590bf1ce80067e6e77838a39a22ec17"
+      "bytes": 416405,
+      "sha256": "6f9e3c7452f6f34be845850cb6b0e6538e26c35801a3e9fe22e90088fdfbf5d8"
     },
     {
       "path": "manifests/phase3-agent-technical-review.json",
-      "bytes": 2054399,
-      "sha256": "288b0ec61efc6d6a5d01f90c83706af4146b609a4300e0a4bb798b425900eb62"
+      "bytes": 2101208,
+      "sha256": "d3f1aff81a1ff1d393c0af79490e6a679df3cd854259cc94cdd82c057eea8774"
     },
     {
       "path": "manifests/phase3-release-families.json",
@@ -116,8 +116,8 @@
     },
     {
       "path": "reports/phase3-technical-review.json",
-      "bytes": 245890,
-      "sha256": "847780ba051693992fbfcd242cdf3d9a700df8afdf35da0a8700e9737c457b26"
+      "bytes": 248575,
+      "sha256": "ac945a73a719ded3fa6fbcd9194a5da4e8ed5f7b3b3d35c393c51277575be46c"
     },
     {
       "path": "src/forge_tools/engineering.py",
@@ -222,7 +222,7 @@
   "next_domain": "engineering_mathematics",
   "next_batch": {
     "domain": "engineering_mathematics",
-    "offset": 75,
+    "offset": 100,
     "limit": 25
   },
   "workers": [],
@@ -233,9 +233,9 @@
   "latest_cloud_continuation": "reports/phase3-cloud-continuation-validation.json",
   "local_continuation": {
     "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
-    "local_predecessor_commit": "a966d05799d2194a06cda94756934fec0688df34",
+    "local_predecessor_commit": "6c5e817608b65f8cf1cf289eee1946f7bc2bf6b8",
     "publication_status": "LOCAL_ONLY; do not claim these counts are on GitHub",
-    "latest_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+    "latest_batch": "reports/phase3-review-batches/engineering_mathematics-0075-0100.json",
     "electrical_domain_complete": true,
     "trigonometry_pending_review_queue_complete": true,
     "trigonometry_preserved_structural_ordinals": [
