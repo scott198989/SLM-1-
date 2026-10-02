@@ -9895,9 +9895,750 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/electrical-components-0075-0100.json",
       "original_domain_ordinal": 99
+    },
+    {
+      "id": "repo-2265377a18e130cfd243b7e5",
+      "messages_sha256": "2265377a18e130cfd243b7e58c6b094fcdf141d7a11d2bb813e209a0c6fd5ee2",
+      "state": "PASS",
+      "rationale": "Correct conceptual distinction: confidence intervals quantify uncertainty about an estimated parameter, whereas prediction intervals address a future observation. The examples do not substitute a parameter interval for a unit-level prediction or invent a confidence level.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NIST prediction limits",
+          "url": "https://www.itl.nist.gov/div898/software/dataplot/refman1/auxillar/predlimi.htm",
+          "finding": "Prediction limits concern new observations or their mean, distinct from uncertainty in an estimated population parameter."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For normal data with estimated mean, a new single-observation prediction has variance proportional to 1+1/n, versus 1/n for the mean estimate. This demonstrates the different uncertainties without assuming all reliability models are normal."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 85,
+      "assistant_tokens": 59,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 100
+    },
+    {
+      "id": "repo-69ec511e3393b676a6e64177",
+      "messages_sha256": "69ec511e3393b676a6e64177400973f78af866f3be7409deb7b5113d99c61760",
+      "state": "PASS",
+      "rationale": "Reasonable qualitative warning that insufficient stress/temperature margin can cause degradation or failure that benign testing misses. Might and things like introduce illustrative failure modes, not a prediction that every listed mode must occur. It supplies no unsupported time-to-failure or numeric derating rule.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "Stress and mission conditions affect margins; surviving one test condition does not logically guarantee survival of hotter or higher-voltage service conditions."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 79,
+      "assistant_tokens": 63,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 101
+    },
+    {
+      "id": "repo-4fccb67823b95499d6c0ba5a",
+      "messages_sha256": "4fccb67823b95499d6c0ba5a3ae21448f4b5b1ed172f1179a38efe847130718b",
+      "state": "PASS",
+      "rationale": "Balanced and technically sound supply trade-off discussion, explicitly rejecting an unconditional linear-versus-switcher rule. Hybrid switching conversion plus low-noise postregulation is established; actual attenuation still depends on PSRR, headroom and layout, and no numerical rail-noise guarantee is asserted.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices AN-140 regulator concepts",
+          "url": "https://www.analog.com/en/resources/app-notes/an-140.html",
+          "finding": "Linear regulators favor low ripple/simplicity but dissipate voltage-drop times load current; switch-mode conversion trades switching artifacts and complexity for efficiency."
+        },
+        {
+          "title": "Analog Devices low-noise LDO postregulation",
+          "url": "https://www.analog.com/en/resources/technical-articles/supply-clean-power-with-ultralow-noise-ldo-regulators.html",
+          "finding": "Precision applications commonly combine a switching converter with a sufficiently high-PSRR low-noise LDO postregulator."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 180,
+      "assistant_tokens": 156,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 102
+    },
+    {
+      "id": "repo-6d89be02b14453ca74a2804e",
+      "messages_sha256": "6d89be02b14453ca74a2804e15ba9a7f8f7f2802f6dddaaec539ce260c5bd8de",
+      "state": "PASS",
+      "rationale": "Faithful Bayesian paraphrase: credible field observations update prior beliefs while engineering judgment and evidence quality still matter. It does not claim that returns alone without exposure or censoring information constitute a complete reliability estimator.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NIST Bayesian reliability evaluation",
+          "url": "https://www.itl.nist.gov/div898/handbook/apr/section2/apr1a.htm",
+          "finding": "Bayes' formula combines prior information and current evidence to produce a posterior distribution for reliability parameters."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Posterior(theta|data) is proportional to likelihood(data|theta) times prior(theta); informative data can change the distribution and subsequent predictions."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 120,
+      "assistant_tokens": 92,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 103
+    },
+    {
+      "id": "repo-8e1f4db297452f2df0ff003a",
+      "messages_sha256": "8e1f4db297452f2df0ff003a2f4e64a8593080f7b1512ba00e67ebbc1bf9eb0c",
+      "state": "PASS",
+      "rationale": "Correctly recognizes correlated regional/sub-tier risk and distinguishes vendor count from genuinely independent supply paths. May and depends on timing/backup approval retain uncertainty about the unqualified backup. The answer makes no purchasing commitment or absolute resilience ranking.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "Two suppliers both disabled by the same event do not provide independent redundancy for that event. Geographic diversity removes some common causes, while a backup still in qualification is not yet guaranteed capacity."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 186,
+      "assistant_tokens": 124,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 104
+    },
+    {
+      "id": "repo-55e70c1222e2eb8b16b558b1",
+      "messages_sha256": "55e70c1222e2eb8b16b558b138eb692c4b70a16566b079b15c7caa6d82b97dda",
+      "state": "PASS",
+      "rationale": "Plausible conditional chain from scattered chassis capacitors to frequency-dependent return paths, resonances and common-mode behavior. The prompt asks what might follow, and the answer uses can/may/in some products rather than asserting that every multipoint bond is bad.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices practical capacitor behavior",
+          "url": "https://www.analog.com/en/resources/technical-articles/2022/07/16/11/45/passives-arent-really-so-passive-part-1-capacitors.html",
+          "finding": "Parasitic inductance, geometry and resonance determine capacitive connections' frequency response; ground-coupled noise currents are not erased."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Real connections have finite L and C, so impedances and resonances vary with frequency. Added paths alter the network's current division; for AC excitation capacitive current scales with frequency, capacitance and voltage."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 172,
+      "assistant_tokens": 135,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 105
+    },
+    {
+      "id": "repo-e2c60db2b84cbaf1e27ea446",
+      "messages_sha256": "e2c60db2b84cbaf1e27ea4469fd79baaa485b638476b014a3c13d968fec50fa5",
+      "state": "PASS",
+      "rationale": "Correct first-order equivalent model of a real inductor: series winding resistance, parasitic winding capacitance and core loss augment ideal inductance. The stated heating, Q and resonance consequences follow; no claim of a complete high-frequency/distributed model is made.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Coilcraft application-frequency inductor testing",
+          "url": "https://www.coilcraft.com/en-us/resources/application-notes/testing-inductors-at-application-frequencies/",
+          "finding": "Winding resistance and copper/core losses affect Q; winding capacitance and inductance set self-resonance."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 73,
+      "assistant_tokens": 54,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 106
+    },
+    {
+      "id": "repo-f2c3a4f529e8190f30eec3cf",
+      "messages_sha256": "f2c3a4f529e8190f30eec3cfed29d349c6c10f5c3337ba63197da97ca55d8d02",
+      "state": "QUARANTINE",
+      "rationale": "The resolver/rotary-transformer identification is sound, but the claim that its sine and cosine voltages are proportional to shaft angle is technically ambiguous and literally incorrect. Their excited output amplitudes vary with sin(theta) and cos(theta), not linearly with theta. Passing would require privately repairing the stated relationship; preserve the original and hold for clarification.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices resolver-to-digital converter principles",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/precision-rtdc-measures-angular-position-and-velocity.html",
+          "finding": "A resolver is a transformer-like angular sensor with excitation-modulated outputs whose amplitudes follow sine and cosine of shaft angle."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At theta=0 the cosine envelope is maximal rather than zero; at theta=90 degrees it is zero. The envelope is proportional to cos(theta), not theta."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 62,
+      "assistant_tokens": 49,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 107
+    },
+    {
+      "id": "repo-dc3c8d2d5d486c28f081fdfd",
+      "messages_sha256": "dc3c8d2d5d486c28f081fdfd25f646e6474017a06691d20d2cf812be2266669b",
+      "state": "PASS",
+      "rationale": "Correct overlap/shoot-through mechanism and plausible supply, thermal and parasitic stress consequences when dead time is inadequate. Dependence on gate drive, temperature and delay skew is appropriate. It does not calculate a universal safe dead time or say longer dead time always lowers reverse-recovery loss.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TI half-bridge dead time",
+          "url": "https://www.ti.com/document-viewer/lit/html/SSZTC74/GUID-13B74FE6-E26C-408C-A89A-C65944F91199",
+          "finding": "Dead time separates outgoing-device turn-off and incoming-device turn-on to prevent half-bridge overlap and shoot-through."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If both half-bridge channels conduct, the supply sees a low-impedance path through both switches. Current is limited by channel and loop impedances, not the intended load path."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 183,
+      "assistant_tokens": 153,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 108
+    },
+    {
+      "id": "repo-651674af81647781a41697fe",
+      "messages_sha256": "651674af81647781a41697fe74a6b60bd83233a692be3855ce2f9229f7c9c289",
+      "state": "PASS",
+      "rationale": "Accurate introductory mains overvoltage-category hierarchy and relationship to expected transients. Higher category at comparable system voltage increases impulse withstand/clearance requirements. No actual clearance distance, measurement permission or claim that category alone determines insulation design is supplied.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Phoenix Contact insulation coordination tests",
+          "url": "https://www.phoenixcontact.com/en-au/quality-tests/quality-tests-for-terminal-blocks/electrical-tests-terminal-blocks",
+          "finding": "Overvoltage categories correspond to expected transient stress and help determine impulse withstand and clearance requirements with voltage and other conditions."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 74,
+      "assistant_tokens": 60,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 109
+    },
+    {
+      "id": "repo-1cb78b2746ca1e1eeb191470",
+      "messages_sha256": "1cb78b2746ca1e1eeb191470e93fa833d650062619ff0c6d4031e5160ee5327c",
+      "state": "PASS",
+      "rationale": "Correctly identifies interrupting capacity as a necessary requirement for a fuse exposed to 10 kA prospective fault current and warns against underspecified breaking capacity. Only if does not claim that this is the sole selection condition; rated voltage, AC/DC duty and other coordination requirements remain applicable.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Littelfuse technical application guide",
+          "url": "https://www.littelfuse.com/assetdocs/powr-gard-catalog?assetguid=85d36235-a32b-4608-bfed-f9878aa43af0",
+          "finding": "Interrupting rating is the available fault current the fuse can interrupt safely at its rated voltage and specified test conditions."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 68,
+      "assistant_tokens": 43,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 110
+    },
+    {
+      "id": "repo-38274ab985fd39c5a5f1dbdd",
+      "messages_sha256": "38274ab985fd39c5a5f1dbdd39040afd31099429e9c2c07cbfa24743c17d96db",
+      "state": "QUARANTINE",
+      "rationale": "The electrical-versus-light-emitting distinction is sound, but the definition restricts LED emission to visible or infrared without an example/typically qualifier. Ultraviolet LEDs are also established devices. Preserve this incomplete general definition rather than silently treating the two bands as an expressly non-exhaustive list.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Nichia ultraviolet LED product announcement",
+          "url": "https://nichia.co.jp/en/newsroom/2024/2024_030601.html",
+          "finding": "LEDs also emit ultraviolet wavelengths, including the demonstrated 308 nm and 330 nm products."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 66,
+      "assistant_tokens": 45,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 111
+    },
+    {
+      "id": "repo-cae457603e22c62f987e5c86",
+      "messages_sha256": "cae457603e22c62f987e5c869a3d68482231b941853b21cac1c4446f28d988eb",
+      "state": "QUARANTINE",
+      "rationale": "The complete prompt asks to define this topic without identifying it or supplying earlier context. The answer assumes BOM balancing. That antecedent cannot be validated from a filename or the answer's own choice of topic, even though the analogy itself is coherent.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "No BOM or other topic is named anywhere in the visible user prompt."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 130,
+      "assistant_tokens": 112,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 112
+    },
+    {
+      "id": "repo-73bdf621053c9e1a9cf315e8",
+      "messages_sha256": "73bdf621053c9e1a9cf315e83bd666055bae64bc92792ab5b96472ccd65d99d6",
+      "state": "PASS",
+      "rationale": "Correct qualified mechanism: corrosion films/degradation can raise contact resistance enough to make conduction unreliable. It does not claim that every corrosion product has the same resistance or that corrosion is the only contact failure mode.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "Increased series contact resistance produces a larger I*R voltage drop for the same load current; sufficiently high or intermittent resistance can break functional operation."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 43,
+      "assistant_tokens": 21,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 113
+    },
+    {
+      "id": "repo-746637e738a577cd61b210de",
+      "messages_sha256": "746637e738a577cd61b210de75d7f59ad8a2e2d4061549a2c557ec2b63ca19f4",
+      "state": "PASS",
+      "rationale": "Correct general reason for excitation of passive resistive or inductive transducers: an external electrical stimulus makes a parameter change observable as a signal. The source type depends on sensor; the text does not explicitly prescribe DC excitation for an LVDT.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NI displacement and position sensing",
+          "url": "https://www.ni.com/en/shop/data-acquisition/sensor-fundamentals/displacement-and-position-sensors.html",
+          "finding": "LVDTs and related passive transducers require an excitation signal; the appropriate waveform and conditioner depend on transducer type."
+        },
+        {
+          "title": "Analog Devices resolver-to-digital converter principles",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/precision-rtdc-measures-angular-position-and-velocity.html",
+          "finding": "A resolver is a transformer-like angular sensor with excitation-modulated outputs whose amplitudes follow sine and cosine of shaft angle."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 67,
+      "assistant_tokens": 50,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 114
+    },
+    {
+      "id": "repo-368524e202928295b92289d2",
+      "messages_sha256": "368524e202928295b92289d26280af704847e4222ebddcb87898e90dffa376bc",
+      "state": "PASS",
+      "rationale": "Correct environmental purpose of IP classification and distinction between an exposed contactor and a protected enclosed starter. Usually and higher are broad comparison language; no specific IP number or suitability for a named harsh location is asserted.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Schneider contactor product data",
+          "url": "https://iportal.se.com/Contents/docs/SQD-LC1D65AF7.PDF",
+          "finding": "Representative bare motor contactor has an IP20 front-face rating rather than a sealed weatherproof enclosure."
+        },
+        {
+          "title": "Schneider enclosed starter comparison",
+          "url": "https://www.se.com/th/en/faqs/FA358198/",
+          "finding": "Representative enclosed starter has IP65 environmental protection, illustrating that enclosure selection changes the protection level."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 72,
+      "assistant_tokens": 52,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 115
+    },
+    {
+      "id": "repo-6780987578721e3ca1f1ed1b",
+      "messages_sha256": "6780987578721e3ca1f1ed1bec5f2489be4a98054fd83a23cce27b654e1e3598",
+      "state": "PASS",
+      "rationale": "Useful causal decomposition separating observed symptom, measurement effect, physical mechanism and enabling root cause. The moisture/poor-seal chain is explicitly an example, not an unsupported diagnosis of an actual returned device.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "Different mechanisms may produce the same drift symptom; an enabling seal-process defect is conceptually distinct from its downstream leakage mechanism."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 77,
+      "assistant_tokens": 55,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 116
+    },
+    {
+      "id": "repo-6dd5911eec08a548af7f9726",
+      "messages_sha256": "6dd5911eec08a548af7f97261e6d99850407c349afe6d6bf3504ff53fe5190f4",
+      "state": "QUARANTINE",
+      "rationale": "Clipping/saturation can remove quantitative amplitude information beyond the sensor's range, but data in this region is useless is too absolute. A saturated reading may still establish an over-range event, sign or lower/upper bound, depending on the device. Hold the overstatement rather than discarding all possible information.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices input clipping",
+          "url": "https://www.analog.com/en/resources/faqs/faq_input_signal_clipping.html",
+          "finding": "Exceeding input common-mode or differential limits can clip the signal, losing amplitude fidelity rather than making every possible inference impossible."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For an ideal upper clip y=min(x,M), y=M does not identify x, but implies x>=M. Therefore amplitude fidelity is lost while a bound can remain."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 61,
+      "assistant_tokens": 49,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 117
+    },
+    {
+      "id": "repo-ae521b9a62a6309f913d187e",
+      "messages_sha256": "ae521b9a62a6309f913d187e05400e7ef4b33406338b3a6be4f116ccd36832ea",
+      "state": "REJECT",
+      "rationale": "The two-times-per-ten-degrees rule is not the Arrhenius equation's general prediction. Its factor depends on activation energy, starting absolute temperature and mechanism; no such values are supplied. Calling lifetime exponential in temperature also hides the inverse-absolute-temperature dependence. A useful heuristic cannot replace the model as stated.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NIST Arrhenius acceleration model",
+          "url": "https://www.itl.nist.gov/div898/handbook/apr/section1/apr151.htm",
+          "finding": "Temperature acceleration depends on the mechanism's activation energy and both absolute temperatures, rather than a universal factor of two per ten degrees."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "AF=exp((Ea/k)*(1/T1-1/T2)). For 298.15 K to 308.15 K, Ea=0.3 eV gives about 1.46, while Ea=1.0 eV gives about 3.54. Neither is universally 2."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 71,
+      "assistant_tokens": 54,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 118
+    },
+    {
+      "id": "repo-5194aba37c2071c1e897c4ff",
+      "messages_sha256": "5194aba37c2071c1e897c4ff53e31f7f9aab5bcd38dd23c961381c7f7274c851",
+      "state": "PASS",
+      "rationale": "Correct basic three-wire start/stop seal-in logic: NC stop in series, NO start bypassed by a NO auxiliary holding contact, and dropping the coil when stop opens. It is a functional explanation, not a complete compliant motor-protection or emergency-stop installation drawing.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "OMRON contactor terminology",
+          "url": "https://www.ia.omron.com/support/guide/753/explanation_of_terms.html",
+          "finding": "Auxiliary contacts serve signal and self-holding control circuits, distinct from main power contacts."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Holding logic is coil_next=stop_closed AND (start_closed OR auxiliary_closed). Opening stop forces coil_next false irrespective of the auxiliary contact."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 87,
+      "assistant_tokens": 69,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 119
+    },
+    {
+      "id": "repo-d8aff5cd8878692bbdbca357",
+      "messages_sha256": "d8aff5cd8878692bbdbca357fec87c88ea3d6dd836af5abab1b0c37f2014b07e",
+      "state": "PASS",
+      "rationale": "Accurate concise description of a reported failure that the return-test process cannot reproduce/confirm. It does not infer that no real fault existed or that the reporter was mistaken.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "Failure to reproduce evidence during a bounded test is distinct from proof that the unit never failed in its mission conditions."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 43,
+      "assistant_tokens": 24,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 120
+    },
+    {
+      "id": "repo-b20fea869d638d2ac7e12a1d",
+      "messages_sha256": "b20fea869d638d2ac7e12a1dd478317576fb104bd9c629077017500b26df31ad",
+      "state": "PASS",
+      "rationale": "Correct conceptual contrast between basic protection and a reinforced insulation system equivalent to double insulation for applicable single-fault conditions. Equivalent to two layers describes the protection level, not a claim that reinforced insulation must consist of two physically separable layers.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TI Power Supply Design insulation definitions",
+          "url": "https://www.ti.com/lit/ml/slup421/slup421.pdf",
+          "finding": "Reinforced insulation is one insulation system providing protection equivalent to double insulation, which combines basic and supplementary insulation for normal, abnormal and single-fault conditions."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 52,
+      "assistant_tokens": 39,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 121
+    },
+    {
+      "id": "repo-db48e73efc9cd5a6dddab2b1",
+      "messages_sha256": "db48e73efc9cd5a6dddab2b1bbeb623c602290a19393a0f2f8bee9ecf7100e0d",
+      "state": "PASS",
+      "rationale": "Faithful explanation of circumferential cable-shield bonding at the enclosure entry and why pigtail inductance can undermine high-frequency shielding. It acknowledges serviceability, insulation and low-frequency trade-offs and does not prescribe an unqualified universal grounding topology.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Würth Elektronik cable shielding",
+          "url": "https://www.we-online.com/en/components/productnavigator/cable-solutions",
+          "finding": "Pigtail impedance creates shield-to-housing RF voltage; circumferential shield coverage supports a low-impedance high-frequency bond."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Connection reactance grows as X_L=2*pi*f*L. Short broad low-inductance bonding reduces shield/chassis RF voltage for the same current."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 172,
+      "assistant_tokens": 136,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 122
+    },
+    {
+      "id": "repo-1c2fea8c9e5c066c3979bf70",
+      "messages_sha256": "1c2fea8c9e5c066c3979bf700accce37db238427fe9d077bf7f501616fa8398a",
+      "state": "QUARANTINE",
+      "rationale": "The prompt does not identify whether the optocoupler is a safety-isolation component, its ratings, certification or proposed replacement. The answer assumes those facts and offers an unsupported keep-it-or-redesign-the-whole-path dichotomy; a lower-cost equivalently qualified substitute may exist. Safety review is appropriate, but lawsuit/fire cannot be inferred from cost reduction alone.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TI Power Supply Design insulation definitions",
+          "url": "https://www.ti.com/lit/ml/slup421/slup421.pdf",
+          "finding": "Reinforced insulation is one insulation system providing protection equivalent to double insulation, which combines basic and supplementary insulation for normal, abnormal and single-fault conditions."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 76,
+      "assistant_tokens": 47,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 123
+    },
+    {
+      "id": "repo-7db2747bb9d71380b55e6301",
+      "messages_sha256": "7db2747bb9d71380b55e6301c09ec4f9fce688dde0901ca1cc7a39b5294fc741",
+      "state": "PASS",
+      "rationale": "Correct use case for overlap switching when interruption is undesirable, with the crucial warning that sources are briefly connected together. It does not approve tying incompatible low-impedance power sources together or promise glitch-free operation for every signal circuit.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "Make-before-break closes the new path before opening the old path, creating a finite overlap interval. That preserves continuity but permits current between the connected sources."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 68,
+      "assistant_tokens": 50,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0100-0125.json",
+      "original_domain_ordinal": 124
     }
   ],
-  "reviewed": 467,
+  "reviewed": 492,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

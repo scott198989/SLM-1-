@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 322,
-    "REJECT": 31,
-    "QUARANTINE": 115,
-    "NEEDS_HUMAN_REVIEW": 1644
+    "PASS": 341,
+    "REJECT": 32,
+    "QUARANTINE": 120,
+    "NEEDS_HUMAN_REVIEW": 1619
   },
   "by_domain": {
     "circuits": {
@@ -44,10 +44,10 @@
       "NEEDS_HUMAN_REVIEW": 208
     },
     "electrical_components": {
-      "PASS": 75,
-      "REJECT": 4,
-      "QUARANTINE": 21,
-      "NEEDS_HUMAN_REVIEW": 200
+      "PASS": 94,
+      "REJECT": 5,
+      "QUARANTINE": 26,
+      "NEEDS_HUMAN_REVIEW": 175
     },
     "electromagnetism": {
       "PASS": 2,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 467,
+  "agent_substantive_reviews": 492,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "28e8f3ff77805f1b3773d433e97f125cf7cef26a0fccf64273a19ee3fb3547be",
+  "technical_review_sha256": "c6f19ce4ee59fa70fa82a7707c6da741dc78d16f052aadadaa92bedfe0831611",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1642,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1617,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -548,11 +548,36 @@
     "Reasonable conditional selection strategy covering salt/UV/thermal exposure, vibration, galvanic compatibility, sealed locking connectors and maintainability. It explicitly avoids a universal material choice and does not certify a particular crane, enclosure rating or connector installation.": 1,
     "The dim-or-unlit prediction is plausible for many red LEDs on one AA cell, and the answer does allow subnominal-voltage glow. However, nominal forward voltage alone does not establish a safe upper current for the unspecified LED and fresh cell. Hold the generally-safe conclusion pending the actual I–V curve, current limits and battery characteristics.": 1,
     "Positive electrothermal feedback is described correctly, but common in paralleled MOSFETs without proper balancing lacks the operating-region qualification needed to distinguish positive on-resistance current sharing from linear-mode hot-spot instability. Derating and thermal design also do not alone establish prevention at every bias point. Preserve pending scope qualification.": 1,
-    "The positive-feedback mechanism is sound, but common risk in semiconductor-based sensors and thermistor arrays is too broad without bias circuit, coefficient and thermal conditions. NTC and PTC devices do not all increase dissipation with temperature under the same excitation. The generic sensor category does not establish the claimed runaway susceptibility.": 1
+    "The positive-feedback mechanism is sound, but common risk in semiconductor-based sensors and thermistor arrays is too broad without bias circuit, coefficient and thermal conditions. NTC and PTC devices do not all increase dissipation with temperature under the same excitation. The generic sensor category does not establish the claimed runaway susceptibility.": 1,
+    "The prompt does not identify whether the optocoupler is a safety-isolation component, its ratings, certification or proposed replacement. The answer assumes those facts and offers an unsupported keep-it-or-redesign-the-whole-path dichotomy; a lower-cost equivalently qualified substitute may exist. Safety review is appropriate, but lawsuit/fire cannot be inferred from cost reduction alone.": 1,
+    "Correctly identifies interrupting capacity as a necessary requirement for a fuse exposed to 10 kA prospective fault current and warns against underspecified breaking capacity. Only if does not claim that this is the sole selection condition; rated voltage, AC/DC duty and other coordination requirements remain applicable.": 1,
+    "Correct conceptual distinction: confidence intervals quantify uncertainty about an estimated parameter, whereas prediction intervals address a future observation. The examples do not substitute a parameter interval for a unit-level prediction or invent a confidence level.": 1,
+    "Correct environmental purpose of IP classification and distinction between an exposed contactor and a protected enclosed starter. Usually and higher are broad comparison language; no specific IP number or suitability for a named harsh location is asserted.": 1,
+    "The electrical-versus-light-emitting distinction is sound, but the definition restricts LED emission to visible or infrared without an example/typically qualifier. Ultraviolet LEDs are also established devices. Preserve this incomplete general definition rather than silently treating the two bands as an expressly non-exhaustive list.": 1,
+    "Balanced and technically sound supply trade-off discussion, explicitly rejecting an unconditional linear-versus-switcher rule. Hybrid switching conversion plus low-noise postregulation is established; actual attenuation still depends on PSRR, headroom and layout, and no numerical rail-noise guarantee is asserted.": 1,
+    "Correct basic three-wire start/stop seal-in logic: NC stop in series, NO start bypassed by a NO auxiliary holding contact, and dropping the coil when stop opens. It is a functional explanation, not a complete compliant motor-protection or emergency-stop installation drawing.": 1,
+    "Plausible conditional chain from scattered chassis capacitors to frequency-dependent return paths, resonances and common-mode behavior. The prompt asks what might follow, and the answer uses can/may/in some products rather than asserting that every multipoint bond is bad.": 1,
+    "Accurate introductory mains overvoltage-category hierarchy and relationship to expected transients. Higher category at comparable system voltage increases impulse withstand/clearance requirements. No actual clearance distance, measurement permission or claim that category alone determines insulation design is supplied.": 1,
+    "Useful causal decomposition separating observed symptom, measurement effect, physical mechanism and enabling root cause. The moisture/poor-seal chain is explicitly an example, not an unsupported diagnosis of an actual returned device.": 1,
+    "Reasonable qualitative warning that insufficient stress/temperature margin can cause degradation or failure that benign testing misses. Might and things like introduce illustrative failure modes, not a prediction that every listed mode must occur. It supplies no unsupported time-to-failure or numeric derating rule.": 1,
+    "Faithful Bayesian paraphrase: credible field observations update prior beliefs while engineering judgment and evidence quality still matter. It does not claim that returns alone without exposure or censoring information constitute a complete reliability estimator.": 1,
+    "Clipping/saturation can remove quantitative amplitude information beyond the sensor's range, but data in this region is useless is too absolute. A saturated reading may still establish an over-range event, sign or lower/upper bound, depending on the device. Hold the overstatement rather than discarding all possible information.": 1,
+    "Correct qualified mechanism: corrosion films/degradation can raise contact resistance enough to make conduction unreliable. It does not claim that every corrosion product has the same resistance or that corrosion is the only contact failure mode.": 1,
+    "Correct general reason for excitation of passive resistive or inductive transducers: an external electrical stimulus makes a parameter change observable as a signal. The source type depends on sensor; the text does not explicitly prescribe DC excitation for an LVDT.": 1,
+    "Correct use case for overlap switching when interruption is undesirable, with the crucial warning that sources are briefly connected together. It does not approve tying incompatible low-impedance power sources together or promise glitch-free operation for every signal circuit.": 1,
+    "Correctly recognizes correlated regional/sub-tier risk and distinguishes vendor count from genuinely independent supply paths. May and depends on timing/backup approval retain uncertainty about the unqualified backup. The answer makes no purchasing commitment or absolute resilience ranking.": 1,
+    "The two-times-per-ten-degrees rule is not the Arrhenius equation's general prediction. Its factor depends on activation energy, starting absolute temperature and mechanism; no such values are supplied. Calling lifetime exponential in temperature also hides the inverse-absolute-temperature dependence. A useful heuristic cannot replace the model as stated.": 1,
+    "Correct conceptual contrast between basic protection and a reinforced insulation system equivalent to double insulation for applicable single-fault conditions. Equivalent to two layers describes the protection level, not a claim that reinforced insulation must consist of two physically separable layers.": 1,
+    "The complete prompt asks to define this topic without identifying it or supplying earlier context. The answer assumes BOM balancing. That antecedent cannot be validated from a filename or the answer's own choice of topic, even though the analogy itself is coherent.": 1,
+    "Accurate concise description of a reported failure that the return-test process cannot reproduce/confirm. It does not infer that no real fault existed or that the reporter was mistaken.": 1,
+    "Faithful explanation of circumferential cable-shield bonding at the enclosure entry and why pigtail inductance can undermine high-frequency shielding. It acknowledges serviceability, insulation and low-frequency trade-offs and does not prescribe an unqualified universal grounding topology.": 1,
+    "Correct overlap/shoot-through mechanism and plausible supply, thermal and parasitic stress consequences when dead time is inadequate. Dependence on gate drive, temperature and delay skew is appropriate. It does not calculate a universal safe dead time or say longer dead time always lowers reverse-recovery loss.": 1,
+    "Correct first-order equivalent model of a real inductor: series winding resistance, parasitic winding capacitance and core loss augment ideal inductance. The stated heating, Q and resonance consequences follow; no claim of a complete high-frequency/distributed model is made.": 1,
+    "The resolver/rotary-transformer identification is sound, but the claim that its sine and cosine voltages are proportional to shaft angle is technically ambiguous and literally incorrect. Their excited output amplitudes vary with sin(theta) and cos(theta), not linearly with theta. Passing would require privately repairing the stated relationship; preserve the original and hold for clarification.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "f55e9629909c173e3447417e0a465102d15539d493c9caed13889cf5e9aa1293",
-  "substantively_unreviewed": 1642,
+  "published_decisions_sha256": "e22edb729a00ba3579876cf5eadded8f25cdf543f13352b774f786fdd3ad2e45",
+  "substantively_unreviewed": 1617,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
