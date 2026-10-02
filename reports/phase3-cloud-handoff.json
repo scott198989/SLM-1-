@@ -8,10 +8,10 @@
   "review": {
     "curriculum": 2112,
     "dispositions": {
-      "PASS": 1276,
+      "PASS": 1290,
       "REJECT": 63,
-      "QUARANTINE": 269,
-      "NEEDS_HUMAN_REVIEW": 504
+      "QUARANTINE": 271,
+      "NEEDS_HUMAN_REVIEW": 488
     },
     "by_domain": {
       "circuits": {
@@ -57,10 +57,10 @@
         "NEEDS_HUMAN_REVIEW": 0
       },
       "electromagnetism": {
-        "PASS": 117,
+        "PASS": 131,
         "REJECT": 6,
-        "QUARANTINE": 27,
-        "NEEDS_HUMAN_REVIEW": 16
+        "QUARANTINE": 29,
+        "NEEDS_HUMAN_REVIEW": 0
       },
       "materials_manufacturing": {
         "PASS": 3,
@@ -75,8 +75,8 @@
         "NEEDS_HUMAN_REVIEW": 242
       }
     },
-    "agent_substantive_reviews": 1607,
-    "substantively_unreviewed": 502,
+    "agent_substantive_reviews": 1623,
+    "substantively_unreviewed": 486,
     "reviewed_specialist_holds": 2,
     "complete_source_domains": [
       "circuits",
@@ -102,13 +102,13 @@
     },
     {
       "path": "data/review/phase3/technical-review.jsonl.gz",
-      "bytes": 478234,
-      "sha256": "da5c94ef1162332813f9c30aa6989a569523f74319e8c7898ab4a5a0069b9625"
+      "bytes": 481694,
+      "sha256": "001eb1c7750b1d436582939792e9e51b8cb46eff43b67ef37c7964baf8efbad9"
     },
     {
       "path": "manifests/phase3-agent-technical-review.json",
-      "bytes": 2588214,
-      "sha256": "38b1fcf46fc0dfffb2777bd4e3eff6392f81a4cafd354844560ae2f92168d84d"
+      "bytes": 2621440,
+      "sha256": "2eb2e68e8cc0b1e49305db11d5a79f8ca325a558cd16cf8103af2201cb82b3cd"
     },
     {
       "path": "manifests/phase3-release-families.json",
@@ -117,8 +117,8 @@
     },
     {
       "path": "reports/phase3-technical-review.json",
-      "bytes": 282204,
-      "sha256": "55449f134c45e45b49b125d9c7b195797c35cb99adb50d5f0931fc2291a806f3"
+      "bytes": 284231,
+      "sha256": "92dd3549738d785809fbd48a0d68fe37d32b0a764e20a26a59e37d0ebb6d6bf7"
     },
     {
       "path": "src/forge_tools/engineering.py",
@@ -223,7 +223,7 @@
   "next_domain": "electromagnetism",
   "next_batch": {
     "domain": "electromagnetism",
-    "offset": 150,
+    "offset": 175,
     "limit": 25
   },
   "workers": [],
@@ -234,9 +234,9 @@
   "latest_cloud_continuation": "reports/phase3-cloud-continuation-validation.json",
   "local_continuation": {
     "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
-    "local_predecessor_commit": "fa5465ae82519cc043d4d776623dd9226f646f69",
+    "local_predecessor_commit": "60ea99f456bfe8896069cb85eebcd79e1e346592",
     "publication_status": "LOCAL_ONLY; do not claim these counts are on GitHub",
-    "latest_batch": "reports/phase3-review-batches/electromagnetism-0125-0150.json",
+    "latest_batch": "reports/phase3-review-batches/electromagnetism-0150-0175.json",
     "electrical_domain_complete": true,
     "trigonometry_pending_review_queue_complete": true,
     "trigonometry_preserved_structural_ordinals": [

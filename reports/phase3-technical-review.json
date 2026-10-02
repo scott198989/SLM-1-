@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1276,
+    "PASS": 1290,
     "REJECT": 63,
-    "QUARANTINE": 269,
-    "NEEDS_HUMAN_REVIEW": 504
+    "QUARANTINE": 271,
+    "NEEDS_HUMAN_REVIEW": 488
   },
   "by_domain": {
     "circuits": {
@@ -50,10 +50,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "electromagnetism": {
-      "PASS": 117,
+      "PASS": 131,
       "REJECT": 6,
-      "QUARANTINE": 27,
-      "NEEDS_HUMAN_REVIEW": 16
+      "QUARANTINE": 29,
+      "NEEDS_HUMAN_REVIEW": 0
     },
     "materials_manufacturing": {
       "PASS": 3,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1607,
+  "agent_substantive_reviews": 1623,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "04d6c817bc9d8fa6b63d423b66137b3d06e37e2a46956a6e5ee649a64879da08",
+  "technical_review_sha256": "68526f68e20b623ed0000b7c4e7bd642186e3ecd80dfa541a4c681afba2e18c8",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 502,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 486,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1688,11 +1688,27 @@
     "Correct regular self-adjoint Sturm-Liouville discrete spectrum, weighted orthogonality and L2 completeness statement with suitable-boundary qualification.": 1,
     "Correct method for finding motional-emf direction and checking consistency with Lenz law.": 1,
     "Sound contrasting antenna-use-case reasoning with frequency, propagation, coverage and mechanical constraints.": 1,
-    "Numerical eddy-current modeling is sensible for complex shells, but thin-shell or surface-impedance approximations are not essential: a resolved volume formulation is an alternative.": 1
+    "Numerical eddy-current modeling is sensible for complex shells, but thin-shell or surface-impedance approximations are not essential: a resolved volume formulation is an alternative.": 1,
+    "Correct current-sign reversal of magnetic wire force and its role in mechanical commutation.": 1,
+    "Correct temporal-support distinction between retarded and advanced Green solutions of the same operator equation.": 1,
+    "Correct qualified equivalence of integral and differential field laws using divergence and Stokes theorems.": 1,
+    "Correct rejection of Gauss-law-only uniqueness, with electrostatic curl and boundary data identified.": 1,
+    "Correct transient local charge-continuity explanation.": 1,
+    "The lossless conservation principle is sound, but the impedance factor depends on the undefined amplitude convention. It is inverted for standard string displacement amplitudes while correct for traveling-force amplitudes, so the example needs that distinction.": 1,
+    "Correct linear-superposition rationale for vacuum and linear constitutive media.": 1,
+    "Correct usual static cantilever classification as a spatial boundary-value problem.": 1,
+    "Correct magnetic-dipole torque vector, magnitude and energetic alignment tendency.": 1,
+    "Correct ordinary separated-mode construction for a homogeneous wave equation with separable spatial boundary conditions.": 1,
+    "Correct nonrelativistic Larmor formula and requested derivation sketch from radiation fields and Poynting flux.": 1,
+    "Correct short distinction between causal retarded response and time-ordered Feynman propagation.": 1,
+    "Correct continuity-equation compatibility of Lorenz-gauge potential wave equations.": 1,
+    "The near-real-frequency pole and ringdown picture is useful, but the answer changes the specified complex-resonant forcing into a nearby real-frequency drive and assumes exterior outgoing radiation from absorbing walls. A lossy bounded cavity need not have a mode extending to infinity.": 1,
+    "Correct internal field of a uniformly volume-charged sphere.": 1,
+    "Correct introductory Debye-screening picture in the ordinary near-equilibrium weak-potential plasma regime.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "da5c94ef1162332813f9c30aa6989a569523f74319e8c7898ab4a5a0069b9625",
-  "substantively_unreviewed": 502,
+  "published_decisions_sha256": "001eb1c7750b1d436582939792e9e51b8cb46eff43b67ef37c7964baf8efbad9",
+  "substantively_unreviewed": 486,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

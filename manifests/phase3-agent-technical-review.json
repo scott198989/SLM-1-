@@ -48027,9 +48027,610 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/electromagnetism-0125-0150.json",
       "original_domain_ordinal": 149
+    },
+    {
+      "id": "repo-00e99f3587b9e7edda9e5969",
+      "messages_sha256": "00e99f3587b9e7edda9e5969934351e6ebf6996f9a9fce78b573f01320ef5410",
+      "state": "PASS",
+      "rationale": "Correct current-sign reversal of magnetic wire force and its role in mechanical commutation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT 6.013, Electromagnetics and Applications",
+          "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf",
+          "finding": "Maxwell equations, modal and boundary formulations connect electric/magnetic field circulation, flux, currents and wave behavior."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For fixed geometry and external B, force=I*(L cross B) is linear in the signed current."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Brushes work with the commutator to reverse armature current at the appropriate rotor angles; reversing current alone at a fixed rotor angle reverses torque, not automatically sustained rotation."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 69,
+      "assistant_tokens": 46,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0150-0175.json",
+      "original_domain_ordinal": 150
+    },
+    {
+      "id": "repo-2a5e1e0652f3e7a61e0dc9ff",
+      "messages_sha256": "2a5e1e0652f3e7a61e0dc9ff79fd233e2de27ac023ff7d91e2c5b76ed1a5d730",
+      "state": "PASS",
+      "rationale": "Correct rejection of Gauss-law-only uniqueness, with electrostatic curl and boundary data identified.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Adding a divergence-free field to a solution preserves div E; for electrostatics, potential uniqueness also depends on the relevant boundary conditions and gauge/reference."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Multiply connected domains or singular sources require appropriate global conditions; proper boundary conditions indicates this additional scope."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 89,
+      "assistant_tokens": 62,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0150-0175.json",
+      "original_domain_ordinal": 151
+    },
+    {
+      "id": "repo-a22f89d4e0eab1709d5843d3",
+      "messages_sha256": "a22f89d4e0eab1709d5843d3888d134fe9b86cf86a5a6c5794b66c6d4a380839",
+      "state": "PASS",
+      "rationale": "Correct nonrelativistic Larmor formula and requested derivation sketch from radiation fields and Poynting flux.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "title": "MIT 6.013, Electromagnetics and Applications",
+          "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf",
+          "finding": "Maxwell equations, modal and boundary formulations connect electric/magnetic field circulation, flux, currents and wave behavior."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The far-zone field magnitude is q*a*sin(theta)/(4*pi*epsilon0*c²*r), giving dP/dOmega=q²*a²*sin²(theta)/(16*pi²*epsilon0*c³). Integrating sin²(theta) over solid angle gives8*pi/3 and P=q²*a²/(6*pi*epsilon0*c³)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The final Lorentz-like phrase is informal and not a derivation of radiation reaction; the radiation-power formula does not require a self-force calculation to be established."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 133,
+      "assistant_tokens": 108,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0150-0175.json",
+      "original_domain_ordinal": 152
+    },
+    {
+      "id": "repo-08b871f684ae52b36523933d",
+      "messages_sha256": "08b871f684ae52b36523933da3cc82ab15ee249b17e704ab83f72398c3e48b06",
+      "state": "PASS",
+      "rationale": "Correct qualified equivalence of integral and differential field laws using divergence and Stokes theorems.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "title": "MIT 6.013, Electromagnetics and Applications",
+          "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf",
+          "finding": "Maxwell equations, modal and boundary formulations connect electric/magnetic field circulation, flux, currents and wave behavior."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Distributional formulations can include ideal sources rigorously; topology affects global potential/loop reasoning rather than invalidating the local theorems themselves."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 123,
+      "assistant_tokens": 99,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0150-0175.json",
+      "original_domain_ordinal": 153
+    },
+    {
+      "id": "repo-04b422b53d48b88d617251d6",
+      "messages_sha256": "04b422b53d48b88d617251d64c161a54621468593300681303c7a02864aa98e0",
+      "state": "PASS",
+      "rationale": "Correct temporal-support distinction between retarded and advanced Green solutions of the same operator equation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Richard Fitzpatrick, UT Austin Electromagnetism, Retarded potentials",
+          "url": "https://farside.ph.utexas.edu/teaching/jk1/Electromagnetism/node7.html",
+          "finding": "Contrasts retarded and advanced propagation through their source-time arguments and boundary/support prescriptions, rather than merely reconstructing an input from an output."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a source at time t_prime, the retarded kernel vanishes for t<t_prime and the advanced kernel vanishes for t>t_prime under the usual hyperbolic convention."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Coincident-time singular support may remain, and the choice includes the appropriate initial/final or radiation condition."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 71,
+      "assistant_tokens": 53,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0150-0175.json",
+      "original_domain_ordinal": 154
+    },
+    {
+      "id": "repo-b6217f7ebe684ee51147ae42",
+      "messages_sha256": "b6217f7ebe684ee51147ae4243f7347afac33628c7ff7be9adf64bcd2b051a79",
+      "state": "PASS",
+      "rationale": "Correct continuity-equation compatibility of Lorenz-gauge potential wave equations.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT 6.013, Electromagnetics and Applications",
+          "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf",
+          "finding": "Maxwell equations, modal and boundary formulations connect electric/magnetic field circulation, flux, currents and wave behavior."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Taking the four-divergence of box A^mu=mu0*J^mu and imposing partial_mu A^mu=0 yields partial_mu J^mu=0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Current conservation is physical and already follows Maxwell consistency; it is not produced by gauge choice, as the source explicitly notes."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 140,
+      "assistant_tokens": 116,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0150-0175.json",
+      "original_domain_ordinal": 155
+    },
+    {
+      "id": "repo-5c3e41e5633a207dc0ca7cd7",
+      "messages_sha256": "5c3e41e5633a207dc0ca7cd733f11b137c1dc4ab571fbb8a5e3e427122b909b5",
+      "state": "PASS",
+      "rationale": "Correct linear-superposition rationale for vacuum and linear constitutive media.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT 6.013, Electromagnetics and Applications",
+          "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf",
+          "finding": "Maxwell equations, modal and boundary formulations connect electric/magnetic field circulation, flux, currents and wave behavior."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If L fields=source with linear L and homogeneous shared boundary conditions, adding two field solutions adds their sources."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Moving or nonlinear material response and source-dependent boundaries can break the simple superposition premise; the answer explicitly restricts the medium to linear response."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 62,
+      "assistant_tokens": 47,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0150-0175.json",
+      "original_domain_ordinal": 156
+    },
+    {
+      "id": "repo-d0abda9bb36aa6139464bc76",
+      "messages_sha256": "d0abda9bb36aa6139464bc76911be3bc674e752e26acf46072fe153eb60e5755",
+      "state": "PASS",
+      "rationale": "Correct introductory Debye-screening picture in the ordinary near-equilibrium weak-potential plasma regime.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Linearizing Boltzmann carrier densities gives (Laplacian-1/lambda_D²)phi=-q*delta/epsilon0, with phi=q*exp(-r/lambda_D)/(4*pi*epsilon0*r)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Strong coupling, large perturbations, nonequilibrium wakes and magnetized dynamics need extensions; the answer explains the standard Debye phenomenon rather than every plasma response."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 60,
+      "assistant_tokens": 44,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0150-0175.json",
+      "original_domain_ordinal": 157
+    },
+    {
+      "id": "repo-acc0498d05e75024fd2920e2",
+      "messages_sha256": "acc0498d05e75024fd2920e2fd7fd1b5a506b00f659478f7bd2b5323a413e759",
+      "state": "PASS",
+      "rationale": "Correct short distinction between causal retarded response and time-ordered Feynman propagation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Their common operator inverse differs through the pole prescription; time ordering and retarded commutator support are different Green distributions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Feynman propagation is not itself a classical retarded response, and overall i/sign conventions depend on the QFT definition."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 59,
+      "assistant_tokens": 37,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0150-0175.json",
+      "original_domain_ordinal": 158
+    },
+    {
+      "id": "repo-66529e20b0f0144ed92cbe52",
+      "messages_sha256": "66529e20b0f0144ed92cbe5224bd16912d958c75e6b48708b8e0af90cbb9a6c5",
+      "state": "PASS",
+      "rationale": "Correct usual static cantilever classification as a spatial boundary-value problem.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A fourth-order beam deflection equation uses displacement/slope data at the clamp and force/moment data at the free end."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A vibrating cantilever is an initial-boundary-value problem requiring initial displacement/velocity as well; the short prompt is interpreted in the standard static beam setting."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 54,
+      "assistant_tokens": 30,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0150-0175.json",
+      "original_domain_ordinal": 159
+    },
+    {
+      "id": "repo-c5fb15586d3abf0f3269cd59",
+      "messages_sha256": "c5fb15586d3abf0f3269cd59b041a22a4f454f231e0ec884e7bc145cb0f4e202",
+      "state": "PASS",
+      "rationale": "Correct internal field of a uniformly volume-charged sphere.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Q_enclosed=Q*r³/R³ and Gauss gives E_r=Q*r/(4*pi*epsilon0*R³), continuous with the exterior value at r=R."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The radial component carries the sign of Q; homogeneous vacuum permittivity and spherical symmetry are assumed."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 91,
+      "assistant_tokens": 71,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0150-0175.json",
+      "original_domain_ordinal": 160
+    },
+    {
+      "id": "repo-72f5bd2fbf34f0622ce3c6d2",
+      "messages_sha256": "72f5bd2fbf34f0622ce3c6d2c631f8eade817d7bd33ad73ecac86285e9c0dcd5",
+      "state": "PASS",
+      "rationale": "Correct ordinary separated-mode construction for a homogeneous wave equation with separable spatial boundary conditions.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Substitution u=X*T in u_tt=c²*u_xx gives T_doubleprime/(c²*T)=X_doubleprime/X=-lambda, yielding two ordinary differential equations and a spatial eigenproblem."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Geometry, coefficients and boundary conditions must permit separation, and sums of modes plus initial data produce general solutions; linearity alone would not suffice."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 83,
+      "assistant_tokens": 59,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0150-0175.json",
+      "original_domain_ordinal": 161
+    },
+    {
+      "id": "repo-6d51a1c8f7663d779f173d4f",
+      "messages_sha256": "6d51a1c8f7663d779f173d4f66eb11577dba4039f89307ebba635605ee5fd0eb",
+      "state": "PASS",
+      "rationale": "Correct magnetic-dipole torque vector, magnitude and energetic alignment tendency.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Torque=m cross B has magnitude m*B*sin(theta); potential energy -m dot B is minimized by parallel alignment."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A conservative undamped dipole can precess or oscillate rather than settle; tends to align describes the torque/energy tendency, not guaranteed relaxation."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 64,
+      "assistant_tokens": 48,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0150-0175.json",
+      "original_domain_ordinal": 162
+    },
+    {
+      "id": "repo-bed72bb6e18d9a0414b7986a",
+      "messages_sha256": "bed72bb6e18d9a0414b7986a599ba1d55096fc953fe38a467ade5b776bd44946",
+      "state": "QUARANTINE",
+      "rationale": "The near-real-frequency pole and ringdown picture is useful, but the answer changes the specified complex-resonant forcing into a nearby real-frequency drive and assumes exterior outgoing radiation from absorbing walls. A lossy bounded cavity need not have a mode extending to infinity.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "COMSOL Acoustics, Impedance boundary condition",
+          "url": "https://doc.comsol.com/6.3/doc/com.comsol.help.aco/aco_ug_pressure.05.110.html",
+          "finding": "Acoustic absorbing wall treatments can be specified as impedance boundaries of a finite modeled domain; absorption does not itself imply an exterior outgoing-radiation region."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A modal equation a_dot+i*omega_n*a=F*exp(-i*omega_n*t) has resonant particular solution F*t*exp(-i*omega_n*t), rather than a finite 1/(omega-omega_n) coefficient at the exact pole. A finite impedance-wall acoustic domain does not define any exterior mode by itself."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold for the forcing and geometry assumptions, not the correct isolated-pole/ringdown concepts. Source coupling, degeneracy and normalization further affect a precise response."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 179,
+      "assistant_tokens": 144,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0150-0175.json",
+      "original_domain_ordinal": 163
+    },
+    {
+      "id": "repo-30552ad1a411bbfdbee360cc",
+      "messages_sha256": "30552ad1a411bbfdbee360cc79ce208621c9b1221545abec8975d7bec9c617a7",
+      "state": "PASS",
+      "rationale": "Correct transient local charge-continuity explanation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "title": "MIT 6.013, Electromagnetics and Applications",
+          "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf",
+          "finding": "Maxwell equations, modal and boundary formulations connect electric/magnetic field circulation, flux, currents and wave behavior."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "div J=-partial_t rho; positive local charge accumulation requires negative divergence of conventional current."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "At ideal surfaces the balance is distributional or expressed through the corresponding sheet-charge equation."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 68,
+      "assistant_tokens": 49,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0150-0175.json",
+      "original_domain_ordinal": 164
+    },
+    {
+      "id": "repo-3b467f7a2bdbfb9f7864f335",
+      "messages_sha256": "3b467f7a2bdbfb9f7864f335c34d194be05c6fc2a992545b8c942de4c0c6e312",
+      "state": "QUARANTINE",
+      "rationale": "The lossless conservation principle is sound, but the impedance factor depends on the undefined amplitude convention. It is inverted for standard string displacement amplitudes while correct for traveling-force amplitudes, so the example needs that distinction.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT 8.03SC, The Physics of Waves",
+          "url": "https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/ef731c1b91d77a6db003f6c27e300d25_MIT8_03SCF16_Textbook.pdf",
+          "finding": "String-wave impedance is the square root of linear density times tension; matching displacement and transverse force gives the usual reflection/transmission amplitudes."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For displacement amplitude A, mean string power=Z*omega²*|A|²/2 and the transmission factor is Z2/Z1. For force amplitude F, mean power=|F|²/(2*Z) and the factor is Z1/Z2. With Z1=1,Z2=2, displacement R=-1/3,T=2/3 obey the first convention."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold for undefined R/T variables and a misleading default string example, not an unambiguous physics error. Do not import displacement definitions from other dataset pairs or rewrite the original."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 85,
+      "assistant_tokens": 60,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0150-0175.json",
+      "original_domain_ordinal": 165
     }
   ],
-  "reviewed": 1607,
+  "reviewed": 1623,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

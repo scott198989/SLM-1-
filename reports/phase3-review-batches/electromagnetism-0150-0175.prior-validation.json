@@ -20,16 +20,16 @@
   "model_weights_downloaded_or_loaded": false,
   "training_or_paid_compute": false,
   "automatic_checks_recreated": false,
-  "test_log_sha256": "045866ee5ae82a79d02b8e5b7e660125d41ccb69df2cb9a95621fa1a4437f4d8",
+  "test_log_sha256": "7a0b17e0e916dd0ec530622bf24e51b994175f683928fc33a5020f55c7d21758",
   "tested_code_sha256": {
     "scripts/phase3-verify-private-release.py": "64d76484b0852d041083301ce113ddc255b7906512def3dc12d0f92dc96910e1",
     "src/forge_data/citation_pilot.py": "9e17e50194ba8cb22eca0b431359d7aec1d870f8417e87b4938e3c1ff4c968d4",
     "tests/test_private_release_verifier.py": "e2a5854473e449455e9bc2ffcc207346f018a3bb49206a81546cd1cea2ace817"
   },
-  "base_commit": "60ea99f456bfe8896069cb85eebcd79e1e346592",
+  "base_commit": "fa5465ae82519cc043d4d776623dd9226f646f69",
   "all_public_input_hashes_verified": 8,
   "candidate_message_hashes_verified": 2112,
-  "substantive_decisions_verified": 1623,
+  "substantive_decisions_verified": 1607,
   "earlier_374_decisions_unchanged": true,
   "unchanged_frozen_files": [
     "src/forge_tools/engineering.py",
@@ -46,15 +46,15 @@
     "QUARANTINE": 7
   },
   "current_dispositions": {
-    "PASS": 1290,
+    "PASS": 1276,
     "REJECT": 63,
-    "QUARANTINE": 271,
-    "NEEDS_HUMAN_REVIEW": 488
+    "QUARANTINE": 269,
+    "NEEDS_HUMAN_REVIEW": 504
   },
-  "substantively_unreviewed": 486,
+  "substantively_unreviewed": 502,
   "next_batch": {
     "domain": "electromagnetism",
-    "offset": 175,
+    "offset": 150,
     "limit": 25
   },
   "official_reader_executed": true,
@@ -65,23 +65,23 @@
   "earlier_392_decisions_unchanged": true,
   "latest_batch": {
     "domain": "electromagnetism",
-    "offset": 150,
+    "offset": 125,
     "limit": 25,
-    "selected_window_end_exclusive": 166,
-    "new_reviews": 16,
+    "selected_window_end_exclusive": 150,
+    "new_reviews": 25,
     "skipped_existing": 0,
     "preserved_structural_quarantines": [],
     "dispositions": {
-      "PASS": 14,
-      "QUARANTINE": 2
+      "PASS": 21,
+      "QUARANTINE": 4
     }
   },
   "independent_agent_qa_complete": true,
-  "latest_batch_original_hashes_verified": 16,
+  "latest_batch_original_hashes_verified": 25,
   "latest_batch_only_expected_ledger_rows_changed": true,
   "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
   "publication_status": "LOCAL_ONLY",
-  "earlier_decisions_unchanged": 1607,
+  "earlier_decisions_unchanged": 1582,
   "electrical_domain_complete": true,
   "electrical_records_verified": 300,
   "all_392_published_decisions_unchanged": true,
