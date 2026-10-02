@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1196,
+    "PASS": 1216,
     "REJECT": 60,
-    "QUARANTINE": 252,
-    "NEEDS_HUMAN_REVIEW": 604
+    "QUARANTINE": 257,
+    "NEEDS_HUMAN_REVIEW": 579
   },
   "by_domain": {
     "circuits": {
@@ -50,10 +50,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "electromagnetism": {
-      "PASS": 37,
+      "PASS": 57,
       "REJECT": 3,
-      "QUARANTINE": 10,
-      "NEEDS_HUMAN_REVIEW": 116
+      "QUARANTINE": 15,
+      "NEEDS_HUMAN_REVIEW": 91
     },
     "materials_manufacturing": {
       "PASS": 3,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1507,
+  "agent_substantive_reviews": 1532,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "d1bdc195f90d2def710f8b2e092670f20757f4ee9667e24c962d7bc16fa4418e",
+  "technical_review_sha256": "87eae544ce2c8a150d443abce7fa9989ddfe1baf9563377f56a373721e3090af",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 602,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 577,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1588,11 +1588,36 @@
     "Correct vacuum source-free Maxwell-wave mechanism and speed.": 1,
     "The charge-volume integral needs homogeneous boundary data or an additional boundary contribution. The answer refers to given boundary conditions without stating that restriction, so it does not cover nonzero boundary-driven potential.": 1,
     "Correct removal of Maxwell time-derivative terms in static fields and their induction/wave role when time varying.": 1,
-    "The stated conjugate-product spectral formula needs an orthonormal spectral resolution, not merely a complete set of right eigenfunctions. Completeness alone does not justify the normalization or dual-eigenfunction factors.": 1
+    "The stated conjugate-product spectral formula needs an orthonormal spectral resolution, not merely a complete set of right eigenfunctions. Completeness alone does not justify the normalization or dual-eigenfunction factors.": 1,
+    "The practical transmit/receive reciprocity explanation is correct for reciprocal systems, but linear and passive are not sufficient conditions. A magnetically biased linear passive ferrite can violate reciprocity.": 1,
+    "Correct initial zero-current DC RL-switch transient explanation.": 1,
+    "Correct beginner definition of vector potential and its role in time-dependent E.": 1,
+    "Correct distinction between local field agreement and global gauge equivalence in nontrivial topology.": 1,
+    "Reasonable introductory analogy for weak versus strong reflected amplitude.": 1,
+    "The zero or continuous normal-conduction-current statements are steady no-accumulation conditions, not general interface laws. During charging, normal conduction current can terminate on changing surface charge: partial_t rho_s=J1n-J2n when surface-current divergence is absent. The steady ideal-insulator case remains correct.": 1,
+    "Correct gauge nonuniqueness and the need for extra conditions to fix remaining freedom.": 1,
+    "Good differential diagnosis linking mismatch and radiation-pattern distortion without claiming a unique cause.": 1,
+    "Correct standard connection between complex-frequency Green poles and resonance frequency/decay.": 1,
+    "Correct steady-conduction surface-charge relation under a consistent interface-normal convention.": 1,
+    "Correct introductory ferromagnetic-domain and field-induced magnetization picture.": 1,
+    "Correct two-solution Wronskian construction in the conventional negative-leading-derivative Sturm-Liouville convention.": 1,
+    "Reasonable practical caution about model uncertainty in core-influenced or geometrically complicated inductance estimates.": 1,
+    "Correct scalar-versus-vector comparison and distinction between potential value and local gradient.": 1,
+    "Sound numerical-mesh quality warning and verification recommendation.": 1,
+    "Correct qualitative contrast between conservative electrostatic fields and nonconservative Faraday-induced circulation.": 1,
+    "Correct description of electric current as the flux of current density through an oriented surface.": 1,
+    "Correct topological counterargument: zero divergence and curl do not force the field to vanish without suitable global data.": 1,
+    "Useful qualitative problem-solving heuristic about selecting dominant effects, limits and methods.": 1,
+    "The outgoing complex-frequency and leakage description is useful, but the categorical basis claims need additional completeness and self-adjoint/lossless hypotheses. Ordinary closed systems need not have real spectra, and QNMs do not always form a complete basis.": 1,
+    "The argument correctly excludes net bulk excess charge in an equilibrated conductor, but it does not establish the unqualified outer-surface-only conclusion when charged cavities are possible.": 1,
+    "The derivation is correct for a homogeneous instantaneous Ohmic model, but presenting its copper DC estimate near10^-19 seconds as a physical redistribution time extrapolates that constitutive model beyond carrier-response validity.": 1,
+    "Correct signed scalar superposition of point-charge potentials with an explicit reference.": 1,
+    "Correct elementary drift-and-scattering connection between microscopic transport and macroscopic Ohm law.": 1,
+    "Correct standard homogeneous conducting-medium resistance workflow using a prescribed electrode voltage difference and total current.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "22c58b6264d35701829961c3a334c5b787730019e04abb0a7734827e5e015417",
-  "substantively_unreviewed": 602,
+  "published_decisions_sha256": "a5846cdbaae0997c97b9d8a984cc999a2dec4241bbb771d3127e16826101b455",
+  "substantively_unreviewed": 577,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

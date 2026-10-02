@@ -44351,9 +44351,916 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/electromagnetism-0025-0050.json",
       "original_domain_ordinal": 49
+    },
+    {
+      "id": "repo-dbb59f3e80bbb384d53b9e5b",
+      "messages_sha256": "dbb59f3e80bbb384d53b9e5b70172a4d9d8eed98cc06523d669017f6be6e0290",
+      "state": "QUARANTINE",
+      "rationale": "The derivation is correct for a homogeneous instantaneous Ohmic model, but presenting its copper DC estimate near10^-19 seconds as a physical redistribution time extrapolates that constitutive model beyond carrier-response validity.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT Solid State Physics, Optical properties",
+          "url": "https://web.mit.edu/6.732/www/opt.pdf",
+          "finding": "The Drude response has complex frequency-dependent conductivity determined by carrier inertia and relaxation."
+        },
+        {
+          "title": "MIT Electromagnetic Fields and Energy, chapter 7",
+          "url": "https://web.mit.edu/6.013_book/www/chapter7/7.html",
+          "finding": "Steady insulating boundaries have zero normal conduction current; unequal transient normal currents accumulate surface charge. Homogeneous Ohmic charge relaxation is a model with a constitutive validity range."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Keeping carrier inertia gives tau_m*J_dot+J=sigma0*E. Combining continuity and Gauss yields tau_m*rho_doubleprime+rho_prime+(sigma0/epsilon)*rho=0, rather than the purely first-order exponential on arbitrarily short times."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The formal Maxwell relaxation parameter epsilon/sigma and its numerical DC value are valid within the stated algebraic model. Hold the unqualified physical interpretation, not the calculation or ordinary electrostatic approximation."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 149,
+      "assistant_tokens": 121,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 50
+    },
+    {
+      "id": "repo-21920f99936b33349e2ed38b",
+      "messages_sha256": "21920f99936b33349e2ed38bb374be05f74bd646c3de561ed7f3d460aecae18b",
+      "state": "QUARANTINE",
+      "rationale": "The zero or continuous normal-conduction-current statements are steady no-accumulation conditions, not general interface laws. During charging, normal conduction current can terminate on changing surface charge: partial_t rho_s=J1n-J2n when surface-current divergence is absent. The steady ideal-insulator case remains correct.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT Electromagnetic Fields and Energy, chapter 7",
+          "url": "https://web.mit.edu/6.013_book/www/chapter7/7.html",
+          "finding": "Steady insulating boundaries have zero normal conduction current; unequal transient normal currents accumulate surface charge. Homogeneous Ohmic charge relaxation is a model with a constitutive validity range."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a normal directed from medium1 to2 and no surface-current divergence, partial_t rho_s=J1n-J2n. During capacitor charging J1n can be nonzero even if J2n is zero."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for transient surface accumulation; do not confuse displacement current with the conduction J in Ohm law."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 89,
+      "assistant_tokens": 60,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 51
+    },
+    {
+      "id": "repo-1ada0980fdbe4e62f0b9be06",
+      "messages_sha256": "1ada0980fdbe4e62f0b9be0695bab1d8547e10b2145b181ec350a98477bf3a75",
+      "state": "PASS",
+      "rationale": "Correct beginner definition of vector potential and its role in time-dependent E.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "title": "MIT 6.013, Electromagnetics and Applications",
+          "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf",
+          "finding": "Maxwell equations, modal and boundary formulations connect electric/magnetic field circulation, flux, currents and wave behavior."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "B=curl A and E=-grad(phi)-partial_t A in a consistent gauge."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A is nonunique under gauge transformations; global existence and topology can require multiple patches, beyond the introductory scope."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 60,
+      "assistant_tokens": 41,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 52
+    },
+    {
+      "id": "repo-2e69fefa8204e6a94fceb6fe",
+      "messages_sha256": "2e69fefa8204e6a94fceb6fe254929610a0d24d91c2a46bcc4590bfa072e4d5f",
+      "state": "PASS",
+      "rationale": "Good differential diagnosis linking mismatch and radiation-pattern distortion without claiming a unique cause.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT 6.013, Electromagnetics and Applications",
+          "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf",
+          "finding": "Maxwell equations, modal and boundary formulations connect electric/magnetic field circulation, flux, currents and wave behavior."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Feed isolation and pattern tests are sensible diagnostic steps; the stated possibilities require measurements before identifying a fault."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 182,
+      "assistant_tokens": 153,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 53
+    },
+    {
+      "id": "repo-4b53a8671338867a5857581f",
+      "messages_sha256": "4b53a8671338867a5857581f0d7074b13925094bb0a62ce87200fef39c391f2a",
+      "state": "PASS",
+      "rationale": "Correct steady-conduction surface-charge relation under a consistent interface-normal convention.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT Electromagnetic Fields and Energy, chapter 7",
+          "url": "https://web.mit.edu/6.013_book/www/chapter7/7.html",
+          "finding": "Steady insulating boundaries have zero normal conduction current; unequal transient normal currents accumulate surface charge. Homogeneous Ohmic charge relaxation is a model with a constitutive validity range."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With n from medium2 into1, rho_s=epsilon1*E1n-epsilon2*E2n and a common Jn=sigma1*E1n=sigma2*E2n give Jn*(epsilon1/sigma1-epsilon2/sigma2)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Normal-current continuity imposes the steady no-accumulation setting. Transients need the surface-charge time derivative; reversing n reverses the signed formula."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 93,
+      "assistant_tokens": 65,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 54
+    },
+    {
+      "id": "repo-8098d1f2c634e08e59133331",
+      "messages_sha256": "8098d1f2c634e08e59133331b1b894d6958787783586abd838d1ff87447f77ca",
+      "state": "PASS",
+      "rationale": "Correct description of electric current as the flux of current density through an oriented surface.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "I=integral_S J dot n dA."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Across and through can both be ordinary-language descriptions; the mathematical distinction is normal flux, not a prohibition on everyday wording."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 66,
+      "assistant_tokens": 38,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 55
+    },
+    {
+      "id": "repo-c179cf01667362ee03faeb59",
+      "messages_sha256": "c179cf01667362ee03faeb5921018b3e7fadc95e49760f1af51e4d3c49df0f97",
+      "state": "QUARANTINE",
+      "rationale": "The argument correctly excludes net bulk excess charge in an equilibrated conductor, but it does not establish the unqualified outer-surface-only conclusion when charged cavities are possible.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT 8.02, Gauss Law notes, example4.5",
+          "url": "https://web.mit.edu/viz/EM/visualizations/notes/modules/guide04.pdf",
+          "finding": "A charge inside a conductor cavity induces compensating inner-surface charge and a separate outer-surface charge, although the conducting bulk is field-free."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A charge q in a cavity of a conductor with net charge Q induces -q on the inner surface and Q+q on the outer surface; every Gaussian surface lying in the material still has zero net enclosed charge."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "For a solid conductor or empty charge-free cavities, added excess charge resides on the exterior. Hold narrowly for the outer-only inference without that scope."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 65,
+      "assistant_tokens": 43,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 56
+    },
+    {
+      "id": "repo-76ec1358fc9f6519dd6c44fe",
+      "messages_sha256": "76ec1358fc9f6519dd6c44fefd0d5c2ff433f81d7d58e12996679999ed812905",
+      "state": "PASS",
+      "rationale": "Correct qualitative contrast between conservative electrostatic fields and nonconservative Faraday-induced circulation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT 6.013, Electromagnetics and Applications",
+          "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf",
+          "finding": "Maxwell equations, modal and boundary formulations connect electric/magnetic field circulation, flux, currents and wave behavior."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Electrostatic curl E=0 gives zero closed-loop integral, while Faraday gives integral E dot dl=-dPhi_B/dt for a fixed loop."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Electrostatic field lines can extend to infinity, and induced-field geometry need not be perfect closed circles; the source uses often for the loop picture."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 154,
+      "assistant_tokens": 124,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 57
+    },
+    {
+      "id": "repo-1fd186764ca31af7f25ab695",
+      "messages_sha256": "1fd186764ca31af7f25ab695df883056c544c6ec0cf22287abb0c07dd5bf7079",
+      "state": "PASS",
+      "rationale": "Reasonable introductory analogy for weak versus strong reflected amplitude.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Impedance mismatch, not softness alone, controls reflection; a lossless soft/free boundary can reflect strongly with a phase reversal. The pillow example involves absorption and is a qualitative bounce analogy, not a monotonic impedance law."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 84,
+      "assistant_tokens": 60,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 58
+    },
+    {
+      "id": "repo-26a664bb5d5699121fb66d3b",
+      "messages_sha256": "26a664bb5d5699121fb66d3b9d24e822c53ba826c4f9d2b9c203b9af088b87ba",
+      "state": "PASS",
+      "rationale": "Correct gauge nonuniqueness and the need for extra conditions to fix remaining freedom.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT 6.013, Electromagnetics and Applications",
+          "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf",
+          "finding": "Maxwell equations, modal and boundary formulations connect electric/magnetic field circulation, flux, currents and wave behavior."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The gauge transformation A+grad chi, phi-partial_t chi leaves the same E and B; a gauge condition can leave residual transformations satisfying its homogeneous equation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Sources and initial/boundary conditions are needed to determine the fields themselves; the answer ultimately describes them as physically constrained rather than claiming Maxwell equations alone give a unique solution."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 114,
+      "assistant_tokens": 95,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 59
+    },
+    {
+      "id": "repo-fd287154a3726452883bc023",
+      "messages_sha256": "fd287154a3726452883bc0239c5d95a0d6aaeb00387b6a817f567e23ec6779ee",
+      "state": "PASS",
+      "rationale": "Correct standard homogeneous conducting-medium resistance workflow using a prescribed electrode voltage difference and total current.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT Electromagnetic Fields and Energy, chapter 7",
+          "url": "https://web.mit.edu/6.013_book/www/chapter7/7.html",
+          "finding": "Steady insulating boundaries have zero normal conduction current; unequal transient normal currents accumulate surface charge. Homogeneous Ohmic charge relaxation is a model with a constitutive validity range."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For constant sigma and conservative E, div J=0 reduces to Laplacian V=0; R=DeltaV/I with I=integral electrode sigma*E dot n dA."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "V in the ratio denotes the electrode difference. Spatially varying or anisotropic conductivity requires div(sigma grad V)=0 instead of the ordinary Laplace equation; contact resistance is separate."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 74,
+      "assistant_tokens": 51,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 60
+    },
+    {
+      "id": "repo-e2ea110fdd6f0846428ef957",
+      "messages_sha256": "e2ea110fdd6f0846428ef95702962d51afbc29662ae96f9c210b93d25add667b",
+      "state": "PASS",
+      "rationale": "Correct signed scalar superposition of point-charge potentials with an explicit reference.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "V=sum_i k*q_i/r_i; unlike E, scalar contributions require no vector-direction sum."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This assumes the ordinary electrostatic point-source model in a homogeneous medium; induced boundary charges can add contributions."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 144,
+      "assistant_tokens": 120,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 61
+    },
+    {
+      "id": "repo-685ab89b03f5e824ca0f96b8",
+      "messages_sha256": "685ab89b03f5e824ca0f96b828dc9b83a3b0ce7805f9e2292b0fc21feb10e92a",
+      "state": "PASS",
+      "rationale": "Correct scalar-versus-vector comparison and distinction between potential value and local gradient.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Adding a constant changes V without changing E=-grad V; a region of nearly constant V can have a very small field despite a large chosen potential value."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The absolute potential depends on reference, while physical differences and local field determine energy changes and electric force."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 155,
+      "assistant_tokens": 120,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 62
+    },
+    {
+      "id": "repo-93d48177f1fa0c746ae29b2b",
+      "messages_sha256": "93d48177f1fa0c746ae29b2b3fd1aad3676d47fc6be8b5b5f7f7420255dcfb0e",
+      "state": "PASS",
+      "rationale": "Correct topological counterargument: zero divergence and curl do not force the field to vanish without suitable global data.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "In an annulus excluding the z axis, B=C/r*phi_hat has zero divergence and curl but circulation 2*pi*C around the hole."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A nonzero constant field also refutes zero-field necessity even in a simply connected region without boundary data; topology adds circulation classes rather than being the only reason for nonzero fields."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 146,
+      "assistant_tokens": 104,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 63
+    },
+    {
+      "id": "repo-e6af6300c285819b1b34e67f",
+      "messages_sha256": "e6af6300c285819b1b34e67f5afe87bb5d5d7ddcd4cc734951e85fcd177bdbbd",
+      "state": "PASS",
+      "rationale": "Correct elementary drift-and-scattering connection between microscopic transport and macroscopic Ohm law.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "title": "MIT Solid State Physics, Optical properties",
+          "url": "https://web.mit.edu/6.732/www/opt.pdf",
+          "finding": "The Drude response has complex frequency-dependent conductivity determined by carrier inertia and relaxation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "In the DC Drude model, mean electron drift is -e*tau*E/m, giving conventional J=n*e²*tau*E/m."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Conductivity can be tensorial, nonlinear, dispersive or spatially nonlocal; all microscopic physics is shorthand for the effective transport response within the chosen model."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 70,
+      "assistant_tokens": 47,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 64
+    },
+    {
+      "id": "repo-5911a6f4b34add6c3273d704",
+      "messages_sha256": "5911a6f4b34add6c3273d7048c7b46bad9da0ac4dd374577192f83b2a9233ca6",
+      "state": "PASS",
+      "rationale": "Correct two-solution Wronskian construction in the conventional negative-leading-derivative Sturm-Liouville convention.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For L=-(p*y_prime)_prime+q*y and W=u1*u2_prime-u1_prime*u2, derivative jump G_prime(plus)-G_prime(minus)=-1/p follows from the quoted -u1(x_less)*u2(x_greater)/(p(x_prime)*W(x_prime)), so L G=delta."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Operator and Wronskian signs must be consistent, p nonzero and the boundary problem invertible. At an eigenvalue the required Wronskian denominator vanishes."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 105,
+      "assistant_tokens": 79,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 65
+    },
+    {
+      "id": "repo-51054af708377e41ebccbdab",
+      "messages_sha256": "51054af708377e41ebccbdab3fa0e25f52586f333bd5bff7edfe53ad0a69a4b6",
+      "state": "PASS",
+      "rationale": "Correct introductory ferromagnetic-domain and field-induced magnetization picture.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Demagnetized domains need not have independently random orientations; closure patterns, domain-wall motion and rotation all contribute. The response also depends on anisotropy, pinning and hysteresis."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 70,
+      "assistant_tokens": 53,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 66
+    },
+    {
+      "id": "repo-9da9b90c9295a3b10bfb7cf3",
+      "messages_sha256": "9da9b90c9295a3b10bfb7cf3f6a7d09a6a2553bd87d90ac13cbae2c3b626cf8c",
+      "state": "QUARANTINE",
+      "rationale": "The outgoing complex-frequency and leakage description is useful, but the categorical basis claims need additional completeness and self-adjoint/lossless hypotheses. Ordinary closed systems need not have real spectra, and QNMs do not always form a complete basis.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Sauvan et al., Normalization, orthogonality and completeness of quasinormal modes of open systems",
+          "url": "https://arxiv.org/abs/2112.08103",
+          "finding": "Completeness and normalization for non-Hermitian open electromagnetic modes require specific conditions; a QNM basis is not universally complete."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A closed damped oscillator has complex frequencies even though no radiative boundary leakage is present. Open-system Green expansions can require continuum or branch-cut contributions beyond discrete QNMs."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the broad closed-versus-open spectral/basis dichotomy, preserving the core outgoing-mode and decay-rate definition."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 103,
+      "assistant_tokens": 77,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 67
+    },
+    {
+      "id": "repo-1db2827e0e91fe065d9c4189",
+      "messages_sha256": "1db2827e0e91fe065d9c41891f31b10cde40507a5d963d30d8c0904dd72f3c8d",
+      "state": "PASS",
+      "rationale": "Correct distinction between local field agreement and global gauge equivalence in nontrivial topology.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "title": "MIT 6.013, Electromagnetics and Applications",
+          "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf",
+          "finding": "Maxwell equations, modal and boundary formulations connect electric/magnetic field circulation, flux, currents and wave behavior."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Outside an excluded flux tube, A=Phi/(2*pi*r)*phi_hat has zero curl locally but nonzero loop integral Phi, which can enter a quantum phase."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Allowed gauge functions, boundary conditions and charge-dependent phase periodicity must be checked; the answer correctly rejects always rather than claiming every topological potential difference is observable."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 156,
+      "assistant_tokens": 117,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 68
+    },
+    {
+      "id": "repo-0fc2e59ba71a12b79aa8b49c",
+      "messages_sha256": "0fc2e59ba71a12b79aa8b49ce47f48fe5e86577395eeb148419544024561696a",
+      "state": "QUARANTINE",
+      "rationale": "The practical transmit/receive reciprocity explanation is correct for reciprocal systems, but linear and passive are not sufficient conditions. A magnetically biased linear passive ferrite can violate reciprocity.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Caloz et al., What is Nonreciprocity?",
+          "url": "https://arxiv.org/abs/1804.00235",
+          "finding": "Linear time-invariant biased media can be nonreciprocal; linearity and passivity alone do not imply the Lorentz-reciprocal constitutive conditions."
+        },
+        {
+          "title": "Modern Ferrites, Nonreciprocal and Nonlinear Behavior of Ferrites and Applications in RF Devices",
+          "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/9781394156146.ch7",
+          "finding": "Ferrites support linear passive microwave devices with nonreciprocal response."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Lorentz reciprocity requires appropriate constitutive transpose symmetries, such as epsilon=epsilon^T and mu=mu^T in the simple time-invariant case. A biased gyrotropic permeability can violate these while remaining linear and passive."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for the stated sufficiency condition; ordinary reciprocal antennas do have paired transmit and receive patterns."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 161,
+      "assistant_tokens": 138,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 69
+    },
+    {
+      "id": "repo-41646720c12b209a1f5866a0",
+      "messages_sha256": "41646720c12b209a1f5866a0d75ae5f439d4ff28b3350e9fb4d19d3318a818a1",
+      "state": "PASS",
+      "rationale": "Correct standard connection between complex-frequency Green poles and resonance frequency/decay.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With exp(-i*omega*t), a pole omega0-i*gamma gives amplitude exp(-gamma*t) and an energy decay rate 2*gamma; energy is hbar times angular frequency when using quantum units."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Observable peaks can be modified by interference and background, and branch cuts require separate treatment. The answer gives the pole interpretation rather than a universal peak-location formula."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 61,
+      "assistant_tokens": 42,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 70
+    },
+    {
+      "id": "repo-655f312785177712368622e1",
+      "messages_sha256": "655f312785177712368622e10744224b98a3c497e4ff610f2f4ebaec6d668ea5",
+      "state": "PASS",
+      "rationale": "Reasonable practical caution about model uncertainty in core-influenced or geometrically complicated inductance estimates.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Some idealized core geometries admit accurate analytic formulas with known material properties. The advice concerns trusting detailed real-device values, not a formal ban on analytic magnetic-core calculations."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 61,
+      "assistant_tokens": 41,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 71
+    },
+    {
+      "id": "repo-12acfa9f3e7f42728526b3b6",
+      "messages_sha256": "12acfa9f3e7f42728526b3b653d9646a268d57f1aceeb82361e26aee88f8edaa",
+      "state": "PASS",
+      "rationale": "Correct initial zero-current DC RL-switch transient explanation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "L*di/dt+R*i=V gives i=(V/R)*(1-exp(-R*t/L)); initially i=0, resistor voltage is zero and the inductor voltage balances the source."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "An ideal inductor current is continuous unless an impulsive voltage is applied. Nonzero initial current changes the transient but not the back-emf principle."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 80,
+      "assistant_tokens": 55,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 72
+    },
+    {
+      "id": "repo-942e454227761c4346cc15c5",
+      "messages_sha256": "942e454227761c4346cc15c53b07407c8d4d3caa5db0b43f81d1400c5f0ff154",
+      "state": "PASS",
+      "rationale": "Useful qualitative problem-solving heuristic about selecting dominant effects, limits and methods.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Most is informal advice, not a quantified guarantee of tractability; neglected effects must be checked against the intended accuracy and regime."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 57,
+      "assistant_tokens": 39,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 73
+    },
+    {
+      "id": "repo-6c00b44d94549f16138eba39",
+      "messages_sha256": "6c00b44d94549f16138eba39d3468c6bdb2badbd60d824c716ba2eeac5b06d88",
+      "state": "PASS",
+      "rationale": "Sound numerical-mesh quality warning and verification recommendation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Quality metrics alone do not prove solution accuracy; convergence studies, boundary data and physics validation remain necessary. Element distortion can degrade accuracy and conditioning without always causing outright failure."
+        }
+      ],
+      "domain": "electromagnetism",
+      "primary_source": "D_electrodynamics.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 53,
+      "assistant_tokens": 36,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electromagnetism-0050-0075.json",
+      "original_domain_ordinal": 74
     }
   ],
-  "reviewed": 1507,
+  "reviewed": 1532,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true
