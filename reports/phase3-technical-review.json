@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 889,
+    "PASS": 912,
     "REJECT": 55,
-    "QUARANTINE": 209,
-    "NEEDS_HUMAN_REVIEW": 959
+    "QUARANTINE": 211,
+    "NEEDS_HUMAN_REVIEW": 934
   },
   "by_domain": {
     "circuits": {
@@ -38,10 +38,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "calculus": {
-      "PASS": 88,
+      "PASS": 111,
       "REJECT": 3,
-      "QUARANTINE": 9,
-      "NEEDS_HUMAN_REVIEW": 115
+      "QUARANTINE": 11,
+      "NEEDS_HUMAN_REVIEW": 90
     },
     "electrical_components": {
       "PASS": 232,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1152,
+  "agent_substantive_reviews": 1177,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "3489a820d4eabc561f143a15109c883f3bf3b3f25e2560c954aa547f6b227e3f",
+  "technical_review_sha256": "ca5aa0053e64100c50cf0494c9c6f4909e7f971e981f6a0569d172c0480900c6",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 957,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 932,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1233,11 +1233,36 @@
     "Sound conceptual reason localized wavelet coefficients can be useful for transient/nonstationary structure relative to a global Fourier spectrum.": 1,
     "The definition as a Taylor series centered at0 is correct, but writing an unrestricted equality f(x)=its series omits the convergence-to-f requirement. A smooth function need not equal its Maclaurin series.": 1,
     "Correct positive-term limit comparison test with both finite positive bounds specified.": 1,
-    "Correct zero-width integral property and an antiderivative illustration where available.": 1
+    "Correct zero-width integral property and an antiderivative illustration where available.": 1,
+    "Exact gradient, divergence and curl values, and valid nonuniqueness lesson.": 1,
+    "Correct odd-function cancellation on the symmetric finite interval.": 1,
+    "Correct meaning of successive variable integrations in an iterated definite integral.": 1,
+    "Correct introductory distinction between separability and linearity, including possible overlap.": 1,
+    "Complete practical cylindrical-coordinate integration workflow, including the indispensable radial Jacobian.": 1,
+    "Correct unit-circle parametrization and circulation for the counterclockwise orientation shown.": 1,
+    "Correct Hessian/quadratic-model role and positive-definite critical-point test in the ordinary smooth setting.": 1,
+    "Correct conceptual Euler-Maclaurin sum/integral bridge with Bernoulli and derivative corrections and standard asymptotic uses.": 1,
+    "Correct SI Gauss-law surface-flux statement and divergence-theorem connection.": 1,
+    "Correct qualified explanation of interval-wide derivative information yielding monotonicity and shape conclusions.": 1,
+    "Correct intuition and threshold cases of the ratio test.": 1,
+    "Correct elementary three-condition continuity checklist and its possible failures.": 1,
+    "Correct winding-number graphics example and plausible qualified accumulation/path-functional applications outside elementary mechanics.": 1,
+    "Correct standard related-rates workflow, with differentiation before substitution.": 1,
+    "Correct practical motivation for multipliers when solving constraints explicitly would be awkward.": 1,
+    "Correct principal-value concept and canonical zero PV example, distinguished from ordinary improper convergence.": 1,
+    "Correct warning against line-only multivariable limit tests and appropriate all-path proof techniques.": 1,
+    "Correct concise partial-fractions integration plan for rational functions.": 1,
+    "Correct IVT statement and role of continuity/completeness.": 1,
+    "Correct intuitive right-hand orientation relationship between boundary traversal and a surface normal.": 1,
+    "Exact partial derivative and fixed-y interpretation.": 1,
+    "The mathematical signed-versus-absolute integral distinction is correct, but total revenue is not the absolute value of net profit. The concluding financial analogy mislabels accumulated gains and losses as revenue.": 1,
+    "Exact gradient and zero-curl computation for the smooth xy potential.": 1,
+    "The active-set description and feasible barrier intuition are useful, but not all interior-point methods stay inside the feasible region of the original problem. Infeasible-start primal-dual variants can violate equality or original primal constraints until convergence.": 1,
+    "Correct application of Cauchy condensation to the positive decreasing harmonic terms.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "ae5424a79946c6b4b18cd681645382a253801b8c5d2ace2e87585bb8c988888a",
-  "substantively_unreviewed": 957,
+  "published_decisions_sha256": "85892f7ace034b2fb936ed560e9ba51a3a1d90f656dc49b545c70e371c6d4983",
+  "substantively_unreviewed": 932,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

@@ -8,10 +8,10 @@
   "review": {
     "curriculum": 2112,
     "dispositions": {
-      "PASS": 889,
+      "PASS": 912,
       "REJECT": 55,
-      "QUARANTINE": 209,
-      "NEEDS_HUMAN_REVIEW": 959
+      "QUARANTINE": 211,
+      "NEEDS_HUMAN_REVIEW": 934
     },
     "by_domain": {
       "circuits": {
@@ -45,10 +45,10 @@
         "NEEDS_HUMAN_REVIEW": 0
       },
       "calculus": {
-        "PASS": 88,
+        "PASS": 111,
         "REJECT": 3,
-        "QUARANTINE": 9,
-        "NEEDS_HUMAN_REVIEW": 115
+        "QUARANTINE": 11,
+        "NEEDS_HUMAN_REVIEW": 90
       },
       "electrical_components": {
         "PASS": 232,
@@ -75,8 +75,8 @@
         "NEEDS_HUMAN_REVIEW": 242
       }
     },
-    "agent_substantive_reviews": 1152,
-    "substantively_unreviewed": 957,
+    "agent_substantive_reviews": 1177,
+    "substantively_unreviewed": 932,
     "reviewed_specialist_holds": 2,
     "complete_source_domains": [
       "circuits",
@@ -100,13 +100,13 @@
     },
     {
       "path": "data/review/phase3/technical-review.jsonl.gz",
-      "bytes": 368200,
-      "sha256": "ae5424a79946c6b4b18cd681645382a253801b8c5d2ace2e87585bb8c988888a"
+      "bytes": 373483,
+      "sha256": "85892f7ace034b2fb936ed560e9ba51a3a1d90f656dc49b545c70e371c6d4983"
     },
     {
       "path": "manifests/phase3-agent-technical-review.json",
-      "bytes": 1726924,
-      "sha256": "0b5ac7350eb0862fc85a26d9643b805356fa53c73acfe7baee01f6c29d89d14f"
+      "bytes": 1768897,
+      "sha256": "148e15cde214078e9933f09343ac894fe253be732a5c02197ddecf0149b20d43"
     },
     {
       "path": "manifests/phase3-release-families.json",
@@ -115,8 +115,8 @@
     },
     {
       "path": "reports/phase3-technical-review.json",
-      "bytes": 223593,
-      "sha256": "ab9481c7a78ba819657e8896f79697ecf0cfd51cb870a6c241c797584237af20"
+      "bytes": 226440,
+      "sha256": "90fa1a784e9d2cb1cd5525ce1c6734038cbbdc4f0a4b473a85dd618b3c99bebb"
     },
     {
       "path": "src/forge_tools/engineering.py",
@@ -221,7 +221,7 @@
   "next_domain": "calculus",
   "next_batch": {
     "domain": "calculus",
-    "offset": 100,
+    "offset": 125,
     "limit": 25
   },
   "workers": [],
@@ -232,9 +232,9 @@
   "latest_cloud_continuation": "reports/phase3-cloud-continuation-validation.json",
   "local_continuation": {
     "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
-    "local_predecessor_commit": "994a4b16a3b6c4826a3ab34566e5aa9b6aeb90a1",
+    "local_predecessor_commit": "9e60dfd631c7871ba5940d7b01bcad9d3420d657",
     "publication_status": "LOCAL_ONLY; do not claim these counts are on GitHub",
-    "latest_batch": "reports/phase3-review-batches/calculus-0075-0100.json",
+    "latest_batch": "reports/phase3-review-batches/calculus-0100-0125.json",
     "electrical_domain_complete": true,
     "trigonometry_pending_review_queue_complete": true,
     "trigonometry_preserved_structural_ordinals": [
