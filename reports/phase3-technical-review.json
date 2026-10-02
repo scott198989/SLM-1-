@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 632,
+    "PASS": 646,
     "REJECT": 47,
-    "QUARANTINE": 177,
-    "NEEDS_HUMAN_REVIEW": 1256
+    "QUARANTINE": 178,
+    "NEEDS_HUMAN_REVIEW": 1241
   },
   "by_domain": {
     "circuits": {
@@ -20,10 +20,10 @@
       "NEEDS_HUMAN_REVIEW": 194
     },
     "algebra": {
-      "PASS": 162,
+      "PASS": 176,
       "REJECT": 8,
-      "QUARANTINE": 31,
-      "NEEDS_HUMAN_REVIEW": 15
+      "QUARANTINE": 32,
+      "NEEDS_HUMAN_REVIEW": 0
     },
     "thermal_process_engineering": {
       "PASS": 73,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 855,
+  "agent_substantive_reviews": 870,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "e6390b94e0778eb198d66ba0e17774b0636218bff3e4a32fad8fcc7590f3f92e",
+  "technical_review_sha256": "464061683c78caa27db1240ff083ae3a006ed47023d24f63b9b3cf780aaa6785",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1254,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1239,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -936,11 +936,26 @@
     "Useful high-level checklist combining structure, constraint formulation, coupling strategy, solver matching and verification/error control.": 1,
     "Correct finitely generated torsion-module explanation with finite-dimensional V explicitly stated and invariant/elementary factor consequences accurately described.": 1,
     "The eigenmode formula is valid when A has a full eigenbasis, but the answer labels it the general solution of x'=Ax without the required diagonalizability condition. Defective matrices need generalized-eigenvector polynomial factors.": 1,
-    "Appropriate elementary explanation of positive-integer exponents and order of operations with a clear 3^2 example.": 1
+    "Appropriate elementary explanation of positive-integer exponents and order of operations with a clear 3^2 example.": 1,
+    "Correct distinction between homogeneous and nonhomogeneous linear systems and their possible solution sets.": 1,
+    "Correct rowwise multilinearity distinction from treating the determinant as one linear function of all matrix entries.": 1,
+    "A singularity of an unspecified coupling does not by itself establish a bifurcation of the solution set or identify that coupling with the full system Jacobian. The answer acknowledges additional bifurcation classification work, but its initial diagnostic inference lacks the needed system-specific conditions.": 1,
+    "Sound high-level static AC power-system formulation using power-balance equalities, operating-limit inequalities and sparse nonlinear optimization.": 1,
+    "Correct uniqueness-of-inverse proof that inversion is an involution in a group.": 1,
+    "All elimination steps and the final triple are correct.": 1,
+    "Correct homomorphism-composition proof with compatible domain/codomain maps and preservation of the group operation at each step.": 1,
+    "Correct real partial-fraction numerator degree and treatment of repeated irreducible quadratic factors.": 1,
+    "Correct unsigned permutation-sum definition and standard exact-computation complexity contrast. The intended determinant parity-sign distinction is clear.": 1,
+    "Faithful rephrasing of the supplied Schur-complement elimination operation, with correct recovery by back substitution.": 1,
+    "Correct principal-kernel description for evaluation at a finite matrix.": 1,
+    "Correct normality proof for a subgroup of an abelian group, since each conjugation fixes every subgroup element.": 1,
+    "Correct sign-chart procedure using real zeros and excluded denominator points, with multiplicities controlling sign changes.": 1,
+    "Correct invariant-based method for disproving isomorphism, with valid examples of commutativity and element-order counts.": 1,
+    "Correct explanation of left-to-right evaluation for equal-precedence multiplication/division in the ordinary classroom convention.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "fed0bd159614901aa86a6907b1ccaeff487940900fa7df6906e23d89cb63d265",
-  "substantively_unreviewed": 1254,
+  "published_decisions_sha256": "14bf100adaef68b677f619b360e7d9b8d67b6a6e16aefc3966175501dbae7e64",
+  "substantively_unreviewed": 1239,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
