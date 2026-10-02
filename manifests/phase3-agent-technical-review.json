@@ -28025,9 +28025,859 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/trigonometry-0150-0175.json",
       "original_domain_ordinal": 174
+    },
+    {
+      "id": "repo-e698800ffe42ea4af2af5106",
+      "messages_sha256": "e698800ffe42ea4af2af5106189477369bfecb49b7cf8a8577231d70fb1d0831",
+      "state": "QUARANTINE",
+      "rationale": "The squared-equation reduction is correct, but the requested solve is unfinished. The tan(x)=3/4 branch is left unverified, and checking only x=0 does not specify which members of the tan(x)=0 family survive.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Exact values, solution completeness, domain preservation and counterexamples are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Original equation requires cos x!=0. The complete solutions are x=2n*pi or x=pi+atan(3/4)+2n*pi. The second branch has cos=-4/5,sin=-3/5, so 3tan+sec=9/4-5/4=1."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The reviewer solution is evidence of the missing branch check, not a replacement inserted into the source answer."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 193,
+      "assistant_tokens": 172,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 175
+    },
+    {
+      "id": "repo-3c9a6cf2f506704fa1b0fc2e",
+      "messages_sha256": "3c9a6cf2f506704fa1b0fc2e2f06586ea4574424d09ba7239f0f9ff5f6a6d542",
+      "state": "PASS",
+      "rationale": "Correct CAST ordering, quadrant associations and reference-angle use.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Exact values, solution completeness, domain preservation and counterexamples are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Counterclockwise from Q4: cosine positive, all positive in Q1, sine in Q2, tangent in Q3."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Reciprocal functions share their primary function signs; the axes are separate boundary values."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 96,
+      "assistant_tokens": 71,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 176
+    },
+    {
+      "id": "repo-3acb7743041e2191b48f4be4",
+      "messages_sha256": "3acb7743041e2191b48f4be47ddac3ecdff9eec81d9c9ca09c4608f07a23e9fb",
+      "state": "PASS",
+      "rationale": "Exact two real solutions on the requested half-open interval.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Exact values, solution completeness, domain preservation and counterexamples are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "cos pi/3=cos5pi/3=1/2, and cosine has exactly those two solutions in [0,2pi)."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 87,
+      "assistant_tokens": 59,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 177
+    },
+    {
+      "id": "repo-ce8e9ce6926c30ec9fa1231b",
+      "messages_sha256": "ce8e9ce6926c30ec9fa1231bb3f6e9ce591c5b90a4370ce3303098f2256d80fe",
+      "state": "REJECT",
+      "rationale": "The reflection-coefficient map and rotation/attenuation description are useful, but general transmission-line cascading is not a hyperbolic isometry when loss is included. The stated lossy scaling provides a direct counterexample.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Caspers, RF engineering basic concepts: the Smith chart",
+          "url": "https://arxiv.org/abs/1201.4068",
+          "finding": "Primary accelerator RF lecture describes the Smith-chart bilinear reflection-coefficient map and transmission-line use; the hyperbolic contraction counterexample is independently derived."
+        },
+        {
+          "title": "UCI Math 161 geometry notes, Poincare disk isometries",
+          "url": "https://www.math.uci.edu/~ndonalds/math161/notes.pdf",
+          "finding": "Orientation-preserving disk isometries are the Mobius transformations mapping the disk bijectively to itself; orientation-reversing cases involve conjugation. Strict radial scaling by a factor below one maps to a proper subdisk and changes radial hyperbolic distance."
+        },
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Exact values, solution completeness, domain preservation and counterexamples are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For real positive reference impedance and alpha*l>0, Gamma maps to a*exp(i phi)*Gamma with 0<a=exp(-2alpha*l)<1. A radial point r has disk distance 2*atanh(r) from zero; after the map this becomes 2*atanh(a*r), strictly smaller."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The passive positive-real impedance half-plane maps to the disk for a real positive reference impedance. Appropriate lossless maps can be isometries; the rejection concerns the unqualified claim including lossy cascades."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 178,
+      "assistant_tokens": 148,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 178
+    },
+    {
+      "id": "repo-03c3869c9da84a15bc5d8ba7",
+      "messages_sha256": "03c3869c9da84a15bc5d8ba754f280c16ab9aa66b6da99924f120c7c25a1b3cb",
+      "state": "PASS",
+      "rationale": "Correct choice of inverse tangent and opposite/adjacent ratio for the right-triangle angle.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Exact values, solution completeness, domain preservation and counterexamples are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "atan(8/6)=53.1301023542 degrees."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 86,
+      "assistant_tokens": 51,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 179
+    },
+    {
+      "id": "repo-71025257966497c6e0bc555e",
+      "messages_sha256": "71025257966497c6e0bc555eba7d010c7007e3dfbfe66645c8157c03819c1b30",
+      "state": "PASS",
+      "rationale": "Correct path length, displacement magnitude, direction and scalar/vector distinction.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_vector_geometry",
+          "finding": "Component displacement, norms and circular-motion parametrization are checked in a common coordinate frame."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Path=10 km; displacement=(5 east,5 north), magnitude=5sqrt2 km and bearing45 degrees."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 132,
+      "assistant_tokens": 84,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 180
+    },
+    {
+      "id": "repo-19febe050414179f0c3ad44b",
+      "messages_sha256": "19febe050414179f0c3ad44b8909f573bf1820c0f99966cadaae381c39f42d2a",
+      "state": "QUARANTINE",
+      "rationale": "The final triple-angle identity is correct, but this proof introduces tan(2x), excluding points where both original sides are defined. It does not restore those omitted points.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Exact values, solution completeness, domain preservation and counterexamples are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At x=pi/4, tan3x=-1 and (3tan x-tan³x)/(1-3tan²x)=-1, but tan2x is undefined and the intermediate denominators 1-tan²x vanish."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for the proof-domain gap, which could be addressed by a separate argument or continuity; do not reject the identity itself."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 205,
+      "assistant_tokens": 170,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 181
+    },
+    {
+      "id": "repo-2e6242516febe1a67eace302",
+      "messages_sha256": "2e6242516febe1a67eace302ee81a1d10e79e2e3b6d90304cba376d2f2d485a9",
+      "state": "PASS",
+      "rationale": "Correct uniform lossy-line ABCD matrix and interpretation of the complex propagation constant.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_uniform_telegrapher_matrix_exponential",
+          "finding": "For uniform series impedance z and shunt admittance y per length, the chain generator M=[[0,z],[y,0]] satisfies M²=gamma² I with gamma²=zy. exp(lM)=I cosh(gamma*l)+(M/gamma)sinh(gamma*l), giving the stated ABCD entries for Z0=z/gamma."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "M²=zy I yields exp(lM) with A=D=cosh gamma*l, B=Z0*sinh gamma*l, C=sinh gamma*l/Z0; determinant cosh²-sinh²=1."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Uses the transmission-chain current convention, with receiving-end current directed toward the load. With both port currents defined entering the network, the second-port sign changes."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 133,
+      "assistant_tokens": 107,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 182
+    },
+    {
+      "id": "repo-2805e2b21033b44c656bad90",
+      "messages_sha256": "2805e2b21033b44c656bad90dd7b882f6d1137b30a427de396624a115d4a061c",
+      "state": "PASS",
+      "rationale": "Exact quotient-rule proof and hyperbolic-identity simplification.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Exact values, solution completeness, domain preservation and counterexamples are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "(cosh²x-sinh²x)/cosh²x=sech²x; cosh x never vanishes for real x."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 98,
+      "assistant_tokens": 72,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 183
+    },
+    {
+      "id": "repo-38de5fdafbcf02c4d8609777",
+      "messages_sha256": "38de5fdafbcf02c4d86097773c242d34d27d2fa44e85dd2cd1cde25d4fc52f7e",
+      "state": "PASS",
+      "rationale": "Exact product-to-sum proof of the difference of sine squares.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Exact values, solution completeness, domain preservation and counterexamples are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "0.5*(cos2B-cos2A)=sin²A-sin²B."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 164,
+      "assistant_tokens": 136,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 184
+    },
+    {
+      "id": "repo-f4440e52f1c9249baef95169",
+      "messages_sha256": "f4440e52f1c9249baef95169cef998fdd158945afb6b13ff3bd4c1ddb463cc66",
+      "state": "PASS",
+      "rationale": "Correct expansion and cancellation of cross terms.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Exact values, solution completeness, domain preservation and counterexamples are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "(s-c)²+(s+c)²=2(s²+c²)=2 for s=sin x,c=cos x."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 95,
+      "assistant_tokens": 63,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 185
+    },
+    {
+      "id": "repo-52634b63373641fec5129d0a",
+      "messages_sha256": "52634b63373641fec5129d0a37cdc0198805ed89b25ac029a85aa395aae606a5",
+      "state": "PASS",
+      "rationale": "Correct geometric sine range explanation for real unit-circle angles.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Exact values, solution completeness, domain preservation and counterexamples are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "x²+y²=1 implies y²<=1 and -1<=y<=1."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The real-angle context matters; complex sine is not bounded this way."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 81,
+      "assistant_tokens": 53,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 186
+    },
+    {
+      "id": "repo-e8f7b84a1958f27aab257a91",
+      "messages_sha256": "e8f7b84a1958f27aab257a912153dc0dac85a5edf21b40244147dad73eed19ea",
+      "state": "QUARANTINE",
+      "rationale": "The possibility of hyperbolic terms in more elaborate stability models is plausible, but the specific cosine-cosh characteristic example is not tied to a defined governing equation or boundary conditions. The claimed foundation/intermediate-support examples remain unverified.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Purdue CE579, Elastic Buckling Behavior of Beams",
+          "url": "https://engineering.purdue.edu/~ahvarma/CE%20579/Beam_Buckling.pdf",
+          "finding": "Beam/column stability is determined by the governing differential equation and boundary conditions. This source does not verify the candidate cos(alpha L)cosh(beta L)=1 example for an unspecified foundation/support arrangement."
+        },
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Exact values, solution completeness, domain preservation and counterexamples are checked directly."
+        },
+        {
+          "title": "Mathematical and Computational Applications 28(4), 87, equations 1 and 10",
+          "url": "https://www.mdpi.com/2297-8747/28/4/87",
+          "finding": "The primary beam-on-Winkler-foundation buckling equation is EI*v_fourth+Pc*v_second+kw*v=0; its squared characteristic roots have product kw/EI>0. This supports the narrow missing-model hold rather than excluding hyperbolic terms from every possible model."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For the standard compressed uniform Winkler model EI*w_fourth+P*w_second+k*w=0, characteristic r² values have product k/EI>0. A pure real pair ±beta and pure imaginary pair ±i*alpha would instead have negative product -alpha²*beta², so that simple mixed basis does not follow automatically."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is a missing-model/evidence hold, not a claim that no column model can ever involve cosh. Complex-root foundation regimes can have hyperbolic-trigonometric products with different characteristic conditions."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 108,
+      "assistant_tokens": 87,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 187
+    },
+    {
+      "id": "repo-be24f525f635d845291d67c4",
+      "messages_sha256": "be24f525f635d845291d67c45404f8015edbf8802b5ca7b3d9b5bfb2979dcf77",
+      "state": "PASS",
+      "rationale": "Correct polar computation and exact result, with the method comparison understood as informal advice.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_complex_algebra",
+          "finding": "Complex integer powers, polar coordinates and real/imaginary exponential decompositions are evaluated algebraically."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "(2+2i)²=8i, so the sixth power=(8i)³=-512i, also matching (2sqrt2)^6 exp(3pi*i/2)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Repeated squaring makes rectangular computation short too; the nightmare phrase is hyperbole and not a proved operation-count lower bound."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 165,
+      "assistant_tokens": 136,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 188
+    },
+    {
+      "id": "repo-5666e9bec462b47db71087b7",
+      "messages_sha256": "5666e9bec462b47db71087b7b41ed8b972b773df127e70753a9e25717395bd73",
+      "state": "PASS",
+      "rationale": "Exact exponential derivation of the hyperbolic sine addition formula.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Exact values, solution completeness, domain preservation and counterexamples are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Expanding the two products in the numerator cancels the mixed exponentials and leaves 2*exp(a+b)-2*exp(-a-b), divided by4."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 129,
+      "assistant_tokens": 111,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 189
+    },
+    {
+      "id": "repo-afb952a332b242013450f0d6",
+      "messages_sha256": "afb952a332b242013450f0d63fda11d2a8ad842680431af1668c0724640032c9",
+      "state": "PASS",
+      "rationale": "Correct coefficient extraction and useful basis-choice explanation for the standard nonzero-k hyperbolic solution.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Exact values, solution completeness, domain preservation and counterexamples are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "y(0)=A; y_prime(0)=k*B, so B=y_prime(0)/k."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "k must be nonzero. At k=0 the two-function basis degenerates and the y_second=0 solution is A+B*x; this is not covered by the displayed division."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 103,
+      "assistant_tokens": 81,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 190
+    },
+    {
+      "id": "repo-0d6ed2c98d405abf3b225cf7",
+      "messages_sha256": "0d6ed2c98d405abf3b225cf7bb4ace944c5d59bc1053f9e78de9ce05b8a76eb2",
+      "state": "PASS",
+      "rationale": "Correct qualitative account of additive measurement noise perturbing Fourier coefficient estimates.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_linear_transform_noise_projection",
+          "finding": "A linear Fourier coefficient estimate of signal plus noise equals the signal coefficient plus the projected noise coefficient; finite noisy observations perturb estimated spectra."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For coefficient functional L_n, L_n(signal+noise)=L_n(signal)+L_n(noise)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Not every noise realization excites every frequency; the original allows coefficients to fluctuate rather than asserting every bin must become nonzero."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 70,
+      "assistant_tokens": 49,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 191
+    },
+    {
+      "id": "repo-22b4b70170b1e882fe0a59e9",
+      "messages_sha256": "22b4b70170b1e882fe0a59e9e1b48d04fb72ca5e8c302a383aba17eaf0f9606e",
+      "state": "PASS",
+      "rationale": "Correct complete tangent reduction with an explicit check of excluded cosine-zero cases.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Exact values, solution completeness, domain preservation and counterexamples are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "sin x=cos x implies cos x!=0, then tan x=1 gives pi/4+n*pi."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 84,
+      "assistant_tokens": 66,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 192
+    },
+    {
+      "id": "repo-2e18f6a6729a144eba4481a1",
+      "messages_sha256": "2e18f6a6729a144eba4481a1541a2a77653461740caae8ef8d1f1a9ae98f5cd0",
+      "state": "PASS",
+      "rationale": "Correct factorization and both complete cosine solution branches.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Exact values, solution completeness, domain preservation and counterexamples are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "cos x=0 gives pi/2+n*pi; cos x=1 gives2n*pi."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 77,
+      "assistant_tokens": 55,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 193
+    },
+    {
+      "id": "repo-3d5da3996ab63cf6d8b16d17",
+      "messages_sha256": "3d5da3996ab63cf6d8b16d17c36b64003d37b9d501c9f5ea2f52fc967e8fff1e",
+      "state": "PASS",
+      "rationale": "Correct double-angle transformation and complete real solution family.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Exact values, solution completeness, domain preservation and counterexamples are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "cos2x=0 iff2x=pi/2+k*pi, so x=pi/4+k*pi/2."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 82,
+      "assistant_tokens": 65,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 194
+    },
+    {
+      "id": "repo-2fb6c9b7a82f174fa6cbe7c7",
+      "messages_sha256": "2fb6c9b7a82f174fa6cbe7c73baacce1ae2840a1a57e688881d91ad7c90bc628",
+      "state": "PASS",
+      "rationale": "Correct distinction between equality and one-way implication, including the need to reassess what a chain proves.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_proof_logic_review",
+          "finding": "A chain of equality must preserve equality and domain at each link; one-way implications require separate logical justification."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The effect depends on direction and context, which the answer explicitly recognizes; not every use of implication invalidates an otherwise complete proof."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 158,
+      "assistant_tokens": 122,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 195
+    },
+    {
+      "id": "repo-bccecc2d08a5cab564d0f747",
+      "messages_sha256": "bccecc2d08a5cab564d0f747b238343b062b6337973b33b8110551757ee14d68",
+      "state": "PASS",
+      "rationale": "Correct sinusoidal steady-state frequency-response and superposition explanation for LTI systems.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT 6.310, Sinusoidal Steady State",
+          "url": "https://introcontrol.mit.edu/spring25/prelabs/prelab3/sss",
+          "finding": "For an existing sinusoidal steady state, transfer-function frequency response scales amplitude and shifts phase at the input frequency; decaying transients are treated separately."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "When H(i*omega) exists and the steady state is defined, exp(i*omega*t) is multiplied by H(i*omega); real sinusoidal amplitude and phase follow."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A stable steady state or suitable existence conditions are needed. Unstable systems or undamped resonance may not settle; the original explicitly frames the result at steady state rather than proving that every LTI system settles."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 153,
+      "assistant_tokens": 130,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 196
+    },
+    {
+      "id": "repo-4beca6bce5e8d45d82c004ba",
+      "messages_sha256": "4beca6bce5e8d45d82c004ba30035853d29f55bc620e1d6114d46a48ba535091",
+      "state": "PASS",
+      "rationale": "Correct elementary comparison of oscillatory and hyperbolic solution bases for the opposite-sign constant-coefficient ODEs.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Exact values, solution completeness, domain preservation and counterexamples are checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For k!=0, derivatives give cos_second=-k²cos and cosh_second=k²cosh, likewise sine/sinh."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "k is real nonzero in this oscillatory/growing-decaying comparison; k=0 is the shared affine-solution limit. The applications are illustrative separated spatial/time models, not claims that every diffusion or static problem has a cosh solution."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 129,
+      "assistant_tokens": 102,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 197
+    },
+    {
+      "id": "repo-39b164116a8c265fe8221025",
+      "messages_sha256": "39b164116a8c265fe82210259305c366bd9220e6bd68b8e8e1c45b2d4cc04090",
+      "state": "PASS",
+      "rationale": "Correct uniform circular-motion decomposition into perpendicular sine/cosine components with a quarter-cycle phase offset.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_vector_geometry",
+          "finding": "Component displacement, norms and circular-motion parametrization are checked in a common coordinate frame."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "x²+y²=r² and velocity=(-r*omega*sin omega*t,r*omega*cos omega*t) has constant speed |r*omega|."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Interference is used loosely for vector superposition; perpendicular components do not produce ordinary same-direction scalar cancellation. Constant omega and chosen initial phase define the displayed model."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 99,
+      "assistant_tokens": 76,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 198
+    },
+    {
+      "id": "repo-b56c51d0bd65724d47fe4546",
+      "messages_sha256": "b56c51d0bd65724d47fe4546f9f5383b63a516c96301e3ee04b6f9c22e9a2e4d",
+      "state": "QUARANTINE",
+      "rationale": "The fading-superposition description is sound, but unequal decay rates do not make exact destructive cancellation impossible at every instant. Envelopes with different starting amplitudes can cross; persistent cancellation is the stronger condition that generally fails.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_damped_superposition_counterexample",
+          "finding": "Opposite-phase amplitudes A1(t),A2(t) cancel exactly when A1(t)=A2(t). Different decay rates prevent persistent matching in general but do not prohibit an isolated equality."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Opposite-phase envelopes A1=exp(-t) and A2=2exp(-2t) are equal at t=ln2, both1/2, despite different decay rates. Their combined phasor is zero at that instant."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "If unequal instantaneous amplitudes are intended, they indeed cannot cancel fully. Hold for ambiguity between unequal decay laws and unequal amplitudes at a given time, not for the linear superposition principle."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 88,
+      "assistant_tokens": 68,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
+      "original_domain_ordinal": 199
     }
   ],
-  "reviewed": 1034,
+  "reviewed": 1059,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

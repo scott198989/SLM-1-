@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 786,
-    "REJECT": 53,
-    "QUARANTINE": 196,
-    "NEEDS_HUMAN_REVIEW": 1077
+    "PASS": 806,
+    "REJECT": 54,
+    "QUARANTINE": 200,
+    "NEEDS_HUMAN_REVIEW": 1052
   },
   "by_domain": {
     "circuits": {
@@ -32,10 +32,10 @@
       "NEEDS_HUMAN_REVIEW": 2
     },
     "trigonometry": {
-      "PASS": 148,
-      "REJECT": 6,
-      "QUARANTINE": 21,
-      "NEEDS_HUMAN_REVIEW": 25
+      "PASS": 168,
+      "REJECT": 7,
+      "QUARANTINE": 25,
+      "NEEDS_HUMAN_REVIEW": 0
     },
     "calculus": {
       "PASS": 5,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1034,
+  "agent_substantive_reviews": 1059,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "7c071224477d6a1abbde1bd58938606f7d942425a12ddc3ad3686837fbb91a0d",
+  "technical_review_sha256": "bdffcdf96b0dad436e3456b7b99451f99c8a4897b8340b83958e9822975ffc1f",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1075,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1050,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1115,11 +1115,36 @@
     "Symmetry removes odd terms but does not in general make a symmetrically clamped, symmetrically loaded beam a pure cosh. A symmetric uniform-load clamped beam gives an even quartic counterexample.": 1,
     "Reasonable qualitative explanation of how transparent notation helps a marker assess the algebra.": 1,
     "Correct introductory contrast between equations holding for selected angles and identities holding over the entire common domain.": 1,
-    "Correct fourth-quadrant angle, reference angle and exact sine/cosine values.": 1
+    "Correct fourth-quadrant angle, reference angle and exact sine/cosine values.": 1,
+    "Correct choice of inverse tangent and opposite/adjacent ratio for the right-triangle angle.": 1,
+    "Correct qualitative account of additive measurement noise perturbing Fourier coefficient estimates.": 1,
+    "The final triple-angle identity is correct, but this proof introduces tan(2x), excluding points where both original sides are defined. It does not restore those omitted points.": 1,
+    "Correct complete tangent reduction with an explicit check of excluded cosine-zero cases.": 1,
+    "Exact quotient-rule proof and hyperbolic-identity simplification.": 1,
+    "Correct factorization and both complete cosine solution branches.": 1,
+    "Correct uniform lossy-line ABCD matrix and interpretation of the complex propagation constant.": 1,
+    "Correct distinction between equality and one-way implication, including the need to reassess what a chain proves.": 1,
+    "Exact product-to-sum proof of the difference of sine squares.": 1,
+    "Correct uniform circular-motion decomposition into perpendicular sine/cosine components with a quarter-cycle phase offset.": 1,
+    "Exact two real solutions on the requested half-open interval.": 1,
+    "Correct CAST ordering, quadrant associations and reference-angle use.": 1,
+    "Correct double-angle transformation and complete real solution family.": 1,
+    "Correct elementary comparison of oscillatory and hyperbolic solution bases for the opposite-sign constant-coefficient ODEs.": 1,
+    "Correct geometric sine range explanation for real unit-circle angles.": 1,
+    "Exact exponential derivation of the hyperbolic sine addition formula.": 1,
+    "Correct path length, displacement magnitude, direction and scalar/vector distinction.": 1,
+    "Correct coefficient extraction and useful basis-choice explanation for the standard nonzero-k hyperbolic solution.": 1,
+    "The fading-superposition description is sound, but unequal decay rates do not make exact destructive cancellation impossible at every instant. Envelopes with different starting amplitudes can cross; persistent cancellation is the stronger condition that generally fails.": 1,
+    "Correct sinusoidal steady-state frequency-response and superposition explanation for LTI systems.": 1,
+    "Correct polar computation and exact result, with the method comparison understood as informal advice.": 1,
+    "The reflection-coefficient map and rotation/attenuation description are useful, but general transmission-line cascading is not a hyperbolic isometry when loss is included. The stated lossy scaling provides a direct counterexample.": 1,
+    "The squared-equation reduction is correct, but the requested solve is unfinished. The tan(x)=3/4 branch is left unverified, and checking only x=0 does not specify which members of the tan(x)=0 family survive.": 1,
+    "The possibility of hyperbolic terms in more elaborate stability models is plausible, but the specific cosine-cosh characteristic example is not tied to a defined governing equation or boundary conditions. The claimed foundation/intermediate-support examples remain unverified.": 1,
+    "Correct expansion and cancellation of cross terms.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "b898c82424a64c3af514c54a37464714653fcf9842cdf2ed3f4d872ec0a5e048",
-  "substantively_unreviewed": 1075,
+  "published_decisions_sha256": "8cd76122591f8e8e800df87480c5530ff815668dffefcfe20c98534930b5f262",
+  "substantively_unreviewed": 1050,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
