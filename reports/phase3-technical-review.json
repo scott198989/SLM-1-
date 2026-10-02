@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1604,
-    "REJECT": 69,
-    "QUARANTINE": 312,
-    "NEEDS_HUMAN_REVIEW": 127
+    "PASS": 1625,
+    "REJECT": 70,
+    "QUARANTINE": 315,
+    "NEEDS_HUMAN_REVIEW": 102
   },
   "by_domain": {
     "circuits": {
@@ -56,10 +56,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "materials_manufacturing": {
-      "PASS": 109,
-      "REJECT": 3,
-      "QUARANTINE": 13,
-      "NEEDS_HUMAN_REVIEW": 125
+      "PASS": 130,
+      "REJECT": 4,
+      "QUARANTINE": 16,
+      "NEEDS_HUMAN_REVIEW": 100
     },
     "physics": {
       "PASS": 212,
@@ -74,18 +74,18 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1984,
+  "agent_substantive_reviews": 2009,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "7ce37cc63478dfa0b465caafb1945ea01aac2fca6f11e977adfac3eb62039d0e",
+  "technical_review_sha256": "aed38757071959a78ab21e84e643424114cdaa846d52fe0ef45376ee68f26dfa",
   "reasons": {
     "Faithful conceptual paraphrase that conservation and boundary requirements are integral to the coupled solution process. The prose does not explicitly assert exact feasibility of every internal numerical iterate.": 1,
     "Correct practical explanation of boundary data in an ordinary PDE discretization and their effect on closure, accuracy and stability.": 1,
     "Correct elementary local/absolute extrema distinction, including endpoint possibilities.": 1,
     "Universal three-phase-motor size, efficiency and self-starting comparison lacks machine type, rating and comparison conditions; synchronous motors are a counterexample to unqualified self-starting.": 1,
     "The basic inclusion of polynomials among rational expressions is correct, but the claim that polynomials always tend to infinity and can never have horizontal asymptotes fails for constant polynomials.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 125,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 100,
     "Accurate typical FMEA-entry checklist and appropriate acknowledgement that responsibility/action-status fields vary by team. It does not impose one universal risk-priority formula or imply FMEA alone validates safety.": 1,
     "Changing L/C reactance redistributes complex branch currents and voltages; response and cancellation are correctly circuit dependent rather than universally monotone.": 1,
     "Correct current-sign reversal of magnetic wire force and its role in mechanical commutation.": 1,
@@ -2065,11 +2065,36 @@
     "Correct conditional creep-fatigue/environment interaction rationale for high-temperature strain holds.": 1,
     "Correct practical elastic-versus-plastic cycling distinction.": 1,
     "Correct LEFM separation of global loading/geometry from the local singular field and plane-strain toughness condition.": 1,
-    "Correct high-level known-crack inspection-planning workflow with uncertainty and detection considerations.": 1
+    "Correct high-level known-crack inspection-planning workflow with uncertainty and detection considerations.": 1,
+    "Correct paraphrase of damage-controlled tertiary creep acceleration.": 1,
+    "Correct identification of the nearly linear portion of an ordinary creep curve as an approximately steady secondary rate.": 1,
+    "Correct classical constant-load creep-stage physical explanation.": 1,
+    "Correct rationale for lower expansion coefficient and modulus improving the elementary strength-based thermal-shock index.": 1,
+    "Reasonable along-grain specific-property comparison with explicit anisotropy, moisture and creep disadvantages.": 1,
+    "Correct S-N plot definition and customary logarithmic life axis.": 1,
+    "Correct plastic-versus-mostly-elastic fatigue-regime distinction.": 1,
+    "The answer confuses yield-before-break and leak-before-break indices and supplies an unsupported toughness exponent for the unspecified pressure/mass objective.": 1,
+    "Correct flaw-sensitive fracture-mechanics objection to a nominal tensile-strength-only threshold.": 1,
+    "The improved life supports a surface-condition effect, but total-life data alone do not establish that initiation dominated or that rough machining necessarily left tensile residual stress.": 1,
+    "Correct warning that unconstrained cross-sectional aspect ratio can make the elementary bending-mass optimization degenerate.": 1,
+    "Correct qualitative Arrhenius temperature sensitivity of diffusion-assisted creep.": 1,
+    "The membrane-like wall-stress scaling is not justified for an unspecified dam wall. A straight cantilever wall under hydrostatic loading has a different bending stress and material-index exponent.": 1,
+    "Correct empirical Paris-law terms, influences and explicit mid-growth validity restriction.": 1,
+    "Correct concise list of grain-boundary roles in high-temperature creep and fracture.": 1,
+    "Correct strong grain-size effect in the explicitly stated Coble-creep regime.": 1,
+    "The fatigue-strength-based beam index is defensible in its standard similar-section model, but the broad steel/titanium dominance and aluminum long-cycle inferiority are not established by the presence or absence of a true endurance limit.": 1,
+    "Correct common fatigue sequence from initiation through growth to final overload.": 1,
+    "Correct conventional initiation-plus-propagation life decomposition and usual surface-treatment emphasis.": 1,
+    "Faithful plain-language paraphrase of the expressly supplied polished high-cycle initiation-dominated statement.": 1,
+    "Sound child-level tradeoff-chart explanation.": 1,
+    "Correct concise yield-flow versus crack-extension distinction.": 1,
+    "Correct embodied-energy stiffness index in the standard geometrically similar beam model and reasonable motivation for comparing renewable wood.": 1,
+    "Reasonable description of coupled multiobjective material selection that cannot generally be reduced to one simple separable index.": 1,
+    "Correct conditional mechanism by which brittle grain-boundary phases promote intergranular fracture while the matrix can remain ductile.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "a8cecce83fd729d49b7f7e7eef00dc33eae0e09bb0e601306b78e47d7f6eb1e2",
-  "substantively_unreviewed": 125,
+  "published_decisions_sha256": "27e44ead00b1493ae7bc4b7b17e6506e17eea52608d0c64c66681d96832fab84",
+  "substantively_unreviewed": 100,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
