@@ -15322,9 +15322,787 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
       "original_domain_ordinal": 274
+    },
+    {
+      "id": "repo-663a7a03fefeb14385f131ee",
+      "messages_sha256": "663a7a03fefeb14385f131ee203b2d669cec924c4b1a60b6da83942bbf1282ff",
+      "state": "PASS",
+      "rationale": "Reasonable list of stress/operating-envelope parameters to check with explicit part/environment-dependent margins. It does not prescribe a universal numerical factor for voltage, temperature or switching frequency.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "Voltage, current, dissipation and temperature constraints are separate and coupled; satisfying one margin does not guarantee the others."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 59,
+      "assistant_tokens": 39,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 275
+    },
+    {
+      "id": "repo-2723d7789e890cfbb4a1927d",
+      "messages_sha256": "2723d7789e890cfbb4a1927da1fb8d9aa4f3980399725ae69219b6c219210c96",
+      "state": "QUARANTINE",
+      "rationale": "The importance of layout and the different performance of equal-schematic boards are valid, but parasitic behavior does not live entirely in layout. Device/package capacitances, lead inductance and material-dependent parasitics also exist independently of PCB routing and can be modeled in a schematic. Hold the exclusive claim rather than the layout lesson.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices AN-1142 layout guidance",
+          "url": "https://www.analog.com/en/resources/app-notes/an-1142.html",
+          "finding": "Blindly splitting a reference plane can increase return-path inductance and noise; a topology-specific reason and controlled return path are required."
+        },
+        {
+          "title": "Analog Devices practical capacitor behavior",
+          "url": "https://www.analog.com/en/resources/technical-articles/2022/07/16/11/45/passives-arent-really-so-passive-part-1-capacitors.html",
+          "finding": "Parasitic inductance, geometry and resonance determine capacitive connections' frequency response; ground-coupled noise currents are not erased."
+        },
+        {
+          "title": "Coilcraft application-frequency inductor testing",
+          "url": "https://www.coilcraft.com/en-us/resources/application-notes/testing-inductors-at-application-frequencies/",
+          "finding": "Winding resistance and copper/core losses affect Q; winding capacitance and inductance set self-resonance."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 90,
+      "assistant_tokens": 67,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 276
+    },
+    {
+      "id": "repo-1d8bb44de270b308f2faa7f8",
+      "messages_sha256": "1d8bb44de270b308f2faa7f87c3590c8430211e88e59b3eadb20052c866837f8",
+      "state": "REJECT",
+      "rationale": "The conventional automatic star-delta starter is incorrectly described as using two contactors. It normally has line, star and delta contactors with appropriate interlocking and timing. Star-first voltage/current reduction is correct, but the stated component count omits the line function and is misleading as a general definition.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Schneider star-delta starter architecture",
+          "url": "https://productinfo.se.com/tesysgigainstallationguide/tesys-giga-series-giga-contactors-and-giga-thermal-overload-relays-installation-guide/English/TeSys%E2%84%A2%20Giga%20Series%20Giga%20Contactors%20and%20Giga%20Thermal%20Overload%20Relays%20Installation%20Guide_0000447511.xml/%24/PanGu_3ContactorStar-Delta_0000449442",
+          "finding": "The standard starter has line, star and delta contactors and interlocked transition; winding/supply conditions determine suitability."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 68,
+      "assistant_tokens": 53,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 277
+    },
+    {
+      "id": "repo-d8c2627b7976f3d647b41712",
+      "messages_sha256": "d8c2627b7976f3d647b41712fb95c42904399cf425bec124fe36565e33904115",
+      "state": "PASS",
+      "rationale": "Correct basic current-limiting fuse principle: sufficiently fast fault interruption limits the current peak and let-through stress below the prospective waveform. The protected-device statement is read as coordinated protection, not automatic approval of an arbitrary under-rated downstream assembly.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Littelfuse POWR-SPEED technical applications guide",
+          "url": "https://www.littelfuse.com/~/media/electrical/application-notes/littelfuse-powr-speed-technical-applications-guide.pdf",
+          "finding": "Section 9 distinguishes pre-arcing and arcing phases; safe fuse interruption does not mean zero internal arc formation."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 56,
+      "assistant_tokens": 40,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 278
+    },
+    {
+      "id": "repo-fc368c3ad278b10e19297486",
+      "messages_sha256": "fc368c3ad278b10e192974866fd67ab95618cfddbc474e481031fda8ccd5a93d",
+      "state": "REJECT",
+      "rationale": "The categorical refusal overlooks a fixed-time survival confidence bound. Under independent representative units tested under the stated conditions, 50 survivors can support R(100 h)>0.9 at a defined confidence level without fitting a parametric lifetime distribution. A 10th-percentile bound is not the same task as estimating the whole life distribution. No unconditional population claim is approved, but the answer's only-know-these-units conclusion is too restrictive.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NIST exact binomial confidence bounds",
+          "url": "https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/exacbino.htm",
+          "finding": "Exact one-sided binomial bounds can be obtained for survival/failure counts at a fixed time without fitting a parametric lifetime distribution."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With n=50 successes, the exact one-sided 95% lower bound is R_L=0.05^(1/50)=0.9418449, and the one-sided 95% upper confidence bound on F(100 h) is 0.0581550791. Under H0 R(100 h)<=0.9, observing all 50 survive has probability at most 0.9^50=0.005153775. Thus a conditional B10>100 h confidence statement is possible without a parametric lifetime shape."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 102,
+      "assistant_tokens": 62,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 279
+    },
+    {
+      "id": "repo-fc14397b8637b78430070900",
+      "messages_sha256": "fc14397b8637b784300709001fc95f1319ef35fdb2c5b9103de38e95e4170ec0",
+      "state": "PASS",
+      "rationale": "Correct common relay benefit: a low-power/remote control signal can command a higher-power load path. It does not imply every relay is appropriately rated for every high-power load or that a direct switch can never be suitable.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "Control-circuit current need not equal load-circuit current because the relay's actuator/output contact system separates those functions."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 67,
+      "assistant_tokens": 48,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 280
+    },
+    {
+      "id": "repo-2bfd2366544e3925865b4d15",
+      "messages_sha256": "2bfd2366544e3925865b4d1540b6c0a58f43b10f24400b45eba159a321f9a697",
+      "state": "PASS",
+      "rationale": "Correct careful logic-level MOSFET definition centered on specified on-resistance at available gate drive, rather than threshold alone, with thermal and test-condition checks. It avoids interpreting a marketing label as a universal 3.3 V performance guarantee.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Infineon IRLML6402 datasheet",
+          "url": "https://www.infineon.com/dgdl/irlml6402pbf.pdf?fileId=5546d462533600a401535668d5c2263c",
+          "finding": "Separate threshold, on-resistance and transconductance entries have different gate/drain/current test conditions."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 170,
+      "assistant_tokens": 150,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 281
+    },
+    {
+      "id": "repo-679cb69eba717ed785966633",
+      "messages_sha256": "679cb69eba717ed7859666332608fea7da681dd92f457dfa4ef691b66aac4f7b",
+      "state": "QUARANTINE",
+      "rationale": "Fuse pulse endurance and accumulated cycling stress can matter, but the generic often-50-percent steady-current recommendation does not follow from I-squared-t ratings. The pulse waveform, duration, count, cooling and part-specific endurance curve are needed; steady current and pulse integral must not be substituted for one another.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Littelfuse Fuseology selection guide",
+          "url": "https://www.littelfuse.com/assetdocs/fuseology-selection-guide?assetguid=fa4aa360-f6c4-4eec-88a6-3d7ec3fe57d5",
+          "finding": "Pulse endurance is evaluated by pulse I-squared-t relative to melting I-squared-t, expected cycles and cooling, not a universal half-current rule."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A rectangular pulse has I²t=Ipeak²*duration. Two loads with the same average current can have very different pulse I²t and cooling intervals."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 76,
+      "assistant_tokens": 57,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 282
+    },
+    {
+      "id": "repo-0075ea8645fef5d814a077af",
+      "messages_sha256": "0075ea8645fef5d814a077afcd0986459fcd51625e91c23dece659eca55c0ebd",
+      "state": "PASS",
+      "rationale": "Accurate typical FMEA-entry checklist and appropriate acknowledgement that responsibility/action-status fields vary by team. It does not impose one universal risk-priority formula or imply FMEA alone validates safety.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "ASQ FMEA overview",
+          "url": "https://asq.org/quality-resources/fmea",
+          "finding": "FMEA records functions/modes, effects, causes, controls, severity/occurrence/detection and actions, with method-specific documentation details."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 68,
+      "assistant_tokens": 50,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 283
+    },
+    {
+      "id": "repo-6b603bd8e3109afd744a2117",
+      "messages_sha256": "6b603bd8e3109afd744a21173ba746c4f39cb3ae27aaba7d0f561b95ea9cd8b0",
+      "state": "PASS",
+      "rationale": "Correct hazard explanation for independently opening neutral while leaving the hot conductor connected. The advice concerns the ordinary hot/neutral case and does not authorize working on equipment without verifying isolation or define every multipole/protection exception.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "OSHA wiring design and overcurrent protection",
+          "url": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.304",
+          "finding": "Grounded-conductor continuity generally must not be interrupted independently of associated ungrounded conductors; a lone neutral fuse leaves hazardous live connections."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Opening only the neutral stops load current but does not remove the conductor connected to the live supply, so downstream points can remain hazardous relative to earth."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 79,
+      "assistant_tokens": 55,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 284
+    },
+    {
+      "id": "repo-ddff2f11c41715966e5d8968",
+      "messages_sha256": "ddff2f11c41715966e5d8968eafda6b8507b535952ca012d74d03e008eabd721",
+      "state": "PASS",
+      "rationale": "Acceptable quick conceptual explanation of reinforced versus basic protection and the common roughly doubled creepage requirement. Roughly and the definition-level prompt do not provide a design dimension or claim creepage alone certifies an entire insulation system.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TI insulation, creepage and clearance basics",
+          "url": "https://www.ti.com/video/6146024211001",
+          "finding": "Reinforced insulation provides double-insulation-equivalent protection; creepage may double, but actual dimensions depend on the equipment standard, voltage, material and environment."
+        },
+        {
+          "title": "TI power-supply isolation design",
+          "url": "https://www.ti.com/lit/ml/slup419/slup419.pdf",
+          "finding": "Pages 5–6 explain reinforced double-equivalent protection and two-times-basic creepage within the applicable design conditions."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 58,
+      "assistant_tokens": 38,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 285
+    },
+    {
+      "id": "repo-3ed41191d0d149d8c9a28892",
+      "messages_sha256": "3ed41191d0d149d8c9a28892fc721ea824e54670e665be98feb4ca78535da626",
+      "state": "PASS",
+      "rationale": "Correct distinction between damage-risk stress boundaries and specified operating conditions, with sound advice to design within the recommended range. It does not claim a part must immediately fail the instant a maximum is touched or that every parameter is guaranteed independently of its test conditions.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices absolute maximum ratings",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/raqs/raq-issue-50.html",
+          "finding": "Absolute maxima are stress boundaries rather than recommended functional conditions; prolonged exposure can reduce reliability."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 68,
+      "assistant_tokens": 49,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 286
+    },
+    {
+      "id": "repo-aae9e9c9ebb66780b82ce05a",
+      "messages_sha256": "aae9e9c9ebb66780b82ce05a6f8c4e17393b22ab5d2b4a968df5f531f1451164",
+      "state": "QUARANTINE",
+      "rationale": "Temperature is a sensible early drift check, but most common cause of slow drift is an unsupported prevalence claim for an unspecified working analog circuit. Aging, humidity/leakage, reference instability and other mechanisms can matter; no population or diagnostic evidence establishes that ranking.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices zero-drift amplifiers",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/zero-drift-amplifiers.html",
+          "finding": "Offset and drift vary strongly with architecture; low-drift designs illustrate why initial-offset versus thermal-drift magnitude must be evaluated for the actual device and range."
+        },
+        {
+          "title": "Analog Devices thermoelectric error in precision voltage sources",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/20-bit-dac-and-accurate-precision-voltage-source.html",
+          "finding": "Dissimilar junctions and thermal gradients create parasitic EMFs; clean junctions, thermal stabilization and symmetry reduce errors."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 59,
+      "assistant_tokens": 33,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 287
+    },
+    {
+      "id": "repo-ae6cf8fdde28cc954a8098aa",
+      "messages_sha256": "ae6cf8fdde28cc954a8098aa74ebbb047b0cfa9f45fdf9f29a69e824675ecfa5",
+      "state": "PASS",
+      "rationale": "Correct basic RTD expansion and resistance-versus-temperature principle with platinum as a common material. Wire is a simple description of the resistive element, not a denial of thin-film implementations; the accuracy/range/response trade-off is a general comparison rather than a specific sensor guarantee.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "OMRON resistance thermometer overview",
+          "url": "https://www.ia.omron.com/support/faq/answer/53/faq00666/index.html",
+          "finding": "Describes platinum resistance thermometer elements and their usual high precision, cost and slower thermal-response trade-off."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 57,
+      "assistant_tokens": 43,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 288
+    },
+    {
+      "id": "repo-9a58df66787745a086b6e4db",
+      "messages_sha256": "9a58df66787745a086b6e4dbd97d2457ceb1de197f55b77f51a3709420cad2a1",
+      "state": "QUARANTINE",
+      "rationale": "Noise, slew, output range and capacitive-load stability checks are useful, but a 5–10 times signal-bandwidth heuristic is insufficient guidance for an unspecified ADC driver. Required settling accuracy within the acquisition interval and closed-loop gain can demand very different bandwidth. Hold the unsupported numeric shortcut rather than treating it as a qualification rule.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TI TIDA-01053 ADC-driver reference design",
+          "url": "https://www.ti.com/tool/TIDA-01053",
+          "finding": "A capacitive ADC input makes settling, stability, current drive, noise and distortion central to amplifier selection."
+        },
+        {
+          "title": "TI SAR ADC driver settling",
+          "url": "https://e2e.ti.com/blogs_/archives/b/precisionhub/posts/16-bit-settling-for-your-high-throughput-data-acquisition-system",
+          "finding": "ADC-driver selection must satisfy acquisition-window settling to the required resolution, beyond a simple input-signal-bandwidth multiple."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a single-pole full-scale step response, settling to half an N-bit LSB requires approximately (N+1)*ln(2) time constants. Required bandwidth therefore depends on resolution and acquisition time, not only signal bandwidth."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 98,
+      "assistant_tokens": 77,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 289
+    },
+    {
+      "id": "repo-a3a94697ed36192ecfe0a505",
+      "messages_sha256": "a3a94697ed36192ecfe0a505d0d378f6f2b805777f39cefd4b6c34869b3be505",
+      "state": "PASS",
+      "rationale": "Correct qualified zero-cross benefit for many resistive loads, with explicit acknowledgement that inrush can be more complicated and improvement is not universal. It avoids the common error of promising reduced transformer inrush for every switching phase.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "OMRON zero-cross SSR function",
+          "url": "https://www.ia.omron.com/support/faq/answer/18/faq02083/",
+          "finding": "Zero-cross turn-on waits near zero AC load voltage to reduce switching noise, which differs from arbitrary phase-angle triggering."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 86,
+      "assistant_tokens": 63,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 290
+    },
+    {
+      "id": "repo-abcc18ead6f7f1b6472e371c",
+      "messages_sha256": "abcc18ead6f7f1b6472e371c50862521727fd9a4911ecdfab0cd2013a58e3374",
+      "state": "PASS",
+      "rationale": "Balanced battery-node architecture that considers switcher efficiency, optional analog postregulation/filtering and current-return layout, while preserving an LDO-only option when voltage/current conditions favor it. No unqualified runtime or noise claim is made.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices AN-140 regulator concepts",
+          "url": "https://www.analog.com/en/resources/app-notes/an-140.html",
+          "finding": "Linear regulators favor low ripple/simplicity but dissipate voltage-drop times load current; switch-mode conversion trades switching artifacts and complexity for efficiency."
+        },
+        {
+          "title": "Analog Devices low-noise LDO postregulation",
+          "url": "https://www.analog.com/en/resources/technical-articles/supply-clean-power-with-ultralow-noise-ldo-regulators.html",
+          "finding": "Precision applications commonly combine a switching converter with a sufficiently high-PSRR low-noise LDO postregulator."
+        },
+        {
+          "title": "Analog Devices AN-1142 layout guidance",
+          "url": "https://www.analog.com/en/resources/app-notes/an-1142.html",
+          "finding": "Blindly splitting a reference plane can increase return-path inductance and noise; a topology-specific reason and controlled return path are required."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 176,
+      "assistant_tokens": 143,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 291
+    },
+    {
+      "id": "repo-86455599900ed62346cef0df",
+      "messages_sha256": "86455599900ed62346cef0df868df4778485c4854816d8e40c4d1fefadfe4115",
+      "state": "PASS",
+      "rationale": "Correct ordinary first-order RC versus second-order LC trade-off: resistive loss/damping versus lower conduction loss and potential resonance. It acknowledges damping needs and does not claim every LC network rings uncontrollably when existing losses are adequate.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices practical capacitor behavior",
+          "url": "https://www.analog.com/en/resources/technical-articles/2022/07/16/11/45/passives-arent-really-so-passive-part-1-capacitors.html",
+          "finding": "Parasitic inductance, geometry and resonance determine capacitive connections' frequency response; ground-coupled noise currents are not erased."
+        },
+        {
+          "title": "Coilcraft application-frequency inductor testing",
+          "url": "https://www.coilcraft.com/en-us/resources/application-notes/testing-inductors-at-application-frequencies/",
+          "finding": "Winding resistance and copper/core losses affect Q; winding capacitance and inductance set self-resonance."
+        },
+        {
+          "title": "TI LDO stability and output capacitance",
+          "url": "https://www.ti.com/lit/an/slva115a/slva115a.pdf",
+          "finding": "Output capacitance and ESR influence feedback-loop poles/zeros and regulator stability."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Ideal RC low-pass asymptotic attenuation is first order; ideal LC is second order, with damping ratio determined by source/load and parasitic or added resistance."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 91,
+      "assistant_tokens": 66,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 292
+    },
+    {
+      "id": "repo-0828b850f773f22f13a3dea8",
+      "messages_sha256": "0828b850f773f22f13a3dea8f32cde36d4d8740624e3b191136f58baa04c8313",
+      "state": "PASS",
+      "rationale": "Acceptable concise thermocouple identification and thermoelectric signal principle. It does not supply a direct absolute-temperature conversion or deny the need for a reference/cold-junction treatment in a complete measurement system.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices temperature sensor selection",
+          "url": "https://www.analog.com/en/resources/design-notes/selecting-temperature-sensors-for-system-measurement-and-protection.html",
+          "finding": "Thermistors offer high sensitivity over a narrower practical range; thermocouples support wide/high-temperature ranges with low voltage and cold-junction conditioning."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 51,
+      "assistant_tokens": 34,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 293
+    },
+    {
+      "id": "repo-f0989e0e4611a1b76cc07017",
+      "messages_sha256": "f0989e0e4611a1b76cc070174a103e6a86dbb581a0c76c867b89419ac98299af",
+      "state": "PASS",
+      "rationale": "Reasonable plain-language warning that stress ratings are not operating targets and sustained use near them can damage reliability. Brief survival language does not supply a safe pulse duration or a guarantee of functional behavior at the absolute maximum.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices absolute maximum ratings",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/raqs/raq-issue-50.html",
+          "finding": "Absolute maxima are stress boundaries rather than recommended functional conditions; prolonged exposure can reduce reliability."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 64,
+      "assistant_tokens": 42,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 294
+    },
+    {
+      "id": "repo-2172a923f403013fcaf810d2",
+      "messages_sha256": "2172a923f403013fcaf810d24db7ed13d9bb013b0be29d61a55364cb3b19be0a",
+      "state": "PASS",
+      "rationale": "Correct rejection of zero observed failures implies zero risk. It preserves the distinction between a finite observation and the unknown population/process probability without adding unsupported numeric claims.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NIST exact binomial confidence bounds",
+          "url": "https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/exacbino.htm",
+          "finding": "Exact one-sided binomial bounds can be obtained for survival/failure counts at a fixed time without fitting a parametric lifetime distribution."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For failure probability p>0, zero failures in n independent trials still has probability (1-p)^n>0; observing zero therefore does not establish p=0."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 41,
+      "assistant_tokens": 23,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 295
+    },
+    {
+      "id": "repo-62ad7158a91b422aabbf99ac",
+      "messages_sha256": "62ad7158a91b422aabbf99ac360a367579e1045834c350aada4ff8e91aea3ce2",
+      "state": "PASS",
+      "rationale": "Correct balanced warning against bigger-capacitor-always-better, recognizing ripple benefit and inrush/physical/thermal/stability trade-offs. Usually and can avoid universal conclusions across regulated and current-limited supply architectures.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices practical capacitor behavior",
+          "url": "https://www.analog.com/en/resources/technical-articles/2022/07/16/11/45/passives-arent-really-so-passive-part-1-capacitors.html",
+          "finding": "Parasitic inductance, geometry and resonance determine capacitive connections' frequency response; ground-coupled noise currents are not erased."
+        },
+        {
+          "title": "TI LDO stability and output capacitance",
+          "url": "https://www.ti.com/lit/an/slva115a/slva115a.pdf",
+          "finding": "Output capacitance and ESR influence feedback-loop poles/zeros and regulator stability."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At fixed voltage, stored energy is 0.5*C*V²; charging dynamics and component current depend on source impedance/control, while compensation may depend on output capacitance/ESR."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 86,
+      "assistant_tokens": 61,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 296
+    },
+    {
+      "id": "repo-2ca39fb1c878b29b507f0bfb",
+      "messages_sha256": "2ca39fb1c878b29b507f0bfb4c2572831c238af3a2a20633d4b6ee71a792b4c1",
+      "state": "PASS",
+      "rationale": "Correct ideal zero-order sensor model and explicit distinction from finite real response time. It is a modeling baseline, not a claim that a physical sensor has unlimited bandwidth.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "A zero-order linear model y(t)=K*x(t) has no derivative/time-constant term and no dynamic lag; real neglected dynamics bound its useful approximation range."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 59,
+      "assistant_tokens": 42,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 297
+    },
+    {
+      "id": "repo-0efe0338597f34d33e3313fc",
+      "messages_sha256": "0efe0338597f34d33e3313fc306a92998032b6e9055308bb6722074441a45005",
+      "state": "QUARANTINE",
+      "rationale": "C0G stability and X7R DC-bias loss are valid contrasts, but saying X7R loses capacitance heavily with temperature conflates bias loss with a temperature-class tolerance that permits positive or negative changes. The actual part curves determine the combined behavior; temperature does not generically imply heavy one-direction loss.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Murata MLCC temperature measurement conditions",
+          "url": "https://ds.murata.com/simsurfing_data/pdf/en-us/mlcc/sim_mlcc_measuringcond_e.pdf",
+          "finding": "Class-II temperature variation differs from DC-bias effects; C0G is highly stable, and X7R temperature class does not imply arbitrary heavy one-direction loss."
+        },
+        {
+          "title": "Murata ceramic capacitor temperature specification",
+          "url": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/e_CNRPEE_RDEEMAR_RDEET_R7E15K.pdf",
+          "finding": "Specifies X7R capacitance change within plus/minus 15 percent for the stated temperature test, rather than inevitable heavy temperature-induced loss."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 91,
+      "assistant_tokens": 64,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 298
+    },
+    {
+      "id": "repo-629a371d90987088febd9959",
+      "messages_sha256": "629a371d90987088febd9959a17aebc09222517aa8dcce85714cb7905e6b3c3c",
+      "state": "PASS",
+      "rationale": "Correct broad contributors to usable sensor bandwidth, including mechanical/electronic/filter and digital sampling constraints. Faithfully captured appropriately frames bandwidth as dynamic tracking capability, not merely sample-count resolution.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "Any limiting stage in the sensing/conditioning/sampling chain can attenuate or alias input dynamics; raising the digital read rate alone does not remove an upstream physical pole."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 58,
+      "assistant_tokens": 43,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+      "original_domain_ordinal": 299
     }
   ],
-  "reviewed": 642,
+  "reviewed": 667,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

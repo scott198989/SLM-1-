@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 461,
-    "REJECT": 39,
-    "QUARANTINE": 143,
-    "NEEDS_HUMAN_REVIEW": 1469
+    "PASS": 479,
+    "REJECT": 41,
+    "QUARANTINE": 148,
+    "NEEDS_HUMAN_REVIEW": 1444
   },
   "by_domain": {
     "circuits": {
@@ -44,10 +44,10 @@
       "NEEDS_HUMAN_REVIEW": 208
     },
     "electrical_components": {
-      "PASS": 214,
-      "REJECT": 12,
-      "QUARANTINE": 49,
-      "NEEDS_HUMAN_REVIEW": 25
+      "PASS": 232,
+      "REJECT": 14,
+      "QUARANTINE": 54,
+      "NEEDS_HUMAN_REVIEW": 0
     },
     "electromagnetism": {
       "PASS": 2,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 642,
+  "agent_substantive_reviews": 667,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "a5592b155936081de0ecf43a9bfea7e8d1c4e13e3ef254bf250b377d02b478d7",
+  "technical_review_sha256": "9c26e245446eeca73f715d5140183c0de84d8f274ff8e88c6364d30ef3cde35f",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1467,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1442,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -723,11 +723,36 @@
     "Correct stress-strength reliability concept, including variability and aging rather than treating load/capability as fixed independent numbers. It does not assume independence or compute a probability from unspecified distributions.": 1,
     "Reasonable conditional resonance/common-mode hypothesis from a cable-dependent narrowband failure, with several possible path/damping fixes. Suggests, may and likely avoid claiming a unique cause or computing a resonance from cable length alone.": 1,
     "Correct switcher-to-ADC coupling paths and reasonable mitigation choices. Synchronization is read as part of deliberate frequency planning to place tones away from the signal band, not as a guarantee that an arbitrary clock ratio removes spurs. Layout and filtering are also explicitly included.": 1,
-    "Appropriately conditional logic tracing, explicitly distinguishing gate voltage from gate-to-source voltage and N-channel low-side from P-channel high-side behavior. It does not choose an on/off result solely from the word pull-up.": 1
+    "Appropriately conditional logic tracing, explicitly distinguishing gate voltage from gate-to-source voltage and N-channel low-side from P-channel high-side behavior. It does not choose an on/off result solely from the word pull-up.": 1,
+    "Accurate typical FMEA-entry checklist and appropriate acknowledgement that responsibility/action-status fields vary by team. It does not impose one universal risk-priority formula or imply FMEA alone validates safety.": 1,
+    "Acceptable concise thermocouple identification and thermoelectric signal principle. It does not supply a direct absolute-temperature conversion or deny the need for a reference/cold-junction treatment in a complete measurement system.": 1,
+    "C0G stability and X7R DC-bias loss are valid contrasts, but saying X7R loses capacitance heavily with temperature conflates bias loss with a temperature-class tolerance that permits positive or negative changes. The actual part curves determine the combined behavior; temperature does not generically imply heavy one-direction loss.": 1,
+    "The conventional automatic star-delta starter is incorrectly described as using two contactors. It normally has line, star and delta contactors with appropriate interlocking and timing. Star-first voltage/current reduction is correct, but the stated component count omits the line function and is misleading as a general definition.": 1,
+    "Correct rejection of zero observed failures implies zero risk. It preserves the distinction between a finite observation and the unknown population/process probability without adding unsupported numeric claims.": 1,
+    "The importance of layout and the different performance of equal-schematic boards are valid, but parasitic behavior does not live entirely in layout. Device/package capacitances, lead inductance and material-dependent parasitics also exist independently of PCB routing and can be modeled in a schematic. Hold the exclusive claim rather than the layout lesson.": 1,
+    "Correct careful logic-level MOSFET definition centered on specified on-resistance at available gate drive, rather than threshold alone, with thermal and test-condition checks. It avoids interpreting a marketing label as a universal 3.3 V performance guarantee.": 1,
+    "Correct ideal zero-order sensor model and explicit distinction from finite real response time. It is a modeling baseline, not a claim that a physical sensor has unlimited bandwidth.": 1,
+    "Correct distinction between damage-risk stress boundaries and specified operating conditions, with sound advice to design within the recommended range. It does not claim a part must immediately fail the instant a maximum is touched or that every parameter is guaranteed independently of its test conditions.": 1,
+    "Correct broad contributors to usable sensor bandwidth, including mechanical/electronic/filter and digital sampling constraints. Faithfully captured appropriately frames bandwidth as dynamic tracking capability, not merely sample-count resolution.": 1,
+    "Correct balanced warning against bigger-capacitor-always-better, recognizing ripple benefit and inrush/physical/thermal/stability trade-offs. Usually and can avoid universal conclusions across regulated and current-limited supply architectures.": 1,
+    "Reasonable list of stress/operating-envelope parameters to check with explicit part/environment-dependent margins. It does not prescribe a universal numerical factor for voltage, temperature or switching frequency.": 1,
+    "Fuse pulse endurance and accumulated cycling stress can matter, but the generic often-50-percent steady-current recommendation does not follow from I-squared-t ratings. The pulse waveform, duration, count, cooling and part-specific endurance curve are needed; steady current and pulse integral must not be substituted for one another.": 1,
+    "Correct hazard explanation for independently opening neutral while leaving the hot conductor connected. The advice concerns the ordinary hot/neutral case and does not authorize working on equipment without verifying isolation or define every multipole/protection exception.": 1,
+    "Correct ordinary first-order RC versus second-order LC trade-off: resistive loss/damping versus lower conduction loss and potential resonance. It acknowledges damping needs and does not claim every LC network rings uncontrollably when existing losses are adequate.": 1,
+    "Noise, slew, output range and capacitive-load stability checks are useful, but a 5–10 times signal-bandwidth heuristic is insufficient guidance for an unspecified ADC driver. Required settling accuracy within the acquisition interval and closed-loop gain can demand very different bandwidth. Hold the unsupported numeric shortcut rather than treating it as a qualification rule.": 1,
+    "Correct qualified zero-cross benefit for many resistive loads, with explicit acknowledgement that inrush can be more complicated and improvement is not universal. It avoids the common error of promising reduced transformer inrush for every switching phase.": 1,
+    "Temperature is a sensible early drift check, but most common cause of slow drift is an unsupported prevalence claim for an unspecified working analog circuit. Aging, humidity/leakage, reference instability and other mechanisms can matter; no population or diagnostic evidence establishes that ranking.": 1,
+    "Balanced battery-node architecture that considers switcher efficiency, optional analog postregulation/filtering and current-return layout, while preserving an LDO-only option when voltage/current conditions favor it. No unqualified runtime or noise claim is made.": 1,
+    "Correct basic RTD expansion and resistance-versus-temperature principle with platinum as a common material. Wire is a simple description of the resistive element, not a denial of thin-film implementations; the accuracy/range/response trade-off is a general comparison rather than a specific sensor guarantee.": 1,
+    "Correct basic current-limiting fuse principle: sufficiently fast fault interruption limits the current peak and let-through stress below the prospective waveform. The protected-device statement is read as coordinated protection, not automatic approval of an arbitrary under-rated downstream assembly.": 1,
+    "Acceptable quick conceptual explanation of reinforced versus basic protection and the common roughly doubled creepage requirement. Roughly and the definition-level prompt do not provide a design dimension or claim creepage alone certifies an entire insulation system.": 1,
+    "Reasonable plain-language warning that stress ratings are not operating targets and sustained use near them can damage reliability. Brief survival language does not supply a safe pulse duration or a guarantee of functional behavior at the absolute maximum.": 1,
+    "Correct common relay benefit: a low-power/remote control signal can command a higher-power load path. It does not imply every relay is appropriately rated for every high-power load or that a direct switch can never be suitable.": 1,
+    "The categorical refusal overlooks a fixed-time survival confidence bound. Under independent representative units tested under the stated conditions, 50 survivors can support R(100 h)>0.9 at a defined confidence level without fitting a parametric lifetime distribution. A 10th-percentile bound is not the same task as estimating the whole life distribution. No unconditional population claim is approved, but the answer's only-know-these-units conclusion is too restrictive.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "3d608ac76c96c1dfbad09f23889e73c77d8235b0fbb8035089e000040532903f",
-  "substantively_unreviewed": 1467,
+  "published_decisions_sha256": "33ebb684ae1ecae0a6f0b56ad358dbc09479a6c24d764186272a68d2d682daef",
+  "substantively_unreviewed": 1442,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
