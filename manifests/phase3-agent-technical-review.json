@@ -22648,9 +22648,466 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/algebra-0200-0225.json",
       "original_domain_ordinal": 215
+    },
+    {
+      "id": "repo-9c003a87147fa0634f13fe31",
+      "messages_sha256": "9c003a87147fa0634f13fe3195abba7d83239d701bfbe673dfa78fd0d3d8d367",
+      "state": "PASS",
+      "rationale": "Correct contrast between Pythagorean square relations and reciprocal rewrites, with valid examples.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_identity_check",
+          "finding": "The unit-circle relation sin²(x)+cos²(x)=1 and reciprocal identities are checked on their common domains; divisions require nonzero denominators."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "1-sin²(x)=cos²(x); sec(x)=1/cos(x) where cos(x)!=0."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 82,
+      "assistant_tokens": 60,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0000-0025.json",
+      "original_domain_ordinal": 1
+    },
+    {
+      "id": "repo-273ce6ff930559bdc532b610",
+      "messages_sha256": "273ce6ff930559bdc532b610e942b07272634ed811f5a002d88c371818d68d57",
+      "state": "REJECT",
+      "rationale": "The claimed rest-at-infinity radial proper-time solution is incorrect. For energy E=1 this case integrates an elementary power law, not the asserted hyperbolic-Kepler/arccosh proper-time dependence.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Ted Jacobson, Maryland Physics 776: Painleve-Gullstrand coordinates",
+          "url": "https://www.physics.umd.edu/grt/taj/776b/hw1soln.pdf",
+          "finding": "Problem 3 establishes dr/dT=-sqrt(2M/r) for radial geodesics asymptotically at rest at infinity and shows T is their proper time, in G=c=1 units."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "In units G=c=1, radial (dr/dtau)^2=E^2-1+r_s/r. Rest at infinity sets E=1, so dr/dtau=-sqrt(r_s/r) and tau-tau0=2*(r0^(3/2)-r^(3/2))/(3*sqrt(r_s))."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hyperbolic substitutions or exterior reparameterizations can be chosen, so r>=r_s alone is not an independent disproof. The rejection concerns the claimed E=1 proper-time relation."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 149,
+      "assistant_tokens": 118,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0000-0025.json",
+      "original_domain_ordinal": 2
+    },
+    {
+      "id": "repo-b1377ef9040c94786b3ff0c6",
+      "messages_sha256": "b1377ef9040c94786b3ff0c6660accfbee4cdafb327cd0c96136db535213980e",
+      "state": "QUARANTINE",
+      "rationale": "The tanh shear-layer model and stability-analysis motivation are sound, but the stated derivative omits the dimensional scale U0/delta. The signed vorticity also depends on the coordinate convention.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Jones et al., MHD Kelvin-Helmholtz instability study",
+          "url": "https://arxiv.org/abs/astro-ph/9701044",
+          "finding": "The studied planar flows use a thin shear layer with hyperbolic-tangent velocity profile. The derivative's scale and vorticity sign are checked analytically rather than inferred from the profile label."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For u(y)=U0*tanh(y/delta), du/dy=(U0/delta)*sech²(y/delta). For velocity (u(y),0,0), omega_z=-du/dy. A bare sech² is only the normalized profile shape."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for the derivative/vorticity expression; this does not reject tanh as a standard mixing-layer model."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 113,
+      "assistant_tokens": 86,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0000-0025.json",
+      "original_domain_ordinal": 7
+    },
+    {
+      "id": "repo-9d3700efe5d12cd91558ed31",
+      "messages_sha256": "9d3700efe5d12cd91558ed31d814e6b5c70e2de16d892899f689266ec6ec886b",
+      "state": "QUARANTINE",
+      "rationale": "The pond analogy correctly introduces superposition, but the unqualified crest-trough statement says cancellation leaves flat water. Complete cancellation needs equal opposing amplitudes; otherwise only partial destructive interference occurs.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_linear_superposition_check",
+          "finding": "For two opposing displacements A and -B, the sum is A-B. Exact cancellation requires equal magnitudes; constructive overlap adds the displacements."
+        },
+        {
+          "title": "OpenStax, Wave Interaction: Superposition and Interference",
+          "url": "https://openstax.org/books/physics/pages/13-3-wave-interaction-superposition-and-interference",
+          "finding": "Superposition adds displacements, and complete destructive interference requires equal opposing amplitudes."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A crest displacement 2 and trough displacement -1 sum to 1, not 0. Equal +A and -A do cancel."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 90,
+      "assistant_tokens": 67,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0000-0025.json",
+      "original_domain_ordinal": 9
+    },
+    {
+      "id": "repo-7ef0b1fb12b86f7b92bf611c",
+      "messages_sha256": "7ef0b1fb12b86f7b92bf611c752bcf0d2999f98ec421992ca03bcccc82554aaa",
+      "state": "PASS",
+      "rationale": "Correctly explains the principal inverse-sine output and warns that it need not recover the original angle.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "principal_inverse_function_check",
+          "finding": "Real arcsin maps [-1,1] to [-pi/2,pi/2]; arcsin(sin(x)) returns the unique angle in that principal range with the same sine."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "arcsin(sin(3*pi/4))=pi/4, while arcsin(sin(x))=x on [-pi/2,pi/2]."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Equivalent means equal sine here, as explicitly described; it need not mean coterminal."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 69,
+      "assistant_tokens": 52,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0000-0025.json",
+      "original_domain_ordinal": 11
+    },
+    {
+      "id": "repo-b993820d050cc01d3574aec6",
+      "messages_sha256": "b993820d050cc01d3574aec6332e9bfd0a3cea98d657ab498c04a274786d269b",
+      "state": "PASS",
+      "rationale": "Useful phase-reference heuristics with the essential caveat that a sinusoid can be represented with either sine or cosine after a phase shift.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_identity_check",
+          "finding": "The unit-circle relation sin²(x)+cos²(x)=1 and reciprocal identities are checked on their common domains; divisions require nonzero denominators."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "cos(x)=sin(x+pi/2). A negative cosine can start at a minimum, matching the stated maximum/minimum option."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "VISUAL_CONTEXT_CHECK"
+      ],
+      "qwen_tokens": 95,
+      "assistant_tokens": 73,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0000-0025.json",
+      "original_domain_ordinal": 12
+    },
+    {
+      "id": "repo-e164ea088fcc9466e4d9cbb9",
+      "messages_sha256": "e164ea088fcc9466e4d9cbb9a927bab7fcd24d9ef887747b107aa2783809508b",
+      "state": "PASS",
+      "rationale": "Correct parallelogram construction and its equivalence to tip-to-tail vector addition.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_vector_addition_geometry",
+          "finding": "For vectors u,v sharing an origin, the opposite parallelogram vertex is u+v. It is the same endpoint reached by placing v at the tip of u."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 78,
+      "assistant_tokens": 59,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0000-0025.json",
+      "original_domain_ordinal": 13
+    },
+    {
+      "id": "repo-b2bab5cb58d76dc0202af08a",
+      "messages_sha256": "b2bab5cb58d76dc0202af08ad7aa85679c9827226f51e98b10b37cc9dc428117",
+      "state": "PASS",
+      "rationale": "Correct distinction between valid individual transformations and an entire proof that covers the intended domain, including cancellation restrictions.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "direct_logical_and_domain_review",
+          "finding": "An identity proof requires sound implications/equalities on the intended domain. Independent derivations A=C and B=C imply A=B without assuming the target equality."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Canceling sin(x) without handling its zeros can establish an equality only on a smaller domain, even if the simplified endpoint resembles the desired identity."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 167,
+      "assistant_tokens": 142,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0000-0025.json",
+      "original_domain_ordinal": 14
+    },
+    {
+      "id": "repo-5cd740982572f625f612dc2e",
+      "messages_sha256": "5cd740982572f625f612dc2e5139cef7f54c0840e69901068f88333f83aeea24",
+      "state": "PASS",
+      "rationale": "Correct coordinate-reflection and sign rules for the four quadrants.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_identity_check",
+          "finding": "The unit-circle relation sin²(x)+cos²(x)=1 and reciprocal identities are checked on their common domains; divisions require nonzero denominators."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Reflection in the y-axis gives (-cos(alpha),sin(alpha)); through the origin gives (-cos(alpha),-sin(alpha)); in the x-axis gives (cos(alpha),-sin(alpha))."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Quadrantal angles on axes require their boundary values, and reciprocal trig functions remain undefined where their denominators vanish."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 99,
+      "assistant_tokens": 77,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0000-0025.json",
+      "original_domain_ordinal": 15
+    },
+    {
+      "id": "repo-9c4da1f9a311c8d1368cdc7b",
+      "messages_sha256": "9c4da1f9a311c8d1368cdc7b09f41ca89fe9559eb2e6a0c1de05b4d0880d3423",
+      "state": "PASS",
+      "rationale": "Correct beginner-safe proof strategy and warning against assuming the desired equality while operating on both sides. The explicit risks wording is appropriate to the requested one-side method.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "direct_logical_and_domain_review",
+          "finding": "An identity proof requires sound implications/equalities on the intended domain. Independent derivations A=C and B=C imply A=B without assuming the target equality."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If A(x)=C(x) is proved independently and B(x)=C(x) is proved independently on the same domain, transitivity proves A(x)=B(x) without using that conclusion as a premise."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Independent proofs A=C and B=C on the same domain remain valid; the warning is not a ban on that method."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 63,
+      "assistant_tokens": 44,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0000-0025.json",
+      "original_domain_ordinal": 19
+    },
+    {
+      "id": "repo-c5eb23b0d2e0af1276a22cf4",
+      "messages_sha256": "c5eb23b0d2e0af1276a22cf4726c9f302f2d001382ef0e91e20bce63ed2d321c",
+      "state": "PASS",
+      "rationale": "Correct double-angle reduction and complete real solution families.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_identity_check",
+          "finding": "The unit-circle relation sin²(x)+cos²(x)=1 and reciprocal identities are checked on their common domains; divisions require nonzero denominators."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "sin(2x)=1/2 gives 2x=pi/6+2n*pi or 5pi/6+2n*pi, hence x=pi/12+n*pi or 5pi/12+n*pi for integer n."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 115,
+      "assistant_tokens": 92,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0000-0025.json",
+      "original_domain_ordinal": 20
+    },
+    {
+      "id": "repo-b610ee829fa5ad35a3ded31a",
+      "messages_sha256": "b610ee829fa5ad35a3ded31a7bf5fe23b62abf3293b334a5f599dc5fb3507545",
+      "state": "PASS",
+      "rationale": "Appropriately qualified diagnostic suggestion: a strong second harmonic can support misalignment/asymmetry hypotheses, with machine-specific interpretation explicitly required.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Fluke, Diagnosing Imbalance, Misalignment, Looseness and Bearing Wear",
+          "url": "https://www.fluke.com/en-au/learn/blog/alignment/understanding-vibration-monitoring-common-faults-part-4",
+          "finding": "The misalignment discussion identifies increased 1X axial and 2X radial/tangential components. A harmonic pattern is diagnostic evidence, not a unique fault certificate."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A 2X component alone is not a unique diagnosis or a safe maintenance instruction."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 70,
+      "assistant_tokens": 48,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0000-0025.json",
+      "original_domain_ordinal": 21
+    },
+    {
+      "id": "repo-c231b550d6fcc4468305516f",
+      "messages_sha256": "c231b550d6fcc4468305516f4668c40ef372f222e4aa3894e997eff98c358649",
+      "state": "PASS",
+      "rationale": "Correct SI dimensionless-unit explanation and arc-length/radius relation, while retaining the radian label to identify the angular interpretation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "BIPM, SI Brochure 9th edition, version 4.01",
+          "url": "https://www.bipm.org/utils/common/pdf/si-brochure/SI-Brochure-9.pdf",
+          "finding": "The coherent plane-angle unit is radian; one radian subtends an arc equal to its radius. The SI uses dimensionless derived-unit treatment while distinguishing angle as a quantity kind from arbitrary length ratios."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The arc ratio s/r is 2 when the angle is 2 rad; its SI base-dimension powers cancel."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Angle is still a distinct quantity kind and radian a coherent unit; dimensionless does not mean every bare ratio is physically interchangeable."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 96,
+      "assistant_tokens": 72,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0000-0025.json",
+      "original_domain_ordinal": 22
+    },
+    {
+      "id": "repo-0c34711bceb689e6f0a94738",
+      "messages_sha256": "0c34711bceb689e6f0a9473852c7077b4d802c9e6cdda5d4b98adf368cdbbb50",
+      "state": "PASS",
+      "rationale": "Correct sum-to-product proof, including both exact trigonometric values and the final cancellation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_trigonometric_identity_check",
+          "finding": "The unit-circle relation sin²(x)+cos²(x)=1 and reciprocal identities are checked on their common domains; divisions require nonzero denominators."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "sin(x+2pi/3)+sin(x+4pi/3)=2sin(x+pi)cos(pi/3)=-sin(x), so adding sin(x) gives zero."
+        }
+      ],
+      "domain": "trigonometry",
+      "primary_source": "D_Trigonometry.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 155,
+      "assistant_tokens": 117,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/trigonometry-0000-0025.json",
+      "original_domain_ordinal": 23
     }
   ],
-  "reviewed": 870,
+  "reviewed": 884,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

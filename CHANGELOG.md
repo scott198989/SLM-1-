@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-02 - Local trigonometry review 0–24
+
+- Added {'PASS': 11, 'REJECT': 1, 'QUARANTINE': 2} after independent agent QA; 10 existing substantive decisions skipped and 1 original structural quarantines preserved, all original answers and prior 870 reviews unchanged.
+- Current local reviews: 884; dispositions: {'PASS': 657, 'REJECT': 48, 'QUARANTINE': 180, 'NEEDS_HUMAN_REVIEW': 1227}; next trigonometry offset: 25.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
 ## 2026-10-02 - Pending algebra queue completion
 
 - Reviewed 203 pending algebra records with independent agent QA, preserving 11 prior substantive reviews and two structural-only quarantines.

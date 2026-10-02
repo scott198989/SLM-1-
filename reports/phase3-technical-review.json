@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 646,
-    "REJECT": 47,
-    "QUARANTINE": 178,
-    "NEEDS_HUMAN_REVIEW": 1241
+    "PASS": 657,
+    "REJECT": 48,
+    "QUARANTINE": 180,
+    "NEEDS_HUMAN_REVIEW": 1227
   },
   "by_domain": {
     "circuits": {
@@ -32,10 +32,10 @@
       "NEEDS_HUMAN_REVIEW": 2
     },
     "trigonometry": {
-      "PASS": 8,
-      "REJECT": 0,
-      "QUARANTINE": 3,
-      "NEEDS_HUMAN_REVIEW": 189
+      "PASS": 19,
+      "REJECT": 1,
+      "QUARANTINE": 5,
+      "NEEDS_HUMAN_REVIEW": 175
     },
     "calculus": {
       "PASS": 5,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 870,
+  "agent_substantive_reviews": 884,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "464061683c78caa27db1240ff083ae3a006ed47023d24f63b9b3cf780aaa6785",
+  "technical_review_sha256": "5436b5534957b734f78e8759a08a46e6cd1c8e6e41c1e8eaed2500e415eef4f8",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1239,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1225,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -951,11 +951,25 @@
     "Correct normality proof for a subgroup of an abelian group, since each conjugation fixes every subgroup element.": 1,
     "Correct sign-chart procedure using real zeros and excluded denominator points, with multiplicities controlling sign changes.": 1,
     "Correct invariant-based method for disproving isomorphism, with valid examples of commutativity and element-order counts.": 1,
-    "Correct explanation of left-to-right evaluation for equal-precedence multiplication/division in the ordinary classroom convention.": 1
+    "Correct explanation of left-to-right evaluation for equal-precedence multiplication/division in the ordinary classroom convention.": 1,
+    "Correct sum-to-product proof, including both exact trigonometric values and the final cancellation.": 1,
+    "The claimed rest-at-infinity radial proper-time solution is incorrect. For energy E=1 this case integrates an elementary power law, not the asserted hyperbolic-Kepler/arccosh proper-time dependence.": 1,
+    "Correct coordinate-reflection and sign rules for the four quadrants.": 1,
+    "Correctly explains the principal inverse-sine output and warns that it need not recover the original angle.": 1,
+    "Correct contrast between Pythagorean square relations and reciprocal rewrites, with valid examples.": 1,
+    "Correct beginner-safe proof strategy and warning against assuming the desired equality while operating on both sides. The explicit risks wording is appropriate to the requested one-side method.": 1,
+    "The pond analogy correctly introduces superposition, but the unqualified crest-trough statement says cancellation leaves flat water. Complete cancellation needs equal opposing amplitudes; otherwise only partial destructive interference occurs.": 1,
+    "The tanh shear-layer model and stability-analysis motivation are sound, but the stated derivative omits the dimensional scale U0/delta. The signed vorticity also depends on the coordinate convention.": 1,
+    "Correct distinction between valid individual transformations and an entire proof that covers the intended domain, including cancellation restrictions.": 1,
+    "Appropriately qualified diagnostic suggestion: a strong second harmonic can support misalignment/asymmetry hypotheses, with machine-specific interpretation explicitly required.": 1,
+    "Useful phase-reference heuristics with the essential caveat that a sinusoid can be represented with either sine or cosine after a phase shift.": 1,
+    "Correct SI dimensionless-unit explanation and arc-length/radius relation, while retaining the radian label to identify the angular interpretation.": 1,
+    "Correct double-angle reduction and complete real solution families.": 1,
+    "Correct parallelogram construction and its equivalence to tip-to-tail vector addition.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "14bf100adaef68b677f619b360e7d9b8d67b6a6e16aefc3966175501dbae7e64",
-  "substantively_unreviewed": 1239,
+  "published_decisions_sha256": "6cb364d7d8f3015c3cde6d7871ead1ae3dfc1724fc2f82e389ee10fda499d0e1",
+  "substantively_unreviewed": 1225,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

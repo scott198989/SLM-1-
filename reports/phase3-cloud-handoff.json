@@ -8,10 +8,10 @@
   "review": {
     "curriculum": 2112,
     "dispositions": {
-      "PASS": 646,
-      "REJECT": 47,
-      "QUARANTINE": 178,
-      "NEEDS_HUMAN_REVIEW": 1241
+      "PASS": 657,
+      "REJECT": 48,
+      "QUARANTINE": 180,
+      "NEEDS_HUMAN_REVIEW": 1227
     },
     "by_domain": {
       "circuits": {
@@ -39,10 +39,10 @@
         "NEEDS_HUMAN_REVIEW": 2
       },
       "trigonometry": {
-        "PASS": 8,
-        "REJECT": 0,
-        "QUARANTINE": 3,
-        "NEEDS_HUMAN_REVIEW": 189
+        "PASS": 19,
+        "REJECT": 1,
+        "QUARANTINE": 5,
+        "NEEDS_HUMAN_REVIEW": 175
       },
       "calculus": {
         "PASS": 5,
@@ -75,8 +75,8 @@
         "NEEDS_HUMAN_REVIEW": 242
       }
     },
-    "agent_substantive_reviews": 870,
-    "substantively_unreviewed": 1239,
+    "agent_substantive_reviews": 884,
+    "substantively_unreviewed": 1225,
     "reviewed_specialist_holds": 2,
     "complete_source_domains": [
       "circuits",
@@ -99,13 +99,13 @@
     },
     {
       "path": "data/review/phase3/technical-review.jsonl.gz",
-      "bytes": 306827,
-      "sha256": "14bf100adaef68b677f619b360e7d9b8d67b6a6e16aefc3966175501dbae7e64"
+      "bytes": 310407,
+      "sha256": "6cb364d7d8f3015c3cde6d7871ead1ae3dfc1724fc2f82e389ee10fda499d0e1"
     },
     {
       "path": "manifests/phase3-agent-technical-review.json",
-      "bytes": 1249107,
-      "sha256": "0bdf3b8dc635fd7e32392f1de640ebc46dbf91229f07a1ec38b90efe56e9fc18"
+      "bytes": 1273235,
+      "sha256": "3f2b4abbf1823a378db214982bdaf4c3246c861c0868f12a62746b97ce59491c"
     },
     {
       "path": "manifests/phase3-release-families.json",
@@ -114,8 +114,8 @@
     },
     {
       "path": "reports/phase3-technical-review.json",
-      "bytes": 188550,
-      "sha256": "c3bdb70d0a39b72e7a3efccab585675f0386c6e61a5bf92222ad399d7bf8716d"
+      "bytes": 190692,
+      "sha256": "e6ae44cb85d7187edd0bf770446912dcf0081b33110221178494abe10f61b2cf"
     },
     {
       "path": "src/forge_tools/engineering.py",
@@ -217,12 +217,11 @@
     "incomplete_review_index_chunks": 43205,
     "incomplete_review_index_production_approved": false
   },
-  "next_domain": "algebra",
+  "next_domain": "trigonometry",
   "next_batch": {
-    "domain": "algebra",
-    "offset": 225,
-    "limit": 25,
-    "status": "PENDING_REVIEW_QUEUE_EXHAUSTED; two original structural-only quarantines preserved; await next-domain selection"
+    "domain": "trigonometry",
+    "offset": 25,
+    "limit": 25
   },
   "workers": [],
   "automatic_checks": "DELETED_DO_NOT_RECREATE",
@@ -232,15 +231,9 @@
   "latest_cloud_continuation": "reports/phase3-cloud-continuation-validation.json",
   "local_continuation": {
     "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
-    "local_predecessor_commit": "8c07a74d3307859279f09166ec7a5be11c4eaea3",
+    "local_predecessor_commit": "59e7edde0e861cebbab0a89c2c141d6d45394518",
     "publication_status": "LOCAL_ONLY; do not claim these counts are on GitHub",
-    "latest_batch": "reports/phase3-review-batches/algebra-0200-0225.json",
-    "electrical_domain_complete": true,
-    "algebra_pending_review_queue_complete": true,
-    "algebra_preserved_structural_ordinals": [
-      170,
-      211
-    ],
-    "algebra_checkpoint": "reports/phase3-algebra-domain-checkpoint.json"
+    "latest_batch": "reports/phase3-review-batches/trigonometry-0000-0025.json",
+    "electrical_domain_complete": true
   }
 }
