@@ -37444,9 +37444,852 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/engineering_mathematics-0025-0050.json",
       "original_domain_ordinal": 49
+    },
+    {
+      "id": "repo-85cdbbdef9e1ebeba2e6973e",
+      "messages_sha256": "85cdbbdef9e1ebeba2e6973e63bd58654e944b9032dccad99625217e8c16dbf4",
+      "state": "PASS",
+      "rationale": "Reasonable self-contained beginner explanation of combining analytical structure with computational approximation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each inverse-transform, matrix, numerical-error and approximation claim is checked with its relevant assumptions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The anatomy metaphor is qualitative guidance, not a theorem that every hybrid method is explainable or accurate."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 85,
+      "assistant_tokens": 64,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 50
+    },
+    {
+      "id": "repo-eec42a2d3a635aecf895c8ce",
+      "messages_sha256": "eec42a2d3a635aecf895c8ced2ffc5ebcd46dbc46699f7ede09c22acc5f859fd",
+      "state": "QUARANTINE",
+      "rationale": "The Green-Lagrange tensor and finite-rotation motivation are correct, but the answer conflates scalar engineering strain with the infinitesimal strain tensor. Engineering strain is still an exact finite length-change measure, even when a small-strain tensor approximation is inappropriate.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "University of Alberta engineering course, Uniaxial Strain Measures",
+          "url": "https://engcourses-uofa.ca/books/introduction-to-solid-mechanics/displacement-and-strain/strain-measures/uniaxial-strain-measures/",
+          "finding": "Distinguishes engineering strain, Green strain and logarithmic strain as different functions of stretch; engineering strain is the exact ratio of length change to original length."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each inverse-transform, matrix, numerical-error and approximation claim is checked with its relevant assumptions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a uniaxial stretch lambda=2, engineering strain=(l-l0)/l0=lambda-1=1 exactly, while Green strain=(lambda²-1)/2=1.5. These are different meaningful measures; the infinitesimal displacement-gradient tensor is what fails objectivity under finite rotation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold for the terminology and blanket claim of lost physical meaning, not the validity or objectivity of E=(F^T F-I)/2."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 93,
+      "assistant_tokens": 70,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 51
+    },
+    {
+      "id": "repo-af01c011b624c8b33a9f9040",
+      "messages_sha256": "af01c011b624c8b33a9f90403803d0dcd855c7528ad9708adb997a1de633e128",
+      "state": "PASS",
+      "rationale": "Correct qualified connection between continuous-time poles, repeated-pole polynomial factors and qualitative transients.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each inverse-transform, matrix, numerical-error and approximation claim is checked with its relevant assumptions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Inverse Laplace of1/(s-a)^m is t^(m-1)*exp(a*t)/(m-1)! in the causal setting."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Observable transfer poles and internal eigenmodes can differ through cancellations; stability claims also depend on multiplicity, inputs and system assumptions. The source explicitly says the pole map is not everything."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 169,
+      "assistant_tokens": 145,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 52
+    },
+    {
+      "id": "repo-8cdbd5ae9d2a1b17fec15490",
+      "messages_sha256": "8cdbd5ae9d2a1b17fec15490d3db39e82f62f1989a78dc8423fad116f9bea61d",
+      "state": "PASS",
+      "rationale": "Correct eigenbasis interpretation of diagonalization and similarity.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each inverse-transform, matrix, numerical-error and approximation claim is checked with its relevant assumptions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If columns of invertible P are eigenvectors with matching eigenvalues inD, AP=PD and A=PDP^-1."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A complete eigenbasis is required; the answer conditions the explanation on switching to such a basis rather than claiming every matrix admits one."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 94,
+      "assistant_tokens": 70,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 53
+    },
+    {
+      "id": "repo-ab41d635efa25ebb554ad953",
+      "messages_sha256": "ab41d635efa25ebb554ad9531a34727d5c2013a5964575d6a2f77bd7009ec321",
+      "state": "PASS",
+      "rationale": "Correct description of Lagrangian-guided algorithms and their differing feasibility behavior.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each inverse-transform, matrix, numerical-error and approximation claim is checked with its relevant assumptions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Multiplier updates reconcile the optimality equations but do not themselves guarantee global optimality or convergence; the source explicitly distinguishes method behavior."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 146,
+      "assistant_tokens": 124,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 54
+    },
+    {
+      "id": "repo-f6242ffb1d8b157521d0e8be",
+      "messages_sha256": "f6242ffb1d8b157521d0e8bed2f8b24eea2b4c6ffbc11790b4effbb81448c8f1",
+      "state": "PASS",
+      "rationale": "Correct importance of boundary/time prescriptions in selecting a Green function and its physical interpretation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Floerchinger group, Quantum Field Theory2 Lecture24",
+          "url": "https://www.tpi.uni-jena.de/~floerchinger/qft2/lecture24/",
+          "finding": "Distinguishes time-ordered Feynman propagators from retarded and advanced kernels with their respective time supports."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The Feynman propagator is a time-ordered quantum correlator/Green function rather than the classical causal response kernel. Boundary prescriptions must match the actual physical problem, not be selected arbitrarily."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 68,
+      "assistant_tokens": 50,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 55
+    },
+    {
+      "id": "repo-ea4ce9a7b766b35c7a44187e",
+      "messages_sha256": "ea4ce9a7b766b35c7a44187e468ff13c1cee2afa636d7f2481872a55f8ff4f6f",
+      "state": "QUARANTINE",
+      "rationale": "The dependence on method, step size and problem is right, but numerical stability is not characterized merely by the absence of exponential error growth. Unbounded polynomial amplification can also violate zero stability.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Jonathan Goodman, NYU Numerical MethodsII Class7, 2024",
+          "url": "https://math.nyu.edu/~goodman/teaching/NumericalMethodsII2024/Class7.pdf",
+          "finding": "Multiple characteristic roots on the unit circle yield polynomial error growth and violate zero stability; absence of exponential growth alone is insufficient."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each inverse-transform, matrix, numerical-error and approximation claim is checked with its relevant assumptions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The recurrence e_(n+2)-2e_(n+1)+e_n=0 has solutions A+B*n; a repeated root1 gives linear growth. For n=T/h, amplification grows unbounded as h decreases despite not being exponential."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold for the overly narrow definition. A stable approximation to a physically unstable problem can also exhibit genuine exponential solution/error sensitivity; the relevant stability notion must be specified."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 47,
+      "assistant_tokens": 31,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 56
+    },
+    {
+      "id": "repo-65819c654d6cc56fb5f491b7",
+      "messages_sha256": "65819c654d6cc56fb5f491b7a7e728f0651085aa7cdf8c25ddb3695750c5ca5e",
+      "state": "PASS",
+      "rationale": "Correct qualified use of changing machine-vibration spectra as fault indicators.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each inverse-transform, matrix, numerical-error and approximation claim is checked with its relevant assumptions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A rotating imbalance can generate a component tied to shaft frequency, while changes in amplitudes or new components motivate diagnosis."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Spectral changes can also reflect speed, load or operating regime; often indicate is not a unique diagnosis or a guaranteed protection action."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 50,
+      "assistant_tokens": 33,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 57
+    },
+    {
+      "id": "repo-6e6e119336d02aa97117be28",
+      "messages_sha256": "6e6e119336d02aa97117be289fabff76a902ac056e522449f99d5c9a3a6badbf",
+      "state": "PASS",
+      "rationale": "Sound analytical-model/asymptotic/discretization/benchmark workflow.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each inverse-transform, matrix, numerical-error and approximation claim is checked with its relevant assumptions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Analytic limits provide checks rather than exhaustive validation; appropriate numerical error, consistency and stability studies still matter."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 80,
+      "assistant_tokens": 64,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 58
+    },
+    {
+      "id": "repo-de8badd7a484d6b755cd4eb5",
+      "messages_sha256": "de8badd7a484d6b755cd4eb5ea0abf340a020a8b7c53ae70e3830a3814e58caf",
+      "state": "PASS",
+      "rationale": "Appropriate request for concrete analytical and numerical roles before judging a claimed hybrid method.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each inverse-transform, matrix, numerical-error and approximation claim is checked with its relevant assumptions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "No numerical or physical result is asserted without context, so the answer properly preserves uncertainty."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 101,
+      "assistant_tokens": 71,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 59
+    },
+    {
+      "id": "repo-bdf23b5d022398bcde00a4fb",
+      "messages_sha256": "bdf23b5d022398bcde00a4fb8b0a1ea3657c8b2f4332148b6678b49079700b89",
+      "state": "PASS",
+      "rationale": "Correct complex-exponential basis for a nonzero-frequency harmonic oscillator.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each inverse-transform, matrix, numerical-error and approximation claim is checked with its relevant assumptions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For real omega!=0, substituting exp(±i*omega*t) into y_second+omega²*y gives0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "At omega=0 the two exponentials coincide and the full solution becomes A+B*t; the explicitly oscillatory context implies nonzero frequency."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 71,
+      "assistant_tokens": 52,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 60
+    },
+    {
+      "id": "repo-fabfd424b5a3b761cc8ac108",
+      "messages_sha256": "fabfd424b5a3b761cc8ac108bead8800bcf4e390c6892e484bf83720185d56e6",
+      "state": "PASS",
+      "rationale": "Correct unilateral Laplace derivative and initial-value explanation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each inverse-transform, matrix, numerical-error and approximation claim is checked with its relevant assumptions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Integration by parts gives L{y_prime}=sY(s)-y(0+) when the transform and boundary term are valid."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Use the chosen unilateral/impulse convention consistently; a bilateral transform has different boundary-data bookkeeping."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 89,
+      "assistant_tokens": 70,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 61
+    },
+    {
+      "id": "repo-842bbbcc1b80383ed1acef4d",
+      "messages_sha256": "842bbbcc1b80383ed1acef4d99f8ad613830b330bd343b6411a6fb11b57e32ee",
+      "state": "PASS",
+      "rationale": "Correct meromorphic continuation of the zeta function and simple-pole exception.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NIST DLMF25.2, Riemann Zeta Definition and Expansions",
+          "url": "https://dlmf.nist.gov/25.2",
+          "finding": "The defining Dirichlet series converges for Re(s)>1; meromorphic continuation has a unique simple pole at1."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "It is the original Dirichlet series that converges only in Re(s)>1; the continued function is holomorphic away from its pole. The source conveys that distinction informally."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 111,
+      "assistant_tokens": 79,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 62
+    },
+    {
+      "id": "repo-47046348dd671a1a217f084a",
+      "messages_sha256": "47046348dd671a1a217f084afc9278f38461b65062177ebd58d948ff2063f359",
+      "state": "PASS",
+      "rationale": "Correct subtraction argument for uniqueness of a linear PDE boundary-value problem.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each inverse-transform, matrix, numerical-error and approximation claim is checked with its relevant assumptions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If Lu=f and Lv=f with matching linear boundary data, L(u-v)=0 and the boundary operator annihilates u-v; uniqueness for that homogeneous problem forces u=v."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "For evolution equations, matching initial data must also be included in the problem. The source explicitly conditions the conclusion on an applicable uniqueness theorem."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 93,
+      "assistant_tokens": 61,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 63
+    },
+    {
+      "id": "repo-d06d71b132d9ace1b160a6e0",
+      "messages_sha256": "d06d71b132d9ace1b160a6e05c5355f640f7e834d0553588173b22c0fc848557",
+      "state": "PASS",
+      "rationale": "Correct matrix-algebra overview and linear-system roles, with dimension/square-operation qualifiers.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each inverse-transform, matrix, numerical-error and approximation claim is checked with its relevant assumptions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Ax=b packages the linear equations; rank(A)=rank([A|b]) gives consistency and full column rank gives uniqueness when consistent."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Determinants and ordinary inverses require square matrices, which is covered by when appropriate."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 153,
+      "assistant_tokens": 127,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 64
+    },
+    {
+      "id": "repo-c2ed8b1086981ce94a25a3ff",
+      "messages_sha256": "c2ed8b1086981ce94a25a3ffba7ea81092a95d5d4faf7601046e84c6009419cb",
+      "state": "PASS",
+      "rationale": "Correct ideal hyperelastic stored-energy definition and reversible constitutive-work interpretation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "A. F. Bower, Applied Mechanics of Solids3.5, Hyperelastic Materials",
+          "url": "https://solidmechanics.org/Text/Chapter3_5/Chapter3_5.php",
+          "finding": "Stored strain energy defines stress derivatives and reversible constitutive work in the ideal hyperelastic model."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For energy per reference volume W(F), the first Piola stress is P=partial W/partial F (plus constraint reactions where applicable); along an elastic path, P:F_dot=dW/dt."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This describes the ideal constitutive response. External damping, thermal dissipation, damage or coupled internal variables can dissipate energy in a larger model and are not ruled out by naming its elastic part hyperelastic."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 66,
+      "assistant_tokens": 53,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 65
+    },
+    {
+      "id": "repo-5503a340f76b29e1f771743c",
+      "messages_sha256": "5503a340f76b29e1f771743c9fe998f48ec4d8b91a1779ff27b00fa1e74fed06",
+      "state": "QUARANTINE",
+      "rationale": "The natural-frequency/resonance connection is useful, but the unqualified claim that driving at natural frequencies makes amplitude large needs damping and excitation qualifications absent from this pair.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT RES8.009, Driven Oscillators, Lecture5 pp7-9",
+          "url": "https://live.ocw.mit.edu/courses/res-8-009-introduction-to-oscillations-and-waves-summer-2017/mitres_8_009su17_lec5.pdf",
+          "finding": "The forced-oscillator amplitude depends on damping; its peak need not equal the undamped natural frequency and can disappear under sufficient damping."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each inverse-transform, matrix, numerical-error and approximation claim is checked with its relevant assumptions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For x_second+2*x_prime+x=F*cos(omega*t), omega_n=1 and the displacement transfer magnitude is1/(1+omega²). Its response at omega_n is half the static amplitude, with no nonzero-frequency resonance peak."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for the large-amplitude claim; do not interpret align as an explicit displacement/force phase equation or reject the existence of natural frequencies."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 54,
+      "assistant_tokens": 38,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 66
+    },
+    {
+      "id": "repo-98fdfd9dfde3864a5980aba0",
+      "messages_sha256": "98fdfd9dfde3864a5980aba0f193ba0e8ab29c52ea78cb9a4cdfa1b2b22ff516",
+      "state": "PASS",
+      "rationale": "Correct singularity/eigenvalue interpretation of the characteristic polynomial.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each inverse-transform, matrix, numerical-error and approximation claim is checked with its relevant assumptions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "det(A-lambda I)=0 iff A-lambda I has a nonzero null vector, exactly the eigenvector condition."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 75,
+      "assistant_tokens": 57,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 67
+    },
+    {
+      "id": "repo-0df89bc04702cb012561e2f2",
+      "messages_sha256": "0df89bc04702cb012561e2f2a38bd3f307687131bb2708906402808ca20703f6",
+      "state": "PASS",
+      "rationale": "Correct complete by-hand diagonalization workflow and independence criterion.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each inverse-transform, matrix, numerical-error and approximation claim is checked with its relevant assumptions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "An n-by-n matrix is diagonalizable over the selected field iff it has n linearly independent eigenvectors; matching the column and eigenvalue order gives AP=PD."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The characteristic polynomial must split in the working field for a full eigenbasis there; numerical Jordan/eigenvector conditioning is a separate issue."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 190,
+      "assistant_tokens": 161,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 68
+    },
+    {
+      "id": "repo-2ecc9098912d63391e063031",
+      "messages_sha256": "2ecc9098912d63391e063031a42efa9df8995c18a7d1fc817e2f5fb2e4ec04a8",
+      "state": "QUARANTINE",
+      "rationale": "The model/numerics/observations workflow is useful, but saying theory prevents overfitting is too strong. Structural theory can reduce risk or guide regularization without guaranteeing generalization from noisy data.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_structural_model_counterexample",
+          "finding": "The exact transport-law family u(x,t)=p(x-ct) permits a profile p that interpolates noisy initial data. Satisfying this analytic physical law does not itself guarantee resistance to overfitting."
+        },
+        {
+          "title": "B-PINNs study, section4",
+          "url": "https://arxiv.org/html/2003.06097v1",
+          "finding": "Primary study examines physics-informed inference with noisy data, supporting the need to address uncertainty rather than assuming physics constraints prevent overfitting."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For the exact transport equation u_t+c*u_x=0, every differentiable profile gives a solution u(x,t)=p(x-c*t). Choosing p to interpolate noisy initial observations obeys the physical equation exactly while still fitting measurement noise."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for the prevention claim, not the qualified often-more-reliable comparison or value of mechanistic modeling."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 157,
+      "assistant_tokens": 138,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 69
+    },
+    {
+      "id": "repo-361fce2b98a31ce6f95a6e78",
+      "messages_sha256": "361fce2b98a31ce6f95a6e780b9d70c9a4a16a4f15b896419bc879ce5e9ac065",
+      "state": "PASS",
+      "rationale": "Correct Euler-exponential route to the angle-addition identities.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each inverse-transform, matrix, numerical-error and approximation claim is checked with its relevant assumptions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Equating real and imaginary parts of exp(iA)*exp(iB)=exp(i(A+B)) yields cosine and sine addition formulas."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 68,
+      "assistant_tokens": 49,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 70
+    },
+    {
+      "id": "repo-3de2f4ec97953963625e9530",
+      "messages_sha256": "3de2f4ec97953963625e9530cda5256016d41056dc6fc80aaef815ab2e4ee6e2",
+      "state": "PASS",
+      "rationale": "Correct concise refusal to treat solving stationarity equations as universally sufficient without checking assumptions and constraints.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each inverse-transform, matrix, numerical-error and approximation claim is checked with its relevant assumptions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The answer remains broad because the prompt is broad; it supplies no unsupported universal classification or specific solution."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 46,
+      "assistant_tokens": 26,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 71
+    },
+    {
+      "id": "repo-d76d86ca0afcafc78ce839bf",
+      "messages_sha256": "d76d86ca0afcafc78ce839bf98f3cbf2da8c9a0e6426928565461aa70734cef4",
+      "state": "PASS",
+      "rationale": "Correct distinction between left row operations and similarity transformations, including preserved and nonpreserved invariants.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each inverse-transform, matrix, numerical-error and approximation claim is checked with its relevant assumptions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Row scaling can change eigenvalues (I becomes diag(2,1)), while P^-1 A P has the same characteristic polynomial asA."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Individual row operations can coincidentally preserve some eigenvalues; usually appropriately qualifies the difference."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 173,
+      "assistant_tokens": 149,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 72
+    },
+    {
+      "id": "repo-60815628cff980aed1f48ee4",
+      "messages_sha256": "60815628cff980aed1f48ee439277783bdf4dad8949d41729d98a9960a56e22f",
+      "state": "PASS",
+      "rationale": "Reasonable expanded explanation of analytically structured approximation and numerical checking.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each inverse-transform, matrix, numerical-error and approximation claim is checked with its relevant assumptions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The rhetorical purity language is methods advice, not a mathematical claim that every real problem lacks an exact solution or that theory guarantees numerical correctness."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 153,
+      "assistant_tokens": 133,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 73
+    },
+    {
+      "id": "repo-a07f7933c369ef0ec85480e6",
+      "messages_sha256": "a07f7933c369ef0ec85480e68ab0605ea18f5cfc1b0e498a6cfe00d478c9435b",
+      "state": "PASS",
+      "rationale": "Correct qualified consequence of insufficient PDE problem data: nonuniqueness and underdetermined numerical formulations can result.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each inverse-transform, matrix, numerical-error and approximation claim is checked with its relevant assumptions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For y_second=0, one boundary value leaves a one-parameter family; discretization retains a corresponding degree of freedom."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Enough means compatible, independent and appropriate conditions, not merely a count. The source says may rather than asserting every omitted condition destroys uniqueness."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 84,
+      "assistant_tokens": 68,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0050-0075.json",
+      "original_domain_ordinal": 74
     }
   ],
-  "reviewed": 1311,
+  "reviewed": 1336,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true
