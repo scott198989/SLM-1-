@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1176,
+    "PASS": 1196,
     "REJECT": 60,
-    "QUARANTINE": 247,
-    "NEEDS_HUMAN_REVIEW": 629
+    "QUARANTINE": 252,
+    "NEEDS_HUMAN_REVIEW": 604
   },
   "by_domain": {
     "circuits": {
@@ -50,10 +50,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "electromagnetism": {
-      "PASS": 17,
+      "PASS": 37,
       "REJECT": 3,
-      "QUARANTINE": 5,
-      "NEEDS_HUMAN_REVIEW": 141
+      "QUARANTINE": 10,
+      "NEEDS_HUMAN_REVIEW": 116
     },
     "materials_manufacturing": {
       "PASS": 3,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1482,
+  "agent_substantive_reviews": 1507,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "5e647c61afc60875e7c71a28911b84c9cc3c6c807e77b50199d1e2f310f34577",
+  "technical_review_sha256": "d1bdc195f90d2def710f8b2e092670f20757f4ee9667e24c962d7bc16fa4418e",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 627,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 602,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1563,11 +1563,36 @@
     "The displayed variance correction is second order in conductivity fluctuations, not first order, and the field-projection step is not a valid derivation. Bruggeman and Maxwell-Garnett are also not generally exact treatments of arbitrary random media.": 1,
     "Correct conceptual point-splitting/Hadamard subtraction route for regularizing local quantum observables in curved spacetime.": 1,
     "Correct concise method-of-moments description.": 1,
-    "Correct local Faraday-law symbol, curl and minus-sign explanation in the ordinary fixed-coordinate setting.": 1
+    "Correct local Faraday-law symbol, curl and minus-sign explanation in the ordinary fixed-coordinate setting.": 1,
+    "The reverse-time intuition is suggestive, but reconstructing past input from a measured output is an inverse problem and does not by itself identify an advanced Green function. The missing defining feature is past-supported response to a source, or the corresponding future boundary prescription.": 1,
+    "Correct symmetry-based reason for choosing the symmetric gauge in a rotationally symmetric magnetic setting.": 1,
+    "Correct short explanation of retarded-time source dependence and finite propagation delay.": 1,
+    "Reasonable heuristic that physical intuition should guide and be checked by quantitative analysis or simulation.": 1,
+    "Correct ideal closed-open versus open-open pipe standing-wave wavelengths and harmonic families.": 1,
+    "Correct conceptual image-source construction when the geometry and boundary conditions admit it.": 1,
+    "Correct anisotropic Ohm-law tensor relation and possible nonparallel J and E.": 1,
+    "Correct qualitative carrier-inertia/scattering explanation for complex frequency-dependent conductivity.": 1,
+    "Correct electrostatic-conductor equilibration argument for zero interior and tangential field and a constant potential on a connected conductor.": 1,
+    "Correct warning that effective layered transport depends on geometry and continuity rather than unweighted addition of resistivities.": 1,
+    "Acceptable introductory motivation for common resonant antenna fractions and effective field coupling.": 1,
+    "The practical need for approximations and numerics is sound, but restricting exact Maxwell solutions to highly symmetric geometries is false. Exact fields can be constructed with nonsymmetric boundary traces or source superpositions.": 1,
+    "Correct practical gauge-freedom definition and common gauge choices.": 1,
+    "Correct cylindrical Gauss-law derivation for an infinite uniform line charge.": 1,
+    "Correct conceptual explanation that canonical and kinetic optical momenta describe different partitions and measurements in a medium.": 1,
+    "Correct role of elastic Green tensors for point/body-force displacement responses and boundary integral methods.": 1,
+    "Correct round-trip constructive-interference explanation of Fabry-Perot resonances.": 1,
+    "Krein resolvent formulas do relate boundary realizations. Finite-dimensional boundary or deficiency spaces guarantee finite-rank corrections, but general elliptic boundary-condition changes need not have finite rank.": 1,
+    "Sound conceptual receive-power budget from accepted transmit power through propagation, receiving aperture and delivered power.": 1,
+    "Correct electrostatic potential-landscape interpretation of electric-field direction and local magnitude.": 1,
+    "Correct electrostatic dipole torque versus gradient-dependent force distinction at conceptual scope.": 1,
+    "Correct vacuum source-free Maxwell-wave mechanism and speed.": 1,
+    "The charge-volume integral needs homogeneous boundary data or an additional boundary contribution. The answer refers to given boundary conditions without stating that restriction, so it does not cover nonzero boundary-driven potential.": 1,
+    "Correct removal of Maxwell time-derivative terms in static fields and their induction/wave role when time varying.": 1,
+    "The stated conjugate-product spectral formula needs an orthonormal spectral resolution, not merely a complete set of right eigenfunctions. Completeness alone does not justify the normalization or dual-eigenfunction factors.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "44f0cad019db6d5909ed873dbaae5e30b3601c7c742f87af602a43075f9d2770",
-  "substantively_unreviewed": 627,
+  "published_decisions_sha256": "22c58b6264d35701829961c3a334c5b787730019e04abb0a7734827e5e015417",
+  "substantively_unreviewed": 602,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
