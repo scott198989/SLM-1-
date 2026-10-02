@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 763,
-    "REJECT": 52,
-    "QUARANTINE": 195,
-    "NEEDS_HUMAN_REVIEW": 1102
+    "PASS": 786,
+    "REJECT": 53,
+    "QUARANTINE": 196,
+    "NEEDS_HUMAN_REVIEW": 1077
   },
   "by_domain": {
     "circuits": {
@@ -32,10 +32,10 @@
       "NEEDS_HUMAN_REVIEW": 2
     },
     "trigonometry": {
-      "PASS": 125,
-      "REJECT": 5,
-      "QUARANTINE": 20,
-      "NEEDS_HUMAN_REVIEW": 50
+      "PASS": 148,
+      "REJECT": 6,
+      "QUARANTINE": 21,
+      "NEEDS_HUMAN_REVIEW": 25
     },
     "calculus": {
       "PASS": 5,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1009,
+  "agent_substantive_reviews": 1034,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "6eb3347df5c80270ce17106f268b49841bf21ee8d07182046c0e1058097cd369",
+  "technical_review_sha256": "7c071224477d6a1abbde1bd58938606f7d942425a12ddc3ad3686837fbb91a0d",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1100,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1075,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1090,11 +1090,36 @@
     "The stated value and positive quadratic root are correct, but the requested proof never derives why cos(36 degrees) satisfies that quadratic. Merely attributing it to pentagon geometry leaves the key justification absent.": 1,
     "Correct basic method-selection guidance for opposite pairs, SAS/SSS and right triangles.": 1,
     "The rF*sin(theta) magnitude is correct, but rotation alone does not make that force angle equal omega*t or torque sinusoidal. The answer also incorrectly presents sinusoidal torque as the reason for the generator emf waveform.": 1,
-    "Valid real-part integration technique and exponential example.": 1
+    "Valid real-part integration technique and exponential example.": 1,
+    "Correct dot-product proof of Thales theorem for a nondegenerate inscribed triangle.": 1,
+    "The preference for rectangular expansion is reasonable, but the claim that a polar proof requires converting the sums to rectangular form is too strong. A direct modulus/cosine-law expansion in polar quantities proves the law.": 1,
+    "Exact expansion and identity substitution.": 1,
+    "Correct negative-sine branches and equivalence of negative and positive representatives.": 1,
+    "Correct complete solution union, with harmless redundancy in the first family.": 1,
+    "Correct Fourier-coefficient interpretation as orthogonal projection; the answer itself supplies the harmonic context missing from the short antecedent.": 1,
+    "Correct polar power and nth-root construction in the ordinary positive-integer setting.": 1,
+    "Correct ordinary triangle-data guidance for sine and cosine rules.": 1,
+    "Correct principal and supplementary numerical sine solutions and periodic continuation.": 1,
+    "Correct factorization, modulus and approximate value.": 1,
+    "Exact two successive double-angle substitutions and polynomial expansion.": 1,
+    "Correct diagnosis of an unjustified one-way implication from an assumed conclusion and useful distinction between discovery and proof presentation.": 1,
+    "Correct horizontal scale, period, right phase shift, reflection, vertical translation and range.": 1,
+    "Exact Euler-formula modulus proof for real angles.": 1,
+    "Correct matching expansions on the common tangent/cotangent domain; initial hesitation is resolved by the proof.": 1,
+    "Sound introductory description of the normalized Prandtl torsion-function problem and rectangular Fourier/hyperbolic separation.": 1,
+    "Correct factorization and exclusion of the impossible real branch on the original common domain.": 1,
+    "Correct equal-wave phase-addition explanation of the cosine-squared intensity factor.": 1,
+    "Faithful restatement of the requested unit-circle/reference-angle method.": 1,
+    "Correct warning that division can silently narrow the proven domain.": 1,
+    "Correct unit-circle reflection explanation of cosine evenness.": 1,
+    "Symmetry removes odd terms but does not in general make a symmetrically clamped, symmetrically loaded beam a pure cosh. A symmetric uniform-load clamped beam gives an even quartic counterexample.": 1,
+    "Reasonable qualitative explanation of how transparent notation helps a marker assess the algebra.": 1,
+    "Correct introductory contrast between equations holding for selected angles and identities holding over the entire common domain.": 1,
+    "Correct fourth-quadrant angle, reference angle and exact sine/cosine values.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "abd9662a65e0109453c03fd9bb01b16b4d8a1014b1dff0f8a50260d7755dac8e",
-  "substantively_unreviewed": 1100,
+  "published_decisions_sha256": "b898c82424a64c3af514c54a37464714653fcf9842cdf2ed3f4d872ec0a5e048",
+  "substantively_unreviewed": 1075,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
