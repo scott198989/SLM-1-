@@ -8,7 +8,7 @@ Repository: **scott198989/SLM-1-**. Continue branch **`codex/forge-data-consolid
 
 The last published commit before this handoff was `600da559e4a14b825876321c5566b0a089a7cf0e`. This handoff is a descendant on the same branch. Record the actual checked-out commit with `git rev-parse HEAD`; verify the input SHA256 values in [the checkpoint manifest](reports/phase3-cloud-handoff.json). The repository branch and verified file hashes are the resume point, not a recollection of this chat.
 
-Cloud continuation is now authorized on this existing branch. The October 2 cloud session verified all eight inputs, all 2,112 original-message hashes and the official first-batch reader, then added 18 independently agent-reviewed decisions. Next electrical offset is 25. No automation or model run was started.
+Cloud continuation is now authorized on this existing branch. The October 2 cloud session verified all eight inputs, all 2,112 original-message hashes and the official first-batch reader, then added 18 independently agent-reviewed decisions. Next electrical offset is 50. No automation or model run was started.
 
 ## The actual objective
 
@@ -27,23 +27,23 @@ The authorized Phase 3 work is:
 
 ## Exact saved review state
 
-All 2,112 candidates received structural/context/privacy screening and pinned-Qwen format checks. **392 received substantive agent review**. The full circuits source domain (**211 records**) and thermal/process source domain (**104 records**) have substantive dispositions. An agent review is not independent human review or a rights/family approval.
+All 2,112 candidates received structural/context/privacy screening and pinned-Qwen format checks. **417 received substantive agent review**. The full circuits source domain (**211 records**) and thermal/process source domain (**104 records**) have substantive dispositions. An agent review is not independent human review or a rights/family approval.
 
 | Source-file domain | PASS | REJECT | QUARANTINE | NEEDS HUMAN REVIEW |
 |---|---:|---:|---:|---:|
 | algebra | 9 | 2 | 2 | 203 |
 | calculus | 5 | 2 | 0 | 208 |
 | circuits | 139 | 12 | 60 | 0 |
-| electrical_components | 17 | 0 | 8 | 275 |
+| electrical_components | 37 | 3 | 10 | 250 |
 | electromagnetism | 2 | 2 | 0 | 162 |
 | engineering_mathematics | 4 | 0 | 2 | 194 |
 | materials_manufacturing | 3 | 2 | 1 | 244 |
 | physics | 4 | 2 | 2 | 242 |
 | thermal_process_engineering | 73 | 5 | 24 | 2 |
 | trigonometry | 8 | 0 | 3 | 189 |
-| **Total** | **264** | **27** | **102** | **1719** |
+| **Total** | **284** | **30** | **104** | **1694** |
 
-Of the 1,719 NEEDS_HUMAN_REVIEW entries, **1,717 are substantively unreviewed**, and two are reviewed specialist holds. The queue label does not require that humans perform every ordinary check. Three additional quarantines are structural-screen dispositions rather than substantive reviews. Counts total 2,112; **released legacy/Drive curriculum examples remain zero**. Source-file domain labels do not certify semantic coverage. Targeted review is not a random sample, so do not extrapolate a usable percentage.
+Of the 1,694 NEEDS_HUMAN_REVIEW entries, **1,692 are substantively unreviewed**, and two are reviewed specialist holds. The queue label does not require that humans perform every ordinary check. Three additional quarantines are structural-screen dispositions rather than substantive reviews. Counts total 2,112; **released legacy/Drive curriculum examples remain zero**. Source-file domain labels do not certify semantic coverage. Targeted review is not a random sample, so do not extrapolate a usable percentage.
 
 Important circuit findings include incorrect PF-versus-efficiency claims, motor shaft-kW confused with electrical input, capacitor sizing without enough data, high Q confused with instability, triplen definition errors, unbalanced load-flow omissions, and incomplete prior-context prompts. The row-specific reasons, original-message hashes and preserved answers are authoritative; do not replace them with blanket approval.
 
@@ -56,7 +56,7 @@ These are already available from Git; local/private inputs are not needed to con
 | `data/sft/staging/consolidated-20261001-v2/candidates.jsonl.gz` | 34,463 consolidated unique repository candidates with messages and lineage; **unverified staging**, not approved training data. |
 | `data/sft/staging/forge-v01-review-curriculum.jsonl.gz` | Proposed selection and original source-domain allocation; use `proposed_v01_review_selection` to select the 2,112. |
 | `data/review/phase3/technical-review.jsonl.gz` | Full 2,112-row latest disposition ledger, canonical message hashes, reasons, risk flags and Qwen counts. Plain JSONL is ignored/local. |
-| `manifests/phase3-agent-technical-review.json` | 392 substantive agent decisions and hashes; do not rereview these accidentally. |
+| `manifests/phase3-agent-technical-review.json` | 417 substantive agent decisions and hashes; do not rereview these accidentally. |
 | `reports/phase3-technical-review.json` | Current counts, review scope and compressed/plain ledger hashes. |
 | `reports/phase3-cloud-handoff.json` | Exact availability/checksum checkpoint and local-only inventory. |
 | `manifests/phase3-rights-dispositions.json` | Purpose-specific held/released provenance decisions. |
@@ -68,12 +68,14 @@ These are already available from Git; local/private inputs are not needed to con
 | `docs/sessions/2026-10-01-data-audit.md`, `CHANGELOG.md` | Session history and logical changes. Earlier counts are historical snapshots. |
 | `manifests/readme-review.json` | Earlier README audit evidence across all four repositories. Read repository README files; revisit pinned external README sources only if required for a concrete provenance/context issue. |
 
+Latest bounded review: ordinals25–49 added20 PASS,3 REJECT,2 QUARANTINE after independent agent QA. Current manifest417; next offset50. [Second-batch receipt](reports/phase3-review-batches/electrical-components-0025-0050.json).
+
 ## Resume without repeating work
 
-First check out the correct branch and compare the hashes in `reports/phase3-cloud-handoff.json`. Read the reports above. The next useful substantive review domain is **`electrical_components`**: continue at original ordinal 25 with a bounded 25-row batch. The portable reader uses the repository root relative to its own file and needs only Python's standard library:
+First check out the correct branch and compare the hashes in `reports/phase3-cloud-handoff.json`. Read the reports above. The next useful substantive review domain is **`electrical_components`**: continue at original ordinal 50 with a bounded 25-row batch. The portable reader uses the repository root relative to its own file and needs only Python's standard library:
 
 ```sh
-python scripts/phase3-review-batch.py electrical_components --offset 25 --limit 25
+python scripts/phase3-review-batch.py electrical_components --offset 50 --limit 25
 ```
 
 Advance offsets by the batch size. Ordinals refer to **all** selected rows in the source domain, including previously reviewed rows. Already-substantively-reviewed IDs are skipped; a batch may output fewer than 25. This is deliberate and prevents resume drift. Circuits should produce no remaining rows. Do not use printed-row count as the next offset.
@@ -122,7 +124,7 @@ The incomplete academic RAG index has43,205 chunks/33,971 units/295 sources. Its
 
 The current pilot's train/RAG versus gold source-family overlap is zero within that owned-source partition. Broader semantic independence and stock-Qwen pretraining overlap remain unknown. **Independent model-development tasks:zero.** Software fixtures are not model-development tasks and cannot select model checkpoints. Qwen Base is text-only; image references plus reviewed descriptions do not establish pixel understanding.
 
-## October 2 cloud continuation
+## October 2 first cloud checkpoint (historical)
 
 The full repository checkout was materialized and all eight checkpoint inputs matched. The first electrical batch at ordinals 0–24 added 11 PASS and 7 QUARANTINE decisions after independent agent QA; seven prior decisions were skipped. All 2,112 original-message hashes and the 392-entry substantive manifest were rechecked. The cloud suite passes 69 tests (the prior 56 plus 13 synthetic real-entrypoint verifier regressions). This does not validate missing private artifacts. The private verifier is now read-only: existing receipt pins are mandatory; drift or missing inputs fail closed; no receipts, releases or seals are created/refreshed. See [cloud validation](reports/phase3-cloud-continuation-validation.json) and [session](docs/sessions/2026-10-02-electrical-first-batch.md).
 
@@ -148,7 +150,7 @@ Private training/public redistribution/RAG purposes have separate dispositions i
 
 ## Suggested first message to the cloud task
 
-> Continue FORGE Phase 3 from scott198989/SLM-1-, branch codex/forge-data-consolidation, draft PR3. Read HANDOFF_README.md completely, root README, reports/phase3-cloud-handoff.json and the current gate report. Verify checkpoint hashes. Continue bounded substantive review of the remaining selected2,112-record curriculum, beginning electrical_components at ordinal25; preserve completed392 reviews and original answers. Keep technical decisions distinct from release approval. Commit logical updates to the draft PR. Private local Drive/gold/pilot artifacts are not in Git: do not reconstruct or claim to validate unavailable files. No broad discovery, model weights, loading, training, paid services or automatic checks. Stop at the training authorization gate with exact counts and remaining blockers.
+> Continue FORGE Phase 3 from scott198989/SLM-1-, branch codex/forge-data-consolidation, draft PR3. Read HANDOFF_README.md completely, root README, reports/phase3-cloud-handoff.json and the current gate report. Verify checkpoint hashes. Continue bounded substantive review of the remaining selected2,112-record curriculum, beginning electrical_components at ordinal50; preserve completed417 reviews and original answers. Keep technical decisions distinct from release approval. Commit logical updates to the draft PR. Private local Drive/gold/pilot artifacts are not in Git: do not reconstruct or claim to validate unavailable files. No broad discovery, model weights, loading, training, paid services or automatic checks. Stop at the training authorization gate with exact counts and remaining blockers.
 
 ## Codex's absurd sign-off — a joke, not project state
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-02 - Second electrical review batch
+
+- Independently reviewed original electrical ordinals25–49:20 PASS,3 REJECT,2 QUARANTINE. Rejected an amperes-versus-I²t comparison, unsupported universal LED-current/lifetime claims and incorrect loss-of-overload-protection claim for shared contactors.
+- Preserved original messages, hashes, token counts, earlier392 reviews and all release/family/rights holds. Current417 substantive reviews;284 PASS/30 REJECT/104 QUARANTINE/1694 NEEDS_HUMAN_REVIEW. Next offset50.
+- Rechecked all2,112 hashes and deterministic ledger transport; no private qualification, weights, training, paid compute or automation.
+
+
 ## 2026-10-02 - Read-only verifier and first electrical review batch
 
 - Fixed the private RAG trust anchor: expected manifest/index hashes come from existing public receipts; drift fails closed. Legacy receipt output now verifies existing JSON instead of overwriting it; missing released files are not reconstructed.

@@ -7660,9 +7660,757 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/electrical-components-0000-0025.json",
       "original_domain_ordinal": 24
+    },
+    {
+      "id": "repo-fa48b0a95798188b1d93cf92",
+      "messages_sha256": "fa48b0a95798188b1d93cf92f44ffa4de3145ed6035e5506b83f68cf6f42277e",
+      "state": "REJECT",
+      "rationale": "The opening comparison is dimensionally invalid: a breaker magnetic pickup threshold is a current in A, while fuse I²t is a current-squared time integral in A²s. These cannot be ordered as competing thresholds. Time-current coordination and tested current-limiting selectivity are relevant, but the later explanation does not repair the false opening rule.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Eaton fuse-to-upstream-breaker selective coordination application note10454",
+          "url": "https://www.eaton.com/content/dam/eaton/products/electrical-circuit-protection/fuses/technical-literature/bus-ele-an-10454-selective-coordination-fuse-breaker.pdf",
+          "finding": "Manufacturer-tested device-pair tables specify voltage, ampere ratings, available fault-current limits and instantaneous settings; dimensional pickup-current and let-through-energy concepts are separate."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "[I]=A whereas [integral I² dt]=A²s. A numerical less-than comparison changes with units and has no physical meaning."
+        },
+        {
+          "title": "Eaton Fuse Technology glossary",
+          "url": "https://automotive.eaton.com/us/en-us/products/electronic-components/topics/fuse-technology.html",
+          "finding": "Defines fuse I²t in ampere-squared seconds, distinct from magnetic pickup amperes."
+        },
+        {
+          "title": "Eaton Selective Coordination",
+          "url": "https://automotive.eaton.com/us/en-us/products/electrical-circuit-protection/fuses/selective-coordination.html",
+          "finding": "Uses time-current analysis and manufacturer-tested device-pair tables; original PDF may be unavailable."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 105,
+      "assistant_tokens": 81,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 25
+    },
+    {
+      "id": "repo-59d65f1559087cc1afa5b99f",
+      "messages_sha256": "59d65f1559087cc1afa5b99f5ee9c16a5e277c4502572d214a3ac4289f0f865e",
+      "state": "PASS",
+      "rationale": "Appropriate introductory account of IEEE 1451 standardized transducer interfaces and TEDS self-identification, calibration and units metadata enabling automatic configuration. It does not claim a particular revision is fully implemented or make a device compliance certification. The answer describes the conventional attached/built-in TEDS implementation supported by NIST.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NIST Transducer Electronic Data Sheet",
+          "url": "https://www.nist.gov/el/intelligent-systems-division-73500/transducer-electronic-data-sheet",
+          "finding": "TEDS supports transducer identification, calibration data and physical units for automatic system configuration."
+        },
+        {
+          "title": "NIST IEEE1451.0-2024 standard announcement",
+          "url": "https://www.nist.gov/news-events/news/2024/07/ieee-14510-2024-standard-published-under-leadership-nist-researchers",
+          "finding": "IEEE1451 defines common functions, interfaces, communications and TEDS formats for smart sensors and actuators."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 84,
+      "assistant_tokens": 62,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 26
+    },
+    {
+      "id": "repo-0227b238642cfb59f5ab1558",
+      "messages_sha256": "0227b238642cfb59f5ab1558290e5c8857a7ad4645478217eced1b5af4132933",
+      "state": "PASS",
+      "rationale": "Correctly distinguishes a fuse's overcurrent-interruption function from voltage clamping, ground-loop correction and undervoltage protection. The explanation is a conceptual protection-function comparison, not a guaranteed response to every overload or pulse and not a complete coordinated surge-protection design.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Eaton Fuse FAQs",
+          "url": "https://www.eaton.com/us/en-us/products/electronic-components/faq/fuse-frequently-asked-questions.html",
+          "finding": "Fuses protect against overcurrent, with selection depending on current/voltage ratings, overload conditions and opening times."
+        },
+        {
+          "title": "Littelfuse product selection guide: overcurrent and voltage transient events",
+          "url": "https://www.littelfuse.com/~/media/electronics/product_catalogs/littelfuse_product_selection_guide.pdf.pdf",
+          "finding": "Separates fuse/PTC overcurrent interruption from transient-voltage suppression using devices such as MOVs and TVS diodes."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 78,
+      "assistant_tokens": 55,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 27
+    },
+    {
+      "id": "repo-a82926b5de70ce75a873f3d9",
+      "messages_sha256": "a82926b5de70ce75a873f3d9de2824146d271a62184f763e2e4bbd37e4e95f19",
+      "state": "PASS",
+      "rationale": "The answer explicitly qualifies sensor in the broad, receiver-based sense. GPS receiver equipment processes externally received satellite signals into position information; it is reasonable to treat it as a position-sensing subsystem. No satellite-count, accuracy or guaranteed coverage assertion is made.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "GPS.gov: GPS user segment",
+          "url": "https://www.gps.gov/gps",
+          "finding": "GPS receivers use satellite signals to calculate position and time."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 61,
+      "assistant_tokens": 48,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 28
+    },
+    {
+      "id": "repo-d20c044d4f6bd4b5902fbc72",
+      "messages_sha256": "d20c044d4f6bd4b5902fbc723a5196b145efc8724f699c695fdc77ba8be33a86",
+      "state": "PASS",
+      "rationale": "Correctly describes conventional open-collector optocoupler output behavior: the conducting output transistor sinks current toward its emitter, while an external pull-up normally establishes the high level. It does not claim active high drive or select an unsupported pull-up value.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Toshiba open-collector versus totem-pole optocoupler output",
+          "url": "https://toshiba.semicon-storage.com/eu/semiconductor/knowledge/faq/opto/opto-038.html",
+          "finding": "Open-collector outputs sink current and require a pull-up to establish logic-high behavior."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 77,
+      "assistant_tokens": 56,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 29
+    },
+    {
+      "id": "repo-e51ee550e3d3f295b8c33fd7",
+      "messages_sha256": "e51ee550e3d3f295b8c33fd7fcdfd0c7f59ab32bb811bbce6ea726dde5ed2f59",
+      "state": "QUARANTINE",
+      "rationale": "The complete prompt refers to these parts without supplying the parts or preceding context. Its generic interface architecture is broadly reasonable, but the unresolved antecedent prevents checking the requested application of those parts. Preserve this incomplete-context record; the hold does not demand an unstated circuit diagram or installation approval.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "No part list, device identities or electrical ratings appear anywhere in the complete visible message pair."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 174,
+      "assistant_tokens": 140,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 30
+    },
+    {
+      "id": "repo-8d48457c1a90c162cca82bd8",
+      "messages_sha256": "8d48457c1a90c162cca82bd879478ff6d5fa4d56ecf474f6f6cbddfa15e6d74b",
+      "state": "PASS",
+      "rationale": "Faithfully paraphrases the requested mechanism-based selection principle. Corrosion, temperature, ingress, vibration and UV are real environmental failure mechanisms. It says not to stop at labels, rather than telling the reader to disregard mandatory certification, and supplies no unsupported product acceptance claim.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Molex Heavy Equipment Connectivity Solutions",
+          "url": "https://www.molex.com/en-us/industries-applications/heavy-equipment-connectivity",
+          "finding": "Describes environment-specific vibration, ingress and contact failures with downtime/maintenance consequences and matching protective features."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 72,
+      "assistant_tokens": 47,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 31
+    },
+    {
+      "id": "repo-8a27bdb4e8d11a0a5ecd34f7",
+      "messages_sha256": "8a27bdb4e8d11a0a5ecd34f770a59bba14e9b8a138b9da145b7bbb81fbf16e0c",
+      "state": "PASS",
+      "rationale": "Accurate non-exhaustive list of noise/error sources across the sensor signal chain: resistor thermal noise, EMI pickup, supply ripple, ground loops, ADC quantization and vibration in mechanically sensitive sensing. It does not claim that all are present or statistically white/independent in every system.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices: Optimizing Power Systems for the Signal Chain, Part1",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/optimizing-power-systems-for-the-signal-chain-part-1.html",
+          "finding": "Power-supply noise can impair signal-chain performance; effects depend on device sensitivity and ripple spectrum."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Johnson noise is consistent with mean-square voltage 4kTRB under its usual model; finite ADC quantization produces conversion error. The answer lists mechanisms, not a quantitative noise budget."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 63,
+      "assistant_tokens": 46,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 32
+    },
+    {
+      "id": "repo-fb34f8555d7d1989c305b102",
+      "messages_sha256": "fb34f8555d7d1989c305b102e2749f935ad2b77fefee0ad41ed6075decaebe50",
+      "state": "PASS",
+      "rationale": "Sound qualitative caution that simulation fidelity depends on device/parasitic models and tool assumptions and must be checked against hardware. Moderately is conversational guidance, not a measured probability or certification of an unseen model. It does not present a simulated result as validated hardware evidence.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices LTpowerAnalyzer live demonstration, conclusion",
+          "url": "https://wiki.analog.com/_media/ltpoweranalyzer_live_demonstration.pdf",
+          "finding": "Simulation fidelity depends on device/board-parasitic models; hardware measurements are used for verification."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 100,
+      "assistant_tokens": 79,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 33
+    },
+    {
+      "id": "repo-088024731faec37022bea661",
+      "messages_sha256": "088024731faec37022bea6613697065b73a60bd466d03e92ad7159e6577789cb",
+      "state": "PASS",
+      "rationale": "A reasonable qualitative total-ownership-cost checklist covering acquisition, installation, maintenance/replacement, downtime, stocking and verification. Cleaning compatibility affects service/maintenance cost. No numerical lifetime, probability, price saving or investment result is asserted.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Molex Heavy Equipment Connectivity Solutions",
+          "url": "https://www.molex.com/en-us/industries-applications/heavy-equipment-connectivity",
+          "finding": "Describes environment-specific vibration, ingress and contact failures with downtime/maintenance consequences and matching protective features."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Lifecycle cost includes initial cost plus time-dependent maintenance, replacement and downtime consequences; the answer identifies relevant terms without pretending to evaluate them."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 73,
+      "assistant_tokens": 50,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 34
+    },
+    {
+      "id": "repo-df73239434d8c2fe916ccb0c",
+      "messages_sha256": "df73239434d8c2fe916ccb0c1fb9fd313ba43f2cce62ced66c8bae3c6d1f7329",
+      "state": "PASS",
+      "rationale": "Vibration-induced micromotion, loosened connections, solder fatigue and contact fretting can interrupt electrical continuity. The conditional wording correctly allows the fault to disappear at rest rather than claiming every vibrating connector fails.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Molex Connector Contact Retention Guide",
+          "url": "https://www.molex.com/en-us/trends-insights/engineering-insights/connector-contact-retention",
+          "finding": "Vibration, fretting, loose retention and terminal movement can produce intermittent contact or open circuits."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 65,
+      "assistant_tokens": 46,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 35
+    },
+    {
+      "id": "repo-df33f8178dab3aba0d270583",
+      "messages_sha256": "df33f8178dab3aba0d27058385308725c031f9935b70643ce53715bb50dba24d",
+      "state": "REJECT",
+      "rationale": "An unspecified datasheet's 20mA entry cannot be assumed to be its maximum rather than a test or operating condition. The claim that driving any such LED at20mA significantly shortens life and most designs should use10–15mA is unsupported. It also conflates continuous absolute maxima with separately specified pulse ratings. A concrete manufacturer counterexample specifies characteristics at20mA but a50mA DC absolute maximum under stated conditions.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Vishay TLDR5800 datasheet, pages1–2",
+          "url": "https://www.vishay.com/docs/83004/tldr5800.pdf",
+          "finding": "The device characterizes light output/voltage at20mA but lists50mA DC forward-current absolute maximum at specified conditions and a separate pulse/surge rating."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 95,
+      "assistant_tokens": 58,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 36
+    },
+    {
+      "id": "repo-3b19fecf3856f4bd9b318137",
+      "messages_sha256": "3b19fecf3856f4bd9b318137267983d4e5b3459e3cdd05de84023fabf27b257d",
+      "state": "PASS",
+      "rationale": "Correct general uses for a resistive divider and explicitly preserves the important light-loading limitation. It does not mistake a divider for a regulated high-current supply or promise a load-independent reference voltage.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "Vout/Vin=(R2 parallel Rload)/(R1+(R2 parallel Rload)); it approaches R2/(R1+R2) as Rload grows. The stated low-load condition is therefore material and correct."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 63,
+      "assistant_tokens": 46,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 37
+    },
+    {
+      "id": "repo-31204303b208a14e00bdf8cb",
+      "messages_sha256": "31204303b208a14e00bdf8cbeffeb3301d9839871439985a6790e4ee372d1aa0",
+      "state": "PASS",
+      "rationale": "Correctly separates DC galvanic isolation from capacitive coupling of fast common-mode transitions. Displacement current can disturb the receiving side and produce logical errors or false triggering; the answer says can and retains receiving-circuit susceptibility rather than asserting a universal failure. CMTI is relevant to the named switching environments.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TI Digital Isolator Design Guide",
+          "url": "https://www.ti.com/lit/an/slla284b/slla284b.pdf",
+          "finding": "CMTI describes correct data transfer under fast common-mode potential changes across the isolation barrier."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Capacitive displacement current follows i=C*dV/dt. For fixed barrier/layout capacitance, faster common-mode slew increases coupled current without requiring a DC conductive path."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 154,
+      "assistant_tokens": 132,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 38
+    },
+    {
+      "id": "repo-ba6abdae884a14f3c9e1a40d",
+      "messages_sha256": "ba6abdae884a14f3c9e1a40d1c8351dd87631af09754ef194a15a62bd8c92f3e",
+      "state": "PASS",
+      "rationale": "The replacement mental model correctly distinguishes resistance from energy-storage response: capacitor voltage and inductor current resist rapid changes. It allows changes when current or voltage is supplied rather than falsely declaring these quantities fixed. This is a standard qualitative lumped-component explanation, not a claim about arbitrary parasitic high-frequency behavior.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "For ideal lumped elements, vR=RiR, iC=C*dVC/dt and vL=L*dIL/dt. A steady capacitor voltage permits zero capacitor current, and steady inductor current permits zero inductor voltage."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 180,
+      "assistant_tokens": 141,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 39
+    },
+    {
+      "id": "repo-bd6218960ccf2cb72e9d7492",
+      "messages_sha256": "bd6218960ccf2cb72e9d7492b98ed9d83a2643d8d7c8287d14b7fd4ee5f4dd60",
+      "state": "REJECT",
+      "rationale": "A shared contactor does not inherently eliminate individual motor overload protection: separate overloads can still be provided for each motor. The answer incorrectly states that individual protection is lost and makes total current alone sound sufficient. Contactor motor-duty capability, aggregate motor ratings and applicable installation conditions also matter.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Schneider Electric: one AC contactor for multiple motors",
+          "url": "https://www.se.com/ca/en/faqs/FA127859/",
+          "finding": "Multiple motors may share a contactor with separate overloads per motor, aggregate horsepower/current sizing and applicable installation restrictions."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 58,
+      "assistant_tokens": 41,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 40
+    },
+    {
+      "id": "repo-047fe3d4325f314e846bd7a1",
+      "messages_sha256": "047fe3d4325f314e846bd7a1d2efa8db1aea31a0f2c6792e605c38484e0ffa70",
+      "state": "PASS",
+      "rationale": "Correct conceptual purpose of overcurrent protection: coordinate fuse clearing with conductor thermal limits so excessive heating does not destroy insulation or create a fire hazard. The response supplies no fuse size, material-specific ignition temperature or installation approval. The wire-becomes-the-fuse phrase is a warning about failed coordination, not a proposed protection method.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Eaton Fuse FAQs",
+          "url": "https://www.eaton.com/us/en-us/products/electronic-components/faq/fuse-frequently-asked-questions.html",
+          "finding": "Fuses protect against overcurrent, with selection depending on current/voltage ratings, overload conditions and opening times."
+        },
+        {
+          "title": "OSHA Electrical Safety publication3075",
+          "url": "https://www.osha.gov/Publications/osha3075.pdf",
+          "finding": "Fuses and breakers interrupt excessive current to protect conductors/equipment against overheating."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Conductor heating depends on integrated I²R energy and heat loss; time-current clearing behavior must stay within the protected conductor's thermal withstand. This supports the qualitative timing relationship."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 84,
+      "assistant_tokens": 62,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 41
+    },
+    {
+      "id": "repo-c33eebefd31df47f5f50dff1",
+      "messages_sha256": "c33eebefd31df47f5f50dff1d5d1baf236be963371c7780a6830f653982218ae",
+      "state": "QUARANTINE",
+      "rationale": "Peak20g and once-per-day occurrence do not establish SSD suitability or justify probably not. Missing shock duration/waveform, axes, operating state, device specification, mounting and connector design materially affect the judgment. Consumer SSD specifications can state far larger peak shock ratings only under specific conditions; those are counterexamples to a categorical consumer/industrial inference, not approval of this installation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Samsung870 EVO datasheet, reliability conditions",
+          "url": "https://download.semiconductor.samsung.com/resources/data-sheet/Samsung_SSD_870_EVO_Data_Sheet_Rev1.1_230509.pdf",
+          "finding": "The non-operating shock specification is1500g for0.5ms across3axes, illustrating why magnitude without waveform/state is insufficient; it does not certify a20g operating installation."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 48,
+      "assistant_tokens": 22,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 42
+    },
+    {
+      "id": "repo-cba8d3bded4f6b4e328535bd",
+      "messages_sha256": "cba8d3bded4f6b4e328535bd7fb6ebd81662bc4dc8e64fed0eec5bae12c42313",
+      "state": "PASS",
+      "rationale": "Correctly contrasts overcurrent tripping with personnel-protection ground-fault current imbalance at approximately5mA in the common US Class-A context. Shock/imbalance sensing is distinct from overload sensing. This describes protection functions; a combined GFCI circuit breaker can include both, so the answer is not treated as denying combination products.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "OSHA ground-fault circuit-interrupter training",
+          "url": "https://obis.osha.gov/dte/library/electrical/electrical.html",
+          "finding": "GFCI sensing detects current imbalance near5mA for common Class-A protection. Circuit-breaker-type GFCIs also incorporate conventional overcurrent protection."
+        },
+        {
+          "title": "OSHA electrical training PDF",
+          "url": "https://www.osha.gov/sites/default/files/training-library_electrical.pdf",
+          "finding": "Supports near5mA imbalance sensing and combination GFCI/circuit-breaker products."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 75,
+      "assistant_tokens": 60,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 43
+    },
+    {
+      "id": "repo-d3d37074ac082ca94eefc846",
+      "messages_sha256": "d3d37074ac082ca94eefc846d84c61f31f22551e8771f8cdacd022ea603d53d9",
+      "state": "PASS",
+      "rationale": "Correct qualitative distinction between MOSFET-output optical relays and triac SSRs: suitable MOSFET relay topologies switch DC and AC, while triac outputs latch and ordinarily turn off near current zero in AC operation. The word often avoids claiming every MOSFET device is an AC-rated relay, and no specific load rating is invented.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Omron Technical Explanation for Solid-state Relays",
+          "url": "https://www.ia.omron.com/data_pdf/guide/18/ssr_tg_e_9_9.pdf",
+          "finding": "Power MOSFET relays can support both AC and DC loads, with different output/leakage behavior from conventional SSRs."
+        },
+        {
+          "title": "Panasonic SSR Principle of Operation",
+          "url": "https://industry.panasonic.com/ap/en/products/control/relay/solid-state/principle_operation",
+          "finding": "Triac SSRs latch and turn off as AC current falls through zero; DC-load SSRs use directly controlled transistor/MOSFET output stages."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 96,
+      "assistant_tokens": 71,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 44
+    },
+    {
+      "id": "repo-18d164eca64dcfc171c59194",
+      "messages_sha256": "18d164eca64dcfc171c59194d4016e9c90487b66c1427e2a437ab3855d9c373f",
+      "state": "PASS",
+      "rationale": "Correctly relates MOV continuous-voltage selection to the highest normal mains voltage including fluctuations and to the trade-off with surge clamping/protected-load withstand. It gives no universal numerical margin. Increased continuous conduction/heating under an inadequately rated line condition is the relevant failure mechanism; the answer does not imply MOV leakage is literally zero below MCOV.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Littelfuse selecting transient surge protection application note",
+          "url": "https://www.littelfuse.com/assetdocs/how-to-select-the-optimum-transient-surge-protection-for-ev-on-board-chargers-application-note?assetguid=a12f2475-d207-4f54-a7d6-01c4d6eb435c",
+          "finding": "MOV selection considers maximum normal operating voltage, temperature, waveform, current and repetitive surge requirements."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 77,
+      "assistant_tokens": 61,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 45
+    },
+    {
+      "id": "repo-96c78f916635f29773a28faa",
+      "messages_sha256": "96c78f916635f29773a28faa7eb314d8e75b21fbffc243b78a656a1db7ed7c4a",
+      "state": "PASS",
+      "rationale": "Faithful paraphrase of the supplied pressure-to-voltage conversion statement, preserving measured input and electrical output. It does not generalize that all pressure transducers must have voltage outputs or assert an unstated calibration/linearity.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "The paraphrase retains the same mapping: pressure as input, measurable electrical voltage as output."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 46,
+      "assistant_tokens": 24,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 46
+    },
+    {
+      "id": "repo-e419c3fa6062dfac8d7029c9",
+      "messages_sha256": "e419c3fa6062dfac8d7029c9a0a606c498f7d147cbd96c00531f7e10c4d33c19",
+      "state": "PASS",
+      "rationale": "Correct for the specified series RLC comparison: reducing positive resistance lowers damping and raises Q; resonant current and component stress can increase, and underdamped transients can decay more slowly. Conditional can/may language avoids guaranteeing a particular waveform or falsely equating high Q with active instability.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "For fixed positive L,C, alpha=R/(2L), Q=sqrt(L/C)/R and ideal voltage-driven resonant current=V/R. Lower R reduces alpha, increases Q and lengthens the decay-envelope time2L/R; positive R still dissipates energy."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 81,
+      "assistant_tokens": 57,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 47
+    },
+    {
+      "id": "repo-e81a0612e09e169eec48ac1f",
+      "messages_sha256": "e81a0612e09e169eec48ac1fa90ca733e0fd7f663e1ac04742918a67ff132e6e",
+      "state": "PASS",
+      "rationale": "Correct broad definition of flow sensing and representative measurement principles. Fluid includes gases; turbine, ultrasonic, thermal-mass, differential-pressure and Coriolis are legitimate methods. It does not claim every method directly measures the same volumetric/mass quantity or is suitable for every fluid.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Endress+Hauser field instrument overview",
+          "url": "https://www.endress.com/en/field-instruments-overview",
+          "finding": "Lists established Coriolis, ultrasonic, thermal-mass and differential-pressure flowmeter families."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 65,
+      "assistant_tokens": 51,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 48
+    },
+    {
+      "id": "repo-b0af2fff01be333c26d8a933",
+      "messages_sha256": "b0af2fff01be333c26d8a933e46576a58b951ece999830ff8b629112c52e5215",
+      "state": "PASS",
+      "rationale": "A reasonable, explicitly likely recommendation for joint-position feedback on a rotary-joint robot: encoders measure joint angles, and absolute encoders can make their position available at power-up without a new reference-seeking move. Recalibration is colloquial here for re-referencing; this does not certify zero installation calibration, unlimited multi-turn tracking, complete robot kinematics or every possible arm architecture.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Renishaw EVOLUTE absolute encoder",
+          "url": "https://www.renishaw.com/en/evolute-optical-absolute-encoder-series--42473",
+          "finding": "True absolute position can be acquired on startup without motion; setup/zero/calibration remain separate operations."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 81,
+      "assistant_tokens": 55,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
+      "original_domain_ordinal": 49
     }
   ],
-  "reviewed": 392,
+  "reviewed": 417,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

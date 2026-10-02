@@ -8,10 +8,10 @@
   "review": {
     "curriculum": 2112,
     "dispositions": {
-      "PASS": 264,
-      "REJECT": 27,
-      "QUARANTINE": 102,
-      "NEEDS_HUMAN_REVIEW": 1719
+      "PASS": 284,
+      "REJECT": 30,
+      "QUARANTINE": 104,
+      "NEEDS_HUMAN_REVIEW": 1694
     },
     "by_domain": {
       "circuits": {
@@ -51,10 +51,10 @@
         "NEEDS_HUMAN_REVIEW": 208
       },
       "electrical_components": {
-        "PASS": 17,
-        "REJECT": 0,
-        "QUARANTINE": 8,
-        "NEEDS_HUMAN_REVIEW": 275
+        "PASS": 37,
+        "REJECT": 3,
+        "QUARANTINE": 10,
+        "NEEDS_HUMAN_REVIEW": 250
       },
       "electromagnetism": {
         "PASS": 2,
@@ -75,8 +75,8 @@
         "NEEDS_HUMAN_REVIEW": 242
       }
     },
-    "agent_substantive_reviews": 392,
-    "substantively_unreviewed": 1717,
+    "agent_substantive_reviews": 417,
+    "substantively_unreviewed": 1692,
     "reviewed_specialist_holds": 2,
     "complete_source_domains": [
       "circuits",
@@ -97,13 +97,13 @@
     },
     {
       "path": "data/review/phase3/technical-review.jsonl.gz",
-      "bytes": 164565,
-      "sha256": "6318c4b5b715577ca6d6f2e8ba0ace2393d51d7ac6519f67b69a6f49567d4103"
+      "bytes": 174242,
+      "sha256": "65238697e42b95fd79df45337804c755575c90dbe73a025b597a5332eecb9c8c"
     },
     {
       "path": "manifests/phase3-agent-technical-review.json",
-      "bytes": 389229,
-      "sha256": "c4ee74ac204ef6a9011d32da0efb809fc9cab3bb57497a8406ed8f56a1af285f"
+      "bytes": 434869,
+      "sha256": "ebd812336cb921eb779e6fee1bd70b234491b21fd3dddc3ec54e1b0190409ab4"
     },
     {
       "path": "manifests/phase3-release-families.json",
@@ -112,8 +112,8 @@
     },
     {
       "path": "reports/phase3-technical-review.json",
-      "bytes": 69778,
-      "sha256": "9f0b1f343a11e6989a36164b6bc512d5357fcac83b361ea7e4fea70ac3cd9627"
+      "bytes": 78604,
+      "sha256": "46aed6108738c6e6b29f3dab782d0b88f0175540674d18046e10d51c36b25c4e"
     },
     {
       "path": "src/forge_tools/engineering.py",
@@ -217,7 +217,7 @@
   },
   "next_domain": "electrical_components",
   "next_batch": {
-    "offset": 25,
+    "offset": 50,
     "limit": 25
   },
   "workers": [],
