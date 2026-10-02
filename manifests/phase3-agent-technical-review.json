@@ -20622,9 +20622,751 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/algebra-0125-0150.json",
       "original_domain_ordinal": 149
+    },
+    {
+      "id": "repo-b90073f10c1dc0db6cb63493",
+      "messages_sha256": "b90073f10c1dc0db6cb6349395fe1939d4e063279d4a0284cb997520d2436a9d",
+      "state": "PASS",
+      "rationale": "Correct stepwise outline of elementary two-equation elimination, including coefficient alignment, cancellation and back substitution.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_linear_combination_check",
+          "finding": "If the complete equation a_k x=b_k is a linear combination of remaining equations with the same coefficients on both sides, every solution of the remaining equations satisfies it. Deleting it preserves the solution set."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This illustrates the ordinary two-variable independent case; dependent and inconsistent outcomes need separate handling."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 92,
+      "assistant_tokens": 74,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 150
+    },
+    {
+      "id": "repo-0e9cb671e9fe559df2da1f4c",
+      "messages_sha256": "0e9cb671e9fe559df2da1f4c25c1e65017db79ed219b919d0ef79d64242e9b33",
+      "state": "PASS",
+      "rationale": "Correct definition of evaluation by substitution and correct worked example.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Full original statements are checked through symbolic identities, logical implications and exact residual evaluation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "2*3+5=11."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 97,
+      "assistant_tokens": 72,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 151
+    },
+    {
+      "id": "repo-ed24da2aa07f929f21d28909",
+      "messages_sha256": "ed24da2aa07f929f21d28909e89d94d317e741db2dae4eb4cd8aba9cb4c5bd4d",
+      "state": "PASS",
+      "rationale": "Correct logical decomposition of an equivalence into both implication directions.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "direct_mathematical_review",
+          "finding": "A symbolic identity or implication derived from stated algebraic axioms proves all covered instances; a finite list of numerical tests does not establish an unrestricted universal statement."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "P iff Q is the conjunction of P=>Q and Q=>P."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 98,
+      "assistant_tokens": 71,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 152
+    },
+    {
+      "id": "repo-a2c2e9995193714e0904d7b2",
+      "messages_sha256": "a2c2e9995193714e0904d7b264316381db4e6537a6733686708d50e335dc9194",
+      "state": "QUARANTINE",
+      "rationale": "The nonzero-determinant uniqueness criterion is correct, but the prompt also asks to solve the symbolic system. The answer never gives x and y or the corresponding solution-set cases.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Full original statements are checked through symbolic identities, logical implications and exact residual evaluation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "When delta=ad-bc!=0, x=(ed-bf)/delta and y=(af-ce)/delta. Substitution proves both equations; these formulas are reviewer evidence and not a repair to the source."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 84,
+      "assistant_tokens": 51,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 153
+    },
+    {
+      "id": "repo-d9b0d26700b03cb8f3256dc6",
+      "messages_sha256": "d9b0d26700b03cb8f3256dc6cb833dd1f88a4ad94895565f409daf4fae71c03b",
+      "state": "PASS",
+      "rationale": "Correct rank-nullity explanation for the explicitly stated square-matrix case: each unit decrease in rank increases nullity by one.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rank_nullity_and_row_space_review",
+          "finding": "For m by n matrices, kernel dimension is n-rank. Invertible row operations preserve row span and rank but need not preserve the column span."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Growing refers to dimension; kernels of different matrices with decreasing ranks need not be nested."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 114,
+      "assistant_tokens": 84,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 154
+    },
+    {
+      "id": "repo-8d8b22a7b02ce289e7cd54b7",
+      "messages_sha256": "8d8b22a7b02ce289e7cd54b79af15998edd4ef7934a1ed3647d2a8b59b859e9f",
+      "state": "PASS",
+      "rationale": "Correct comparison of REF and RREF: reduced form adds unit pivots and zeros elsewhere in pivot columns, and RREF is unique while REF is not. The prompt asks for the difference rather than an exhaustive shared definition.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NTNU, Gaussian elimination",
+          "url": "https://wiki.math.ntnu.no/linearmethods/gaussianelimination",
+          "finding": "Echelon form requires pivots stepping right and all-zero rows at the bottom. Reduced echelon form adds unit pivots and zeros elsewhere in pivot columns."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For [[2,1],[0,3]], REF can retain nonunit pivots; row reduction produces the unique identity RREF. Zero-row placement is a shared echelon condition."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Both forms also require all-zero rows at the bottom. That shared condition is omitted from the brief comparison, but the distinguishing conditions are accurate."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 97,
+      "assistant_tokens": 72,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 155
+    },
+    {
+      "id": "repo-e54eee696f8f92d6f34226a5",
+      "messages_sha256": "e54eee696f8f92d6f34226a55370e730adc745fb0418b62f8eae68dadeab41cb",
+      "state": "PASS",
+      "rationale": "Valid inverse-uniqueness argument using associativity and the two-sided inverse property available in a group.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_axiom_and_subgroup_check",
+          "finding": "Group claims are checked directly against closure, inherited associativity, identity and inverses. No numerical example substitutes for the general proof."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For inverses b,c of a, b=b(ac)=(ba)c=c. Calling b an inverse establishes ba=e as used."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 83,
+      "assistant_tokens": 61,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 156
+    },
+    {
+      "id": "repo-3441dc32d4074b71633f8a5f",
+      "messages_sha256": "3441dc32d4074b71633f8a5f612a029cec8bd53d39ca9be9733a514404a656ee",
+      "state": "PASS",
+      "rationale": "Correct practical criterion for isomorphism of ordinary algebraic structures: a well-defined bijective operation-preserving map.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_axiom_and_subgroup_check",
+          "finding": "Group claims are checked directly against closure, inherited associativity, identity and inverses. No numerical example substitutes for the general proof."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Every operation in the structure must be preserved; additional topological or order structure would impose additional requirements."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 104,
+      "assistant_tokens": 83,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 157
+    },
+    {
+      "id": "repo-4d67b95e03d20c45e34b840d",
+      "messages_sha256": "4d67b95e03d20c45e34b840d9e9dcb8c952695ec0ebb19e22715c18e6c8a9bcd",
+      "state": "PASS",
+      "rationale": "Good introductory account of eliminating one variable in a two-equation system, then substituting to recover the other.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_linear_combination_check",
+          "finding": "If the complete equation a_k x=b_k is a linear combination of remaining equations with the same coefficients on both sides, every solution of the remaining equations satisfies it. Deleting it preserves the solution set."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Coefficient scaling may be needed before cancellation, and singular systems may not give a unique solution; this is an informal introduction."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 87,
+      "assistant_tokens": 68,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 158
+    },
+    {
+      "id": "repo-5cf3c265c600dadb58ae1145",
+      "messages_sha256": "5cf3c265c600dadb58ae11459c99ce8b688ef7ee13c39b3408b1554ab92ffc0b",
+      "state": "PASS",
+      "rationale": "Accurate explanation of solving for a set and then displaying that set in the appropriate graph space.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_linear_combination_check",
+          "finding": "If the complete equation a_k x=b_k is a linear combination of remaining equations with the same coefficients on both sides, every solution of the remaining equations satisfies it. Deleting it preserves the solution set."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "VISUAL_CONTEXT_CHECK"
+      ],
+      "qwen_tokens": 86,
+      "assistant_tokens": 62,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 159
+    },
+    {
+      "id": "repo-9da5e49b79b0f61de2d23c13",
+      "messages_sha256": "9da5e49b79b0f61de2d23c13df5a2fa1b80b5826d1de81753534a604b018e0cd",
+      "state": "PASS",
+      "rationale": "Correct dependency diagnosis and full solution line.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Full original statements are checked through symbolic identities, logical implications and exact residual evaluation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "b=3-2a gives 2a+b=3 and 6a+3b=9 identically."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 64,
+      "assistant_tokens": 33,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 160
+    },
+    {
+      "id": "repo-a2c7d2a5e7cb99362a56d716",
+      "messages_sha256": "a2c7d2a5e7cb99362a56d71651ddd6a3d37bc484d9d3806b13528d21f2cd7000",
+      "state": "PASS",
+      "rationale": "Correct geometric motivation for eigenvectors as invariant one-dimensional directions and eigenvalues as scalar factors, followed by the characteristic equation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "James Demmel, Berkeley MA221 Lecture 15",
+          "url": "https://people.eecs.berkeley.edu/~demmel/ma221_Fall09/Lectures/Lecture_15.html",
+          "finding": "Defines eigenvalues through the characteristic determinant and nonzero null vectors; shows similarity preserves eigenvalues and presents unique Jordan blocks up to ordering."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A negative real eigenvalue reverses vector orientation while preserving its line; complex eigenvectors are not ordinary spatial arrows. Null spaces recover vectors after the eigenvalues are found."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 111,
+      "assistant_tokens": 87,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 161
+    },
+    {
+      "id": "repo-0bdab2c439f591238e30c729",
+      "messages_sha256": "0bdab2c439f591238e30c72920b4bb5b47dcab563f0c3380c761d0fc3a90ad4f",
+      "state": "PASS",
+      "rationale": "Correct distinction between substitution and elimination, with appropriately qualified speed guidance when coefficients align.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_linear_combination_check",
+          "finding": "If the complete equation a_k x=b_k is a linear combination of remaining equations with the same coefficients on both sides, every solution of the remaining equations satisfies it. Deleting it preserves the solution set."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 80,
+      "assistant_tokens": 64,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 162
+    },
+    {
+      "id": "repo-68a55b0bd33e92da890cfe5a",
+      "messages_sha256": "68a55b0bd33e92da890cfe5aba102bc3418bfeb102f4660032c48f7ed00e1a22",
+      "state": "PASS",
+      "rationale": "Correct row/column span definitions, ambient dimensions and equality of their dimensions to rank.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_rank_nullity_and_row_space_review",
+          "finding": "For m by n matrices, kernel dimension is n-rank. Invertible row operations preserve row span and rank but need not preserve the column span."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The final row-operation clause means column space is not invariant in general, not that every operation changes it. Full-rank square matrices retain the full ambient column space."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 93,
+      "assistant_tokens": 75,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 163
+    },
+    {
+      "id": "repo-5df86fe8abbf8a03a3ba7473",
+      "messages_sha256": "5df86fe8abbf8a03a3ba7473352231e1dad5f511ee87e19211440f35ef3f3395",
+      "state": "PASS",
+      "rationale": "Correct conceptual definition of reduction through equivalent simplification, with triangular form presented as an ideal outcome.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_linear_combination_check",
+          "finding": "If the complete equation a_k x=b_k is a linear combination of remaining equations with the same coefficients on both sides, every solution of the remaining equations satisfies it. Deleting it preserves the solution set."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 67,
+      "assistant_tokens": 48,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 164
+    },
+    {
+      "id": "repo-55e7c7a1d5b15d855c1045d0",
+      "messages_sha256": "55e7c7a1d5b15d855c1045d0b56f36b102881dd47bcaf0b54dbd802b8c5c9d9f",
+      "state": "PASS",
+      "rationale": "Correct action of the conventional upper-superdiagonal Jordan block, including the chain term and binomial behavior of powers.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "James Demmel, Berkeley MA221 Lecture 15",
+          "url": "https://people.eecs.berkeley.edu/~demmel/ma221_Fall09/Lectures/Lecture_15.html",
+          "finding": "Defines eigenvalues through the characteristic determinant and nonzero null vectors; shows similarity preserves eigenvalues and presents unique Jordan blocks up to ordering."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Write J=lambda I+N with N e_i=e_(i-1) for i>1 and N e_1=0. Since lambda I commutes with N, J^m expands by the binomial theorem."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 153,
+      "assistant_tokens": 129,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 165
+    },
+    {
+      "id": "repo-6ad2bbbd2d31a7f776ea3826",
+      "messages_sha256": "6ad2bbbd2d31a7f776ea3826007b7485c0c20befe8d4172abc8712111e1f3f43",
+      "state": "PASS",
+      "rationale": "Correct linear-equation operations and result.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Full original statements are checked through symbolic identities, logical implications and exact residual evaluation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At x=9, x/3+2=3+2=5. A constant denominator does not make x nonlinear."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 91,
+      "assistant_tokens": 68,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 166
+    },
+    {
+      "id": "repo-f005b93cbe77be113fa85e91",
+      "messages_sha256": "f005b93cbe77be113fa85e917dff13c7f17abd4f7f3cfbb41c2ee225c29e3c3f",
+      "state": "PASS",
+      "rationale": "Accurate etymological explanation of variable elimination.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_linear_combination_check",
+          "finding": "If the complete equation a_k x=b_k is a linear combination of remaining equations with the same coefficients on both sides, every solution of the remaining equations satisfies it. Deleting it preserves the solution set."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 53,
+      "assistant_tokens": 38,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 167
+    },
+    {
+      "id": "repo-0e0b761823b9889be2637b0a",
+      "messages_sha256": "0e0b761823b9889be2637b0a37941a2c543cf8902dbfafce82f407ee43d6d648",
+      "state": "PASS",
+      "rationale": "Complete real solution with domain/sign restriction, algebraic candidates and direct rejection of the extraneous root.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Full original statements are checked through symbolic identities, logical implications and exact residual evaluation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "x>=3 is necessary. Squaring gives x(x-7)=0. x=0 violates the original equation and x=7 satisfies both sides equal to 4."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 204,
+      "assistant_tokens": 176,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 168
+    },
+    {
+      "id": "repo-f2f0fc39f1aa638a3569b69f",
+      "messages_sha256": "f2f0fc39f1aa638a3569b69fb7dfd501de58bf6952b3e21898b6b7f91994b3e4",
+      "state": "PASS",
+      "rationale": "Correct elimination and pair, verified in both original equations.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Full original statements are checked through symbolic identities, logical implications and exact residual evaluation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "2*3+1=7 and 3-1=2."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 93,
+      "assistant_tokens": 66,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 169
+    },
+    {
+      "id": "repo-92cf71b6eee9b97d258ac188",
+      "messages_sha256": "92cf71b6eee9b97d258ac188afa9db4c27ae4e17b02261ba27bb0ec0fb289277",
+      "state": "PASS",
+      "rationale": "Valid subgroup-intersection proof using common identity, closure and inverses.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_axiom_and_subgroup_check",
+          "finding": "Group claims are checked directly against closure, inherited associativity, identity and inverses. No numerical example substitutes for the general proof."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "All required closure properties hold in both subgroups, so their results remain in the intersection."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 121,
+      "assistant_tokens": 99,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 171
+    },
+    {
+      "id": "repo-4d630b2f8e671f7c21b92cce",
+      "messages_sha256": "4d630b2f8e671f7c21b92ccea8e8c5e7f1d5bb0c88ef64bbd68a6b2d6a5330de",
+      "state": "QUARANTINE",
+      "rationale": "The unimodular Smith-form description is sound, but the final determinant identity omits the square-matrix restriction. Smith form also exists for rectangular integer matrices, where the ordinary determinant is undefined.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Richard Stanley, MIT: Smith Normal Form and Combinatorics",
+          "url": "https://math.mit.edu/~rstan/transparencies/japan.pdf",
+          "finding": "The square-matrix Smith form refines the determinant through its diagonal product; the construction extends to rectangular matrices, where no ordinary determinant exists."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A=[2,0] is a 1 by 2 integer matrix with a Smith form, but det(A) is not defined. For a square matrix the product of all Smith diagonal entries, including any zeros, gives the absolute determinant with nonnegative normalization."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The source calls the diagonal entries invariant factors, so do not assume it excludes zero entries. The hold concerns only the omitted square-A condition."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 110,
+      "assistant_tokens": 88,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 172
+    },
+    {
+      "id": "repo-00253e801930528cc04fe987",
+      "messages_sha256": "00253e801930528cc04fe987bd4438097d5a3ff52408d95b129b505b78ac8df4",
+      "state": "PASS",
+      "rationale": "Faithful conceptual paraphrase that conservation and boundary requirements are integral to the coupled solution process. The prose does not explicitly assert exact feasibility of every internal numerical iterate.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "PETSc SNES nonlinear solvers",
+          "url": "https://petsc.org/release/manual/snes/",
+          "finding": "A residual formulation F(x)=0 is solved iteratively; intermediate iterates generally have nonzero residual and constraints are part of the equations being driven to convergence."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The words at every step should be read as keeping requirements integral to the process, not as a theorem that all nonlinear iterates have exactly zero constraint residual."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 66,
+      "assistant_tokens": 38,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 173
+    },
+    {
+      "id": "repo-208ab6c26dcfb38935c47a30",
+      "messages_sha256": "208ab6c26dcfb38935c47a30d615ecc8e154b05bac87983dddc76794aaae7c7d",
+      "state": "PASS",
+      "rationale": "Correct elimination to an identity and full infinite-solution line.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Full original statements are checked through symbolic identities, logical implications and exact residual evaluation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "x=4y-6 gives -x+4y=6 and 3x-12y=-18."
+        }
+      ],
+      "domain": "algebra",
+      "primary_source": "D_Algebra.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 88,
+      "assistant_tokens": 54,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/algebra-0150-0175.json",
+      "original_domain_ordinal": 174
     }
   ],
-  "reviewed": 806,
+  "reviewed": 830,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

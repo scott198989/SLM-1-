@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 589,
+    "PASS": 611,
     "REJECT": 47,
-    "QUARANTINE": 171,
-    "NEEDS_HUMAN_REVIEW": 1305
+    "QUARANTINE": 173,
+    "NEEDS_HUMAN_REVIEW": 1281
   },
   "by_domain": {
     "circuits": {
@@ -20,10 +20,10 @@
       "NEEDS_HUMAN_REVIEW": 194
     },
     "algebra": {
-      "PASS": 119,
+      "PASS": 141,
       "REJECT": 8,
-      "QUARANTINE": 25,
-      "NEEDS_HUMAN_REVIEW": 64
+      "QUARANTINE": 27,
+      "NEEDS_HUMAN_REVIEW": 40
     },
     "thermal_process_engineering": {
       "PASS": 73,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 806,
+  "agent_substantive_reviews": 830,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "3b1c56f993aa540a7c6b2a2bae273cfa90addf5dba6551ac718766a3b3c9ff2c",
+  "technical_review_sha256": "98b0538fc25ab713a7943ae4f242c3a53a2e0464da44466c7752c76b6064c657",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1303,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1279,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -887,11 +887,35 @@
     "Writing a coupled residual as F(x)=0 does not discard its sparsity, blocks, constraints or physics. Those remain in F, its Jacobian and solver metadata; calling this notation computationally useless is false.": 1,
     "Faithful paraphrase of iterative substructuring: local subdomain solves are coordinated through shared-interface conditions.": 1,
     "Correct elementary order of operations for ordinary explicit arithmetic: parentheses, powers, equal-precedence multiplication/division left to right, then addition/subtraction left to right.": 1,
-    "Correct breakdown of induction into base case, arbitrary inductive hypothesis and successor implication.": 1
+    "Correct breakdown of induction into base case, arbitrary inductive hypothesis and successor implication.": 1,
+    "Faithful conceptual paraphrase that conservation and boundary requirements are integral to the coupled solution process. The prose does not explicitly assert exact feasibility of every internal numerical iterate.": 1,
+    "Correct distinction between substitution and elimination, with appropriately qualified speed guidance when coefficients align.": 1,
+    "Complete real solution with domain/sign restriction, algebraic candidates and direct rejection of the extraneous root.": 1,
+    "Correct definition of evaluation by substitution and correct worked example.": 1,
+    "Correct elimination to an identity and full infinite-solution line.": 1,
+    "Correct practical criterion for isomorphism of ordinary algebraic structures: a well-defined bijective operation-preserving map.": 1,
+    "The unimodular Smith-form description is sound, but the final determinant identity omits the square-matrix restriction. Smith form also exists for rectangular integer matrices, where the ordinary determinant is undefined.": 1,
+    "Good introductory account of eliminating one variable in a two-equation system, then substituting to recover the other.": 1,
+    "Correct action of the conventional upper-superdiagonal Jordan block, including the chain term and binomial behavior of powers.": 1,
+    "Accurate explanation of solving for a set and then displaying that set in the appropriate graph space.": 1,
+    "Correct conceptual definition of reduction through equivalent simplification, with triangular form presented as an ideal outcome.": 1,
+    "Correct row/column span definitions, ambient dimensions and equality of their dimensions to rank.": 1,
+    "Correct linear-equation operations and result.": 1,
+    "Correct comparison of REF and RREF: reduced form adds unit pivots and zeros elsewhere in pivot columns, and RREF is unique while REF is not. The prompt asks for the difference rather than an exhaustive shared definition.": 1,
+    "Valid subgroup-intersection proof using common identity, closure and inverses.": 1,
+    "Correct dependency diagnosis and full solution line.": 1,
+    "The nonzero-determinant uniqueness criterion is correct, but the prompt also asks to solve the symbolic system. The answer never gives x and y or the corresponding solution-set cases.": 1,
+    "Correct geometric motivation for eigenvectors as invariant one-dimensional directions and eigenvalues as scalar factors, followed by the characteristic equation.": 1,
+    "Correct stepwise outline of elementary two-equation elimination, including coefficient alignment, cancellation and back substitution.": 1,
+    "Correct rank-nullity explanation for the explicitly stated square-matrix case: each unit decrease in rank increases nullity by one.": 1,
+    "Valid inverse-uniqueness argument using associativity and the two-sided inverse property available in a group.": 1,
+    "Correct logical decomposition of an equivalence into both implication directions.": 1,
+    "Accurate etymological explanation of variable elimination.": 1,
+    "Correct elimination and pair, verified in both original equations.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "f6dbe3359435a4eff2292fdc92962bfe237a7ab34903bf4e2b16c728666ba5ab",
-  "substantively_unreviewed": 1303,
+  "published_decisions_sha256": "93a308288a483fb4eabad107d3c2bc3a0cce621dbb1dbf87429df5ae44f94fb2",
+  "substantively_unreviewed": 1279,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
