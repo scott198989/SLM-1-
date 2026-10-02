@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-02 - Local electromagnetism review 0–24
+
+- Added {'PASS': 15, 'QUARANTINE': 5, 'REJECT': 1} after independent agent QA; 4 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1461 reviews unchanged.
+- Current local reviews: 1482; dispositions: {'PASS': 1176, 'REJECT': 60, 'QUARANTINE': 247, 'NEEDS_HUMAN_REVIEW': 629}; next electromagnetism offset: 25.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
 ## 2026-10-02 - Pending engineering_mathematics queue completion
 
 - Reviewed 194 pending engineering_mathematics records with independent agent QA; preserved six prior substantive decisions. All 200 selected engineering_mathematics records have substantive dispositions.

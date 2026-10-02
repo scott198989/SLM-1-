@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1161,
-    "REJECT": 59,
-    "QUARANTINE": 242,
-    "NEEDS_HUMAN_REVIEW": 650
+    "PASS": 1176,
+    "REJECT": 60,
+    "QUARANTINE": 247,
+    "NEEDS_HUMAN_REVIEW": 629
   },
   "by_domain": {
     "circuits": {
@@ -50,10 +50,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "electromagnetism": {
-      "PASS": 2,
-      "REJECT": 2,
-      "QUARANTINE": 0,
-      "NEEDS_HUMAN_REVIEW": 162
+      "PASS": 17,
+      "REJECT": 3,
+      "QUARANTINE": 5,
+      "NEEDS_HUMAN_REVIEW": 141
     },
     "materials_manufacturing": {
       "PASS": 3,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1461,
+  "agent_substantive_reviews": 1482,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "ab3e898680d29a1377341f3a86b9838fdfc93ea43cb8cee41c7996397c495e8a",
+  "technical_review_sha256": "5e647c61afc60875e7c71a28911b84c9cc3c6c807e77b50199d1e2f310f34577",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 648,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 627,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1542,11 +1542,32 @@
     "Correct push-forward/pull-back concept and Jacobian-scaled relation among referential and spatial stress measures.": 1,
     "Correct mean-normal-stress and tension-positive pressure convention.": 1,
     "Correct high-level idea of the undetermined-coefficients method.": 1,
-    "Correct defective-matrix definition and explicit two-by-two Jordan-block example.": 1
+    "Correct defective-matrix definition and explicit two-by-two Jordan-block example.": 1,
+    "Reasonable practical advice to prioritize interpreting and checking simulation outputs rather than merely operating software.": 1,
+    "Correct electrostatic work argument for zero tangential electric field on an equipotential surface.": 1,
+    "Correct displacement reflection/transmission amplitudes for the ordinary continuous string under common tension when only density changes.": 1,
+    "The uniform-field/net-force distinction is sound, but the nonuniform-field sentence gives an ambiguous projection rule. For a fixed ideal magnetic moment, F_i=sum_j m_j*partial_i B_j=partial_i(m dot B), which is not generally determined by the component of m along one spatial field-gradient direction.": 1,
+    "Correct requested plain-language explanation of pattern multiplication in the standard factorable array model.": 1,
+    "Correct ideal perfectly conducting loop flux-conservation picture including self-induced magnetic response.": 1,
+    "The Fredholm compatibility and secular resonant-growth concepts are sound, but the final unqualified damped large-response claim requires forcing overlap and sufficiently weak damping.": 1,
+    "These features often make motor analysis difficult, but the categorical claim that all defeat closed-form analysis is too broad. Analytic and semi-analytic subdomain models can retain slotting and rotating-machine structure under suitable assumptions.": 1,
+    "Correct point-source Coulomb-field magnitude derived by dividing force by test charge.": 1,
+    "Correct steady scalar-conductivity/electrostatic permittivity analogy for conservative fields and source-free interiors.": 1,
+    "Correct casual distinction between Faraday induction by changing B and a static field acting alone on a stationary wire.": 1,
+    "Charge discreteness is valid, but the unqualified assertion that charge always appears in integer multiples of e omits known fractional quark charges. The closing macroscopic remark does not specify a free-isolated-charge restriction for that universal sentence.": 1,
+    "Correct distinction between a nonzero vector field along a path and a zero net electrostatic potential difference.": 1,
+    "Correct fixed-end reflection phase and standing-wave derivation for the displayed displacement field.": 1,
+    "Correct Ampere-Maxwell surface-independence explanation in the standard vacuum-gap charging-capacitor model.": 1,
+    "The pillbox formula is valid for an isolated infinite uniform sheet with reflection symmetry, but merely planar charge does not establish equal constant fields on both faces or zero side flux.": 1,
+    "Sound qualified modal-orthogonality explanation with the appropriate inner product and real-device coupling caveats.": 1,
+    "The displayed variance correction is second order in conductivity fluctuations, not first order, and the field-projection step is not a valid derivation. Bruggeman and Maxwell-Garnett are also not generally exact treatments of arbitrary random media.": 1,
+    "Correct conceptual point-splitting/Hadamard subtraction route for regularizing local quantum observables in curved spacetime.": 1,
+    "Correct concise method-of-moments description.": 1,
+    "Correct local Faraday-law symbol, curl and minus-sign explanation in the ordinary fixed-coordinate setting.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "351577d9fc8dfb7ee19570b4fb22617c325aa33077c706e8b7163a92520b4d2a",
-  "substantively_unreviewed": 648,
+  "published_decisions_sha256": "44f0cad019db6d5909ed873dbaae5e30b3601c7c742f87af602a43075f9d2770",
+  "substantively_unreviewed": 627,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
