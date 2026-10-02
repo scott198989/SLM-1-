@@ -1,0 +1,384 @@
+{
+  "domain": "electrical_components",
+  "offset": 0,
+  "limit": 25,
+  "next_offset": 25,
+  "base_commit": "8e8f1d3e17fc34346ee392d1d99975237f0dbc2f",
+  "new_substantive_reviews": 18,
+  "skipped_existing": 7,
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "review_correction": {
+    "ordinal": 9,
+    "from_candidate": "QUARANTINE",
+    "accepted": "PASS",
+    "reason": "The proposed hold imported constant-current/constant-voltage claims absent from the original qualitative answer."
+  },
+  "original_messages_unchanged": true,
+  "technical_PASS_not_release_approval": true,
+  "records": [
+    {
+      "id": "repo-88f11318f886916949d6e1a4",
+      "ordinal": 1,
+      "messages_sha256": "88f11318f886916949d6e1a40d6c85fca95446fb66ce2321466fe701a4c5c2b9",
+      "state": "QUARANTINE",
+      "rationale": "The CMTI/data-error and excessive-voltage dielectric-failure concepts are credible, but the complete answer asserts loss of modulation lock without specifying an isolator architecture. TI documents edge-based and OOK/envelope-detection receivers; a generic lock-loss mechanism is not established. CMTI is a rate-of-change/data-integrity specification, distinct from surge-voltage insulation withstand. Hold the unchanged answer for architecture-specific qualification rather than silently substituting a glitch explanation.",
+      "evidence": [
+        {
+          "title": "TI Digital Isolator Design Guide, sections 1 and 3.1",
+          "url": "https://www.ti.com/lit/an/slla284b/slla284b.pdf",
+          "finding": "Capacitive signal architectures differ. OOK reception uses an envelope detector. CMTI concerns bit errors under fast common-mode changes; surge withstand is separately specified."
+        },
+        {
+          "title": "TI digital-isolator failure modes",
+          "url": "https://www.ti.com/document-viewer/ja-jp/lit/html/SSZTBH1/GUID-7CA58196-C1EB-4523-B0F1-66D463E401F5",
+          "finding": "Barrier breakdown is caused by voltage exceeding isolation specifications, rather than being implied solely by a CMTI excursion."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L16"
+    },
+    {
+      "id": "repo-aca59943ace1a28b8b811e94",
+      "ordinal": 2,
+      "messages_sha256": "aca59943ace1a28b8b811e945c8edb2edf37998f4573d325cc21f86ee588b7e7",
+      "state": "PASS",
+      "rationale": "The complete conceptual answer correctly connects LED drive, device/temperature variation, minimum CTR and aging to worst-case output-current margin. It proposes no unsupported numeric resistor or guaranteed lifetime. Minimum CTR must be evaluated at the operating conditions rather than using typical fresh-device gain, as the answer says.",
+      "evidence": [
+        {
+          "title": "Vishay optocoupler worst-case design application note, page 3",
+          "url": "https://www.vishay.com/doc/?83706=",
+          "finding": "The worked design combines minimum CTR with normalized temperature/current behavior, aging and tolerance before determining load resistance."
+        },
+        {
+          "title": "Vishay Guidelines for Reading an Optocoupler Datasheet",
+          "url": "https://www.vishay.com/docs/84256/useoptocouplerdatasheet.pdf",
+          "finding": "CTR is an input-to-output current ratio with min/max bin limits at stated input current, collector-emitter voltage and temperature."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L17"
+    },
+    {
+      "id": "repo-e037caacbdfc18fde292d882",
+      "ordinal": 5,
+      "messages_sha256": "e037caacbdfc18fde292d882606342a7ba9e6421fc87c503973d5b9b7a5732aa",
+      "state": "PASS",
+      "rationale": "The short prompt is a complete request for a definition. A photodiode converts incident light to photocurrent, and the named optical sensing/communication/encoder uses are appropriate. No circuit-specific responsivity, gain, wavelength or current magnitude is asserted.",
+      "evidence": [
+        {
+          "title": "Hamamatsu WITS guide to selecting a photodetector",
+          "url": "https://hub.hamamatsu.com/us/en/technical-notes/detector-selection/the-wits-guide-to-selecting-a-photodetector.html",
+          "finding": "Responsivity relates photocurrent to incident optical power."
+        },
+        {
+          "title": "Hamamatsu Optical encoding with photodiodes",
+          "url": "https://www.hamamatsu.com/us/en/applications/industrial-equipment/optical-encoding-with-photodiodes.html",
+          "finding": "Photodiodes are supplied for transmissive and reflective optical encoders."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L33"
+    },
+    {
+      "id": "repo-604c9e6251da44e330d91669",
+      "ordinal": 6,
+      "messages_sha256": "604c9e6251da44e330d91669c139e15a06f9fb82d124283a0a8b3cac073c3152",
+      "state": "QUARANTINE",
+      "rationale": "Correctly warns that AC-1 carrying/load ratings cannot be used as motor-duty ratings, but gives a definite failure diagnosis and prescribes AC-3 without motor type, switching duty, voltage or failure evidence. AC-3 is normal squirrel-cage starting/running interruption; plugging/inching requires a different duty category. A universal 6-10x start-current claim is not established for the unspecified motor/start method. Preserve the answer and require the missing application conditions.",
+      "evidence": [
+        {
+          "title": "Schneider Electric: What do AC1 and AC3 mean?",
+          "url": "https://www.se.com/us/en/faqs/FAQ000127417/",
+          "finding": "AC-1 covers non/slightly inductive loads; AC-3 covers squirrel-cage motors interrupted during normal running. The example starting-current range is about 5-7 times full-load current."
+        },
+        {
+          "title": "Schneider Electric utilization categories",
+          "url": "https://productinfo.se.com/tesysgigainstallationguide/tesys-giga-series-giga-contactors-and-giga-thermal-overload-relays-installation-guide/English/TeSys%E2%84%A2%20Giga%20Series%20Giga%20Contactors%20and%20Giga%20Thermal%20Overload%20Relays%20Installation%20Guide_0000447511.xml/%24/PanGu_LoadsCPT_0000507717",
+          "finding": "Separate categories exist for slip-ring motors, normal squirrel-cage duty, higher locked-rotor duty and plugging/inching."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L37"
+    },
+    {
+      "id": "repo-0302ff021a5f5624fc1b9c3d",
+      "ordinal": 7,
+      "messages_sha256": "0302ff021a5f5624fc1b9c3d8d9e05159e210d47b5a25af38b0da4e4cedef0b4",
+      "state": "QUARANTINE",
+      "rationale": "Nonlinear V-I mismatch and unequal current/energy sharing correctly explain non-additive parallel MOV ratings. The answer additionally treats balancing resistors/series elements as generally required or ideal and predicts accelerated single-device degradation without the surge waveform, pulse history or network design. Manufacturer guidance establishes pulse-level V-I matching and a composite current-sharing calculation, not that generic resistor prescription. Hold pending a source-qualified protection design; do not rewrite it into a passing answer.",
+      "evidence": [
+        {
+          "title": "Littelfuse Varistors Design Notes, parallel-operation discussion and Table 3",
+          "url": "https://www.littelfuse.com/~/media/electronics_technical/application_notes/varistors/littelfuse_varistors_design_notes.pdf",
+          "finding": "Parallel current/energy ratings depend on actual sharing; matched-unit composite V-I characteristics and high-current pulse tests are required. Full PDF open failed, but its indexed manufacturer extract exposes this section; no resistor requirement was established."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L39"
+    },
+    {
+      "id": "repo-7fb57173c8503ef20acf104c",
+      "ordinal": 9,
+      "messages_sha256": "7fb57173c8503ef20acf104c04a8a05f2108d993c6c868b94c316f5c553ca110",
+      "state": "PASS",
+      "rationale": "Sound qualitative conventional MOSFET turn-on explanation: initial gate charging, onset of channel current, a flat or slowly rising Miller region while drain voltage changes, then increased final gate drive. The answer does not assert constant drain current, constant prior drain voltage or topology-independent timing. Its explicit pauses-or-rises-slowly wording accommodates a sloped Miller region. This is not a numerical waveform or loss guarantee for every load topology.",
+      "evidence": [
+        {
+          "title": "Infineon Gate drive for power MOSFETs in switching applications, section 3.2, pages 9-12",
+          "url": "https://www.infineon.com/assets/row/public/documents/24/42/infineon-gate-drive-for-power-mosfets-in-switchtin-applications-applicationnotes-en.pdf?fileId=8ac78c8c80027ecd0180467c871b3622",
+          "finding": "The documented gate-charge turn-on sequence explicitly uses an inductive current and freewheeling diode that clamps the drain while current rises."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Review correction: resistive-load KVL does not contradict the original qualitative answer because it never asserts constant ID or separate constant-VDS/constant-ID intervals. No circuit assumptions are inserted into the source answer."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L47"
+    },
+    {
+      "id": "repo-f856b21bdaab84947d0c6e03",
+      "ordinal": 10,
+      "messages_sha256": "f856b21bdaab84947d0c6e03df078f329ac6429755eca551e553a5740f96ea0d",
+      "state": "PASS",
+      "rationale": "Correctly describes possible, rather than inevitable, high-dV/dt false triggering and connects device selection/snubbing to noisy or inductive operation. No snubber value or claim that all SSRs need the same remedy is supplied. The statement is appropriate for a conceptual failure-mode question.",
+      "evidence": [
+        {
+          "title": "ST AN439: Snubberless and logic level triac behavior at turn-off",
+          "url": "https://www.st.com/resource/en/application_note/an439-snubberless-and-logic-level-triac-behavior-at-turnoff-stmicroelectronics.pdf",
+          "finding": "Fast line transients can cause spurious triggering; triac immunity and snubber needs depend on device design and application."
+        },
+        {
+          "title": "ST RC snubber circuit design for triacs",
+          "url": "https://www.st.com/resource/en/application_note/cd00004096-rc-snubber-circuit-design-for-triacs-stmicroelectronics.pdf",
+          "finding": "Snubbers can reduce reapplied dV/dt where application commutation exceeds the device capability; the design is a stress/immunity trade-off."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L48"
+    },
+    {
+      "id": "repo-7e1d8b1bd6d17305f9207893",
+      "ordinal": 12,
+      "messages_sha256": "7e1d8b1bd6d17305f9207893b8ec36b13dc6652aa9acb0cf66269091d446671e",
+      "state": "QUARANTINE",
+      "rationale": "UV-driven chalking, discoloration, embrittlement and loss of protective integrity are credible. The added claim that consequences occur often months after installation lacks material, stabilizer, UV dose or exposure evidence. Manufacturer literature explicitly rejects universal durability/service-life statements across those variables. Hold the unchanged record for its unsupported time-to-failure generalization; the mechanism itself is not rejected.",
+      "evidence": [
+        {
+          "title": "LAPP UV-resistant cables",
+          "url": "https://www.lapp.com/en_US/us/products/properties-technologies/external-influences/uv-resistant/e/000041",
+          "finding": "UV exposure can disintegrate jackets, embrittle/discolor plastics and compromise conductor insulation."
+        },
+        {
+          "title": "LAPP technical appendix T28: radiation resistance",
+          "url": "https://t3.lappcdn.com/fileadmin/DAM/Lapp_Camunacavi/Download/Camuna_Cavi_Catalogue_01.17.pdf",
+          "finding": "Duration/angle of irradiation, shading, temperature, humidity and air quality prevent universal service-life claims."
+        },
+        {
+          "title": "UL Accelerated Weather Testing",
+          "url": "https://www.ul.com/services/accelerated-weather-testing",
+          "finding": "Weathering qualification measures changes such as chalking, cracking and strength loss."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L54"
+    },
+    {
+      "id": "repo-ad2dad0d0b39572d4695a56d",
+      "ordinal": 13,
+      "messages_sha256": "ad2dad0d0b39572d4695a56d516ee62dc6e5d8bfd45931391c9954b4b79df4ac",
+      "state": "QUARANTINE",
+      "rationale": "The central distinction between localized incomplete bridging and complete insulation breakdown is sound. However, the generic definition restricts partial discharge to inside insulation and unconditionally states material degradation. Partial discharge also includes surface/external forms, and damaging progression depends on medium and conditions. Hold the exact text for definition-scope review rather than assuming an internal solid-insulation context not given in the prompt.",
+      "evidence": [
+        {
+          "title": "OMICRON: What is Partial Discharge?",
+          "url": "https://www.omicronenergy.com/download/document/DC269570-F045-46A0-845A-CFF654BBEDDE/",
+          "finding": "PD only partially bridges insulation and includes internal and external forms; it may irreversibly damage solid/liquid insulation."
+        },
+        {
+          "title": "OMICRON: Why partial discharge testing makes good sense",
+          "url": "https://www.omicronenergy.com/download/document/21E1E097-778D-435C-B271-71A93209AD0C/",
+          "finding": "PD can occur in insulation or on its surface and in gaseous, liquid or solid media."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L60"
+    },
+    {
+      "id": "repo-9798cb41fc1e592503f7d1d0",
+      "ordinal": 15,
+      "messages_sha256": "9798cb41fc1e592503f7d1d09d374aad09d5604f13112ba70d1e7416b9bab630",
+      "state": "PASS",
+      "rationale": "Accurately distinguishes physical blocking by a mechanical linkage from cross-wired normally closed auxiliary contacts inhibiting the opposite coil. It is a conceptual comparison and appropriately notes combined use in reversing arrangements. This decision does not establish fault-tolerant or safety-certified performance of an actual circuit.",
+      "evidence": [
+        {
+          "title": "Schneider Electric reversing-starter auxiliary contacts",
+          "url": "https://www.se.com/us/en/faqs/FA114642/",
+          "finding": "Factory reversing starters use a normally closed auxiliary contact on each contactor for electrical interlocking."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "In the standard cross-interlock circuit, energizing contactor A opens its NC auxiliary contact in coil B's supply path. A physical linkage supplies a separate mechanical exclusion function. No exact circuit or safety integrity level is certified."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L75"
+    },
+    {
+      "id": "repo-0d901fc9b87386862227f447",
+      "ordinal": 16,
+      "messages_sha256": "0d901fc9b87386862227f4479e5239fb40cff33588aa2097f67efb6f1306a6bd",
+      "state": "PASS",
+      "rationale": "The definition correctly states the function of a series BJT base resistor: it limits drive current and influences drive level. It does not confuse base current with an independently fixed collector current or claim a universal resistor value.",
+      "evidence": [
+        {
+          "title": "Nexperia AN90024: Resistor Equipped Transistors",
+          "url": "https://assets.nexperia.com/documents/application-note/AN90024.pdf",
+          "finding": "Input voltage minus the base-emitter drop appears across the series base resistor, controlling base current."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a simple series drive resistor, IB=(Vdrive-VBE)/RB subject to the transistor circuit. Increasing RB reduces current at fixed drive, matching the definition."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L82"
+    },
+    {
+      "id": "repo-ba91d442ae99832e59fdc109",
+      "ordinal": 17,
+      "messages_sha256": "ba91d442ae99832e59fdc1098ba5786b0a5b85af6eaa15f8f880b007ee39045e",
+      "state": "QUARANTINE",
+      "rationale": "A potentiometer can serve as a position sensor and sliding contacts can wear, but voltage proportional to position requires an excited divider with a suitable linear taper and sufficiently light loading. Generic potentiometers include logarithmic tapers; loading also changes the division law. None of those conditions appears in the complete answer. Preserve it as held rather than adding missing conditions in the review rationale.",
+      "evidence": [
+        {
+          "title": "Bourns Linear Motion Potentiometers application note",
+          "url": "https://www.bourns.com/docs/technical-documents/technical-library/linear-motion-potentiometers/bourns_lmp_apno.pdf?sfvrsn=0",
+          "finding": "The position-sensor explanation uses supply excitation and an unloaded/high-impedance wiper output."
+        },
+        {
+          "title": "Bourns Sensors and Controls Solutions Guide",
+          "url": "https://www.bourns.com/docs/technical-documents/technical-library/sensors-controls/publications/SC_Solutions_Guide.pdf?sfvrsn=4",
+          "finding": "Linear, logarithmic and reverse-logarithmic tapers yield different displacement-to-voltage relationships."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a 10kohm linear pot at halfway with a 5kohm wiper-to-low-end load, the lower 5kohm track segment is in parallel with 5kohm, yielding Vout/Vin=2.5/(5+2.5)=1/3, not 1/2. This is an illustrative counterexample, not a repaired answer."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L90"
+    },
+    {
+      "id": "repo-800005c21887b40b53e954f3",
+      "ordinal": 18,
+      "messages_sha256": "800005c21887b40b53e954f3da0db3ee3c0e4403b36b2b321c2315894e743f37",
+      "state": "QUARANTINE",
+      "rationale": "The general settling intuition is correct for first-order RC/RL systems. The filtering conclusion silently assumes a low-pass observation point: generic RC and RL networks can produce low-pass or high-pass outputs. A larger time constant does not universally mean stronger smoothing of fast disturbances or more filtering without topology, output and frequency. The answer also leaves the RL ratio unnamed. Hold for missing model/output qualification, without changing the source.",
+      "evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "An ideal series RC has tau=RC. Across C, HLP(s)=1/(1+s*tau); across R, HHP(s)=s*tau/(1+s*tau). At fixed angular frequency 1rad/s, increasing tau from 1s to 10s reduces |HLP| from 0.7071 to 0.09950 but raises |HHP| from 0.7071 to 0.9950. RL has tau=L/R for the simple series model. Deterministic calculation is stored separately."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L94"
+    },
+    {
+      "id": "repo-d0b134d97c532a86a616f30c",
+      "ordinal": 19,
+      "messages_sha256": "d0b134d97c532a86a616f30c745d9b3b143373a4676fb73fa9c92af4ce46ef76",
+      "state": "PASS",
+      "rationale": "The answer explicitly discusses on-resistance and switching transitions. Positive Rds(on) temperature feedback helps static sharing, while threshold/drive/layout mismatch creates dynamic imbalance. Individual gate resistors, appropriate matched devices and symmetric layout are sound design practices. It does not promise exact equal sharing or extrapolate the argument to linear-mode SOA.",
+      "evidence": [
+        {
+          "title": "TI SLPA020: Paralleling power MOSFETs",
+          "url": "https://edgeworker.ti.com/document-viewer/lit/html/slpa020",
+          "finding": "On-resistance temperature feedback helps sharing; threshold differences affect switching stress. TI recommends individual gate resistors, thermal coupling and symmetric layout."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L97"
+    },
+    {
+      "id": "repo-bbd8afc30b4e46c62e945e44",
+      "ordinal": 21,
+      "messages_sha256": "bbd8afc30b4e46c62e945e44bea49b086a34e72031c1a506ce3b192c88b3f24b",
+      "state": "PASS",
+      "rationale": "Faithfully paraphrases intentional chassis/signal-reference connection as defined current paths rather than accidental mechanical connections. It supplies no unsafe instruction to remove protective earth and no universal bond component or topology. Scope is conceptual EMC/reference planning, not approval of a protective-bond design.",
+      "evidence": [
+        {
+          "title": "Analog Devices: Understanding Common-Mode Signals",
+          "url": "https://www.analog.com/en/resources/technical-articles/2022/07/16/08/25/understanding-commonmode-signals.html",
+          "finding": "Distinguishes chassis/safety ground from circuit common and discusses deliberate system-dependent connections and shield-current paths."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A controlled connection means its location and impedance are specified. Unintended parallel bonds change return paths. This reasoning establishes the paraphrase, not code compliance or a safety current rating."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L101"
+    },
+    {
+      "id": "repo-5ec46b2cea6dfdf49864d789",
+      "ordinal": 22,
+      "messages_sha256": "5ec46b2cea6dfdf49864d789eca2e636055193e253814914c12feeb46819e823",
+      "state": "PASS",
+      "rationale": "Correctly connects high-frequency return paths on a continuous reference plane, interruption-induced loop enlargement and increased radiation/coupling. The wording generally/usually and the named layout remedies preserve dependence on geometry and return-path continuity. No numeric emissions reduction or universal compliance claim is made.",
+      "evidence": [
+        {
+          "title": "TI High-Speed Layout Guidelines",
+          "url": "https://www.ti.com/lit/an/scaa082a/scaa082a.pdf?ts=1724049137974",
+          "finding": "A slot diverts return current, enlarges loop area and increases radiation; keeping the reference plane continuous or rerouting avoids this."
+        },
+        {
+          "title": "TI AFE79xx Layout Guide, section 10",
+          "url": "https://www.ti.com/lit/an/sbaa405a/sbaa405a.pdf",
+          "finding": "Reference-plane splits force long return paths and can increase radiated emissions and signal degradation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L107"
+    },
+    {
+      "id": "repo-f4f69527478f48a4ae41595b",
+      "ordinal": 23,
+      "messages_sha256": "f4f69527478f48a4ae41595b7c557aeeae92ec996a8b87892d93a0d337234faf",
+      "state": "PASS",
+      "rationale": "Appropriate initial specification checklist: drain-voltage/current rating, Rds(on) guaranteed at the actual low gate drive, gate charge for switching, and package/board thermal limits. It correctly avoids treating gate threshold alone as sufficient. It selects no part and supplies no unsupported power/temperature result; actual transient margin, drive voltage at source and operating conditions would still be needed for component approval.",
+      "evidence": [
+        {
+          "title": "TI engineering response: MOSFET for low-voltage solenoid drive",
+          "url": "https://e2e.ti.com/support/power-management-group/power-management/f/power-management-forum/943502/csd19536ktt-mosfet-suggestion-for-solenoid-driver-application",
+          "finding": "TI cautions against gate drive below the minimum voltage at which Rds(on) is specified."
+        },
+        {
+          "title": "Infineon Gate drive for power MOSFETs, sections 2-4",
+          "url": "https://www.infineon.com/assets/row/public/documents/24/42/infineon-gate-drive-for-power-mosfets-in-switchtin-applications-applicationnotes-en.pdf?fileId=8ac78c8c80027ecd0180467c871b3622",
+          "finding": "Gate threshold does not guarantee high-current low-resistance operation; gate-charge and drive conditions matter for switching."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L115"
+    },
+    {
+      "id": "repo-5a5e81404c048260ce098127",
+      "ordinal": 24,
+      "messages_sha256": "5a5e81404c048260ce0981279ec2d9d444677403d3b5fe45797f9fb2e71d00e4",
+      "state": "PASS",
+      "rationale": "Correctly refuses a universal one-change remedy and chooses conditionally from the dominant source/coupling path and measured conducted/radiated behavior. The answer uses may rather than claiming a guaranteed fix or inventing an unseen board diagnosis. All three options remain conditional on measurements.",
+      "evidence": [
+        {
+          "title": "Analog Devices: Separating common-mode and differential-mode emissions",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/separating-common-mode-and-differential-mode-emissions-in-conducted-emissions-testing.html",
+          "finding": "Diagnosing the noise mode is important: enhancing a differential-mode filter need not reduce the problematic common-mode emission."
+        },
+        {
+          "title": "TI PCB trace as a waveguide",
+          "url": "https://www.ti.com/video/6307562268112",
+          "finding": "Return-path continuity, rerouting and appropriate reference-plane connections can address radiation mechanisms."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L116"
+    }
+  ],
+  "dispositions_added": {
+    "PASS": 11,
+    "QUARANTINE": 7
+  },
+  "current_dispositions": {
+    "NEEDS_HUMAN_REVIEW": 1719,
+    "QUARANTINE": 102,
+    "PASS": 264,
+    "REJECT": 27
+  },
+  "agent_substantive_reviews": 392,
+  "substantively_unreviewed": 1717,
+  "reader_actual_output": 18,
+  "all_original_hashes_reverified": 2112
+}

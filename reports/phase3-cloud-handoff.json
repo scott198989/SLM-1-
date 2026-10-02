@@ -4,14 +4,14 @@
   "branch": "codex/forge-data-consolidation",
   "draft_pr": 3,
   "parent_commit_before_handoff": "600da559e4a14b825876321c5566b0a089a7cf0e",
-  "authority": "User requested GitHub publication and README; user will initiate Codex Cloud task. No training authorization.",
+  "authority": "User authorized reviewed data updates and verifier fix on existing draft PR3 while laptop closed; no training or private-artifact requalification.",
   "review": {
     "curriculum": 2112,
     "dispositions": {
-      "PASS": 253,
+      "PASS": 264,
       "REJECT": 27,
-      "QUARANTINE": 95,
-      "NEEDS_HUMAN_REVIEW": 1737
+      "QUARANTINE": 102,
+      "NEEDS_HUMAN_REVIEW": 1719
     },
     "by_domain": {
       "circuits": {
@@ -51,10 +51,10 @@
         "NEEDS_HUMAN_REVIEW": 208
       },
       "electrical_components": {
-        "PASS": 6,
+        "PASS": 17,
         "REJECT": 0,
-        "QUARANTINE": 1,
-        "NEEDS_HUMAN_REVIEW": 293
+        "QUARANTINE": 8,
+        "NEEDS_HUMAN_REVIEW": 275
       },
       "electromagnetism": {
         "PASS": 2,
@@ -75,8 +75,8 @@
         "NEEDS_HUMAN_REVIEW": 242
       }
     },
-    "agent_substantive_reviews": 374,
-    "substantively_unreviewed": 1735,
+    "agent_substantive_reviews": 392,
+    "substantively_unreviewed": 1717,
     "reviewed_specialist_holds": 2,
     "complete_source_domains": [
       "circuits",
@@ -97,13 +97,13 @@
     },
     {
       "path": "data/review/phase3/technical-review.jsonl.gz",
-      "bytes": 153888,
-      "sha256": "271b121e87b7e9bdc4ba928615421b0c28cb47771e417761d2837221792263eb"
+      "bytes": 164565,
+      "sha256": "6318c4b5b715577ca6d6f2e8ba0ace2393d51d7ac6519f67b69a6f49567d4103"
     },
     {
       "path": "manifests/phase3-agent-technical-review.json",
-      "bytes": 351070,
-      "sha256": "0be281b9b864620abe370d21bdffd19afba6c64a96419d5a8c6a44aa0d65a965"
+      "bytes": 389229,
+      "sha256": "c4ee74ac204ef6a9011d32da0efb809fc9cab3bb57497a8406ed8f56a1af285f"
     },
     {
       "path": "manifests/phase3-release-families.json",
@@ -112,8 +112,8 @@
     },
     {
       "path": "reports/phase3-technical-review.json",
-      "bytes": 62365,
-      "sha256": "a8669548d474e8517746be5928f75add43d300e04a5a70595cf9ed410093aac1"
+      "bytes": 69778,
+      "sha256": "9f0b1f343a11e6989a36164b6bc512d5357fcac83b361ea7e4fea70ac3cd9627"
     },
     {
       "path": "src/forge_tools/engineering.py",
@@ -217,12 +217,13 @@
   },
   "next_domain": "electrical_components",
   "next_batch": {
-    "offset": 0,
+    "offset": 25,
     "limit": 25
   },
   "workers": [],
   "automatic_checks": "DELETED_DO_NOT_RECREATE",
   "model_weights_downloaded": false,
   "training_authorized": false,
-  "cloud_missing_private_files_behavior": "Continue public repository technical review. Mark private-source qualification unavailable; never replace sealed artifacts or infer validation from metadata."
+  "cloud_missing_private_files_behavior": "Continue public repository technical review. Mark private-source qualification unavailable; never replace sealed artifacts or infer validation from metadata.",
+  "latest_cloud_continuation": "reports/phase3-cloud-continuation-validation.json"
 }

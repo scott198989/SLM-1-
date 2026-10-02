@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 253,
+    "PASS": 264,
     "REJECT": 27,
-    "QUARANTINE": 95,
-    "NEEDS_HUMAN_REVIEW": 1737
+    "QUARANTINE": 102,
+    "NEEDS_HUMAN_REVIEW": 1719
   },
   "by_domain": {
     "circuits": {
@@ -44,10 +44,10 @@
       "NEEDS_HUMAN_REVIEW": 208
     },
     "electrical_components": {
-      "PASS": 6,
+      "PASS": 17,
       "REJECT": 0,
-      "QUARANTINE": 1,
-      "NEEDS_HUMAN_REVIEW": 293
+      "QUARANTINE": 8,
+      "NEEDS_HUMAN_REVIEW": 275
     },
     "electromagnetism": {
       "PASS": 2,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 374,
+  "agent_substantive_reviews": 392,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "9550ef5cf1c430f7af2e1e8d6a89d05976514c6e265f27635d244ec37d30e906",
+  "technical_review_sha256": "3763abef67f23cbbcd406d0a9348bfe31668d2ca1a4d5c64dd3c61991d57f87c",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1735,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1717,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -455,11 +455,29 @@
     "Grazing wall-top equality is not tangency of trajectory at both walls; asserted two tangency conditions are erroneous.": 1,
     "Cancels radius x and omits x=0 equilibrium, which remains for arbitrary Omega; conclusion requires nonzero radius caveat.": 1,
     "Torque axial-vector role differs from scalar energy despite shared SI dimensions; prevents dimensional-equivalence-as-physical-equivalence error.": 1,
-    "Newton built from kg*m/s^2; simple base-versus-derived analogy without questionable numeric claim.": 1
+    "Newton built from kg*m/s^2; simple base-versus-derived analogy without questionable numeric claim.": 1,
+    "Nonlinear V-I mismatch and unequal current/energy sharing correctly explain non-additive parallel MOV ratings. The answer additionally treats balancing resistors/series elements as generally required or ideal and predicts accelerated single-device degradation without the surge waveform, pulse history or network design. Manufacturer guidance establishes pulse-level V-I matching and a composite current-sharing calculation, not that generic resistor prescription. Hold pending a source-qualified protection design; do not rewrite it into a passing answer.": 1,
+    "The definition correctly states the function of a series BJT base resistor: it limits drive current and influences drive level. It does not confuse base current with an independently fixed collector current or claim a universal resistor value.": 1,
+    "Correctly refuses a universal one-change remedy and chooses conditionally from the dominant source/coupling path and measured conducted/radiated behavior. The answer uses may rather than claiming a guaranteed fix or inventing an unseen board diagnosis. All three options remain conditional on measurements.": 1,
+    "Correctly connects high-frequency return paths on a continuous reference plane, interruption-induced loop enlargement and increased radiation/coupling. The wording generally/usually and the named layout remedies preserve dependence on geometry and return-path continuity. No numeric emissions reduction or universal compliance claim is made.": 1,
+    "Correctly warns that AC-1 carrying/load ratings cannot be used as motor-duty ratings, but gives a definite failure diagnosis and prescribes AC-3 without motor type, switching duty, voltage or failure evidence. AC-3 is normal squirrel-cage starting/running interruption; plugging/inching requires a different duty category. A universal 6-10x start-current claim is not established for the unspecified motor/start method. Preserve the answer and require the missing application conditions.": 1,
+    "UV-driven chalking, discoloration, embrittlement and loss of protective integrity are credible. The added claim that consequences occur often months after installation lacks material, stabilizer, UV dose or exposure evidence. Manufacturer literature explicitly rejects universal durability/service-life statements across those variables. Hold the unchanged record for its unsupported time-to-failure generalization; the mechanism itself is not rejected.": 1,
+    "Sound qualitative conventional MOSFET turn-on explanation: initial gate charging, onset of channel current, a flat or slowly rising Miller region while drain voltage changes, then increased final gate drive. The answer does not assert constant drain current, constant prior drain voltage or topology-independent timing. Its explicit pauses-or-rises-slowly wording accommodates a sloped Miller region. This is not a numerical waveform or loss guarantee for every load topology.": 1,
+    "The general settling intuition is correct for first-order RC/RL systems. The filtering conclusion silently assumes a low-pass observation point: generic RC and RL networks can produce low-pass or high-pass outputs. A larger time constant does not universally mean stronger smoothing of fast disturbances or more filtering without topology, output and frequency. The answer also leaves the RL ratio unnamed. Hold for missing model/output qualification, without changing the source.": 1,
+    "The CMTI/data-error and excessive-voltage dielectric-failure concepts are credible, but the complete answer asserts loss of modulation lock without specifying an isolator architecture. TI documents edge-based and OOK/envelope-detection receivers; a generic lock-loss mechanism is not established. CMTI is a rate-of-change/data-integrity specification, distinct from surge-voltage insulation withstand. Hold the unchanged answer for architecture-specific qualification rather than silently substituting a glitch explanation.": 1,
+    "Accurately distinguishes physical blocking by a mechanical linkage from cross-wired normally closed auxiliary contacts inhibiting the opposite coil. It is a conceptual comparison and appropriately notes combined use in reversing arrangements. This decision does not establish fault-tolerant or safety-certified performance of an actual circuit.": 1,
+    "The complete conceptual answer correctly connects LED drive, device/temperature variation, minimum CTR and aging to worst-case output-current margin. It proposes no unsupported numeric resistor or guaranteed lifetime. Minimum CTR must be evaluated at the operating conditions rather than using typical fresh-device gain, as the answer says.": 1,
+    "The central distinction between localized incomplete bridging and complete insulation breakdown is sound. However, the generic definition restricts partial discharge to inside insulation and unconditionally states material degradation. Partial discharge also includes surface/external forms, and damaging progression depends on medium and conditions. Hold the exact text for definition-scope review rather than assuming an internal solid-insulation context not given in the prompt.": 1,
+    "A potentiometer can serve as a position sensor and sliding contacts can wear, but voltage proportional to position requires an excited divider with a suitable linear taper and sufficiently light loading. Generic potentiometers include logarithmic tapers; loading also changes the division law. None of those conditions appears in the complete answer. Preserve it as held rather than adding missing conditions in the review rationale.": 1,
+    "Faithfully paraphrases intentional chassis/signal-reference connection as defined current paths rather than accidental mechanical connections. It supplies no unsafe instruction to remove protective earth and no universal bond component or topology. Scope is conceptual EMC/reference planning, not approval of a protective-bond design.": 1,
+    "The answer explicitly discusses on-resistance and switching transitions. Positive Rds(on) temperature feedback helps static sharing, while threshold/drive/layout mismatch creates dynamic imbalance. Individual gate resistors, appropriate matched devices and symmetric layout are sound design practices. It does not promise exact equal sharing or extrapolate the argument to linear-mode SOA.": 1,
+    "The short prompt is a complete request for a definition. A photodiode converts incident light to photocurrent, and the named optical sensing/communication/encoder uses are appropriate. No circuit-specific responsivity, gain, wavelength or current magnitude is asserted.": 1,
+    "Appropriate initial specification checklist: drain-voltage/current rating, Rds(on) guaranteed at the actual low gate drive, gate charge for switching, and package/board thermal limits. It correctly avoids treating gate threshold alone as sufficient. It selects no part and supplies no unsupported power/temperature result; actual transient margin, drive voltage at source and operating conditions would still be needed for component approval.": 1,
+    "Correctly describes possible, rather than inevitable, high-dV/dt false triggering and connects device selection/snubbing to noisy or inductive operation. No snubber value or claim that all SSRs need the same remedy is supplied. The statement is appropriate for a conceptual failure-mode question.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "271b121e87b7e9bdc4ba928615421b0c28cb47771e417761d2837221792263eb",
-  "substantively_unreviewed": 1735,
+  "published_decisions_sha256": "6318c4b5b715577ca6d6f2e8ba0ace2393d51d7ac6519f67b69a6f49567d4103",
+  "substantively_unreviewed": 1717,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

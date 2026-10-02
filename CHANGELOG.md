@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-02 - Read-only verifier and first electrical review batch
+
+- Fixed the private RAG trust anchor: expected manifest/index hashes come from existing public receipts; drift fails closed. Legacy receipt output now verifies existing JSON instead of overwriting it; missing released files are not reconstructed.
+- Rejected unpinned SQLite WAL/SHM/journal sidecars and made all verifier/RAG database reads immutable and read-only; no recovery writes.
+- Added thirteen synthetic real-entrypoint regression tests. The complete cloud CPU preparation suite passes 69 tests with declared dependencies and exact pinned tokenizer assets; no private artifacts were requalified.
+- Applied 18 independently agent-reviewed electrical-component decisions at original ordinals 0–24: 11 technical PASS and 7 QUARANTINE; preserved seven prior reviews, all original answers and token counts.
+- Current curriculum: 392 substantive reviews; 264 PASS / 27 REJECT / 102 QUARANTINE / 1719 NEEDS_HUMAN_REVIEW. Next electrical offset25. No legacy/Drive release, model load, training, paid compute or automatic checks.
+
+
 ## 2026-10-01 - Cloud handoff and completed circuit review
 
 - Saved 185 more substantive reviews; all 211 circuit candidates dispositioned, with 374 total reviews and 253 PASS /27 REJECT /95 QUARANTINE /1737 NEEDS_HUMAN_REVIEW across the curriculum.
