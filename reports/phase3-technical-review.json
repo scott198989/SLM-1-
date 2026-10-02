@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1290,
+    "PASS": 1306,
     "REJECT": 63,
-    "QUARANTINE": 271,
-    "NEEDS_HUMAN_REVIEW": 488
+    "QUARANTINE": 272,
+    "NEEDS_HUMAN_REVIEW": 471
   },
   "by_domain": {
     "circuits": {
@@ -62,10 +62,10 @@
       "NEEDS_HUMAN_REVIEW": 244
     },
     "physics": {
-      "PASS": 4,
+      "PASS": 20,
       "REJECT": 2,
-      "QUARANTINE": 2,
-      "NEEDS_HUMAN_REVIEW": 242
+      "QUARANTINE": 3,
+      "NEEDS_HUMAN_REVIEW": 225
     }
   },
   "risk_flags_overlap": {
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1623,
+  "agent_substantive_reviews": 1640,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "68526f68e20b623ed0000b7c4e7bd642186e3ecd80dfa541a4c681afba2e18c8",
+  "technical_review_sha256": "19f2cbad085d140a2315eb4e8d28d8a3e37f2e45b87cdf84f827a1f37ec3969d",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 486,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 469,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1704,11 +1704,28 @@
     "Correct continuity-equation compatibility of Lorenz-gauge potential wave equations.": 1,
     "The near-real-frequency pole and ringdown picture is useful, but the answer changes the specified complex-resonant forcing into a nearby real-frequency drive and assumes exterior outgoing radiation from absorbing walls. A lossy bounded cavity need not have a mode extending to infinity.": 1,
     "Correct internal field of a uniformly volume-charged sphere.": 1,
-    "Correct introductory Debye-screening picture in the ordinary near-equilibrium weak-potential plasma regime.": 1
+    "Correct introductory Debye-screening picture in the ordinary near-equilibrium weak-potential plasma regime.": 1,
+    "Correct units for a cubic force-law coefficient.": 1,
+    "Correct level-ground projectile range derivation and the ideal45-degree maximum.": 1,
+    "Correct vector-component projection analogy with the basis identified.": 1,
+    "Correct dimensional derivation of the gravitational constant.": 1,
+    "Correct rotating-polar-basis differentiation and radial/transverse acceleration decomposition.": 1,
+    "Correct maximum-height time for an upward vertical launch under constant gravity.": 1,
+    "Correct classic idealized equality of fall times for simultaneous objects from the same height with equal zero initial vertical velocity.": 1,
+    "Correct reason that velocity-dependent drag invalidates constant-acceleration kinematics during changing-speed descent.": 1,
+    "Correct rotated-coordinate method for a projectile returning to an incline.": 1,
+    "Correct conclusion that dimensions alone do not distinguish energy from torque.": 1,
+    "Correct parametric trajectory for an explicitly constant horizontal force plus gravity, and a valid time inversion from the vertical equation.": 1,
+    "Correct collision-time method requiring simultaneous equality of every position component.": 1,
+    "Correct pascal base-unit expansion and qualitative origin of its factors.": 1,
+    "Correct chain-rule conversion for one-dimensional position-dependent acceleration and its energy-like first integral.": 1,
+    "Correct explanation of the equal-height restriction and the general vertical-flight-time procedure.": 1,
+    "Correct Galilean moving-frame simplification of ideal projectile motion.": 1,
+    "The trajectory equation and quadratic in tan(theta) are correct, but the answer stops at solve the quadratic and states two distinct trajectories without the discriminant qualification. The requested angle is not fully resolved.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "001eb1c7750b1d436582939792e9e51b8cb46eff43b67ef37c7964baf8efbad9",
-  "substantively_unreviewed": 486,
+  "published_decisions_sha256": "4b36ea3a42015ef4d0afe142cff846b0dfec9c902d6b2634785636cb457fcfc8",
+  "substantively_unreviewed": 469,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

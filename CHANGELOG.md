@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-02 - Local physics review 0–24
+
+- Added {'PASS': 16, 'QUARANTINE': 1} after independent agent QA; 8 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1623 reviews unchanged.
+- Current local reviews: 1640; dispositions: {'PASS': 1306, 'REJECT': 63, 'QUARANTINE': 272, 'NEEDS_HUMAN_REVIEW': 471}; next physics offset: 25.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
 ## 2026-10-02 - Pending electromagnetism queue completion
 
 - Reviewed 162 pending records with independent agent QA; preserved four prior decisions. All 166 selected electromagnetism records have substantive dispositions.
