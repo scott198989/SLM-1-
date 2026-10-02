@@ -1,0 +1,19 @@
+{
+  "tests": 37,
+  "failures": 0,
+  "errors": 0,
+  "command": "python -m unittest discover -s tests -v",
+  "tests_scope": [
+    "repository_import_role_recovery",
+    "independent_engineering_oracles",
+    "bounded_statistics",
+    "promotion_fail_closed",
+    "real_Qwen_template_masks_unicode_multiturn_EOS_padding_overflow",
+    "approved_batch_hash_duplicates_family_isolation"
+  ],
+  "cpu_only": true,
+  "tokenizers": "0.22.2",
+  "no_weights_training_or_old_neural_suite": true,
+  "integrity_receipt": "reports/preparation-validation.json",
+  "scope_limit": "no_corpus_wide_answer_correctness_or_GPU_runtime_certification"
+}

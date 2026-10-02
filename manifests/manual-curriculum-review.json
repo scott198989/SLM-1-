@@ -1,0 +1,14 @@
+{
+  "review_type": "targeted_nonrandom_manual_sample",
+  "sample_records": 20,
+  "sample_policy": "two initially selected examples per source domain",
+  "accuracy_estimate": null,
+  "all_other_examples_remain_unverified": true,
+  "raw_answers_modified": false,
+  "records": [
+    {"id":"repo-2750c802613a72f86bceb185","reason":"SOURCE_DOMAIN_MISMATCH","finding":"Thermomechanical plastic return mapping is filed under Algebra; specialist validation and content reclassification required."},
+    {"id":"repo-8941ead3573c10fe9649ff0e","reason":"LOW_INITIAL_ENGINEERING_PRIORITY","finding":"Finite integral domain proof; retain as advanced abstract algebra, outside initial engineering review selection."},
+    {"id":"repo-2e371fbcf010f942fc5b0122","reason":"UNITS_ASSUMPTIONS_REVIEW","finding":"Kinematics response assigns SI units absent from prompt; motion-phase explanation needs scrutiny. Do not infer a correction."},
+    {"id":"repo-025016121c7253c95de6534e","reason":"PHYSICAL_ASSUMPTIONS_REVIEW","finding":"Antenna reciprocity explanation needs reciprocal-system assumptions; passivity alone does not establish reciprocity."}
+  ]
+}

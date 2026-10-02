@@ -1,0 +1,229 @@
+{
+  "checkpoint": "FORGE_PHASE3_CLOUD_HANDOFF_20261001",
+  "repository": "scott198989/SLM-1-",
+  "branch": "codex/forge-data-consolidation",
+  "draft_pr": 3,
+  "parent_commit_before_handoff": "600da559e4a14b825876321c5566b0a089a7cf0e",
+  "authority": "User authorized reviewed data updates and verifier fix on existing draft PR3 while laptop closed; no training or private-artifact requalification.",
+  "review": {
+    "curriculum": 2112,
+    "dispositions": {
+      "PASS": 264,
+      "REJECT": 27,
+      "QUARANTINE": 102,
+      "NEEDS_HUMAN_REVIEW": 1719
+    },
+    "by_domain": {
+      "circuits": {
+        "PASS": 139,
+        "REJECT": 12,
+        "QUARANTINE": 60,
+        "NEEDS_HUMAN_REVIEW": 0
+      },
+      "engineering_mathematics": {
+        "PASS": 4,
+        "REJECT": 0,
+        "QUARANTINE": 2,
+        "NEEDS_HUMAN_REVIEW": 194
+      },
+      "algebra": {
+        "PASS": 9,
+        "REJECT": 2,
+        "QUARANTINE": 2,
+        "NEEDS_HUMAN_REVIEW": 203
+      },
+      "thermal_process_engineering": {
+        "PASS": 73,
+        "REJECT": 5,
+        "QUARANTINE": 24,
+        "NEEDS_HUMAN_REVIEW": 2
+      },
+      "trigonometry": {
+        "PASS": 8,
+        "REJECT": 0,
+        "QUARANTINE": 3,
+        "NEEDS_HUMAN_REVIEW": 189
+      },
+      "calculus": {
+        "PASS": 5,
+        "REJECT": 2,
+        "QUARANTINE": 0,
+        "NEEDS_HUMAN_REVIEW": 208
+      },
+      "electrical_components": {
+        "PASS": 17,
+        "REJECT": 0,
+        "QUARANTINE": 8,
+        "NEEDS_HUMAN_REVIEW": 275
+      },
+      "electromagnetism": {
+        "PASS": 2,
+        "REJECT": 2,
+        "QUARANTINE": 0,
+        "NEEDS_HUMAN_REVIEW": 162
+      },
+      "materials_manufacturing": {
+        "PASS": 3,
+        "REJECT": 2,
+        "QUARANTINE": 1,
+        "NEEDS_HUMAN_REVIEW": 244
+      },
+      "physics": {
+        "PASS": 4,
+        "REJECT": 2,
+        "QUARANTINE": 2,
+        "NEEDS_HUMAN_REVIEW": 242
+      }
+    },
+    "agent_substantive_reviews": 392,
+    "substantively_unreviewed": 1717,
+    "reviewed_specialist_holds": 2,
+    "complete_source_domains": [
+      "circuits",
+      "thermal_process_engineering"
+    ],
+    "release_approved": 0
+  },
+  "public_input_files": [
+    {
+      "path": "data/sft/staging/forge-v01-review-curriculum.jsonl.gz",
+      "bytes": 654330,
+      "sha256": "81ed89390722b15e255719fbcbe929e3b1d78259078960e15ef6e633e297e0eb"
+    },
+    {
+      "path": "data/sft/staging/consolidated-20261001-v2/candidates.jsonl.gz",
+      "bytes": 3330557,
+      "sha256": "5696cb8188a1a9aa44ffc2544cdefa7f10ce3870862c1edd01922effeff95dcd"
+    },
+    {
+      "path": "data/review/phase3/technical-review.jsonl.gz",
+      "bytes": 164565,
+      "sha256": "6318c4b5b715577ca6d6f2e8ba0ace2393d51d7ac6519f67b69a6f49567d4103"
+    },
+    {
+      "path": "manifests/phase3-agent-technical-review.json",
+      "bytes": 389229,
+      "sha256": "c4ee74ac204ef6a9011d32da0efb809fc9cab3bb57497a8406ed8f56a1af285f"
+    },
+    {
+      "path": "manifests/phase3-release-families.json",
+      "bytes": 1157,
+      "sha256": "861b3ccf2ac3ae9988c4e6ffa59e8043c31623e88f5136b70c0ddfeba51a9510"
+    },
+    {
+      "path": "reports/phase3-technical-review.json",
+      "bytes": 69778,
+      "sha256": "9f0b1f343a11e6989a36164b6bc512d5357fcac83b361ea7e4fea70ac3cd9627"
+    },
+    {
+      "path": "src/forge_tools/engineering.py",
+      "bytes": 18054,
+      "sha256": "ce6ab03daa581ba0dc179facd89dec2e41b2e3890c3215af5a5c75454199fd9e"
+    },
+    {
+      "path": "src/forge_tools/statistics.py",
+      "bytes": 5917,
+      "sha256": "d72162556c53bdc63151f87a89ecedb231933800b928f86935d7c0882bbfd43d"
+    }
+  ],
+  "local_only_artifacts": [
+    {
+      "path_relative_to_local_workspace": "private/forge-phase3/pilot-v01/sft-released.jsonl",
+      "bytes": 67673,
+      "sha256": "110152a09c2e598b848520f734a708fae6b0b7b5a2cda4513e4d0ca2c315b45a",
+      "published_to_git": false
+    },
+    {
+      "path_relative_to_local_workspace": "private/forge-phase3/pilot-v01/tokenized-assistant-masks.jsonl",
+      "bytes": 67125,
+      "sha256": "9fa301466808f938d82f56188fe1f54ff93159a865f4ee9128ff30d3cce20f53",
+      "published_to_git": false
+    },
+    {
+      "path_relative_to_local_workspace": "private/forge-phase3/family-membership-final.json",
+      "bytes": 13957197,
+      "sha256": "d56d37edd6434c0253407be1986f22a1bd0330b41bf18c7cde7e90bd5f28625c",
+      "published_to_git": false
+    },
+    {
+      "path_relative_to_local_workspace": "private/forge-phase3/family-analysis-final.json",
+      "bytes": 1693,
+      "sha256": "8bdbb427b34e288d8eb79c6e71d8a5493b62539d94abe55fe73494e718425751",
+      "published_to_git": false
+    },
+    {
+      "path_relative_to_local_workspace": "private/forge-phase3/family-checkpoints.sqlite",
+      "bytes": 43003904,
+      "sha256": "bb673ec7f51c6dc5c61e32757d5ee49436d2128e9db3f96578d848956abf33d6",
+      "published_to_git": false
+    },
+    {
+      "path_relative_to_local_workspace": "private/forge-phase3/drive-rights-dispositions.json",
+      "bytes": 918486,
+      "sha256": "2ef3ab85bd47acfade7372b629ef594af6541cafc73c5a2fab9159038de87fae",
+      "published_to_git": false
+    },
+    {
+      "path_relative_to_local_workspace": "private/forge-phase3/delivery-v01/FORGE-private-pilot-v01.zip",
+      "bytes": 130303,
+      "sha256": "38a96ccd4728e225b53b09847c74fac3cc67cbe254f8d319d84ac01e0339e0b1",
+      "published_to_git": false
+    },
+    {
+      "path_relative_to_local_workspace": "private/forge-phase3/delivery-v01/FORGE-private-gold-v03-DO-NOT-TRAIN.zip",
+      "bytes": 8238,
+      "sha256": "fd1e0a2cf48c436917d039918f7f377f4391257b841292b3eedf473aae6b614f",
+      "published_to_git": false
+    }
+  ],
+  "local_only_directories": [
+    "private/forge-phase3/sealed-gold-v03",
+    "private/forge-phase3/rag-pilot-v02",
+    ".cache/qwen-tokenizer-only",
+    "checkpoints",
+    "pipeline",
+    "havoc_pipeline",
+    "rag"
+  ],
+  "private_integrity_pins": {
+    "gold_seal_sha256": "d52888a1662243d0d6fc60203277edd284ce877e0052cc4f658e6d7d70d1023d",
+    "rag_index_sha256": "02223e1b189a9f0da4fd32f5761e85eaf6dc613f8811d64302ba698a902fccea"
+  },
+  "private_release": {
+    "examples": 16,
+    "qwen_tokens": 4430,
+    "assistant_tokens": 2793,
+    "legacy_or_drive_examples": 0,
+    "gold_tasks": 12,
+    "gold_domains": 1,
+    "rag_chunks": 9,
+    "software_tests_previously_passed": 56,
+    "model_baseline_run": false
+  },
+  "drive": {
+    "scope": "previously authorized Academics/Old School Notes/New School Notes and descendants; excluded sources never reopened",
+    "files": 1947,
+    "extracted_needs_review": 1342,
+    "duplicates": 172,
+    "excluded": 92,
+    "blocked": 341,
+    "pending": 0,
+    "active_units": 136879,
+    "withheld_units_not_reopened": 29721,
+    "ocr_queue_pages": 1207,
+    "prior_complete_ocr_envelopes_unintegrated": 248,
+    "incomplete_review_index_chunks": 43205,
+    "incomplete_review_index_production_approved": false
+  },
+  "next_domain": "electrical_components",
+  "next_batch": {
+    "offset": 25,
+    "limit": 25
+  },
+  "workers": [],
+  "automatic_checks": "DELETED_DO_NOT_RECREATE",
+  "model_weights_downloaded": false,
+  "training_authorized": false,
+  "cloud_missing_private_files_behavior": "Continue public repository technical review. Mark private-source qualification unavailable; never replace sealed artifacts or infer validation from metadata.",
+  "latest_cloud_continuation": "reports/phase3-cloud-continuation-validation.json"
+}

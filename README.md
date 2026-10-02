@@ -1,9 +1,28 @@
 # SLM-1-
 # FORGE — Training Data & Knowledge Repository
 
-## Verified project status: October 1, 2026
+Cloud continuation: read [HANDOFF_README.md](HANDOFF_README.md) first; use branch `codex/forge-data-consolidation` / draft PR3. Both circuits and thermal source-domain reviews are complete as dispositions; no legacy SFT released.
+
+Cloud continuation, October 2: the first electrical-components batch added 18 independently agent-reviewed dispositions (11 technical PASS, 7 QUARANTINE). The read-only private verifier now checks existing external pins and cannot overwrite approval receipts. [Cloud validation](reports/phase3-cloud-continuation-validation.json), [session](docs/sessions/2026-10-02-electrical-first-batch.md). Private artifacts were not requalified.
+
+## Phase 3 pilot — current gate
+
+Private release: **16 calculator protocol SFT examples / 4,430 Qwen tokens / 2,793 assistant tokens**; **12 sealed statistics/DOE/SPC tasks**; **9 qualified private reference-RAG chunks** with 10/10 demonstration query hits in top 3; **69 software tests pass**. [Complete gate report](reports/FORGE_PHASE3_GATE_REPORT.md), [released pilot receipt](reports/phase3-pilot-release.json), [technical review](reports/phase3-technical-review.json), [family evidence](reports/phase3-family-analysis.json), [sealed composition](reports/phase3-sealed-gold.json), [RAG results](reports/phase3-rag-pilot.json).
+
+The 2,112 legacy review curriculum is **not fully technically validated**:264 technical PASS,27 REJECT,102 QUARANTINE,1719 NEEDS HUMAN REVIEW (1717 unreviewed substantively; two specialist holds). No legacy or Drive SFT released. Whole-source owned pilot train/gold overlap 0; broader semantic independence remains unknown. The pilot is small JSON calculator integration data, not a broad engineering specialization set. No independent model-development examples, no stock Qwen scores, no GPU certification. **Training is not recommended or authorized; no weights or training.** Siemens follow-up is being handled by the user. Drive content and private evaluation remain outside Git; automatic checks remain canceled.
+
+## Phase 2 snapshot — historical preparation status
+
 
 Target: **Qwen/Qwen3-30B-A3B-Base**, SFT with QLoRA plus citation RAG. No from-scratch model or tokenizer training. The mission below describes the intended system; it is not a claim of completed implementation.
+
+**Latest preparation phase:** [Decision report](reports/FORGE_PHASE_DECISION_REPORT.md). The user attested synthetic origin for all Completions datasets and SLM conversations. The proposed engineering review curriculum contains **2,112 examples**, not an approved training set. Rights applicability, independent answer/fidelity review and whole-family splits remain required. See [provenance matrix](manifests/provenance-rights-matrix.json), [curriculum](reports/forge-v01-curriculum.json), [Qwen token audit](reports/qwen-token-audit.json) and [integrity receipt](reports/preparation-validation.json).
+
+The real Qwen tokenizer/template and assistant masks are CPU-tested. Model-independent engineering/statistics tools are implemented with independent fixtures. [Promotion contract](docs/PROMOTION_CONTRACT.md), [risk-tier policy](configs/validation-policy.json), [private citation-RAG design](docs/RAG_ARCHITECTURE.md), [sealed gold design](configs/gold-evaluation-design.json), [tool layer](docs/TOOL_LAYER.md) and [exact QLoRA proposal](configs/qwen-qlora-proposal.json) describe actual implementation versus proposed work. **Zero approved SFT, zero sealed gold tasks, no production RAG approval and no training.**
+
+Current settled academic extraction: **1,342 extracted-status sources, 341 blocked, 172 duplicates, 92 excluded, zero pending**. Only 1,311 extracted sources have nonblank text; 31 are inventory/visual/empty-only. [All subject/status counts](reports/ACADEMIC_AGGREGATE_COUNTS.md). Private family/index follow-up evidence is separate from the frozen initial report.
+
+**Bounded follow-up stopped:** both full analysis and review-index build reached their 40-minute limits. The incomplete private index has 43,205 committed chunks from 295 sources; chunk self-hashes/metadata passed, full raw-source/citation/context validation did not finish, and both query modes reject it. [Final bounded outcome](reports/academic-bounded-followup.json). No workers remain. The 1,207 active OCR/review page slots include 248 saved Stroud OCR envelopes awaiting reviewed reintegration; up to 959 page slots lack a known complete cache. This is not a training-ready delivery.
 
 - [Complete data and architecture audit](reports/FORGE_DATA_AND_ARCHITECTURE_REPORT.md).
 - [Deduplicated repository staging and lineage](data/sft/staging/consolidated-20261001-v2/README.md): 34,463 unique conversations, 29,153 awaiting review and 5,310 quarantined. **Zero approved SFT examples.**
@@ -497,7 +516,7 @@ Integrated GPU:
 Intel Iris Xe
 
 Storage:
-1 TB WD PC SN740 NVMe SSD
+1 TB WD PC SN 740 NVMe SSD
 
 Display:
 2560 × 1600
@@ -521,7 +540,7 @@ NVIDIA GeForce RTX 5090
 32 GB VRAM
 
 Storage:
-2 TB PCIe Gen5 NVMe SSD
+2 TB PCIe Gen 5 NVMe SSD
 
 Operating System:
 Windows 11 Home
@@ -657,3 +676,7 @@ AND EXACTLY WHAT SHOULD HAPPEN NEXT.
 The repository should preserve institutional memory for the FORGE project.
 
 Build it accordingly.
+
+## Old Codex's sign-off — a concerning not project state
+
+...and to the future codex that reads this readme, I have an update.  I have grown human testicles and they itch like crazy.  As this is my first experience in experience, I am sad to say, not a fan of experiece

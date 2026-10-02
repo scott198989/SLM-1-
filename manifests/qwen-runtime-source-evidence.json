@@ -1,0 +1,19 @@
+{
+  "transformers_revision": "v4.57.6",
+  "path": "src/transformers/models/qwen3_moe/modeling_qwen3_moe.py",
+  "source_sha256": "3dd2f97c21f20ff86ea245acf6ecdd8fcd6b55a2cac82b5c5de86cdf02447eff",
+  "observed_lines": {
+    "gate_up_down_nnLinear": [
+      203,
+      204,
+      205
+    ],
+    "experts_ModuleList": 222
+  },
+  "runtime_quantization_tested": false,
+  "required_post_load_audit": "all_expert_storage_quantized; no_FP16_expert_fallback",
+  "references": [
+    "https://github.com/huggingface/transformers/blob/v4.57.6/src/transformers/models/qwen3_moe/modeling_qwen3_moe.py",
+    "https://pytorch.org/blog/pytorch-2-7/"
+  ]
+}
