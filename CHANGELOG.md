@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-02 - Add bounded academic reconciliation preflight
+
+- Added a read-only nine-source intake validator with a pinned external scope digest, full metadata preflight before original/cache reads, gold/alias/split/rights gates, safe confined paths, byte pins and region/link checks. All outputs remain HOLD; rights declarations do not establish permission or fidelity.
+- Kept the missing private extraction schema explicit: the documented intake is an adapter contract, not fabricated native records. No academic originals, cache text, IDs, gold or approvals were added to Git.
+- Added 31 synthetic regressions; independent code review completed and findings corrected. Expanded CPU suite: 95 tests pass, with five Qwen tests blocked by missing pinned tokenizer assets (one class-setup error). This is not a complete suite pass.
+- Preserved checkpoint 601df14, all dataset/review/source/frozen artifacts and historical receipts on a separate local preparation branch. No remote operation, tokenizer retry, model load, training or paid compute.
+
 ## 2026-10-02 - Resolve five residual technical holds locally
 
 - Independently reviewed all five complete original pairs with primary evidence: five technical PASS, with three new substantive reviews and two explicitly superseded specialist holds.

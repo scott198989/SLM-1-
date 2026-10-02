@@ -5,6 +5,8 @@ Cloud continuation: read [HANDOFF_README.md](HANDOFF_README.md) first; use branc
 
 Cloud continuation, October 2: all 2,112 selected records now have substantive agent technical dispositions. Separately scoped primary-source review resolved the five inherited residual holds. GitHub remains at the last verified published base 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. [Current completion and remaining gates](reports/phase3-technical-review-completion.json).
 
+Bounded academic preparation: [metadata-first reconciliation validator](docs/ACADEMIC_RECONCILIATION.md) checks the pinned nine-source intake with synthetic-only regressions. It grants no release approval; private originals/cache/family/rights inputs remain required and every result stays HOLD. Fresh preparation verification: 31 new tests pass; the expanded suite has 95 passing methods and five tokenizer-dependent methods blocked. Prior 69-test passing receipts remain historical.
+
 ## Phase 3 pilot — current gate
 
 Private release: **16 calculator protocol SFT examples / 4,430 Qwen tokens / 2,793 assistant tokens**; **12 sealed statistics/DOE/SPC tasks**; **9 qualified private reference-RAG chunks** with 10/10 demonstration query hits in top 3; **69 software tests pass**. [Complete gate report](reports/FORGE_PHASE3_GATE_REPORT.md), [released pilot receipt](reports/phase3-pilot-release.json), [technical review](reports/phase3-technical-review.json), [family evidence](reports/phase3-family-analysis.json), [sealed composition](reports/phase3-sealed-gold.json), [RAG results](reports/phase3-rag-pilot.json).
