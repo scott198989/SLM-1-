@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1216,
-    "REJECT": 60,
-    "QUARANTINE": 257,
-    "NEEDS_HUMAN_REVIEW": 579
+    "PASS": 1234,
+    "REJECT": 61,
+    "QUARANTINE": 263,
+    "NEEDS_HUMAN_REVIEW": 554
   },
   "by_domain": {
     "circuits": {
@@ -50,10 +50,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "electromagnetism": {
-      "PASS": 57,
-      "REJECT": 3,
-      "QUARANTINE": 15,
-      "NEEDS_HUMAN_REVIEW": 91
+      "PASS": 75,
+      "REJECT": 4,
+      "QUARANTINE": 21,
+      "NEEDS_HUMAN_REVIEW": 66
     },
     "materials_manufacturing": {
       "PASS": 3,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1532,
+  "agent_substantive_reviews": 1557,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "87eae544ce2c8a150d443abce7fa9989ddfe1baf9563377f56a373721e3090af",
+  "technical_review_sha256": "cf55e4c173ae64695750e1f79df92c78668c8e078c0aa13dd2ee94d3201a34f3",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 577,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 552,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1613,11 +1613,36 @@
     "The derivation is correct for a homogeneous instantaneous Ohmic model, but presenting its copper DC estimate near10^-19 seconds as a physical redistribution time extrapolates that constitutive model beyond carrier-response validity.": 1,
     "Correct signed scalar superposition of point-charge potentials with an explicit reference.": 1,
     "Correct elementary drift-and-scattering connection between microscopic transport and macroscopic Ohm law.": 1,
-    "Correct standard homogeneous conducting-medium resistance workflow using a prescribed electrode voltage difference and total current.": 1
+    "Correct standard homogeneous conducting-medium resistance workflow using a prescribed electrode voltage difference and total current.": 1,
+    "The no-power-creation correction is right, but a gain increase at fixed accepted power need not come only from taking power away from other angles. Increased radiation efficiency can raise gain without narrowing the same normalized pattern.": 1,
+    "The interface continuity rules are central, but they do not by themselves guarantee a unique potential for arbitrary external boundary conditions. Pure Neumann data retain an additive-constant freedom and require compatibility.": 1,
+    "Correct conceptual bulk spectral-gap explanation in the scope defined by its first sentence: the frequency interval has no modes of the specified system, so there are no propagating bulk modes there.": 1,
+    "Reasonable concise heuristic for selecting analytic, numerical or hybrid modeling.": 1,
+    "Sound practical description of controlled approximation and physical insight rather than demanding a full closed-form solution.": 1,
+    "Correct spherical-Gauss derivation for the exterior of a uniformly charged shell.": 1,
+    "Correct short workflow for a symmetric magnetostatic Ampere-law calculation.": 1,
+    "Correct intuitive paraphrase of nonconservative electric circulation caused by changing flux.": 1,
+    "Correct gauge-fixing purpose and physical-invariance explanation.": 1,
+    "The strategy correctly uses symmetry, but its final E times area rule ignores that a field perpendicular to the area vector contributes zero and an antiparallel field changes sign. The chosen surface often needs separate face contributions.": 1,
+    "Correct Ohmic resistance derivation for a uniform rod with a uniform longitudinal field.": 1,
+    "Correct description of the spatial boundary-value structure associated with a wave equation.": 1,
+    "Correct qualitative Cherenkov phase-speed threshold and coherent-cone analogy.": 1,
+    "Acceptable standard classical/quantum explanation of electromagnetic vacuum properties and fluctuation-related phenomena.": 1,
+    "Correct explanation of choosing a gauge that makes the potential representation convenient for geometry and boundary constraints.": 1,
+    "The force-balance idea is correct, but the same k symbol is used for the spring stiffness and Coulomb constant without distinguishing their incompatible units. The stated equation cannot be interpreted literally with one constant.": 1,
+    "The diagnostic warning is useful, but convergence is not the definition of numerical stability. Stability concerns error amplification; an iterative stopping test or apparent mesh convergence is a distinct property.": 1,
+    "Correct introductory diffraction description and wavelength-scale observation.": 1,
+    "Correct linear impulse-response and superposition analogy for a Green function.": 1,
+    "Correct introductory dielectric-polarization explanation for a charged balloon adhering to a wall.": 1,
+    "The stated peak formula confuses the free damped-oscillation frequency with the driven displacement-amplitude resonance peak under the usual amplitude-decay-rate convention. Damping shifts are not universally small and can remove the peak.": 1,
+    "Correct source-free vacuum plane-wave transversality derivation.": 1,
+    "Correct energy-accounting explanation of a current-driven motor despite the magnetic Lorentz force doing no work on an individual point charge.": 1,
+    "The two potential definitions correctly enforce the homogeneous Maxwell equations, but the final fully determined potentials claim omits gauge freedom and necessary conditions.": 1,
+    "Correct ordinary potential-field relations, divergence identity and gauge invariance.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "a5846cdbaae0997c97b9d8a984cc999a2dec4241bbb771d3127e16826101b455",
-  "substantively_unreviewed": 577,
+  "published_decisions_sha256": "96b4a2560a3bc13e0c8684763faf2f26d92e060711c217191d4cb6d843d0e4ec",
+  "substantively_unreviewed": 552,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
