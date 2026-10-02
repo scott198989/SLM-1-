@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 304,
-    "REJECT": 30,
-    "QUARANTINE": 109,
-    "NEEDS_HUMAN_REVIEW": 1669
+    "PASS": 322,
+    "REJECT": 31,
+    "QUARANTINE": 115,
+    "NEEDS_HUMAN_REVIEW": 1644
   },
   "by_domain": {
     "circuits": {
@@ -44,10 +44,10 @@
       "NEEDS_HUMAN_REVIEW": 208
     },
     "electrical_components": {
-      "PASS": 57,
-      "REJECT": 3,
-      "QUARANTINE": 15,
-      "NEEDS_HUMAN_REVIEW": 225
+      "PASS": 75,
+      "REJECT": 4,
+      "QUARANTINE": 21,
+      "NEEDS_HUMAN_REVIEW": 200
     },
     "electromagnetism": {
       "PASS": 2,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 442,
+  "agent_substantive_reviews": 467,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "dd72be2c5ab10636653d5a4a333e10eafdd4bf22df1ad12c4c36165b3c18bbe8",
+  "technical_review_sha256": "28e8f3ff77805f1b3773d433e97f125cf7cef26a0fccf64273a19ee3fb3547be",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1667,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1642,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -523,11 +523,36 @@
     "Sound conditional decision framework: compare disruption severity and exposure with qualification/tooling effort, consider tail/concentration risk and alternatives such as stock or redesign, and avoid deciding from historical probability alone. It gives no invented supplier facts, financial probabilities or mandatory procurement commitment.": 1,
     "Appropriate Weibull-analysis workflow includes defined failure criteria, censored units, failure-mode separation, parameter estimation, fit assessment and engineering validation. Beta is described as suggesting hazard behavior rather than proving a failure mechanism. No unsupported life metric or confidence bound is computed.": 1,
     "Loss of seal recovery can contribute to leakage and subsequent corrosion, but the answer presents the entire failure chain as inevitable once compression set is permanent. Compression-set magnitude, geometry, pressure, temperature and motion matter; manufacturer guidance notes that a seal may remain effective even at very high or 100 percent set under stable conditions. Hold the unqualified causal chain rather than silently adding those conditions.": 1,
-    "The capture-and-hold explanation is sound, but bounding the aperture uncertainty conflates a stable conversion interval with aperture jitter, the sample-to-sample variation in switching time. Holding a sample does not by itself bound that separate uncertainty. Preserve the original wording pending qualification; do not reinterpret aperture uncertainty as a generic sampling window.": 1
+    "The capture-and-hold explanation is sound, but bounding the aperture uncertainty conflates a stable conversion interval with aperture jitter, the sample-to-sample variation in switching time. Holding a sample does not by itself bound that separate uncertainty. Preserve the original wording pending qualification; do not reinterpret aperture uncertainty as a generic sampling window.": 1,
+    "Correct conceptual purpose of isolated flyback optocoupler feedback: convey the secondary-side regulation information optically without a galvanic signal connection. It is not a claim that the optocoupler alone certifies the whole converter's safety barrier.": 1,
+    "Accurate comparison with an ordinary panel/control switch: properly rated motor contactors address inductive/inrush duty and remote cycling and can integrate with overload relays. Often and motor applications appropriately avoid claiming that every contactor rating suits every motor or that the contactor alone supplies overload protection.": 1,
+    "Correct introductory definition of residual/let-through surge voltage tied explicitly to a defined test. Lower comparable let-through means less stress on the protected equipment; this does not rank otherwise dissimilar surge ratings or guarantee the voltage at every remote load/installation.": 1,
+    "Appropriate next-analysis checklist for vibration-only field failures, including mechanical interconnect, solder, ceramic and mounting mechanisms. Re-examining the mission profile and fixture is sensible; the word usually is treated as a diagnostic priority, not proof of the root cause or exclusion of assembly variation.": 1,
+    "Correct core distinction between absolute stress limits and recommended continuous operation. The brief-tolerance wording is an introductory description of a stress boundary and is not taken to supply an allowable pulse duration, simultaneous-maximum guarantee or permission to design operation at that limit.": 1,
+    "Correct precision-measurement concern: unequal-temperature dissimilar junctions generate thermoelectric offsets that can reach microvolt scales, and thermal symmetry/stability and distance from heat sources help. The numerical magnitude is possible rather than universal and depends on material pair and temperature difference.": 1,
+    "Sound accelerated-life-test plan checklist including mechanism, stress schedule, sampling, censoring, monitoring, failure criteria and a justified acceleration model back to use conditions. It does not pretend that accelerated hours directly equal field life without a model.": 1,
+    "Correctly treats differing early/late failure patterns as possible evidence of different populations or mechanisms and recommends checking them before pooling. It does not infer a unique failure mechanism or fitted lifetime merely from qualitative shapes.": 1,
+    "Correctly rejects an unconditional reliability benefit from encapsulation and lists plausible moisture/mechanical benefits alongside repair, heat and expansion-mismatch trade-offs. Its may/can wording does not claim that every compound traps heat or causes damage.": 1,
+    "Most selection factors are useful, but mechanical relays fail more predictably is an unsupported general safety comparison: both welded-closed and open/intermittent mechanical failures occur. The safety-critical force-guided choice also depends on required diagnostic architecture and applicable requirements, not simply mechanical versus SSR. Hold rather than turning the heuristic into a safety-selection rule.": 1,
+    "Correct concise regulator definitions: internal operating current, input/output headroom for regulation, and frequency-dependent input-noise attenuation. No fixed dropout or PSRR guarantee is inferred without the device and operating point.": 1,
+    "Faithful, clearer troubleshooting note. The rewrite treats output/load mismatch, off-state leakage and insufficient load current as hypotheses to check rather than established causes. It does not repeat the confusing claim that an SSR mechanically clicks.": 1,
+    "Plausible conditional diagnostic set for a low-side motor driver: startup supply sag, inductive switching noise, shared return impedance and inadequate decoupling. It explicitly leaves the exact cause dependent on the layout and supply. Proposed remedies require correct sizing/layout and are not a verified fix for the unspecified board.": 1,
+    "The categorical conclusion that a breaker or replaceable fuse is better for frequent faults is unsupported and conflicts with manufacturer guidance positioning suitably rated resettable PPTCs for frequent overcurrent events. Resistance shifts and finite endurance can matter, but neither inevitable progressive degradation nor comparative superiority follows without the actual device, cycling, thermal and fault ratings.": 1,
+    "Correct introductory Hall-effect principle: magnetic flux density creates a transverse Hall voltage and supports position/speed/magnet sensing. The answer is read as explaining the sensing mechanism, not asserting that every packaged Hall switch or latch exposes a continuously proportional analog output.": 1,
+    "Correctly rejects hot MOSFET implies linear mode and distinguishes conduction, switching, thermal-path and inductive-event losses. The requested gate/drain/current waveforms and temperature measurements are relevant discriminators; no single fault is asserted from temperature alone.": 1,
+    "Reasonable high-level lifecycle/BOM strategy for regulated equipment: account for documentation, validation and potential regulatory review costs when qualifying alternatives. May/sometimes/can preserve uncertainty; it makes no device-specific approval determination or claim that every alternate requires a new submission.": 1,
+    "Reasonable first diagnosis of motor-correlated ADC noise, identifying conducted/radiated coupling, shared supply/reference and switching-node routing. It recommends checks rather than asserting a measured cause. Shielding/regulation/current-return improvements remain topology-dependent rather than guaranteed remedies.": 1,
+    "Correctly identifies welded contacts as a possible failure-to-open condition after coil deenergization. The mention of force-guided relays is appropriate safety-system context; it does not claim that force guidance prevents welding or physically breaks the weld.": 1,
+    "The sensor-fusion definition is sound, but accelerometer slow but absolute overgeneralizes its role. Gravity can provide a long-term tilt reference under suitable motion assumptions, while sustained acceleration corrupts that reference and gravity alone does not determine heading. The unqualified stable-orientation example lacks those essential limits.": 1,
+    "The bandwidth/sample-rate distinction is sound, but the reliable-capture rule omits input bandlimiting and allows equality at twice the highest retained sinusoid. Sampling only according to frequencies of interest cannot stop stronger unwanted frequencies from aliasing, and exact Nyquist sampling can lose phase/amplitude information. Hold for these material qualifications rather than rewriting the answer.": 1,
+    "Reasonable conditional selection strategy covering salt/UV/thermal exposure, vibration, galvanic compatibility, sealed locking connectors and maintainability. It explicitly avoids a universal material choice and does not certify a particular crane, enclosure rating or connector installation.": 1,
+    "The dim-or-unlit prediction is plausible for many red LEDs on one AA cell, and the answer does allow subnominal-voltage glow. However, nominal forward voltage alone does not establish a safe upper current for the unspecified LED and fresh cell. Hold the generally-safe conclusion pending the actual I–V curve, current limits and battery characteristics.": 1,
+    "Positive electrothermal feedback is described correctly, but common in paralleled MOSFETs without proper balancing lacks the operating-region qualification needed to distinguish positive on-resistance current sharing from linear-mode hot-spot instability. Derating and thermal design also do not alone establish prevention at every bias point. Preserve pending scope qualification.": 1,
+    "The positive-feedback mechanism is sound, but common risk in semiconductor-based sensors and thermistor arrays is too broad without bias circuit, coefficient and thermal conditions. NTC and PTC devices do not all increase dissipation with temperature under the same excitation. The generic sensor category does not establish the claimed runaway susceptibility.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "c964d754ad5a3c598af551a1d543f0c4b94f5403c1b32f66d76c43b11020a695",
-  "substantively_unreviewed": 1667,
+  "published_decisions_sha256": "f55e9629909c173e3447417e0a465102d15539d493c9caed13889cf5e9aa1293",
+  "substantively_unreviewed": 1642,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
