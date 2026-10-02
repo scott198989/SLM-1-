@@ -1,0 +1,652 @@
+{
+  "base_commit": "af1f8a7ba5e2c41eee51dbd612cd70d6ebb70107",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "materials_manufacturing",
+  "offset": 25,
+  "limit": 25,
+  "next_offset": 50,
+  "selected_window_end_exclusive": 50,
+  "selected_rows_in_window": 25,
+  "new_substantive_reviews": 25,
+  "skipped_existing": 0,
+  "preserved_structural_quarantines": [],
+  "dispositions_added": {
+    "PASS": 20,
+    "QUARANTINE": 5
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "/root/review_materials_second_batch",
+    "records_checked": 25,
+    "final_counts": {
+      "PASS": 20,
+      "QUARANTINE": 5
+    },
+    "disposition_changes": [
+      {
+        "ordinal": 34,
+        "from": "PASS",
+        "to": "QUARANTINE"
+      }
+    ],
+    "review_precision_corrections": [
+      "34 removes a caveat that repaired the original shear-traction orientation claim."
+    ],
+    "full_prompt_and_answer_review": true,
+    "all_source_hashes_ids_ordinals_and_ledger_matches": true,
+    "source_sha256": "028348459f744df65879a12bf9df655c32fc25597c3202a13c3c780667554cc4",
+    "candidate_preparation_predecessor_commit": "8832a6ceccc0add5611f517ceab7bfa9675050ca",
+    "reviewed_against_local_commit": "af1f8a7ba5e2c41eee51dbd612cd70d6ebb70107",
+    "published_base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "independent_human_review": false,
+    "release_approved": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 1884,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 1535,
+    "REJECT": 68,
+    "QUARANTINE": 307,
+    "NEEDS_HUMAN_REVIEW": 202
+  },
+  "agent_substantive_reviews": 1909,
+  "substantively_unreviewed": 200,
+  "records": [
+    {
+      "id": "repo-68296d930b64ab83e12b73c9",
+      "ordinal": 25,
+      "messages_sha256": "68296d930b64ab83e12b73c97f12f14a465d968d76927d376e91a64a021243b7",
+      "state": "PASS",
+      "rationale": "Correct qualitative constant-strain stress-relaxation explanation.",
+      "evidence": [
+        {
+          "title": "David Roylance, MIT, Engineering Viscoelasticity",
+          "url": "https://ocw.mit.edu/courses/3-91-mechanical-behavior-of-plastics-spring-2007/3828997b92ebb6cb70e640826be1c5f2_19_visco.pdf",
+          "finding": "Linear viscoelastic networks describe relaxation, creep, temperature dependence and dissipative cyclic response."
+        },
+        {
+          "method": "independent_mechanics_and_constitutive_checks",
+          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A Maxwell branch under fixed strain satisfies sigma_dot=-(E/eta)*sigma; generalized networks give a sum of relaxation modes."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The answer says exponentially-ish, not an exact single-exponential law for every polymer; chemistry, aging and temperature can also affect stored rubber tension."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L175"
+    },
+    {
+      "id": "repo-012c822d340901b8073ecda5",
+      "ordinal": 26,
+      "messages_sha256": "012c822d340901b8073ecda5668226ffdc9eb77c245c2b625647df2b199d6829",
+      "state": "PASS",
+      "rationale": "Correct ordinary stabilized cyclic hysteresis and dissipated-work interpretation.",
+      "evidence": [
+        {
+          "title": "David Roylance, MIT, Engineering Viscoelasticity",
+          "url": "https://ocw.mit.edu/courses/3-91-mechanical-behavior-of-plastics-spring-2007/3828997b92ebb6cb70e640826be1c5f2_19_visco.pdf",
+          "finding": "Linear viscoelastic networks describe relaxation, creep, temperature dependence and dissipative cyclic response."
+        },
+        {
+          "method": "independent_mechanics_and_constitutive_checks",
+          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The signed loop integral integral(sigma d epsilon) is work dissipated per unit volume in a closed stabilized cycle."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "If internal damage or plastic microstructure is still evolving, part of mechanical work can change stored internal energy; the concise cyclic heat statement is the standard steady-cycle idealization."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L177"
+    },
+    {
+      "id": "repo-fe915874dd50485d098225c5",
+      "ordinal": 27,
+      "messages_sha256": "fe915874dd50485d098225c5a32b0e59a399e8f31d1f44f9fad89276950cdde0",
+      "state": "PASS",
+      "rationale": "Correct explicitly iso-strain elastic composite load sharing and Voigt modulus.",
+      "evidence": [
+        {
+          "method": "independent_mechanics_and_constitutive_checks",
+          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Sigma_c=sum(V_i*sigma_i)=epsilon*sum(V_i*E_i), so E_c=sum(V_i*E_i)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Requires the stated parallel common-strain condition and appropriate axial moduli; it is not the transverse modulus of an arbitrary laminate."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L180"
+    },
+    {
+      "id": "repo-6cdf7d6a7a056fb83fc64d33",
+      "ordinal": 28,
+      "messages_sha256": "6cdf7d6a7a056fb83fc64d333a89d2538662006b29377875d699fdaa5c2a200c",
+      "state": "QUARANTINE",
+      "rationale": "The ductile barreling discussion is reasonable, but assigning brittle compressive failure generally to approximately 45-degree shear planes omits established axial-splitting and confinement-dependent modes.",
+      "evidence": [
+        {
+          "title": "Horii and Nemat-Nasser, Compression-induced microcrack growth in brittle solids: Axial splitting and shear failure (1985)",
+          "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/JB090iB04p03105",
+          "finding": "Axially compressed brittle rock specimens can split parallel to the compression direction; shear failure and its angle depend on flaws and confinement."
+        },
+        {
+          "method": "independent_mechanics_and_constitutive_checks",
+          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Maximum shear under uniaxial stress lies at 45 degrees, but this does not prove that brittle crack propagation must follow that plane."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the brittle failure-mode generalization; the ordinary frictional barreling and qualified metal tension/compression yield comparison are retained."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L183"
+    },
+    {
+      "id": "repo-799798b702dad1fbcc5d706c",
+      "ordinal": 29,
+      "messages_sha256": "799798b702dad1fbcc5d706c63e2627510f2850271ba8a597be3b311775dbc95",
+      "state": "PASS",
+      "rationale": "Correct introductory isotropic-expansion versus kinematic-translation distinction and Bauschinger motivation.",
+      "evidence": [
+        {
+          "title": "A. F. Bower, Applied Mechanics of Solids, Viscoplasticity",
+          "url": "https://solidmechanics.org/Text/Chapter3_8/Chapter3_8.php",
+          "finding": "Yield-surface hardening models distinguish changes in size and backstress/translation; cyclic response requires a calibrated constitutive model."
+        },
+        {
+          "method": "independent_mechanics_and_constitutive_checks",
+          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a uniaxial translated yield interval [alpha-R,alpha+R], reverse yielding changes with backstress alpha; pure isotropic growth changes R with alpha fixed."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Reverse equality means stress magnitude. The final cyclic limitation concerns representing Bauschinger behavior, not a theorem that an isotropic model is unusable for every cyclic calculation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L185"
+    },
+    {
+      "id": "repo-8d976897fea675e1e648ec2d",
+      "ordinal": 30,
+      "messages_sha256": "8d976897fea675e1e648ec2d74515962dda6fcbd945cdf26ce53e18eff6d3757",
+      "state": "PASS",
+      "rationale": "Correct conventional dislocation-mediated slip explanation for why ordinary crystalline metals yield below ideal lattice strength.",
+      "evidence": [
+        {
+          "title": "Bhadeshia, Cambridge, Engineering Materials text",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
+          "finding": "Dislocations, slip systems, strengthening mechanisms, material classes and microstructure-property tradeoffs underlie these introductory explanations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The ideal-strength scale is an order estimate, and the explanation is the ordinary slip mechanism rather than an exclusion of twinning, diffusion or grain-boundary deformation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L188"
+    },
+    {
+      "id": "repo-bc4139fe332a996d30fe0abb",
+      "ordinal": 31,
+      "messages_sha256": "bc4139fe332a996d30fe0abb70e17b5f3e7976503b003747502d069ce1b9723d",
+      "state": "QUARANTINE",
+      "rationale": "The ideal-lattice versus dislocation-strength contrast is sound, but the unqualified claim that real metals yield at E/1000 or less is false for common high-strength alloys.",
+      "evidence": [
+        {
+          "title": "ATI 17-4 PH Technical Data Sheet, page 4",
+          "url": "https://www.atimaterials.com/Products/Documents/datasheets/stainless-specialty-steel/precipitationhardening/ati_17-4_tds_en_v1.pdf",
+          "finding": "The H900 typical room-temperature entries give Young modulus 196 GPa and 0.2%-offset yield strength 1240 MPa, contradicting a universal E/1000 upper bound."
+        },
+        {
+          "title": "Bhadeshia, Cambridge, Engineering Materials text",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
+          "finding": "Dislocations, slip systems, strengthening mechanisms, material classes and microstructure-property tradeoffs underlie these introductory explanations."
+        },
+        {
+          "method": "independent_mechanics_and_constitutive_checks",
+          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "ATI H900 typical values give 1240/196000=0.00632653, over six times 0.001."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the numerical class-wide bound; ideal strength and whisker behavior remain useful conceptual comparisons, with actual values material dependent."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L189"
+    },
+    {
+      "id": "repo-ff22a5fc4af204e215d62d6c",
+      "ordinal": 32,
+      "messages_sha256": "ff22a5fc4af204e215d62d6cb36d8f8f3fd989202d5dd3416b8f69287428d90c",
+      "state": "QUARANTINE",
+      "rationale": "Plane-strain constraint and smaller plastic-zone toughness trends are correct, but triaxial tensile stress is not generally shear-free and does not eliminate crack-tip plasticity.",
+      "evidence": [
+        {
+          "title": "David Roylance, MIT, Introduction to Fracture Mechanics",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/e5bca953e1dbd0cd0376f0f77033dc0d_MIT3_11F99_frac.pdf",
+          "finding": "Plane-strain constraint reduces the crack-tip plastic zone and maximum principal-stress difference; it does not make every triaxial state hydrostatic. Plastic blunting and flaw sensitivity explain ordinary ductile/brittle contrasts."
+        },
+        {
+          "method": "independent_mechanics_and_constitutive_checks",
+          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Principal stresses (100,100,60) MPa are all tensile yet give tau_max=(100-60)/2=20 MPa. Plane strain gives sigma_z=nu*(sigma_x+sigma_y), not equality of all three stresses."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the no-shear/no-blunting explanation, preserving the conventional constraint and apparent-toughness trend."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L195"
+    },
+    {
+      "id": "repo-f461d478a9f0b4ab7d84bcc9",
+      "ordinal": 33,
+      "messages_sha256": "f461d478a9f0b4ab7d84bcc9c1edaebafbd8929295ebb86926abc74889fc173a",
+      "state": "PASS",
+      "rationale": "Correct traction decomposition, stationary-angle calculation and maximum shear magnitude for uniaxial tension.",
+      "evidence": [
+        {
+          "method": "independent_mechanics_and_constitutive_checks",
+          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "t=sigma*(n dot e_x)*e_x; subtracting (t dot n)*n gives shear magnitude |sigma sin(theta)cos(theta)|, maximized at 45 degrees modulo symmetry."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "For shear magnitude both equivalent positive and negative shear orientations are maxima."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L204"
+    },
+    {
+      "id": "repo-1326fe1c670a9bc167f0df19",
+      "ordinal": 34,
+      "messages_sha256": "1326fe1c670a9bc167f0df193e97de40edd5befc4680469b4841e038749a90ba",
+      "state": "QUARANTINE",
+      "rationale": "The 45-degree surface can suggest shear-dominated ductile fracture, but the final explanation incorrectly makes the surface normal to shear stress. Shear traction acts within the plane; the maximum-shear planes are inclined 45 degrees to the tensile axis.",
+      "evidence": [
+        {
+          "title": "David Roylance, MIT, Introduction to Fracture Mechanics",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/e5bca953e1dbd0cd0376f0f77033dc0d_MIT3_11F99_frac.pdf",
+          "finding": "Plane-strain constraint reduces the crack-tip plastic zone and maximum principal-stress difference; it does not make every triaxial state hydrostatic. Plastic blunting and flaw sensitivity explain ordinary ductile/brittle contrasts."
+        },
+        {
+          "method": "independent_mechanics_and_constitutive_checks",
+          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For sigma=100*diag(1,0,0) and n=(1,1,0)/sqrt(2), the shear traction q=(50,-50,0)/sqrt(2) has q dot n=0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold only the final traction-orientation explanation, retaining the preceding suggestive ductile-fracture diagnostic; observed angle alone is not a complete failure analysis."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L205"
+    },
+    {
+      "id": "repo-338fca0076d18d7e314b80e9",
+      "ordinal": 35,
+      "messages_sha256": "338fca0076d18d7e314b80e91eb01a66b4d5ec9cdf9852ce962556459eee91d1",
+      "state": "PASS",
+      "rationale": "Reasonable ordinary tableware material-class choice balancing heat, chemistry and brittleness.",
+      "evidence": [
+        {
+          "title": "Bhadeshia, Cambridge, Engineering Materials text",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
+          "finding": "Dislocations, slip systems, strengthening mechanisms, material classes and microstructure-property tradeoffs underlie these introductory explanations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Ceramics vary widely; food-contact glaze, thermal shock, design and impact resistance still need product-specific assessment. This is a conceptual class choice, not a product certification."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L218"
+    },
+    {
+      "id": "repo-167727fb82c566d2b7cbc85a",
+      "ordinal": 36,
+      "messages_sha256": "167727fb82c566d2b7cbc85a7ed8378536556a65d5feec4546e151e23dd38747",
+      "state": "PASS",
+      "rationale": "Correct ordinary metal-slip versus flaw-sensitive glass bending contrast.",
+      "evidence": [
+        {
+          "title": "Bhadeshia, Cambridge, Engineering Materials text",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
+          "finding": "Dislocations, slip systems, strengthening mechanisms, material classes and microstructure-property tradeoffs underlie these introductory explanations."
+        },
+        {
+          "title": "David Roylance, MIT, Introduction to Fracture Mechanics",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/e5bca953e1dbd0cd0376f0f77033dc0d_MIT3_11F99_frac.pdf",
+          "finding": "Plane-strain constraint reduces the crack-tip plastic zone and maximum principal-stress difference; it does not make every triaxial state hydrostatic. Plastic blunting and flaw sensitivity explain ordinary ductile/brittle contrasts."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Repeated bending can eventually fatigue and break the paperclip; the answer explains its relative plastic accommodation, not unlimited fatigue life."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L241"
+    },
+    {
+      "id": "repo-a10275dfea23f7812d27d37a",
+      "ordinal": 37,
+      "messages_sha256": "a10275dfea23f7812d27d37a9e4b81e6f3e044ee08e4338ec2c625115112a7e5",
+      "state": "PASS",
+      "rationale": "Correct qualified corrosion mechanisms and possible mechanical/contact consequences.",
+      "evidence": [
+        {
+          "title": "Bhadeshia, Cambridge, Engineering Materials text",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
+          "finding": "Dislocations, slip systems, strengthening mechanisms, material classes and microstructure-property tradeoffs underlie these introductory explanations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Some oxide films passivate and protect; can appropriately avoids saying every oxide layer always damages the component."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L256"
+    },
+    {
+      "id": "repo-2d1e69c462aaba07270faa35",
+      "ordinal": 38,
+      "messages_sha256": "2d1e69c462aaba07270faa35eeee164227da5cb72d3ec5a980418fc988115bda",
+      "state": "PASS",
+      "rationale": "Correct well-bonded stiff-fiber load-transfer explanation for increased axial composite stiffness.",
+      "evidence": [
+        {
+          "method": "independent_mechanics_and_constitutive_checks",
+          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+        },
+        {
+          "title": "Bhadeshia, Cambridge, Engineering Materials text",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
+          "finding": "Dislocations, slip systems, strengthening mechanisms, material classes and microstructure-property tradeoffs underlie these introductory explanations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "In the common-strain idealization E_c=V_f*E_f+(1-V_f)*E_m, which increases with V_f when E_f>E_m."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Fiber length, orientation, interface quality, volume fraction and loading direction control the actual increase."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L259"
+    },
+    {
+      "id": "repo-7f98d848428066d0bc3e93a9",
+      "ordinal": 39,
+      "messages_sha256": "7f98d848428066d0bc3e93a999587f02626f5bd2d8230b8afde5115ca4d1ad59",
+      "state": "PASS",
+      "rationale": "Correct distinction between high-temperature bonding resistance and tensile stresses caused by rapid temperature gradients.",
+      "evidence": [
+        {
+          "method": "independent_mechanics_and_constitutive_checks",
+          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+        },
+        {
+          "title": "David Roylance, MIT, Introduction to Fracture Mechanics",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/e5bca953e1dbd0cd0376f0f77033dc0d_MIT3_11F99_frac.pdf",
+          "finding": "Plane-strain constraint reduces the crack-tip plastic zone and maximum principal-stress difference; it does not make every triaxial state hydrostatic. Plastic blunting and flaw sensitivity explain ordinary ductile/brittle contrasts."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A constrained thermal mismatch produces stresses of order E*alpha*DeltaT, even below the melting temperature."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Low-expansion or specially designed ceramics can resist thermal shock; often and the mechanism-level explanation leave those exceptions open."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L265"
+    },
+    {
+      "id": "repo-59df14bf0c9bd18f55952a83",
+      "ordinal": 40,
+      "messages_sha256": "59df14bf0c9bd18f55952a837660ffc21a0d08cdbf76d76d05f84b5efbe1ac8e",
+      "state": "PASS",
+      "rationale": "Correct rejection of modulus alone as a universal design objective, with compliant-seal example.",
+      "evidence": [
+        {
+          "method": "independent_mechanics_and_constitutive_checks",
+          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Weight and brittleness are material-selection correlations or possible tradeoffs, not consequences determined uniquely by E. Stress transmission also depends on geometry and control conditions."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L266"
+    },
+    {
+      "id": "repo-be9bcbc6104407fd0304fc88",
+      "ordinal": 41,
+      "messages_sha256": "be9bcbc6104407fd0304fc88b15e400a7f1ef9e7aa1415d8438f0fa648e32683",
+      "state": "PASS",
+      "rationale": "Correct qualified crack-opening versus crack-closure explanation for ordinary brittle ceramics.",
+      "evidence": [
+        {
+          "title": "David Roylance, MIT, Introduction to Fracture Mechanics",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/e5bca953e1dbd0cd0376f0f77033dc0d_MIT3_11F99_frac.pdf",
+          "finding": "Plane-strain constraint reduces the crack-tip plastic zone and maximum principal-stress difference; it does not make every triaxial state hydrostatic. Plastic blunting and flaw sensitivity explain ordinary ductile/brittle contrasts."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Compression can still drive shear, splitting and damage; the answer says usually and explicitly notes flaw and residual-stress dependence."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L272"
+    },
+    {
+      "id": "repo-968c11eff80cbfa3bd57f78e",
+      "ordinal": 42,
+      "messages_sha256": "968c11eff80cbfa3bd57f78e8a58751db85ced61c0c9f9aa4ad65615191e5a09",
+      "state": "PASS",
+      "rationale": "Correct qualitative polymer creep and segmental-mobility explanation near glass transition.",
+      "evidence": [
+        {
+          "title": "David Roylance, MIT, Engineering Viscoelasticity",
+          "url": "https://ocw.mit.edu/courses/3-91-mechanical-behavior-of-plastics-spring-2007/3828997b92ebb6cb70e640826be1c5f2_19_visco.pdf",
+          "finding": "Linear viscoelastic networks describe relaxation, creep, temperature dependence and dissipative cyclic response."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Creep can occur below Tg too; the answer uses near or above Tg as a high-mobility condition, not an exclusive threshold."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L274"
+    },
+    {
+      "id": "repo-aa4ae5ef51abd4ea7ef57139",
+      "ordinal": 43,
+      "messages_sha256": "aa4ae5ef51abd4ea7ef57139fdd9695fb6977d31688e9e8c98409c736dfbd87e",
+      "state": "PASS",
+      "rationale": "Correct context-dependent comparison instead of an unconditional composite superiority claim.",
+      "evidence": [
+        {
+          "title": "Bhadeshia, Cambridge, Engineering Materials text",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
+          "finding": "Dislocations, slip systems, strengthening mechanisms, material classes and microstructure-property tradeoffs underlie these introductory explanations."
+        },
+        {
+          "method": "independent_mechanics_and_constitutive_checks",
+          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Actual specific-property and damage-tolerance rankings require a named layup, metal, environment and failure mode; the answer explicitly asks for that specificity."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L284"
+    },
+    {
+      "id": "repo-94f6b967193ce281def10929",
+      "ordinal": 44,
+      "messages_sha256": "94f6b967193ce281def10929acfdaa8f277104bf12c1ac31c4e8219f0bfc2d62",
+      "state": "PASS",
+      "rationale": "Correct concise strength-limit versus excessive-deflection design distinction.",
+      "evidence": [
+        {
+          "method": "independent_mechanics_and_constitutive_checks",
+          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Elastic axial deflection F*L/(A*E) and nominal stress F/A illustrate separate stiffness and strength criteria."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Actual design can have multiple simultaneous limits, including instability, fatigue and serviceability."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L301"
+    },
+    {
+      "id": "repo-f7385379ab05487cd0fc7530",
+      "ordinal": 45,
+      "messages_sha256": "f7385379ab05487cd0fc753018675d8c81f482c4ae9fb3f6284988ee1209236e",
+      "state": "QUARANTINE",
+      "rationale": "The selection checklist is useful, but the stated two-to-one pressure-stress rule needs a thin closed-cylinder scope, and visible metal impact damage cannot be assumed without inspection.",
+      "evidence": [
+        {
+          "title": "University of Illinois, Introductory Solid Mechanics, Pressure Vessels",
+          "url": "https://mechref.engr.illinois.edu/sol/pressure.html",
+          "finding": "Thin closed cylindrical vessels have hoop pr/t and axial pr/(2t); the stresses follow geometry and end-cap force balance, not a shape-independent pressure-vessel rule."
+        },
+        {
+          "method": "independent_mechanics_and_constitutive_checks",
+          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a thin spherical shell, pressure force p*pi*r^2 balances 2*pi*r*t*sigma, giving equal in-surface stresses pr/(2t), not a two-to-one ratio."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the unqualified geometry/inspection claims rather than the need to assess liner compatibility, fatigue, burst margin and certification. No actual vessel design or material choice is approved."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L303"
+    },
+    {
+      "id": "repo-b0bf1da2616ca1bcb709890e",
+      "ordinal": 46,
+      "messages_sha256": "b0bf1da2616ca1bcb709890e1a8d8cb74e200da42eb11a6cec7ed0149002d5ff",
+      "state": "PASS",
+      "rationale": "Correct qualitative crack-tip plastic blunting versus brittle glass flaw sensitivity, with fatigue/corrosion qualifications.",
+      "evidence": [
+        {
+          "title": "David Roylance, MIT, Introduction to Fracture Mechanics",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/e5bca953e1dbd0cd0376f0f77033dc0d_MIT3_11F99_frac.pdf",
+          "finding": "Plane-strain constraint reduces the crack-tip plastic zone and maximum principal-stress difference; it does not make every triaxial state hydrostatic. Plastic blunting and flaw sensitivity explain ordinary ductile/brittle contrasts."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A ductile metal scratch is not automatically safe; flaw size, loading history, environment and remaining ligament matter."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L305"
+    },
+    {
+      "id": "repo-a108a4af14270ea1cc058d9f",
+      "ordinal": 47,
+      "messages_sha256": "a108a4af14270ea1cc058d9ffb7825590ebd566f2a67ecd9aeeb7b631f531179",
+      "state": "PASS",
+      "rationale": "Correct systems-level distinction between coupon strength and the weakest structural failure mode.",
+      "evidence": [
+        {
+          "title": "Bhadeshia, Cambridge, Engineering Materials text",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
+          "finding": "Dislocations, slip systems, strengthening mechanisms, material classes and microstructure-property tradeoffs underlie these introductory explanations."
+        },
+        {
+          "method": "independent_mechanics_and_constitutive_checks",
+          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The listed tradeoffs require quantitative geometry/load/environment models before choosing a specific material."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L308"
+    },
+    {
+      "id": "repo-564aac5bfb42b2c599185a7e",
+      "ordinal": 48,
+      "messages_sha256": "564aac5bfb42b2c599185a7e59dc39746283fa9d2bc6b603e19c0c17d8e78b5d",
+      "state": "PASS",
+      "rationale": "Correct concise purpose of the Schmid factor for resolved slip stress under tensile loading.",
+      "evidence": [
+        {
+          "method": "independent_mechanics_and_constitutive_checks",
+          "finding": "Individually checked relaxation and cyclic-work relations, iso-strain load sharing, traction/shear transformation, plane-strain principal-stress differences, spherical/cylindrical membrane balance and resolved slip stress."
+        },
+        {
+          "title": "Bhadeshia, Cambridge, Engineering Materials text",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
+          "finding": "Dislocations, slip systems, strengthening mechanisms, material classes and microstructure-property tradeoffs underlie these introductory explanations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Resolved slip shear is tau=sigma*cos(phi)*cos(lambda), with angles to the slip-plane normal and slip direction."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Critical resolved shear stress and slip-system orientation are needed to predict onset; non-Schmid behavior can matter in some crystals."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L351"
+    },
+    {
+      "id": "repo-85c288f2cbdda4333f723235",
+      "ordinal": 49,
+      "messages_sha256": "85c288f2cbdda4333f723235b20eb20b527916b35940ce22884206585e392bf7",
+      "state": "PASS",
+      "rationale": "Correct rejection of coherency alone as a hardness ranking and recognition of cutting versus bypass mechanisms.",
+      "evidence": [
+        {
+          "title": "Bhadeshia, Cambridge, Engineering Materials text",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
+          "finding": "Dislocations, slip systems, strengthening mechanisms, material classes and microstructure-property tradeoffs underlie these introductory explanations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The operative mechanism is the lower accessible resistance in a given microstructure; its size/spacing/coherency dependence determines the alloy comparison, not an arbitrary choice of the larger of two competing paths."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L357"
+    }
+  ]
+}

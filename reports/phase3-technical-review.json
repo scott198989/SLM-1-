@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1515,
+    "PASS": 1535,
     "REJECT": 68,
-    "QUARANTINE": 302,
-    "NEEDS_HUMAN_REVIEW": 227
+    "QUARANTINE": 307,
+    "NEEDS_HUMAN_REVIEW": 202
   },
   "by_domain": {
     "circuits": {
@@ -56,10 +56,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "materials_manufacturing": {
-      "PASS": 20,
+      "PASS": 40,
       "REJECT": 2,
-      "QUARANTINE": 3,
-      "NEEDS_HUMAN_REVIEW": 225
+      "QUARANTINE": 8,
+      "NEEDS_HUMAN_REVIEW": 200
     },
     "physics": {
       "PASS": 212,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1884,
+  "agent_substantive_reviews": 1909,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "be10580315a99f67195184e7018d49388e3829c958906bc8093d5d0616a84534",
+  "technical_review_sha256": "96b070edf70acd3856c5d9b2ab034796319a6c6c7ff9b1df7e1caee23fa13642",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 225,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 200,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1965,11 +1965,36 @@
     "Correct nominal single-shear stress and von-Mises pure-shear yield ratio.": 1,
     "Correctly lists multiple plausible causes of early stress-strain nonlinearity and asks for material/rate context.": 1,
     "Restricted dislocation mobility and limited crack-tip plasticity are valid brittle-ceramic themes, but the answer incorrectly groups ionic bonds with covalent bonds as intrinsically directional.": 1,
-    "Correct warning about fatigue damage and failure below macroscopic yield, with endurance behavior acknowledged.": 1
+    "Correct warning about fatigue damage and failure below macroscopic yield, with endurance behavior acknowledged.": 1,
+    "Correct ordinary stabilized cyclic hysteresis and dissipated-work interpretation.": 1,
+    "The 45-degree surface can suggest shear-dominated ductile fracture, but the final explanation incorrectly makes the surface normal to shear stress. Shear traction acts within the plane; the maximum-shear planes are inclined 45 degrees to the tensile axis.": 1,
+    "Correct ordinary metal-slip versus flaw-sensitive glass bending contrast.": 1,
+    "Correct well-bonded stiff-fiber load-transfer explanation for increased axial composite stiffness.": 1,
+    "Reasonable ordinary tableware material-class choice balancing heat, chemistry and brittleness.": 1,
+    "Correct concise purpose of the Schmid factor for resolved slip stress under tensile loading.": 1,
+    "Correct rejection of modulus alone as a universal design objective, with compliant-seal example.": 1,
+    "Correct qualitative constant-strain stress-relaxation explanation.": 1,
+    "The ductile barreling discussion is reasonable, but assigning brittle compressive failure generally to approximately 45-degree shear planes omits established axial-splitting and confinement-dependent modes.": 1,
+    "Correct introductory isotropic-expansion versus kinematic-translation distinction and Bauschinger motivation.": 1,
+    "Correct distinction between high-temperature bonding resistance and tensile stresses caused by rapid temperature gradients.": 1,
+    "Correct rejection of coherency alone as a hardness ranking and recognition of cutting versus bypass mechanisms.": 1,
+    "Correct conventional dislocation-mediated slip explanation for why ordinary crystalline metals yield below ideal lattice strength.": 1,
+    "Correct concise strength-limit versus excessive-deflection design distinction.": 1,
+    "Correct qualitative polymer creep and segmental-mobility explanation near glass transition.": 1,
+    "Correct qualified corrosion mechanisms and possible mechanical/contact consequences.": 1,
+    "Correct systems-level distinction between coupon strength and the weakest structural failure mode.": 1,
+    "Correct context-dependent comparison instead of an unconditional composite superiority claim.": 1,
+    "Correct qualitative crack-tip plastic blunting versus brittle glass flaw sensitivity, with fatigue/corrosion qualifications.": 1,
+    "The ideal-lattice versus dislocation-strength contrast is sound, but the unqualified claim that real metals yield at E/1000 or less is false for common high-strength alloys.": 1,
+    "Correct qualified crack-opening versus crack-closure explanation for ordinary brittle ceramics.": 1,
+    "Correct traction decomposition, stationary-angle calculation and maximum shear magnitude for uniaxial tension.": 1,
+    "The selection checklist is useful, but the stated two-to-one pressure-stress rule needs a thin closed-cylinder scope, and visible metal impact damage cannot be assumed without inspection.": 1,
+    "Correct explicitly iso-strain elastic composite load sharing and Voigt modulus.": 1,
+    "Plane-strain constraint and smaller plastic-zone toughness trends are correct, but triaxial tensile stress is not generally shear-free and does not eliminate crack-tip plasticity.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "e7856e35dc2df04824d5e8efbcac8b099288c98257a771c5f10560af19b5262a",
-  "substantively_unreviewed": 225,
+  "published_decisions_sha256": "f3cc11ddbe105e06b83411e23ba5189a8824cc9405894f689ed2c9053ac99781",
+  "substantively_unreviewed": 200,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

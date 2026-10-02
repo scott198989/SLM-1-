@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-02 - Local materials_manufacturing review 25–49
+
+- Added {'PASS': 20, 'QUARANTINE': 5} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1884 reviews unchanged.
+- Current local reviews: 1909; dispositions: {'PASS': 1535, 'REJECT': 68, 'QUARANTINE': 307, 'NEEDS_HUMAN_REVIEW': 202}; next materials_manufacturing offset: 50.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
 ## 2026-10-02 - Local materials_manufacturing review 0–24
 
 - Added {'PASS': 17, 'QUARANTINE': 2} after independent agent QA; 6 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1865 reviews unchanged.
