@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 721,
-    "REJECT": 49,
-    "QUARANTINE": 190,
-    "NEEDS_HUMAN_REVIEW": 1152
+    "PASS": 743,
+    "REJECT": 50,
+    "QUARANTINE": 192,
+    "NEEDS_HUMAN_REVIEW": 1127
   },
   "by_domain": {
     "circuits": {
@@ -32,10 +32,10 @@
       "NEEDS_HUMAN_REVIEW": 2
     },
     "trigonometry": {
-      "PASS": 83,
-      "REJECT": 2,
-      "QUARANTINE": 15,
-      "NEEDS_HUMAN_REVIEW": 100
+      "PASS": 105,
+      "REJECT": 3,
+      "QUARANTINE": 17,
+      "NEEDS_HUMAN_REVIEW": 75
     },
     "calculus": {
       "PASS": 5,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 959,
+  "agent_substantive_reviews": 984,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "fe7e5ac3f748ad31b14c4ec8fe4b93439f835837ecb7376c9a32ec092268954f",
+  "technical_review_sha256": "697b51f4fcb2fb1251ac4f049ca260f599f9410906abe9ef4a35c17acddc2ee1",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1150,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1125,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1040,11 +1040,36 @@
     "Correct warning that selected numerical examples are not a symbolic proof of a universal identity.": 1,
     "The exact one-dimensional zero-field Ising decimation formula is correct, and tracing over exponential spin weights explains the hyperbolic functions. Its fixed-point discussion is acceptable conceptual RG motivation.": 1,
     "Correct complete real solution families for cosine equal to one half.": 1,
-    "The waveform examples are appropriate, but an unrestricted claim about any periodic function requires integrability/regularity and a stated convergence interpretation. At jumps, the ordinary series need not reproduce the chosen function value.": 1
+    "The waveform examples are appropriate, but an unrestricted claim about any periodic function requires integrability/regularity and a stated convergence interpretation. At jumps, the ordinary series need not reproduce the chosen function value.": 1,
+    "Sound beginner workflow: identities, factoring, quadrant selection, interval/general solutions and checking irreversible transformations.": 1,
+    "Correct half-angle cosine branches and multiplication of both period and angle by two.": 1,
+    "Correct exponential expressions for sine/cosine and the resulting identity-derivation method.": 1,
+    "Correct derivation strategy for both angle-addition identities using Euler multiplication.": 1,
+    "Correct proof on the original common domain, where the cancellation denominator is nonzero.": 1,
+    "Correct two-family general cosine solution.": 1,
+    "Correct concrete sinusoidal-height scenario and reduction to a basic sine equation.": 1,
+    "Correct conceptual explanation of the fin ODE, hyperbolic solution and boundary-condition-dependent constants. The efficiency wording says involves rather than asserting one universal equality for all tip conditions.": 1,
+    "Correct identification of an identity and its complete all-real solution set.": 1,
+    "Correct SSA ambiguity mechanism and requirement to test both candidate triangles geometrically.": 1,
+    "All polar-form, power and angle-reduction steps are exact.": 1,
+    "Correct method for extracting a sine/cosine model from its midline, amplitude, period and phase shift.": 1,
+    "Correct unit-circle point, coordinate interpretation and graph values at zero.": 1,
+    "Correct explanation of making domain and logical assumptions visible in an identity chain.": 1,
+    "The catenary shape and symmetric-span formulas are standard, but T=w*y is wrong for the explicitly shifted y=a*cosh(x/a)-a. It predicts zero tension at the lowest point despite H=w*a>0.": 1,
+    "Faithful conceptual explanation of Fourier-style harmonic decomposition across analytic, sampled and fitted representations.": 1,
+    "Correct circular-motion examples and sine/cosine component explanation.": 1,
+    "Correct factorization and final two distinct solution families; the intermediate mistaken overlap thought is explicitly withdrawn in the original answer.": 1,
+    "The ordinary positive/negative reference-angle procedure is sound, but the requested all-k process has no branch for k=0: zero has neither the positive nor negative sign used in its quadrant-selection step.": 1,
+    "Exact product-to-sum derivation by adding the two cosine addition formulas.": 1,
+    "Correct conceptual use of constant-speed angular positions, relative phase and periodic functions to describe rotating-system interaction.": 1,
+    "Exact complete real solution set for sine zero.": 1,
+    "Correct explanation that the double-angle cosine generally determines only a squared value and loses sign information.": 1,
+    "Correct introductory inverse dependence of double-slit fringe spacing on separation and its phase-difference explanation.": 1,
+    "The asymptote and increasing-branch description is correct, but the opening sine-wave-direction steepness analogy is undefined and can confuse the ratio sin(x)/cos(x) with waveform slope. Hold for clarifying the geometric quantity being described.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "9e68a6c89cbeadc7169fc1d473153dcfa95b2569bcfb0f6b9c6a7d622458bd99",
-  "substantively_unreviewed": 1150,
+  "published_decisions_sha256": "452420f3c924f34a80229a042b522ca7b1d75685bf260fffc116d571ae41349f",
+  "substantively_unreviewed": 1125,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
