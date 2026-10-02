@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 972,
+    "PASS": 986,
     "REJECT": 56,
-    "QUARANTINE": 225,
-    "NEEDS_HUMAN_REVIEW": 859
+    "QUARANTINE": 226,
+    "NEEDS_HUMAN_REVIEW": 844
   },
   "by_domain": {
     "circuits": {
@@ -38,10 +38,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "calculus": {
-      "PASS": 171,
+      "PASS": 185,
       "REJECT": 4,
-      "QUARANTINE": 25,
-      "NEEDS_HUMAN_REVIEW": 15
+      "QUARANTINE": 26,
+      "NEEDS_HUMAN_REVIEW": 0
     },
     "electrical_components": {
       "PASS": 232,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1252,
+  "agent_substantive_reviews": 1267,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "bff5cbf583208a4b4956820102298f265e53e5c70e5e47b5ce373541c77a46ca",
+  "technical_review_sha256": "a5743fb5fc5e1be38920e1626821ae8696846eeaa99cd26341c2b665ce67a368",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 857,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 842,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1333,11 +1333,26 @@
     "Correct introductory definition of a partial derivative with other independent inputs fixed.": 1,
     "Correct radius 1 and complex-pole explanation for the Lorentzian-type rational example.": 1,
     "Correct conceptual distinction between rewriting with a trig identity and changing variables using a trig substitution.": 1,
-    "Correct high-level trust-region convergence-proof structure with lower-boundedness and gradient/model conditions explicitly retained.": 1
+    "Correct high-level trust-region convergence-proof structure with lower-boundedness and gradient/model conditions explicitly retained.": 1,
+    "Correct origin-centered upper/right semidisk polar limits.": 1,
+    "Exact divergence-theorem verification with outward face orientations.": 1,
+    "Correct local Taylor-linearization explanation for a differentiable V-versus-I device curve.": 1,
+    "Correct convolution theorem and standard equal-length dense direct-versus-FFT complexity comparison.": 1,
+    "Correct conceptual contrast between almost-everywhere derivative information and rates at particular points, without claiming the exceptional set is unimportant.": 1,
+    "Correct descent-lemma role of an L-Lipschitz gradient.": 1,
+    "Correct continuity-on-domain argument for rational functions.": 1,
+    "Correct pointwise continuity checklist after the informal pencil analogy.": 1,
+    "Correct concise moving parts of a typical sequential convex programming step.": 1,
+    "Correct explanation of why ordinary numerical related-rates exercises give instantaneous values.": 1,
+    "Correct integral-comparison lower bound proving harmonic-series divergence.": 1,
+    "The distinction between variable-limit asymptotics and summing an infinite series is useful, but the categorical truncation behavior is overgeneralized. An asymptotic expansion can converge, and a convergent series need not improve its error monotonically with every extra term.": 1,
+    "Sound velocity-flux analogy that explains area orientation and flow speed.": 1,
+    "Correct polar Gaussian integral over the whole plane.": 1,
+    "Correct fundamental Fourier k-space encoding and inverse-transform reconstruction description for conventional MRI.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "3b73c9ee5e5988ef3bde4374001a3cba5f5798823969d9d86e41b4774a3fdbfc",
-  "substantively_unreviewed": 857,
+  "published_decisions_sha256": "d1859ec7605b3f50b35c206739f43e075a93ee652041ff99330a0c9c3580ef0e",
+  "substantively_unreviewed": 842,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
