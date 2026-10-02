@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-02 - Local engineering_mathematics review 0–24
+
+- Added {'PASS': 19} after independent agent QA; 6 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1267 reviews unchanged.
+- Current local reviews: 1286; dispositions: {'PASS': 1005, 'REJECT': 56, 'QUARANTINE': 226, 'NEEDS_HUMAN_REVIEW': 825}; next engineering_mathematics offset: 25.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
 ## 2026-10-02 - Pending calculus queue completion
 
 - Reviewed 208 pending calculus records with independent agent QA; preserved seven prior substantive decisions. All 215 selected calculus records have substantive dispositions.

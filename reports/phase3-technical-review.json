@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 986,
+    "PASS": 1005,
     "REJECT": 56,
     "QUARANTINE": 226,
-    "NEEDS_HUMAN_REVIEW": 844
+    "NEEDS_HUMAN_REVIEW": 825
   },
   "by_domain": {
     "circuits": {
@@ -14,10 +14,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "engineering_mathematics": {
-      "PASS": 4,
+      "PASS": 23,
       "REJECT": 0,
       "QUARANTINE": 2,
-      "NEEDS_HUMAN_REVIEW": 194
+      "NEEDS_HUMAN_REVIEW": 175
     },
     "algebra": {
       "PASS": 176,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1267,
+  "agent_substantive_reviews": 1286,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "a5743fb5fc5e1be38920e1626821ae8696846eeaa99cd26341c2b665ce67a368",
+  "technical_review_sha256": "f042e0a24d65c1f625fd1e111de585a44970a87e405d6c26a514f01909e72fe7",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 842,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 823,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1348,11 +1348,30 @@
     "The distinction between variable-limit asymptotics and summing an infinite series is useful, but the categorical truncation behavior is overgeneralized. An asymptotic expansion can converge, and a convergent series need not improve its error monotonically with every extra term.": 1,
     "Sound velocity-flux analogy that explains area orientation and flow speed.": 1,
     "Correct polar Gaussian integral over the whole plane.": 1,
-    "Correct fundamental Fourier k-space encoding and inverse-transform reconstruction description for conventional MRI.": 1
+    "Correct fundamental Fourier k-space encoding and inverse-transform reconstruction description for conventional MRI.": 1,
+    "Correct incompressibility volume-ratio constraint and pressure-multiplier explanation.": 1,
+    "Correct Jordan-block explanation when the characteristic polynomial splits over the chosen field.": 1,
+    "Correct flow-based Lie derivative explanation and accepted Truesdell-rate terminology for Kirchhoff stress.": 1,
+    "Correct Cauchy-stress transformation under superposed rigid rotation and reason to use objective rates in large-rotation constitutive updates.": 1,
+    "Correct concise warning that nonlinear terms can decide stability when the linearization is non-hyperbolic.": 1,
+    "Correct concise bifurcation description in parameter-dependent ODE dynamics.": 1,
+    "Reasonable learning guidance grounded in Laplace-transform identities rather than unnecessary table memorization.": 1,
+    "Correct qualified explanation of numerical invariant drift and the value of analytically informed diagnostics/structure preservation.": 1,
+    "Correct reference-volume stress-power conjugacy example for second Piola-Kirchhoff stress and Green-Lagrange strain rate.": 1,
+    "Correct practical strict-versus-wide-sense stationarity contrast and joint-Gaussian bridge.": 1,
+    "Correct matrix order, dimension and inverse-side explanation of noncommutativity.": 1,
+    "Correct right Cauchy-Green definition and role in reference-configuration strain measures.": 1,
+    "Correct introductory Jacobian matrix interpretation as the first-order local map between inputs or coordinates.": 1,
+    "Correct practical motivation for selecting coordinates adapted to geometry or symmetry.": 1,
+    "Correct plain-language conditioning-and-weighting explanation of total probability across operating cases.": 1,
+    "Correct classical Cauchy-continuum stress symmetry from angular-momentum balance when couple effects are absent.": 1,
+    "Correct existence claim that contour integration and residues can evaluate many real integrals.": 1,
+    "Correct practical guidance about common first-order ODE interfaces, while explicitly acknowledging specialized second-order methods.": 1,
+    "Correct objective-rate motivation and examples, with appropriate emphasis on constitutive consequences.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "d1859ec7605b3f50b35c206739f43e075a93ee652041ff99330a0c9c3580ef0e",
-  "substantively_unreviewed": 842,
+  "published_decisions_sha256": "b958354f7b4f2e117dad0347cc3ba6972f5d9d9e8f64b44553fdf10962f6f588",
+  "substantively_unreviewed": 823,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

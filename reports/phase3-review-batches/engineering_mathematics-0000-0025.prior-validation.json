@@ -20,16 +20,16 @@
   "model_weights_downloaded_or_loaded": false,
   "training_or_paid_compute": false,
   "automatic_checks_recreated": false,
-  "test_log_sha256": "2a2c20b02c536edc05eb4bf81cb860057af90a7331ed6f5926af7f973b5083cb",
+  "test_log_sha256": "53897cd067ce50d151bbe56fbdb6e28a92b013dfee1f4dccfa0cdaa42f7de6b1",
   "tested_code_sha256": {
     "scripts/phase3-verify-private-release.py": "64d76484b0852d041083301ce113ddc255b7906512def3dc12d0f92dc96910e1",
     "src/forge_data/citation_pilot.py": "9e17e50194ba8cb22eca0b431359d7aec1d870f8417e87b4938e3c1ff4c968d4",
     "tests/test_private_release_verifier.py": "e2a5854473e449455e9bc2ffcc207346f018a3bb49206a81546cd1cea2ace817"
   },
-  "base_commit": "8482e58c0c3e3b1cba7addcfc55c9ee1288ba4a3",
+  "base_commit": "628742ca03e044a1b876c596d4c6d835f9269346",
   "all_public_input_hashes_verified": 8,
   "candidate_message_hashes_verified": 2112,
-  "substantive_decisions_verified": 1286,
+  "substantive_decisions_verified": 1267,
   "earlier_374_decisions_unchanged": true,
   "unchanged_frozen_files": [
     "src/forge_tools/engineering.py",
@@ -46,15 +46,15 @@
     "QUARANTINE": 7
   },
   "current_dispositions": {
-    "PASS": 1005,
+    "PASS": 986,
     "REJECT": 56,
     "QUARANTINE": 226,
-    "NEEDS_HUMAN_REVIEW": 825
+    "NEEDS_HUMAN_REVIEW": 844
   },
-  "substantively_unreviewed": 823,
+  "substantively_unreviewed": 842,
   "next_batch": {
     "domain": "engineering_mathematics",
-    "offset": 25,
+    "offset": 0,
     "limit": 25
   },
   "official_reader_executed": true,
@@ -64,23 +64,24 @@
   "sqlite_reads_immutable_read_only": true,
   "earlier_392_decisions_unchanged": true,
   "latest_batch": {
-    "domain": "engineering_mathematics",
-    "offset": 0,
+    "domain": "calculus",
+    "offset": 200,
     "limit": 25,
-    "selected_window_end_exclusive": 25,
-    "new_reviews": 19,
-    "skipped_existing": 6,
+    "selected_window_end_exclusive": 215,
+    "new_reviews": 15,
+    "skipped_existing": 0,
     "preserved_structural_quarantines": [],
     "dispositions": {
-      "PASS": 19
+      "PASS": 14,
+      "QUARANTINE": 1
     }
   },
   "independent_agent_qa_complete": true,
-  "latest_batch_original_hashes_verified": 19,
+  "latest_batch_original_hashes_verified": 15,
   "latest_batch_only_expected_ledger_rows_changed": true,
   "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
   "publication_status": "LOCAL_ONLY",
-  "earlier_decisions_unchanged": 1267,
+  "earlier_decisions_unchanged": 1252,
   "electrical_domain_complete": true,
   "electrical_records_verified": 300,
   "all_392_published_decisions_unchanged": true,

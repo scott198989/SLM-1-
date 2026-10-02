@@ -35901,9 +35901,697 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/calculus-0200-0225.json",
       "original_domain_ordinal": 214
+    },
+    {
+      "id": "repo-71fdcb59b45d72a9b2008e13",
+      "messages_sha256": "71fdcb59b45d72a9b2008e13995bdcbbf82933a44ccbd295f8c939abda6e5a09",
+      "state": "PASS",
+      "rationale": "Correct practical strict-versus-wide-sense stationarity contrast and joint-Gaussian bridge.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT6.011 Signals, Systems and Inference notes",
+          "url": "https://ocw.mit.edu/courses/6-011-introduction-to-communication-control-and-signal-processing-spring-2010/a6bddaee5966f6e73450e6fe79ab0566_MIT6_011S10_notes.pdf",
+          "finding": "Distinguishes full distributional stationarity from mean/autocorrelation stationarity, and discusses joint Gaussian processes and spectral calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A jointly Gaussian process is determined by its mean and covariance; constant mean and lag-dependent covariance therefore make all finite-dimensional distributions shift-invariant."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Wide-sense stationarity requires finite second moments. Strict stationarity implies wide-sense stationarity only when those moments exist; Gaussianity means the whole process is jointly Gaussian, not merely Gaussian marginals."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 153,
+      "assistant_tokens": 128,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0000-0025.json",
+      "original_domain_ordinal": 0
+    },
+    {
+      "id": "repo-9ab3e1be12ab418702e81994",
+      "messages_sha256": "9ab3e1be12ab418702e81994feae1ffc791d39ba4f7ec5680d5f2006cdd9c8de",
+      "state": "PASS",
+      "rationale": "Correct plain-language conditioning-and-weighting explanation of total probability across operating cases.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_partition_identity",
+          "finding": "For a mutually exclusive exhaustive partition B_i, P(A)=sum_i P(A|B_i)P(B_i), with zero-probability cases handled appropriately."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The cases must be mutually exclusive and exhaustive, as required by the partition interpretation; overlapping modes cannot simply be added without adjustment."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 76,
+      "assistant_tokens": 56,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0000-0025.json",
+      "original_domain_ordinal": 1
+    },
+    {
+      "id": "repo-5dbf54fe305e683f5c71bf1b",
+      "messages_sha256": "5dbf54fe305e683f5c71bf1b3adf6badc94657e6d5723fc14f4ff5b733872826",
+      "state": "PASS",
+      "rationale": "Correct reference-volume stress-power conjugacy example for second Piola-Kirchhoff stress and Green-Lagrange strain rate.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "A. F. Bower, Applied Mechanics of Solids2.3, Forces in Solids",
+          "url": "https://solidmechanics.org/Text/Chapter2_3/Chapter2_3.php",
+          "finding": "Defines current Cauchy and reference Piola stress measures and their deformation-gradient/Jacobian transformation, supporting the power-conjugacy identity."
+        },
+        {
+          "method": "independent_continuum_kinematics",
+          "finding": "For invertible F, C=F^T F and E=(C-I)/2 describe reference-metric deformation; J=det F is the local volume ratio."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For classical symmetric stress, E_dot=F^T D F and S=J F^-1 sigma F^-T, so S:E_dot=J sigma:D, the power per reference volume."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Conjugacy uses the proper stress/strain measure, tensor contraction and volume convention; the Cauchy stress power sigma:D is per current volume."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 76,
+      "assistant_tokens": 60,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0000-0025.json",
+      "original_domain_ordinal": 3
+    },
+    {
+      "id": "repo-4bcf00c8ea8c1f56f43c9ebf",
+      "messages_sha256": "4bcf00c8ea8c1f56f43c9ebf097fa15fd4d06b884f9e57cae34bdd09c84eb89a",
+      "state": "PASS",
+      "rationale": "Correct Cauchy-stress transformation under superposed rigid rotation and reason to use objective rates in large-rotation constitutive updates.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "A. F. Bower, Applied Mechanics of Solids2.3, Forces in Solids",
+          "url": "https://solidmechanics.org/Text/Chapter2_3/Chapter2_3.php",
+          "finding": "Defines current Cauchy and reference Piola stress measures and their deformation-gradient/Jacobian transformation, supporting the power-conjugacy identity."
+        },
+        {
+          "title": "Z. Fiala, Engineering Mechanics2009, geometry and stress rates",
+          "url": "https://www.engmech.cz/improc/2009/Fiala-211-PT.pdf",
+          "finding": "Explicitly identifies the Lie derivative of Kirchhoff stress with the Truesdell stress rate; the related Cauchy rate has a different Jacobian normalization."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For proper orthogonal Q, sigma_star=Q sigma Q^T; differentiating introduces spin terms that an ordinary component time derivative does not remove."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is the frame/pure-rotation transformation, not a complete constitutive evolution law for a body simultaneously undergoing deformation."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 83,
+      "assistant_tokens": 65,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0000-0025.json",
+      "original_domain_ordinal": 4
+    },
+    {
+      "id": "repo-4deec69a62b740354e421408",
+      "messages_sha256": "4deec69a62b740354e42140821ccfa177b859153d47585e0de3b85c1b15c9342",
+      "state": "PASS",
+      "rationale": "Correct concise warning that nonlinear terms can decide stability when the linearization is non-hyperbolic.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic identity, local example, tensor transformation and scope condition is checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "x_prime=-x³ and x_prime=+x³ both have zero linearization at0, but the first is locally asymptotically stable and the second unstable. Any small positive coefficient retains this distinction."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 45,
+      "assistant_tokens": 28,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0000-0025.json",
+      "original_domain_ordinal": 5
+    },
+    {
+      "id": "repo-b5d5f8d8a7fe208fa8a3e2a0",
+      "messages_sha256": "b5d5f8d8a7fe208fa8a3e2a0b138e621aaed5ee222c74df228b0fa8819ff5919",
+      "state": "PASS",
+      "rationale": "Correct classical Cauchy-continuum stress symmetry from angular-momentum balance when couple effects are absent.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "A. F. Bower, Applied Mechanics of Solids2.3, Forces in Solids",
+          "url": "https://solidmechanics.org/Text/Chapter2_3/Chapter2_3.php",
+          "finding": "Defines current Cauchy and reference Piola stress measures and their deformation-gradient/Jacobian transformation, supporting the power-conjugacy identity."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a classical continuum without independent couple stresses or body couples, angular-momentum balance gives sigma_ij=sigma_ji."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The phrase body couple stresses is loose; this does not extend to micropolar/couple-stress media with independent rotational balance."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 45,
+      "assistant_tokens": 32,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0000-0025.json",
+      "original_domain_ordinal": 7
+    },
+    {
+      "id": "repo-523b0618884650a8fabc14a0",
+      "messages_sha256": "523b0618884650a8fabc14a0569f86edd1e0f877e44c439f605bb4793347c49a",
+      "state": "PASS",
+      "rationale": "Reasonable learning guidance grounded in Laplace-transform identities rather than unnecessary table memorization.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic identity, local example, tensor transformation and scope condition is checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For example L{exp(a*t)f(t)}(s)=F(s-a), and linearity/partial fractions recover many standard inverse transforms."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Regions of convergence and transform existence still matter when using these rules."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 79,
+      "assistant_tokens": 61,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0000-0025.json",
+      "original_domain_ordinal": 8
+    },
+    {
+      "id": "repo-5827914ae23326ffa4624f02",
+      "messages_sha256": "5827914ae23326ffa4624f02bce1a9b93ee3da19c152b6bdf192422859fae61e",
+      "state": "PASS",
+      "rationale": "Correct qualified explanation of numerical invariant drift and the value of analytically informed diagnostics/structure preservation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic identity, local example, tensor transformation and scope condition is checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Forward Euler on q_prime=p,p_prime=-q maps energy(q²+p²)/2 to(1+h²) times its old value, giving artificial long-time growth."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Ignoring an invariant does not make every numerical result wrong; the answer says can drift and often improve, not a universal claim that exact invariant preservation alone guarantees accuracy."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 167,
+      "assistant_tokens": 144,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0000-0025.json",
+      "original_domain_ordinal": 10
+    },
+    {
+      "id": "repo-c57d6711a6bd217ac6e82170",
+      "messages_sha256": "c57d6711a6bd217ac6e82170e3676dfb16b79491b12bec16b603399180df1ada",
+      "state": "PASS",
+      "rationale": "Correct existence claim that contour integration and residues can evaluate many real integrals.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic identity, local example, tensor transformation and scope condition is checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Closing a contour for1/(1+z²) in the upper half-plane picks the pole at i and yields integral_R dx/(1+x²)=pi after the large-arc contribution vanishes."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A valid contour and arc/branch analysis are needed; not every real integral becomes easy."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 42,
+      "assistant_tokens": 25,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0000-0025.json",
+      "original_domain_ordinal": 11
+    },
+    {
+      "id": "repo-c7bc9953237f7db1bba31c9e",
+      "messages_sha256": "c7bc9953237f7db1bba31c9e9c1402faf146e710a7abfea28d17856427371eef",
+      "state": "PASS",
+      "rationale": "Correct practical guidance about common first-order ODE interfaces, while explicitly acknowledging specialized second-order methods.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "SciPy integration tutorial, solve_ivp",
+          "url": "https://docs.scipy.org/doc/scipy/tutorial/integrate.html",
+          "finding": "The general solve_ivp interface integrates a first-order vector ODE; higher-order equations are reduced by introducing derivative variables."
+        },
+        {
+          "title": "SciML DifferentialEquations, Dynamical and Second-Order ODE Problems",
+          "url": "https://docs.sciml.ai/DiffEqDocs/stable/types/dynamical_types/",
+          "finding": "Provides a specialized SecondOrderODEProblem interface and structured dynamical formulations for second-order equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For y_second=f(t,y,y_prime), setting v=y_prime gives y_prime=v and v_prime=f(t,y,v)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Most is a qualitative convention rather than a measured software census; the cited common interface and specialized counterexample support the intended distinction."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 57,
+      "assistant_tokens": 33,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0000-0025.json",
+      "original_domain_ordinal": 12
+    },
+    {
+      "id": "repo-220cf88e63bd4525beaee40b",
+      "messages_sha256": "220cf88e63bd4525beaee40b929d559f6de0b29554b6c96dafcb51d0761aeb44",
+      "state": "PASS",
+      "rationale": "Correct incompressibility volume-ratio constraint and pressure-multiplier explanation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_continuum_kinematics",
+          "finding": "For invertible F, C=F^T F and E=(C-I)/2 describe reference-metric deformation; J=det F is the local volume ratio."
+        },
+        {
+          "title": "A. F. Bower, Applied Mechanics of Solids2.3, Forces in Solids",
+          "url": "https://solidmechanics.org/Text/Chapter2_3/Chapter2_3.php",
+          "finding": "Defines current Cauchy and reference Piola stress measures and their deformation-gradient/Jacobian transformation, supporting the power-conjugacy identity."
+        },
+        {
+          "title": "A. F. Bower, Applied Mechanics of Solids3.5.4",
+          "url": "https://solidmechanics.org/Text/Chapter3_5/Chapter3_5.php",
+          "finding": "In incompressible elasticity, pressure is an undetermined multiplier fixed through equilibrium/momentum balance and boundary conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "J=det F=1 enforces reference-to-current volume preservation; the pressure term can enter Cauchy stress as-p I without being fixed by an isochoric deformation alone."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The pressure field is found with equilibrium/momentum balance and boundary conditions, not boundary values alone in an arbitrary model. J=1 assumes the reference configuration is the material reference volume."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 89,
+      "assistant_tokens": 64,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0000-0025.json",
+      "original_domain_ordinal": 13
+    },
+    {
+      "id": "repo-d3107a9b311fe4d87afa6bcb",
+      "messages_sha256": "d3107a9b311fe4d87afa6bcb7b135cfb3e259872928e5b44170f0042162be62e",
+      "state": "PASS",
+      "rationale": "Correct objective-rate motivation and examples, with appropriate emphasis on constitutive consequences.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Z. Fiala, Engineering Mechanics2009, geometry and stress rates",
+          "url": "https://www.engmech.cz/improc/2009/Fiala-211-PT.pdf",
+          "finding": "Explicitly identifies the Lie derivative of Kirchhoff stress with the Truesdell stress rate; the related Cauchy rate has a different Jacobian normalization."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic identity, local example, tensor transformation and scope condition is checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For Cauchy stress, the Truesdell expression is sigma_dot-L sigma-sigma L^T+tr(L)*sigma. A corotational Jaumann rate instead removes the spin contribution."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Objectivity alone does not select a physically adequate constitutive law or make different rates interchangeable without transforming the associated tangent law."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 93,
+      "assistant_tokens": 79,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0000-0025.json",
+      "original_domain_ordinal": 14
+    },
+    {
+      "id": "repo-2fca252e2c88071ad63e86b6",
+      "messages_sha256": "2fca252e2c88071ad63e86b60fe38938f8721e1202a581e6f792db62cc2afe60",
+      "state": "PASS",
+      "rationale": "Correct Jordan-block explanation when the characteristic polynomial splits over the chosen field.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic identity, local example, tensor transformation and scope condition is checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For J=lambda I+N with nilpotent N, exp(tJ)=exp(lambda*t)*sum_{k=0}^{m-1}(tN)^k/k!, giving polynomial factors from the nontrivial blocks."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Close to diagonal is structural shorthand, not a numerical distance or stability claim. Jordan forms can be extremely ill-conditioned computationally; the eigenvalue-field qualifier is material."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 164,
+      "assistant_tokens": 140,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0000-0025.json",
+      "original_domain_ordinal": 15
+    },
+    {
+      "id": "repo-9253d2203b04a84f7fed1677",
+      "messages_sha256": "9253d2203b04a84f7fed167774551336eb8ec7727e4f1a52e6600ad35cfbf7b5",
+      "state": "PASS",
+      "rationale": "Correct introductory Jacobian matrix interpretation as the first-order local map between inputs or coordinates.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic identity, local example, tensor transformation and scope condition is checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For differentiable Phi, Phi(x+h)=Phi(x)+D Phi(x)h+o(||h||)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The matrix is distinct from its determinant, and a finite nonlinear coordinate change is only locally approximated by this linear conversion."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 57,
+      "assistant_tokens": 39,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0000-0025.json",
+      "original_domain_ordinal": 16
+    },
+    {
+      "id": "repo-7e5e4572a64f6fc8444ff317",
+      "messages_sha256": "7e5e4572a64f6fc8444ff317e635c9f45d7fb86f174af11896ff267f8a191ba4",
+      "state": "PASS",
+      "rationale": "Correct right Cauchy-Green definition and role in reference-configuration strain measures.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_continuum_kinematics",
+          "finding": "For invertible F, C=F^T F and E=(C-I)/2 describe reference-metric deformation; J=det F is the local volume ratio."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "C=F^T F and E=(C-I)/2; under superposed rotation F_star=QF, C_star=F^T Q^T QF=C."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 52,
+      "assistant_tokens": 36,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0000-0025.json",
+      "original_domain_ordinal": 17
+    },
+    {
+      "id": "repo-4f265a2bd103c61cac88df87",
+      "messages_sha256": "4f265a2bd103c61cac88df875c2ea4f8858c0332b84dbe71c4c3c89f69c69f06",
+      "state": "PASS",
+      "rationale": "Correct concise bifurcation description in parameter-dependent ODE dynamics.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic identity, local example, tensor transformation and scope condition is checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "x_prime=mu-x² changes from no equilibria to one degenerate equilibrium to two as mu crosses0, illustrating a saddle-node bifurcation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A full bifurcation theorem needs the appropriate parameter and nondegeneracy conditions; the answer gives examples of qualitative change."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 55,
+      "assistant_tokens": 33,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0000-0025.json",
+      "original_domain_ordinal": 19
+    },
+    {
+      "id": "repo-9a893d8c76b0b0028609d111",
+      "messages_sha256": "9a893d8c76b0b0028609d111ff765ef5a3b3b2f7a4dcc3771b5736aa627f7cc1",
+      "state": "PASS",
+      "rationale": "Correct practical motivation for selecting coordinates adapted to geometry or symmetry.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic identity, local example, tensor transformation and scope condition is checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A disk becomes0<=r<=R,0<=theta<2pi in polar coordinates, simplifying its domain description."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Coordinate transformations require the proper Jacobian and domain/coverage handling in actual computations."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 47,
+      "assistant_tokens": 31,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0000-0025.json",
+      "original_domain_ordinal": 22
+    },
+    {
+      "id": "repo-3c15317a23c1e87bca3d4f07",
+      "messages_sha256": "3c15317a23c1e87bca3d4f076278f8cd0f4968f44d3345c2c5ddd7cbc77c3e4d",
+      "state": "PASS",
+      "rationale": "Correct flow-based Lie derivative explanation and accepted Truesdell-rate terminology for Kirchhoff stress.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Z. Fiala, Engineering Mechanics2009, geometry and stress rates",
+          "url": "https://www.engmech.cz/improc/2009/Fiala-211-PT.pdf",
+          "finding": "Explicitly identifies the Lie derivative of Kirchhoff stress with the Truesdell stress rate; the related Cauchy rate has a different Jacobian normalization."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic identity, local example, tensor transformation and scope condition is checked independently."
+        },
+        {
+          "title": "Ostwald, Kuhl and Menzel (2019), AppendixA.2 equations85-86",
+          "url": "https://link.springer.com/article/10.1007/s00466-019-01684-5",
+          "finding": "Explicitly identifies the Lie derivative as the Truesdell/Oldroyd Kirchhoff rate, distinguishing it from the J-normalized Cauchy rate."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For tau=F S F^T, its contravariant Lie rate is F*S_dot*F^T=tau_dot-L*tau-tau*L^T. Dividing by J gives the associated Truesdell rate of Cauchy stress."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Keep the stress measure explicit: the Cauchy Truesdell formula includes tr(L)*sigma, whereas the Kirchhoff expression does not. Objectivity supports a formulation but is not a universal material-model suitability guarantee."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 93,
+      "assistant_tokens": 74,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0000-0025.json",
+      "original_domain_ordinal": 23
+    },
+    {
+      "id": "repo-7693bf1bc04d77b230f44a52",
+      "messages_sha256": "7693bf1bc04d77b230f44a52cb67cdf9e41d5f31b01644afd5ad1584cfc8e45b",
+      "state": "PASS",
+      "rationale": "Correct matrix order, dimension and inverse-side explanation of noncommutativity.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Each algebraic identity, local example, tensor transformation and scope condition is checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If A is2x3 and B is3x4, AB exists as2x4 while BA is undefined. For square matrices, composition order and inverse multiplication side still matter."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Some matrices commute, including scalar multiples of identity; the answer says usually rather than never."
+        }
+      ],
+      "domain": "engineering_mathematics",
+      "primary_source": "D_Advanced_Eng_Math.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 140,
+      "assistant_tokens": 120,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/engineering_mathematics-0000-0025.json",
+      "original_domain_ordinal": 24
     }
   ],
-  "reviewed": 1267,
+  "reviewed": 1286,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true
