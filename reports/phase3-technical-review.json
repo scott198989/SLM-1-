@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 479,
+    "PASS": 491,
     "REJECT": 41,
-    "QUARANTINE": 148,
-    "NEEDS_HUMAN_REVIEW": 1444
+    "QUARANTINE": 152,
+    "NEEDS_HUMAN_REVIEW": 1428
   },
   "by_domain": {
     "circuits": {
@@ -20,10 +20,10 @@
       "NEEDS_HUMAN_REVIEW": 194
     },
     "algebra": {
-      "PASS": 9,
+      "PASS": 21,
       "REJECT": 2,
-      "QUARANTINE": 2,
-      "NEEDS_HUMAN_REVIEW": 203
+      "QUARANTINE": 6,
+      "NEEDS_HUMAN_REVIEW": 187
     },
     "thermal_process_engineering": {
       "PASS": 73,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 667,
+  "agent_substantive_reviews": 683,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "9c26e245446eeca73f715d5140183c0de84d8f274ff8e88c6364d30ef3cde35f",
+  "technical_review_sha256": "0d1a3a1e8927a672df416c8156d2c183a3ef2be9ce8d1cc97f22e92ac14dcf9b",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1442,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1426,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -748,11 +748,27 @@
     "Acceptable quick conceptual explanation of reinforced versus basic protection and the common roughly doubled creepage requirement. Roughly and the definition-level prompt do not provide a design dimension or claim creepage alone certifies an entire insulation system.": 1,
     "Reasonable plain-language warning that stress ratings are not operating targets and sustained use near them can damage reliability. Brief survival language does not supply a safe pulse duration or a guarantee of functional behavior at the absolute maximum.": 1,
     "Correct common relay benefit: a low-power/remote control signal can command a higher-power load path. It does not imply every relay is appropriately rated for every high-power load or that a direct switch can never be suitable.": 1,
-    "The categorical refusal overlooks a fixed-time survival confidence bound. Under independent representative units tested under the stated conditions, 50 survivors can support R(100 h)>0.9 at a defined confidence level without fitting a parametric lifetime distribution. A 10th-percentile bound is not the same task as estimating the whole life distribution. No unconditional population claim is approved, but the answer's only-know-these-units conclusion is too restrictive.": 1
+    "The categorical refusal overlooks a fixed-time survival confidence bound. Under independent representative units tested under the stated conditions, 50 survivors can support R(100 h)>0.9 at a defined confidence level without fitting a parametric lifetime distribution. A 10th-percentile bound is not the same task as estimating the whole life distribution. No unconditional population claim is approved, but the answer's only-know-these-units conclusion is too restrictive.": 1,
+    "The alternating and monolithic architectures are described correctly, but the unqualified statement that simultaneous solution gives better convergence properties is not generally justified. Robustness and convergence depend on the coupled equations, linearization, solver and preconditioner.": 1,
+    "Correct determinant-transpose identity, with the Leibniz formula providing the stated general justification. The row/column expansion explanation is appropriate intuition.": 1,
+    "The explicitly conditional answer correctly explains that coupling can encode exploitable structure, stabilize a system, or constrain an optimization problem. It does not claim all coupling improves solvability.": 1,
+    "The polynomial degree and long-division rule is correct for rational functions, but the unrestricted prompt asks for an oblique asymptote generally. The answer never states the rational-function assumption or a general limiting definition, so it is incomplete as a standalone definition.": 1,
+    "Correct subgroup proof: the kernel contains the identity, is closed under products and contains inverses. Associativity is inherited from the ambient group.": 1,
+    "Sound simple-language description of dependent complete equations as redundant constraints. Removing an equation implied by the others leaves the solution set unchanged.": 1,
+    "Valid exhaustive argument for a group of order two. The inverse of the nonidentity element cannot be the identity, so it is itself; the resulting multiplication table is symmetric.": 1,
+    "Correctly distinguishes eigenvalue preservation under similarity from the insufficiency of eigenvalues to establish similarity. Jordan block sizes supply the missing structure over a field where the characteristic polynomial splits.": 1,
+    "Faithful introductory restatement: an algebraic proof uses valid symbolic and logical deductions to establish a statement, rather than relying on a diagram or a few numerical checks.": 1,
+    "Correct qualitative connection between positive transition Jacobian determinants and a consistent manifold orientation. The answer says negative transitions may indicate nonorientability, rather than claiming one negative transition proves it.": 1,
+    "Correctly accepts exhaustive proof when all cases in a finite complete case split are verified. The practicality warning concerns literal enumeration and does not deny a finite symbolic case split covering an infinite domain.": 1,
+    "The spectral-radius definition is correct, but the unrestricted claim that it determines stability in dynamical systems needs a discrete-time or iteration-matrix qualification. Continuous-time systems with equal spectral radius can have opposite stability.": 1,
+    "The list names useful approaches, but the proposed implicit-function elimination omits the regularity and nonsingular constraint-Jacobian hypotheses required to invoke the standard implicit-function theorem. The visible prompt gives only a nonlinear system, and does not establish an optimization or variational setting for the multiplier suggestion. Hold for those scope conditions rather than rejecting the methods themselves.": 1,
+    "Complete standard proof that integers under addition form a group: closure, associativity, additive identity and additive inverse all hold.": 1,
+    "Correct symbolic eigenvalue workflow using the characteristic determinant, followed by null-space computation of eigenvectors. The extra eigenvector step is useful and does not alter the eigenvalue procedure.": 1,
+    "Correctly identifies the monic characteristic polynomial, the identity as the only diagonalizable matrix with every eigenvalue 1, and possible nontrivial unipotent Jordan structure. The nonuniqueness conclusion is correct.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "33ebb684ae1ecae0a6f0b56ad358dbc09479a6c24d764186272a68d2d682daef",
-  "substantively_unreviewed": 1442,
+  "published_decisions_sha256": "52bb5860b111282b7055a4e17a7569196b19d0033ee709f2802f8cfcc72c2052",
+  "substantively_unreviewed": 1426,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

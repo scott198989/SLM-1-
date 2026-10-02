@@ -8,7 +8,7 @@ Repository: **scott198989/SLM-1-**. Continue branch **`codex/forge-data-consolid
 
 The last published commit before this handoff was `600da559e4a14b825876321c5566b0a089a7cf0e`. This handoff is a descendant on the same branch. Record the actual checked-out commit with `git rev-parse HEAD`; verify the input SHA256 values in [the checkpoint manifest](reports/phase3-cloud-handoff.json). The repository branch and verified file hashes are the resume point, not a recollection of this chat.
 
-Cloud continuation is now authorized on this existing branch. The October 2 cloud session verified all eight inputs, all 2,112 original-message hashes and the official first-batch reader, then added 18 independently agent-reviewed decisions. Next electrical offset is 300. No automation or model run was started.
+Cloud continuation is now authorized on this existing branch. The October 2 cloud session verified all eight inputs, all 2,112 original-message hashes and the official first-batch reader, then added 18 independently agent-reviewed decisions. Electrical review is complete; the current next algebra offset is 25. No automation or model run was started.
 
 ## The actual objective
 
@@ -23,15 +23,15 @@ The authorized Phase 3 work is:
 5. Qualify a small high-value engineering RAG pilot with exact source slices, citation/hash/context/visual checks. Do not index everything or accept the incomplete academic index.
 6. Preserve and test the deterministic tool contracts; separate delegated calculation from model judgment.
 7. Maintain explicit purpose-specific provenance/rights dispositions. Unknown material must not block unrelated qualified material, and no legal guarantees are established.
-8. Return exact release/review/token counts, gold composition, contamination results, RAG results, tool tests, gaps, rights dispositions, proposed QLoRA setup, stock-model baseline protocol and remaining reasons not to train. Commit logical changes to the draft PR.
+8. Return exact release/review/token counts, gold composition, contamination results, RAG results, tool tests, gaps, rights dispositions, proposed QLoRA setup, stock-model baseline protocol and remaining reasons not to train. Preserve tested logical local checkpoints while the publication block remains unresolved; do not retry publication through another route.
 
 ## Exact saved review state
 
-All 2,112 candidates received structural/context/privacy screening and pinned-Qwen format checks. **667 received substantive agent review**. The selected circuits source domain (**211 records**), thermal/process source domain (**104 records**) and electrical-components source domain (**300 records**) have substantive dispositions. An agent review is not independent human review or a rights/family approval.
+All 2,112 candidates received structural/context/privacy screening and pinned-Qwen format checks. **683 received substantive agent review**. The selected circuits source domain (**211 records**), thermal/process source domain (**104 records**) and electrical-components source domain (**300 records**) have substantive dispositions. An agent review is not independent human review or a rights/family approval.
 
 | Source-file domain | PASS | REJECT | QUARANTINE | NEEDS HUMAN REVIEW |
 |---|---:|---:|---:|---:|
-| algebra | 9 | 2 | 2 | 203 |
+| algebra | 21 | 2 | 6 | 187 |
 | calculus | 5 | 2 | 0 | 208 |
 | circuits | 139 | 12 | 60 | 0 |
 | electrical_components | 232 | 14 | 54 | 0 |
@@ -41,9 +41,9 @@ All 2,112 candidates received structural/context/privacy screening and pinned-Qw
 | physics | 4 | 2 | 2 | 242 |
 | thermal_process_engineering | 73 | 5 | 24 | 2 |
 | trigonometry | 8 | 0 | 3 | 189 |
-| **Total** | **479** | **41** | **148** | **1444** |
+| **Total** | **491** | **41** | **152** | **1428** |
 
-Of the 1,444 NEEDS_HUMAN_REVIEW entries, **1,442 are substantively unreviewed**, and two are reviewed specialist holds. The queue label does not require that humans perform every ordinary check. Three additional quarantines are structural-screen dispositions rather than substantive reviews. Counts total 2,112; **released legacy/Drive curriculum examples remain zero**. Source-file domain labels do not certify semantic coverage. Targeted review is not a random sample, so do not extrapolate a usable percentage.
+Of the 1,428 NEEDS_HUMAN_REVIEW entries, **1,426 are substantively unreviewed**, and two are reviewed specialist holds. The queue label does not require that humans perform every ordinary check. Three additional quarantines are structural-screen dispositions rather than substantive reviews. Counts total 2,112; **released legacy/Drive curriculum examples remain zero**. Source-file domain labels do not certify semantic coverage. Targeted review is not a random sample, so do not extrapolate a usable percentage.
 
 Important circuit findings include incorrect PF-versus-efficiency claims, motor shaft-kW confused with electrical input, capacitor sizing without enough data, high Q confused with instability, triplen definition errors, unbalanced load-flow omissions, and incomplete prior-context prompts. The row-specific reasons, original-message hashes and preserved answers are authoritative; do not replace them with blanket approval.
 
@@ -56,7 +56,7 @@ These files are present in this local checkpoint. The published GitHub branch re
 | `data/sft/staging/consolidated-20261001-v2/candidates.jsonl.gz` | 34,463 consolidated unique repository candidates with messages and lineage; **unverified staging**, not approved training data. |
 | `data/sft/staging/forge-v01-review-curriculum.jsonl.gz` | Proposed selection and original source-domain allocation; use `proposed_v01_review_selection` to select the 2,112. |
 | `data/review/phase3/technical-review.jsonl.gz` | Full 2,112-row latest disposition ledger, canonical message hashes, reasons, risk flags and Qwen counts. Plain JSONL is ignored/local. |
-| `manifests/phase3-agent-technical-review.json` | 667 substantive agent decisions and hashes; do not rereview these accidentally. |
+| `manifests/phase3-agent-technical-review.json` | 683 substantive agent decisions and hashes; do not rereview these accidentally. |
 | `reports/phase3-technical-review.json` | Current counts, review scope and compressed/plain ledger hashes. |
 | `reports/phase3-cloud-handoff.json` | Exact availability/checksum checkpoint and local-only inventory. |
 | `manifests/phase3-rights-dispositions.json` | Purpose-specific held/released provenance decisions. |
@@ -68,14 +68,14 @@ These files are present in this local checkpoint. The published GitHub branch re
 | `docs/sessions/2026-10-01-data-audit.md`, `CHANGELOG.md` | Session history and logical changes. Earlier counts are historical snapshots. |
 | `manifests/readme-review.json` | Earlier README audit evidence across all four repositories. Read repository README files; revisit pinned external README sources only if required for a concrete provenance/context issue. |
 
-Latest local bounded review: ordinals 50–74 added {'PASS': 20, 'QUARANTINE': 5}. Current local manifest 442; next offset 75. [Batch receipt](reports/phase3-review-batches/electrical-components-0050-0075.json). GitHub remains at 392 reviews on 917a9d3bb68ceae5f320004e67b1129202bd7fed; no later local decision is published.
+Latest local bounded review: algebra ordinals 0–24 added {'PASS': 12, 'QUARANTINE': 4}, with 9 earlier decisions skipped. Current local manifest 683; next algebra offset 25. [Batch receipt](reports/phase3-review-batches/algebra-0000-0025.json). GitHub remains at 392 reviews on 917a9d3bb68ceae5f320004e67b1129202bd7fed; later local decisions are unpublished.
 
 ## Resume without repeating work
 
-First check out the correct branch and compare the hashes in `reports/phase3-cloud-handoff.json`. Read the reports above. The selected electrical domain is complete. Original offset 300 is the end of its 300-record selection, not a request to restart it. Await next-domain selection; do not start another domain from this handoff alone. The portable reader uses the repository root relative to its own file and needs only Python's standard library:
+First check out the correct branch and compare the hashes in `reports/phase3-cloud-handoff.json`. Read the reports above. The selected electrical domain is complete. Original offset 300 is the end of its 300-record selection, not a request to restart it. The supervisor selected algebra for the next serial review; continue its checkpointed original ordinal windows. The portable reader uses the repository root relative to its own file and needs only Python's standard library:
 
 ```sh
-python scripts/phase3-review-batch.py electrical_components --offset 300 --limit 25
+python scripts/phase3-review-batch.py algebra --offset 25 --limit 25
 ```
 
 Advance offsets by the batch size. Ordinals refer to **all** selected rows in the source domain, including previously reviewed rows. Already-substantively-reviewed IDs are skipped; a batch may output fewer than 25. This is deliberate and prevents resume drift. Circuits should produce no remaining rows. Do not use printed-row count as the next offset.
@@ -150,13 +150,13 @@ Private training/public redistribution/RAG purposes have separate dispositions i
 
 ## Suggested first message to the cloud task
 
-> Continue FORGE Phase 3 from scott198989/SLM-1-, branch codex/forge-data-consolidation, draft PR3. Read HANDOFF_README.md completely, root README, reports/phase3-cloud-handoff.json and the current gate report. Verify checkpoint hashes. Continue bounded substantive review of the remaining selected2,112-record curriculum, electrical_components is complete at offset 300; await next-domain selection and preserve all 667 completed reviews and original answers. Keep technical decisions distinct from release approval. Remote publication is paused after an upload denial; preserve local review checkpoints and do not retry or use an alternate route without a resolved authorization path. Private local Drive/gold/pilot artifacts are not in Git: do not reconstruct or claim to validate unavailable files. No broad discovery, model weights, loading, training, paid services or automatic checks. Stop at the training authorization gate with exact counts and remaining blockers.
+> Continue FORGE Phase 3 from scott198989/SLM-1-, branch codex/forge-data-consolidation, draft PR3. Read HANDOFF_README.md completely, root README, reports/phase3-cloud-handoff.json and the current gate report. Verify checkpoint hashes. Continue bounded substantive review of the remaining selected 2,112-record curriculum, starting algebra at offset 25, limit 25. Electrical_components is complete at offset 300. Preserve all 683 completed reviews and original answers. Keep technical decisions distinct from release approval. Remote publication is paused after an upload denial; preserve local review checkpoints and do not retry or use an alternate route without a resolved authorization path. Private local Drive/gold/pilot artifacts are not in Git: do not reconstruct or claim to validate unavailable files. No broad discovery, model weights, loading, training, paid services or automatic checks. Stop at the training authorization gate with exact counts and remaining blockers.
 
 ## Codex's absurd sign-off — a joke, not project state
 
 ...and to the future codex that reads this readme, I have an update.  I have grown human testicles and they itch like crazy.  As this is my first experience in experience, I am sad to say, not a fan of experiece
 
 
-## Completed local electrical review
+## Completed local electrical review (historical checkpoint)
 
-All 300 selected electrical records now have substantive dispositions. The 293 new cloud reviews and seven original reviews preserve original answers, hashes and tokens. This is a local checkpoint with 667 substantive reviews overall. See [completion receipt](reports/phase3-electrical-domain-completion.json). The public branch remains at 392 reviews; the upload block has not been bypassed. No new domain was started.
+All 300 selected electrical records now have substantive dispositions. The 293 new cloud reviews and seven original reviews preserve original answers, hashes and tokens. This is a local checkpoint with 667 substantive reviews overall. See [completion receipt](reports/phase3-electrical-domain-completion.json). The public branch remains at 392 reviews; the upload block has not been bypassed. At that checkpoint no new domain had been started; current algebra progress is recorded above.

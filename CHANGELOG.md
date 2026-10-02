@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-02 - Local algebra review 0–24
+
+- Added {'PASS': 12, 'QUARANTINE': 4} after independent agent QA; 9 existing decisions skipped, all original answers and prior 667 reviews unchanged.
+- Current local reviews: 683; dispositions: {'PASS': 491, 'REJECT': 41, 'QUARANTINE': 152, 'NEEDS_HUMAN_REVIEW': 1428}; next algebra offset: 25.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
 ## 2026-10-02 - Local electrical-domain completion
 
 - Completed all 300 selected electrical curriculum dispositions after serial record-level review and independent agent QA.

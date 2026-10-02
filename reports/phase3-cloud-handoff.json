@@ -8,10 +8,10 @@
   "review": {
     "curriculum": 2112,
     "dispositions": {
-      "PASS": 479,
+      "PASS": 491,
       "REJECT": 41,
-      "QUARANTINE": 148,
-      "NEEDS_HUMAN_REVIEW": 1444
+      "QUARANTINE": 152,
+      "NEEDS_HUMAN_REVIEW": 1428
     },
     "by_domain": {
       "circuits": {
@@ -27,10 +27,10 @@
         "NEEDS_HUMAN_REVIEW": 194
       },
       "algebra": {
-        "PASS": 9,
+        "PASS": 21,
         "REJECT": 2,
-        "QUARANTINE": 2,
-        "NEEDS_HUMAN_REVIEW": 203
+        "QUARANTINE": 6,
+        "NEEDS_HUMAN_REVIEW": 187
       },
       "thermal_process_engineering": {
         "PASS": 73,
@@ -75,8 +75,8 @@
         "NEEDS_HUMAN_REVIEW": 242
       }
     },
-    "agent_substantive_reviews": 667,
-    "substantively_unreviewed": 1442,
+    "agent_substantive_reviews": 683,
+    "substantively_unreviewed": 1426,
     "reviewed_specialist_holds": 2,
     "complete_source_domains": [
       "circuits",
@@ -98,13 +98,13 @@
     },
     {
       "path": "data/review/phase3/technical-review.jsonl.gz",
-      "bytes": 253703,
-      "sha256": "33ebb684ae1ecae0a6f0b56ad358dbc09479a6c24d764186272a68d2d682daef"
+      "bytes": 259466,
+      "sha256": "52bb5860b111282b7055a4e17a7569196b19d0033ee709f2802f8cfcc72c2052"
     },
     {
       "path": "manifests/phase3-agent-technical-review.json",
-      "bytes": 895986,
-      "sha256": "1b237203c5ff80ecfe858537b7c462c5566a858227fbde099c4e27546fba8596"
+      "bytes": 926306,
+      "sha256": "379503d5fa86980db42f0fb7191c56d149b449c2ce5c0fa4a5531664e619178f"
     },
     {
       "path": "manifests/phase3-release-families.json",
@@ -113,8 +113,8 @@
     },
     {
       "path": "reports/phase3-technical-review.json",
-      "bytes": 153873,
-      "sha256": "f0368c15d23e253b9a6c1cb42d3b5afac8184507bc4debf753782b4b98d333c6"
+      "bytes": 157667,
+      "sha256": "a6ec21677becdd13e4f2baeb9eb65c110bf5f9cacb50074b4ea8444a9349d8e9"
     },
     {
       "path": "src/forge_tools/engineering.py",
@@ -216,12 +216,11 @@
     "incomplete_review_index_chunks": 43205,
     "incomplete_review_index_production_approved": false
   },
-  "next_domain": "electrical_components",
+  "next_domain": "algebra",
   "next_batch": {
-    "domain": "electrical_components",
-    "offset": 300,
-    "limit": 25,
-    "status": "DOMAIN_COMPLETE; await next-domain selection"
+    "domain": "algebra",
+    "offset": 25,
+    "limit": 25
   },
   "workers": [],
   "automatic_checks": "DELETED_DO_NOT_RECREATE",
@@ -231,9 +230,9 @@
   "latest_cloud_continuation": "reports/phase3-cloud-continuation-validation.json",
   "local_continuation": {
     "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
-    "local_predecessor_commit": "75dc6bb48102a32e712825a5d9dbeda2f703f4b5",
+    "local_predecessor_commit": "59964150f76c34539bf770b939a039cf1054da05",
     "publication_status": "LOCAL_ONLY; do not claim these counts are on GitHub",
-    "latest_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
-    "domain_complete": true
+    "latest_batch": "reports/phase3-review-batches/algebra-0000-0025.json",
+    "electrical_domain_complete": true
   }
 }
