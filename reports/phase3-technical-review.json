@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 806,
+    "PASS": 823,
     "REJECT": 54,
-    "QUARANTINE": 200,
-    "NEEDS_HUMAN_REVIEW": 1052
+    "QUARANTINE": 201,
+    "NEEDS_HUMAN_REVIEW": 1034
   },
   "by_domain": {
     "circuits": {
@@ -38,10 +38,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "calculus": {
-      "PASS": 5,
+      "PASS": 22,
       "REJECT": 2,
-      "QUARANTINE": 0,
-      "NEEDS_HUMAN_REVIEW": 208
+      "QUARANTINE": 1,
+      "NEEDS_HUMAN_REVIEW": 190
     },
     "electrical_components": {
       "PASS": 232,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1059,
+  "agent_substantive_reviews": 1077,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "bdffcdf96b0dad436e3456b7b99451f99c8a4897b8340b83958e9822975ffc1f",
+  "technical_review_sha256": "6c31210239076cbf626cf4340316e37ffcfaced6632558e385cbd00af04f56fb",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1050,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1032,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1140,11 +1140,29 @@
     "The reflection-coefficient map and rotation/attenuation description are useful, but general transmission-line cascading is not a hyperbolic isometry when loss is included. The stated lossy scaling provides a direct counterexample.": 1,
     "The squared-equation reduction is correct, but the requested solve is unfinished. The tan(x)=3/4 branch is left unverified, and checking only x=0 does not specify which members of the tan(x)=0 family survive.": 1,
     "The possibility of hyperbolic terms in more elaborate stability models is plausible, but the specific cosine-cosh characteristic example is not tied to a defined governing equation or boundary conditions. The claimed foundation/intermediate-support examples remain unverified.": 1,
-    "Correct expansion and cancellation of cross terms.": 1
+    "Correct expansion and cancellation of cross terms.": 1,
+    "Correct standard Newton cooling equation, sign interpretation and exponential approach for constant ambient temperature.": 1,
+    "Correct symmetric two-dimensional Hessian determinant/eigenvalue interpretation and curvature-sign explanation.": 1,
+    "Correct common qualitative strict-saddle property for a smooth unconstrained objective, with a suitably qualified escape motivation.": 1,
+    "Correct alternating-series convergence and harmonic limit-comparison test for failure of absolute convergence.": 1,
+    "Valid informal integral-theorem proof when the fields and surfaces satisfy their ordinary smoothness hypotheses.": 1,
+    "The connection to variational methods is valid, but the unqualified claims that light always takes least time and systems settle into minimum energy are too broad. General optical paths are stationary, and conservative systems need not settle.": 1,
+    "Correct lamina mass-moment formulas with squared perpendicular distances to the two axes.": 1,
+    "Correct diagnosis of the nonintegrable interior singularity and invalid antiderivative subtraction.": 1,
+    "Correct epsilon-delta positivity argument with a strictly positive lower bound.": 1,
+    "Correct nonuniqueness example and explicit acknowledgement of domain, topology and boundary-data conditions.": 1,
+    "Correct qualified account of positive forcing competing with the damping term.": 1,
+    "Correct calculus proof of the fixed-positive-area minimum-perimeter rectangle.": 1,
+    "Correct improper-integral limit and finite value despite the endpoint singularity.": 1,
+    "Correct distributed-quantity motivation for multiple integrals over spatial regions.": 1,
+    "Acceptable casual description of a flat, non-optimal saddle-like region with escape directions.": 1,
+    "Correct optimization derivation of Snell law for the standard two-homogeneous-media crossing geometry.": 1,
+    "Correct engineering Fourier-series meaning of harmonic analysis and its diagnostic motivation.": 1,
+    "Faithful explanation that local existence/uniqueness results do not supply a familiar closed form.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "8cd76122591f8e8e800df87480c5530ff815668dffefcfe20c98534930b5f262",
-  "substantively_unreviewed": 1050,
+  "published_decisions_sha256": "a66f5fa47807ff3b6003ceeb8dc13286e52c62776175982faf40095cce6e6da9",
+  "substantively_unreviewed": 1032,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

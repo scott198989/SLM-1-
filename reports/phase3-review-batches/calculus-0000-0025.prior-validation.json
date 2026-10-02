@@ -20,16 +20,16 @@
   "model_weights_downloaded_or_loaded": false,
   "training_or_paid_compute": false,
   "automatic_checks_recreated": false,
-  "test_log_sha256": "1aa72e323b757ecec18aa8d75fc4f77c820c249be40373fe69e598114da85b5f",
+  "test_log_sha256": "8c24c23f8d6e5db32e44193191ec1bd212a2ed01f3cec15a0024d5b0d84b695c",
   "tested_code_sha256": {
     "scripts/phase3-verify-private-release.py": "64d76484b0852d041083301ce113ddc255b7906512def3dc12d0f92dc96910e1",
     "src/forge_data/citation_pilot.py": "9e17e50194ba8cb22eca0b431359d7aec1d870f8417e87b4938e3c1ff4c968d4",
     "tests/test_private_release_verifier.py": "e2a5854473e449455e9bc2ffcc207346f018a3bb49206a81546cd1cea2ace817"
   },
-  "base_commit": "9fb7f43eba7b591406f2ce57cd1538799602ecc6",
+  "base_commit": "b63c4ca7ac802e73c46fc2721878d7fc572e84c8",
   "all_public_input_hashes_verified": 8,
   "candidate_message_hashes_verified": 2112,
-  "substantive_decisions_verified": 1077,
+  "substantive_decisions_verified": 1059,
   "earlier_374_decisions_unchanged": true,
   "unchanged_frozen_files": [
     "src/forge_tools/engineering.py",
@@ -46,15 +46,15 @@
     "QUARANTINE": 7
   },
   "current_dispositions": {
-    "PASS": 823,
+    "PASS": 806,
     "REJECT": 54,
-    "QUARANTINE": 201,
-    "NEEDS_HUMAN_REVIEW": 1034
+    "QUARANTINE": 200,
+    "NEEDS_HUMAN_REVIEW": 1052
   },
-  "substantively_unreviewed": 1032,
+  "substantively_unreviewed": 1050,
   "next_batch": {
     "domain": "calculus",
-    "offset": 25,
+    "offset": 0,
     "limit": 25
   },
   "official_reader_executed": true,
@@ -64,24 +64,25 @@
   "sqlite_reads_immutable_read_only": true,
   "earlier_392_decisions_unchanged": true,
   "latest_batch": {
-    "domain": "calculus",
-    "offset": 0,
+    "domain": "trigonometry",
+    "offset": 175,
     "limit": 25,
-    "selected_window_end_exclusive": 25,
-    "new_reviews": 18,
-    "skipped_existing": 7,
+    "selected_window_end_exclusive": 200,
+    "new_reviews": 25,
+    "skipped_existing": 0,
     "preserved_structural_quarantines": [],
     "dispositions": {
-      "PASS": 17,
-      "QUARANTINE": 1
+      "QUARANTINE": 4,
+      "PASS": 20,
+      "REJECT": 1
     }
   },
   "independent_agent_qa_complete": true,
-  "latest_batch_original_hashes_verified": 18,
+  "latest_batch_original_hashes_verified": 25,
   "latest_batch_only_expected_ledger_rows_changed": true,
   "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
   "publication_status": "LOCAL_ONLY",
-  "earlier_decisions_unchanged": 1059,
+  "earlier_decisions_unchanged": 1034,
   "electrical_domain_complete": true,
   "electrical_records_verified": 300,
   "all_392_published_decisions_unchanged": true,

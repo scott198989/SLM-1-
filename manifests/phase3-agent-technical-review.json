@@ -28875,9 +28875,622 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
       "original_domain_ordinal": 199
+    },
+    {
+      "id": "repo-1f73ce56a8403740968f6ab1",
+      "messages_sha256": "1f73ce56a8403740968f6ab168055ccfeefc3931d946ddeead67178bb0da6ea5",
+      "state": "PASS",
+      "rationale": "Correct standard Newton cooling equation, sign interpretation and exponential approach for constant ambient temperature.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Differentiation, integration, limiting arguments, Hessian signs and solution properties are checked directly under their stated or standard introductory hypotheses."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With constant Ts and k>0, T(t)-Ts=(T(0)-Ts)*exp(-k*t), so a positive gap decreases and a negative gap increases toward zero."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The constant-k lumped-temperature model is an approximation; time-varying ambient temperature does not give the same simple exponential gap law."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 163,
+      "assistant_tokens": 135,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0000-0025.json",
+      "original_domain_ordinal": 0
+    },
+    {
+      "id": "repo-a598e6b764d533b1c13754d2",
+      "messages_sha256": "a598e6b764d533b1c13754d2e99b4a652c9decb12555c16dfcc2fb5a6cb8be3c",
+      "state": "PASS",
+      "rationale": "Correct nonuniqueness example and explicit acknowledgement of domain, topology and boundary-data conditions.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_vector_calculus",
+          "finding": "For a C2 harmonic scalar function h, curl(grad h)=0 and div(grad h)=Laplacian h=0. Integral theorem reasoning is checked on regular local volumes."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "h(x,y,z)=x is harmonic and has constant nonzero gradient (1,0,0); adding it changes a field without changing curl or divergence."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A gauge choice alone is not arbitrary new physical boundary data; the answer correctly emphasizes that boundary/topology information can restrict the freedom."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 139,
+      "assistant_tokens": 114,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0000-0025.json",
+      "original_domain_ordinal": 1
+    },
+    {
+      "id": "repo-74e705001b19b29ad9ffccdd",
+      "messages_sha256": "74e705001b19b29ad9ffccddfc8c30651e5273f867e8fecf8f8c3104060cb8d4",
+      "state": "PASS",
+      "rationale": "Correct common qualitative strict-saddle property for a smooth unconstrained objective, with a suitably qualified escape motivation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Lee, Simchowitz, Jordan and Recht, Gradient Descent Only Converges to Minimizers, PMLR49(2016), introduction and Definition2",
+          "url": "https://proceedings.mlr.press/v49/lee16.pdf",
+          "finding": "Defines strict saddles through a negative Hessian eigenvalue and states the qualitative condition that each critical point is a local minimum or strict saddle; algorithmic escape conclusions have additional hypotheses."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At a non-minimizing critical point, a Hessian vector v with v^T H v<0 gives a second-order descent direction."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Some quantitative definitions impose uniform curvature, gradient or local-convexity bounds. The brief definition does not establish a convergence-rate theorem for an arbitrary perturbed method."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 57,
+      "assistant_tokens": 42,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0000-0025.json",
+      "original_domain_ordinal": 2
+    },
+    {
+      "id": "repo-b69430463ac14129b8f91bc3",
+      "messages_sha256": "b69430463ac14129b8f91bc3eb339f4c34a34046d8f5e3ebd58b4d9fd8bb2179",
+      "state": "PASS",
+      "rationale": "Correct calculus proof of the fixed-positive-area minimum-perimeter rectangle.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Differentiation, integration, limiting arguments, Hessian signs and solution properties are checked directly under their stated or standard introductory hypotheses."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For A>0,x>0, P_second=4A/x³>0 globally and the unique critical point is x=sqrt A; P diverges at x->0+ and x->infinity."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Positive side lengths and positive given area are inherent in a nondegenerate rectangle."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 139,
+      "assistant_tokens": 114,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0000-0025.json",
+      "original_domain_ordinal": 6
+    },
+    {
+      "id": "repo-ab0a14c57472baf966d883cd",
+      "messages_sha256": "ab0a14c57472baf966d883cd3a6f53a51a26c56783435edf6648a8343e8c7b73",
+      "state": "PASS",
+      "rationale": "Correct qualified account of positive forcing competing with the damping term.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Differentiation, integration, limiting arguments, Hessian signs and solution properties are checked directly under their stated or standard introductory hypotheses."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With the same initial value, the difference from the homogeneous solution at x>x0 is exp(-x)*integral_x0^x exp(s)*f(s) ds, positive for positive forcing."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Positive forcing does not require y_prime>0 when y already exceeds f; the answer explicitly retains that balance."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 82,
+      "assistant_tokens": 55,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0000-0025.json",
+      "original_domain_ordinal": 8
+    },
+    {
+      "id": "repo-fac4c94916a973d4dd591e70",
+      "messages_sha256": "fac4c94916a973d4dd591e7072ad7376bca43f422c661b764bd9ad77dafda30f",
+      "state": "PASS",
+      "rationale": "Faithful explanation that local existence/uniqueness results do not supply a familiar closed form.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Differentiation, integration, limiting arguments, Hessian signs and solution properties are checked directly under their stated or standard introductory hypotheses."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Full Hadamard well-posedness also includes continuous dependence on data, supplied by appropriate standard IVP hypotheses rather than by existence and uniqueness in total generality. This is a requested paraphrase, not a standalone theorem."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 173,
+      "assistant_tokens": 127,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0000-0025.json",
+      "original_domain_ordinal": 11
+    },
+    {
+      "id": "repo-f90409c322a075c6cce1d7c1",
+      "messages_sha256": "f90409c322a075c6cce1d7c1b527b3fad20f179b248be616e03a3cf4883e0137",
+      "state": "PASS",
+      "rationale": "Correct engineering Fourier-series meaning of harmonic analysis and its diagnostic motivation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_periodic_Fourier_scope_check",
+          "finding": "A periodic signal admits harmonic components at integer multiples of a chosen fundamental within appropriate Fourier convergence/sampling assumptions; their amplitudes describe distortion content."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The term has broader mathematical uses, but the prompt explicitly asks its engineering meaning; a spectrum alone does not certify a particular resonance or power-quality defect."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 69,
+      "assistant_tokens": 48,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0000-0025.json",
+      "original_domain_ordinal": 12
+    },
+    {
+      "id": "repo-f668658b0d1029c4aba38fa2",
+      "messages_sha256": "f668658b0d1029c4aba38fa221ed9c5f5acd9894eb8f8f14a810fcedd88c6198",
+      "state": "PASS",
+      "rationale": "Correct optimization derivation of Snell law for the standard two-homogeneous-media crossing geometry.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Feynman Lectures I.26, sections 26-3 and 26-5",
+          "url": "https://www.feynmanlectures.caltech.edu/I_26.html",
+          "finding": "A flat two-medium crossing minimization gives Snell law. The general variational statement is stationary travel time, not necessarily a minimum."
+        },
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Differentiation, integration, limiting arguments, Hessian signs and solution properties are checked directly under their stated or standard introductory hypotheses."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For source height a and destination depth b across a plane, T(x)=sqrt(a²+x²)/v1+sqrt(b²+(d-x)²)/v2. T_prime=0 gives sin(theta1)/v1=sin(theta2)/v2, with angles to the normal."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This simple flat-interface case has a minimizing crossing. The general Fermat principle is stationarity, and arbitrary interfaces/ray families are not all global time minima."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 110,
+      "assistant_tokens": 89,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0000-0025.json",
+      "original_domain_ordinal": 13
+    },
+    {
+      "id": "repo-8791e36bde057a1714ea961c",
+      "messages_sha256": "8791e36bde057a1714ea961c9aa18dfbae9b4d9e46553e7e75be8d886d34416e",
+      "state": "PASS",
+      "rationale": "Valid informal integral-theorem proof when the fields and surfaces satisfy their ordinary smoothness hypotheses.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_vector_calculus",
+          "finding": "For a C2 harmonic scalar function h, curl(grad h)=0 and div(grad h)=Laplacian h=0. Integral theorem reasoning is checked on regular local volumes."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Closed-surface curl flux is zero by Stokes (or cancellation over patches); the divergence theorem makes every local volume integral of div curl vanish. Continuity then forces the integrand to zero."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Use sufficiently smooth F on a neighborhood of each volume, orientable regular boundaries and local volumes. Singular fields or excluded sources require separate domain treatment."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 132,
+      "assistant_tokens": 99,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0000-0025.json",
+      "original_domain_ordinal": 15
+    },
+    {
+      "id": "repo-8ffc660576dafa2d764b5297",
+      "messages_sha256": "8ffc660576dafa2d764b5297fca16693ae6e6e2f1a7f452df2ca457a83243d0f",
+      "state": "QUARANTINE",
+      "rationale": "The connection to variational methods is valid, but the unqualified claims that light always takes least time and systems settle into minimum energy are too broad. General optical paths are stationary, and conservative systems need not settle.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Feynman Lectures I.26, sections 26-3 and 26-5",
+          "url": "https://www.feynmanlectures.caltech.edu/I_26.html",
+          "finding": "A flat two-medium crossing minimization gives Snell law. The general variational statement is stationary travel time, not necessarily a minimum."
+        },
+        {
+          "title": "OpenStax University Physics 1, Energy in Simple Harmonic Motion",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/15-2-energy-in-simple-harmonic-motion",
+          "finding": "An ideal undamped oscillator preserves total mechanical energy and oscillates about equilibrium rather than settling into the potential minimum."
+        },
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Differentiation, integration, limiting arguments, Hessian signs and solution properties are checked directly under their stated or standard introductory hypotheses."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "x(t)=A*cos(omega*t) for an undamped mass-spring system never settles to its potential minimum when A!=0. Its total energy stays constant."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold for missing physical restrictions, not for rejecting optimization as a valuable physics tool. Dissipative constrained equilibria may approach local minima."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 73,
+      "assistant_tokens": 58,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0000-0025.json",
+      "original_domain_ordinal": 16
+    },
+    {
+      "id": "repo-8146450ecf76ad7dcc69da11",
+      "messages_sha256": "8146450ecf76ad7dcc69da11573979dccb4b09ea0645056a9e84586e376f0147",
+      "state": "PASS",
+      "rationale": "Correct alternating-series convergence and harmonic limit-comparison test for failure of absolute convergence.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Differentiation, integration, limiting arguments, Hessian signs and solution properties are checked directly under their stated or standard introductory hypotheses."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "b(x)=x²/(x³+1) has derivative x*(2-x³)/(x³+1)²<0 for x>cube_root(2), tends to0, and b_n/(1/n)=n³/(n³+1)->1."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 108,
+      "assistant_tokens": 80,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0000-0025.json",
+      "original_domain_ordinal": 17
+    },
+    {
+      "id": "repo-c791c3b11d720e90f229f870",
+      "messages_sha256": "c791c3b11d720e90f229f870d0d24d938d87c454a758e840706770797481d85c",
+      "state": "PASS",
+      "rationale": "Correct distributed-quantity motivation for multiple integrals over spatial regions.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Differentiation, integration, limiting arguments, Hessian signs and solution properties are checked directly under their stated or standard introductory hypotheses."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Point-particle work is often a line integral; distributed work and surface/volume flux can use multiple integrations. The answer does not require every listed quantity to use the same integration dimension."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 77,
+      "assistant_tokens": 59,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0000-0025.json",
+      "original_domain_ordinal": 18
+    },
+    {
+      "id": "repo-ea4b1abc7b1079628136d06f",
+      "messages_sha256": "ea4b1abc7b1079628136d06f2c76593a7e6568c55c111ab86294452631c045fb",
+      "state": "PASS",
+      "rationale": "Acceptable casual description of a flat, non-optimal saddle-like region with escape directions.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Differentiation, integration, limiting arguments, Hessian signs and solution properties are checked directly under their stated or standard introductory hypotheses."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Saddle plateau is informal language here; exact flatness, Hessian degeneracy and an algorithmic escape guarantee are not asserted."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 42,
+      "assistant_tokens": 24,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0000-0025.json",
+      "original_domain_ordinal": 19
+    },
+    {
+      "id": "repo-c0fa3d61b0fc499ab7cbd0b0",
+      "messages_sha256": "c0fa3d61b0fc499ab7cbd0b07801aa06b817842938a7d5ff4703796a65f72d7b",
+      "state": "PASS",
+      "rationale": "Correct improper-integral limit and finite value despite the endpoint singularity.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Differentiation, integration, limiting arguments, Hessian signs and solution properties are checked directly under their stated or standard introductory hypotheses."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "integral_epsilon^1 x^(-1/2) dx=2-2sqrt epsilon ->2 as epsilon->0+."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 111,
+      "assistant_tokens": 84,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0000-0025.json",
+      "original_domain_ordinal": 20
+    },
+    {
+      "id": "repo-955c23daf152535ddb169c49",
+      "messages_sha256": "955c23daf152535ddb169c49050b9d4f42387ee6abeb958edf0134ef70667bed",
+      "state": "PASS",
+      "rationale": "Correct lamina mass-moment formulas with squared perpendicular distances to the two axes.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Differentiation, integration, limiting arguments, Hessian signs and solution properties are checked directly under their stated or standard introductory hypotheses."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "I_x=integral y² dm, I_y=integral x² dm and dm=delta(x,y)dA."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "delta is areal mass density and the relevant integrals must exist; these are mass moments, not unweighted area moments unless density is normalized."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 102,
+      "assistant_tokens": 81,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0000-0025.json",
+      "original_domain_ordinal": 21
+    },
+    {
+      "id": "repo-96d7868cca4b895ad0589dc6",
+      "messages_sha256": "96d7868cca4b895ad0589dc6501980f5854491a83d2224dede6396240c34360d",
+      "state": "PASS",
+      "rationale": "Correct epsilon-delta positivity argument with a strictly positive lower bound.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Differentiation, integration, limiting arguments, Hessian signs and solution properties are checked directly under their stated or standard introductory hypotheses."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Choose epsilon=f(a)/2>0; |f(x)-f(a)|<epsilon implies f(x)>f(a)/2>0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "If a is a boundary point of the domain, use the neighborhood relative to the domain; the usual open-domain theorem gives the stated interval."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 129,
+      "assistant_tokens": 96,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0000-0025.json",
+      "original_domain_ordinal": 22
+    },
+    {
+      "id": "repo-6f968190601677cf3fabeab2",
+      "messages_sha256": "6f968190601677cf3fabeab27d1a47beb853bacc08ade1099e993f9fc22ff830",
+      "state": "PASS",
+      "rationale": "Correct symmetric two-dimensional Hessian determinant/eigenvalue interpretation and curvature-sign explanation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Differentiation, integration, limiting arguments, Hessian signs and solution properties are checked directly under their stated or standard introductory hypotheses."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For H=[[a,b],[b,c]], det H=lambda1*lambda2. A positive determinant gives same-sign eigenvalues, a negative determinant opposite signs."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Assume the usual C2/symmetric-Hessian setting. Classifying a stationary local minimum/maximum/saddle additionally needs a critical point; the question focuses on curvature. D=0 is inconclusive."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 156,
+      "assistant_tokens": 128,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0000-0025.json",
+      "original_domain_ordinal": 23
+    },
+    {
+      "id": "repo-967bfbe1be43404f3b9aa782",
+      "messages_sha256": "967bfbe1be43404f3b9aa782f6e558e0f3e272fd7b51f4c7163904dff893565d",
+      "state": "PASS",
+      "rationale": "Correct diagnosis of the nonintegrable interior singularity and invalid antiderivative subtraction.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Differentiation, integration, limiting arguments, Hessian signs and solution properties are checked directly under their stated or standard introductory hypotheses."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Each one-sided improper integral of1/x² at0 diverges to+infinity; F(1)-F(-1)=-1-1=-2 ignores the singularity splitting the interval."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 147,
+      "assistant_tokens": 111,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0000-0025.json",
+      "original_domain_ordinal": 24
     }
   ],
-  "reviewed": 1059,
+  "reviewed": 1077,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true
