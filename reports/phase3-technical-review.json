@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 531,
-    "REJECT": 43,
-    "QUARANTINE": 158,
-    "NEEDS_HUMAN_REVIEW": 1380
+    "PASS": 550,
+    "REJECT": 44,
+    "QUARANTINE": 163,
+    "NEEDS_HUMAN_REVIEW": 1355
   },
   "by_domain": {
     "circuits": {
@@ -20,10 +20,10 @@
       "NEEDS_HUMAN_REVIEW": 194
     },
     "algebra": {
-      "PASS": 61,
-      "REJECT": 4,
-      "QUARANTINE": 12,
-      "NEEDS_HUMAN_REVIEW": 139
+      "PASS": 80,
+      "REJECT": 5,
+      "QUARANTINE": 17,
+      "NEEDS_HUMAN_REVIEW": 114
     },
     "thermal_process_engineering": {
       "PASS": 73,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 731,
+  "agent_substantive_reviews": 756,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "5a139d8d22d9a327636dbe84e46f44e7149050f8f4e834034cdcbe5001becf72",
+  "technical_review_sha256": "ba4cc2a7b1f7e6208e244b7d8b23c3ceb57e00272b975f671b262191727a6f5d",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1378,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1353,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -812,11 +812,36 @@
     "The direct even-square calculation is correct and the stated odd-square implication is exactly its logical contrapositive, providing the requested contrast.": 1,
     "The homotopy and predictor-corrector outline is useful, but arc-length continuation is presented as handling bifurcations without distinguishing the additional detection and branch-switching operations. Arc-length parameterization alone does not supply those operations.": 1,
     "Correct definitions and inequality between geometric and algebraic multiplicity. A deficit for any eigenvalue prevents diagonalizability.": 1,
-    "Reasonable explanation of genuine or apparent circularity: assuming the conclusion or leaving dependency structure unclear. The advice to state assumptions and use justified facts is sound.": 1
+    "Reasonable explanation of genuine or apparent circularity: assuming the conclusion or leaving dependency structure unclear. The advice to state assumptions and use justified facts is sound.": 1,
+    "Correct volume, handedness and degeneracy interpretation for an ordered set of three real vectors in the standard oriented Euclidean space.": 1,
+    "Correct elimination and final solution, verified in both original equations.": 1,
+    "Correct distributive expansion and cancellation for the explicitly real scalars.": 1,
+    "Correct finite-dimensional eigenvalue-spectrum description, followed by the explicit clarification that infinite-dimensional operator spectra can include more than eigenvalues.": 1,
+    "Correct Lagrange argument: every nonidentity element has order p and generates the group. The abelian and cyclic-isomorphism conclusions follow.": 1,
+    "The quasi-Newton motivation is sound, but the categorical premise that full Newton requires explicit Jacobian assembly and factorization is false without restricting the implementation. Newton-Krylov methods can use matrix-free Jacobian actions.": 1,
+    "Correct conceptual description of using a Krylov solver for the Newton linear system and of the explicitly mentioned matrix-free Jacobian-vector implementation.": 1,
+    "Correct outline of PID implies UFD: irreducibles generate maximal proper ideals, ACC gives existence of factorization and primality gives uniqueness.": 1,
+    "Correct sequence of horizontal translation, vertical scaling and vertical translation, with the right final asymptotes.": 1,
+    "Correct inverse-eigenvalue derivation and explicit nonzero-eigenvalue condition from invertibility.": 1,
+    "Correct introductory description of proving uniqueness by showing any two qualifying candidates are equal. The stated group-identity example already has existence from the group axioms; the informal opening describes unique existence rather than claiming the equality argument alone creates an object.": 1,
+    "Faithful student-friendly paraphrase of the supplied simplification instruction, with reasonable arithmetic and structural motivation.": 1,
+    "Correct explanation that quotient-defined operations and maps must be independent of representative choice.": 1,
+    "Accurate conceptual outline of Gaussian elimination in successive variable-elimination rounds followed by back substitution.": 1,
+    "The augmented-Lagrangian steps are broadly correct, but adding a quadratic penalty does not generally improve conditioning. The advantage over a pure penalty method is that multiplier updates can achieve accuracy without forcing the penalty arbitrarily large.": 1,
+    "Correct conceptual explanation for the ordinary nonempty real ellipse/parabola/hyperbola conics explicitly discussed: their projective completions are equivalent, while affine transformations preserve their type distinctions. The explanation does not need to classify conics over arbitrary fields.": 1,
+    "The suggested algorithms are appropriate for linear systems, but the complete prompt says only a large system of equations. Linearity is never established, so Gaussian elimination/Jacobi/Gauss-Seidel cannot be a general prescription for the unspecified problem.": 1,
+    "Correct dependent-system solution set: both equations are the same line, and every point on it is a solution.": 1,
+    "The architecture comparison is correct, but the unqualified robustness and computational-cost ranking for monolithic coupling is too broad. Both depend on equations, discretization, solver, preconditioner and the particular partitioning strategy.": 1,
+    "Correct qualitative complementarity description for contact and optimization: a positive slack/gap entails zero multiplier/normal force, while a nonzero multiplier/force entails zero slack/gap.": 1,
+    "Valid simple example of spring-coupled bodies with geometric track constraints, followed by a sensible coordinate-reduction outline.": 1,
+    "The nearby-divergence explanation is correct, but the unconditional claim that the function is undefined at the asymptote is false. Defining f(0)=0 and f(x)=1/x^2 otherwise leaves x=0 a vertical asymptote.": 1,
+    "Accurately names common FSI difficulties: heterogeneous equations and discretizations, moving interface geometry, interface balance and strong-coupling iteration instability.": 1,
+    "Carefully distinguishes the two common parses and gives explicit parentheses to communicate the intended operation. Both displayed numerical outcomes are correct for their stated grouping.": 1,
+    "Constraint drift can cause the serious failure modes listed, but growth and eventual blow-up are presented as inevitable. Small violations can remain bounded or decay depending on the equations, integrator and stabilization.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "4737548c91d770a3f941bd5da28d52825982ad40bf03584ca24a12f2be38491d",
-  "substantively_unreviewed": 1378,
+  "published_decisions_sha256": "cb7edb5f88405652fc50d08dd25ba97c46a998397a75003d6a10657dcf835c06",
+  "substantively_unreviewed": 1353,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
