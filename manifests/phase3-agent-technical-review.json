@@ -8408,9 +8408,729 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/electrical-components-0025-0050.json",
       "original_domain_ordinal": 49
+    },
+    {
+      "id": "repo-6405661cd2667a1474a5fce0",
+      "messages_sha256": "6405661cd2667a1474a5fce0a5e4b2b888419d25e9a53528ee8f32b497447786",
+      "state": "PASS",
+      "rationale": "Correct broad robotics distinction between sensors of the system's own state and sensors of the external environment. Joint angle, wheel speed and battery level/voltage are conventional internal-state examples in this broad taxonomy; the answer does not claim that all disciplines use identical subclass names.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "University of Tennessee robotics sensing lecture",
+          "url": "https://web.eecs.utk.edu/~leparker/Courses/CS594-fall02/Lectures/Oct3.pdf",
+          "finding": "Includes internal-state and battery-level sensing in the broad proprioceptive category."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 56,
+      "assistant_tokens": 43,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 50
+    },
+    {
+      "id": "repo-dc6b879165f906da8721d998",
+      "messages_sha256": "dc6b879165f906da8721d998a4241d9c7a1a12978362cd762ac0b17f7169e7e9",
+      "state": "QUARANTINE",
+      "rationale": "The capture-and-hold explanation is sound, but bounding the aperture uncertainty conflates a stable conversion interval with aperture jitter, the sample-to-sample variation in switching time. Holding a sample does not by itself bound that separate uncertainty. Preserve the original wording pending qualification; do not reinterpret aperture uncertainty as a generic sampling window.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices AN-1515 sample-and-hold circuit",
+          "url": "https://www.analog.com/en/resources/app-notes/an-1515.html",
+          "finding": "A sample/hold captures an instantaneous analog value on a hold capacitor for subsequent processing."
+        },
+        {
+          "title": "Analog Devices sampling-clock jitter and aperture uncertainty",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/2021/09/30/23/33/the-easy-steps-to-calculate-sampling-clock-jitter-for-isolated-precision-high-speed-daqs.html",
+          "finding": "Aperture uncertainty is sample-to-sample variation in the sampling instant, not the held-voltage interval itself."
+        },
+        {
+          "title": "Analog Devices AD585 sample and hold datasheet",
+          "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/ad585.pdf",
+          "finding": "Pages 4–5 distinguish aperture time/uncertainty from hold-mode settling and conversion stability."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 77,
+      "assistant_tokens": 57,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 51
+    },
+    {
+      "id": "repo-5e691a35a1f55ba8cf598d2e",
+      "messages_sha256": "5e691a35a1f55ba8cf598d2ea73a00f156c5e6dbe9dc8078469ac29d04e0e194",
+      "state": "PASS",
+      "rationale": "Correctly distinguishes metal-oxide resistance changes, infrared absorption and electrochemical gas sensing, with explicit dependence on sensor type. Concentration produces a measurable response, but no universal selectivity, linearity or calibration-free operation is claimed.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Sensirion: What is a metal-oxide sensor?",
+          "url": "https://sensirion.com/media/documents/0083CDF4/6294DFEA/Info_Note_MOX_sensor.pdf",
+          "finding": "Heated metal-oxide surfaces exhibit resistance changes associated with surface oxygen/gas reactions; response is not inherently selective."
+        },
+        {
+          "title": "Honeywell gas-detection principles",
+          "url": "https://automation.honeywell.com/content/dam/his-sandbox/marketing/gas-and-flame-detection/documents/HA_en-gb_11296_gas_book_v5_0413_lr_en.pdf",
+          "finding": "Describes gas detection using infrared absorption and other detection principles."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 74,
+      "assistant_tokens": 60,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 52
+    },
+    {
+      "id": "repo-91880c3a3c31504b8aa57d5f",
+      "messages_sha256": "91880c3a3c31504b8aa57d5fd3ff2bdc75165356b814f79d3109e132c0736d02",
+      "state": "PASS",
+      "rationale": "Sound conceptual distinction among protective earth, conductive chassis and signal reference, emphasizing their different current paths and objectives. The answer permits a designed relationship between chassis and signal reference; it is not interpreted as permission to insert arbitrary impedance into a protective-earth bond or as a wiring instruction.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices Understanding Common-Mode Signals",
+          "url": "https://www.analog.com/en/resources/technical-articles/2022/07/16/08/25/understanding-commonmode-signals.html",
+          "finding": "Distinguishes safety/frame grounding from circuit common and system-dependent shield/reference connections."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 141,
+      "assistant_tokens": 117,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 53
+    },
+    {
+      "id": "repo-8702abe91b94e9bf9ff26fdd",
+      "messages_sha256": "8702abe91b94e9bf9ff26fdd536daf62e9213a338bb8c066e4934561364b8087",
+      "state": "PASS",
+      "rationale": "Accurate high-level definition of an MCU interface stage: level adaptation, drive, protection and optional galvanic isolation. The optocoupler/driver/power-switch sequence is a conceptual example, not a complete mains circuit or a claim that one unspecified component satisfies isolation and power ratings.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TI Digital Isolator Design Guide",
+          "url": "https://www.ti.com/lit/an/slla284b/slla284b.pdf",
+          "finding": "Describes isolation-interface functions and common system architectures for controller/power-domain communication."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 163,
+      "assistant_tokens": 133,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 54
+    },
+    {
+      "id": "repo-67179211364861e6906fec99",
+      "messages_sha256": "67179211364861e6906fec9988ee79df0deb54054d25205f93c20af6b0112064",
+      "state": "PASS",
+      "rationale": "The derivation is correct with its stated roughly constant load current and small-ripple approximation. Full-wave peaks repeat at twice the input AC frequency; capacitor discharge over approximately 1/(2f) gives peak-to-peak ripple I/(2fC). The answer explicitly labels the result approximate.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "DeltaV=DeltaQ/C=I*DeltaT/C with DeltaT≈1/(2f). Units A/(s^-1*F)=V. At I=0.1 A, f=50 Hz and C=0.001 F, the approximation gives 1 V peak-to-peak."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 127,
+      "assistant_tokens": 92,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 55
+    },
+    {
+      "id": "repo-73178e27000ce75a6cc5616e",
+      "messages_sha256": "73178e27000ce75a6cc5616ea052ec74a9d04f27300cf29dc0737a3e247f378e",
+      "state": "PASS",
+      "rationale": "Correct broad definition of sensing as detecting a physical quantity and producing a measurable/processable signal. The examples are representative and no unsupported performance or output-type restriction is introduced.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "Temperature, light and motion are physical inputs; a signal representing them can be used for measurement or processing. The definition is non-exhaustive."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 51,
+      "assistant_tokens": 37,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 56
+    },
+    {
+      "id": "repo-b40894d29f5319d02c641a20",
+      "messages_sha256": "b40894d29f5319d02c641a207218d8bf9d9273eaf1c2aeb11786a4de6fb299f0",
+      "state": "QUARANTINE",
+      "rationale": "The general advice to leave stress margin is sensible, but rated max does not identify an absolute maximum, recommended continuous operating maximum or pulse rating. The answer then asserts that even brief operation at that unspecified maximum shortens lifetime without device, stress or duration evidence. Manufacturer distinctions between stress limits and operating conditions are material; retain the exact answer pending that missing qualification.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices: Absolute Maximum Ratings",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/raqs/raq-issue-50.html",
+          "finding": "Absolute maximum stress limits differ from recommended functional operating conditions; extended exposure may affect reliability."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 81,
+      "assistant_tokens": 58,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 57
+    },
+    {
+      "id": "repo-a46704ed38a13ffdfdbfdffe",
+      "messages_sha256": "a46704ed38a13ffdfdbfdffeb9b1b0ac9b65005e801816e1cb2788b344ac3528",
+      "state": "PASS",
+      "rationale": "Rising ESR can be an aging/degradation precursor, particularly for electrolytic capacitors. The answer is explicitly likely/often rather than a definitive diagnosis or a remaining-life prediction. It does not claim that ESR alone proves a particular physical failure mechanism.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Nichicon capacitor lifetime design support",
+          "url": "https://www.nichicon.com/en-us/design-support/lifetime-calculator/",
+          "finding": "Aging-related parameter drift includes ESR increase and capacitance decrease."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 47,
+      "assistant_tokens": 22,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 58
+    },
+    {
+      "id": "repo-dbe103e6d265fe1832e5b3af",
+      "messages_sha256": "dbe103e6d265fe1832e5b3af616b7022603c8b7b69ea2b398f14b621320e8141",
+      "state": "QUARANTINE",
+      "rationale": "Loss of seal recovery can contribute to leakage and subsequent corrosion, but the answer presents the entire failure chain as inevitable once compression set is permanent. Compression-set magnitude, geometry, pressure, temperature and motion matter; manufacturer guidance notes that a seal may remain effective even at very high or 100 percent set under stable conditions. Hold the unqualified causal chain rather than silently adding those conditions.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Parker O-Ring Handbook ORD5700, section2.4.11",
+          "url": "https://www.parker.com/content/dam/Parker-com/Literature/O-Ring-Division-Literature/ORD-5700.pdf",
+          "finding": "Compression set alone does not determine leakage; high or even100 percent set can retain sealing under stable conditions without a broken contact line."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 66,
+      "assistant_tokens": 45,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 59
+    },
+    {
+      "id": "repo-2941e697011fa36eaf3d1f8d",
+      "messages_sha256": "2941e697011fa36eaf3d1f8db56914a176aeeb30e781d8437aecb2ee3efd8c31",
+      "state": "PASS",
+      "rationale": "Strong, properly scoped switch-selection checklist: worst-case voltage/transients, usable current and thermal/package limits, on-resistance at actual gate drive, gate charge, SOA, body diode and relevant avalanche behavior. It avoids equating headline current or threshold voltage with an approved application and supplies no unsupported part choice.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Infineon Gate drive for power MOSFETs in switching applications",
+          "url": "https://www.infineon.com/assets/row/public/documents/24/42/infineon-gate-drive-for-power-mosfets-in-switchtin-applications-applicationnotes-en.pdf?fileId=8ac78c8c80027ecd0180467c871b3622",
+          "finding": "Actual gate-drive conditions, gate charge, switching behavior and device ratings are material to MOSFET application design."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 180,
+      "assistant_tokens": 151,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 60
+    },
+    {
+      "id": "repo-d1bbba97862c6c3e94a3360b",
+      "messages_sha256": "d1bbba97862c6c3e94a3360b468efa760660e8e8c6ed1892a2ba99dc24fbf0e6",
+      "state": "PASS",
+      "rationale": "Correct definition of a derating curve as a permitted-rating envelope that changes with temperature or another stress/condition. The answer identifies common power/current examples and the intended use without claiming that this one curve replaces all other device limits.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TI TLE2426 datasheet dissipation ratings",
+          "url": "https://www.ti.com/lit/gpn/tle2426",
+          "finding": "Shows package power ratings reduced with ambient temperature and distinguishes operating and absolute-maximum conditions."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 75,
+      "assistant_tokens": 57,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 61
+    },
+    {
+      "id": "repo-086a7fa26791e598eaa3030d",
+      "messages_sha256": "086a7fa26791e598eaa3030d22084881736aaac3fc5a468703c974c7f4ea5ee9",
+      "state": "PASS",
+      "rationale": "Correctly identifies cable parasitics, EMI and endpoint ground differences as important for a long sensor run, and lists established strategies such as differential interfaces, current loops and local conditioning. Isolation is presented as often useful/required for ground-loop control, not universally required by distance alone. No unsupported baud rate, cable or safety rating is selected.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices Understanding Common-Mode Signals",
+          "url": "https://www.analog.com/en/resources/technical-articles/2022/07/16/08/25/understanding-commonmode-signals.html",
+          "finding": "Discusses ground-potential differences, differential transmission and deliberate grounding in connected systems."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 87,
+      "assistant_tokens": 62,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 62
+    },
+    {
+      "id": "repo-362eccaf62175712ce548e1f",
+      "messages_sha256": "362eccaf62175712ce548e1f798069693b78667b2bbafb8d0bfc7b1a725b87dc",
+      "state": "PASS",
+      "rationale": "For ordinary voltage-driven capacitor charging, added series resistance limits the initial current and lengthens charging time; the resistor dissipates heat during charging. The statement is a qualitative inrush/thermal trade-off and not a claim that total ideal RC charging energy increases with resistance.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "For an ideal voltage step, I(0+)=(Vs-Vc0)/Rtotal and tau=Rtotal*C. Increasing positive Rtotal reduces initial current and increases tau. P_R=I²R during charging; total ideal charge-event loss must not be inferred to grow with R."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 65,
+      "assistant_tokens": 45,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 63
+    },
+    {
+      "id": "repo-6dadfce8a6c947dc4f34276b",
+      "messages_sha256": "6dadfce8a6c947dc4f34276bad2106fe7f8b07b6710bcb339621be63e1225ef8",
+      "state": "PASS",
+      "rationale": "Feasibility explanation is technically sound: rectified 24 V AC has a much higher peak than 24 V, so regulator input limits and linear dissipation matter; a suitably rated buck stage is a reasonable approach. The answer explicitly requires design care, protection and reference/isolation consideration and does not recommend blindly adding a 7805.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TI TIDA-01358 smart thermostat power-stage reference design",
+          "url": "https://www.ti.com/tool/TIDA-01358",
+          "finding": "Demonstrates a specifically designed24 V AC input power stage producing5 V and3.3 V rails; it does not qualify an arbitrary thermostat terminal."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A sinusoidal 24 V RMS source has ideal peak 24*sqrt(2)=33.94 V before rectifier drops. A linear regulator dissipates approximately (Vin-5 V)*I, so a low-current feasibility claim is conditional on voltage/thermal ratings."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 200,
+      "assistant_tokens": 172,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 64
+    },
+    {
+      "id": "repo-1ffcec4856b3ff6837453947",
+      "messages_sha256": "1ffcec4856b3ff6837453947a655c0446c35d3993452ea073b4ab5647f7c4da4",
+      "state": "PASS",
+      "rationale": "Correct qualified distinction between a standard signal optocoupler and a power-switching output stage. Usually/typically appropriately leaves room for specialized power optical relays, while avoiding the false claim that a normal signal phototransistor can directly carry 2 A.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Omron Technical Explanation for Solid-state Relays",
+          "url": "https://www.ia.omron.com/data_pdf/guide/18/ssr_tg_e_9_9.pdf",
+          "finding": "Separates optical isolation/drive from transistor, triac and MOSFET load-switching output stages."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 92,
+      "assistant_tokens": 64,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 65
+    },
+    {
+      "id": "repo-358fe866cc67cdf62bdb21ff",
+      "messages_sha256": "358fe866cc67cdf62bdb21ffe8e14fab1139c0a1b599653082286a804c57982c",
+      "state": "PASS",
+      "rationale": "Correct expansion of LVDT and its electromagnetic-coil method for measuring linear displacement. No numerical accuracy or range is invented.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices Linear Variable Differential Transformers",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/linear-variable-differential-transformers.html",
+          "finding": "An LVDT uses a primary and two secondary coils with a movable magnetic core to sense linear displacement."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 42,
+      "assistant_tokens": 28,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 66
+    },
+    {
+      "id": "repo-78d0161d921ab775bd61565e",
+      "messages_sha256": "78d0161d921ab775bd61565e71c76d305652da5c6554f13b06fe3c29a915580f",
+      "state": "PASS",
+      "rationale": "Correct standard instrumentation distinction: range is an interval with lower/upper limits, and span is their difference. The 0-to-100 example is arithmetically correct and does not presume physical units that were not given.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "Span=upper range limit-lower range limit; 100-0=100. For a range -50 to 100, the same rule gives span150, showing why interval and span are distinct."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 75,
+      "assistant_tokens": 54,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 67
+    },
+    {
+      "id": "repo-d8b38d9e55c6310b441fab7d",
+      "messages_sha256": "d8b38d9e55c6310b441fab7df56eecb6939ab37855173ed1f3dd57cc5cd0cf78",
+      "state": "PASS",
+      "rationale": "Appropriate Weibull-analysis workflow includes defined failure criteria, censored units, failure-mode separation, parameter estimation, fit assessment and engineering validation. Beta is described as suggesting hazard behavior rather than proving a failure mechanism. No unsupported life metric or confidence bound is computed.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NIST Weibull Plot guidance",
+          "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/weibplot.htm",
+          "finding": "Weibull analysis checks distributional assumptions and estimates shape/scale; appropriate plotting methods can handle censored data."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a two-parameter Weibull, hazard h(t)=(beta/eta)*(t/eta)^(beta-1): decreasing for beta<1, constant for beta=1 and increasing for beta>1. That supports the qualitative interpretation while fit validity remains necessary."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 138,
+      "assistant_tokens": 116,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 68
+    },
+    {
+      "id": "repo-ac320ab28339bcb5cdd0e0d4",
+      "messages_sha256": "ac320ab28339bcb5cdd0e0d4c659c1d66e6284da72db5d799b81119ca16a3762",
+      "state": "PASS",
+      "rationale": "Correct possible chain from a broken high-frequency reference path to larger return loop/impedance discontinuity, reflections and common-mode cable radiation. The prompt asks what can happen, and the answer keeps the later consequences conditional rather than guaranteeing an EMC failure or measured emission level.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TI AFE79xx Layout Guide",
+          "url": "https://www.ti.com/lit/an/sbaa405a/sbaa405a.pdf",
+          "finding": "Reference-plane splits divert high-frequency return current and can increase radiated emissions and signal-integrity degradation."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 142,
+      "assistant_tokens": 114,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 69
+    },
+    {
+      "id": "repo-d648503462cf8dd0f34aacd9",
+      "messages_sha256": "d648503462cf8dd0f34aacd98a1c22b7ed9e51d44624ecbf9b13c57b2570def1",
+      "state": "PASS",
+      "rationale": "Sound conditional decision framework: compare disruption severity and exposure with qualification/tooling effort, consider tail/concentration risk and alternatives such as stock or redesign, and avoid deciding from historical probability alone. It gives no invented supplier facts, financial probabilities or mandatory procurement commitment.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "Expected disruption cost depends on both probability and consequence, while severe tail outcomes and lead time may justify mitigation beyond a simple average-cost comparison. The response preserves the user's decision and its missing inputs."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 160,
+      "assistant_tokens": 115,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 70
+    },
+    {
+      "id": "repo-29f2692f31a8c2318c05500c",
+      "messages_sha256": "29f2692f31a8c2318c05500c07b5e23b9e9d16235d4999b833e0fc679eb33ed2",
+      "state": "PASS",
+      "rationale": "Correct introductory distinction between consistency of repeated measurements and closeness to the true/accepted reference value. A stable systematic offset is a valid example of good repeatability with poor accuracy. It does not report precision/accuracy as an unsupported numerical guarantee.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NIST TN1297 terminology appendix",
+          "url": "https://www.nist.gov/pml/nist-technical-note-1297/nist-tn-1297-appendix-d1-terminology",
+          "finding": "Distinguishes closeness to the measurand/reference from agreement of repeated results under specified conditions."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 66,
+      "assistant_tokens": 49,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 71
+    },
+    {
+      "id": "repo-ad9e1447ab9bb7133aec480a",
+      "messages_sha256": "ad9e1447ab9bb7133aec480a277d27ad8e8644dadaadf147a4cb6c5dbeeb8433",
+      "state": "QUARANTINE",
+      "rationale": "Primary has no stated referent, equipment class, supply, existing protection or applicable standard. Almost always yes and often mandatory cannot be validated from the complete prompt. Safety-rated versus generic also does not specify the required fuse voltage, interrupting capacity, time-current characteristic or approvals. Hold the incomplete-context advice rather than inventing a transformer/mains design.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "The visible message pair contains no identified primary circuit, transformer or product standard."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 56,
+      "assistant_tokens": 38,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 72
+    },
+    {
+      "id": "repo-0e82a039586596d9b3d3a247",
+      "messages_sha256": "0e82a039586596d9b3d3a247b8551f9ea1b1a8731d42f3cc7ec09d171b2067fa",
+      "state": "QUARANTINE",
+      "rationale": "The list of front-end trade-offs is otherwise useful, but amplify tiny signals without adding noise is stated as an unqualified requirement. Real amplifiers and protection networks introduce noise; the engineering task is to control it against an error/noise budget. A zero-added-noise reading is not technically valid without an idealization. Hold this wording for review rather than silently replacing without with low added noise.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices Seven Steps to Successful Analog-to-Digital Signal Conversion",
+          "url": "https://www.analog.com/en/resources/technical-articles/2017/09/18/08/09/seven-steps-to-successful-analog-to-digital-signal-conversion.html",
+          "finding": "Front-end design calculates amplifier/ADC/reference noise against an explicit total noise target rather than assuming zero added noise."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 97,
+      "assistant_tokens": 76,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 73
+    },
+    {
+      "id": "repo-336f63d87b472a7a3a3c1dc3",
+      "messages_sha256": "336f63d87b472a7a3a3c1dc3357667389f9bcfba9cf8a6745872c995e2943cec",
+      "state": "PASS",
+      "rationale": "Correct basic purpose of a thermal fuse: interrupt the circuit at an overtemperature condition to reduce fire risk in heat-producing/electrical equipment. It does not equate this with ordinary overcurrent sensing or prescribe bypass/replacement values.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "SCHOTT SEFUSE thermal links",
+          "url": "https://www.schott.com/en-us/products/sefuse-p1000292",
+          "finding": "Thermal links cut off circuits under overheating to protect appliances and electronic equipment from fire."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 44,
+      "assistant_tokens": 32,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json",
+      "original_domain_ordinal": 74
     }
   ],
-  "reviewed": 417,
+  "reviewed": 442,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 284,
+    "PASS": 304,
     "REJECT": 30,
-    "QUARANTINE": 104,
-    "NEEDS_HUMAN_REVIEW": 1694
+    "QUARANTINE": 109,
+    "NEEDS_HUMAN_REVIEW": 1669
   },
   "by_domain": {
     "circuits": {
@@ -44,10 +44,10 @@
       "NEEDS_HUMAN_REVIEW": 208
     },
     "electrical_components": {
-      "PASS": 37,
+      "PASS": 57,
       "REJECT": 3,
-      "QUARANTINE": 10,
-      "NEEDS_HUMAN_REVIEW": 250
+      "QUARANTINE": 15,
+      "NEEDS_HUMAN_REVIEW": 225
     },
     "electromagnetism": {
       "PASS": 2,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 417,
+  "agent_substantive_reviews": 442,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "eca75ecd63fd58804a9b0605b116de6a7a9664333d95e6344f988cbe72b994ed",
+  "technical_review_sha256": "dd72be2c5ab10636653d5a4a333e10eafdd4bf22df1ad12c4c36165b3c18bbe8",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1692,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1667,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -498,11 +498,36 @@
     "The complete prompt refers to these parts without supplying the parts or preceding context. Its generic interface architecture is broadly reasonable, but the unresolved antecedent prevents checking the requested application of those parts. Preserve this incomplete-context record; the hold does not demand an unstated circuit diagram or installation approval.": 1,
     "Correct broad definition of flow sensing and representative measurement principles. Fluid includes gases; turbine, ultrasonic, thermal-mass, differential-pressure and Coriolis are legitimate methods. It does not claim every method directly measures the same volumetric/mass quantity or is suitable for every fluid.": 1,
     "The opening comparison is dimensionally invalid: a breaker magnetic pickup threshold is a current in A, while fuse I²t is a current-squared time integral in A²s. These cannot be ordered as competing thresholds. Time-current coordination and tested current-limiting selectivity are relevant, but the later explanation does not repair the false opening rule.": 1,
-    "Sound qualitative caution that simulation fidelity depends on device/parasitic models and tool assumptions and must be checked against hardware. Moderately is conversational guidance, not a measured probability or certification of an unseen model. It does not present a simulated result as validated hardware evidence.": 1
+    "Sound qualitative caution that simulation fidelity depends on device/parasitic models and tool assumptions and must be checked against hardware. Moderately is conversational guidance, not a measured probability or certification of an unseen model. It does not present a simulated result as validated hardware evidence.": 1,
+    "Correctly identifies cable parasitics, EMI and endpoint ground differences as important for a long sensor run, and lists established strategies such as differential interfaces, current loops and local conditioning. Isolation is presented as often useful/required for ground-loop control, not universally required by distance alone. No unsupported baud rate, cable or safety rating is selected.": 1,
+    "The list of front-end trade-offs is otherwise useful, but amplify tiny signals without adding noise is stated as an unqualified requirement. Real amplifiers and protection networks introduce noise; the engineering task is to control it against an error/noise budget. A zero-added-noise reading is not technically valid without an idealization. Hold this wording for review rather than silently replacing without with low added noise.": 1,
+    "Correct qualified distinction between a standard signal optocoupler and a power-switching output stage. Usually/typically appropriately leaves room for specialized power optical relays, while avoiding the false claim that a normal signal phototransistor can directly carry 2 A.": 1,
+    "Strong, properly scoped switch-selection checklist: worst-case voltage/transients, usable current and thermal/package limits, on-resistance at actual gate drive, gate charge, SOA, body diode and relevant avalanche behavior. It avoids equating headline current or threshold voltage with an approved application and supplies no unsupported part choice.": 1,
+    "Correct introductory distinction between consistency of repeated measurements and closeness to the true/accepted reference value. A stable systematic offset is a valid example of good repeatability with poor accuracy. It does not report precision/accuracy as an unsupported numerical guarantee.": 1,
+    "Correct basic purpose of a thermal fuse: interrupt the circuit at an overtemperature condition to reduce fire risk in heat-producing/electrical equipment. It does not equate this with ordinary overcurrent sensing or prescribe bypass/replacement values.": 1,
+    "Correct expansion of LVDT and its electromagnetic-coil method for measuring linear displacement. No numerical accuracy or range is invented.": 1,
+    "For ordinary voltage-driven capacitor charging, added series resistance limits the initial current and lengthens charging time; the resistor dissipates heat during charging. The statement is a qualitative inrush/thermal trade-off and not a claim that total ideal RC charging energy increases with resistance.": 1,
+    "Correctly distinguishes metal-oxide resistance changes, infrared absorption and electrochemical gas sensing, with explicit dependence on sensor type. Concentration produces a measurable response, but no universal selectivity, linearity or calibration-free operation is claimed.": 1,
+    "Correct broad robotics distinction between sensors of the system's own state and sensors of the external environment. Joint angle, wheel speed and battery level/voltage are conventional internal-state examples in this broad taxonomy; the answer does not claim that all disciplines use identical subclass names.": 1,
+    "The derivation is correct with its stated roughly constant load current and small-ripple approximation. Full-wave peaks repeat at twice the input AC frequency; capacitor discharge over approximately 1/(2f) gives peak-to-peak ripple I/(2fC). The answer explicitly labels the result approximate.": 1,
+    "Feasibility explanation is technically sound: rectified 24 V AC has a much higher peak than 24 V, so regulator input limits and linear dissipation matter; a suitably rated buck stage is a reasonable approach. The answer explicitly requires design care, protection and reference/isolation consideration and does not recommend blindly adding a 7805.": 1,
+    "Correct broad definition of sensing as detecting a physical quantity and producing a measurable/processable signal. The examples are representative and no unsupported performance or output-type restriction is introduced.": 1,
+    "Correct standard instrumentation distinction: range is an interval with lower/upper limits, and span is their difference. The 0-to-100 example is arithmetically correct and does not presume physical units that were not given.": 1,
+    "Accurate high-level definition of an MCU interface stage: level adaptation, drive, protection and optional galvanic isolation. The optocoupler/driver/power-switch sequence is a conceptual example, not a complete mains circuit or a claim that one unspecified component satisfies isolation and power ratings.": 1,
+    "Sound conceptual distinction among protective earth, conductive chassis and signal reference, emphasizing their different current paths and objectives. The answer permits a designed relationship between chassis and signal reference; it is not interpreted as permission to insert arbitrary impedance into a protective-earth bond or as a wiring instruction.": 1,
+    "Rising ESR can be an aging/degradation precursor, particularly for electrolytic capacitors. The answer is explicitly likely/often rather than a definitive diagnosis or a remaining-life prediction. It does not claim that ESR alone proves a particular physical failure mechanism.": 1,
+    "Correct possible chain from a broken high-frequency reference path to larger return loop/impedance discontinuity, reflections and common-mode cable radiation. The prompt asks what can happen, and the answer keeps the later consequences conditional rather than guaranteeing an EMC failure or measured emission level.": 1,
+    "Primary has no stated referent, equipment class, supply, existing protection or applicable standard. Almost always yes and often mandatory cannot be validated from the complete prompt. Safety-rated versus generic also does not specify the required fuse voltage, interrupting capacity, time-current characteristic or approvals. Hold the incomplete-context advice rather than inventing a transformer/mains design.": 1,
+    "The general advice to leave stress margin is sensible, but rated max does not identify an absolute maximum, recommended continuous operating maximum or pulse rating. The answer then asserts that even brief operation at that unspecified maximum shortens lifetime without device, stress or duration evidence. Manufacturer distinctions between stress limits and operating conditions are material; retain the exact answer pending that missing qualification.": 1,
+    "Correct definition of a derating curve as a permitted-rating envelope that changes with temperature or another stress/condition. The answer identifies common power/current examples and the intended use without claiming that this one curve replaces all other device limits.": 1,
+    "Sound conditional decision framework: compare disruption severity and exposure with qualification/tooling effort, consider tail/concentration risk and alternatives such as stock or redesign, and avoid deciding from historical probability alone. It gives no invented supplier facts, financial probabilities or mandatory procurement commitment.": 1,
+    "Appropriate Weibull-analysis workflow includes defined failure criteria, censored units, failure-mode separation, parameter estimation, fit assessment and engineering validation. Beta is described as suggesting hazard behavior rather than proving a failure mechanism. No unsupported life metric or confidence bound is computed.": 1,
+    "Loss of seal recovery can contribute to leakage and subsequent corrosion, but the answer presents the entire failure chain as inevitable once compression set is permanent. Compression-set magnitude, geometry, pressure, temperature and motion matter; manufacturer guidance notes that a seal may remain effective even at very high or 100 percent set under stable conditions. Hold the unqualified causal chain rather than silently adding those conditions.": 1,
+    "The capture-and-hold explanation is sound, but bounding the aperture uncertainty conflates a stable conversion interval with aperture jitter, the sample-to-sample variation in switching time. Holding a sample does not by itself bound that separate uncertainty. Preserve the original wording pending qualification; do not reinterpret aperture uncertainty as a generic sampling window.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "65238697e42b95fd79df45337804c755575c90dbe73a025b597a5332eecb9c8c",
-  "substantively_unreviewed": 1692,
+  "published_decisions_sha256": "c964d754ad5a3c598af551a1d543f0c4b94f5403c1b32f66d76c43b11020a695",
+  "substantively_unreviewed": 1667,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

@@ -21,7 +21,7 @@ Source/oracle/mask/family/rights/seal hashes and release receipts: [pilot releas
 
 ## Proposed legacy curriculum: exact current dispositions
 
-All 2,112 records received structural/context/privacy and actual Qwen-format screening. **417** received substantive agent review; the complete 211-record circuits and 104-record thermal/process batches are included. Of the remaining 1694 NEEDS_HUMAN_REVIEW records, **1692 have not yet received substantive technical verification** and two were read but require specialist confirmation. This queue label is not a claim that a human must perform every simple check. The requested curriculum-wide technical review remains outstanding; structural/tool agreement never supplied correctness approval. No answers were silently changed.
+All 2,112 records received structural/context/privacy and actual Qwen-format screening. **442** received substantive agent review; the complete 211-record circuits and 104-record thermal/process batches are included. Of the remaining 1669 NEEDS_HUMAN_REVIEW records, **1667 have not yet received substantive technical verification** and two were read but require specialist confirmation. This queue label is not a claim that a human must perform every simple check. The requested curriculum-wide technical review remains outstanding; structural/tool agreement never supplied correctness approval. No answers were silently changed.
 
 Domain labels here are originating-file classifications, not certified semantic capabilities. These counts are not a random sample, corpus accuracy estimate or approved training count.
 
@@ -30,14 +30,14 @@ Domain labels here are originating-file classifications, not certified semantic 
 | algebra | 9 | 2 | 2 | 203 |
 | calculus | 5 | 2 | 0 | 208 |
 | circuits | 139 | 12 | 60 | 0 |
-| electrical_components | 37 | 3 | 10 | 250 |
+| electrical_components | 57 | 3 | 15 | 225 |
 | electromagnetism | 2 | 2 | 0 | 162 |
 | engineering_mathematics | 4 | 0 | 2 | 194 |
 | materials_manufacturing | 3 | 2 | 1 | 244 |
 | physics | 4 | 2 | 2 | 242 |
 | thermal_process_engineering | 73 | 5 | 24 | 2 |
 | trigonometry | 8 | 0 | 3 | 189 |
-| **Total** | **284** | **30** | **104** | **1694** |
+| **Total** | **304** | **30** | **109** | **1669** |
 
 **Released legacy curriculum examples:0.** Technical PASS is separate from applicable contract and family qualification. Row-specific unchanged-message hashes/reasons are in [technical decisions](../data/review/phase3/technical-review.jsonl.gz), [substantive receipts](../manifests/phase3-agent-technical-review.json) and [aggregate report](phase3-technical-review.json). Rejections include wrong energy/departure signs, defective-matrix claims, missing equilibria and false optimization rules. Quarantine covers incomplete prior context, unit/model conditions, missing chart values, unresolved visual dependencies and contradictory scratch reasoning. Overlapping risk flags:1110 equation/calculation/proof;792 units/model;23 visual prompts;187 operations/diagnosis. No sampled usable-percentage extrapolation is justified.
 
@@ -93,7 +93,7 @@ Proposed model/revision: Qwen/Qwen3-30B-A3B-Base /1b75feb79f60b8dc6c5bc769a898c2
 
 The 16-record pilot would give **one optimizer update** at effective batch 16, not a useful engineering-specialization run. No update is scheduled. Desktop 5090/32 GiB/64 GiB is README-derived until checked live; laptop 2050/4 GiB/16 GiB is preparation-only. GPU package stack/expert quantization, exact transitive lock, memory estimate 20â€“29 GiB and resume behavior are unmeasured. The eventual model-load/memory pilot must be separately authorized and cannot count as already run.
 
-**Reasons not to authorize training:** requested 1692-record substantive review outstanding; two specialist judgments; applicable legacy contracts unresolved;16 narrow protocol records inadequate for broad FORGE specialization; independent model-development set absent; gold is only 12 tasks/one domain and not an independently human-reviewed broad benchmark; no stock-model scores; academic OCR/equation/visual fidelity and production-source rights remain unqualified; desktop/GPU/runtime/quantized-expert/memory/resume gates not verified.
+**Reasons not to authorize training:** requested 1667-record substantive review outstanding; two specialist judgments; applicable legacy contracts unresolved;16 narrow protocol records inadequate for broad FORGE specialization; independent model-development set absent; gold is only 12 tasks/one domain and not an independently human-reviewed broad benchmark; no stock-model scores; academic OCR/equation/visual fidelity and production-source rights remain unqualified; desktop/GPU/runtime/quantized-expert/memory/resume gates not verified.
 
 The next work is checkpointed review of the held curriculum (not broad discovery), applicable generation-use evidence, independent engineering development/gold source families, and targeted source-qualified academic RAG/task assembly. Never repair answers silently or expand into unrelated corpora to satisfy counts. Siemens is user-owned follow-up. This is a released small pilot and transparent gate report, **not completion of all Phase 3 validation**. Stop before model weights or training.
 
@@ -111,3 +111,8 @@ The cloud checkout verified all eight published input hashes and all 2,112 origi
 ## Latest second electrical batch
 
 Original ordinals25–49 added20 technical PASS,3 REJECT and2 QUARANTINE after independent agent QA, with no source-answer or token changes. Current substantive reviews417; remaining substantively unreviewed1692; next electrical offset50. The prior392 decisions, three structural-only quarantines, two specialist holds and all release gates remain unchanged. [Batch receipt](phase3-review-batches/electrical-components-0025-0050.json).
+
+
+## Local electrical checkpoint 50–74
+
+This unpublished local batch added {'PASS': 20, 'QUARANTINE': 5} after independent agent QA. Current local substantive reviews: 442; remaining unreviewed: 1667; next offset: 75. Remote GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. Original answers, prior 417 decisions and all release gates are unchanged. [Batch receipt](phase3-review-batches/electrical-components-0050-0075.json).

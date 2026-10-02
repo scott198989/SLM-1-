@@ -8,10 +8,10 @@
   "review": {
     "curriculum": 2112,
     "dispositions": {
-      "PASS": 284,
+      "PASS": 304,
       "REJECT": 30,
-      "QUARANTINE": 104,
-      "NEEDS_HUMAN_REVIEW": 1694
+      "QUARANTINE": 109,
+      "NEEDS_HUMAN_REVIEW": 1669
     },
     "by_domain": {
       "circuits": {
@@ -51,10 +51,10 @@
         "NEEDS_HUMAN_REVIEW": 208
       },
       "electrical_components": {
-        "PASS": 37,
+        "PASS": 57,
         "REJECT": 3,
-        "QUARANTINE": 10,
-        "NEEDS_HUMAN_REVIEW": 250
+        "QUARANTINE": 15,
+        "NEEDS_HUMAN_REVIEW": 225
       },
       "electromagnetism": {
         "PASS": 2,
@@ -75,8 +75,8 @@
         "NEEDS_HUMAN_REVIEW": 242
       }
     },
-    "agent_substantive_reviews": 417,
-    "substantively_unreviewed": 1692,
+    "agent_substantive_reviews": 442,
+    "substantively_unreviewed": 1667,
     "reviewed_specialist_holds": 2,
     "complete_source_domains": [
       "circuits",
@@ -97,13 +97,13 @@
     },
     {
       "path": "data/review/phase3/technical-review.jsonl.gz",
-      "bytes": 174242,
-      "sha256": "65238697e42b95fd79df45337804c755575c90dbe73a025b597a5332eecb9c8c"
+      "bytes": 182624,
+      "sha256": "c964d754ad5a3c598af551a1d543f0c4b94f5403c1b32f66d76c43b11020a695"
     },
     {
       "path": "manifests/phase3-agent-technical-review.json",
-      "bytes": 434869,
-      "sha256": "ebd812336cb921eb779e6fee1bd70b234491b21fd3dddc3ec54e1b0190409ab4"
+      "bytes": 477932,
+      "sha256": "b0eefb4c6f11530d7b4037efda9811d951a9808c3c991345bdf4bb89fec6fd02"
     },
     {
       "path": "manifests/phase3-release-families.json",
@@ -112,8 +112,8 @@
     },
     {
       "path": "reports/phase3-technical-review.json",
-      "bytes": 78604,
-      "sha256": "46aed6108738c6e6b29f3dab782d0b88f0175540674d18046e10d51c36b25c4e"
+      "bytes": 86916,
+      "sha256": "1a4d582d8e908d2621a38fdb0b26d7cf0aebd3c20dc7326056356cf644119955"
     },
     {
       "path": "src/forge_tools/engineering.py",
@@ -217,7 +217,7 @@
   },
   "next_domain": "electrical_components",
   "next_batch": {
-    "offset": 50,
+    "offset": 75,
     "limit": 25
   },
   "workers": [],
@@ -225,5 +225,11 @@
   "model_weights_downloaded": false,
   "training_authorized": false,
   "cloud_missing_private_files_behavior": "Continue public repository technical review. Mark private-source qualification unavailable; never replace sealed artifacts or infer validation from metadata.",
-  "latest_cloud_continuation": "reports/phase3-cloud-continuation-validation.json"
+  "latest_cloud_continuation": "reports/phase3-cloud-continuation-validation.json",
+  "local_continuation": {
+    "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "local_predecessor_commit": "741fe76ba3aa5843adc05ddc1e4f8875c726f1f6",
+    "publication_status": "LOCAL_ONLY; do not claim these counts are on GitHub",
+    "latest_batch": "reports/phase3-review-batches/electrical-components-0050-0075.json"
+  }
 }
