@@ -20,7 +20,7 @@
   "model_weights_downloaded_or_loaded": false,
   "training_or_paid_compute": false,
   "automatic_checks_recreated": false,
-  "test_log_sha256": "1aa72e323b757ecec18aa8d75fc4f77c820c249be40373fe69e598114da85b5f",
+  "test_log_sha256": "c0c184c06e5fd6b9cb0e10a5c3dc8a28028c8c52488bb9db32a025a646ec29f6",
   "tested_code_sha256": {
     "scripts/phase3-verify-private-release.py": "64d76484b0852d041083301ce113ddc255b7906512def3dc12d0f92dc96910e1",
     "src/forge_data/citation_pilot.py": "9e17e50194ba8cb22eca0b431359d7aec1d870f8417e87b4938e3c1ff4c968d4",
@@ -52,11 +52,7 @@
     "NEEDS_HUMAN_REVIEW": 2
   },
   "substantively_unreviewed": 0,
-  "next_batch": {
-    "domain": "materials_manufacturing",
-    "offset": 250,
-    "limit": 25
-  },
+  "next_batch": null,
   "official_reader_executed": true,
   "gzip_exact_roundtrip_verified": true,
   "training_authorized": false,
@@ -122,5 +118,13 @@
   "physics_pending_review_queue_complete": true,
   "physics_source_records_checked": 250,
   "physics_substantive_reviews": 250,
-  "physics_checkpoint": "reports/phase3-physics-domain-checkpoint.json"
+  "physics_checkpoint": "reports/phase3-physics-domain-checkpoint.json",
+  "all_ordinary_pending_review_queues_complete": true,
+  "materials_source_records_checked": 250,
+  "materials_substantive_reviews": 250,
+  "ordinary_completion_checkpoint": "reports/phase3-ordinary-review-completion.json",
+  "ordinary_completion_cpu_tests": 69,
+  "ordinary_completion_format_check": "3 files already formatted",
+  "ordinary_completion_lint_check": "F821,F822,F823: all checks passed",
+  "ordinary_completion_log": "forge-pr3-tests-ordinary-complete.log"
 }

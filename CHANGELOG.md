@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-10-02 - Ordinary selected-curriculum review complete
+
+- Reviewed 244 pending materials records in ten independently checked windows; preserved six earlier materials reviews.
+- Local total 2,109 substantive reviews across 2,112 records; zero ordinary unreviewed records. Two specialist holds and three structural-only quarantines remain.
+- Preserved all prior 1,865 checkpoint decisions, original answers/tokens, rights/family metadata and frozen receipts. No release/training authorization follows.
+- Remote publication remains blocked at 392 reviews. No retry or alternative publication route was attempted.
+
+
 ## 2026-10-02 - Local materials_manufacturing review 225–249
 
 - Added {'PASS': 11, 'QUARANTINE': 12, 'REJECT': 2} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 2084 reviews unchanged.

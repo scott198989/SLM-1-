@@ -89,7 +89,9 @@
     "calculus_review_status": "208 previously pending records reviewed; 7 prior substantive reviews preserved; all215 selected calculus records have substantive dispositions",
     "engineering_mathematics_review_status": "194 previously pending records reviewed; 6 prior substantive reviews preserved; all200 selected engineering_mathematics records have substantive dispositions",
     "electromagnetism_review_status": "162 previously pending records reviewed; four prior substantive reviews preserved; all 166 selected records have substantive dispositions",
-    "physics_review_status": "242 previously pending records reviewed; eight prior substantive reviews preserved; all 250 selected records have substantive dispositions"
+    "physics_review_status": "242 previously pending records reviewed; eight prior substantive reviews preserved; all 250 selected records have substantive dispositions",
+    "materials_review_status": "244 previously pending records reviewed; six prior reviews preserved; all 250 materials records have substantive dispositions",
+    "ordinary_queue_status": "COMPLETE: zero substantively unreviewed records; two specialist and three structural holds remain"
   },
   "public_input_files": [
     {
@@ -222,12 +224,8 @@
     "incomplete_review_index_chunks": 43205,
     "incomplete_review_index_production_approved": false
   },
-  "next_domain": "materials_manufacturing",
-  "next_batch": {
-    "domain": "materials_manufacturing",
-    "offset": 250,
-    "limit": 25
-  },
+  "next_domain": null,
+  "next_batch": null,
   "workers": [],
   "automatic_checks": "DELETED_DO_NOT_RECREATE",
   "model_weights_downloaded": false,
@@ -236,7 +234,7 @@
   "latest_cloud_continuation": "reports/phase3-cloud-continuation-validation.json",
   "local_continuation": {
     "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
-    "local_predecessor_commit": "9aa843814666d78c0830f16ef40e2f832ba34bd2",
+    "local_predecessor_commit": "42b4de5e20ffdcdda159e8ba6e9ef9eac8fa1247",
     "publication_status": "LOCAL_ONLY; do not claim these counts are on GitHub",
     "latest_batch": "reports/phase3-review-batches/materials_manufacturing-0225-0250.json",
     "electrical_domain_complete": true,
@@ -258,6 +256,10 @@
     "electromagnetism_pending_review_queue_complete": true,
     "electromagnetism_checkpoint": "reports/phase3-electromagnetism-domain-checkpoint.json",
     "physics_pending_review_queue_complete": true,
-    "physics_checkpoint": "reports/phase3-physics-domain-checkpoint.json"
-  }
+    "physics_checkpoint": "reports/phase3-physics-domain-checkpoint.json",
+    "materials_pending_review_queue_complete": true,
+    "all_ordinary_pending_review_queues_complete": true,
+    "ordinary_completion_checkpoint": "reports/phase3-ordinary-review-completion.json"
+  },
+  "next_action": "STOP: ordinary technical-review queue exhausted. Preserve all holds and request separately scoped direction for remaining gates; do not repeat old batches or start private qualification/training."
 }
