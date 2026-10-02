@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 950,
+    "PASS": 972,
     "REJECT": 56,
-    "QUARANTINE": 222,
-    "NEEDS_HUMAN_REVIEW": 884
+    "QUARANTINE": 225,
+    "NEEDS_HUMAN_REVIEW": 859
   },
   "by_domain": {
     "circuits": {
@@ -38,10 +38,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "calculus": {
-      "PASS": 149,
+      "PASS": 171,
       "REJECT": 4,
-      "QUARANTINE": 22,
-      "NEEDS_HUMAN_REVIEW": 40
+      "QUARANTINE": 25,
+      "NEEDS_HUMAN_REVIEW": 15
     },
     "electrical_components": {
       "PASS": 232,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1227,
+  "agent_substantive_reviews": 1252,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "cf374f71cb6eb49cbcf8c04a0c216877c343f14c3845642f823effe1384a68c6",
+  "technical_review_sha256": "bff5cbf583208a4b4956820102298f265e53e5c70e5e47b5ce373541c77a46ca",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 882,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 857,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1308,11 +1308,36 @@
     "Correct structural relationship between product, quotient and chain rules.": 1,
     "Correct multivariable chain-rule pathway/sensitivity explanation.": 1,
     "Correct Taylor-matching order argument and Euler/RK4 one-step-error examples.": 1,
-    "Valid real engineering FFT application in real-time spectrum analyzers.": 1
+    "Valid real engineering FFT application in real-time spectrum analyzers.": 1,
+    "The stated D>0 and D < 0 branches are correct, but the requested test explanation omits the D = 0 inconclusive outcome. That missing branch is important for deciding what the test establishes.": 1,
+    "Correct inner integration, quadratic substitution and exact result.": 1,
+    "The tangency chain-rule reasoning is correct, but the formula needs a nonzero gradient to supply a normal direction. A level set can be a smooth surface even when this defining function has zero gradient everywhere on it.": 1,
+    "Correct cylindrical substitution, radial Jacobian and geometry-based bounds.": 1,
+    "Correct distinction between an inconclusive test and a mathematically ambiguous series.": 1,
+    "Correct ordinary-language substitution as the reverse chain-rule pattern.": 1,
+    "Correct coordinate invariance through a valid change of variables with Jacobian factor.": 1,
+    "Correct constructive FTC antiderivative existence result for continuous functions.": 1,
+    "Correct externally prescribed-rate versus autonomous state-dependent-rate contrast, including equilibrium checks.": 1,
+    "Correct direct-integration explanation for a derivative prescribed as a function of the independent variable.": 1,
+    "Correct distinction between smoothness and analyticity and failure of Taylor-jet uniqueness for smooth functions.": 1,
+    "The contrast with augmented Lagrangian methods is useful, but primal-dual interior-point iterates need not remain strictly feasible for the original inequalities. Positive slack variables can coexist with nonzero primal residuals.": 1,
+    "Correct disk projection, polar volume setup and exact paraboloid volume.": 1,
+    "Correct annular polar bounds and exact area.": 1,
+    "Correct fractional-power antiderivative and endpoint calculation.": 1,
+    "Valid construction/closure proof that real polynomials are continuous everywhere.": 1,
+    "Correct common failure modes of a finite two-sided derivative limit.": 1,
+    "Correct polar Jacobian calculation and area element.": 1,
+    "Valid localized-bump contradiction proof of the continuous fundamental lemma on a nondegenerate interval.": 1,
+    "Correct engineering Wiener-Khinchin/autocorrelation-power-spectrum relationship for wide-sense stationary processes.": 1,
+    "Correct introductory iterated-integral explanation and ordinary continuous-integrand Fubini setting.": 1,
+    "Correct introductory definition of a partial derivative with other independent inputs fixed.": 1,
+    "Correct radius 1 and complex-pole explanation for the Lorentzian-type rational example.": 1,
+    "Correct conceptual distinction between rewriting with a trig identity and changing variables using a trig substitution.": 1,
+    "Correct high-level trust-region convergence-proof structure with lower-boundedness and gradient/model conditions explicitly retained.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "e8dbe5f899bff883957481f8a05c5c694bd50df09d07ff9c69d2e11257c0b389",
-  "substantively_unreviewed": 882,
+  "published_decisions_sha256": "3b73c9ee5e5988ef3bde4374001a3cba5f5798823969d9d86e41b4774a3fdbfc",
+  "substantively_unreviewed": 857,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
