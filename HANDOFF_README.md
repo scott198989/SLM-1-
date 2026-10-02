@@ -8,7 +8,7 @@ Repository: **scott198989/SLM-1-**. Continue branch **`codex/forge-data-consolid
 
 The last published commit before this handoff was `600da559e4a14b825876321c5566b0a089a7cf0e`. This handoff is a descendant on the same branch. Record the actual checked-out commit with `git rev-parse HEAD`; verify the input SHA256 values in [the checkpoint manifest](reports/phase3-cloud-handoff.json). The repository branch and verified file hashes are the resume point, not a recollection of this chat.
 
-Cloud continuation is now authorized on this existing branch. The October 2 cloud session verified all eight inputs, all 2,112 original-message hashes and the official first-batch reader, then added 18 independently agent-reviewed decisions. Electrical review is complete; the current next trigonometry offset is 200. No automation or model run was started.
+Cloud continuation is now authorized on this existing branch. The October 2 cloud session verified all eight inputs, all 2,112 original-message hashes and the official first-batch reader, then added 18 independently agent-reviewed decisions. Electrical review is complete; the pending trigonometry queue is complete at offset 200; its original structural hold 24 remains unchanged. No automation or model run was started.
 
 ## The actual objective
 
@@ -72,10 +72,10 @@ Latest local bounded review: trigonometry ordinals 175–199 added {'QUARANTINE'
 
 ## Resume without repeating work
 
-First check out the correct branch and compare the hashes in `reports/phase3-cloud-handoff.json`. Read the reports above. The selected electrical domain is complete. Original offset 300 is the end of its 300-record selection, not a request to restart it. The pending algebra review queue is now exhausted. Its selected domain has 216 records; 214 have substantive reviews and two original structural-only quarantines remain at ordinals 170 and 211. The next nominal reader offset is 225, which yields no rows. Earlier windows intentionally still emit those two preserved structural holds; do not repeatedly reinterpret them as unreviewed work. Await selection of the next domain. The supervisor selected trigonometry next; continue its original ordinal windows with independent QA. The portable reader uses the repository root relative to its own file and needs only Python's standard library:
+First check out the correct branch and compare the hashes in `reports/phase3-cloud-handoff.json`. Read the reports above. The selected electrical domain is complete. Original offset 300 is the end of its 300-record selection, not a request to restart it. The pending algebra review queue is now exhausted. Its selected domain has 216 records; 214 have substantive reviews and two original structural-only quarantines remain at ordinals 170 and 211. The next nominal reader offset is 225, which yields no rows. Earlier windows intentionally still emit those two preserved structural holds; do not repeatedly reinterpret them as unreviewed work. The trigonometry queue is also exhausted, preserving original structural hold 24. The supervisor selected calculus next; continue from original offset 0 in independently checked windows. The portable reader uses the repository root relative to its own file and needs only Python's standard library:
 
 ```sh
-python scripts/phase3-review-batch.py trigonometry --offset 200 --limit 25
+python scripts/phase3-review-batch.py calculus --offset 0 --limit 25
 ```
 
 Advance offsets by the batch size. Ordinals refer to **all** selected rows in the source domain, including previously reviewed rows. Already-substantively-reviewed IDs are skipped; a batch may output fewer than 25. This is deliberate and prevents resume drift. Circuits should produce no remaining rows. Do not use printed-row count as the next offset.
@@ -150,7 +150,7 @@ Private training/public redistribution/RAG purposes have separate dispositions i
 
 ## Suggested first message to the cloud task
 
-> Continue FORGE Phase 3 from scott198989/SLM-1-, branch codex/forge-data-consolidation, draft PR3. Read HANDOFF_README.md completely, root README, reports/phase3-cloud-handoff.json and the current gate report. Verify checkpoint hashes. Continue bounded substantive review of the remaining selected 2,112-record curriculum, starting trigonometry at offset 200, limit 25. Electrical_components is complete at offset 300. Preserve all 1059 completed reviews and original answers. Keep technical decisions distinct from release approval. Remote publication is paused after an upload denial; preserve local review checkpoints and do not retry or use an alternate route without a resolved authorization path. Private local Drive/gold/pilot artifacts are not in Git: do not reconstruct or claim to validate unavailable files. No broad discovery, model weights, loading, training, paid services or automatic checks. Stop at the training authorization gate with exact counts and remaining blockers.
+> Continue FORGE Phase 3 from scott198989/SLM-1-, branch codex/forge-data-consolidation, draft PR3. Read HANDOFF_README.md completely, root README, reports/phase3-cloud-handoff.json and the current gate report. Verify checkpoint hashes. Continue bounded substantive review of the remaining selected 2,112-record curriculum, starting calculus at offset 0, limit 25. Trigonometry is complete at offset 200, with original structural hold 24 preserved. Electrical_components is complete at offset 300. Preserve all 1059 completed reviews and original answers. Keep technical decisions distinct from release approval. Remote publication is paused after an upload denial; preserve local review checkpoints and do not retry or use an alternate route without a resolved authorization path. Private local Drive/gold/pilot artifacts are not in Git: do not reconstruct or claim to validate unavailable files. No broad discovery, model weights, loading, training, paid services or automatic checks. Stop at the training authorization gate with exact counts and remaining blockers.
 
 ## Codex's absurd sign-off — a joke, not project state
 
@@ -159,9 +159,14 @@ Private training/public redistribution/RAG purposes have separate dispositions i
 
 ## Completed local electrical review (historical checkpoint)
 
-All 300 selected electrical records now have substantive dispositions. The 293 new cloud reviews and seven original reviews preserve original answers, hashes and tokens. This is a local checkpoint with 667 substantive reviews overall. See [completion receipt](reports/phase3-electrical-domain-completion.json). The public branch remains at 392 reviews; the upload block has not been bypassed. At that checkpoint no new domain had been started; current algebra progress is recorded above.
+All 300 selected electrical records now have substantive dispositions. The 293 new cloud reviews and seven original reviews preserve original answers, hashes and tokens. This is a local checkpoint with 667 substantive reviews overall. See [completion receipt](reports/phase3-electrical-domain-completion.json). The public branch remains at 392 reviews; the upload block has not been bypassed. At that checkpoint no new domain had been started; current completed-domain progress is recorded above.
 
 
 ## Completed pending algebra review (historical checkpoint)
 
 All 203 previously pending algebra records received individual technical review and independent agent QA. Together with 11 preserved prior reviews, 214 of 216 selected algebra records have substantive dispositions. Original structural-only quarantines at ordinals 170 and 211 remain unchanged and are not counted as new substantive reviews. Local total: 870 substantive reviews; 1,239 still unreviewed across other domains, plus two existing specialist holds. Original answers, tokens and all three structural holds are preserved. The published branch remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. See [checkpoint](reports/phase3-algebra-domain-checkpoint.json). At that checkpoint no further domain had been started; current trigonometry progress is recorded above.
+
+
+## Completed pending trigonometry review
+
+All 189 previously pending trigonometry records received individual technical review and independent agent QA. Together with 10 preserved prior reviews, 199 of 200 selected trigonometry records have substantive dispositions. Original structural-only quarantine at ordinal 24 remains unchanged and is not counted as a new substantive review. Local total: 1,059 substantive reviews; 1,050 still unreviewed across other domains, plus two existing specialist holds. The published branch remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. Original answers, token counts and all three structural-only holds are preserved. See [checkpoint](reports/phase3-trigonometry-domain-checkpoint.json). The reader still emits only structural ordinal 24 in earlier windows; offset 200 is empty. The supervisor selected calculus (208 pending) next, at offset 0; engineering mathematics has 194 pending. No calculus record has been reviewed in this checkpoint.

@@ -20,7 +20,7 @@
   "model_weights_downloaded_or_loaded": false,
   "training_or_paid_compute": false,
   "automatic_checks_recreated": false,
-  "test_log_sha256": "ba63e78d9a9b84906f1abd05e6fdfa1dc8707cb84bfe031f18eb61e33b1e0f41",
+  "test_log_sha256": "8c24c23f8d6e5db32e44193191ec1bd212a2ed01f3cec15a0024d5b0d84b695c",
   "tested_code_sha256": {
     "scripts/phase3-verify-private-release.py": "64d76484b0852d041083301ce113ddc255b7906512def3dc12d0f92dc96910e1",
     "src/forge_data/citation_pilot.py": "9e17e50194ba8cb22eca0b431359d7aec1d870f8417e87b4938e3c1ff4c968d4",
@@ -53,8 +53,8 @@
   },
   "substantively_unreviewed": 1050,
   "next_batch": {
-    "domain": "trigonometry",
-    "offset": 200,
+    "domain": "calculus",
+    "offset": 0,
     "limit": 25
   },
   "official_reader_executed": true,
@@ -97,5 +97,12 @@
     170,
     211
   ],
-  "algebra_checkpoint": "reports/phase3-algebra-domain-checkpoint.json"
+  "algebra_checkpoint": "reports/phase3-algebra-domain-checkpoint.json",
+  "trigonometry_pending_review_queue_complete": true,
+  "trigonometry_source_records_checked": 200,
+  "trigonometry_substantive_reviews": 199,
+  "trigonometry_structural_holds_preserved": [
+    24
+  ],
+  "trigonometry_checkpoint": "reports/phase3-trigonometry-domain-checkpoint.json"
 }

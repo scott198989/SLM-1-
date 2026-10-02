@@ -84,7 +84,8 @@
       "electrical_components"
     ],
     "release_approved": 0,
-    "algebra_review_status": "203 previously pending records substantively reviewed; 11 prior reviews and 2 structural-only quarantines preserved"
+    "algebra_review_status": "203 previously pending records substantively reviewed; 11 prior reviews and 2 structural-only quarantines preserved",
+    "trigonometry_review_status": "189 previously pending records reviewed; 10 prior substantive reviews and original structural-only quarantine 24 preserved"
   },
   "public_input_files": [
     {
@@ -217,10 +218,10 @@
     "incomplete_review_index_chunks": 43205,
     "incomplete_review_index_production_approved": false
   },
-  "next_domain": "trigonometry",
+  "next_domain": "calculus",
   "next_batch": {
-    "domain": "trigonometry",
-    "offset": 200,
+    "domain": "calculus",
+    "offset": 0,
     "limit": 25
   },
   "workers": [],
@@ -231,9 +232,20 @@
   "latest_cloud_continuation": "reports/phase3-cloud-continuation-validation.json",
   "local_continuation": {
     "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
-    "local_predecessor_commit": "b63c4ca7ac802e73c46fc2721878d7fc572e84c8",
+    "local_predecessor_commit": "197a161fe70c7b29fadb455b263e0d34772ea419",
     "publication_status": "LOCAL_ONLY; do not claim these counts are on GitHub",
     "latest_batch": "reports/phase3-review-batches/trigonometry-0175-0200.json",
-    "electrical_domain_complete": true
+    "electrical_domain_complete": true,
+    "trigonometry_pending_review_queue_complete": true,
+    "trigonometry_preserved_structural_ordinals": [
+      24
+    ],
+    "trigonometry_checkpoint": "reports/phase3-trigonometry-domain-checkpoint.json",
+    "algebra_pending_review_queue_complete": true,
+    "algebra_preserved_structural_ordinals": [
+      170,
+      211
+    ],
+    "algebra_checkpoint": "reports/phase3-algebra-domain-checkpoint.json"
   }
 }
