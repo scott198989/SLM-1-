@@ -63693,9 +63693,946 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/materials_manufacturing-0150-0175.json",
       "original_domain_ordinal": 174
+    },
+    {
+      "id": "repo-13f16a28987ec002e9bf480c",
+      "messages_sha256": "13f16a28987ec002e9bf480c526425302b28295d60c83439e9fd4f48752b3243",
+      "state": "PASS",
+      "rationale": "Correct main directional-stiffness/strength tradeoff of a unidirectional laminate.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "COMSOL Composite Materials Module User Guide",
+          "url": "https://doc.comsol.com/5.4/doc/com.comsol.help.compmat/CompositeMaterialsModuleUsersGuide.pdf",
+          "finding": "Classical laminate force/curvature relations and constituent directional stiffness describe ply orientation and stacking effects."
+        },
+        {
+          "title": "COMSOL, Parametric Study on Cross-Ply Laminate Failure",
+          "url": "https://doc.comsol.com/6.4/doc/com.comsol.help.models.compmat.parametric_study_on_crossply_laminate_failure/parametric_study_on_crossply_laminate_failure.html",
+          "finding": "Cross-ply loading is resolved into local ply stresses and multiple failure criteria; mode and onset depend on the applied load and ply properties."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Only is interpreted as the ordinary design warning that unintended transverse/shear demand must be limited, not a claim that an all-zero laminate has exactly zero off-axis capacity."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 84,
+      "assistant_tokens": 64,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 175
+    },
+    {
+      "id": "repo-d55ea36e0615773819fc5245",
+      "messages_sha256": "d55ea36e0615773819fc5245618858248a4dd15385b3c07eea0be27078220a00",
+      "state": "QUARANTINE",
+      "rationale": "The typical UD stiffness orders are reasonable, but greater failure strain alone does not establish a general mass-normalized impact-toughness ranking.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "COMSOL Composite Materials Module User Guide",
+          "url": "https://doc.comsol.com/5.4/doc/com.comsol.help.compmat/CompositeMaterialsModuleUsersGuide.pdf",
+          "finding": "Classical laminate force/curvature relations and constituent directional stiffness describe ply orientation and stacking effects."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "Even ideal uniaxial energy per mass is E*epsilon_f^2/(2*rho), so failure strain alone cannot rank it; impact damage adds further mechanisms."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Even ideal uniaxial energy per mass is E*epsilon_f^2/(2*rho), so failure strain alone cannot rank it; impact damage adds further mechanisms."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the concluding impact comparison; fiber grade, fraction, layup, matrix, strain rate and impact/damage metric are needed."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 83,
+      "assistant_tokens": 62,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 176
+    },
+    {
+      "id": "repo-e70c7b3871157e0072e0a64f",
+      "messages_sha256": "e70c7b3871157e0072e0a64f97dc71bc5e7c9af67d3525f0fead5159d895fdfe",
+      "state": "QUARANTINE",
+      "rationale": "Stacking order and the stated A-versus-D comparison are correct, but the distance-cubed wording needs to distinguish integrated ply boundaries from the actual quadratic distance weighting.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "COMSOL Composite Materials Module User Guide",
+          "url": "https://doc.comsol.com/5.4/doc/com.comsol.help.compmat/CompositeMaterialsModuleUsersGuide.pdf",
+          "finding": "Classical laminate force/curvature relations and constituent directional stiffness describe ply orientation and stacking effects."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "D_ij=integral Qbar_ij*z^2 dz=sum Qbar_ij*(z_k^3-z_(k-1)^3)/3. A thin equal-thickness ply contribution scales with z_center^2, not z_center^3."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "D_ij=integral Qbar_ij*z^2 dz=sum Qbar_ij*(z_k^3-z_(k-1)^3)/3. A thin equal-thickness ply contribution scales with z_center^2, not z_center^3."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the precise scaling claim, preserving the strong benefit of outer high-axial-stiffness plies."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 106,
+      "assistant_tokens": 86,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 177
+    },
+    {
+      "id": "repo-e55eae776948a4b5c8396c9c",
+      "messages_sha256": "e55eae776948a4b5c8396c9cb18a2a9e4028770dcc795803a42b4e74effa9e6c",
+      "state": "PASS",
+      "rationale": "Correct interfacial-ply separation definition and warning about hidden delamination.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Abaqus, Damage Initiation for Fiber-Reinforced Composites",
+          "url": "https://docs.software.vt.edu/abaqusv2025/English/SIMACAEMATRefMap/simamat-c-damageinitfibercomposite.htm",
+          "finding": "Failure initiation separates fiber and matrix modes under tension/compression, rather than identifying one load-independent mode."
+        },
+        {
+          "title": "Abaqus, Damage Evolution for Fiber-Reinforced Composites",
+          "url": "https://docs.software.vt.edu/abaqusv2025/English/SIMACAEMATRefMap/simamat-c-damageevolfibercomposite.htm",
+          "finding": "Damage variables evolve irreversibly and alter stiffness, making subsequent response dependent on history."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Delamination need not always be externally invisible; inspection sensitivity depends on depth, area and method."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 50,
+      "assistant_tokens": 36,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 178
+    },
+    {
+      "id": "repo-1b1417164efd9bcf17b188c6",
+      "messages_sha256": "1b1417164efd9bcf17b188c66f17a3af781cd312d013dbbcae36f8edbf85e03d",
+      "state": "PASS",
+      "rationale": "Correct conventional D-block bending/twisting role and axis interpretation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "COMSOL Composite Materials Module User Guide",
+          "url": "https://doc.comsol.com/5.4/doc/com.comsol.help.compmat/CompositeMaterialsModuleUsersGuide.pdf",
+          "finding": "Classical laminate force/curvature relations and constituent directional stiffness describe ply orientation and stacking effects."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "For an unsymmetric coupled laminate the full equation is M=B*epsilon0+D*kappa; D alone does not determine effective free-membrane bending compliance. Surface zero-degree placement is for the corresponding preferred direction."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 95,
+      "assistant_tokens": 79,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 179
+    },
+    {
+      "id": "repo-98919afd362c588dd6b98268",
+      "messages_sha256": "98919afd362c588dd6b9826800909e81a812f548dd9356f3e995b9a5b89ad017",
+      "state": "QUARANTINE",
+      "rationale": "The tab and load-introduction suggestions are useful, but changing to a dogbone conflicts with the constant rectangular coupon geometry of the named D3039 test. A material/layup/grip-specific diagnosis is required.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "ZwickRoell, ASTM D3039 tensile testing of composites",
+          "url": "https://www.zwickroell.com/industries/composites/astm-d3039-tensile-test-on-composites/",
+          "finding": "Tab/grip geometry and laminate type affect valid load introduction; bonded tabs are recommended for suitable UD tests rather than universally required."
+        },
+        {
+          "title": "ASTM D3039/D3039M-17",
+          "url": "https://store.astm.org/d3039_d3039m-17.html",
+          "finding": "The named standard uses constant rectangular coupons; a generic dogbone change is not the stated D3039 geometry. Independent QA verified Sections 4.1 and 8.2/Table 1 in the standard excerpt."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the operational geometry recommendation without repairing it in a caveat; suitable tabs and grip changes can still be investigated under the applicable test procedure."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 84,
+      "assistant_tokens": 68,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 180
+    },
+    {
+      "id": "repo-9de7ec16eb18f52960069895",
+      "messages_sha256": "9de7ec16eb18f52960069895f80fdf071b025eef003a8e79e9b35e43aaa7f71d",
+      "state": "QUARANTINE",
+      "rationale": "The fracture-plane/inter-fiber description is sound, but an unqualified accuracy ranking above Tsai-Wu is not established without a material/loading validation scope.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Pang et al., Improvement of inter-fiber failure theories for fiber reinforced plastics: Theoretical and experimental assessment (2025)",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0263823125007311",
+          "finding": "Discusses loading-dependent limitations of Puck and other criteria; physical mode separation alone does not establish universal prediction superiority."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the comparative prediction claim; mode identification is a genuine benefit but is not identical to universally better numerical accuracy."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 55,
+      "assistant_tokens": 40,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 181
+    },
+    {
+      "id": "repo-2159b911a5d6f8197bd18582",
+      "messages_sha256": "2159b911a5d6f8197bd185828646dda22e122d824e974476c5e7b15c016de536",
+      "state": "PASS",
+      "rationale": "Correct constituent-to-ply versus homogenized-ply-to-laminate modeling hierarchy.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "COMSOL, Micromechanical Model of a Fiber Composite",
+          "url": "https://doc.comsol.com/6.4/doc/com.comsol.help.models.sme.micromechanical_model_of_a_fiber_composite/micromechanical_model_of_a_fiber_composite.html",
+          "finding": "Compares homogenized properties and semi-empirical mixing models, including geometry-dependent Halpin-Tsai parameters."
+        },
+        {
+          "title": "COMSOL Composite Materials Module User Guide",
+          "url": "https://doc.comsol.com/5.4/doc/com.comsol.help.compmat/CompositeMaterialsModuleUsersGuide.pdf",
+          "finding": "Classical laminate force/curvature relations and constituent directional stiffness describe ply orientation and stacking effects."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The closing practice statement is an informal description of common structural modeling, not a measured census or a prohibition of validated micromechanics."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 97,
+      "assistant_tokens": 76,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 182
+    },
+    {
+      "id": "repo-d598c5ecc51e601456779553",
+      "messages_sha256": "d598c5ecc51e60145677955324a53e80f56c364dc3414faf1dfcdd48bc950378",
+      "state": "PASS",
+      "rationale": "Correct lightweight sandwich construction and face-separation bending-stiffness principle.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "COMSOL Composite Materials Module User Guide",
+          "url": "https://doc.comsol.com/5.4/doc/com.comsol.help.compmat/CompositeMaterialsModuleUsersGuide.pdf",
+          "finding": "Classical laminate force/curvature relations and constituent directional stiffness describe ply orientation and stacking effects."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "For thin stiff faces separated by distance h, face contribution to bending stiffness scales approximately as E_face*t_face*h^2/2 per unit width."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For thin stiff faces separated by distance h, face contribution to bending stiffness scales approximately as E_face*t_face*h^2/2 per unit width."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Core shear, face wrinkling, local indentation and bond integrity can control practical strength."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 47,
+      "assistant_tokens": 32,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 183
+    },
+    {
+      "id": "repo-02b266f74a46393b222d79bb",
+      "messages_sha256": "02b266f74a46393b222d79bb6bd2b56aa6b6ee3c099ee6806f7747c3dff53e49",
+      "state": "QUARANTINE",
+      "rationale": "The axial zero-ply load dominance is sensible, but the explanation assigns transverse Poisson restraint in 90-degree plies to their matrix even though their fibers run in that transverse global direction.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "COMSOL, Parametric Study on Cross-Ply Laminate Failure",
+          "url": "https://doc.comsol.com/6.4/doc/com.comsol.help.models.compmat.parametric_study_on_crossply_laminate_failure/parametric_study_on_crossply_laminate_failure.html",
+          "finding": "Cross-ply loading is resolved into local ply stresses and multiple failure criteria; mode and onset depend on the applied load and ply properties."
+        },
+        {
+          "title": "COMSOL Composite Materials Module User Guide",
+          "url": "https://doc.comsol.com/5.4/doc/com.comsol.help.compmat/CompositeMaterialsModuleUsersGuide.pdf",
+          "finding": "Classical laminate force/curvature relations and constituent directional stiffness describe ply orientation and stacking effects."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "For a 90-degree ply, global y is local fiber direction 1 and global x is transverse direction 2; its low axial x stiffness is matrix-dominated, while its high y stiffness follows fibers."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a 90-degree ply, global y is local fiber direction 1 and global x is transverse direction 2; its low axial x stiffness is matrix-dominated, while its high y stiffness follows fibers."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold this load-path statement and the unqualified fixed failure sequence; onset and final mode require ply strength, coupling and boundary conditions."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 115,
+      "assistant_tokens": 83,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 184
+    },
+    {
+      "id": "repo-f77a46d17e4abe0d2d564f7b",
+      "messages_sha256": "f77a46d17e4abe0d2d564f7bd7e35285212abbaced00d62a87118b91eed9223a",
+      "state": "PASS",
+      "rationale": "Correct first-ply initiation definition and customary conservative-screening role.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Abaqus, Damage Initiation for Fiber-Reinforced Composites",
+          "url": "https://docs.software.vt.edu/abaqusv2025/English/SIMACAEMATRefMap/simamat-c-damageinitfibercomposite.htm",
+          "finding": "Failure initiation separates fiber and matrix modes under tension/compression, rather than identifying one load-independent mode."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "First-ply initiation is criterion-dependent and may be benign or severe; it is not necessarily ultimate laminate failure."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 45,
+      "assistant_tokens": 30,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 185
+    },
+    {
+      "id": "repo-366ba1159857f3967b5004da",
+      "messages_sha256": "366ba1159857f3967b5004da324f252505198d5af613e995784afa54ab4cf115",
+      "state": "PASS",
+      "rationale": "Correct distinction between quasi-isotropic extensional response and bending/through-thickness anisotropy.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "COMSOL Composite Materials Module User Guide",
+          "url": "https://doc.comsol.com/5.4/doc/com.comsol.help.compmat/CompositeMaterialsModuleUsersGuide.pdf",
+          "finding": "Classical laminate force/curvature relations and constituent directional stiffness describe ply orientation and stacking effects."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The stated layup assumes equal material and thickness plies. Essentially unachievable refers to conventional in-plane continuous-fiber stacking, not every possible three-dimensional composite architecture."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 105,
+      "assistant_tokens": 79,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 186
+    },
+    {
+      "id": "repo-7fdca1aaef84415e058d2dee",
+      "messages_sha256": "7fdca1aaef84415e058d2deea9618e96c0c457fc55ba79934f61509023b245e5",
+      "state": "PASS",
+      "rationale": "Correct weight and processing arguments against indiscriminate laminate thickening.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "COMSOL Composite Materials Module User Guide",
+          "url": "https://doc.comsol.com/5.4/doc/com.comsol.help.compmat/CompositeMaterialsModuleUsersGuide.pdf",
+          "finding": "Classical laminate force/curvature relations and constituent directional stiffness describe ply orientation and stacking effects."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Thickness alone does not universally increase each stress component at fixed load; the out-of-plane warning concerns three-dimensional/edge effects and thicker-part processing complexity."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 76,
+      "assistant_tokens": 58,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 187
+    },
+    {
+      "id": "repo-587951209c838efc1ac25ae9",
+      "messages_sha256": "587951209c838efc1ac25ae9642d4a58825d84770d689aa2cd31f338ea55511c",
+      "state": "PASS",
+      "rationale": "Correct semi-empirical Halpin-Tsai purpose and geometry-dependent fitting parameter.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "COMSOL, Micromechanical Model of a Fiber Composite",
+          "url": "https://doc.comsol.com/6.4/doc/com.comsol.help.models.sme.micromechanical_model_of_a_fiber_composite/micromechanical_model_of_a_fiber_composite.html",
+          "finding": "Compares homogenized properties and semi-empirical mixing models, including geometry-dependent Halpin-Tsai parameters."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "More accurate is the intended improvement over a crude mixture estimate within calibrated regimes, not a guarantee across arbitrary fiber packing or volume fraction."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 66,
+      "assistant_tokens": 48,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 188
+    },
+    {
+      "id": "repo-5b27e1da3f9c0cc9da611c38",
+      "messages_sha256": "5b27e1da3f9c0cc9da611c3853e4d30295819e06d499a26d9872d15413058081",
+      "state": "QUARANTINE",
+      "rationale": "Homogenizing a laminate does not by itself make its equivalent stiffness isotropic; the answer gives an insufficient condition for using an isotropic material representation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "COMSOL Composite Materials Module User Guide",
+          "url": "https://doc.comsol.com/5.4/doc/com.comsol.help.compmat/CompositeMaterialsModuleUsersGuide.pdf",
+          "finding": "Classical laminate force/curvature relations and constituent directional stiffness describe ply orientation and stacking effects."
+        },
+        {
+          "title": "COMSOL, Micromechanical Model of a Fiber Composite",
+          "url": "https://doc.comsol.com/6.4/doc/com.comsol.help.models.sme.micromechanical_model_of_a_fiber_composite/micromechanical_model_of_a_fiber_composite.html",
+          "finding": "Compares homogenized properties and semi-empirical mixing models, including geometry-dependent Halpin-Tsai parameters."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "A homogenized zero-degree laminate retains E1 unequal to E2. A quasi-isotropic A block also need not imply an isotropic D block."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A homogenized zero-degree laminate retains E1 unequal to E2. A quasi-isotropic A block also need not imply an isotropic D block."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "An element formulation can accept anisotropic constitutive data; the hold concerns replacing the material by isotropic averaged constants."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 87,
+      "assistant_tokens": 67,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 189
+    },
+    {
+      "id": "repo-3b68d393a0d9e4f09464d950",
+      "messages_sha256": "3b68d393a0d9e4f09464d9509a78fc8b7ff2f4d59699c39800ad5e5ce5fb8632",
+      "state": "PASS",
+      "rationale": "Correct qualified account of composite failure prediction limits and the need for physical modeling plus calibration; organizer benchmark cases substantiate errors above 30 percent in some cases.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Hinton, Kaddour and Soden, Predicting failure in fibre composites: Lessons learned from the world-wide failure exercise (ICCM-13, 2001)",
+          "url": "https://www.researchgate.net/publication/268057723_Predicting_failure_in_fibre_composites_Lessons_learned_from_the_world-wide_failure_exercise",
+          "finding": "Organizer author-uploaded primary paper, pages 8–9, named cases 11–12, documents some errors exceeding 30 percent."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The number refers to some named benchmark cases, not a universal accuracy bound or performance estimate for every current solver. Predictions depend on inputs, failure definitions and validation."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 97,
+      "assistant_tokens": 80,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 190
+    },
+    {
+      "id": "repo-d9787c9559f8ab2d63bd9593",
+      "messages_sha256": "d9787c9559f8ab2d63bd959368e0d2c665afedb867ef42b9ece1793438f00a0d",
+      "state": "QUARANTINE",
+      "rationale": "The coupling concept is useful, but balanced opposite-angle pairing is sufficient rather than necessary to make A16 zero; uniaxial strain response also involves the inverse full A matrix.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "COMSOL Composite Materials Module User Guide",
+          "url": "https://doc.comsol.com/5.4/doc/com.comsol.help.compmat/CompositeMaterialsModuleUsersGuide.pdf",
+          "finding": "Classical laminate force/curvature relations and constituent directional stiffness describe ply orientation and stacking effects."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "For Q11=100,Q22=10,Q12=3,Q66=5, Qbar16(+30)=28.5788383 and Qbar16(-45)=-22.5. Thickness weights 1 and 1.27017059 cancel A16 with no matching opposite-angle pair."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For Q11=100,Q22=10,Q12=3,Q66=5, Qbar16(+30)=28.5788383 and Qbar16(-45)=-22.5. Thickness weights 1 and 1.27017059 cancel A16 with no matching opposite-angle pair."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the stated necessity instead of denying the standard balanced-laminate construction."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 83,
+      "assistant_tokens": 67,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 191
+    },
+    {
+      "id": "repo-d015f081ac1618acc974fb0d",
+      "messages_sha256": "d015f081ac1618acc974fb0d0424e13ccd9a6e375e889288d6f8668b19f0fd61",
+      "state": "QUARANTINE",
+      "rationale": "Low transverse/interface resistance explains splitting risk, but adding a few unspecified off-axis plies does not establish that the splitting mode will be arrested.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "COMSOL, Parametric Study on Cross-Ply Laminate Failure",
+          "url": "https://doc.comsol.com/6.4/doc/com.comsol.help.models.compmat.parametric_study_on_crossply_laminate_failure/parametric_study_on_crossply_laminate_failure.html",
+          "finding": "Cross-ply loading is resolved into local ply stresses and multiple failure criteria; mode and onset depend on the applied load and ply properties."
+        },
+        {
+          "title": "Abaqus, Damage Evolution for Fiber-Reinforced Composites",
+          "url": "https://docs.software.vt.edu/abaqusv2025/English/SIMACAEMATRefMap/simamat-c-damageevolfibercomposite.htm",
+          "finding": "Damage variables evolve irreversibly and alter stiffness, making subsequent response dependent on history."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the categorical arrest prescription; actual bridging, interface toughness, ply thickness and load level need assessment."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 100,
+      "assistant_tokens": 75,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 192
+    },
+    {
+      "id": "repo-b0e8d708d9d40793d36263b6",
+      "messages_sha256": "b0e8d708d9d40793d36263b678a5934b0f9faf94ab2ba5fcc2397e36f38555db",
+      "state": "QUARANTINE",
+      "rationale": "The layup/load coupling insight is valid, but Kt=3 requires the classical infinite isotropic circular-hole case, and the orthotropic concentration is not specified by E1/E2 alone.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "COMSOL Composite Materials Module User Guide",
+          "url": "https://doc.comsol.com/5.4/doc/com.comsol.help.compmat/CompositeMaterialsModuleUsersGuide.pdf",
+          "finding": "Classical laminate force/curvature relations and constituent directional stiffness describe ply orientation and stacking effects."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "Even the isotropic result depends on hole shape: an infinite plate with a suitably oriented elliptical opening has Kt=1+2a/b rather than universally 3. Orthotropic elasticity additionally needs shear and Poisson constants."
+        },
+        {
+          "title": "NASA TM-86038, orthotropic hole stress concentration",
+          "url": "https://ntrs.nasa.gov/api/citations/19860005880/downloads/19860005880.pdf",
+          "finding": "Explicitly includes longitudinal/transverse modulus, shear modulus and Poisson-ratio dependence, with laminate concentrations above or below 3."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Even the isotropic result depends on hole shape: an infinite plate with a suitably oriented elliptical opening has Kt=1+2a/b rather than universally 3. Orthotropic elasticity additionally needs shear and Poisson constants."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the universalized concentration claims, retaining the need for joint layup and structural optimization."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 212,
+      "assistant_tokens": 184,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 193
+    },
+    {
+      "id": "repo-900d0fb4ab36dc86c85db056",
+      "messages_sha256": "900d0fb4ab36dc86c85db0568dabe2f3b15066c7974abdfdfdc165a677673462",
+      "state": "QUARANTINE",
+      "rationale": "History-dependent stiffness degradation correctly defeats linear superposition, but the claimed necessary nonconvex failure surface and the safe-load-sum explanation are incorrect.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Abaqus, Damage Evolution for Fiber-Reinforced Composites",
+          "url": "https://docs.software.vt.edu/abaqusv2025/English/SIMACAEMATRefMap/simamat-c-damageevolfibercomposite.htm",
+          "finding": "Damage variables evolve irreversibly and alter stiffness, making subsequent response dependent on history."
+        },
+        {
+          "title": "Abaqus, Damage Initiation for Fiber-Reinforced Composites",
+          "url": "https://docs.software.vt.edu/abaqusv2025/English/SIMACAEMATRefMap/simamat-c-damageinitfibercomposite.htm",
+          "finding": "Failure initiation separates fiber and matrix modes under tension/compression, rather than identifying one load-independent mode."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "A convex safe set [-1,1] contains loads 0.75 and 0.75, but their sum 1.5 is unsafe. Convexity concerns weighted averages, not arbitrary sums; a convex quadratic failure criterion can coexist with progressive damage."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A convex safe set [-1,1] contains loads 0.75 and 0.75, but their sum 1.5 is unsafe. Convexity concerns weighted averages, not arbitrary sums; a convex quadratic failure criterion can coexist with progressive damage."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the extra geometric argument, retaining the need for path-dependent analysis."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 145,
+      "assistant_tokens": 122,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 194
+    },
+    {
+      "id": "repo-3fb348539f24f39be694cfcd",
+      "messages_sha256": "3fb348539f24f39be694cfcd9aa7eef6a13fd7555b4b14a04aceea0beeb83fb5",
+      "state": "PASS",
+      "rationale": "Correct open-hole versus fastener-filled-hole distinction and conditional load-transfer effect.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "COMSOL, Parametric Study on Cross-Ply Laminate Failure",
+          "url": "https://doc.comsol.com/6.4/doc/com.comsol.help.models.compmat.parametric_study_on_crossply_laminate_failure/parametric_study_on_crossply_laminate_failure.html",
+          "finding": "Cross-ply loading is resolved into local ply stresses and multiple failure criteria; mode and onset depend on the applied load and ply properties."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Interference, clearance, bearing/bypass distribution, clamp-up and friction determine the actual concentration."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 62,
+      "assistant_tokens": 45,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 195
+    },
+    {
+      "id": "repo-93ba7d18eb3cb3c9401fc323",
+      "messages_sha256": "93ba7d18eb3cb3c9401fc3237da497da8a1226d4b44d31f66eb90e92751733e7",
+      "state": "QUARANTINE",
+      "rationale": "The listed composite-joint sensitivities and failure modes are useful, but the contrast that metals have a single failure load/mode is misleading.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Abaqus, Damage Initiation for Fiber-Reinforced Composites",
+          "url": "https://docs.software.vt.edu/abaqusv2025/English/SIMACAEMATRefMap/simamat-c-damageinitfibercomposite.htm",
+          "finding": "Failure initiation separates fiber and matrix modes under tension/compression, rather than identifying one load-independent mode."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "Changing edge distance and section area changes distinct bearing and net-section/shear-out load capacities in a metal joint as well as in a composite."
+        },
+        {
+          "title": "NASA, metal-joint strength analysis",
+          "url": "https://ntrs.nasa.gov/api/citations/19720010933/downloads/19720010933.pdf",
+          "finding": "Metal joints also have distinct net-tension, shear-out and bearing failure modes."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Changing edge distance and section area changes distinct bearing and net-section/shear-out load capacities in a metal joint as well as in a composite."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the categorical metal contrast; metals also exhibit bearing, net-section, shear-out and geometry-dependent controlling failure modes."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 90,
+      "assistant_tokens": 69,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 196
+    },
+    {
+      "id": "repo-769b86f3b82eec5d9a2acee0",
+      "messages_sha256": "769b86f3b82eec5d9a2acee0444cd28f35a98c6352c361d35a286a56702002e3",
+      "state": "QUARANTINE",
+      "rationale": "The ideal all-helical netting angle is correct, but the added general claim that practical mixed hoop/helical vessels use helical angles close to 54.7 degrees is not generally valid; hoop plies change the required load sharing.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "DeLay, Patterson and Olson, US7641949B2 (2010), Section 33",
+          "url": "https://ntrs.nasa.gov/api/citations/20100016312/downloads/20100016312.pdf",
+          "finding": "Actual mixed hoop/helical vessel construction includes 5–20-degree helical plies with 90-degree hoop plies; all-helical netting angle does not prescribe the practical mixed architecture."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "Ideal all-helical tan(theta)^2=2 gives 54.7356103 degrees. With equal fiber stress and hoop thickness sharing the load, t_hoop/t_helical=2*cos(alpha)^2-sin(alpha)^2, allowing smaller helical angles."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Ideal all-helical tan(theta)^2=2 gives 54.7356103 degrees. With equal fiber stress and hoop thickness sharing the load, t_hoop/t_helical=2*cos(alpha)^2-sin(alpha)^2, allowing smaller helical angles."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold only the practical mixed-winding generalization, retaining the ideal two-to-one all-helical derivation and axis-angle convention."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 107,
+      "assistant_tokens": 91,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 197
+    },
+    {
+      "id": "repo-3cc40435c290f6bc00c165a1",
+      "messages_sha256": "3cc40435c290f6bc00c165a190716836024eaf6f91d2de986b6f7d72fd96bcc7",
+      "state": "PASS",
+      "rationale": "Correct microstructural state-variable decomposition before building a strength model.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT Physical Metallurgy Lecture 18",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/3b9508adaba259c0d0628f6078f92349_MIT3_40JF09_lec18.pdf",
+          "finding": "Precipitate size, volume fraction, coherency and cutting/bypass mechanisms are distinct inputs to strengthening models."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Separating variables helps identifiability but does not make strengthening increments exactly independent or additive."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 127,
+      "assistant_tokens": 85,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 198
+    },
+    {
+      "id": "repo-6f964020ff6e54fcf71ec647",
+      "messages_sha256": "6f964020ff6e54fcf71ec64749e4c35a957f41b3b93a32c4c85aecba2eca64bf",
+      "state": "PASS",
+      "rationale": "Faithful processing-history interpretation of microstructure.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT Physical Metallurgy Lecture 18",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/3b9508adaba259c0d0628f6078f92349_MIT3_40JF09_lec18.pdf",
+          "finding": "Precipitate size, volume fraction, coherency and cutting/bypass mechanisms are distinct inputs to strengthening models."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Encodes does not mean that one micrograph uniquely reconstructs the entire thermal/mechanical history; distinct paths can produce similar states."
+        }
+      ],
+      "domain": "materials_manufacturing",
+      "primary_source": "D_material_science.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 61,
+      "assistant_tokens": 23,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/materials_manufacturing-0175-0200.json",
+      "original_domain_ordinal": 199
     }
   ],
-  "reviewed": 2034,
+  "reviewed": 2059,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

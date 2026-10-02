@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1649,
+    "PASS": 1662,
     "REJECT": 70,
-    "QUARANTINE": 316,
-    "NEEDS_HUMAN_REVIEW": 77
+    "QUARANTINE": 328,
+    "NEEDS_HUMAN_REVIEW": 52
   },
   "by_domain": {
     "circuits": {
@@ -56,10 +56,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "materials_manufacturing": {
-      "PASS": 154,
+      "PASS": 167,
       "REJECT": 4,
-      "QUARANTINE": 17,
-      "NEEDS_HUMAN_REVIEW": 75
+      "QUARANTINE": 29,
+      "NEEDS_HUMAN_REVIEW": 50
     },
     "physics": {
       "PASS": 212,
@@ -74,18 +74,18 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 2034,
+  "agent_substantive_reviews": 2059,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "8b6377f835decb17d7002927dfcb77921650cd25a987c813942b7221afca9540",
+  "technical_review_sha256": "8d4a28db366ad48482dbb38e558560a433d86bf1e7f38994c86d838bb931b97e",
   "reasons": {
     "Faithful conceptual paraphrase that conservation and boundary requirements are integral to the coupled solution process. The prose does not explicitly assert exact feasibility of every internal numerical iterate.": 1,
     "Correct practical explanation of boundary data in an ordinary PDE discretization and their effect on closure, accuracy and stability.": 1,
     "Correct elementary local/absolute extrema distinction, including endpoint possibilities.": 1,
     "Universal three-phase-motor size, efficiency and self-starting comparison lacks machine type, rating and comparison conditions; synchronous motors are a counterexample to unqualified self-starting.": 1,
     "The basic inclusion of polynomials among rational expressions is correct, but the claim that polynomials always tend to infinity and can never have horizontal asymptotes fails for constant polynomials.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 75,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 50,
     "Accurate typical FMEA-entry checklist and appropriate acknowledgement that responsibility/action-status fields vary by team. It does not impose one universal risk-priority formula or imply FMEA alone validates safety.": 1,
     "Changing L/C reactance redistributes complex branch currents and voltages; response and cancellation are correctly circuit dependent rather than universally monotone.": 1,
     "Correct current-sign reversal of magnetic wire force and its role in mechanical commutation.": 1,
@@ -2115,11 +2115,36 @@
     "Reasonable mechanism classification from the specified power-law and lattice-diffusion activation fingerprints.": 1,
     "Correct staged interpretations of narrowing and lower-angle peak shift with explicit alternative causes.": 1,
     "Correct Hashin mode separation into fiber/matrix tension/compression criteria.": 1,
-    "Reasonable high-level incremental workflow combining cycle- and time-dependent crack/damage evolution with a peak-load fracture check.": 1
+    "Reasonable high-level incremental workflow combining cycle- and time-dependent crack/damage evolution with a peak-load fracture check.": 1,
+    "The axial zero-ply load dominance is sensible, but the explanation assigns transverse Poisson restraint in 90-degree plies to their matrix even though their fibers run in that transverse global direction.": 1,
+    "Correct main directional-stiffness/strength tradeoff of a unidirectional laminate.": 1,
+    "Correct conventional D-block bending/twisting role and axis interpretation.": 1,
+    "Correct constituent-to-ply versus homogenized-ply-to-laminate modeling hierarchy.": 1,
+    "Correct distinction between quasi-isotropic extensional response and bending/through-thickness anisotropy.": 1,
+    "Correct qualified account of composite failure prediction limits and the need for physical modeling plus calibration; organizer benchmark cases substantiate errors above 30 percent in some cases.": 1,
+    "Correct microstructural state-variable decomposition before building a strength model.": 1,
+    "Correct open-hole versus fastener-filled-hole distinction and conditional load-transfer effect.": 1,
+    "Correct semi-empirical Halpin-Tsai purpose and geometry-dependent fitting parameter.": 1,
+    "Homogenizing a laminate does not by itself make its equivalent stiffness isotropic; the answer gives an insufficient condition for using an isotropic material representation.": 1,
+    "Faithful processing-history interpretation of microstructure.": 1,
+    "The ideal all-helical netting angle is correct, but the added general claim that practical mixed hoop/helical vessels use helical angles close to 54.7 degrees is not generally valid; hoop plies change the required load sharing.": 1,
+    "Correct weight and processing arguments against indiscriminate laminate thickening.": 1,
+    "History-dependent stiffness degradation correctly defeats linear superposition, but the claimed necessary nonconvex failure surface and the safe-load-sum explanation are incorrect.": 1,
+    "The listed composite-joint sensitivities and failure modes are useful, but the contrast that metals have a single failure load/mode is misleading.": 1,
+    "The tab and load-introduction suggestions are useful, but changing to a dogbone conflicts with the constant rectangular coupon geometry of the named D3039 test. A material/layup/grip-specific diagnosis is required.": 1,
+    "The fracture-plane/inter-fiber description is sound, but an unqualified accuracy ranking above Tsai-Wu is not established without a material/loading validation scope.": 1,
+    "The layup/load coupling insight is valid, but Kt=3 requires the classical infinite isotropic circular-hole case, and the orthotropic concentration is not specified by E1/E2 alone.": 1,
+    "Low transverse/interface resistance explains splitting risk, but adding a few unspecified off-axis plies does not establish that the splitting mode will be arrested.": 1,
+    "The typical UD stiffness orders are reasonable, but greater failure strain alone does not establish a general mass-normalized impact-toughness ranking.": 1,
+    "Correct lightweight sandwich construction and face-separation bending-stiffness principle.": 1,
+    "The coupling concept is useful, but balanced opposite-angle pairing is sufficient rather than necessary to make A16 zero; uniaxial strain response also involves the inverse full A matrix.": 1,
+    "Correct interfacial-ply separation definition and warning about hidden delamination.": 1,
+    "Stacking order and the stated A-versus-D comparison are correct, but the distance-cubed wording needs to distinguish integrated ply boundaries from the actual quadratic distance weighting.": 1,
+    "Correct first-ply initiation definition and customary conservative-screening role.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "6b95077c849764030b34971c593bae45a3a5fa3336976656e316d951a5cdbf9c",
-  "substantively_unreviewed": 75,
+  "published_decisions_sha256": "79648abf099d007370d6cf474ec061526e28ed56f70255085d310e4a7324af71",
+  "substantively_unreviewed": 50,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
