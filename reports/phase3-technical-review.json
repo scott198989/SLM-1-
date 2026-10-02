@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 357,
+    "PASS": 379,
     "REJECT": 36,
-    "QUARANTINE": 125,
-    "NEEDS_HUMAN_REVIEW": 1594
+    "QUARANTINE": 128,
+    "NEEDS_HUMAN_REVIEW": 1569
   },
   "by_domain": {
     "circuits": {
@@ -44,10 +44,10 @@
       "NEEDS_HUMAN_REVIEW": 208
     },
     "electrical_components": {
-      "PASS": 110,
+      "PASS": 132,
       "REJECT": 9,
-      "QUARANTINE": 31,
-      "NEEDS_HUMAN_REVIEW": 150
+      "QUARANTINE": 34,
+      "NEEDS_HUMAN_REVIEW": 125
     },
     "electromagnetism": {
       "PASS": 2,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 517,
+  "agent_substantive_reviews": 542,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "165ec7ca7ec15c927c40864e43186dab864ca83f17d9d6df897d611430939da5",
+  "technical_review_sha256": "3330bc9e604f388bc5038376d18e513127a165ea86f4860d38019ef152416d53",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1592,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1567,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -598,11 +598,36 @@
     "Correct practical warning that a magnetometer senses the net local field rather than tagging Earth's contribution and that nearby magnetic disturbances can spoil heading. Calibration or an alternative approach is appropriately presented rather than a guarantee that calibration removes arbitrary changing fields.": 1,
     "Slow sensing can lose fast dynamics and add destabilizing loop phase lag. However, filtering the process downstream is not a specified remedy for missing sensor bandwidth and may add still more lag. The answer needs a defined control-bandwidth/compensation change or explicit willingness to abandon fast-response requirements rather than a vague filtering fix.": 1,
     "Correct non-exhaustive mains-filter component inventory and distinction between noise paths. X and Y capacitor placement and common-mode choke use are conventional; no component rating, leakage limit or complete certified filter design is invented.": 1,
-    "Correctly separates signal-voltage compatibility from galvanic separation. The answer explicitly permits an interface to do both and does not claim that all level shifters isolate or that any isolated component automatically meets a particular safety standard.": 1
+    "Correctly separates signal-voltage compatibility from galvanic separation. The answer explicitly permits an interface to do both and does not claim that all level shifters isolate or that any isolated component automatically meets a particular safety standard.": 1,
+    "Correct traditional bimetal thermal-overload-relay mechanism and control-contact role in dropping a contactor after sustained excess current. It does not claim short-circuit interruption capability or give an unverified trip setting.": 1,
+    "Accept the requested one-line motivation that reference noise contributes measurement/output noise. The original does not specify a unit-gain or input-independent transfer function. Actual contribution is input- and topology-dependent and can vanish for ideal zero/ratiometric input; this is qualitative noise-budget guidance, not a universal transfer law.": 1,
+    "Correct consequence of inadequate heat rejection in a dissipative sealed enclosure: internal temperature can rise and worsen component/material behavior. It does not claim ingress sealing inherently causes overheating when an adequate conductive thermal path exists.": 1,
+    "Correctly distinguishes oversampling a slow signal from restoring unavailable sensor dynamics and qualifies the noise benefit as applying to certain kinds of noise. It does not promise that merely raising the read rate improves the sensor's physical bandwidth.": 1,
+    "Amplification, buffering and filtering are valid reasons to pair an op-amp with a small analog sensor output. The unverified most sensor outputs are millivolts or microamps population claim remains a hold; it is not read as saying all sensors have small analog outputs.": 1,
+    "The prompt requests an interface idea, and the answer conditionally identifies isolated signal transfer plus level adaptation. It does not claim a digital isolator alone transfers every possible sensor format. Accept the architecture concept; implementation still depends on sensor signal type, isolation ratings and isolated-side power. This is not a circuit-ready universal prescription.": 1,
+    "Reasonable diagnostic caution: a software change can alter duty, timing, thermal stress or reported faults without a newly introduced intrinsic hardware defect. The answer says may/could and does not prove the hardware is sound or dismiss actual hardware damage triggered by the new conditions.": 1,
+    "The maximum-safe-interruption concept is correct, but without arcing is ambiguous and literally too strong. A fuse commonly forms an internal arc after melting and must extinguish it safely; breaking capacity is not a promise of zero arc formation. Hold the definition pending distinction from unsafe external or sustained arcing.": 1,
+    "Acceptable concise reliability distinction between loss of function and degraded/out-of-spec function. It does not confuse a soft failure here with the different electronics term soft error or assert a cause or repairability.": 1,
+    "Reasonable first screening priority in the explicitly hot installation: a device outside its ambient/thermal capability cannot be rescued merely by voltage headroom. It also calls for combined environmental and self-heating checks, without certifying the actual valve island or saying voltage ratings may be ignored.": 1,
+    "Correct instruction to account for switching overshoot and actual peak drain stress rather than nominal supply alone. The 24/40/60 V values are illustrative and may be tight is conditional, not a conclusion that every 60 V part is unsuitable for that rail.": 1,
+    "Correctly separates immediate quoted cost from resilience factors and preserves both possibilities for the cheaper choice. No supplier facts, probabilities or purchase decision are invented.": 1,
+    "Correct applied-to-rated stress-ratio definition. The fractional limits are illustrative and explicitly depend on component class; they are not presented as the applicable design limits for a selected part or one identified standard.": 1,
+    "Balanced conditional SSR/electromechanical comparison covering load, switching duty, leakage, ambient heat, wear, contamination and vibration. It explicitly avoids one universal winner and requires sealing/mounting/thermal design rather than certifying a specific plant installation.": 1,
+    "Correct concise reason for adding a transistor relay driver: the MCU provides a small control signal while the driver handles larger coil current. It is not a full circuit or an assertion that inductive suppression and transistor ratings are unnecessary.": 1,
+    "Correct qualitative link between colder/stiffer cable materials, bend stress and possible jacket/conductor damage. It does not invent a universal bend radius or temperature limit across cable materials.": 1,
+    "Correct identification of a microphone as an acoustic-to-electrical transducer. The definition does not imply that a microphone necessarily supplies useful output power without external bias or conditioning.": 1,
+    "Strong distinction among threshold measured at light current, local transconductance and on-resistance at specified enhancement. It correctly rejects threshold/gm as substitutes for on-resistance at the available 3.3 V drive and requires datasheet conditions.": 1,
+    "Operating below stress limits is a valid derating concept, but the generic typically 50–80 percent range is unverified without a parameter, technology, temperature or reliability-policy context. This is a hold on the numerical population generalization, not an accusation that the answer states an absolute universal rule.": 1,
+    "Sound warning that DC accuracy/ripple specifications do not make a bench supply ideal at the circuit under dynamic/reactive loading. Listed effects are possibilities and the answer does not assert a fault in a named supply or invalidate documented performance under its specified conditions.": 1,
+    "Correct possible mechanisms for a bead worsening emissions or rail noise, emphasizing frequency dependence and circuit interaction. It does not claim that beads always damp or always worsen a system.": 1,
+    "Correct broad energy-conversion definition of a transducer with a valid mechanical-to-electrical example. It is not restricted to sensors and does not claim a numerical conversion efficiency.": 1,
+    "Correct distinction and interaction between reducing noise generation and controlling coupling/return/bonding paths. It treats source, path, mode conversion and radiation as separate diagnostic links rather than prescribing a single grounding cure.": 1,
+    "Correct feedback-regulation and stability explanation. Inappropriate compensation or output-network characteristics can destabilize the loop; the answer does not claim every oscillation has that one cause or invent a compensation network.": 1,
+    "Correct conduction-loss explanation and conditional thermal consequences for an SSR. It distinguishes mechanical wear advantages from semiconductor temperature limits and says often need heatsinking/derating rather than giving an unsupported universal heatsink or current rating.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "e0d5a50a60994cd2d58fd07e422310ce57e5163551f0e37b9967737a35d31b7c",
-  "substantively_unreviewed": 1592,
+  "published_decisions_sha256": "26e7faf90a0b5887613f947adf9e08c2a082ea7cdfc3e48ed4480c3488cda383",
+  "substantively_unreviewed": 1567,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
