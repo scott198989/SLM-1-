@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1391,
-    "REJECT": 64,
-    "QUARANTINE": 286,
-    "NEEDS_HUMAN_REVIEW": 371
+    "PASS": 1410,
+    "REJECT": 66,
+    "QUARANTINE": 290,
+    "NEEDS_HUMAN_REVIEW": 346
   },
   "by_domain": {
     "circuits": {
@@ -62,10 +62,10 @@
       "NEEDS_HUMAN_REVIEW": 244
     },
     "physics": {
-      "PASS": 105,
-      "REJECT": 3,
-      "QUARANTINE": 17,
-      "NEEDS_HUMAN_REVIEW": 125
+      "PASS": 124,
+      "REJECT": 5,
+      "QUARANTINE": 21,
+      "NEEDS_HUMAN_REVIEW": 100
     }
   },
   "risk_flags_overlap": {
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1740,
+  "agent_substantive_reviews": 1765,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "0639efb01707129860116e2111ad1e1906cf66124842976dbfbda47e38294a87",
+  "technical_review_sha256": "11524deb629047dc63dc8e574a4342b2ec7e3aa152022c437b3ff135c915f5d0",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 369,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 344,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1821,11 +1821,36 @@
     "Correct qualitative finite buildup/ringdown response to a swept-frequency drive.": 1,
     "Correct response-amplitude definition of resonance frequency with a light-damping qualification.": 1,
     "Correct sinusoidal mean-power derivation and exact power-resonance frequency for constant viscous damping.": 1,
-    "Correct small-slope, constant-tension string wave-equation derivation.": 1
+    "Correct small-slope, constant-tension string wave-equation derivation.": 1,
+    "Correct infinite uniform-line Gauss-law field.": 1,
+    "Correct standard weakly nonlinear hardening-Duffing bistability and saddle-node hysteresis picture under a single-harmonic response approximation.": 1,
+    "The leading undamped tongue-width idea is sound, but the written damping threshold is dimensionally inconsistent with h as defined in the differential equation.": 1,
+    "Correct two-liquid displaced-volume force balance and explicit warning to include an air-exposed region if present.": 1,
+    "Correct uniform-density rigid-body rotating-fluid pressure and paraboloidal free surface.": 1,
+    "Correct single circular-loop center field from Biot-Savart.": 1,
+    "Correct ideal buoyancy and submerged-volume estimate for a rigid object in ordinary freshwater.": 1,
+    "Correct ideal rectangular-guide cutoff derivation and phase/group-velocity distinction.": 1,
+    "Correct standard hydrostatic curved-surface decomposition into projected-area horizontal force and an imaginary-fluid-volume vertical magnitude.": 1,
+    "The logarithmic work is correct for reversible or quasistatic isothermal boundary work, but an isothermal ideal-gas expansion alone does not specify that path.": 1,
+    "Correct conceptual stiffness/reactance pumping and phase-sensitive parametric growth/squeezing mechanism, with damping threshold explicitly recognized.": 1,
+    "Correct separation of vertical force balance from small-tilt restoring-moment stability.": 1,
+    "The Mayer relation is correct, but this derivation substitutes dU=n*Cv*dT along a constant-pressure path without establishing the volume derivative vanishes. It therefore uses the very temperature-only property the prompt asks not to assume.": 1,
+    "Correct right-hand conventions for a positive charge Lorentz force and conventional-current loop direction.": 1,
+    "Correct density, floating classification and two-thirds submerged fraction.": 1,
+    "Correct depth-dependent neutral-buoyancy reasoning with density and hull compression effects separated.": 1,
+    "Correct introductory distinction between isotropic static-fluid pressure and the more general stress tensor.": 1,
+    "The passage associates3 mHz with the gravest0S2 example despite a roughly tenfold frequency difference. The general normal-mode interpretation and its or overtones option remain possible, but that particular gravest-mode example does not match the stated peak.": 1,
+    "Correct equilibrium-displacement and local metacentric-stability conditions for the floating cone.": 1,
+    "Correct standard continuum-mechanics definition of an ordinary fluid through sustained shear deformation.": 1,
+    "The acoustic/optical branch mechanism is valid, but the displayed gap-size expression has incorrect dimensions and is not the difference of the zone-edge frequencies.": 1,
+    "Correct marginally stable conservative linear oscillation versus attraction, with nonlinear limit-cycle distinction.": 1,
+    "Correct electrostatic scalar-potential versus vector-field distinction and gradient relation.": 1,
+    "Correct introductory definition and fixed-geometry linear-capacitor dependence; the plate-area and separation trends follow from C=epsilon*A/d.": 1,
+    "The algebra is correct for a reversible adiabatic calorically perfect ideal gas, but adiabatic alone does not justify internal P*dV work or constant gamma integration.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "8a5c1722db7c1f6da6ee31d4d8f93da18a01392245b1b26b626ce44b2ddaa626",
-  "substantively_unreviewed": 369,
+  "published_decisions_sha256": "5d4b44089a94601570e85f8de5cb332bf7fa8833aea03cbe69efcbebee7499a2",
+  "substantively_unreviewed": 344,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

@@ -52898,9 +52898,938 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/physics-0100-0125.json",
       "original_domain_ordinal": 124
+    },
+    {
+      "id": "repo-30fa71b0dad9c3996a14d072",
+      "messages_sha256": "30fa71b0dad9c3996a14d072b5b7e1414b771c462e5317af5070f22ea77520ce",
+      "state": "PASS",
+      "rationale": "Correct ideal rectangular-guide cutoff derivation and phase/group-velocity distinction.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "kz²=omega²/c²-kT² is negative below cutoff; above cutoff vp=omega/kz and vg=domega/dkz=c²/vp<c in the lossless nondispersive guide."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Allowed TE/TM index sets exclude the spurious00 mode in a hollow single-conductor guide. Some acoustic or TEM modes have zero cutoff; the answer concerns a particular nonzero transverse mode."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 209,
+      "assistant_tokens": 189,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 125
+    },
+    {
+      "id": "repo-455b90eeb3c293c5ef70d179",
+      "messages_sha256": "455b90eeb3c293c5ef70d1797c0156cb172d8f57463ec7b5db600ed3c2a76698",
+      "state": "PASS",
+      "rationale": "Correct conceptual stiffness/reactance pumping and phase-sensitive parametric growth/squeezing mechanism, with damping threshold explicitly recognized.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NIST, Amplifiers",
+          "url": "https://www.nist.gov/programs-projects/amplifiers",
+          "finding": "Parametric amplification and squeezing redistribute gain/noise between field quadratures, with pump and operating regime determining behavior."
+        },
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A modulation at twice the mode frequency couples the two slowly varying quadratures with opposite gain signs; damping shifts the instability threshold."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Stable driven parametric amplifiers can operate below oscillation threshold; above-threshold exponential growth describes the linear instability stage and needs saturation for a finite steady state. The answer is a mechanism overview, not a complete amplifier design."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 155,
+      "assistant_tokens": 138,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 126
+    },
+    {
+      "id": "repo-efd176d91f8341f996235835",
+      "messages_sha256": "efd176d91f8341f9962358359ea642f0de150a54bd3423b660e185ac2e2c6707",
+      "state": "PASS",
+      "rationale": "Correct marginally stable conservative linear oscillation versus attraction, with nonlinear limit-cycle distinction.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For x_doubleprime+omega0²*x=0, energy is constant and all finite-amplitude phase-space orbits remain bounded; no neighboring orbit is attracted to one specified orbit."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The van der Pol example uses state-dependent energy input and damping, so it is not a conservative exception. Asymptotic equilibrium stability and orbital limit-cycle stability are different notions."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 134,
+      "assistant_tokens": 110,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 127
+    },
+    {
+      "id": "repo-e78711fab202274eafcd949b",
+      "messages_sha256": "e78711fab202274eafcd949bf7647fbf8e67809e92d119190bf5231fdffd1741",
+      "state": "REJECT",
+      "rationale": "The acoustic/optical branch mechanism is valid, but the displayed gap-size expression has incorrect dimensions and is not the difference of the zone-edge frequencies.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "title": "Oregon State University, Infinite Diatomic Chain",
+          "url": "https://sites.science.oregonstate.edu/physics/coursewikis/portfolioswiki/courses_lecture_pplec_pplecinf1ddiachain.html",
+          "finding": "The diatomic dispersion gives zone-edge frequencies sqrt(2*k/m1) and sqrt(2*k/m2)."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At the zone edge the squared frequencies are2*k/m1 and2*k/m2, so Deltaomega=|sqrt(2*k/m1)-sqrt(2*k/m2)|. The stated expression has dimensions mass^(-1/2)/time rather than1/time."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The lattice-spacing convention affects the q-label but cannot repair the gap formula dimensional error. Equal masses close the acoustic/optical gap."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 242,
+      "assistant_tokens": 215,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 128
+    },
+    {
+      "id": "repo-0c6adfa0276a058117ba9862",
+      "messages_sha256": "0c6adfa0276a058117ba9862c8b3305931a17a18f4f71a06ac2c198ea27579b1",
+      "state": "PASS",
+      "rationale": "Correct standard weakly nonlinear hardening-Duffing bistability and saddle-node hysteresis picture under a single-harmonic response approximation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Harmonic balance gives A²*((omega0²+3*alpha*A²/4-omega²)²+gamma²*omega²)=F0². In the usual bistable averaged regime the middle branch is a saddle and the outer branches are stable."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is not a general stability theorem for strongly nonlinear Duffing motion; higher harmonics, period doubling and chaos can intervene. Wrong slope is a heuristic shorthand: actual stability comes from the slow-flow/Floquet linearization, not an arbitrary plotted slope sign alone."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 279,
+      "assistant_tokens": 236,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 129
+    },
+    {
+      "id": "repo-0cc49335139a56d244cbd40f",
+      "messages_sha256": "0cc49335139a56d244cbd40f2217e5376a0d9e67b1cd0ba412d8f410f5d8c9a9",
+      "state": "REJECT",
+      "rationale": "The leading undamped tongue-width idea is sound, but the written damping threshold is dimensionally inconsistent with h as defined in the differential equation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "title": "NIST DLMF28.2 and28.17, Mathieu normalization and stability",
+          "url": "https://dlmf.nist.gov/28.2",
+          "finding": "Canonical Mathieu coefficients are dimensionless after rescaling time; converting a dimensional stiffness-modulation parameter requires the corresponding frequency-squared factors."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "In x_doubleprime+(omega0²+h*cos(2*omega*t))*x=0, h has units1/time². If gamma is a damping rate,4*gamma/omega0 is dimensionless and cannot be compared to h. With a2*gamma*x_prime term, the usual weak-pump exact-resonance threshold is approximately h>4*gamma*omega0 under this dimensional convention."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Other damping normalizations change numerical factors, not the units. Hold no rewritten equation as a substitute for the source."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 257,
+      "assistant_tokens": 234,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 130
+    },
+    {
+      "id": "repo-c780dd91b36c207b28884be1",
+      "messages_sha256": "c780dd91b36c207b28884be11f34cafaaa0df8bc466ba1eb7d442134a65cd987",
+      "state": "QUARANTINE",
+      "rationale": "The passage associates3 mHz with the gravest0S2 example despite a roughly tenfold frequency difference. The general normal-mode interpretation and its or overtones option remain possible, but that particular gravest-mode example does not match the stated peak.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Geophysical Journal International, experimental Earth normal-mode frequencies table",
+          "url": "https://academic.oup.com/view-large/130445302",
+          "finding": "Lists the fundamental spheroidal mode0S2 near0.30945 mHz, consistent with a54-minute rather than5.5-minute period."
+        },
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "1/(0.003 Hz)=333.33 s=5.56 min; a54-minute period corresponds to0.3086 mHz, not3 mHz. Higher modes may occur near3 mHz, but0S2 is not that peak."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the mode/frequency identification wording, preserving the valid general normal-mode-seismology concept. Peak width, duration, splitting and excitation require quantitative analysis before inferring a specificQ or internal structure."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 217,
+      "assistant_tokens": 179,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 131
+    },
+    {
+      "id": "repo-4458f0efa39681c01126ba51",
+      "messages_sha256": "4458f0efa39681c01126ba51e1ae5e8c05ae00d813a70dddfdb72dba5e518c47",
+      "state": "QUARANTINE",
+      "rationale": "The logarithmic work is correct for reversible or quasistatic isothermal boundary work, but an isothermal ideal-gas expansion alone does not specify that path.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT Unified Engineering, Free versus Reversible Isothermal Expansion",
+          "url": "https://web.mit.edu/16.unified/www/FALL/thermodynamics/notes/node33.html",
+          "finding": "An ideal-gas free expansion and a reversible isothermal piston expansion can connect the same temperatures/volumes with different work."
+        },
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Reversible work is n*R*T*ln(V2/V1); free expansion into vacuum has zero boundary work with the same ideal-gas endpoint temperature and volume change."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Heat equals work for an ideal gas with unchanged internal energy and no other energy changes, but their shared value is path dependent. Hold the missing process condition, not the integral algebra."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 119,
+      "assistant_tokens": 91,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 132
+    },
+    {
+      "id": "repo-fd0c83fea0c53c1f49a76cce",
+      "messages_sha256": "fd0c83fea0c53c1f49a76ccefe8e11de9c62ab6d028fa21f90de236c020a1ed9",
+      "state": "QUARANTINE",
+      "rationale": "The algebra is correct for a reversible adiabatic calorically perfect ideal gas, but adiabatic alone does not justify internal P*dV work or constant gamma integration.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT Unified Engineering, Specific Heats",
+          "url": "https://web.mit.edu/16.unified/www/FALL/thermodynamics/notes/node18.html",
+          "finding": "The constant-exponent pressure-volume law is derived for a reversible adiabatic ideal-gas process with the appropriate heat-capacity assumptions."
+        },
+        {
+          "title": "MIT Unified Engineering, Free versus Reversible Isothermal Expansion",
+          "url": "https://web.mit.edu/16.unified/www/FALL/thermodynamics/notes/node33.html",
+          "finding": "An ideal-gas free expansion and a reversible isothermal piston expansion can connect the same temperatures/volumes with different work."
+        },
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "An insulated ideal-gas free expansion has T2=T1 and P2*V2=P1*V1, but for gamma>1 it does not conserve P*V^gamma."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the missing reversible/quasistatic and constant-heat-capacity scope, preserving the familiar conditional derivation."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 183,
+      "assistant_tokens": 157,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 133
+    },
+    {
+      "id": "repo-52ed211c23333a62c5c83f76",
+      "messages_sha256": "52ed211c23333a62c5c83f76c6983189d255b028238568ff0c3180eb01a20d24",
+      "state": "QUARANTINE",
+      "rationale": "The Mayer relation is correct, but this derivation substitutes dU=n*Cv*dT along a constant-pressure path without establishing the volume derivative vanishes. It therefore uses the very temperature-only property the prompt asks not to assume.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT Unified Engineering, Specific Heats",
+          "url": "https://web.mit.edu/16.unified/www/FALL/thermodynamics/notes/node18.html",
+          "finding": "Defines Cv and the internal-energy differential and explains the ideal-gas temperature-only property needed to use dU=n*Cv*dT outside a constant-volume path."
+        },
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Generally dU=n*Cv*dT+(partial U/partial V)_T*dV. The missing term vanishes for a thermodynamically consistent ideal gas after using T*(partial P/partial T)_V-P=0, a derivation step not supplied."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the proof gap/circular substitution, not Cp-Cv=R. One can derive the needed identity from thermodynamics rather than assume U=U(T), but constant-pressure restriction alone is not its justification."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 150,
+      "assistant_tokens": 125,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 134
+    },
+    {
+      "id": "repo-e08dbf05173eb6a4926a8c82",
+      "messages_sha256": "e08dbf05173eb6a4926a8c82b37f9dc086e7d2ebe11461421dc729460fdc8831",
+      "state": "PASS",
+      "rationale": "Correct standard continuum-mechanics definition of an ordinary fluid through sustained shear deformation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Yield-stress and viscoelastic materials require a more nuanced classification and time scale; the sentence is the conventional simple-fluid versus elastic-solid distinction."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 35,
+      "assistant_tokens": 22,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 135
+    },
+    {
+      "id": "repo-c106841bca7e747d92597ac1",
+      "messages_sha256": "c106841bca7e747d92597ac1e761a16b67cd7db3a0cc06e41fad7f9f2d6c3eb5",
+      "state": "PASS",
+      "rationale": "Correct introductory distinction between isotropic static-fluid pressure and the more general stress tensor.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "In a static simple fluid, sigma=-p*I gives normal traction independent of plane orientation and no shear traction."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Pressure is not every possible normal stress in a solid; the static-fluid qualifier supplies the intended isotropic case."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 46,
+      "assistant_tokens": 30,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 136
+    },
+    {
+      "id": "repo-2472b98d52897c73c1b23086",
+      "messages_sha256": "2472b98d52897c73c1b2308689814e9b1695fe7237fa1beee7593de98b7df373",
+      "state": "PASS",
+      "rationale": "Correct ideal buoyancy and submerged-volume estimate for a rigid object in ordinary freshwater.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "rho_water*g*V_sub=rho_body*g*V_total gives V_sub/V_total=900/1000=0.9."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Use average body density and neglect surface tension, fluid stratification, absorption and temperature corrections; the freshwater density1000 is an approximation."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 113,
+      "assistant_tokens": 73,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 137
+    },
+    {
+      "id": "repo-805c6dc6d3242731a5fdaf11",
+      "messages_sha256": "805c6dc6d3242731a5fdaf117c08fdea7d9ed8a9395b1a379d5c8e1f6f84dfb4",
+      "state": "PASS",
+      "rationale": "Correct density, floating classification and two-thirds submerged fraction.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "0.8/(1.2e-3)=666.6667 kg/m³ and V_sub/V_total=2/3 for1000 kg/m³ water."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Assumes the stated volume is the displaced external volume, with a rigid body and negligible air buoyancy/surface tension."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 143,
+      "assistant_tokens": 97,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 138
+    },
+    {
+      "id": "repo-4cf42dc3239afecb0ef9fcb0",
+      "messages_sha256": "4cf42dc3239afecb0ef9fcb0dbca90e107d5faec9a623cb30cfeb5b092f49b88",
+      "state": "PASS",
+      "rationale": "Correct separation of vertical force balance from small-tilt restoring-moment stability.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Richard Fitzpatrick, UT Austin, Floating Bodies",
+          "url": "https://farside.ph.utexas.edu/teaching/336L/Fluidhtml/node29.html",
+          "finding": "Floating stability depends on weight, displaced-fluid buoyancy and the metacenter relative to the center of mass under small tilt."
+        },
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Equal weight and buoyancy establish vertical equilibrium, while a small tilt produces a couple whose restoring sign determines local angular stability."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The displaced-volume centroid defines buoyancy for a uniform-density fluid; neutral stability requires higher-order analysis if the linear restoring coefficient vanishes."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 156,
+      "assistant_tokens": 125,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 139
+    },
+    {
+      "id": "repo-ced451207dbda51229c8bf50",
+      "messages_sha256": "ced451207dbda51229c8bf50669b6d02b6d07bad1fc15cc16835217895dc4179",
+      "state": "PASS",
+      "rationale": "Correct equilibrium-displacement and local metacentric-stability conditions for the floating cone.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Richard Fitzpatrick, UT Austin, Floating Bodies",
+          "url": "https://farside.ph.utexas.edu/teaching/336L/Fluidhtml/node29.html",
+          "finding": "Floating stability depends on weight, displaced-fluid buoyancy and the metacenter relative to the center of mass under small tilt."
+        },
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Draft is set by rho_f*V_displaced=m; for small heel, restoring moment is approximately -m*g*GM*theta when GM>0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is initial small-angle stability about the stated floating orientation, not a guarantee of stability at arbitrarily large tilt."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 177,
+      "assistant_tokens": 134,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 140
+    },
+    {
+      "id": "repo-35da198419a2b8a831258d68",
+      "messages_sha256": "35da198419a2b8a831258d684228bb4595684bf303c353b5f482784cb0e93ed3",
+      "state": "PASS",
+      "rationale": "Correct standard hydrostatic curved-surface decomposition into projected-area horizontal force and an imaginary-fluid-volume vertical magnitude.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Resolve integral p*n*dA into Cartesian components; hydrostatic balance of the imaginary overlying fluid supplies the vertical component."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The sign depends on which side is wetted and whether the pressure pushes up or down; the simple weight rule uses gauge pressure referenced to the free surface, with other pressure offsets handled separately."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 158,
+      "assistant_tokens": 121,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 141
+    },
+    {
+      "id": "repo-20fea76aab2a17f731729aef",
+      "messages_sha256": "20fea76aab2a17f731729aefa5b8ce063fb9ddbfce473fab115dc177b8829f60",
+      "state": "PASS",
+      "rationale": "Correct uniform-density rigid-body rotating-fluid pressure and paraboloidal free surface.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Integrating p_r=rho*omega²*r and p_z=-rho*g gives p=C+rho*omega²*r²/2-rho*g*z; a constant-pressure free surface satisfies z=omega²*r²/(2*g)+constant."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Constant density and rigid rotation are the standard liquid model; compressible or stratified fluids require their constitutive density relation."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 186,
+      "assistant_tokens": 154,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 142
+    },
+    {
+      "id": "repo-1121e0bfe21fa92610c7881b",
+      "messages_sha256": "1121e0bfe21fa92610c7881bd1fc1e43f43b30ccbb5528e53e53e18e84d69b3d",
+      "state": "PASS",
+      "rationale": "Correct two-liquid displaced-volume force balance and explicit warning to include an air-exposed region if present.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For full immersion below the upper free surface, V1+V2=V and rho1*V1+rho2*V2=m determine the two volumes when densities differ."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "If air exposure is allowed, geometry and interface/free-surface positions can provide extra constraints; two equations alone do not determine three arbitrary region volumes."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 177,
+      "assistant_tokens": 140,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 143
+    },
+    {
+      "id": "repo-8853a2199b9c6ac6398c8947",
+      "messages_sha256": "8853a2199b9c6ac6398c89476b4e3df1684e5d60c217f3a4fffb1f38ed8b2812",
+      "state": "PASS",
+      "rationale": "Correct depth-dependent neutral-buoyancy reasoning with density and hull compression effects separated.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At fixed mass and approximately fixed displaced volume, increasing representative fluid density raises rho*g*V above the former weight balance."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "For substantial stratification across the body, buoyancy integrates the displaced fluid density rather than using one point value; the answer is the small-body/local-density picture."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 163,
+      "assistant_tokens": 120,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 144
+    },
+    {
+      "id": "repo-00ec6d434b7757a9c395fb67",
+      "messages_sha256": "00ec6d434b7757a9c395fb677c70fd8c845f0236aa10cb6d5bfcdef577d53def",
+      "state": "PASS",
+      "rationale": "Correct infinite uniform-line Gauss-law field.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "E_r*2*pi*r*L=lambda*L/epsilon0 gives E_r=lambda/(2*pi*epsilon0*r)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Radial direction is outward for positive lambda and inward for negative lambda; the ordinary isolated vacuum line is intended."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 76,
+      "assistant_tokens": 51,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 145
+    },
+    {
+      "id": "repo-f9eb51e9581f61e1d1e19dbe",
+      "messages_sha256": "f9eb51e9581f61e1d1e19dbef12b25aaf546337d9289cda5b7f35548f4ff262a",
+      "state": "PASS",
+      "rationale": "Correct introductory definition and fixed-geometry linear-capacitor dependence; the plate-area and separation trends follow from C=epsilon*A/d.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "title": "MIT8.02, Class09 Capacitance summary",
+          "url": "https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2007/dfa628dd936b8daab27a2b66d6472dfa_summary_w04d1.pdf",
+          "finding": "The introductory fixed-geometry linear-capacitor model has a charge-independent geometric capacitance."
+        },
+        {
+          "title": "Murata, Voltage characteristics of electrostatic capacitance",
+          "url": "https://article.murata.com/en-us/article/voltage-characteristics-of-electrostatic-capacitance",
+          "finding": "Real high-permittivity capacitors can have voltage-dependent effective capacitance; a charge-independent constantC needs a linear constitutive approximation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For fixed linear epsilon, Q=C*V and C=epsilon*A/d, so varying Q and V proportionally leaves C unchanged."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is the ordinary linear-capacitor model; nonlinear dielectrics or voltage-dependent geometry can make effective capacitance bias dependent."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 66,
+      "assistant_tokens": 54,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 146
+    },
+    {
+      "id": "repo-2362f677a70a4d89cc49bae3",
+      "messages_sha256": "2362f677a70a4d89cc49bae3cfa62a86363c0358af60eb7a3592f1b7cbf75fe9",
+      "state": "PASS",
+      "rationale": "Correct single circular-loop center field from Biot-Savart.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At the center dl is perpendicular to the radius and every contribution is axial; integrating mu0*I*dl/(4*pi*R²) over2*pi*R gives mu0*I/(2*R)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Assumes a thin filamentary loop in vacuum; multiple turns multiply the result and material cores alter it."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 82,
+      "assistant_tokens": 59,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 147
+    },
+    {
+      "id": "repo-69f4fe33bba47c2b4eae0ea1",
+      "messages_sha256": "69f4fe33bba47c2b4eae0ea1b3187310beda1a79d553674ae27623a39c6f73d6",
+      "state": "PASS",
+      "rationale": "Correct right-hand conventions for a positive charge Lorentz force and conventional-current loop direction.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The cross-product orientation gives q*v cross B for q>0 and reverses for q<0; curling fingers along loop current makes the thumb point along its dipole moment/central field."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Northward means toward the loop magnetic north pole, not geographic north; field directions elsewhere around the loop are spatially varying."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 75,
+      "assistant_tokens": 60,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 148
+    },
+    {
+      "id": "repo-f737244a37d33609450fbd95",
+      "messages_sha256": "f737244a37d33609450fbd95f2ce7a8555214686614a7a83752f13cf3db79147",
+      "state": "PASS",
+      "rationale": "Correct electrostatic scalar-potential versus vector-field distinction and gradient relation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_wave_oscillator_thermodynamic_and_hydrostatic_derivation",
+          "finding": "Individually checked cutoff dispersion, parametric dimensions, diatomic-chain edges, harmonic balance, thermodynamic path assumptions, buoyancy/stability, rotating-fluid pressure and electrostatic identities."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Electric potential energy per test charge is V, force per test charge is E, and electrostatic E=-grad V."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Time-varying electromagnetic fields generally require the vector-potential derivative term; the usual scalar electrostatic explanation is intended."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 66,
+      "assistant_tokens": 52,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
+      "original_domain_ordinal": 149
     }
   ],
-  "reviewed": 1740,
+  "reviewed": 1765,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true
