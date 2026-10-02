@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 676,
+    "PASS": 700,
     "REJECT": 49,
-    "QUARANTINE": 185,
-    "NEEDS_HUMAN_REVIEW": 1202
+    "QUARANTINE": 186,
+    "NEEDS_HUMAN_REVIEW": 1177
   },
   "by_domain": {
     "circuits": {
@@ -32,10 +32,10 @@
       "NEEDS_HUMAN_REVIEW": 2
     },
     "trigonometry": {
-      "PASS": 38,
+      "PASS": 62,
       "REJECT": 2,
-      "QUARANTINE": 10,
-      "NEEDS_HUMAN_REVIEW": 150
+      "QUARANTINE": 11,
+      "NEEDS_HUMAN_REVIEW": 125
     },
     "calculus": {
       "PASS": 5,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 909,
+  "agent_substantive_reviews": 934,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "da27d1fa53a21ede0e6e7efd5382a3e303b594f2c0f77cb3260126b4c3d450c6",
+  "technical_review_sha256": "30232e015c13ed584cc469487b1901a3e680f9cf79b8387783d8d1805abc9a3f",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1200,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1175,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -990,11 +990,36 @@
     "Correct simultaneous positive sine/cosine solution modulo 2pi and correct distinction from the broader equality sin x=cos x.": 1,
     "The U(1) description is correct, but the matrix generalization has an extra factor of i. Exp(A) is unitary for skew-Hermitian A; exp(iA) is unitary for Hermitian A.": 1,
     "The arc-length integral is correct for a>=0, but the unrestricted parameter a can be negative, when the stated sinh(a) is negative and cannot be a length. The additional uniqueness claim is also not justified.": 1,
-    "Reasonable cautious Fourier-use example for seasonal data, including detrending, uncertainty and mechanistic interpretation rather than claiming a harmonic uniquely diagnoses a cause.": 1
+    "Reasonable cautious Fourier-use example for seasonal data, including detrending, uncertainty and mechanistic interpretation rather than claiming a harmonic uniquely diagnoses a cause.": 1,
+    "Correct factorization and redundant-family removal.": 1,
+    "Correct reference-angle and quadrant-sign derivation.": 1,
+    "Correct factorization and cancellation on the original expression's domain.": 1,
+    "Four unknown parameters do not provide a sufficient point-count criterion for unique sinusoid identification with unrestricted frequency. The ambiguity can involve genuinely different graphs, not merely equivalent phase parameters, and vertical shifts may remove the proposed zeros.": 1,
+    "Correct repeated sine/cosine addition expansion with all four terms and signs.": 1,
+    "Correct unit-circle coordinate interpretation of sine and cosine equations, suitable for finding base angles and checking periodic solutions.": 1,
+    "Correct inverse-sine reduction, algebraic solution and input-domain check.": 1,
+    "Correct proof with explicit shared-domain handling and valid denominator restrictions.": 1,
+    "Correct ideal linear-array explanation of steering through controlled relative phases and far-field superposition.": 1,
+    "Correct midline definition and y=D formula for the stated sinusoidal example.": 1,
+    "Correct origin-relative position-vector definition and coordinate example.": 1,
+    "Correct circumference-to-angle derivation for any positive circle radius.": 1,
+    "Correct introductory description of persistent Gibbs overshoot for ordinary Fourier partial sums near a jump.": 1,
+    "Correct sum-to-product factorization and complete solution families.": 1,
+    "Accurate accessible unit-circle interpretation of Euler's formula, with real and imaginary components representing the two coordinates.": 1,
+    "Correct cosine-equality branches and union simplification.": 1,
+    "Correct rational half-angle forms and their relationship to sine/cosine double-angle formulas.": 1,
+    "Correct difference-of-squares proof using the secant-tangent Pythagorean identity.": 1,
+    "Accurate graphical description of the tangent's repeat over consecutive asymptotes separated by pi.": 1,
+    "Correct definition of noncircular identity proof, explicitly allowing both sides to be transformed independently to a common form.": 1,
+    "Correct factorization and double-angle identity.": 1,
+    "Correct two-angle cosine explanation and periodic solution families.": 1,
+    "Correct warning that squaring can introduce extraneous sign branches, illustrated by a valid trig example.": 1,
+    "Plausible engineering decision example connecting nonlinear-load harmonics with heating, control interference and site-specific mitigation choices.": 1,
+    "Correct triple-angle identity and conclusion that every real angle satisfies the equation.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "5dc0da5ac4ee7b1f98c60af4e6a198891cff671a87dccc5a64eae2c585e148fd",
-  "substantively_unreviewed": 1200,
+  "published_decisions_sha256": "0f1d70db281c0e7df3c7fe9c009cc21ec4d10fa0e97a7d07b18db77ea79cb969",
+  "substantively_unreviewed": 1175,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

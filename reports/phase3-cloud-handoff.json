@@ -8,10 +8,10 @@
   "review": {
     "curriculum": 2112,
     "dispositions": {
-      "PASS": 676,
+      "PASS": 700,
       "REJECT": 49,
-      "QUARANTINE": 185,
-      "NEEDS_HUMAN_REVIEW": 1202
+      "QUARANTINE": 186,
+      "NEEDS_HUMAN_REVIEW": 1177
     },
     "by_domain": {
       "circuits": {
@@ -39,10 +39,10 @@
         "NEEDS_HUMAN_REVIEW": 2
       },
       "trigonometry": {
-        "PASS": 38,
+        "PASS": 62,
         "REJECT": 2,
-        "QUARANTINE": 10,
-        "NEEDS_HUMAN_REVIEW": 150
+        "QUARANTINE": 11,
+        "NEEDS_HUMAN_REVIEW": 125
       },
       "calculus": {
         "PASS": 5,
@@ -75,8 +75,8 @@
         "NEEDS_HUMAN_REVIEW": 242
       }
     },
-    "agent_substantive_reviews": 909,
-    "substantively_unreviewed": 1200,
+    "agent_substantive_reviews": 934,
+    "substantively_unreviewed": 1175,
     "reviewed_specialist_holds": 2,
     "complete_source_domains": [
       "circuits",
@@ -99,13 +99,13 @@
     },
     {
       "path": "data/review/phase3/technical-review.jsonl.gz",
-      "bytes": 316180,
-      "sha256": "5dc0da5ac4ee7b1f98c60af4e6a198891cff671a87dccc5a64eae2c585e148fd"
+      "bytes": 321246,
+      "sha256": "0f1d70db281c0e7df3c7fe9c009cc21ec4d10fa0e97a7d07b18db77ea79cb969"
     },
     {
       "path": "manifests/phase3-agent-technical-review.json",
-      "bytes": 1314082,
-      "sha256": "a1058981b64554d9a48db17d3ac456816a7b951773d1e1ad113136cf3a117e2a"
+      "bytes": 1354929,
+      "sha256": "3728d6c61d63d95f0c9d0d643249571fbf10b81461282926a658e6e5737f284d"
     },
     {
       "path": "manifests/phase3-release-families.json",
@@ -114,8 +114,8 @@
     },
     {
       "path": "reports/phase3-technical-review.json",
-      "bytes": 194184,
-      "sha256": "7b59c4db5385616c283424b6a57b55656065f46803250d3c6dfdc302d037ad43"
+      "bytes": 196896,
+      "sha256": "0a0a674db1f5831ff94576b694349849f0043edbeb8de2e7a33641c1490e666b"
     },
     {
       "path": "src/forge_tools/engineering.py",
@@ -220,7 +220,7 @@
   "next_domain": "trigonometry",
   "next_batch": {
     "domain": "trigonometry",
-    "offset": 50,
+    "offset": 75,
     "limit": 25
   },
   "workers": [],
@@ -231,9 +231,9 @@
   "latest_cloud_continuation": "reports/phase3-cloud-continuation-validation.json",
   "local_continuation": {
     "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
-    "local_predecessor_commit": "f87adb76840c8eaeaa57e3713019400f720632fc",
+    "local_predecessor_commit": "65bc8a632af0e5683cf7c51e1f0e5be82ae81541",
     "publication_status": "LOCAL_ONLY; do not claim these counts are on GitHub",
-    "latest_batch": "reports/phase3-review-batches/trigonometry-0025-0050.json",
+    "latest_batch": "reports/phase3-review-batches/trigonometry-0050-0075.json",
     "electrical_domain_complete": true
   }
 }
