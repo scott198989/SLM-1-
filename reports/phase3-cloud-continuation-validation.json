@@ -20,7 +20,7 @@
   "model_weights_downloaded_or_loaded": false,
   "training_or_paid_compute": false,
   "automatic_checks_recreated": false,
-  "test_log_sha256": "879f3f0c82ed544e03fcaf65387bb588a2face77007df315b5a87526a737bd00",
+  "test_log_sha256": "e995396a0c02deebf76a43ca38ab6b4e45dd3e8044a8617f257dfba66c22ddb7",
   "tested_code_sha256": {
     "scripts/phase3-verify-private-release.py": "64d76484b0852d041083301ce113ddc255b7906512def3dc12d0f92dc96910e1",
     "src/forge_data/citation_pilot.py": "9e17e50194ba8cb22eca0b431359d7aec1d870f8417e87b4938e3c1ff4c968d4",
@@ -55,7 +55,8 @@
   "next_batch": {
     "domain": "algebra",
     "offset": 225,
-    "limit": 25
+    "limit": 25,
+    "status": "PENDING_REVIEW_QUEUE_EXHAUSTED; two original structural-only quarantines preserved; await next-domain selection"
   },
   "official_reader_executed": true,
   "gzip_exact_roundtrip_verified": true,
@@ -96,5 +97,13 @@
   "all_token_and_rights_fields_unchanged": true,
   "completion_receipt": "reports/phase3-electrical-domain-completion.json",
   "final_code_format_check": "PASS",
-  "final_code_undefined_name_lint": "PASS"
+  "final_code_undefined_name_lint": "PASS",
+  "algebra_pending_review_queue_complete": true,
+  "algebra_source_records_checked": 216,
+  "algebra_substantive_reviews": 214,
+  "algebra_structural_holds_preserved": [
+    170,
+    211
+  ],
+  "algebra_checkpoint": "reports/phase3-algebra-domain-checkpoint.json"
 }

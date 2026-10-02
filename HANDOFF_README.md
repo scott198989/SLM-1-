@@ -72,7 +72,7 @@ Latest local bounded review: algebra ordinals 200–215 added {'PASS': 14, 'QUAR
 
 ## Resume without repeating work
 
-First check out the correct branch and compare the hashes in `reports/phase3-cloud-handoff.json`. Read the reports above. The selected electrical domain is complete. Original offset 300 is the end of its 300-record selection, not a request to restart it. The supervisor selected algebra for the next serial review; continue its checkpointed original ordinal windows. The portable reader uses the repository root relative to its own file and needs only Python's standard library:
+First check out the correct branch and compare the hashes in `reports/phase3-cloud-handoff.json`. Read the reports above. The selected electrical domain is complete. Original offset 300 is the end of its 300-record selection, not a request to restart it. The pending algebra review queue is now exhausted. Its selected domain has 216 records; 214 have substantive reviews and two original structural-only quarantines remain at ordinals 170 and 211. The next nominal reader offset is 225, which yields no rows. Earlier windows intentionally still emit those two preserved structural holds; do not repeatedly reinterpret them as unreviewed work. Await selection of the next domain. The portable reader uses the repository root relative to its own file and needs only Python's standard library:
 
 ```sh
 python scripts/phase3-review-batch.py algebra --offset 225 --limit 25
@@ -150,7 +150,7 @@ Private training/public redistribution/RAG purposes have separate dispositions i
 
 ## Suggested first message to the cloud task
 
-> Continue FORGE Phase 3 from scott198989/SLM-1-, branch codex/forge-data-consolidation, draft PR3. Read HANDOFF_README.md completely, root README, reports/phase3-cloud-handoff.json and the current gate report. Verify checkpoint hashes. Continue bounded substantive review of the remaining selected 2,112-record curriculum, starting algebra at offset 225, limit 25. Electrical_components is complete at offset 300. Preserve all 870 completed reviews and original answers. Keep technical decisions distinct from release approval. Remote publication is paused after an upload denial; preserve local review checkpoints and do not retry or use an alternate route without a resolved authorization path. Private local Drive/gold/pilot artifacts are not in Git: do not reconstruct or claim to validate unavailable files. No broad discovery, model weights, loading, training, paid services or automatic checks. Stop at the training authorization gate with exact counts and remaining blockers.
+> Continue FORGE Phase 3 from scott198989/SLM-1-, branch codex/forge-data-consolidation, draft PR3. Read HANDOFF_README.md completely, root README, reports/phase3-cloud-handoff.json and the current gate report. Verify checkpoint hashes. Continue bounded substantive review of the remaining selected 2,112-record curriculum, algebra pending review is complete at next offset 225, with original structural holds 170 and 211 preserved. Await next-domain selection. Electrical_components is complete at offset 300. Preserve all 870 completed reviews and original answers. Keep technical decisions distinct from release approval. Remote publication is paused after an upload denial; preserve local review checkpoints and do not retry or use an alternate route without a resolved authorization path. Private local Drive/gold/pilot artifacts are not in Git: do not reconstruct or claim to validate unavailable files. No broad discovery, model weights, loading, training, paid services or automatic checks. Stop at the training authorization gate with exact counts and remaining blockers.
 
 ## Codex's absurd sign-off — a joke, not project state
 
@@ -160,3 +160,8 @@ Private training/public redistribution/RAG purposes have separate dispositions i
 ## Completed local electrical review (historical checkpoint)
 
 All 300 selected electrical records now have substantive dispositions. The 293 new cloud reviews and seven original reviews preserve original answers, hashes and tokens. This is a local checkpoint with 667 substantive reviews overall. See [completion receipt](reports/phase3-electrical-domain-completion.json). The public branch remains at 392 reviews; the upload block has not been bypassed. At that checkpoint no new domain had been started; current algebra progress is recorded above.
+
+
+## Completed pending algebra review
+
+All 203 previously pending algebra records received individual technical review and independent agent QA. Together with 11 preserved prior reviews, 214 of 216 selected algebra records have substantive dispositions. Original structural-only quarantines at ordinals 170 and 211 remain unchanged and are not counted as new substantive reviews. Local total: 870 substantive reviews; 1,239 still unreviewed across other domains, plus two existing specialist holds. Original answers, tokens and all three structural holds are preserved. The published branch remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. See [checkpoint](reports/phase3-algebra-domain-checkpoint.json). No further domain was started.

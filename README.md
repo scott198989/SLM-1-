@@ -3,7 +3,7 @@
 
 Cloud continuation: read [HANDOFF_README.md](HANDOFF_README.md) first; use branch `codex/forge-data-consolidation` / draft PR3. The selected circuits, thermal and electrical source-domain reviews are complete as dispositions in the local checkpoint; no legacy SFT released.
 
-Cloud continuation, October 2: the local reviewed checkpoint has 870 substantive decisions. Electrical ordinals 0–299 are complete; algebra review has advanced through original ordinal 215. The published GitHub branch remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. Later local batches await publication; next local algebra offset is 225.
+Cloud continuation, October 2: the local checkpoint has 870 substantive reviews. Electrical review and the 203-record pending algebra queue are complete; algebra retains two original structural-only quarantines. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. [Algebra checkpoint](reports/phase3-algebra-domain-checkpoint.json).
 
 ## Phase 3 pilot — current gate
 

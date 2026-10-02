@@ -83,7 +83,8 @@
       "thermal_process_engineering",
       "electrical_components"
     ],
-    "release_approved": 0
+    "release_approved": 0,
+    "algebra_review_status": "203 previously pending records substantively reviewed; 11 prior reviews and 2 structural-only quarantines preserved"
   },
   "public_input_files": [
     {
@@ -220,7 +221,8 @@
   "next_batch": {
     "domain": "algebra",
     "offset": 225,
-    "limit": 25
+    "limit": 25,
+    "status": "PENDING_REVIEW_QUEUE_EXHAUSTED; two original structural-only quarantines preserved; await next-domain selection"
   },
   "workers": [],
   "automatic_checks": "DELETED_DO_NOT_RECREATE",
@@ -230,9 +232,15 @@
   "latest_cloud_continuation": "reports/phase3-cloud-continuation-validation.json",
   "local_continuation": {
     "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
-    "local_predecessor_commit": "01bb644c423b746108c2bf2771e25032179c841f",
+    "local_predecessor_commit": "8c07a74d3307859279f09166ec7a5be11c4eaea3",
     "publication_status": "LOCAL_ONLY; do not claim these counts are on GitHub",
     "latest_batch": "reports/phase3-review-batches/algebra-0200-0225.json",
-    "electrical_domain_complete": true
+    "electrical_domain_complete": true,
+    "algebra_pending_review_queue_complete": true,
+    "algebra_preserved_structural_ordinals": [
+      170,
+      211
+    ],
+    "algebra_checkpoint": "reports/phase3-algebra-domain-checkpoint.json"
   }
 }
