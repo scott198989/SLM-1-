@@ -58318,9 +58318,9 @@
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
       "tool_evidence": [
         {
-          "title": "A. F. Bower, Applied Mechanics of Solids, Viscoplasticity",
-          "url": "https://solidmechanics.org/Text/Chapter3_8/Chapter3_8.php",
-          "finding": "Yield-surface hardening models distinguish changes in size and backstress/translation; cyclic response requires a calibrated constitutive model."
+          "title": "A. F. Bower, Applied Mechanics of Solids, Section 3.7.5",
+          "url": "https://solidmechanics.org/Text/Chapter3_7/Chapter3_7.php",
+          "finding": "Directly distinguishes isotropic yield-surface expansion, kinematic translation and the Bauschinger-related cyclic limitation."
         },
         {
           "method": "independent_mechanics_and_constitutive_checks",
@@ -58895,7 +58895,7 @@
       "id": "repo-f7385379ab05487cd0fc7530",
       "messages_sha256": "f7385379ab05487cd0fc753018675d8c81f482c4ae9fb3f6284988ee1209236e",
       "state": "QUARANTINE",
-      "rationale": "The selection checklist is useful, but the stated two-to-one pressure-stress rule needs a thin closed-cylinder scope, and visible metal impact damage cannot be assumed without inspection.",
+      "rationale": "The material-selection checklist is useful, but the stated two-to-one pressure-stress rule needs a thin closed-cylinder scope rather than an unspecified pressure-vessel geometry.",
       "reviewer": "Codex_cloud_agent_technical_review_20261002",
       "independent_human_review": false,
       "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
@@ -58915,7 +58915,7 @@
         },
         {
           "method": "scope_caveat",
-          "finding": "Hold the unqualified geometry/inspection claims rather than the need to assess liner compatibility, fatigue, burst margin and certification. No actual vessel design or material choice is approved."
+          "finding": "Hold the unqualified geometry claim. The spherical-shell counterexample suffices, without relying on a blanket assertion about metal-impact visibility. No actual vessel design or material choice is approved."
         }
       ],
       "domain": "materials_manufacturing",
@@ -59052,6 +59052,11 @@
           "title": "Bhadeshia, Cambridge, Engineering Materials text",
           "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
           "finding": "Dislocations, slip systems, strengthening mechanisms, material classes and microstructure-property tradeoffs underlie these introductory explanations."
+        },
+        {
+          "title": "Sun et al., Acta Materialia preprint, pages 28–29",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2018/shaft_Sun_Acta_2018_preprint.pdf",
+          "finding": "Discusses coherent/misfit contributions and the competition between precipitate cutting and looping."
         },
         {
           "method": "scope_caveat",

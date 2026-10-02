@@ -32,7 +32,8 @@
       }
     ],
     "review_precision_corrections": [
-      "34 removes a caveat that repaired the original shear-traction orientation claim."
+      "34 removes a caveat that repaired the original shear-traction orientation claim.",
+      "Late QA evidence additions: direct Bower 3.7.5 and precipitate cutting/looping source; 45 relies only on the geometry counterexample."
     ],
     "full_prompt_and_answer_review": true,
     "all_source_hashes_ids_ordinals_and_ledger_matches": true,
@@ -170,9 +171,9 @@
       "rationale": "Correct introductory isotropic-expansion versus kinematic-translation distinction and Bauschinger motivation.",
       "evidence": [
         {
-          "title": "A. F. Bower, Applied Mechanics of Solids, Viscoplasticity",
-          "url": "https://solidmechanics.org/Text/Chapter3_8/Chapter3_8.php",
-          "finding": "Yield-surface hardening models distinguish changes in size and backstress/translation; cyclic response requires a calibrated constitutive model."
+          "title": "A. F. Bower, Applied Mechanics of Solids, Section 3.7.5",
+          "url": "https://solidmechanics.org/Text/Chapter3_7/Chapter3_7.php",
+          "finding": "Directly distinguishes isotropic yield-surface expansion, kinematic translation and the Bauschinger-related cyclic limitation."
         },
         {
           "method": "independent_mechanics_and_constitutive_checks",
@@ -538,7 +539,7 @@
       "ordinal": 45,
       "messages_sha256": "f7385379ab05487cd0fc753018675d8c81f482c4ae9fb3f6284988ee1209236e",
       "state": "QUARANTINE",
-      "rationale": "The selection checklist is useful, but the stated two-to-one pressure-stress rule needs a thin closed-cylinder scope, and visible metal impact damage cannot be assumed without inspection.",
+      "rationale": "The material-selection checklist is useful, but the stated two-to-one pressure-stress rule needs a thin closed-cylinder scope rather than an unspecified pressure-vessel geometry.",
       "evidence": [
         {
           "title": "University of Illinois, Introductory Solid Mechanics, Pressure Vessels",
@@ -555,7 +556,7 @@
         },
         {
           "method": "scope_caveat",
-          "finding": "Hold the unqualified geometry/inspection claims rather than the need to assess liner compatibility, fatigue, burst margin and certification. No actual vessel design or material choice is approved."
+          "finding": "Hold the unqualified geometry claim. The spherical-shell counterexample suffices, without relying on a blanket assertion about metal-impact visibility. No actual vessel design or material choice is approved."
         }
       ],
       "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L303"
@@ -640,6 +641,11 @@
           "title": "Bhadeshia, Cambridge, Engineering Materials text",
           "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
           "finding": "Dislocations, slip systems, strengthening mechanisms, material classes and microstructure-property tradeoffs underlie these introductory explanations."
+        },
+        {
+          "title": "Sun et al., Acta Materialia preprint, pages 28–29",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2018/shaft_Sun_Acta_2018_preprint.pdf",
+          "finding": "Discusses coherent/misfit contributions and the competition between precipitate cutting and looping."
         },
         {
           "method": "scope_caveat",
