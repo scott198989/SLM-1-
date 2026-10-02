@@ -20,16 +20,16 @@
   "model_weights_downloaded_or_loaded": false,
   "training_or_paid_compute": false,
   "automatic_checks_recreated": false,
-  "test_log_sha256": "8915a9727f939df3c2d3f791424c69ed447249e9e49ea82da407ea4114b8777f",
+  "test_log_sha256": "bbdd80fbeaff5546d4b823a3dfc9ca4a23ecf848a2171408bff63a2c3810a0b9",
   "tested_code_sha256": {
     "scripts/phase3-verify-private-release.py": "64d76484b0852d041083301ce113ddc255b7906512def3dc12d0f92dc96910e1",
     "src/forge_data/citation_pilot.py": "9e17e50194ba8cb22eca0b431359d7aec1d870f8417e87b4938e3c1ff4c968d4",
     "tests/test_private_release_verifier.py": "e2a5854473e449455e9bc2ffcc207346f018a3bb49206a81546cd1cea2ace817"
   },
-  "base_commit": "1a297676deb68c4a8d9b5bcb81a6d75f7d7683c3",
+  "base_commit": "c49bce79673dc4263b23749b841a28a477957b7e",
   "all_public_input_hashes_verified": 8,
   "candidate_message_hashes_verified": 2112,
-  "substantive_decisions_verified": 855,
+  "substantive_decisions_verified": 830,
   "earlier_374_decisions_unchanged": true,
   "unchanged_frozen_files": [
     "src/forge_tools/engineering.py",
@@ -46,15 +46,15 @@
     "QUARANTINE": 7
   },
   "current_dispositions": {
-    "PASS": 632,
+    "PASS": 611,
     "REJECT": 47,
-    "QUARANTINE": 177,
-    "NEEDS_HUMAN_REVIEW": 1256
+    "QUARANTINE": 173,
+    "NEEDS_HUMAN_REVIEW": 1281
   },
-  "substantively_unreviewed": 1254,
+  "substantively_unreviewed": 1279,
   "next_batch": {
     "domain": "algebra",
-    "offset": 200,
+    "offset": 175,
     "limit": 25
   },
   "official_reader_executed": true,
@@ -65,23 +65,30 @@
   "earlier_392_decisions_unchanged": true,
   "latest_batch": {
     "domain": "algebra",
-    "offset": 175,
+    "offset": 150,
     "limit": 25,
-    "selected_window_end_exclusive": 200,
-    "new_reviews": 25,
+    "new_reviews": 24,
     "skipped_existing": 0,
-    "preserved_structural_quarantines": [],
+    "preserved_structural_quarantines": [
+      {
+        "ordinal": 170,
+        "id": "repo-ba110a948fcfd763580a0637",
+        "messages_sha256": "ba110a948fcfd763580a063773a2f5d84a0ecdad2738b74b396544410c1adfa0",
+        "reason": "STANDALONE_CONTEXT_DEPENDENCY_UNRESOLVED",
+        "ledger_unchanged": true
+      }
+    ],
     "dispositions": {
-      "QUARANTINE": 4,
-      "PASS": 21
+      "PASS": 22,
+      "QUARANTINE": 2
     }
   },
   "independent_agent_qa_complete": true,
-  "latest_batch_original_hashes_verified": 25,
+  "latest_batch_original_hashes_verified": 24,
   "latest_batch_only_expected_ledger_rows_changed": true,
   "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
   "publication_status": "LOCAL_ONLY",
-  "earlier_decisions_unchanged": 830,
+  "earlier_decisions_unchanged": 806,
   "electrical_domain_complete": true,
   "electrical_records_verified": 300,
   "all_392_published_decisions_unchanged": true,

@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 611,
+    "PASS": 632,
     "REJECT": 47,
-    "QUARANTINE": 173,
-    "NEEDS_HUMAN_REVIEW": 1281
+    "QUARANTINE": 177,
+    "NEEDS_HUMAN_REVIEW": 1256
   },
   "by_domain": {
     "circuits": {
@@ -20,10 +20,10 @@
       "NEEDS_HUMAN_REVIEW": 194
     },
     "algebra": {
-      "PASS": 141,
+      "PASS": 162,
       "REJECT": 8,
-      "QUARANTINE": 27,
-      "NEEDS_HUMAN_REVIEW": 40
+      "QUARANTINE": 31,
+      "NEEDS_HUMAN_REVIEW": 15
     },
     "thermal_process_engineering": {
       "PASS": 73,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 830,
+  "agent_substantive_reviews": 855,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "98b0538fc25ab713a7943ae4f242c3a53a2e0464da44466c7752c76b6064c657",
+  "technical_review_sha256": "e6390b94e0778eb198d66ba0e17774b0636218bff3e4a32fad8fcc7590f3f92e",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1279,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1254,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -911,11 +911,36 @@
     "Valid inverse-uniqueness argument using associativity and the two-sided inverse property available in a group.": 1,
     "Correct logical decomposition of an equivalence into both implication directions.": 1,
     "Accurate etymological explanation of variable elimination.": 1,
-    "Correct elimination and pair, verified in both original equations.": 1
+    "Correct elimination and pair, verified in both original equations.": 1,
+    "The limits-to-asymptotes connection is correct, but the vertical-asymptote statement uses an unqualified two-sided limit. A single divergent one-sided limit is enough, and the opposite side may diverge differently or stay finite.": 1,
+    "Correct finite-dimensional trace/product formulas with algebraic multiplicities explicitly counted, plus the proper warning that the two invariants do not recover the entire operator.": 1,
+    "The labels describe two possible enforcement patterns, but the claimed drift disadvantage of post-step projection is misleading. Projection or correction can itself remove constraint drift; its effectiveness depends on the constraint, tolerances and projection method.": 1,
+    "Correct no-zero-divisors proof in a field using the nonzero factor's multiplicative inverse.": 1,
+    "Accurate qualitative roles of quadratic, linear and constant coefficients, with type and placement correctly attributed to their combined effects.": 1,
+    "Correct volume-scaling analogy and orientation/degeneracy interpretation.": 1,
+    "Correct common-base transformation, use of injectivity of 2^x on the reals and verified solution x=2.": 1,
+    "Accurate list of common sources of numerical difficulty in coupled constrained problems, presented as possible features rather than a universal diagnosis.": 1,
+    "Correct explanation that symbolic distributivity establishes an identity across its ordinary scalar domain.": 1,
+    "The companion-matrix connection is correct, but the two-exponential general-solution formula requires distinct characteristic roots. Repeated roots of a 2 by 2 companion matrix are defective and need additional polynomial factors.": 1,
+    "Correct sum-of-cubes factorization and cancellation with the original excluded input explicitly preserved.": 1,
+    "Correct basis-free determinant definition through the induced action on the one-dimensional top exterior power, with the right wedge equation.": 1,
+    "Correctly identifies lambda as the scalar unknown in the eigenvalue equation and requires a nonzero eigenvector.": 1,
+    "Correct eigenvalue-sign criteria for the listed definiteness cases of a real symmetric quadratic form.": 1,
+    "Correct multilinearity proof that scaling all n rows by k multiplies determinant by k^n.": 1,
+    "Good beginner description of a domain as allowed inputs, with valid real-arithmetic exclusion examples.": 1,
+    "Correct direct corollary of Lagrange applied to the cyclic subgroup generated by the element.": 1,
+    "Correct polynomial-evaluation homomorphism, principal kernel generated by the minimal polynomial and Cayley-Hamilton inclusion.": 1,
+    "Correct conceptual scalar-interface strategy: treating the shared scalar as a parameter can reduce the remaining coupling to a one-variable consistency solve. The answer explicitly says often, so its tractability language is a typical benefit rather than a universal guarantee.": 1,
+    "Correct reverse-order inverse identity in a group. A right inverse already equals the unique group inverse.": 1,
+    "Correct distinction between declared codomain and achieved range for the explicitly real-domain square function.": 1,
+    "Useful high-level checklist combining structure, constraint formulation, coupling strategy, solver matching and verification/error control.": 1,
+    "Correct finitely generated torsion-module explanation with finite-dimensional V explicitly stated and invariant/elementary factor consequences accurately described.": 1,
+    "The eigenmode formula is valid when A has a full eigenbasis, but the answer labels it the general solution of x'=Ax without the required diagonalizability condition. Defective matrices need generalized-eigenvector polynomial factors.": 1,
+    "Appropriate elementary explanation of positive-integer exponents and order of operations with a clear 3^2 example.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "93a308288a483fb4eabad107d3c2bc3a0cce621dbb1dbf87429df5ae44f94fb2",
-  "substantively_unreviewed": 1279,
+  "published_decisions_sha256": "fed0bd159614901aa86a6907b1ccaeff487940900fa7df6906e23d89cb63d265",
+  "substantively_unreviewed": 1254,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
