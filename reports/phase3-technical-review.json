@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1498,
+    "PASS": 1515,
     "REJECT": 68,
-    "QUARANTINE": 300,
-    "NEEDS_HUMAN_REVIEW": 246
+    "QUARANTINE": 302,
+    "NEEDS_HUMAN_REVIEW": 227
   },
   "by_domain": {
     "circuits": {
@@ -56,10 +56,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "materials_manufacturing": {
-      "PASS": 3,
+      "PASS": 20,
       "REJECT": 2,
-      "QUARANTINE": 1,
-      "NEEDS_HUMAN_REVIEW": 244
+      "QUARANTINE": 3,
+      "NEEDS_HUMAN_REVIEW": 225
     },
     "physics": {
       "PASS": 212,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1865,
+  "agent_substantive_reviews": 1884,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "84ae0a48f4efbd536250792c6180af74eaefe2d55fb4f64fc0e83e97bd2b4477",
+  "technical_review_sha256": "be10580315a99f67195184e7018d49388e3829c958906bc8093d5d0616a84534",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 244,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 225,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1946,11 +1946,30 @@
     "Correct filamentary circular-loop center field and direction.": 1,
     "Correct intuitive explanation of strong two-way multiphysics feedback through temperature-dependent resistance and heating.": 1,
     "Correct passive-sign sanity checks and distinction between equation solving and physical validity.": 1,
-    "Correct distinction between free thermal strain and stress from uniaxial restraint.": 1
+    "Correct distinction between free thermal strain and stress from uniaxial restraint.": 1,
+    "Correct viscoelastic history dependence, recoverable and dissipative contributions, and standard creep/relaxation/hysteresis manifestations.": 1,
+    "Correct linear-elastic Young-modulus definition and reasonable representative stiffness orders.": 1,
+    "Correct rejection of a one-to-one bond-type lookup rule for crystal structure.": 1,
+    "Reasonable conceptual contrast between small metal bond strains before slip and larger recoverable polymer-chain conformational changes.": 1,
+    "Correct pressure-insensitive von-Mises distortion-energy interpretation for ordinary ductile-metal yielding.": 1,
+    "Correct introductory Mode-I linear-elastic stress-intensity scale and toughness comparison.": 1,
+    "Correct area definitions and conventional strain-hardening ductile tensile behavior after necking. The explanatory clause concerns opposite post-necking trends and does not assert numerical equality before necking.": 1,
+    "Correct thermodynamic explanation of temperature-dependent crystal stability.": 1,
+    "Correct conventional thin closed-pressure-vessel membrane stresses, negligible radial stress, and the expected hoop-dominated longitudinal splitting tendency in the standard instructional model.": 1,
+    "Correct classical Considere necking derivation and Hollomon hardening-exponent result.": 1,
+    "Correct introductory interstitial-carbon/dislocation strengthening mechanism with phase dependence noted.": 1,
+    "Correct yield-versus-ultimate distinction in an ordinary ductile engineering tensile test.": 1,
+    "Correct square-root crack-length scaling and numerical example under a fixed geometry factor and applicable brittle-fracture criterion.": 1,
+    "Correct introductory units and deformation-versus-loading distinction.": 1,
+    "Plastic residual strain is one valid explanation, but zero stress with nonzero strain does not uniquely establish prior plastic loading. Free thermal strain and other eigenstrains can give the same observation.": 1,
+    "Correct nominal single-shear stress and von-Mises pure-shear yield ratio.": 1,
+    "Correctly lists multiple plausible causes of early stress-strain nonlinearity and asks for material/rate context.": 1,
+    "Restricted dislocation mobility and limited crack-tip plasticity are valid brittle-ceramic themes, but the answer incorrectly groups ionic bonds with covalent bonds as intrinsically directional.": 1,
+    "Correct warning about fatigue damage and failure below macroscopic yield, with endurance behavior acknowledged.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "a7543e7b6e71de953b6e5d1fe7308658be542966c9f341d401fa7583dfb732f7",
-  "substantively_unreviewed": 244,
+  "published_decisions_sha256": "e7856e35dc2df04824d5e8efbcac8b099288c98257a771c5f10560af19b5262a",
+  "substantively_unreviewed": 225,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",

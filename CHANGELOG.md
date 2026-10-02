@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-02 - Local materials_manufacturing review 0–24
+
+- Added {'PASS': 17, 'QUARANTINE': 2} after independent agent QA; 6 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1865 reviews unchanged.
+- Current local reviews: 1884; dispositions: {'PASS': 1515, 'REJECT': 68, 'QUARANTINE': 302, 'NEEDS_HUMAN_REVIEW': 227}; next materials_manufacturing offset: 25.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
 ## 2026-10-02 - Pending physics queue completion
 
 - Reviewed 242 pending records with independent agent QA; preserved eight prior decisions. All 250 selected physics records have substantive dispositions.
