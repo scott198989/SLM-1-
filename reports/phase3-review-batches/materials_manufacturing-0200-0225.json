@@ -1,0 +1,712 @@
+{
+  "base_commit": "8b1c4e4a259c60893858dc0592b88c876265d43e",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "materials_manufacturing",
+  "offset": 200,
+  "limit": 25,
+  "next_offset": 225,
+  "selected_window_end_exclusive": 225,
+  "selected_rows_in_window": 25,
+  "new_substantive_reviews": 25,
+  "skipped_existing": 0,
+  "preserved_structural_quarantines": [],
+  "dispositions_added": {
+    "PASS": 25
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "/root/review_materials_ninth_batch",
+    "records_checked": 25,
+    "final_counts": {
+      "PASS": 25
+    },
+    "disposition_changes": [],
+    "review_precision_corrections": [
+      "NIST caption proves LOF initiation and presence, not initiation, of gas pores.",
+      "Correct quench bibliography and add targeted solution treatment, variant selection, PFZ, CALPHAD/phase-field, machining and casting evidence."
+    ],
+    "reviewed_candidate_sha256": "fc24f5599d58e9eb0cdd7b1c916b60371472d940238c215970366844b2f8bd1f",
+    "full_prompt_and_answer_review": true,
+    "all_source_hashes_ids_ordinals_and_ledger_matches": true,
+    "source_sha256": "028348459f744df65879a12bf9df655c32fc25597c3202a13c3c780667554cc4",
+    "candidate_preparation_predecessor_commit": "9877519933cfac2fcf58193bb6e0d81051854af1",
+    "reviewed_against_local_commit": "5b190af80c1ffc1d6ff53bce225d01c0cca29a54",
+    "published_base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "independent_human_review": false,
+    "release_approved": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 2059,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 1687,
+    "REJECT": 70,
+    "QUARANTINE": 328,
+    "NEEDS_HUMAN_REVIEW": 27
+  },
+  "agent_substantive_reviews": 2084,
+  "substantively_unreviewed": 25,
+  "records": [
+    {
+      "id": "repo-e26564fd639188a59dca3a27",
+      "ordinal": 200,
+      "messages_sha256": "e26564fd639188a59dca3a279ec0f18370ce3ce51b3386333d30a57315a9474f",
+      "state": "PASS",
+      "rationale": "Correct distinction between explicit physical mechanisms and purely correlational fitting.",
+      "evidence": [
+        {
+          "title": "DAMASK multiphysics crystal-plasticity documentation",
+          "url": "https://damask-multiphysics.org/",
+          "finding": "Crystal-scale constitutive response can be coupled with thermal, transformation and damage fields; grain orientation and homogenization matter."
+        },
+        {
+          "title": "ESPEI documentation",
+          "url": "https://espei.org/",
+          "finding": "CALPHAD Gibbs-energy models are fitted and refined with Bayesian parameter inference and propagated uncertainty."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Mechanistic models can still be approximate or wrongly specified; empirical regressions need not identify causal structure merely by fitting well."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1284"
+    },
+    {
+      "id": "repo-063635df4d89ec89aef942a2",
+      "ordinal": 201,
+      "messages_sha256": "063635df4d89ec89aef942a292c2336bcd61876db5d6eef1235be535594e4744",
+      "state": "PASS",
+      "rationale": "Correct residual-stress origins and need to link evolving microstructure with mechanics.",
+      "evidence": [
+        {
+          "title": "Three-dimensional thermo-elastic–plastic finite element modeling of quenching process of plain-carbon steel in couple with phase transformation (2007)",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S002074030600213X",
+          "finding": "Couples thermal, mechanical and transformation strain, transformation-induced plasticity and latent heat to predict steel temperature, dimensions and stress."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Residual stress is a field rather than a phase fraction; the answer says a complete model may need both rather than requiring every effect in every approximation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1303"
+    },
+    {
+      "id": "repo-c01afe36393bef67bf434261",
+      "ordinal": 202,
+      "messages_sha256": "c01afe36393bef67bf4342617c2b2827d4e69ce2db8dcf2e75320eb2a89aeb9c",
+      "state": "PASS",
+      "rationale": "Correct conditional solute-supersaturation benefit and grain/defect/toughness risks of higher solutionizing temperature.",
+      "evidence": [
+        {
+          "title": "MIT Physical Metallurgy Lecture 18",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/3b9508adaba259c0d0628f6078f92349_MIT3_40JF09_lec18.pdf",
+          "finding": "Solute state, precipitate size/coherency and cutting/bypass resistance distinguish stages of age hardening."
+        },
+        {
+          "title": "MIT Physical Metallurgy Lectures 10 and 11",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/c9dc86331e13d11e8dd5d5a32b44894d_MIT3_40JF09_lec1011.pdf",
+          "finding": "Prior deformation, stored defect energy, recovery and recrystallization affect evolving grain structures."
+        },
+        {
+          "title": "Chen et al., Effect of solution treatment on precipitation behaviors and age hardening response of Al–Cu alloys with Sc addition (2011)",
+          "url": "https://www.sciencedirect.com/science/article/pii/S0921509311011324",
+          "finding": "Experiments distinguish dispersoid survival/dissolution at different solution temperatures and the subsequent precipitate-spacing/hardness response."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Actual solvus and incipient-melting limits, kinetics and quench severity must be checked for the alloy; the answer explicitly makes the outcome conditional."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1306"
+    },
+    {
+      "id": "repo-c90391ef85a31c4ea63a0cfc",
+      "ordinal": 203,
+      "messages_sha256": "c90391ef85a31c4ea63a0cfc77fa0d5ab749b261cc201ba55ff936957b61fa33",
+      "state": "PASS",
+      "rationale": "Correct grain-growth arithmetic and use of current grain size in Hall-Petch.",
+      "evidence": [
+        {
+          "title": "MIT Physical Metallurgy Lectures 10 and 11",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/c9dc86331e13d11e8dd5d5a32b44894d_MIT3_40JF09_lec1011.pdf",
+          "finding": "Prior deformation, stored defect energy, recovery and recrystallization affect evolving grain structures."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "d=sqrt(10^2+3*100)=sqrt(400)=20 micrometers."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "d=sqrt(10^2+3*100)=sqrt(400)=20 micrometers."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hall-Petch is a separate constitutive regime assumption; the requested arithmetic is exact."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1313"
+    },
+    {
+      "id": "repo-c0a1cf5eeb6843c10d0ae51e",
+      "ordinal": 204,
+      "messages_sha256": "c0a1cf5eeb6843c10d0ae51e66f26bce8aa720d616f5017ebc8f0e7f1a7662f7",
+      "state": "PASS",
+      "rationale": "Correct state-variable separation for creep after different aging histories.",
+      "evidence": [
+        {
+          "title": "MIT Physical Metallurgy Lecture 18",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/3b9508adaba259c0d0628f6078f92349_MIT3_40JF09_lec18.pdf",
+          "finding": "Solute state, precipitate size/coherency and cutting/bypass resistance distinguish stages of age hardening."
+        },
+        {
+          "title": "MIT Physical Metallurgy Lectures 10 and 11",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/c9dc86331e13d11e8dd5d5a32b44894d_MIT3_40JF09_lec1011.pdf",
+          "finding": "Prior deformation, stored defect energy, recovery and recrystallization affect evolving grain structures."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Room-temperature hardness alone does not constrain all diffusion paths or long-term obstacle stability; a calibrated creep model is still needed."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1314"
+    },
+    {
+      "id": "repo-ed00d615cc6f9c20c12b5ffd",
+      "ordinal": 205,
+      "messages_sha256": "ed00d615cc6f9c20c12b5ffdd78eb3f51286833af96f37da467f86183e3fc283",
+      "state": "PASS",
+      "rationale": "Correct conceptual steel HAZ thermal-history to microstructure/stress/toughness workflow.",
+      "evidence": [
+        {
+          "title": "TWI, What is the Heat Affected Zone?",
+          "url": "https://www.twi-global.com/technical-knowledge/faqs/what-is-the-heat-affected-zone",
+          "finding": "Thermal exposure creates different steel HAZ regions through grain growth and transformations, changing toughness and other properties."
+        },
+        {
+          "title": "Three-dimensional thermo-elastic–plastic finite element modeling of quenching process of plain-carbon steel in couple with phase transformation (2007)",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S002074030600213X",
+          "finding": "Couples thermal, mechanical and transformation strain, transformation-induced plasticity and latent heat to predict steel temperature, dimensions and stress."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The named austenite/martensite/bainite/ferrite sequence establishes a steel-model example; other alloys need their own phases and toughness relationships."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1323"
+    },
+    {
+      "id": "repo-bb1be0a89f3b68474bcad637",
+      "ordinal": 206,
+      "messages_sha256": "bb1be0a89f3b68474bcad637e204afe5d432a1ef26c40317ca4975f340a82035",
+      "state": "PASS",
+      "rationale": "Correct pass-by-pass state update accounting for deformation and interpass thermal mechanisms.",
+      "evidence": [
+        {
+          "title": "MIT Physical Metallurgy Lectures 10 and 11",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/c9dc86331e13d11e8dd5d5a32b44894d_MIT3_40JF09_lec1011.pdf",
+          "finding": "Prior deformation, stored defect energy, recovery and recrystallization affect evolving grain structures."
+        },
+        {
+          "title": "MIT Physical Metallurgy Lecture 18",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/3b9508adaba259c0d0628f6078f92349_MIT3_40JF09_lec18.pdf",
+          "finding": "Solute state, precipitate size/coherency and cutting/bypass resistance distinguish stages of age hardening."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Strength contributions can interact and need not be strictly additive; local strain/temperature fields may require spatial resolution."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1332"
+    },
+    {
+      "id": "repo-9d06cecf4244c09c1605470e",
+      "ordinal": 207,
+      "messages_sha256": "9d06cecf4244c09c1605470e503491d8aa5c0083b1ef791bffb13f34c3fe7354",
+      "state": "PASS",
+      "rationale": "Correct connections between orientation distribution, variant selection, interface motion and anisotropic properties.",
+      "evidence": [
+        {
+          "title": "DAMASK multiphysics crystal-plasticity documentation",
+          "url": "https://damask-multiphysics.org/",
+          "finding": "Crystal-scale constitutive response can be coupled with thermal, transformation and damage fields; grain orientation and homogenization matter."
+        },
+        {
+          "title": "Ask et al., A Cosserat crystal plasticity and phase field theory for grain boundary migration",
+          "url": "https://arxiv.org/abs/1805.11825",
+          "finding": "Couples phase-field grain-boundary migration and crystal mechanics with distinct bulk and boundary behavior."
+        },
+        {
+          "title": "Kazaryan et al., Physical Review B 63, 184102 (2001)",
+          "url": "https://doi.org/10.1103/PhysRevB.63.184102",
+          "finding": "Boundary mobility depends on inclination and misorientation and influences textured grain-shape anisotropy."
+        },
+        {
+          "title": "Effect of Stress on Variant Selection in Lath Martensite in Low-carbon Steel (2013)",
+          "url": "https://www.jstage.jst.go.jp/article/isijinternational/53/8/53_1453/_html/-char/ja",
+          "finding": "Tests stress effects on martensitic variant selection in the stated steel."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Texture represents orientation statistics; mobility also depends on boundary plane, chemistry and temperature, so texture alone does not determine it."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1339"
+    },
+    {
+      "id": "repo-d2d001bc4718535257c0ca75",
+      "ordinal": 208,
+      "messages_sha256": "d2d001bc4718535257c0ca75cba0b720fc485fcae361220134b5392a99b53b1e",
+      "state": "PASS",
+      "rationale": "Correct identifiability warning when calibrating only peak hardness then predicting underaged conductivity.",
+      "evidence": [
+        {
+          "title": "Mauduit and Gransac (2020), precipitation kinetics in 6000-series aluminum measured by conductivity",
+          "url": "https://www.iieta.org/download/file/fid/38746",
+          "finding": "Studies 6061/6082 precipitation through electrical conductivity, supplemented by hardness; the observables probe related but distinct evolving state."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The answer proposes multiple evolving observables rather than asserting a unique conductivity-to-microstructure inversion."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1340"
+    },
+    {
+      "id": "repo-eda4512b10c9de513d7e7b8b",
+      "ordinal": 209,
+      "messages_sha256": "eda4512b10c9de513d7e7b8b5bed4888035f7661375bcb166eea7b5ad2596712",
+      "state": "PASS",
+      "rationale": "Correct explanation that a mean precipitate radius omits spatial extremes and other fatigue-controlling state.",
+      "evidence": [
+        {
+          "title": "NIST, Additive Manufacturing Fatigue and Fracture",
+          "url": "https://www.nist.gov/programs-projects/additive-manufacturing-fatigue-and-fracture",
+          "finding": "NIST SEM caption shows fatigue crack initiation at a lack-of-fusion defect in AM Ti-6Al-4V; entrapped gas pores are also present on that fracture surface."
+        },
+        {
+          "title": "MIT Physical Metallurgy Lecture 18",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/3b9508adaba259c0d0628f6078f92349_MIT3_40JF09_lec18.pdf",
+          "finding": "Solute state, precipitate size/coherency and cutting/bypass resistance distinguish stages of age hardening."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "Distributions with the same mean can have different upper tails and spatial clusters; equal mean radius does not determine crack-initiation statistics."
+        },
+        {
+          "title": "Zhang et al., Training high-strength aluminum alloys to withstand fatigue (2020)",
+          "url": "https://www.nature.com/articles/s41467-020-19071-7",
+          "finding": "Reports localized cyclic plasticity and fatigue initiation in soft precipitate-free zones."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Distributions with the same mean can have different upper tails and spatial clusters; equal mean radius does not determine crack-initiation statistics."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The actual dominant defect must be established; the answer presents mechanisms that can explain a route-dependent failure of the mean descriptor."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1360"
+    },
+    {
+      "id": "repo-966355cee64dfc8a21b5c4f9",
+      "ordinal": 210,
+      "messages_sha256": "966355cee64dfc8a21b5c4f9645121b321294aafb110c36991f385ce0415fcda",
+      "state": "PASS",
+      "rationale": "Coherent proposed thermodynamics, kinetics, microstructure, mechanical-response and uncertainty-calibration workflow.",
+      "evidence": [
+        {
+          "title": "ESPEI documentation",
+          "url": "https://espei.org/",
+          "finding": "CALPHAD Gibbs-energy models are fitted and refined with Bayesian parameter inference and propagated uncertainty."
+        },
+        {
+          "title": "Ask et al., A Cosserat crystal plasticity and phase field theory for grain boundary migration",
+          "url": "https://arxiv.org/abs/1805.11825",
+          "finding": "Couples phase-field grain-boundary migration and crystal mechanics with distinct bulk and boundary behavior."
+        },
+        {
+          "title": "DAMASK multiphysics crystal-plasticity documentation",
+          "url": "https://damask-multiphysics.org/",
+          "finding": "Crystal-scale constitutive response can be coupled with thermal, transformation and damage fields; grain orientation and homogenization matter."
+        },
+        {
+          "title": "Schwen, Jiang and Aagesen, A sublattice phase-field model for direct CALPHAD database coupling (2021)",
+          "url": "https://arxiv.org/abs/2103.16603",
+          "finding": "Demonstrates direct thermodynamic database coupling to phase-field evolution; it does not validate a complete workflow with all other named tools."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Interfaces, calibration data and validity domains must be designed; naming the tools does not imply an already working or uniquely correct integrated model."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1366"
+    },
+    {
+      "id": "repo-f7de4a5a32321030410e6116",
+      "ordinal": 211,
+      "messages_sha256": "f7de4a5a32321030410e6116deb0767aa45b30c7b5ada5bf08b23654a789a8a1",
+      "state": "PASS",
+      "rationale": "Correct explanation that omitted strong feedback is a physical modeling approximation, not just numerical error.",
+      "evidence": [
+        {
+          "title": "Three-dimensional thermo-elastic–plastic finite element modeling of quenching process of plain-carbon steel in couple with phase transformation (2007)",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S002074030600213X",
+          "finding": "Couples thermal, mechanical and transformation strain, transformation-induced plasticity and latent heat to predict steel temperature, dimensions and stress."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Thickness and severity are risk indicators rather than universal coupling-error thresholds; the opening condition when feedbacks are strong is essential."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1369"
+    },
+    {
+      "id": "repo-1fb9a443e6137de6a7326980",
+      "ordinal": 212,
+      "messages_sha256": "1fb9a443e6137de6a7326980626c95be478170199d7678b7ff842d7baa3741f2",
+      "state": "PASS",
+      "rationale": "Correct local time-temperature-path definition of thermal history.",
+      "evidence": [
+        {
+          "title": "Three-dimensional thermo-elastic–plastic finite element modeling of quenching process of plain-carbon steel in couple with phase transformation (2007)",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S002074030600213X",
+          "finding": "Couples thermal, mechanical and transformation strain, transformation-induced plasticity and latent heat to predict steel temperature, dimensions and stress."
+        },
+        {
+          "title": "NIST, LPBF near-surface pore formation through melt-pool monitoring and XCT (2021)",
+          "url": "https://www.nist.gov/publications/characterizing-effects-laser-control-laser-powder-bed-fusion-near-surface-pore",
+          "finding": "Pore location and formation depend on laser-control/melt-pool details and are relevant to fatigue integrity."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Different locations can experience different repeated melt/heat cycles; final temperature alone does not encode that path."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1387"
+    },
+    {
+      "id": "repo-53bc9cf48746396c2d040da1",
+      "ordinal": 213,
+      "messages_sha256": "53bc9cf48746396c2d040da1b893a995f64b0a5765933e806a79f04c49393cfb",
+      "state": "PASS",
+      "rationale": "Correct concise grain-boundary-character mechanism beyond grain-size-only correlations.",
+      "evidence": [
+        {
+          "title": "Nanoscale Intergranular Corrosion and Relation With Grain Boundary Character as Studied In Situ on Copper",
+          "url": "https://arxiv.org/abs/1809.09872",
+          "finding": "In-situ copper experiments relate boundary structure/misorientation to local corrosion susceptibility."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Chemistry, boundary structure and misorientation do not supply a universal monotonic corrosion rule across all alloys/environments."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1389"
+    },
+    {
+      "id": "repo-7bdfe00a4af1695436537709",
+      "ordinal": 214,
+      "messages_sha256": "7bdfe00a4af1695436537709688130df4ab1df8134b3e18da5da60bee6e6d91d",
+      "state": "PASS",
+      "rationale": "Correct internally self-equilibrated residual-stress description and effects.",
+      "evidence": [
+        {
+          "title": "Three-dimensional thermo-elastic–plastic finite element modeling of quenching process of plain-carbon steel in couple with phase transformation (2007)",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S002074030600213X",
+          "finding": "Couples thermal, mechanical and transformation strain, transformation-induced plasticity and latent heat to predict steel temperature, dimensions and stress."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "For a free equilibrated body residual stress has zero resultant force/moment while local sigma_residual can alter sigma_total and crack opening."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a free equilibrated body residual stress has zero resultant force/moment while local sigma_residual can alter sigma_total and crack opening."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Self-balance holds globally with appropriate boundary tractions; it does not mean local stress is zero or irrelevant."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1391"
+    },
+    {
+      "id": "repo-5377ff5acfbbbca416c53373",
+      "ordinal": 215,
+      "messages_sha256": "5377ff5acfbbbca416c533736d9a5386df82e401a04840861ae2ddb0cbc63e55",
+      "state": "PASS",
+      "rationale": "Reasonable mechanism explanation for the stated detrimental connected-pore comparison.",
+      "evidence": [
+        {
+          "title": "Lack of Fusion in Additive Manufacturing: Defect or Asset?",
+          "url": "https://arxiv.org/abs/2104.07014",
+          "finding": "Process-induced lack-of-fusion defects affect tensile ductility and fatigue resistance; morphology and anisotropy matter."
+        },
+        {
+          "title": "NIST, LPBF near-surface pore formation through melt-pool monitoring and XCT (2021)",
+          "url": "https://www.nist.gov/publications/characterizing-effects-laser-control-laser-powder-bed-fusion-near-surface-pore",
+          "finding": "Pore location and formation depend on laser-control/melt-pool details and are relevant to fatigue integrity."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Connectivity alone is not a universal ranking independent of pore shape, position and loading; the answer explains the specified crack-linking scenario."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1408"
+    },
+    {
+      "id": "repo-d25d1d6049f15e659bc033b3",
+      "ordinal": 216,
+      "messages_sha256": "d25d1d6049f15e659bc033b3d36a27eb7fae977b9d25bd71d07a18a7cb193fae",
+      "state": "PASS",
+      "rationale": "Correct mechanism decomposition with explicit acknowledgement that additive increments may need coupling.",
+      "evidence": [
+        {
+          "title": "MIT Physical Metallurgy Lecture 18",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/3b9508adaba259c0d0628f6078f92349_MIT3_40JF09_lec18.pdf",
+          "finding": "Solute state, precipitate size/coherency and cutting/bypass resistance distinguish stages of age hardening."
+        },
+        {
+          "title": "MIT Physical Metallurgy Lectures 10 and 11",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/c9dc86331e13d11e8dd5d5a32b44894d_MIT3_40JF09_lec1011.pdf",
+          "finding": "Prior deformation, stored defect energy, recovery and recrystallization affect evolving grain structures."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The actual yield model requires obstacle laws and calibrated interactions; the first additive framing is qualified by the final sentence."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1415"
+    },
+    {
+      "id": "repo-ab2ce5911c5ddbc739fa5210",
+      "ordinal": 217,
+      "messages_sha256": "ab2ce5911c5ddbc739fa5210d6c096b8c1b1fe10879ccb222c4938e106013758",
+      "state": "PASS",
+      "rationale": "Correct first-order separation of texture, grain-shape and residual-stress signatures.",
+      "evidence": [
+        {
+          "title": "DAMASK multiphysics crystal-plasticity documentation",
+          "url": "https://damask-multiphysics.org/",
+          "finding": "Crystal-scale constitutive response can be coupled with thermal, transformation and damage fields; grain orientation and homogenization matter."
+        },
+        {
+          "title": "MIT Physical Metallurgy Lectures 10 and 11",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/c9dc86331e13d11e8dd5d5a32b44894d_MIT3_40JF09_lec1011.pdf",
+          "finding": "Prior deformation, stored defect energy, recovery and recrystallization affect evolving grain structures."
+        },
+        {
+          "title": "Three-dimensional thermo-elastic–plastic finite element modeling of quenching process of plain-carbon steel in couple with phase transformation (2007)",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S002074030600213X",
+          "finding": "Couples thermal, mechanical and transformation strain, transformation-induced plasticity and latent heat to predict steel temperature, dimensions and stress."
+        },
+        {
+          "title": "Machining Distortion in Asymmetrical Residual Stress Profiles (2019)",
+          "url": "https://www.sciencedirect.com/science/article/pii/S2212827119310005",
+          "finding": "Experimental/computational results connect removal of material from a residual-stress field to machining distortion."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Texture and grain morphology can interact, and machining adds its own local stresses; mainly and first-order scope keep this a diagnostic organization."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1425"
+    },
+    {
+      "id": "repo-ca92a5c876460d969054e8a8",
+      "ordinal": 218,
+      "messages_sha256": "ca92a5c876460d969054e8a831c1fcb902e8301218e0563d99947ea1c7c3b5ce",
+      "state": "PASS",
+      "rationale": "Correct process-specific microstructural/defect comparison instead of mean-property-only screening.",
+      "evidence": [
+        {
+          "title": "NIST, LPBF near-surface pore formation through melt-pool monitoring and XCT (2021)",
+          "url": "https://www.nist.gov/publications/characterizing-effects-laser-control-laser-powder-bed-fusion-near-surface-pore",
+          "finding": "Pore location and formation depend on laser-control/melt-pool details and are relevant to fatigue integrity."
+        },
+        {
+          "title": "Lack of Fusion in Additive Manufacturing: Defect or Asset?",
+          "url": "https://arxiv.org/abs/2104.07014",
+          "finding": "Process-induced lack-of-fusion defects affect tensile ductility and fatigue resistance; morphology and anisotropy matter."
+        },
+        {
+          "title": "MIT Physical Metallurgy Lecture 18",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/3b9508adaba259c0d0628f6078f92349_MIT3_40JF09_lec18.pdf",
+          "finding": "Solute state, precipitate size/coherency and cutting/bypass resistance distinguish stages of age hardening."
+        },
+        {
+          "title": "Effect of Multi-Variant Thermal Treatment on AlSi10Mg Processed by DMLS and Casting (2022)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8839243/",
+          "finding": "Direct cast-versus-DMLS comparisons show route-specific dendritic/cellular morphology and segregation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The listed LPBF and casting features depend on alloy and process settings, so inspect them rather than assume every sample contains each one."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1427"
+    },
+    {
+      "id": "repo-cbae47257b77ad6e69c6d649",
+      "ordinal": 219,
+      "messages_sha256": "cbae47257b77ad6e69c6d649da84c60e0454addeb42d786ca00e47c14d40a0ad",
+      "state": "PASS",
+      "rationale": "Reasonable proposed domain-shift/missing-state-variable diagnosis of poor forged-route predictions.",
+      "evidence": [
+        {
+          "title": "DAMASK multiphysics crystal-plasticity documentation",
+          "url": "https://damask-multiphysics.org/",
+          "finding": "Crystal-scale constitutive response can be coupled with thermal, transformation and damage fields; grain orientation and homogenization matter."
+        },
+        {
+          "title": "ESPEI documentation",
+          "url": "https://espei.org/",
+          "finding": "CALPHAD Gibbs-energy models are fitted and refined with Bayesian parameter inference and propagated uncertainty."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "Two records with equal composition but distinct orientation/defect/grain state can have different strength; a composition-only conditional predictor cannot distinguish them."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Two records with equal composition but distinct orientation/defect/grain state can have different strength; a composition-only conditional predictor cannot distinguish them."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Probably and not necessarily keep this a testable diagnosis; label shift, data quality and model capacity must still be checked."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1429"
+    },
+    {
+      "id": "repo-ddaa767076be73fd84e0004d",
+      "ordinal": 220,
+      "messages_sha256": "ddaa767076be73fd84e0004db8c06de1bff30b927d7eb378766f5dc5ac1aaf9f",
+      "state": "PASS",
+      "rationale": "Correct plausible insufficient-fusion to local damage and reduced-ductility chain despite a strong fine matrix.",
+      "evidence": [
+        {
+          "title": "Lack of Fusion in Additive Manufacturing: Defect or Asset?",
+          "url": "https://arxiv.org/abs/2104.07014",
+          "finding": "Process-induced lack-of-fusion defects affect tensile ductility and fatigue resistance; morphology and anisotropy matter."
+        },
+        {
+          "title": "NIST, Additive Manufacturing Fatigue and Fracture",
+          "url": "https://www.nist.gov/programs-projects/additive-manufacturing-fatigue-and-fracture",
+          "finding": "NIST SEM caption shows fatigue crack initiation at a lack-of-fusion defect in AM Ti-6Al-4V; entrapped gas pores are also present on that fracture surface."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The observed defects support this hypothesis but do not quantify their share of the elongation loss without fracture-origin and microstructural evidence."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1432"
+    },
+    {
+      "id": "repo-19de60f0cacb013cccd9ac7e",
+      "ordinal": 221,
+      "messages_sha256": "19de60f0cacb013cccd9ac7eaf2beb75c26bce9240b03670270cd4fb7562554c",
+      "state": "PASS",
+      "rationale": "Correct rejection of final temperature as a sufficient descriptor of quench transformations and residual stress.",
+      "evidence": [
+        {
+          "title": "Three-dimensional thermo-elastic–plastic finite element modeling of quenching process of plain-carbon steel in couple with phase transformation (2007)",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S002074030600213X",
+          "finding": "Couples thermal, mechanical and transformation strain, transformation-induced plasticity and latent heat to predict steel temperature, dimensions and stress."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Composition and starting state also matter; thermal history is the key missing route information here, not the only possible input."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1433"
+    },
+    {
+      "id": "repo-c2f85f88c79e6b33a32daaea",
+      "ordinal": 222,
+      "messages_sha256": "c2f85f88c79e6b33a32daaeac2f760eef361537422dd0dcadbdd6e280b780e8c",
+      "state": "PASS",
+      "rationale": "Correct texture-induced in-plane plastic anisotropy explanation of deep-drawing ears.",
+      "evidence": [
+        {
+          "title": "Engler and Hirsch, Polycrystal-plasticity simulation of six and eight ears in deep-drawn aluminum cups (2007)",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0921509306022957",
+          "finding": "Validated crystal-texture simulations connect rolling/cube texture components to directional deformation and cup earing."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Tooling, friction and geometry can also affect cup shape; the answer explicitly says not only tooling geometry."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1438"
+    },
+    {
+      "id": "repo-fa02086f8928ed21b1f75773",
+      "ordinal": 223,
+      "messages_sha256": "fa02086f8928ed21b1f7577332745e943ac3dec5b78467e5caf5b50d8d8a094d",
+      "state": "PASS",
+      "rationale": "Correct consequence of imposing spatially uniform recrystallization on a nonuniform deformation history.",
+      "evidence": [
+        {
+          "title": "MIT Physical Metallurgy Lectures 10 and 11",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/c9dc86331e13d11e8dd5d5a32b44894d_MIT3_40JF09_lec1011.pdf",
+          "finding": "Prior deformation, stored defect energy, recovery and recrystallization affect evolving grain structures."
+        },
+        {
+          "title": "Ask et al., A Cosserat crystal plasticity and phase field theory for grain boundary migration",
+          "url": "https://arxiv.org/abs/1805.11825",
+          "finding": "Couples phase-field grain-boundary migration and crystal mechanics with distinct bulk and boundary behavior."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Actual local recrystallization also depends on temperature, time and particles; may appropriately qualifies the high/low-strain examples."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1439"
+    },
+    {
+      "id": "repo-ed4652705999f7e407069b08",
+      "ordinal": 224,
+      "messages_sha256": "ed4652705999f7e407069b0897fb37b8dc121bc98bbe8b11411a286b3eacb02d",
+      "state": "PASS",
+      "rationale": "Correct distinction between mean density and defect severity/location statistics relevant to fatigue.",
+      "evidence": [
+        {
+          "title": "NIST, Additive Manufacturing Fatigue and Fracture",
+          "url": "https://www.nist.gov/programs-projects/additive-manufacturing-fatigue-and-fracture",
+          "finding": "NIST SEM caption shows fatigue crack initiation at a lack-of-fusion defect in AM Ti-6Al-4V; entrapped gas pores are also present on that fracture surface."
+        },
+        {
+          "title": "NIST, LPBF near-surface pore formation through melt-pool monitoring and XCT (2021)",
+          "url": "https://www.nist.gov/publications/characterizing-effects-laser-control-laser-powder-bed-fusion-near-surface-pore",
+          "finding": "Pore location and formation depend on laser-control/melt-pool details and are relevant to fatigue integrity."
+        },
+        {
+          "title": "Lack of Fusion in Additive Manufacturing: Defect or Asset?",
+          "url": "https://arxiv.org/abs/2104.07014",
+          "finding": "Process-induced lack-of-fusion defects affect tensile ductility and fatigue resistance; morphology and anisotropy matter."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "Equal total pore volume can be distributed among many round pores or fewer sharp connected defects, with different stress concentration and crack-linking behavior."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Equal total pore volume can be distributed among many round pores or fewer sharp connected defects, with different stress concentration and crack-linking behavior."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "These are possible explanations, not an assertion that the largest pore must always be the origin regardless of local stress or orientation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L1443"
+    }
+  ]
+}

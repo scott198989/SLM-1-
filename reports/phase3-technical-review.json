@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1662,
+    "PASS": 1687,
     "REJECT": 70,
     "QUARANTINE": 328,
-    "NEEDS_HUMAN_REVIEW": 52
+    "NEEDS_HUMAN_REVIEW": 27
   },
   "by_domain": {
     "circuits": {
@@ -56,10 +56,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "materials_manufacturing": {
-      "PASS": 167,
+      "PASS": 192,
       "REJECT": 4,
       "QUARANTINE": 29,
-      "NEEDS_HUMAN_REVIEW": 50
+      "NEEDS_HUMAN_REVIEW": 25
     },
     "physics": {
       "PASS": 212,
@@ -74,18 +74,18 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 2059,
+  "agent_substantive_reviews": 2084,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "8d4a28db366ad48482dbb38e558560a433d86bf1e7f38994c86d838bb931b97e",
+  "technical_review_sha256": "3f05fb92e72354df6687cd317bd9abf66ce361a3a4d3214d4552934bcbdf94a6",
   "reasons": {
     "Faithful conceptual paraphrase that conservation and boundary requirements are integral to the coupled solution process. The prose does not explicitly assert exact feasibility of every internal numerical iterate.": 1,
     "Correct practical explanation of boundary data in an ordinary PDE discretization and their effect on closure, accuracy and stability.": 1,
     "Correct elementary local/absolute extrema distinction, including endpoint possibilities.": 1,
     "Universal three-phase-motor size, efficiency and self-starting comparison lacks machine type, rating and comparison conditions; synchronous motors are a counterexample to unqualified self-starting.": 1,
     "The basic inclusion of polynomials among rational expressions is correct, but the claim that polynomials always tend to infinity and can never have horizontal asymptotes fails for constant polynomials.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 50,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 25,
     "Accurate typical FMEA-entry checklist and appropriate acknowledgement that responsibility/action-status fields vary by team. It does not impose one universal risk-priority formula or imply FMEA alone validates safety.": 1,
     "Changing L/C reactance redistributes complex branch currents and voltages; response and cancellation are correctly circuit dependent rather than universally monotone.": 1,
     "Correct current-sign reversal of magnetic wire force and its role in mechanical commutation.": 1,
@@ -2140,11 +2140,36 @@
     "The coupling concept is useful, but balanced opposite-angle pairing is sufficient rather than necessary to make A16 zero; uniaxial strain response also involves the inverse full A matrix.": 1,
     "Correct interfacial-ply separation definition and warning about hidden delamination.": 1,
     "Stacking order and the stated A-versus-D comparison are correct, but the distance-cubed wording needs to distinguish integrated ply boundaries from the actual quadratic distance weighting.": 1,
-    "Correct first-ply initiation definition and customary conservative-screening role.": 1
+    "Correct first-ply initiation definition and customary conservative-screening role.": 1,
+    "Correct residual-stress origins and need to link evolving microstructure with mechanics.": 1,
+    "Correct rejection of final temperature as a sufficient descriptor of quench transformations and residual stress.": 1,
+    "Correct local time-temperature-path definition of thermal history.": 1,
+    "Reasonable mechanism explanation for the stated detrimental connected-pore comparison.": 1,
+    "Correct concise grain-boundary-character mechanism beyond grain-size-only correlations.": 1,
+    "Correct internally self-equilibrated residual-stress description and effects.": 1,
+    "Coherent proposed thermodynamics, kinetics, microstructure, mechanical-response and uncertainty-calibration workflow.": 1,
+    "Correct connections between orientation distribution, variant selection, interface motion and anisotropic properties.": 1,
+    "Correct first-order separation of texture, grain-shape and residual-stress signatures.": 1,
+    "Correct pass-by-pass state update accounting for deformation and interpass thermal mechanisms.": 1,
+    "Correct conditional solute-supersaturation benefit and grain/defect/toughness risks of higher solutionizing temperature.": 1,
+    "Correct state-variable separation for creep after different aging histories.": 1,
+    "Correct texture-induced in-plane plastic anisotropy explanation of deep-drawing ears.": 1,
+    "Correct grain-growth arithmetic and use of current grain size in Hall-Petch.": 1,
+    "Correct process-specific microstructural/defect comparison instead of mean-property-only screening.": 1,
+    "Reasonable proposed domain-shift/missing-state-variable diagnosis of poor forged-route predictions.": 1,
+    "Correct mechanism decomposition with explicit acknowledgement that additive increments may need coupling.": 1,
+    "Correct identifiability warning when calibrating only peak hardness then predicting underaged conductivity.": 1,
+    "Correct plausible insufficient-fusion to local damage and reduced-ductility chain despite a strong fine matrix.": 1,
+    "Correct distinction between explicit physical mechanisms and purely correlational fitting.": 1,
+    "Correct conceptual steel HAZ thermal-history to microstructure/stress/toughness workflow.": 1,
+    "Correct distinction between mean density and defect severity/location statistics relevant to fatigue.": 1,
+    "Correct explanation that a mean precipitate radius omits spatial extremes and other fatigue-controlling state.": 1,
+    "Correct explanation that omitted strong feedback is a physical modeling approximation, not just numerical error.": 1,
+    "Correct consequence of imposing spatially uniform recrystallization on a nonuniform deformation history.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "79648abf099d007370d6cf474ec061526e28ed56f70255085d310e4a7324af71",
-  "substantively_unreviewed": 50,
+  "published_decisions_sha256": "cc272e1fdbd7f00cb24bf06a5536951a4884e5bd39d28f6dc3d40c33d4bb4604",
+  "substantively_unreviewed": 25,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
