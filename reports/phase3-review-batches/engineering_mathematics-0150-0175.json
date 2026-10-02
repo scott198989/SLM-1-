@@ -1,0 +1,624 @@
+{
+  "base_commit": "2f1b1e341fe5f909d3ae32666f314bc757c80e90",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "engineering_mathematics",
+  "offset": 150,
+  "limit": 25,
+  "next_offset": 175,
+  "selected_window_end_exclusive": 175,
+  "selected_rows_in_window": 25,
+  "new_substantive_reviews": 25,
+  "skipped_existing": 0,
+  "preserved_structural_quarantines": [],
+  "dispositions_added": {
+    "PASS": 21,
+    "QUARANTINE": 3,
+    "REJECT": 1
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "/root/review_engineering_math_seventh_batch",
+    "records_checked": 25,
+    "final_counts": {
+      "PASS": 21,
+      "REJECT": 1,
+      "QUARANTINE": 3
+    },
+    "disposition_changes": [],
+    "review_precision_corrections": [
+      "159 uses direct Bower elasticity symmetry counts.",
+      "168 uses direct Bower momentum balance.",
+      "174 held narrowly for exact Nyquist-boundary recovery; intentional undersampling is a scope caveat.",
+      "156 records exact backward sensitivity."
+    ],
+    "full_prompt_and_answer_review": true,
+    "all_source_hashes_ids_ordinals_and_ledger_matches": true,
+    "source_sha256": "91e1adbb4db662e463ecf96f3c21455639802c9be71e42a23f51e464a06f6cc9",
+    "candidate_preparation_predecessor_commit": "60fc7e63205bbf21f252580a2021fb3c7fd2681a",
+    "local_review_head_reported": null,
+    "published_base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "independent_human_review": false,
+    "release_approved": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 1411,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 1139,
+    "REJECT": 58,
+    "QUARANTINE": 240,
+    "NEEDS_HUMAN_REVIEW": 675
+  },
+  "agent_substantive_reviews": 1436,
+  "substantively_unreviewed": 673,
+  "records": [
+    {
+      "id": "repo-240c20e92ef30993636b12a7",
+      "ordinal": 150,
+      "messages_sha256": "240c20e92ef30993636b12a7df85bda96011c2450810e92d73bd4f4cbd172373",
+      "state": "PASS",
+      "rationale": "Correct classical distinction between a stored-energy stress law and a stress-rate constitutive law, with qualified cyclic-energy artifacts.",
+      "evidence": [
+        {
+          "title": "A. F. Bower, Applied Mechanics of Solids3.5, Hyperelastic Materials",
+          "url": "https://solidmechanics.org/Text/Chapter3_5/Chapter3_5.php",
+          "finding": "Stored strain energy defines stress derivatives and reversible constitutive work in the ideal hyperelastic model."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a hyperelastic conjugate pair, stress power is the time derivative of stored energy, so a closed reversible deformation cycle has zero net work. A general rate law need not be integrable to that energy."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Thermodynamic consistency here concerns the reversible mechanical energy relation; material stability, suitable energy properties and thermal couplings require additional conditions."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1070"
+    },
+    {
+      "id": "repo-90b425a5efaa58f633c2742d",
+      "ordinal": 151,
+      "messages_sha256": "90b425a5efaa58f633c2742d9e151a2eb536805a9d3435764456d08147d51cd9",
+      "state": "PASS",
+      "rationale": "Correct short distinction between one-step local error and cumulative global error, with stability dependence.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The usual local truncation error starts a step from the exact solution; propagation of those defects through later steps determines global error."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Local-error normalization conventions differ; the short answer is a conceptual distinction rather than a specified order formula."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1085"
+    },
+    {
+      "id": "repo-96b6d12292c74e3c2e706880",
+      "ordinal": 152,
+      "messages_sha256": "96b6d12292c74e3c2e7068808d8d93f3d42a5b999df4931eb348dd8709bc5c95",
+      "state": "PASS",
+      "rationale": "Correct general observation in the standard linear constant-coefficient ODE setting.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a linear homogeneous constant-coefficient operator p(D), exp(r*t) gives p(D)exp(r*t)=p(r)exp(r*t), producing the characteristic equation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Nonlinear equations with constant numerical parameters do not generally admit this characteristic-polynomial method; the answer is read in its conventional linear-ODE classification."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1086"
+    },
+    {
+      "id": "repo-0b9712824f417ba7f3cbf4a4",
+      "ordinal": 153,
+      "messages_sha256": "0b9712824f417ba7f3cbf4a4009a52d480c8b41c81cc54933db74c414bde50ff",
+      "state": "PASS",
+      "rationale": "Useful and correct clarification checklist for a heat-equation problem, covering domain, initial and boundary data and desired solution type.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Material coefficients and sources may also require specification, but the illustrative list is not claimed to exhaust all model details."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1089"
+    },
+    {
+      "id": "repo-88988fd05fa2e2223147a3ad",
+      "ordinal": 154,
+      "messages_sha256": "88988fd05fa2e2223147a3ad527c4356ae6b3093899963a163a5502fe1308b36",
+      "state": "PASS",
+      "rationale": "Correct local shadow-price intuition, explicitly qualified by local assumptions and roughly speaking.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a smooth maximized value V(b) with a compatible Lagrangian convention, V_prime(b) equals the constraint multiplier, giving deltaV approximately lambda*deltab."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Sign depends on objective and constraint conventions; finite changes, degeneracy and changing active sets may invalidate a one-unit linear extrapolation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1105"
+    },
+    {
+      "id": "repo-84a58b84dbae79bd7359181d",
+      "ordinal": 155,
+      "messages_sha256": "84a58b84dbae79bd7359181dc6b4812e3e5328f927a6f601e052df65ec1eb259",
+      "state": "PASS",
+      "rationale": "Correct real-eigenpair geometric interpretation and nonzero-eigenvector definition.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Av=lambda*v preserves the one-dimensional span of v; positive lambda scales, negative lambda reverses direction and zero lambda maps it to zero."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Complex eigenpairs do not in general give a real invariant line, and a defective matrix need not have a full eigenbasis; this is the familiar real-direction picture."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1128"
+    },
+    {
+      "id": "repo-30f4104fa27b4d7c00feec82",
+      "ordinal": 156,
+      "messages_sha256": "30f4104fa27b4d7c00feec8248d86436d02242c03d407f27974a26ee4f279c5e",
+      "state": "QUARANTINE",
+      "rationale": "Backward integration can be sensitive, but forward stability alone does not establish the stated exponential backward growth. The answer needs the relevant exponential-decay or linear-spectrum condition.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For y_prime=-y^3, y(t)=y0/sqrt(1+2*y0²*t) is forward asymptotically stable with algebraic decay. Backward sensitivity is (1-2*y0²*tau)^(-3/2), rather than a general exponential law."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The practical warning is useful for many dissipative systems; hold narrowly for the unqualified exponential consequence of forward stability."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1134"
+    },
+    {
+      "id": "repo-8e3ab131685592eeaf3d50b6",
+      "ordinal": 157,
+      "messages_sha256": "8e3ab131685592eeaf3d50b60dc8e5de35eef33f5f4684a4654bd26e1f1c308c",
+      "state": "PASS",
+      "rationale": "Correct conceptual series/parallel reliability and dependency warning with meaningful common-cause mechanisms.",
+      "evidence": [
+        {
+          "title": "NASA, Common Cause Failures Dominate and Defeat Redundancy",
+          "url": "https://ntrs.nasa.gov/citations/20240013667",
+          "finding": "Common-cause dependent failures limit the reliability gain from redundancy that an independent model would predict."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Under independence, series reliability is product R_i and a one-of-n parallel reliability is 1-product(1-R_i). Common-cause failures break those product assumptions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The answer uses enough paths to allow different architectures; actual switching, repair and k-of-n logic need their own system model."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1135"
+    },
+    {
+      "id": "repo-5d35fdd2d10adb8f37d1f4f7",
+      "ordinal": 158,
+      "messages_sha256": "5d35fdd2d10adb8f37d1f4f70dff91e96ed715154c2a0b7b0f649377fc673508",
+      "state": "PASS",
+      "rationale": "Correct starting proof of Euler formula by absolutely convergent Taylor-series separation.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "exp(i*x)=sum (-1)^k*x^(2k)/(2k)! + i*sum (-1)^k*x^(2k+1)/(2k+1)! = cos(x)+i*sin(x)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The exponential and trigonometric series converge absolutely for finite complex arguments, justifying even/odd grouping; this supplies the needed proof foundation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1139"
+    },
+    {
+      "id": "repo-1360758fa8dfad52a3dfebdf",
+      "ordinal": 159,
+      "messages_sha256": "1360758fa8dfad52a3dfebdf7f392d22deea29c88e0aa50c4197216240b197cc",
+      "state": "PASS",
+      "rationale": "Correct standard linear-elastic material-symmetry counts and tensor invariance picture.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "title": "A. F. Bower, Applied Mechanics of Solids 3.2, Linear Elasticity",
+          "url": "https://solidmechanics.org/Text/Chapter3_2/Chapter3_2.php",
+          "finding": "Classical elasticity has 21 independent general constants, with symmetry reductions to two isotropic, three cubic and five transversely isotropic constants."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A general conservative elasticity tensor has 21 constants; isotropic form C_ijkl=lambda*delta_ij*delta_kl+mu*(delta_ik*delta_jl+delta_il*delta_jk) has two. Cubic and transversely isotropic classes have three and five."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Counts assume classical elastic minor/major symmetries; finite-strain nonlinear constitutive functions are not globally described by a fixed list of 21 constants."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1140"
+    },
+    {
+      "id": "repo-621107ae6fdef6002b01dcd8",
+      "ordinal": 160,
+      "messages_sha256": "621107ae6fdef6002b01dcd8acb4c01886926bcc2129dc8a33a8a6f708ef3fd5",
+      "state": "REJECT",
+      "rationale": "The one-dimensional fundamental solution has the wrong sign for the expressly stated positive second-derivative operator and delta normalization. The three-dimensional expression has the correct sign for the positive Laplacian.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "title": "Russell Herman, Greens Functions and Nonhomogeneous Problems",
+          "url": "https://people.uncw.edu/hermanr/pde1/pdebook/green.pdf",
+          "finding": "The operator acting on its fundamental solution gives the prescribed delta normalization; sign must agree with the chosen Laplacian convention."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The derivative of -abs(x-x_prime)/2 jumps from +1/2 to -1/2, so its second distributional derivative is -delta, not +delta. The required one-dimensional kernel is +abs(x-x_prime)/2."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Do not repair the source by changing its operator convention; it explicitly states d²/dx² and Laplacian G=delta."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1146"
+    },
+    {
+      "id": "repo-43fa7ad01f212b2fb43eca1a",
+      "ordinal": 161,
+      "messages_sha256": "43fa7ad01f212b2fb43eca1aca665d067a5ce29a80f460dcca53f5f768f424b7",
+      "state": "QUARANTINE",
+      "rationale": "The contour-closing strategy and vanishing-arc condition are sound, but the stated equality with the residue sum omits the essential 2*pi*i factor for the usual positive contour orientation.",
+      "evidence": [
+        {
+          "title": "NIST DLMF 1.10, Residue Theorem",
+          "url": "https://dlmf.nist.gov/1.10",
+          "finding": "The positively oriented contour integral is 2*pi*i times the sum of enclosed residues, or the normalized integral equals that sum."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For f(z)=1/(z²+1), the upper-half-plane residue is 1/(2i), whereas the real-line integral is pi=2*pi*i*(1/(2i)), not the bare residue."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold only for the normalization statement; poles on the real line and contour orientation need their usual separate treatment."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1161"
+    },
+    {
+      "id": "repo-7a9b839fa5b0838d38809d5a",
+      "ordinal": 162,
+      "messages_sha256": "7a9b839fa5b0838d38809d5a509df47efa316b78b70951962fcf369cdda7b3bc",
+      "state": "PASS",
+      "rationale": "Correct clarification questions showing that a spatial interval alone does not define an equation or its data and solution class.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The required data depend on the equation and formulation; this is a diagnostic checklist rather than a claim every example requires every listed item."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1171"
+    },
+    {
+      "id": "repo-b603839d77cadf6454ee32f1",
+      "ordinal": 163,
+      "messages_sha256": "b603839d77cadf6454ee32f1fa1bef05898e12798f8c82b83f9cd55b91324c70",
+      "state": "PASS",
+      "rationale": "Sound constrained-optimization troubleshooting order and plausible explanations for surprising stationarity results.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Feasibility and first-order multiplier equations do not by themselves establish a constrained minimum; a feasible saddle can satisfy stationarity."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The answer says can and includes degeneracy/nonsmoothness as possibilities, not a diagnosis of the unseen system."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1187"
+    },
+    {
+      "id": "repo-0d4a5295344600e5802b0b7f",
+      "ordinal": 164,
+      "messages_sha256": "0d4a5295344600e5802b0b7f2bd8ab629d92fb4debdb33428b03431e2de74a6d",
+      "state": "PASS",
+      "rationale": "Correct implicit first-order backward-Euler description and standard stiff-stability benefit.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "y_(n+1)=y_n+h*f(t_(n+1),y_(n+1)); on y_prime=lambda*y the amplification 1/(1-h*lambda) is A-stable and tends to zero for large negative h*lambda."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Accuracy, nonlinear-solve convergence and physical suitability are not guaranteed by linear stability."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1212"
+    },
+    {
+      "id": "repo-f70e593c08f4808ab8ce2411",
+      "ordinal": 165,
+      "messages_sha256": "f70e593c08f4808ab8ce24115f9bba6791eafc7bb9733ac680e2995a85c6536f",
+      "state": "PASS",
+      "rationale": "Correct finite-second-moment linear covariance propagation and independent additive-noise rule.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Cov(Ax)=E[A(x-Ex)(x-Ex)^T A^T]=A*Sigma_x*A^T. Independent added w contributes Sigma_w without cross-covariance terms."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Covariance uses second moments rather than a second-order Taylor expansion; correlated added noise requires cross terms."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1221"
+    },
+    {
+      "id": "repo-485db946e2eebcfbf69e1e70",
+      "ordinal": 166,
+      "messages_sha256": "485db946e2eebcfbf69e1e7022be8b3d1fca705755a650a2e7929b61d31b23ec",
+      "state": "PASS",
+      "rationale": "Correct introductory compatibility requirement and Saint-Venant identification for small strains.",
+      "evidence": [
+        {
+          "title": "A. F. Bower, Applied Mechanics of Solids 2.2",
+          "url": "https://solidmechanics.org/Text/Chapter2_2/Chapter2_2.php",
+          "finding": "Strain-displacement relations impose compatibility requirements for a strain field to arise from a displacement field."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If epsilon=sym(grad u), commuting derivatives gives the Saint-Venant curl-curl compatibility identities."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Local differential compatibility gives global single-valued displacement under suitable topology and regularity; multiply connected domains can need additional global conditions, and defects require a broader formulation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1224"
+    },
+    {
+      "id": "repo-4da1c25e58973d6b85d0322c",
+      "ordinal": 167,
+      "messages_sha256": "4da1c25e58973d6b85d0322cd69d4f926d781916fcd0e97607e997a63bde256d",
+      "state": "PASS",
+      "rationale": "Sound conditional example of analytical stability results complementing numerical nonlinear trajectories.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A proof applies only under its stated model and parameter assumptions; simulation illustrations do not independently prove stability outside that scope."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1225"
+    },
+    {
+      "id": "repo-74bf5e968dad1ef344769a0a",
+      "ordinal": 168,
+      "messages_sha256": "74bf5e968dad1ef344769a0a843a9062e1c3ac2a3f640d5bca7f2f01f6fb1df7",
+      "state": "PASS",
+      "rationale": "Correct continuum-mechanics use of tensor divergence in force and momentum balance.",
+      "evidence": [
+        {
+          "title": "A. F. Bower, Applied Mechanics of Solids 2.4",
+          "url": "https://solidmechanics.org/Text/Chapter2_4/Chapter2_4.php",
+          "finding": "The spatial linear-momentum balance uses the divergence of stress plus body-force density equal to acceleration density."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The spatial balance is div(sigma)+rho*b=rho*a, giving force density from stress divergence."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1228"
+    },
+    {
+      "id": "repo-3426a02e7c7b43570566a2f7",
+      "ordinal": 169,
+      "messages_sha256": "3426a02e7c7b43570566a2f7e2d407aa7c69248271cb371c8a0f393caeb28491",
+      "state": "PASS",
+      "rationale": "Correct warning that correlation alone does not establish causation, with plausible confounding and sampling alternatives.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For X=Z+epsilon1 and Y=Z+epsilon2 with independent noises, shared Z induces covariance without either sensor causing the other."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "System knowledge and experimental control must support an appropriate causal design; the answer does not promise that any experiment proves causation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1236"
+    },
+    {
+      "id": "repo-13aa4925f2dce529cf54d110",
+      "ordinal": 170,
+      "messages_sha256": "13aa4925f2dce529cf54d11052d631d81ef79295290c034233ddff7011e3e3ce",
+      "state": "PASS",
+      "rationale": "Correct introductory transform-algebra-inverse-transform workflow for a time-domain differential equation.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The unilateral Laplace transform of y_prime is s*Y(s)-y(0), after which algebra determines Y and inverse transformation returns y(t)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Initial data and transform-existence conditions must be handled; a transform-domain answer can be useful in its own right, but the requested time-domain solve requires inversion."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1240"
+    },
+    {
+      "id": "repo-e5ebb75354b7e6b2976cdfd7",
+      "ordinal": 171,
+      "messages_sha256": "e5ebb75354b7e6b2976cdfd7ecccc896c649d8146760653035b5654c44baff2a",
+      "state": "PASS",
+      "rationale": "Reasonable musician-oriented frequency-spectrum analogy distinguishing component strength from the waveform.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Analyzer bins are frequency intervals rather than literal musical notes, and amplitude/power is not identical to psychoacoustic loudness; the original is a short explanatory analogy."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1260"
+    },
+    {
+      "id": "repo-6b13e9e281900db93a68b108",
+      "ordinal": 172,
+      "messages_sha256": "6b13e9e281900db93a68b10809e5263b3e14586e091476fec735f55fdd09df13",
+      "state": "PASS",
+      "rationale": "Correct qualitative distinction between analytic reduction and numerical approximation, using explicit might language.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "No claim is made that all hybrids include a closed-form stage or that numerical work is restricted to what a person cannot do by hand."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1263"
+    },
+    {
+      "id": "repo-0033031d2ec46a6ae3d1a941",
+      "ordinal": 173,
+      "messages_sha256": "0033031d2ec46a6ae3d1a9415889eecc7e336f877e82e6c4b8ff40bc1c122e80",
+      "state": "PASS",
+      "rationale": "Correct practical explanation of boundary data in an ordinary PDE discretization and their effect on closure, accuracy and stability.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Periodic conditions and natural boundary formulations can be encoded implicitly, and not every numerical problem is a boundary-value problem; the complete answer explicitly concerns an interior grid for a PDE with an edge."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1270"
+    },
+    {
+      "id": "repo-32494c91ee529bf56296114f",
+      "ordinal": 174,
+      "messages_sha256": "32494c91ee529bf56296114f0da77e5f9af75e57eb4d2a9e5a7afeb9a71bdb98",
+      "state": "QUARANTINE",
+      "rationale": "Half the sampling rate correctly defines the Nyquist frequency, but calling that boundary accurately representable without qualification is too strong: arbitrary-phase signals at exactly half the sampling rate cannot in general be recovered.",
+      "evidence": [
+        {
+          "title": "Analog Devices, Basics of Band-Limited Sampling and Aliasing",
+          "url": "https://www.analog.com/en/resources/technical-articles/basics-of-bandlimited-sampling-and-aliasing.html",
+          "finding": "Sampling and reconstruction depend on known support, including bandpass reconstruction; half the sampling rate is not a universal greatest recoverable carrier frequency."
+        },
+        {
+          "method": "independent_mathematical_derivation",
+          "finding": "Individual differential, distributional, stability, probability, tensor and complex-analysis calculations were independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At f=f_s/2, sin(2*pi*f*n/f_s)=sin(pi*n)=0, so arbitrary phase/amplitude cannot be recovered from the samples. Known bandpass signals may also be intentionally undersampled without losing their information."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Preserve the correct f_s/2 definition and ordinary baseband aliasing warning. Known bandpass signals may be intentionally undersampled; that is a scope caveat, not an assertion that the answer explicitly analyzes every sampling architecture."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Advanced_Eng_Math.jsonl#L1272"
+    }
+  ]
+}

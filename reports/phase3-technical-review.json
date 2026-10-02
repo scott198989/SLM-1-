@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1118,
-    "REJECT": 57,
-    "QUARANTINE": 237,
-    "NEEDS_HUMAN_REVIEW": 700
+    "PASS": 1139,
+    "REJECT": 58,
+    "QUARANTINE": 240,
+    "NEEDS_HUMAN_REVIEW": 675
   },
   "by_domain": {
     "circuits": {
@@ -14,10 +14,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "engineering_mathematics": {
-      "PASS": 136,
-      "REJECT": 1,
-      "QUARANTINE": 13,
-      "NEEDS_HUMAN_REVIEW": 50
+      "PASS": 157,
+      "REJECT": 2,
+      "QUARANTINE": 16,
+      "NEEDS_HUMAN_REVIEW": 25
     },
     "algebra": {
       "PASS": 176,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1411,
+  "agent_substantive_reviews": 1436,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "da958ef3f60759c17f19b68b0f971efdae9a057a9fbbad64489e4f74dd345707",
+  "technical_review_sha256": "a991086afbedf7ac24020f3d83fba1ff0b9eb130f90e2701ba3285342bfb807f",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 698,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 673,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1492,11 +1492,36 @@
     "Correct qualified engineering motivation for Gaussian approximations to sums under central-limit conditions.": 1,
     "Correct scope-sensitive comparison of elimination, matrix factorization and explicit inversion.": 1,
     "Correct introductory contrast of frequentist repeated-trial interpretation and Bayesian updating with prior information.": 1,
-    "Correct reason and standard construction for reducing higher-order ODEs to first-order systems.": 1
+    "Correct reason and standard construction for reducing higher-order ODEs to first-order systems.": 1,
+    "Correct practical explanation of boundary data in an ordinary PDE discretization and their effect on closure, accuracy and stability.": 1,
+    "Useful and correct clarification checklist for a heat-equation problem, covering domain, initial and boundary data and desired solution type.": 1,
+    "Correct implicit first-order backward-Euler description and standard stiff-stability benefit.": 1,
+    "Correct standard linear-elastic material-symmetry counts and tensor invariance picture.": 1,
+    "Correct introductory transform-algebra-inverse-transform workflow for a time-domain differential equation.": 1,
+    "Correct classical distinction between a stored-energy stress law and a stress-rate constitutive law, with qualified cyclic-energy artifacts.": 1,
+    "Backward integration can be sensitive, but forward stability alone does not establish the stated exponential backward growth. The answer needs the relevant exponential-decay or linear-spectrum condition.": 1,
+    "Half the sampling rate correctly defines the Nyquist frequency, but calling that boundary accurately representable without qualification is too strong: arbitrary-phase signals at exactly half the sampling rate cannot in general be recovered.": 1,
+    "Correct warning that correlation alone does not establish causation, with plausible confounding and sampling alternatives.": 1,
+    "The contour-closing strategy and vanishing-arc condition are sound, but the stated equality with the residue sum omits the essential 2*pi*i factor for the usual positive contour orientation.": 1,
+    "Correct introductory compatibility requirement and Saint-Venant identification for small strains.": 1,
+    "Sound conditional example of analytical stability results complementing numerical nonlinear trajectories.": 1,
+    "Correct starting proof of Euler formula by absolutely convergent Taylor-series separation.": 1,
+    "The one-dimensional fundamental solution has the wrong sign for the expressly stated positive second-derivative operator and delta normalization. The three-dimensional expression has the correct sign for the positive Laplacian.": 1,
+    "Correct qualitative distinction between analytic reduction and numerical approximation, using explicit might language.": 1,
+    "Correct continuum-mechanics use of tensor divergence in force and momentum balance.": 1,
+    "Correct clarification questions showing that a spatial interval alone does not define an equation or its data and solution class.": 1,
+    "Correct real-eigenpair geometric interpretation and nonzero-eigenvector definition.": 1,
+    "Correct local shadow-price intuition, explicitly qualified by local assumptions and roughly speaking.": 1,
+    "Correct conceptual series/parallel reliability and dependency warning with meaningful common-cause mechanisms.": 1,
+    "Correct short distinction between one-step local error and cumulative global error, with stability dependence.": 1,
+    "Correct general observation in the standard linear constant-coefficient ODE setting.": 1,
+    "Sound constrained-optimization troubleshooting order and plausible explanations for surprising stationarity results.": 1,
+    "Reasonable musician-oriented frequency-spectrum analogy distinguishing component strength from the waveform.": 1,
+    "Correct finite-second-moment linear covariance propagation and independent additive-noise rule.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "766271dc55850071c6f5141d8c42706ce06502e4e3231496ddee251894a740b6",
-  "substantively_unreviewed": 698,
+  "published_decisions_sha256": "77e39292d3c069c534daa740b06d96ab7f17a2654274a4d0750653b7f0eec619",
+  "substantively_unreviewed": 673,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
