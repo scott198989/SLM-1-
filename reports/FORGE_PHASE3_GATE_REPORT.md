@@ -21,7 +21,7 @@ Source/oracle/mask/family/rights/seal hashes and release receipts: [pilot releas
 
 ## Proposed legacy curriculum: exact current dispositions
 
-All 2,112 records received structural/context/privacy and actual Qwen-format screening. **884** received substantive agent review; the complete selected 211-record circuits, 104-record thermal/process and 300-record electrical-components batches are included. Of the remaining 1227 NEEDS_HUMAN_REVIEW records, **1225 have not yet received substantive technical verification** and two were read but require specialist confirmation. This queue label is not a claim that a human must perform every simple check. The requested curriculum-wide technical review remains outstanding; structural/tool agreement never supplied correctness approval. No answers were silently changed.
+All 2,112 records received structural/context/privacy and actual Qwen-format screening. **909** received substantive agent review; the complete selected 211-record circuits, 104-record thermal/process and 300-record electrical-components batches are included. Of the remaining 1202 NEEDS_HUMAN_REVIEW records, **1200 have not yet received substantive technical verification** and two were read but require specialist confirmation. This queue label is not a claim that a human must perform every simple check. The requested curriculum-wide technical review remains outstanding; structural/tool agreement never supplied correctness approval. No answers were silently changed.
 
 Domain labels here are originating-file classifications, not certified semantic capabilities. These counts are not a random sample, corpus accuracy estimate or approved training count.
 
@@ -36,8 +36,8 @@ Domain labels here are originating-file classifications, not certified semantic 
 | materials_manufacturing | 3 | 2 | 1 | 244 |
 | physics | 4 | 2 | 2 | 242 |
 | thermal_process_engineering | 73 | 5 | 24 | 2 |
-| trigonometry | 19 | 1 | 5 | 175 |
-| **Total** | **657** | **48** | **180** | **1227** |
+| trigonometry | 38 | 2 | 10 | 150 |
+| **Total** | **676** | **49** | **185** | **1202** |
 
 **Released legacy curriculum examples:0.** Technical PASS is separate from applicable contract and family qualification. Row-specific unchanged-message hashes/reasons are in [technical decisions](../data/review/phase3/technical-review.jsonl.gz), [substantive receipts](../manifests/phase3-agent-technical-review.json) and [aggregate report](phase3-technical-review.json). Rejections include wrong energy/departure signs, defective-matrix claims, missing equilibria and false optimization rules. Quarantine covers incomplete prior context, unit/model conditions, missing chart values, unresolved visual dependencies and contradictory scratch reasoning. Overlapping risk flags:1110 equation/calculation/proof;792 units/model;23 visual prompts;187 operations/diagnosis. No sampled usable-percentage extrapolation is justified.
 
@@ -93,7 +93,7 @@ Proposed model/revision: Qwen/Qwen3-30B-A3B-Base /1b75feb79f60b8dc6c5bc769a898c2
 
 The 16-record pilot would give **one optimizer update** at effective batch 16, not a useful engineering-specialization run. No update is scheduled. Desktop 5090/32 GiB/64 GiB is README-derived until checked live; laptop 2050/4 GiB/16 GiB is preparation-only. GPU package stack/expert quantization, exact transitive lock, memory estimate 20â€“29 GiB and resume behavior are unmeasured. The eventual model-load/memory pilot must be separately authorized and cannot count as already run.
 
-**Reasons not to authorize training:** requested 1225-record substantive review outstanding; two specialist judgments; applicable legacy contracts unresolved;16 narrow protocol records inadequate for broad FORGE specialization; independent model-development set absent; gold is only 12 tasks/one domain and not an independently human-reviewed broad benchmark; no stock-model scores; academic OCR/equation/visual fidelity and production-source rights remain unqualified; desktop/GPU/runtime/quantized-expert/memory/resume gates not verified.
+**Reasons not to authorize training:** requested 1200-record substantive review outstanding; two specialist judgments; applicable legacy contracts unresolved;16 narrow protocol records inadequate for broad FORGE specialization; independent model-development set absent; gold is only 12 tasks/one domain and not an independently human-reviewed broad benchmark; no stock-model scores; academic OCR/equation/visual fidelity and production-source rights remain unqualified; desktop/GPU/runtime/quantized-expert/memory/resume gates not verified.
 
 The next work is checkpointed review of the held curriculum (not broad discovery), applicable generation-use evidence, independent engineering development/gold source families, and targeted source-qualified academic RAG/task assembly. Never repair answers silently or expand into unrelated corpora to satisfy counts. Siemens is user-owned follow-up. This is a released small pilot and transparent gate report, **not completion of all Phase 3 validation**. Stop before model weights or training.
 
@@ -221,3 +221,8 @@ All 203 previously pending algebra records received individual technical review 
 ## Local trigonometry checkpoint 0–24
 
 This unpublished local batch added {'PASS': 11, 'REJECT': 1, 'QUARANTINE': 2} after independent agent QA; 10 earlier substantive decisions were skipped and 1 original structural quarantines were preserved. Current local substantive reviews: 884; remaining unreviewed: 1225; next trigonometry offset: 25. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. Original answers, prior 870 decisions and all release gates are unchanged. [Batch receipt](phase3-review-batches/trigonometry-0000-0025.json).
+
+
+## Local trigonometry checkpoint 25–49
+
+This unpublished local batch added {'PASS': 19, 'QUARANTINE': 5, 'REJECT': 1} after independent agent QA; 0 earlier substantive decisions were skipped and 0 original structural quarantines were preserved. Current local substantive reviews: 909; remaining unreviewed: 1200; next trigonometry offset: 50. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. Original answers, prior 884 decisions and all release gates are unchanged. [Batch receipt](phase3-review-batches/trigonometry-0025-0050.json).
