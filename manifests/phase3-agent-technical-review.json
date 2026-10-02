@@ -12965,9 +12965,837 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/electrical-components-0175-0200.json",
       "original_domain_ordinal": 199
+    },
+    {
+      "id": "repo-b3dd030709b7580ba6e1aede",
+      "messages_sha256": "b3dd030709b7580ba6e1aede1c37131bc8e135d6708a571839bf1e2d4c224250",
+      "state": "PASS",
+      "rationale": "Sound high-level separation of a mains heater power-switching channel from a noisy low-voltage fault-input channel. It explicitly conditions zero-cross switching on simple on/off control and calls out voltage/current/transient/thermal/insulation/layout requirements. It is not a complete certified installation or an unsupported part choice.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TI isolation technology comparison",
+          "url": "https://www.ti.com/document-viewer/lit/html/SSZT549/GUID-CA39ED82-D99B-4D48-9C4F-54279373DCFE",
+          "finding": "Optocoupler delay/CTR/aging and CMTI are device-dependent; integrated isolator solutions can also be cost-effective rather than universally more expensive."
+        },
+        {
+          "title": "TI Power Supply Design insulation definitions",
+          "url": "https://www.ti.com/lit/ml/slup421/slup421.pdf",
+          "finding": "Reinforced insulation is one insulation system providing protection equivalent to double insulation, which combines basic and supplementary insulation for normal, abnormal and single-fault conditions."
+        },
+        {
+          "title": "TI surge diode selection",
+          "url": "https://www.ti.com/lit/an/slvae37/slvae37.pdf?ts=1778722900617",
+          "finding": "Select protection by actual transient clamp voltage and protected input tolerance, with operating voltage and dynamic behavior accounted for."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 238,
+      "assistant_tokens": 193,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 200
+    },
+    {
+      "id": "repo-d0f273640fce369420e8186f",
+      "messages_sha256": "d0f273640fce369420e8186f1716c51722bf2f3e4fc09dbfe1d00be957407167",
+      "state": "PASS",
+      "rationale": "Correct explanation of source/load/reference impedances, return paths and layout influencing filter behavior. It recognizes bypass/coupling/mode-conversion effects and gives no universal grounding prescription.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices grounding guidance",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/grounding-again.html",
+          "finding": "Local bypassing and controlled low-impedance current paths help keep switching currents from contaminating ADC circuitry; topology and frequency matter."
+        },
+        {
+          "title": "Analog Devices Ferrite Beads Demystified",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/ferrite-beads-demystified.html",
+          "finding": "Frequency/DC-bias-dependent bead impedance and unwanted LC resonance can worsen power-rail behavior unless damping and application conditions are considered."
+        },
+        {
+          "title": "Analog Devices AN-1142 layout guidance",
+          "url": "https://www.analog.com/en/resources/app-notes/an-1142.html",
+          "finding": "Blindly splitting a reference plane can increase return-path inductance and noise; a topology-specific reason and controlled return path are required."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A shunt branch with series parasitic impedance cannot remain an ideal high-frequency short, and any alternate current path changes the intended filter transfer function."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 156,
+      "assistant_tokens": 132,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 201
+    },
+    {
+      "id": "repo-1c15a9361818241cd24af362",
+      "messages_sha256": "1c15a9361818241cd24af362041d261ad52b61dcea5272077b1ab1c850450f28",
+      "state": "REJECT",
+      "rationale": "The overheating hazard is real, but undersized fusing is not an accurate general explanation for failure to interrupt a hard MOV short: a lower current rating ordinarily clears earlier, while inadequate interrupting capacity is a different issue. MOV thermal runaway can occur below a conventional fuse's clearing threshold. Silent-until-smoke and the blanket unprotected-is-safer comparison are also unsupported.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Littelfuse integrated overcurrent/overtemperature protection",
+          "url": "https://www.littelfuse.com/assetdocs/integrated-overcurrent-overvoltage-overtemperature-solutions-for-industrial-application-note?assetguid=345d7dbb-dcc4-48e4-8549-67fd402752e7",
+          "finding": "MOVs can overheat under abnormal sustained voltage even with upstream fusing; coordinated thermal protection may be required."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Current-rating coordination, interrupting rating and thermal-disconnect behavior are separate protection properties; the adjective undersized cannot substitute for identifying which one is inadequate."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 100,
+      "assistant_tokens": 71,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 202
+    },
+    {
+      "id": "repo-f3ea16f8c90fd7b513a11a1e",
+      "messages_sha256": "f3ea16f8c90fd7b513a11a1e897460133a6885a631372007e7defd55a8303bbd",
+      "state": "PASS",
+      "rationale": "Reasonable multi-stress design-margin explanation covering variation, aging and harsh conditions instead of equating a datasheet maximum with robust service. The final survival language expresses the objective, not a quantified reliability guarantee for an actual part.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "KEMET tantalum/polymer derating guidance",
+          "url": "https://www.kemet.com/en/us/capacitors/polymer/tantalum-polymer-faqs.html",
+          "finding": "Derating reduces applied stress, but recommended voltage limits depend on capacitor technology, series and temperature.",
+          "access_caveat": "Independent reviewer found the KEMET FAQ redirected to an empty extracted Yageo page; alternate primary rationale is included."
+        },
+        {
+          "title": "NASA TM-4322 derating rationale",
+          "url": "https://ntrs.nasa.gov/api/citations/19920003068/downloads/19920003068.pdf",
+          "finding": "PDF page 28 supports reduced applied stress and operating margin as a reliability practice."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Margin is the separation between anticipated worst-case demand and applicable capability; assessing several independent stress limits prevents a large margin in one parameter from hiding a violation in another."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 128,
+      "assistant_tokens": 107,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 203
+    },
+    {
+      "id": "repo-5e4a24809fd28542ac6165ae",
+      "messages_sha256": "5e4a24809fd28542ac6165ae0ceece5f00761529d9cf447338020c001d5bfdbe",
+      "state": "PASS",
+      "rationale": "Correct paraphrase of galvanic isolation's limits and alternate noise-coupling routes. It explicitly rejects a universal cure and uses the motor-cable example as a possibility, not a demonstrated fault.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TI isolation technology comparison",
+          "url": "https://www.ti.com/document-viewer/lit/html/SSZT549/GUID-CA39ED82-D99B-4D48-9C4F-54279373DCFE",
+          "finding": "Optocoupler delay/CTR/aging and CMTI are device-dependent; integrated isolator solutions can also be cost-effective rather than universally more expensive."
+        },
+        {
+          "title": "Analog Devices grounding guidance",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/grounding-again.html",
+          "finding": "Local bypassing and controlled low-impedance current paths help keep switching currents from contaminating ADC circuitry; topology and frequency matter."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Blocking a DC conductive path does not make barrier capacitance or external electromagnetic coupling zero."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 125,
+      "assistant_tokens": 98,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 204
+    },
+    {
+      "id": "repo-a85d5ad90ee602c5d812f35d",
+      "messages_sha256": "a85d5ad90ee602c5d812f35d00532a700b2d279c94a03e61e6e67b71b43578fb",
+      "state": "PASS",
+      "rationale": "Correct beginner description of galvanic separation and a conditional reduction in ground-difference/fault exposure. Less likely appropriately avoids guaranteeing safety from an unspecified isolator, and direct conductive path does not deny displacement current through capacitance.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TI isolation technology comparison",
+          "url": "https://www.ti.com/document-viewer/lit/html/SSZT549/GUID-CA39ED82-D99B-4D48-9C4F-54279373DCFE",
+          "finding": "Optocoupler delay/CTR/aging and CMTI are device-dependent; integrated isolator solutions can also be cost-effective rather than universally more expensive."
+        },
+        {
+          "title": "TI Power Supply Design insulation definitions",
+          "url": "https://www.ti.com/lit/ml/slup421/slup421.pdf",
+          "finding": "Reinforced insulation is one insulation system providing protection equivalent to double insulation, which combines basic and supplementary insulation for normal, abnormal and single-fault conditions."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 81,
+      "assistant_tokens": 56,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 205
+    },
+    {
+      "id": "repo-6bb92a68bdc4526c7b79e869",
+      "messages_sha256": "6bb92a68bdc4526c7b79e869b871c38170707dbf56d087e8f6f3dc9b2a0fc7ab",
+      "state": "QUARANTINE",
+      "rationale": "The relay/contactor overview is broadly correct, but categorizing switches as manual devices while including limit switches is overly restrictive. A switch can be machine-actuated or automatic, and manual actuation is not the defining distinction from the wider switch category. Hold this taxonomy rather than silently adding examples of manually operated switches.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "OMRON industrial switch families",
+          "url": "https://components.omron.com/us-en/products/switches/industrial-switches",
+          "finding": "Limit/interlock switches can detect mechanical machine/guard position; switches are not restricted to direct manual actuation."
+        },
+        {
+          "title": "Eaton electrical starters",
+          "url": "https://www.eaton.com/us/en-us/products/controls-drives-automation-sensors/contactors-and-starters/understanding-electrical-starters-.html",
+          "finding": "Motor contactors support repeated remote switching and inrush duty, with overload protection handled separately."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 131,
+      "assistant_tokens": 109,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 206
+    },
+    {
+      "id": "repo-af30032ba549f2be45297548",
+      "messages_sha256": "af30032ba549f2be4529754892c9da05d652d705824a67ac9b2a658a75a2d8ab",
+      "state": "PASS",
+      "rationale": "Correct qualified reliability rationale for derating: lower relevant stresses can slow degradation and provide variation margin, without guaranteeing reliability. Often/usually preserves technology and failure-mode dependence.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "KEMET tantalum/polymer derating guidance",
+          "url": "https://www.kemet.com/en/us/capacitors/polymer/tantalum-polymer-faqs.html",
+          "finding": "Derating reduces applied stress, but recommended voltage limits depend on capacitor technology, series and temperature.",
+          "access_caveat": "Independent reviewer found the KEMET FAQ redirected to an empty extracted Yageo page; alternate primary rationale is included."
+        },
+        {
+          "title": "NASA TM-4322 derating rationale",
+          "url": "https://ntrs.nasa.gov/api/citations/19920003068/downloads/19920003068.pdf",
+          "finding": "PDF page 28 supports reduced applied stress and operating margin as a reliability practice."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 73,
+      "assistant_tokens": 56,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 207
+    },
+    {
+      "id": "repo-34a5d2e8ec8f5180d3055b81",
+      "messages_sha256": "34a5d2e8ec8f5180d3055b81e111006e085e290f68de9519f575f6a3bbdb000c",
+      "state": "PASS",
+      "rationale": "Sound layered common-cause supply-risk analysis from approved part alternatives through suppliers/sites/fabs/materials to shared regions and logistics. It does not assume two legal suppliers are independent or claim that a particular source is actually risky.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "If ostensibly independent supply routes share a necessary sub-tier resource, failure of that common resource defeats both routes; counting vendor names misses the shared event."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 132,
+      "assistant_tokens": 111,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 208
+    },
+    {
+      "id": "repo-40f34fc9126afd7462612a10",
+      "messages_sha256": "40f34fc9126afd7462612a100a2e53277237a81c2372bda8dd0982ce5f128371",
+      "state": "PASS",
+      "rationale": "Correct introductory contactor utilization-category distinctions, including the difference between motor starting/running interruption and plugging/inching duty. It directs matching the category rather than approving a contactor from a single headline ampere rating.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Schneider contactor utilization categories",
+          "url": "https://productinfo.se.com/tesysgigainstallationguide/tesys-giga-series-giga-contactors-and-giga-thermal-overload-relays-installation-guide/English/TeSys%E2%84%A2%20Giga%20Series%20Giga%20Contactors%20and%20Giga%20Thermal%20Overload%20Relays%20Installation%20Guide_0000447511.xml/%24/PanGu_LoadsCPT_0000507717",
+          "finding": "Defines AC-1 non/slightly inductive loads, AC-3 cage-motor starting/running switching and AC-4 plugging/inching duty."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 95,
+      "assistant_tokens": 79,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 209
+    },
+    {
+      "id": "repo-af6f706338d4f8d25be7a393",
+      "messages_sha256": "af6f706338d4f8d25be7a39302541bad3ef50d1027fae66f8c8a885072ee3e95",
+      "state": "PASS",
+      "rationale": "Accurate practical distinction between the sensing element and a more complete measurement instrument. Usually and sometimes correctly allow instruments with remote displays, external power or differing integration boundaries.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "A strain-sensitive element alone and a powered calibrated bridge readout illustrate element-level transduction versus a complete measurement apparatus."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 64,
+      "assistant_tokens": 44,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 210
+    },
+    {
+      "id": "repo-aa29f2660fb3f1528720c771",
+      "messages_sha256": "aa29f2660fb3f1528720c771786b2e87d7cf579f48fdb1d4726e9bdc5629158b",
+      "state": "PASS",
+      "rationale": "Reasonable non-exhaustive sensor failure/error checklist covering physical, electrical, environmental and aging mechanisms. Depending on type avoids asserting every listed mechanism applies to every sensor.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "OMRON relay troubleshooting",
+          "url": "https://www.ia.omron.com/support/guide/36/troubleshooting.html",
+          "finding": "Mechanical relays have multiple failure mechanisms, including contact welding, wear, intermittent contact and coil deterioration."
+        },
+        {
+          "title": "KEMET tantalum/polymer derating guidance",
+          "url": "https://www.kemet.com/en/us/capacitors/polymer/tantalum-polymer-faqs.html",
+          "finding": "Derating reduces applied stress, but recommended voltage limits depend on capacitor technology, series and temperature.",
+          "access_caveat": "Independent reviewer found the KEMET FAQ redirected to an empty extracted Yageo page; alternate primary rationale is included."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "An observed measurement fault can originate in the sensing element, wiring, excitation or environment; the answer does not uniquely attribute it to any one layer."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 71,
+      "assistant_tokens": 55,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 211
+    },
+    {
+      "id": "repo-53590c8f03ab063ac7a7e573",
+      "messages_sha256": "53590c8f03ab063ac7a7e5739889dad21f606891d9302b8c18735730d73c6333",
+      "state": "PASS",
+      "rationale": "Reasonable illustrative low-voltage input protection architecture, combining current limiting, voltage clamping and optional HF impedance. It correctly requires the actual clamp to respect the protected input limit rather than using nominal TVS stand-off voltage as the safe peak. It does not specify values or certify a real surge design.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TI surge diode selection",
+          "url": "https://www.ti.com/lit/an/slvae37/slvae37.pdf?ts=1778722900617",
+          "finding": "Select protection by actual transient clamp voltage and protected input tolerance, with operating voltage and dynamic behavior accounted for."
+        },
+        {
+          "title": "Analog Devices Ferrite Beads Demystified",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/ferrite-beads-demystified.html",
+          "finding": "Frequency/DC-bias-dependent bead impedance and unwanted LC resonance can worsen power-rail behavior unless damping and application conditions are considered."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 75,
+      "assistant_tokens": 57,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 212
+    },
+    {
+      "id": "repo-d72ebd2fc2acabd65643b384",
+      "messages_sha256": "d72ebd2fc2acabd65643b384a846c9cdd2b8e8507be872b7063345e810fb8fdb",
+      "state": "QUARANTINE",
+      "rationale": "The electrical shock-protection distinction is broadly sound, but the complete prompt says only class I vs class II with no product/domain referent. Several unrelated classifications use those labels. Hold the missing context rather than deriving appliance-protection intent from the source filename.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TI Power Supply Design insulation definitions",
+          "url": "https://www.ti.com/lit/ml/slup421/slup421.pdf",
+          "finding": "Reinforced insulation is one insulation system providing protection equivalent to double insulation, which combines basic and supplementary insulation for normal, abnormal and single-fault conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The visible user message identifies neither electrical equipment protection classes nor another classification scheme."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 60,
+      "assistant_tokens": 46,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 213
+    },
+    {
+      "id": "repo-70bf9e99080871a0160ee47b",
+      "messages_sha256": "70bf9e99080871a0160ee47b9221fe6d8211d8919b0485c7b02d2c758c9dccbc",
+      "state": "PASS",
+      "rationale": "Good conditional troubleshooting structure separates spikes, dips and return-layout problems, then matches local/bulk capacitance, damping/filter impedance and flyback control to those mechanisms. It warns that series resistance can worsen droop and does not promise one generic filter fixes every reset.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices grounding guidance",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/grounding-again.html",
+          "finding": "Local bypassing and controlled low-impedance current paths help keep switching currents from contaminating ADC circuitry; topology and frequency matter."
+        },
+        {
+          "title": "TI solenoid driving topologies",
+          "url": "https://www.ti.com/lit/an/slvae59a/slvae59a.pdf?ts=1776259564837",
+          "finding": "Discusses low-side/high-side and bridge switching, recirculation and clamp choices for inductive solenoid loads."
+        },
+        {
+          "title": "Analog Devices Ferrite Beads Demystified",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/ferrite-beads-demystified.html",
+          "finding": "Frequency/DC-bias-dependent bead impedance and unwanted LC resonance can worsen power-rail behavior unless damping and application conditions are considered."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A capacitor supplies DeltaQ=C*DeltaV over a transient; extra series resistance also introduces I*R drop. These benefits and costs depend on frequency and load profile."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 183,
+      "assistant_tokens": 148,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 214
+    },
+    {
+      "id": "repo-863d0b05085a8d54a45e00e1",
+      "messages_sha256": "863d0b05085a8d54a45e00e16455931fd9af528f42aa121b121b030f9accfb5b",
+      "state": "PASS",
+      "rationale": "Correct range of noncontact sensing options with material, range and environment as explicit selection criteria. Hall/magnet and inductive/metal qualifications are helpful; no device accuracy or universal detectability is claimed.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "ifm compact inductive sensors",
+          "url": "https://www.ifm.com/us/en/us/learn-more/inductive/compact-inductive-sensors/compact-inductive-sensors",
+          "finding": "Metal-target inductive proximity sensing can tolerate dust/moisture and avoids optical lens obscuration, but model and exposure suitability still matter."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 77,
+      "assistant_tokens": 56,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 215
+    },
+    {
+      "id": "repo-121e3088f71ac3bd467a946e",
+      "messages_sha256": "121e3088f71ac3bd467a946ed8dda3a80b51990f3756b27a58e8904cbdd5cd5f",
+      "state": "PASS",
+      "rationale": "Correct mixed-signal stack-up priorities: controlled reference/return paths, coupling/impedance, analog-digital placement and small switching loops. It does not prescribe arbitrary split planes or imply layer count alone guarantees EMC.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices AN-1142 layout guidance",
+          "url": "https://www.analog.com/en/resources/app-notes/an-1142.html",
+          "finding": "Blindly splitting a reference plane can increase return-path inductance and noise; a topology-specific reason and controlled return path are required."
+        },
+        {
+          "title": "Analog Devices grounding guidance",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/grounding-again.html",
+          "finding": "Local bypassing and controlled low-impedance current paths help keep switching currents from contaminating ADC circuitry; topology and frequency matter."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 79,
+      "assistant_tokens": 56,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 216
+    },
+    {
+      "id": "repo-97ee87c4115aad8a5f950121",
+      "messages_sha256": "97ee87c4115aad8a5f9501214e2a3d95e42524231dddaf2e27fd231921371e5b",
+      "state": "PASS",
+      "rationale": "Reasonable concise causal link between lifecycle obsolescence/supply challenges and replacement/requalification/redesign change orders. Usually is a qualitative tendency, not a numeric forecast or a claim that every ECO proves component failure.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "If an approved component becomes unavailable, replacing it can require a documented design/BOM change and requalification; that is one pathway from lifecycle exposure to an ECO."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 44,
+      "assistant_tokens": 25,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 217
+    },
+    {
+      "id": "repo-2bcd49c02aab92f623165301",
+      "messages_sha256": "2bcd49c02aab92f623165301445119111654c141949643f71dc77820efd46632",
+      "state": "PASS",
+      "rationale": "Correctly qualifies redundancy benefit by independence, switching and common causes including software and environment. It avoids the false claim that adding a duplicate automatically doubles reliability.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NIST r-out-of-n reliability model",
+          "url": "https://www.itl.nist.gov/div898/handbook/apr/section1/apr184.htm",
+          "finding": "Simple redundant-system probability formulas require independent component failures; shared causes or switching behavior require additional modeling."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For independent active parallel components with reliability R1 and R2 and perfect coverage, Rsys=1-(1-R1)*(1-R2). Shared failure or imperfect switching invalidates that simple expression."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 65,
+      "assistant_tokens": 48,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 218
+    },
+    {
+      "id": "repo-3b53a4b39976f9a54ecf7d90",
+      "messages_sha256": "3b53a4b39976f9a54ecf7d909e9cb656a5b47236443b512eec12e012e96d126d",
+      "state": "PASS",
+      "rationale": "Correct ordinary motor-starter division between sustained motor thermal overload protection and circuit overcurrent/short-circuit protection. It states a complementary architecture rather than claiming an overload relay can interrupt a high fault current by itself.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "OMRON low-voltage switchgear introduction",
+          "url": "https://www.ia.omron.com/support/guide/753/introduction.html",
+          "finding": "Thermal overload relays use current-generated heat and bimetal motion to operate a control contact."
+        },
+        {
+          "title": "Eaton electrical starters",
+          "url": "https://www.eaton.com/us/en-us/products/controls-drives-automation-sensors/contactors-and-starters/understanding-electrical-starters-.html",
+          "finding": "Motor contactors support repeated remote switching and inrush duty, with overload protection handled separately."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 73,
+      "assistant_tokens": 58,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 219
+    },
+    {
+      "id": "repo-3752d3189325b50c7239cdfe",
+      "messages_sha256": "3752d3189325b50c7239cdfe085f40cd458bf623d18fc3ccac8655499af001b1",
+      "state": "QUARANTINE",
+      "rationale": "Temperature-dependent offset and the importance of thermal/calibration design are correct, but drift often exceeds initial offset is an unsupported broad ranking without the amplifier architecture, drift coefficient or temperature interval. The actual product specifications and error budget determine which term dominates.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices zero-drift amplifiers",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/zero-drift-amplifiers.html",
+          "finding": "Offset and drift vary strongly with architecture; low-drift designs illustrate why initial-offset versus thermal-drift magnitude must be evaluated for the actual device and range."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A 10 microvolt initial offset and 0.01 microvolt/K drift over 50 K give only 0.5 microvolt drift; a different coefficient or range can reverse the comparison. No values are supplied in the record."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 80,
+      "assistant_tokens": 60,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 220
+    },
+    {
+      "id": "repo-a166d0632eabba5e6e9bcf53",
+      "messages_sha256": "a166d0632eabba5e6e9bcf53a849433d4bc99c7cb8f8532216c9a4526d4f02bf",
+      "state": "PASS",
+      "rationale": "Useful decomposition of reliability uncertainty into data, model, mission/usage and unknown-mechanism contributors. It does not pretend these labels are mutually exclusive probabilities or that one percentage can identify their causes; different mitigation actions are appropriately emphasized.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NIST accelerated life tests",
+          "url": "https://www.itl.nist.gov/div898/handbook/apr/section3/apr314.htm",
+          "finding": "Use-condition life projection requires an appropriate failure mechanism and acceleration/life models; stress selection and sampling affect model quality."
+        },
+        {
+          "title": "NIST Bayesian reliability evaluation",
+          "url": "https://www.itl.nist.gov/div898/handbook/apr/section2/apr1a.htm",
+          "finding": "Bayes' formula combines prior information and current evidence to produce a posterior distribution for reliability parameters."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 137,
+      "assistant_tokens": 113,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 221
+    },
+    {
+      "id": "repo-0deb9fc22f7d8d9f3c3a84c0",
+      "messages_sha256": "0deb9fc22f7d8d9f3c3a84c0a557702d147430bf88802c8e9da8c9255b888d12",
+      "state": "PASS",
+      "rationale": "Correct fuller galvanic-isolation explanation, including energy transfer, barrier ratings/geometry/fault behavior and intentional secondary grounding. Its component examples identify possible isolated power/feedback elements, not a claim that one optocoupler alone isolates the entire power path.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TI isolation technology comparison",
+          "url": "https://www.ti.com/document-viewer/lit/html/SSZT549/GUID-CA39ED82-D99B-4D48-9C4F-54279373DCFE",
+          "finding": "Optocoupler delay/CTR/aging and CMTI are device-dependent; integrated isolator solutions can also be cost-effective rather than universally more expensive."
+        },
+        {
+          "title": "TI Power Supply Design insulation definitions",
+          "url": "https://www.ti.com/lit/ml/slup421/slup421.pdf",
+          "finding": "Reinforced insulation is one insulation system providing protection equivalent to double insulation, which combines basic and supplementary insulation for normal, abnormal and single-fault conditions."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 169,
+      "assistant_tokens": 150,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 222
+    },
+    {
+      "id": "repo-c92646cefcd570c613155e14",
+      "messages_sha256": "c92646cefcd570c613155e148c9b0836bc4fdd5efcc3fbc4a92df8d3656d685f",
+      "state": "PASS",
+      "rationale": "Correct basic feedback-control relationship among measurement, reference, controller and actuator. Without information about the controlled system, the loop cannot close. Sensorless motor-control terminology does not refute this because such schemes still use measured electrical quantities/observers.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "An error signal r-y requires an observed or estimated y derived from system information; applying a command without that feedback is open-loop at that controlled variable."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 68,
+      "assistant_tokens": 53,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 223
+    },
+    {
+      "id": "repo-fea476cb6893a91ae10092a9",
+      "messages_sha256": "fea476cb6893a91ae10092a9ea1474da4997f85e9a0e390db19836f07fed4ea4",
+      "state": "QUARANTINE",
+      "rationale": "LED photodetection and the wavelength relationship are correct, but the blanket claim that LEDs are much less sensitive than purpose-built photodiodes is unsupported. ADI reports comparable sensitivity in many cases; the actual device, illumination spectrum, packaging and characterization determine performance. Hold narrowly for that comparative claim rather than rejecting the LED-as-sensor concept.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices LED light-sensor activity",
+          "url": "https://wiki.analog.com/university/courses/alm1k/alm-lab-led-sensor",
+          "finding": "LEDs can operate as photodetectors, with spectral sensitivity near or shorter than their main emission wavelength and performance dependent on construction/bias."
+        },
+        {
+          "title": "Analog Devices LED and photodiode sensitivity",
+          "url": "https://wiki.analog.com/university/courses/electronics/text/light-sensors-photodiodes",
+          "finding": "Describes cases where inexpensive LEDs are comparable in sensitivity to purpose-built photocells; detector characterization matters."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 77,
+      "assistant_tokens": 57,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0200-0225.json",
+      "original_domain_ordinal": 224
     }
   ],
-  "reviewed": 567,
+  "reviewed": 592,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

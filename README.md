@@ -3,13 +3,13 @@
 
 Cloud continuation: read [HANDOFF_README.md](HANDOFF_README.md) first; use branch `codex/forge-data-consolidation` / draft PR3. Both circuits and thermal source-domain reviews are complete as dispositions; no legacy SFT released.
 
-Cloud continuation, October 2: the local reviewed checkpoint has 567 substantive decisions and electrical ordinals 0–199 reviewed. The published GitHub branch remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews; later local batches await publication. Next local electrical offset is 200.
+Cloud continuation, October 2: the local reviewed checkpoint has 592 substantive decisions and electrical ordinals 0–224 reviewed. The published GitHub branch remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews; later local batches await publication. Next local electrical offset is 225.
 
 ## Phase 3 pilot — current gate
 
 Private release: **16 calculator protocol SFT examples / 4,430 Qwen tokens / 2,793 assistant tokens**; **12 sealed statistics/DOE/SPC tasks**; **9 qualified private reference-RAG chunks** with 10/10 demonstration query hits in top 3; **69 software tests pass**. [Complete gate report](reports/FORGE_PHASE3_GATE_REPORT.md), [released pilot receipt](reports/phase3-pilot-release.json), [technical review](reports/phase3-technical-review.json), [family evidence](reports/phase3-family-analysis.json), [sealed composition](reports/phase3-sealed-gold.json), [RAG results](reports/phase3-rag-pilot.json).
 
-The 2,112 legacy review curriculum is **not fully technically validated**:402 technical PASS,36 REJECT,130 QUARANTINE,1544 NEEDS HUMAN REVIEW (1542 unreviewed substantively; two specialist holds). No legacy or Drive SFT released. Whole-source owned pilot train/gold overlap 0; broader semantic independence remains unknown. The pilot is small JSON calculator integration data, not a broad engineering specialization set. No independent model-development examples, no stock Qwen scores, no GPU certification. **Training is not recommended or authorized; no weights or training.** Siemens follow-up is being handled by the user. Drive content and private evaluation remain outside Git; automatic checks remain canceled.
+The 2,112 legacy review curriculum is **not fully technically validated**:422 technical PASS,37 REJECT,134 QUARANTINE,1519 NEEDS HUMAN REVIEW (1517 unreviewed substantively; two specialist holds). No legacy or Drive SFT released. Whole-source owned pilot train/gold overlap 0; broader semantic independence remains unknown. The pilot is small JSON calculator integration data, not a broad engineering specialization set. No independent model-development examples, no stock Qwen scores, no GPU certification. **Training is not recommended or authorized; no weights or training.** Siemens follow-up is being handled by the user. Drive content and private evaluation remain outside Git; automatic checks remain canceled.
 
 ## Phase 2 snapshot — historical preparation status
 

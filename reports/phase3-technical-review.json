@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 402,
-    "REJECT": 36,
-    "QUARANTINE": 130,
-    "NEEDS_HUMAN_REVIEW": 1544
+    "PASS": 422,
+    "REJECT": 37,
+    "QUARANTINE": 134,
+    "NEEDS_HUMAN_REVIEW": 1519
   },
   "by_domain": {
     "circuits": {
@@ -44,10 +44,10 @@
       "NEEDS_HUMAN_REVIEW": 208
     },
     "electrical_components": {
-      "PASS": 155,
-      "REJECT": 9,
-      "QUARANTINE": 36,
-      "NEEDS_HUMAN_REVIEW": 100
+      "PASS": 175,
+      "REJECT": 10,
+      "QUARANTINE": 40,
+      "NEEDS_HUMAN_REVIEW": 75
     },
     "electromagnetism": {
       "PASS": 2,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 567,
+  "agent_substantive_reviews": 592,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "23a193026ca6bde3bd47c22bd3c1ae840c415370b0ea24f17920ea4c0952f2c5",
+  "technical_review_sha256": "e867c2fbfd24538203bacba348d040a0208cd34e9b30e97678a1cedeadbba22f",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1542,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1517,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -648,11 +648,36 @@
     "Plausible non-exhaustive nanomotion sensing options and appropriate warning about environmental drift. Movement can be dynamic, so mentioning piezoelectric sensing is not a claim of unlimited DC/static position measurement; no chosen system accuracy is certified.": 1,
     "Correct inductive current-continuity, wiring-parasitic and transient-stress chain. It does not equate occasional survival/avalanche with design qualification and appropriately lists multiple clamp approaches depending on release speed.": 1,
     "Correct practical LED-current-limiting explanation: the steep I-V relationship makes a bare voltage source an unreliable current control, and a suitable resistor/driver limits stress. Brightness/voltage wording is informal, but the causal current mechanism is explicitly supplied.": 1,
-    "Correct qualified reversibility example: piezoelectric elements can convert mechanical excitation to an electrical signal and electrical excitation to mechanical motion. Sometimes avoids generalizing this to all transducers or promising equal efficiency in both directions.": 1
+    "Correct qualified reversibility example: piezoelectric elements can convert mechanical excitation to an electrical signal and electrical excitation to mechanical motion. Sometimes avoids generalizing this to all transducers or promising equal efficiency in both directions.": 1,
+    "Correct fuller galvanic-isolation explanation, including energy transfer, barrier ratings/geometry/fault behavior and intentional secondary grounding. Its component examples identify possible isolated power/feedback elements, not a claim that one optocoupler alone isolates the entire power path.": 1,
+    "Correct mixed-signal stack-up priorities: controlled reference/return paths, coupling/impedance, analog-digital placement and small switching loops. It does not prescribe arbitrary split planes or imply layer count alone guarantees EMC.": 1,
+    "The overheating hazard is real, but undersized fusing is not an accurate general explanation for failure to interrupt a hard MOV short: a lower current rating ordinarily clears earlier, while inadequate interrupting capacity is a different issue. MOV thermal runaway can occur below a conventional fuse's clearing threshold. Silent-until-smoke and the blanket unprotected-is-safer comparison are also unsupported.": 1,
+    "Correctly qualifies redundancy benefit by independence, switching and common causes including software and environment. It avoids the false claim that adding a duplicate automatically doubles reliability.": 1,
+    "Sound layered common-cause supply-risk analysis from approved part alternatives through suppliers/sites/fabs/materials to shared regions and logistics. It does not assume two legal suppliers are independent or claim that a particular source is actually risky.": 1,
+    "Temperature-dependent offset and the importance of thermal/calibration design are correct, but drift often exceeds initial offset is an unsupported broad ranking without the amplifier architecture, drift coefficient or temperature interval. The actual product specifications and error budget determine which term dominates.": 1,
+    "Correct ordinary motor-starter division between sustained motor thermal overload protection and circuit overcurrent/short-circuit protection. It states a complementary architecture rather than claiming an overload relay can interrupt a high fault current by itself.": 1,
+    "Correct introductory contactor utilization-category distinctions, including the difference between motor starting/running interruption and plugging/inching duty. It directs matching the category rather than approving a contactor from a single headline ampere rating.": 1,
+    "Reasonable illustrative low-voltage input protection architecture, combining current limiting, voltage clamping and optional HF impedance. It correctly requires the actual clamp to respect the protected input limit rather than using nominal TVS stand-off voltage as the safe peak. It does not specify values or certify a real surge design.": 1,
+    "Correct paraphrase of galvanic isolation's limits and alternate noise-coupling routes. It explicitly rejects a universal cure and uses the motor-cable example as a possibility, not a demonstrated fault.": 1,
+    "The relay/contactor overview is broadly correct, but categorizing switches as manual devices while including limit switches is overly restrictive. A switch can be machine-actuated or automatic, and manual actuation is not the defining distinction from the wider switch category. Hold this taxonomy rather than silently adding examples of manually operated switches.": 1,
+    "Good conditional troubleshooting structure separates spikes, dips and return-layout problems, then matches local/bulk capacitance, damping/filter impedance and flyback control to those mechanisms. It warns that series resistance can worsen droop and does not promise one generic filter fixes every reset.": 1,
+    "Correct range of noncontact sensing options with material, range and environment as explicit selection criteria. Hall/magnet and inductive/metal qualifications are helpful; no device accuracy or universal detectability is claimed.": 1,
+    "Reasonable concise causal link between lifecycle obsolescence/supply challenges and replacement/requalification/redesign change orders. Usually is a qualitative tendency, not a numeric forecast or a claim that every ECO proves component failure.": 1,
+    "Useful decomposition of reliability uncertainty into data, model, mission/usage and unknown-mechanism contributors. It does not pretend these labels are mutually exclusive probabilities or that one percentage can identify their causes; different mitigation actions are appropriately emphasized.": 1,
+    "Correct beginner description of galvanic separation and a conditional reduction in ground-difference/fault exposure. Less likely appropriately avoids guaranteeing safety from an unspecified isolator, and direct conductive path does not deny displacement current through capacitance.": 1,
+    "Reasonable non-exhaustive sensor failure/error checklist covering physical, electrical, environmental and aging mechanisms. Depending on type avoids asserting every listed mechanism applies to every sensor.": 1,
+    "Correct qualified reliability rationale for derating: lower relevant stresses can slow degradation and provide variation margin, without guaranteeing reliability. Often/usually preserves technology and failure-mode dependence.": 1,
+    "Accurate practical distinction between the sensing element and a more complete measurement instrument. Usually and sometimes correctly allow instruments with remote displays, external power or differing integration boundaries.": 1,
+    "Sound high-level separation of a mains heater power-switching channel from a noisy low-voltage fault-input channel. It explicitly conditions zero-cross switching on simple on/off control and calls out voltage/current/transient/thermal/insulation/layout requirements. It is not a complete certified installation or an unsupported part choice.": 1,
+    "Correct basic feedback-control relationship among measurement, reference, controller and actuator. Without information about the controlled system, the loop cannot close. Sensorless motor-control terminology does not refute this because such schemes still use measured electrical quantities/observers.": 1,
+    "Correct explanation of source/load/reference impedances, return paths and layout influencing filter behavior. It recognizes bypass/coupling/mode-conversion effects and gives no universal grounding prescription.": 1,
+    "The electrical shock-protection distinction is broadly sound, but the complete prompt says only class I vs class II with no product/domain referent. Several unrelated classifications use those labels. Hold the missing context rather than deriving appliance-protection intent from the source filename.": 1,
+    "Reasonable multi-stress design-margin explanation covering variation, aging and harsh conditions instead of equating a datasheet maximum with robust service. The final survival language expresses the objective, not a quantified reliability guarantee for an actual part.": 1,
+    "LED photodetection and the wavelength relationship are correct, but the blanket claim that LEDs are much less sensitive than purpose-built photodiodes is unsupported. ADI reports comparable sensitivity in many cases; the actual device, illumination spectrum, packaging and characterization determine performance. Hold narrowly for that comparative claim rather than rejecting the LED-as-sensor concept.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "245454cd5fa357bf77ba1f914ced69285d446b01c9e7214e4ff8adfdc72c3b15",
-  "substantively_unreviewed": 1542,
+  "published_decisions_sha256": "d6d016df3c2386657548c6455b07e29a0c5ad91d8141c535ebfad211ff19a50b",
+  "substantively_unreviewed": 1517,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
