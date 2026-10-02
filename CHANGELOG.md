@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-02 - Local electrical-domain completion
+
+- Completed all 300 selected electrical curriculum dispositions after serial record-level review and independent agent QA.
+- Preserved all original source messages/tokens and every prior published decision. Local substantive total: 667; public remote remains at 392.
+- Next electrical offset 300 is complete. Await next-domain selection; publication remains blocked, and no alternate upload route was used.
+
+
 ## 2026-10-02 - Local electrical review 275–299
 
 - Added {'PASS': 18, 'QUARANTINE': 5, 'REJECT': 2} after independent agent QA; original answers and prior 642 decisions remain unchanged.

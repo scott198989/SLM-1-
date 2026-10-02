@@ -20,7 +20,7 @@
   "model_weights_downloaded_or_loaded": false,
   "training_or_paid_compute": false,
   "automatic_checks_recreated": false,
-  "test_log_sha256": "4b5cc3e98a4c3f1a4715e9bd4843a2393e64cb58d866f4587154ba56d922e88f",
+  "test_log_sha256": "77980eed3cad62709f62629199f2bf2a92e54ab7c3c66e86a70d76c719a307eb",
   "tested_code_sha256": {
     "scripts/phase3-verify-private-release.py": "64d76484b0852d041083301ce113ddc255b7906512def3dc12d0f92dc96910e1",
     "src/forge_data/citation_pilot.py": "9e17e50194ba8cb22eca0b431359d7aec1d870f8417e87b4938e3c1ff4c968d4",
@@ -55,7 +55,8 @@
   "next_batch": {
     "domain": "electrical_components",
     "offset": 300,
-    "limit": 25
+    "limit": 25,
+    "status": "DOMAIN_COMPLETE; await next-domain selection"
   },
   "official_reader_executed": true,
   "gzip_exact_roundtrip_verified": true,
@@ -78,5 +79,12 @@
   "latest_batch_only_expected_ledger_rows_changed": true,
   "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
   "publication_status": "LOCAL_ONLY",
-  "earlier_decisions_unchanged": 642
+  "earlier_decisions_unchanged": 642,
+  "electrical_domain_complete": true,
+  "electrical_records_verified": 300,
+  "all_392_published_decisions_unchanged": true,
+  "all_token_and_rights_fields_unchanged": true,
+  "completion_receipt": "reports/phase3-electrical-domain-completion.json",
+  "final_code_format_check": "PASS",
+  "final_code_undefined_name_lint": "PASS"
 }

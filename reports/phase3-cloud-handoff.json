@@ -80,7 +80,8 @@
     "reviewed_specialist_holds": 2,
     "complete_source_domains": [
       "circuits",
-      "thermal_process_engineering"
+      "thermal_process_engineering",
+      "electrical_components"
     ],
     "release_approved": 0
   },
@@ -112,8 +113,8 @@
     },
     {
       "path": "reports/phase3-technical-review.json",
-      "bytes": 153804,
-      "sha256": "8a6323f7ddd70ebaaf394bd8fb1279aee1ba5d413221b126d21b40037018552d"
+      "bytes": 153873,
+      "sha256": "f0368c15d23e253b9a6c1cb42d3b5afac8184507bc4debf753782b4b98d333c6"
     },
     {
       "path": "src/forge_tools/engineering.py",
@@ -217,8 +218,10 @@
   },
   "next_domain": "electrical_components",
   "next_batch": {
+    "domain": "electrical_components",
     "offset": 300,
-    "limit": 25
+    "limit": 25,
+    "status": "DOMAIN_COMPLETE; await next-domain selection"
   },
   "workers": [],
   "automatic_checks": "DELETED_DO_NOT_RECREATE",
@@ -230,6 +233,7 @@
     "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
     "local_predecessor_commit": "75dc6bb48102a32e712825a5d9dbeda2f703f4b5",
     "publication_status": "LOCAL_ONLY; do not claim these counts are on GitHub",
-    "latest_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json"
+    "latest_batch": "reports/phase3-review-batches/electrical-components-0275-0300.json",
+    "domain_complete": true
   }
 }

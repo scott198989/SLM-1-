@@ -756,6 +756,8 @@
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
-    "thermal_process_engineering"
-  ]
+    "thermal_process_engineering",
+    "electrical_components"
+  ],
+  "electrical_domain_complete": true
 }

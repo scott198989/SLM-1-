@@ -21,7 +21,7 @@ Source/oracle/mask/family/rights/seal hashes and release receipts: [pilot releas
 
 ## Proposed legacy curriculum: exact current dispositions
 
-All 2,112 records received structural/context/privacy and actual Qwen-format screening. **667** received substantive agent review; the complete 211-record circuits and 104-record thermal/process batches are included. Of the remaining 1444 NEEDS_HUMAN_REVIEW records, **1442 have not yet received substantive technical verification** and two were read but require specialist confirmation. This queue label is not a claim that a human must perform every simple check. The requested curriculum-wide technical review remains outstanding; structural/tool agreement never supplied correctness approval. No answers were silently changed.
+All 2,112 records received structural/context/privacy and actual Qwen-format screening. **667** received substantive agent review; the complete selected 211-record circuits, 104-record thermal/process and 300-record electrical-components batches are included. Of the remaining 1444 NEEDS_HUMAN_REVIEW records, **1442 have not yet received substantive technical verification** and two were read but require specialist confirmation. This queue label is not a claim that a human must perform every simple check. The requested curriculum-wide technical review remains outstanding; structural/tool agreement never supplied correctness approval. No answers were silently changed.
 
 Domain labels here are originating-file classifications, not certified semantic capabilities. These counts are not a random sample, corpus accuracy estimate or approved training count.
 
@@ -108,7 +108,7 @@ The circuit review is complete as dispositions:139 PASS /12 REJECT /60 QUARANTIN
 The cloud checkout verified all eight published input hashes and all 2,112 original-message hashes. Eighteen new electrical-components decisions were independently agent-reviewed: 11 PASS and 7 QUARANTINE, with unchanged source answers and preserved token counts. The next original-domain offset is 25. The suite passes 69 software tests with pinned CPU dependencies and tokenizer assets. The private-release verifier now uses existing external manifest/index pins, fails closed on drift or missing artifacts, and cannot overwrite approval receipts or reconstruct releases. Its regression tests use synthetic fixtures; no private pilot/gold/RAG requalification occurred. [Validation receipt](phase3-cloud-continuation-validation.json).
 
 
-## Latest second electrical batch
+## Second electrical batch (historical local checkpoint)
 
 Original ordinals25–49 added20 technical PASS,3 REJECT and2 QUARANTINE after independent agent QA, with no source-answer or token changes. Current substantive reviews417; remaining substantively unreviewed1692; next electrical offset50. The prior392 decisions, three structural-only quarantines, two specialist holds and all release gates remain unchanged. [Batch receipt](phase3-review-batches/electrical-components-0025-0050.json).
 
@@ -161,3 +161,8 @@ This unpublished local batch added {'PASS': 18, 'QUARANTINE': 6, 'REJECT': 1} af
 ## Local electrical checkpoint 275–299
 
 This unpublished local batch added {'PASS': 18, 'QUARANTINE': 5, 'REJECT': 2} after independent agent QA. Current local substantive reviews: 667; remaining unreviewed: 1442; next offset: 300. Remote GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. Original answers, prior 642 decisions and all release gates are unchanged. [Batch receipt](phase3-review-batches/electrical-components-0275-0300.json).
+
+
+## Local electrical-domain completion
+
+All 300 selected electrical records have substantive dispositions. Total local substantive reviews: 667. The public branch remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. The next electrical offset is 300 (domain complete), and another domain awaits selection. See [completion receipt](phase3-electrical-domain-completion.json). This does not expand any release, rights, family or training approval.

@@ -1,9 +1,9 @@
 # SLM-1-
 # FORGE — Training Data & Knowledge Repository
 
-Cloud continuation: read [HANDOFF_README.md](HANDOFF_README.md) first; use branch `codex/forge-data-consolidation` / draft PR3. Both circuits and thermal source-domain reviews are complete as dispositions; no legacy SFT released.
+Cloud continuation: read [HANDOFF_README.md](HANDOFF_README.md) first; use branch `codex/forge-data-consolidation` / draft PR3. The selected circuits, thermal and electrical source-domain reviews are complete as dispositions in the local checkpoint; no legacy SFT released.
 
-Cloud continuation, October 2: the local reviewed checkpoint has 667 substantive decisions and electrical ordinals 0–299 reviewed. The published GitHub branch remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews; later local batches await publication. Next local electrical offset is 300.
+Cloud continuation, October 2: the local reviewed checkpoint has 667 substantive decisions and electrical ordinals 0–299 reviewed. The published GitHub branch remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews; later local batches await publication. Electrical review is complete at offset 300; the next domain awaits selection.
 
 ## Phase 3 pilot — current gate
 

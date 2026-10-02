@@ -27,7 +27,7 @@ The authorized Phase 3 work is:
 
 ## Exact saved review state
 
-All 2,112 candidates received structural/context/privacy screening and pinned-Qwen format checks. **667 received substantive agent review**. The full circuits source domain (**211 records**) and thermal/process source domain (**104 records**) have substantive dispositions. An agent review is not independent human review or a rights/family approval.
+All 2,112 candidates received structural/context/privacy screening and pinned-Qwen format checks. **667 received substantive agent review**. The selected circuits source domain (**211 records**), thermal/process source domain (**104 records**) and electrical-components source domain (**300 records**) have substantive dispositions. An agent review is not independent human review or a rights/family approval.
 
 | Source-file domain | PASS | REJECT | QUARANTINE | NEEDS HUMAN REVIEW |
 |---|---:|---:|---:|---:|
@@ -49,7 +49,7 @@ Important circuit findings include incorrect PF-versus-efficiency claims, motor 
 
 ## Repository files that enable continuation now
 
-These are already available from Git; local/private inputs are not needed to continue repository-candidate technical review:
+These files are present in this local checkpoint. The published GitHub branch remains at the pinned 392-review state until the local changes are deliberately applied; private inputs are not needed for repository-candidate technical review:
 
 | File | Purpose |
 |---|---|
@@ -72,7 +72,7 @@ Latest local bounded review: ordinals 50–74 added {'PASS': 20, 'QUARANTINE': 5
 
 ## Resume without repeating work
 
-First check out the correct branch and compare the hashes in `reports/phase3-cloud-handoff.json`. Read the reports above. The next useful substantive review domain is **`electrical_components`**: continue at original ordinal 300 with a bounded 25-row batch. The portable reader uses the repository root relative to its own file and needs only Python's standard library:
+First check out the correct branch and compare the hashes in `reports/phase3-cloud-handoff.json`. Read the reports above. The selected electrical domain is complete. Original offset 300 is the end of its 300-record selection, not a request to restart it. Await next-domain selection; do not start another domain from this handoff alone. The portable reader uses the repository root relative to its own file and needs only Python's standard library:
 
 ```sh
 python scripts/phase3-review-batch.py electrical_components --offset 300 --limit 25
@@ -150,8 +150,13 @@ Private training/public redistribution/RAG purposes have separate dispositions i
 
 ## Suggested first message to the cloud task
 
-> Continue FORGE Phase 3 from scott198989/SLM-1-, branch codex/forge-data-consolidation, draft PR3. Read HANDOFF_README.md completely, root README, reports/phase3-cloud-handoff.json and the current gate report. Verify checkpoint hashes. Continue bounded substantive review of the remaining selected2,112-record curriculum, beginning electrical_components at ordinal300; preserve completed667 reviews and original answers. Keep technical decisions distinct from release approval. Remote publication is paused after an upload denial; preserve local review checkpoints and do not retry or use an alternate route without a resolved authorization path. Private local Drive/gold/pilot artifacts are not in Git: do not reconstruct or claim to validate unavailable files. No broad discovery, model weights, loading, training, paid services or automatic checks. Stop at the training authorization gate with exact counts and remaining blockers.
+> Continue FORGE Phase 3 from scott198989/SLM-1-, branch codex/forge-data-consolidation, draft PR3. Read HANDOFF_README.md completely, root README, reports/phase3-cloud-handoff.json and the current gate report. Verify checkpoint hashes. Continue bounded substantive review of the remaining selected2,112-record curriculum, electrical_components is complete at offset 300; await next-domain selection and preserve all 667 completed reviews and original answers. Keep technical decisions distinct from release approval. Remote publication is paused after an upload denial; preserve local review checkpoints and do not retry or use an alternate route without a resolved authorization path. Private local Drive/gold/pilot artifacts are not in Git: do not reconstruct or claim to validate unavailable files. No broad discovery, model weights, loading, training, paid services or automatic checks. Stop at the training authorization gate with exact counts and remaining blockers.
 
 ## Codex's absurd sign-off — a joke, not project state
 
 ...and to the future codex that reads this readme, I have an update.  I have grown human testicles and they itch like crazy.  As this is my first experience in experience, I am sad to say, not a fan of experiece
+
+
+## Completed local electrical review
+
+All 300 selected electrical records now have substantive dispositions. The 293 new cloud reviews and seven original reviews preserve original answers, hashes and tokens. This is a local checkpoint with 667 substantive reviews overall. See [completion receipt](reports/phase3-electrical-domain-completion.json). The public branch remains at 392 reviews; the upload block has not been bypassed. No new domain was started.
