@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-02 - Local electromagnetism review 125–149
+
+- Added {'PASS': 21, 'QUARANTINE': 4} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1582 reviews unchanged.
+- Current local reviews: 1607; dispositions: {'PASS': 1276, 'REJECT': 63, 'QUARANTINE': 269, 'NEEDS_HUMAN_REVIEW': 504}; next electromagnetism offset: 150.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
 ## 2026-10-02 - Local electromagnetism review 100–124
 
 - Added {'QUARANTINE': 2, 'PASS': 21, 'REJECT': 2} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1557 reviews unchanged.

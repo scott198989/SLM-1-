@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1255,
+    "PASS": 1276,
     "REJECT": 63,
-    "QUARANTINE": 265,
-    "NEEDS_HUMAN_REVIEW": 529
+    "QUARANTINE": 269,
+    "NEEDS_HUMAN_REVIEW": 504
   },
   "by_domain": {
     "circuits": {
@@ -50,10 +50,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "electromagnetism": {
-      "PASS": 96,
+      "PASS": 117,
       "REJECT": 6,
-      "QUARANTINE": 23,
-      "NEEDS_HUMAN_REVIEW": 41
+      "QUARANTINE": 27,
+      "NEEDS_HUMAN_REVIEW": 16
     },
     "materials_manufacturing": {
       "PASS": 3,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1582,
+  "agent_substantive_reviews": 1607,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "5c3e6d44b6e2571af4836fb3296df87be9cb440136fda7b8f56c5a2bf9e93b01",
+  "technical_review_sha256": "04d6c817bc9d8fa6b63d423b66137b3d06e37e2a46956a6e5ee649a64879da08",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 527,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 502,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1663,11 +1663,36 @@
     "Correct Faraday-induction and electric-work distinction for a time-varying magnetic field.": 1,
     "Correct far-axis electric-dipole field and cancellation explanation with an explicit r much greater than separation assumption.": 1,
     "Correct ordinary electrostatic Coulomb-force conservativeness argument.": 1,
-    "Correct qualified explanation of bending-induced antenna reactance and resonance shifts.": 1
+    "Correct qualified explanation of bending-induced antenna reactance and resonance shifts.": 1,
+    "Correct far-zone dipole radiation construction from a retarded potential with 1/r radiative fields.": 1,
+    "Correct helical-motion description for a charged particle in a uniform static magnetic field with no other forces.": 1,
+    "Correct standard broadside-versus-end-fire orientation and phasing distinction.": 1,
+    "Correct introductory Stern-Gerlach account for ground-state silver atoms and two spin projections.": 1,
+    "Correct collisionless inertial-current derivation of the first London equation and distinction from dissipative DC Ohm law.": 1,
+    "Correct qualitative origin of the ordinary AC skin effect in a homogeneous Ohmic conductor.": 1,
+    "Correct wavelength-scaled aperture/beamwidth explanation with illumination dependence explicitly included.": 1,
+    "Correct conceptual description of the free-space Coulomb Green kernel and source-superposition solution of Poisson equation; normalization is convention dependent.": 1,
+    "Correct exterior field derivation from spherical symmetry and total enclosed charge.": 1,
+    "The need to account for dispersive storage, loss and material energy is correct, but calling the Poynting flux itself inaccurate because material energy is stored conflates the flux law with the energy-density partition. A consistently formulated Poynting balance remains valid.": 1,
+    "Correct complementary roles of epsilon0 and mu0 in vacuum Maxwell laws and wave speed.": 1,
+    "Correct nonrelativistic circular-orbit radius from magnetic and centripetal force balance.": 1,
+    "Correct definition of a material-free particle-beam current density.": 1,
+    "Correct image-theory explanation of an ideal vertical monopole over an infinite conducting ground plane, with real-ground limitations stated.": 1,
+    "Correct description of available photon linear momentum, circular-polarization spin and structured-field orbital angular momentum.": 1,
+    "Correct practical far-field characterization and qualified Fraunhofer estimate.": 1,
+    "Correct one-sentence ideal perfectly matched absorbing-layer purpose.": 1,
+    "Correct tangential-electric-field continuity derivation for ordinary steady fields and nonsingular interfaces.": 1,
+    "Electrostatic shielding by induced charge is correct, but Gauss law alone does not guarantee zero field in a charge-free cavity. Equipotential conductor boundaries and electrostatic uniqueness are needed for that conclusion.": 1,
+    "Correct symmetry-based Gauss-law solution procedure for fields where the symmetry permits extraction from the flux integral.": 1,
+    "Reflection and shielding by induced conduction currents are valid, but finite-conductivity metal in a radio wave does not exactly cancel every internal electric field. Nonzero fields penetrate over a skin depth and drive lossy currents.": 1,
+    "Correct regular self-adjoint Sturm-Liouville discrete spectrum, weighted orthogonality and L2 completeness statement with suitable-boundary qualification.": 1,
+    "Correct method for finding motional-emf direction and checking consistency with Lenz law.": 1,
+    "Sound contrasting antenna-use-case reasoning with frequency, propagation, coverage and mechanical constraints.": 1,
+    "Numerical eddy-current modeling is sensible for complex shells, but thin-shell or surface-impedance approximations are not essential: a resolved volume formulation is an alternative.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "2632c27d5792b9fa8c6468afb9e295c7ac056847788a67cb250130ad5495b5c9",
-  "substantively_unreviewed": 527,
+  "published_decisions_sha256": "da5c94ef1162332813f9c30aa6989a569523f74319e8c7898ab4a5a0069b9625",
+  "substantively_unreviewed": 502,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
