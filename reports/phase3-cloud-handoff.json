@@ -8,10 +8,10 @@
   "review": {
     "curriculum": 2112,
     "dispositions": {
-      "PASS": 1477,
-      "REJECT": 67,
-      "QUARANTINE": 297,
-      "NEEDS_HUMAN_REVIEW": 271
+      "PASS": 1498,
+      "REJECT": 68,
+      "QUARANTINE": 300,
+      "NEEDS_HUMAN_REVIEW": 246
     },
     "by_domain": {
       "circuits": {
@@ -69,14 +69,14 @@
         "NEEDS_HUMAN_REVIEW": 244
       },
       "physics": {
-        "PASS": 191,
-        "REJECT": 6,
-        "QUARANTINE": 28,
-        "NEEDS_HUMAN_REVIEW": 25
+        "PASS": 212,
+        "REJECT": 7,
+        "QUARANTINE": 31,
+        "NEEDS_HUMAN_REVIEW": 0
       }
     },
-    "agent_substantive_reviews": 1840,
-    "substantively_unreviewed": 269,
+    "agent_substantive_reviews": 1865,
+    "substantively_unreviewed": 244,
     "reviewed_specialist_holds": 2,
     "complete_source_domains": [
       "circuits",
@@ -103,13 +103,13 @@
     },
     {
       "path": "data/review/phase3/technical-review.jsonl.gz",
-      "bytes": 547216,
-      "sha256": "5a09e7dc44f1f2ba3637f8ba34fbf425f05b466cea1354bbad5287b6e83bd4c3"
+      "bytes": 554399,
+      "sha256": "a7543e7b6e71de953b6e5d1fe7308658be542966c9f341d401fa7583dfb732f7"
     },
     {
       "path": "manifests/phase3-agent-technical-review.json",
-      "bytes": 3055384,
-      "sha256": "ea6d20a2050c9e1b760d37aad77fea919762d338d96aaa8cc5c4d26edfa64c43"
+      "bytes": 3104684,
+      "sha256": "a4731e2612adbe2ed3ec5d396c20a2a2fbf97fdb46c1483f5ade987faa43eb96"
     },
     {
       "path": "manifests/phase3-release-families.json",
@@ -118,8 +118,8 @@
     },
     {
       "path": "reports/phase3-technical-review.json",
-      "bytes": 310605,
-      "sha256": "ef2f77b8f48b55a59892f71a01043e358993c36d75a266529ecd1c3912ca1d96"
+      "bytes": 313815,
+      "sha256": "56eae1c88f0a1e222a8145bb08c13608c69e89e46c649a169a3006daf7193ca7"
     },
     {
       "path": "src/forge_tools/engineering.py",
@@ -224,7 +224,7 @@
   "next_domain": "physics",
   "next_batch": {
     "domain": "physics",
-    "offset": 225,
+    "offset": 250,
     "limit": 25
   },
   "workers": [],
@@ -235,9 +235,9 @@
   "latest_cloud_continuation": "reports/phase3-cloud-continuation-validation.json",
   "local_continuation": {
     "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
-    "local_predecessor_commit": "e2f69ab3d117456c12d594925edc20f4e913e09a",
+    "local_predecessor_commit": "f898612ad7a7d6b69a531d3ec5796cbfd23cec13",
     "publication_status": "LOCAL_ONLY; do not claim these counts are on GitHub",
-    "latest_batch": "reports/phase3-review-batches/physics-0200-0225.json",
+    "latest_batch": "reports/phase3-review-batches/physics-0225-0250.json",
     "electrical_domain_complete": true,
     "trigonometry_pending_review_queue_complete": true,
     "trigonometry_preserved_structural_ordinals": [

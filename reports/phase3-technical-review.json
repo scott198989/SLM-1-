@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1477,
-    "REJECT": 67,
-    "QUARANTINE": 297,
-    "NEEDS_HUMAN_REVIEW": 271
+    "PASS": 1498,
+    "REJECT": 68,
+    "QUARANTINE": 300,
+    "NEEDS_HUMAN_REVIEW": 246
   },
   "by_domain": {
     "circuits": {
@@ -62,10 +62,10 @@
       "NEEDS_HUMAN_REVIEW": 244
     },
     "physics": {
-      "PASS": 191,
-      "REJECT": 6,
-      "QUARANTINE": 28,
-      "NEEDS_HUMAN_REVIEW": 25
+      "PASS": 212,
+      "REJECT": 7,
+      "QUARANTINE": 31,
+      "NEEDS_HUMAN_REVIEW": 0
     }
   },
   "risk_flags_overlap": {
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1840,
+  "agent_substantive_reviews": 1865,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "7bf82e4443a38d5bd402cd75823f2c63fdb268af840280db833cf85a9137998f",
+  "technical_review_sha256": "84ae0a48f4efbd536250792c6180af74eaefe2d55fb4f64fc0e83e97bd2b4477",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 269,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 244,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1921,11 +1921,36 @@
     "Correct concise local-versus-global stability scope distinction.": 1,
     "The need to distinguish velocities is correct, but the categorical claim that group velocity cannot exceed c is false. Causal anomalously dispersive media can have superluminal or negative group velocities without superluminal information fronts.": 1,
     "Correct concise material constitutive-relation definition with representative examples.": 1,
-    "Correct plain-language period-doubling sequence.": 1
+    "Correct plain-language period-doubling sequence.": 1,
+    "Correct stress contribution to chemical-potential-driven diffusion.": 1,
+    "Sound error-source decomposition and warning that calibration can conceal model deficiencies.": 1,
+    "The singular-corner warning is valid, but a huge stress peak alone does not justify the categorical No. The actual corner geometry, boundary/loading conditions and convergence behavior must establish whether this is a singular point value or a finite concentration.": 1,
+    "Correct series thermal resistance per area with the necessary steady1D/no-generation/constant-property conditions explicitly stated.": 1,
+    "The skin-depth formula and surface-concentration idea are sound, but ordinary stranded wire does not automatically mitigate skin/proximity losses. The relevant special construction is appropriately sized, individually insulated and arranged Litz strands.": 1,
+    "Correct cautious treatment of heated-gas incompressibility and the Boussinesq compromise.": 1,
+    "Correct concise statement that momentum balance needs a constitutive stress closure to become Navier-Stokes.": 1,
+    "Correct electromagnetic energy-flux interpretation and Poynting balance.": 1,
+    "The final distinction between flux conservation and the Meissner effect is useful, but the zero-resistance infinite-response claim and wording tying frozen flux to superconducting onset conflate ideal perfect conduction with superconducting expulsion.": 1,
+    "Correct nonrelativistic cyclotron frequency derivation and independence from speed/radius.": 1,
+    "Correct beginner self-induction and opposing-current-change explanation.": 1,
+    "Correct engineering explanation of passive thermodynamic consistency, admissible cross-coupling and dissipation constraints.": 1,
+    "Correct ideal uniform infinite-plane field derivation from explicitly invoked two-sided planar symmetry.": 1,
+    "Correct original magnetostatic Ampere law and symmetry-based use.": 1,
+    "Correct single-loop rotating-coil generator example and electromechanical energy conversion.": 1,
+    "Correct ordinary high-permeability iron-core magnetization and low-reluctance flux-path explanation.": 1,
+    "Correct permanent-dipole energy and stable alignment result with the work interpreted as quasistatic work against the field.": 1,
+    "Correct gauge freedom, common gauge choices and quantum observable invariance overview.": 1,
+    "The answer derives magnetic B, while the prompt explicitly asks for electric E. The B formulas are correct for the current distribution but do not answer the requested quantity.": 1,
+    "Correct vacuum/microscopic magnetic field-energy derivation from an ideal long solenoid.": 1,
+    "Reasonable conceptual plasma-etch multiphysics inventory and emphasis on uncertain closures.": 1,
+    "Correct filamentary circular-loop center field and direction.": 1,
+    "Correct intuitive explanation of strong two-way multiphysics feedback through temperature-dependent resistance and heating.": 1,
+    "Correct passive-sign sanity checks and distinction between equation solving and physical validity.": 1,
+    "Correct distinction between free thermal strain and stress from uniaxial restraint.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "5a09e7dc44f1f2ba3637f8ba34fbf425f05b466cea1354bbad5287b6e83bd4c3",
-  "substantively_unreviewed": 269,
+  "published_decisions_sha256": "a7543e7b6e71de953b6e5d1fe7308658be542966c9f341d401fa7583dfb732f7",
+  "substantively_unreviewed": 244,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
