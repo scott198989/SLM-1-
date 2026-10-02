@@ -13,6 +13,22 @@ def sha(data):
     return hashlib.sha256(data).hexdigest()
 
 
+def reject_sqlite_sidecars(index):
+    """A frozen main-file hash does not authenticate SQLite recovery sidecars."""
+    index = Path(index).resolve()
+    for suffix in ("-wal", "-shm", "-journal"):
+        sidecar = Path(str(index) + suffix)
+        if sidecar.exists() or sidecar.is_symlink():
+            raise ValueError("sqlite_sidecar_present")
+
+
+def open_frozen_index(index):
+    """Read the pinned main database only, with no recovery or sidecar writes."""
+    index = Path(index).resolve()
+    reject_sqlite_sidecars(index)
+    return sqlite3.connect(index.as_uri() + "?mode=ro&immutable=1", uri=True)
+
+
 def source_slice(root, source):
     root = Path(root).resolve()
     candidate = root / source["path"]
@@ -120,6 +136,7 @@ def search(index, manifest_path, query, *, expected_manifest_sha256, limit=3):
     if sha(encoded_manifest) != expected_manifest_sha256:
         raise ValueError("pilot_manifest_anchor_drift")
     manifest = json.loads(encoded_manifest.decode("utf-8"))
+    reject_sqlite_sidecars(index)
     if (
         manifest["status"] != "PRIVATE_PRODUCTION_PILOT"
         or sha(Path(index).read_bytes()) != manifest["index_sha256"]
@@ -129,7 +146,7 @@ def search(index, manifest_path, query, *, expected_manifest_sha256, limit=3):
     if not words:
         return []
     match = " OR ".join('"' + word + '"' for word in words)
-    db = sqlite3.connect(Path(index).resolve().as_uri() + "?mode=ro", uri=True)
+    db = open_frozen_index(index)
     try:
         rows = db.execute(
             "SELECT c.id,c.text,c.citation FROM search s JOIN chunks c ON c.id=s.id WHERE search MATCH ? ORDER BY bm25(search),c.id LIMIT ?",
@@ -156,4 +173,7 @@ def search(index, manifest_path, query, *, expected_manifest_sha256, limit=3):
                 "scope": "calculator_reference_not_general_academic_or_image_understanding",
             }
         )
+    reject_sqlite_sidecars(index)
+    if sha(Path(index).read_bytes()) != manifest["index_sha256"]:
+        raise ValueError("pilot_manifest_or_index_drift")
     return results
