@@ -14553,9 +14553,778 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/electrical-components-0225-0250.json",
       "original_domain_ordinal": 249
+    },
+    {
+      "id": "repo-516c23b28a8d45e58e61c150",
+      "messages_sha256": "516c23b28a8d45e58e61c150cfac5e234d6ccefb3854372836d965daf9158d16",
+      "state": "PASS",
+      "rationale": "Correct qualified comparison: many SSRs use an optically driven isolated input/output link plus a load-switching stage. In many avoids claiming every SSR technology contains an LED optocoupler or has the same input circuit.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "OMRON SSR operating overview",
+          "url": "https://www.ia.omron.com/support/guide/18/overview.html",
+          "finding": "Directly describes input LED/photocoupler isolation and a semiconductor load-switching output stage."
+        },
+        {
+          "title": "Analog Devices optocoupler bias and CTR",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/raqs/raq-issue-243.html",
+          "finding": "CTR varies with temperature, LED current and aging, so current-transfer margin must account for those changes."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 84,
+      "assistant_tokens": 59,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 250
+    },
+    {
+      "id": "repo-7ca92f4380baf2ec08658fb7",
+      "messages_sha256": "7ca92f4380baf2ec08658fb7ea0532c7733cc4fcb13c3c3680bc5d636ab51e2b",
+      "state": "QUARANTINE",
+      "rationale": "Reverse-recovery currents can cause substantial switching loss and EMI, but the answer accepts the prompt's universal ranking over forward drop without the circuit voltage/current/duty or recovery charge. Frequency alone does not establish which loss dominates, and recovery time is not a complete recovery-energy metric. Hold the dominance claim while retaining the valid mechanism.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TI diode fundamentals",
+          "url": "https://www.ti.com/video/6243263913001",
+          "finding": "Forward conduction and reverse recovery both contribute to power-converter device selection; recovery behavior depends on diode technology and switching conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Conduction loss scales roughly with Vf*Iavg, while recovery loss scales with frequency times event energy, often related to reverse voltage and Qrr. Their ratio cannot be inferred from switching frequency alone."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 139,
+      "assistant_tokens": 106,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 251
+    },
+    {
+      "id": "repo-073e985fb2e22c2f2279535f",
+      "messages_sha256": "073e985fb2e22c2f2279535f5faea125bf43235e720fa088f51695a48c09ad89",
+      "state": "PASS",
+      "rationale": "Correct broad signal-conditioning purpose, using often rather than assuming every sensor needs external gain. Amplification, filtering, linearization and format conversion are distinct ways to make raw signals usable.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "A raw bridge millivolt output and an already-digital sensor require different downstream interfaces; the answer's qualified list accommodates both."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 63,
+      "assistant_tokens": 46,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 252
+    },
+    {
+      "id": "repo-89536899585e99efd78a53f7",
+      "messages_sha256": "89536899585e99efd78a53f77d8591e422805a5a752d7f1d807cfd4a84228ce1",
+      "state": "QUARANTINE",
+      "rationale": "Material compatibility and fluid-dependent response must be checked, but not safely in most cases and always recalibrate are unsupported for an unspecified sensor/measurand. Some pressure or temperature devices may be rated for both fluids, while level/flow mechanisms can be strongly fluid-dependent. Hold the blanket recommendation rather than infer an unknown design.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "The prompt identifies neither sensed quantity nor wetted materials/operating range, so chemical suitability and whether a fluid change alters the measurement law cannot be determined."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 74,
+      "assistant_tokens": 54,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 253
+    },
+    {
+      "id": "repo-69f6273565ed1c4001ff2baf",
+      "messages_sha256": "69f6273565ed1c4001ff2bafff4c463b11e1cda53c5cfbec36b709aad2abc545",
+      "state": "PASS",
+      "rationale": "Faithful paraphrase of the user-supplied insufficient-GPIO-current premise, separating control from the transistor-supported optocoupler LED current path. It does not invent resistor values or say the transistor generates energy without a supply.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices optocoupler bias and CTR",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/raqs/raq-issue-243.html",
+          "finding": "CTR varies with temperature, LED current and aging, so current-transfer margin must account for those changes."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The transistor is an interface/control element allowing a suitable supply to deliver the required LED current while reducing GPIO drive demand."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 78,
+      "assistant_tokens": 47,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 254
+    },
+    {
+      "id": "repo-2b38a24596ba795685c015b0",
+      "messages_sha256": "2b38a24596ba795685c015b0209cd5bc16c1998a5c3ccb6684d2550084baa4bf",
+      "state": "QUARANTINE",
+      "rationale": "The contamination/humidity tracking hazard is correct, but calling it a slow degrading failure unconditionally is misleading. Inadequate creepage can permit an immediate or rapidly developing flashover as well as progressive carbon tracking. Failure timescale depends on voltage, material and contamination, which are not supplied.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TI creepage, clearance and tracking",
+          "url": "https://www.ti.com/video/6146024211001",
+          "finding": "Surface tracking risk depends on material, contamination/humidity and applied voltage; creepage requirements address this hazard."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 69,
+      "assistant_tokens": 45,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 255
+    },
+    {
+      "id": "repo-e6a4ed09f626a718070a04aa",
+      "messages_sha256": "e6a4ed09f626a718070a04aafa32f31502a16b33630cb60d2e19189e9239978c",
+      "state": "PASS",
+      "rationale": "Reasonable conditional resonance/common-mode hypothesis from a cable-dependent narrowband failure, with several possible path/damping fixes. Suggests, may and likely avoid claiming a unique cause or computing a resonance from cable length alone.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices grounding guidance",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/grounding-again.html",
+          "finding": "Local bypassing and controlled low-impedance current paths help keep switching currents from contaminating ADC circuitry; topology and frequency matter."
+        },
+        {
+          "title": "Analog Devices practical capacitor behavior",
+          "url": "https://www.analog.com/en/resources/technical-articles/2022/07/16/11/45/passives-arent-really-so-passive-part-1-capacitors.html",
+          "finding": "Parasitic inductance, geometry and resonance determine capacitive connections' frequency response; ground-coupled noise currents are not erased."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A cable/return structure has distributed inductance/capacitance and boundary conditions; resonant enhancement can be frequency-selective. The actual resonant frequency requires propagation and termination information."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 172,
+      "assistant_tokens": 136,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 256
+    },
+    {
+      "id": "repo-2d13bb2fbb3e634d391d387a",
+      "messages_sha256": "2d13bb2fbb3e634d391d387a9889d92bb64fbcafb57dffb4ccaef0398888a4db",
+      "state": "PASS",
+      "rationale": "Correct description of many mains-fed chargers: rectify AC, then regulate using a chemistry-appropriate charging profile. It does not imply a rectifier alone safely charges a battery or prescribe battery-specific limits without a specification.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "Rectification sets polarity but does not alone enforce charge current, termination or voltage limits; the answer explicitly assigns that role to a control stage."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 77,
+      "assistant_tokens": 59,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 257
+    },
+    {
+      "id": "repo-089c832aeb880cc0dea4909d",
+      "messages_sha256": "089c832aeb880cc0dea4909d8102fa29a98c0c88212fd23bec22b3e5ba2fb2d0",
+      "state": "PASS",
+      "rationale": "Plausible conditional chain given the prompt's coating defect, condensation and sulfur contamination: exposed surfaces, conductive films/corrosion, resistance/leakage and adhesion damage can create intermittent or failed circuits. Can/may preserve mechanism uncertainty and do not diagnose a particular board.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Electrolube coatings for challenging environments",
+          "url": "https://electrolube.us/knowledge_base/a-new-generation-of-conformal-coatings-for-challenging-operating-environments-2/",
+          "finding": "Condensation, corrosion, coating coverage and electrical/environmental stress affect protection of circuitry."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 160,
+      "assistant_tokens": 127,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 258
+    },
+    {
+      "id": "repo-d892d2e6df1acd59cb070b08",
+      "messages_sha256": "d892d2e6df1acd59cb070b08b13a5571107914273e2003471998c906b14c2a92",
+      "state": "PASS",
+      "rationale": "Correct transient-coupling mechanism across a nonideal isolated interface, and appropriate conditional consequences for logic thresholds and controller behavior. It distinguishes galvanic separation from capacitance/CMTI and does not certify an unspecified interface.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "TI isolation technology comparison",
+          "url": "https://www.ti.com/document-viewer/lit/html/SSZT549/GUID-CA39ED82-D99B-4D48-9C4F-54279373DCFE",
+          "finding": "Optocoupler delay/CTR/aging and CMTI are device-dependent; integrated isolator solutions can also be cost-effective rather than universally more expensive."
+        },
+        {
+          "title": "Analog Devices grounding guidance",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/grounding-again.html",
+          "finding": "Local bypassing and controlled low-impedance current paths help keep switching currents from contaminating ADC circuitry; topology and frequency matter."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Barrier/parasitic current is C*dV/dt; that current through receiver-side impedance can create a voltage disturbance large enough to cross a logic threshold."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 160,
+      "assistant_tokens": 132,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 259
+    },
+    {
+      "id": "repo-3781309ccf794208edcdf616",
+      "messages_sha256": "3781309ccf794208edcdf61687203c26bd8576b20bb6488034cf87daeb9f291b",
+      "state": "QUARANTINE",
+      "rationale": "Most listed sensor qualities are reasonable, but linearity is glossed as predictable response rather than closeness to a specified straight-line relationship. A nonlinear response can be highly predictable, so this is not an adequate definition of that distinct property. Hold the conflation rather than rewrite it.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices TMP36 linear sensor",
+          "url": "https://www.analog.com/en/products/tmp36.html?ADICID=synd_ww_portfolio_pi_findchips_na_2024",
+          "finding": "TMP36 has a linear 10 mV/degree-C transfer with 750 mV at 25 degrees C, hence a nonzero offset; linearity does not require the raw output to double with temperature."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The exact known law y=x² is predictable but is not a straight-line sensor response over a nonzero interval."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 83,
+      "assistant_tokens": 67,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 260
+    },
+    {
+      "id": "repo-bd1b0ef18ec83b5363df291f",
+      "messages_sha256": "bd1b0ef18ec83b5363df291f936fc77ed0d42a2159207437229c63b708c8968b",
+      "state": "PASS",
+      "rationale": "Correct conventional magnetic motor-starter distinction: a contactor switches power, while a starter adds motor overload protection and may include disconnect/fault protection. It is not a claim that every soft-starter or manual-starter product has the same physical implementation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Eaton electrical starters",
+          "url": "https://www.eaton.com/us/en-us/products/controls-drives-automation-sensors/contactors-and-starters/understanding-electrical-starters-.html",
+          "finding": "Motor contactors support repeated remote switching and inrush duty, with overload protection handled separately."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 62,
+      "assistant_tokens": 42,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 261
+    },
+    {
+      "id": "repo-e24af6cb570d03db7ebe8964",
+      "messages_sha256": "e24af6cb570d03db7ebe8964c7f3c40f9b428fe38eab6bc71c13d3656a0088fc",
+      "state": "PASS",
+      "rationale": "Correct stress-strength reliability concept, including variability and aging rather than treating load/capability as fixed independent numbers. It does not assume independence or compute a probability from unspecified distributions.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "Failure probability is P(Sstress>Sstrength), evaluated from their joint distribution. Aging can change that distribution and increase overlap."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 120,
+      "assistant_tokens": 98,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 262
+    },
+    {
+      "id": "repo-527aaa4dbcbc796823c16389",
+      "messages_sha256": "527aaa4dbcbc796823c16389f06235b437b8552179529a1e38453b8f438fea6c",
+      "state": "PASS",
+      "rationale": "Correct conditional LED-aging/CTR-margin chain for an optocoupler, distinguishing ample from marginal drive. It does not give a universal aging rate or claim every aged optocoupler necessarily loses logic integrity.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices optocoupler bias and CTR",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/raqs/raq-issue-243.html",
+          "finding": "CTR varies with temperature, LED current and aging, so current-transfer margin must account for those changes."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At a fixed LED current, reduced current-transfer ratio reduces available output collector current, which can consume a receiver threshold/pull-up margin."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 86,
+      "assistant_tokens": 63,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 263
+    },
+    {
+      "id": "repo-f6506240ae57974c3aba7ada",
+      "messages_sha256": "f6506240ae57974c3aba7ada8d1e17bf99897aa39d5f742045317c5eabf5bcfd",
+      "state": "PASS",
+      "rationale": "Appropriately conditional logic tracing, explicitly distinguishing gate voltage from gate-to-source voltage and N-channel low-side from P-channel high-side behavior. It does not choose an on/off result solely from the word pull-up.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Infineon IRLML6402 datasheet",
+          "url": "https://www.infineon.com/dgdl/irlml6402pbf.pdf?fileId=5546d462533600a401535668d5c2263c",
+          "finding": "Separate threshold, on-resistance and transconductance entries have different gate/drain/current test conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a grounded-source N-channel device, positive Vgs tends toward on; for a P-channel high-side device, a gate near its source tends toward off. Actual drive magnitude and topology remain required."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 186,
+      "assistant_tokens": 144,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 264
+    },
+    {
+      "id": "repo-313caaae82f4c0497f5ab158",
+      "messages_sha256": "313caaae82f4c0497f5ab1584decff30b5b07c00861846334ea25549ee7fedb0",
+      "state": "REJECT",
+      "rationale": "The layered-interlock rationale is useful, but a broken wire in a conventional normally closed electrical-interlock coil path opens the circuit and inhibits energization rather than defeating the interlock. The claim that two interlocks guarantee any single-point failure cannot cause simultaneous closure is also stronger than an unspecified architecture supports.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Schneider reversing-starter interlock contacts",
+          "url": "https://www.se.com/us/en/faqs/FA114642/",
+          "finding": "Electrical interlocking uses normally closed auxiliary contacts in coil circuits; opening that path prevents the affected coil from energizing."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A series path containing an open wire has zero ideal coil current; this is a fail-to-energize condition, not a bypassed NC interlock. Fault coverage depends on actual wiring, welded main contacts, linkage and common causes."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 150,
+      "assistant_tokens": 123,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 265
+    },
+    {
+      "id": "repo-ed450468daa2c34366ffd0c6",
+      "messages_sha256": "ed450468daa2c34366ffd0c63c65dbac5765bdba6bf6a9f593fa6f79649f1326",
+      "state": "PASS",
+      "rationale": "Correct switcher-to-ADC coupling paths and reasonable mitigation choices. Synchronization is read as part of deliberate frequency planning to place tones away from the signal band, not as a guarantee that an arbitrary clock ratio removes spurs. Layout and filtering are also explicitly included.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices switcher coupling into RF ADCs",
+          "url": "https://www.analog.com/en/resources/technical-articles/powering-gsps-or-rf-sampling-adc-switcher-vs-ldo.html",
+          "finding": "Switcher magnetic fields and supply ripple can couple into analog/clock paths; layout and filtering/architecture affect observable spurs."
+        },
+        {
+          "title": "Analog Devices ADC spur analysis",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/analyzing-and-solving-fixed-frequency-spur-issues-in-high-precision-adc-signal-chains.html",
+          "finding": "Reference-input noise can feed through into ADC codes, motivating reference-noise control at the relevant operating point."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 105,
+      "assistant_tokens": 83,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 266
+    },
+    {
+      "id": "repo-918d7d017627497b3ab1be10",
+      "messages_sha256": "918d7d017627497b3ab1be10b78afaadec4bed1fe199fbd8226a01b5c6a95156",
+      "state": "QUARANTINE",
+      "rationale": "The mechanism-based and combined-stress viewpoint is useful, but the definition is restrictive or ambiguous about whether a single sufficiently severe condition can constitute a harsh environment. A high temperature, aggressive chemical or severe vibration can independently exceed a component capability. Hold that definitional ambiguity while preserving the useful interaction-based perspective.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "A component exposed to temperature beyond its qualified survival range has a harsh environment even if all other stressors are benign."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 144,
+      "assistant_tokens": 114,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 267
+    },
+    {
+      "id": "repo-ca32f6b68766012eb9b3c97d",
+      "messages_sha256": "ca32f6b68766012eb9b3c97d8429f2f48427efb7c84b28ed55ed329d87f23de4",
+      "state": "PASS",
+      "rationale": "Correct ideal limiting behavior and intermediate dependence on component values, with explicit acknowledgment that real parasitics alter the result. Unlike an unconditional real-component claim, it preserves the ideal-model scope at very high frequency.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Coilcraft application-frequency inductor testing",
+          "url": "https://www.coilcraft.com/en-us/resources/application-notes/testing-inductors-at-application-frequencies/",
+          "finding": "Winding resistance and copper/core losses affect Q; winding capacitance and inductance set self-resonance."
+        },
+        {
+          "title": "Analog Devices practical capacitor behavior",
+          "url": "https://www.analog.com/en/resources/technical-articles/2022/07/16/11/45/passives-arent-really-so-passive-part-1-capacitors.html",
+          "finding": "Parasitic inductance, geometry and resonance determine capacitive connections' frequency response; ground-coupled noise currents are not erased."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "As f approaches zero, 1/(2*pi*f*C) grows and 2*pi*f*L shrinks; the trends reverse as ideal frequency grows. Nonideal self-resonance is outside those ideal limits."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 195,
+      "assistant_tokens": 148,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 268
+    },
+    {
+      "id": "repo-927aa3ff40b24950ec3a3508",
+      "messages_sha256": "927aa3ff40b24950ec3a35089d2752dd7a911a51274ccda388a1b771f351e7b2",
+      "state": "QUARANTINE",
+      "rationale": "A Wheatstone bridge converts small resistance imbalance into measurable voltage and some configurations improve sensitivity. The amplification shorthand blurs that conversion, and temperature-drift cancellation depends on configuration and matched responses; a quarter-bridge type I need not compensate temperature. Hold these qualifications without attributing an arbitrary-gain claim to the answer.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "NI strain-gauge bridge configurations",
+          "url": "https://www.ni.com/en/shop/data-acquisition/sensor-fundamentals/measuring-strain-with-strain-gages.html",
+          "finding": "A Wheatstone bridge converts resistance imbalance into voltage; temperature cancellation depends on bridge configuration, matched gauges and exposure."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a small single-arm fractional resistance change, a quarter bridge output is approximately Vexc*(DeltaR/R)/4. Common temperature changes cancel only when the relevant resistance ratios track."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 66,
+      "assistant_tokens": 48,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 269
+    },
+    {
+      "id": "repo-119aea9bf7495882defd44fd",
+      "messages_sha256": "119aea9bf7495882defd44fde579176409e2a5adabcf5fddc7b73201fead955d",
+      "state": "PASS",
+      "rationale": "Correct basic AIC/interrupting-capacity meaning and warning about prospective fault current beyond the rating. It is not a continuous-current rating and does not approve a breaker without matching its voltage and application conditions.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Eaton protective device ratings",
+          "url": "https://www.eaton.com/us/en-us/products/electrical-circuit-protection/fuses/protective-device-ratings.html",
+          "finding": "Interrupting capability applies to prospective fault current under its voltage and test conditions; it is distinct from continuous-current rating."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 58,
+      "assistant_tokens": 39,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 270
+    },
+    {
+      "id": "repo-1c703e4be29abe13e548ae69",
+      "messages_sha256": "1c703e4be29abe13e548ae69b170fa18ca019147178d46cc7f5c3f8c798d05f8",
+      "state": "PASS",
+      "rationale": "Accurate system-level power-supply definition with a non-exhaustive may-include list of conversion, control, isolation and protection functions. It does not require every supply to perform all listed conversions or imply a label alone proves safe operation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "Conversion stage, feedback, energy storage and protection jointly determine delivered power under load/transient/fault conditions; the final regulator is only one possible subsystem."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 169,
+      "assistant_tokens": 140,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 271
+    },
+    {
+      "id": "repo-6182325fbf6caf8edc0a6bb5",
+      "messages_sha256": "6182325fbf6caf8edc0a6bb5d94f52dc2f0bc424b7b80e411cfdc63ad91400ab",
+      "state": "PASS",
+      "rationale": "Reasonable first-pass noisy-sensor hypotheses and checks, followed by ordinary filtering/averaging options. Could be avoids a definitive diagnosis, and the answer does not claim that smoothing repairs wiring faults or restores lost accuracy universally.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices grounding guidance",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/grounding-again.html",
+          "finding": "Local bypassing and controlled low-impedance current paths help keep switching currents from contaminating ADC circuitry; topology and frequency matter."
+        },
+        {
+          "title": "Analog Devices ADC input noise",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/adc-input-noise.html",
+          "finding": "Oversampling/noise statistics can improve effective resolution under suitable conditions; quantization and input noise are distinct."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 70,
+      "assistant_tokens": 50,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 272
+    },
+    {
+      "id": "repo-3f5c9b421fb46c8f1a2d06fb",
+      "messages_sha256": "3f5c9b421fb46c8f1a2d06fb10b4ca02200f10793e2db2b4d16e4124381056f8",
+      "state": "PASS",
+      "rationale": "Correct common optocoupler level-translation/isolation topology with input-current limiting and a receiver-side 3.3 V pull-up. Common approach avoids claiming it fits every sourcing/sinking PLC output, and resistor current is to be sized rather than guessed.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices optocoupler bias and CTR",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/raqs/raq-issue-243.html",
+          "finding": "CTR varies with temperature, LED current and aging, so current-transfer margin must account for those changes."
+        },
+        {
+          "title": "TI isolation technology comparison",
+          "url": "https://www.ti.com/document-viewer/lit/html/SSZT549/GUID-CA39ED82-D99B-4D48-9C4F-54279373DCFE",
+          "finding": "Optocoupler delay/CTR/aging and CMTI are device-dependent; integrated isolator solutions can also be cost-effective rather than universally more expensive."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 106,
+      "assistant_tokens": 70,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 273
+    },
+    {
+      "id": "repo-42e150951d0c70bb883390d8",
+      "messages_sha256": "42e150951d0c70bb883390d83b65951ba73fa6486dee5f5c60bd1bcca21ed696",
+      "state": "PASS",
+      "rationale": "Correct distinction between surviving environmental stress and certified ignition-risk control, with explicit installation-specific conditions and independent suitability checks. It does not label any actual uncertified device safe for an explosive atmosphere.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "IECEx equipment certification scope",
+          "url": "https://www.iecex.com/who-we-are/about-us/",
+          "finding": "IECEx addresses equipment for explosive atmospheres through applicable certification and conditions, distinct from generic mechanical/environmental ruggedness."
+        }
+      ],
+      "domain": "electrical_components",
+      "primary_source": "D_elect_components.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 140,
+      "assistant_tokens": 114,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/electrical-components-0250-0275.json",
+      "original_domain_ordinal": 274
     }
   ],
-  "reviewed": 617,
+  "reviewed": 642,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-02 - Local electrical review 250–274
+
+- Added {'PASS': 18, 'QUARANTINE': 6, 'REJECT': 1} after independent agent QA; original answers and prior 617 decisions remain unchanged.
+- Current local reviews: 642; dispositions: {'PASS': 461, 'REJECT': 39, 'QUARANTINE': 143, 'NEEDS_HUMAN_REVIEW': 1469}; next electrical offset: 275.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
 ## 2026-10-02 - Local electrical review 225–249
 
 - Added {'PASS': 21, 'QUARANTINE': 3, 'REJECT': 1} after independent agent QA; original answers and prior 592 decisions remain unchanged.

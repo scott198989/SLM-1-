@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 443,
-    "REJECT": 38,
-    "QUARANTINE": 137,
-    "NEEDS_HUMAN_REVIEW": 1494
+    "PASS": 461,
+    "REJECT": 39,
+    "QUARANTINE": 143,
+    "NEEDS_HUMAN_REVIEW": 1469
   },
   "by_domain": {
     "circuits": {
@@ -44,10 +44,10 @@
       "NEEDS_HUMAN_REVIEW": 208
     },
     "electrical_components": {
-      "PASS": 196,
-      "REJECT": 11,
-      "QUARANTINE": 43,
-      "NEEDS_HUMAN_REVIEW": 50
+      "PASS": 214,
+      "REJECT": 12,
+      "QUARANTINE": 49,
+      "NEEDS_HUMAN_REVIEW": 25
     },
     "electromagnetism": {
       "PASS": 2,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 617,
+  "agent_substantive_reviews": 642,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "0ee5231b8c4c55f1e27017b6d60bfe4aee1869c72ce351893254ff0d291a5c93",
+  "technical_review_sha256": "a5592b155936081de0ecf43a9bfea7e8d1c4e13e3ef254bf250b377d02b478d7",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1492,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1467,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -698,11 +698,36 @@
     "Sound explanation that extended/unstable lead time can create inventory, freight, cash-timing and disruption costs beyond unit price. Can preserves contingent outcomes rather than claiming every long lead automatically incurs all costs.": 1,
     "Correct basic load-cell definition with strain gauges as a common rather than exclusive implementation. It describes force/weight transduction without claiming the cell alone performs calibration, display or complete weighing-system compensation.": 1,
     "Correct qualitative Class-II DC-bias-loss explanation and comparative benefit of operating a capacitor at lower applied voltage. Closer does not assert near-nominal capacitance, a guaranteed retention percentage, or improvement merely from substituting a higher-rated part.": 1,
-    "Correct link between bipolar-transistor local electrothermal/current-concentration failure and an SOA boundary stricter than independent voltage/current limits. It does not transfer that exact BJT mechanism to every MOSFET technology or derive an actual allowable point without a datasheet.": 1
+    "Correct link between bipolar-transistor local electrothermal/current-concentration failure and an SOA boundary stricter than independent voltage/current limits. It does not transfer that exact BJT mechanism to every MOSFET technology or derive an actual allowable point without a datasheet.": 1,
+    "Correct broad signal-conditioning purpose, using often rather than assuming every sensor needs external gain. Amplification, filtering, linearization and format conversion are distinct ways to make raw signals usable.": 1,
+    "Plausible conditional chain given the prompt's coating defect, condensation and sulfur contamination: exposed surfaces, conductive films/corrosion, resistance/leakage and adhesion damage can create intermittent or failed circuits. Can/may preserve mechanism uncertainty and do not diagnose a particular board.": 1,
+    "Correct basic AIC/interrupting-capacity meaning and warning about prospective fault current beyond the rating. It is not a continuous-current rating and does not approve a breaker without matching its voltage and application conditions.": 1,
+    "Accurate system-level power-supply definition with a non-exhaustive may-include list of conversion, control, isolation and protection functions. It does not require every supply to perform all listed conversions or imply a label alone proves safe operation.": 1,
+    "The contamination/humidity tracking hazard is correct, but calling it a slow degrading failure unconditionally is misleading. Inadequate creepage can permit an immediate or rapidly developing flashover as well as progressive carbon tracking. Failure timescale depends on voltage, material and contamination, which are not supplied.": 1,
+    "Correct description of many mains-fed chargers: rectify AC, then regulate using a chemistry-appropriate charging profile. It does not imply a rectifier alone safely charges a battery or prescribe battery-specific limits without a specification.": 1,
+    "The layered-interlock rationale is useful, but a broken wire in a conventional normally closed electrical-interlock coil path opens the circuit and inhibits energization rather than defeating the interlock. The claim that two interlocks guarantee any single-point failure cannot cause simultaneous closure is also stronger than an unspecified architecture supports.": 1,
+    "Most listed sensor qualities are reasonable, but linearity is glossed as predictable response rather than closeness to a specified straight-line relationship. A nonlinear response can be highly predictable, so this is not an adequate definition of that distinct property. Hold the conflation rather than rewrite it.": 1,
+    "Correct common optocoupler level-translation/isolation topology with input-current limiting and a receiver-side 3.3 V pull-up. Common approach avoids claiming it fits every sourcing/sinking PLC output, and resistor current is to be sized rather than guessed.": 1,
+    "Correct distinction between surviving environmental stress and certified ignition-risk control, with explicit installation-specific conditions and independent suitability checks. It does not label any actual uncertified device safe for an explosive atmosphere.": 1,
+    "Correct qualified comparison: many SSRs use an optically driven isolated input/output link plus a load-switching stage. In many avoids claiming every SSR technology contains an LED optocoupler or has the same input circuit.": 1,
+    "Correct conditional LED-aging/CTR-margin chain for an optocoupler, distinguishing ample from marginal drive. It does not give a universal aging rate or claim every aged optocoupler necessarily loses logic integrity.": 1,
+    "Reasonable first-pass noisy-sensor hypotheses and checks, followed by ordinary filtering/averaging options. Could be avoids a definitive diagnosis, and the answer does not claim that smoothing repairs wiring faults or restores lost accuracy universally.": 1,
+    "Faithful paraphrase of the user-supplied insufficient-GPIO-current premise, separating control from the transistor-supported optocoupler LED current path. It does not invent resistor values or say the transistor generates energy without a supply.": 1,
+    "Reverse-recovery currents can cause substantial switching loss and EMI, but the answer accepts the prompt's universal ranking over forward drop without the circuit voltage/current/duty or recovery charge. Frequency alone does not establish which loss dominates, and recovery time is not a complete recovery-energy metric. Hold the dominance claim while retaining the valid mechanism.": 1,
+    "Material compatibility and fluid-dependent response must be checked, but not safely in most cases and always recalibrate are unsupported for an unspecified sensor/measurand. Some pressure or temperature devices may be rated for both fluids, while level/flow mechanisms can be strongly fluid-dependent. Hold the blanket recommendation rather than infer an unknown design.": 1,
+    "The mechanism-based and combined-stress viewpoint is useful, but the definition is restrictive or ambiguous about whether a single sufficiently severe condition can constitute a harsh environment. A high temperature, aggressive chemical or severe vibration can independently exceed a component capability. Hold that definitional ambiguity while preserving the useful interaction-based perspective.": 1,
+    "A Wheatstone bridge converts small resistance imbalance into measurable voltage and some configurations improve sensitivity. The amplification shorthand blurs that conversion, and temperature-drift cancellation depends on configuration and matched responses; a quarter-bridge type I need not compensate temperature. Hold these qualifications without attributing an arbitrary-gain claim to the answer.": 1,
+    "Correct conventional magnetic motor-starter distinction: a contactor switches power, while a starter adds motor overload protection and may include disconnect/fault protection. It is not a claim that every soft-starter or manual-starter product has the same physical implementation.": 1,
+    "Correct ideal limiting behavior and intermediate dependence on component values, with explicit acknowledgment that real parasitics alter the result. Unlike an unconditional real-component claim, it preserves the ideal-model scope at very high frequency.": 1,
+    "Correct transient-coupling mechanism across a nonideal isolated interface, and appropriate conditional consequences for logic thresholds and controller behavior. It distinguishes galvanic separation from capacitance/CMTI and does not certify an unspecified interface.": 1,
+    "Correct stress-strength reliability concept, including variability and aging rather than treating load/capability as fixed independent numbers. It does not assume independence or compute a probability from unspecified distributions.": 1,
+    "Reasonable conditional resonance/common-mode hypothesis from a cable-dependent narrowband failure, with several possible path/damping fixes. Suggests, may and likely avoid claiming a unique cause or computing a resonance from cable length alone.": 1,
+    "Correct switcher-to-ADC coupling paths and reasonable mitigation choices. Synchronization is read as part of deliberate frequency planning to place tones away from the signal band, not as a guarantee that an arbitrary clock ratio removes spurs. Layout and filtering are also explicitly included.": 1,
+    "Appropriately conditional logic tracing, explicitly distinguishing gate voltage from gate-to-source voltage and N-channel low-side from P-channel high-side behavior. It does not choose an on/off result solely from the word pull-up.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "26b78122e79cc19f9eb6b7ce11973ec7d89fcd6399a3bdb3f1324cc64f371a45",
-  "substantively_unreviewed": 1492,
+  "published_decisions_sha256": "3d608ac76c96c1dfbad09f23889e73c77d8235b0fbb8035089e000040532903f",
+  "substantively_unreviewed": 1467,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
