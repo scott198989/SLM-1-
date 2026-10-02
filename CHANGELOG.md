@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-02 - Local algebra review 100–124
+
+- Added {'PASS': 18, 'QUARANTINE': 6, 'REJECT': 1} after independent agent QA; 0 existing decisions skipped, all original answers and prior 756 reviews unchanged.
+- Current local reviews: 781; dispositions: {'PASS': 568, 'REJECT': 45, 'QUARANTINE': 169, 'NEEDS_HUMAN_REVIEW': 1330}; next algebra offset: 125.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
 ## 2026-10-02 - Local algebra review 75–99
 
 - Added {'PASS': 19, 'QUARANTINE': 5, 'REJECT': 1} after independent agent QA; 0 existing decisions skipped, all original answers and prior 731 reviews unchanged.

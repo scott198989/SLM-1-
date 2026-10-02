@@ -1,0 +1,531 @@
+{
+  "base_commit": "3dd3c507c3bed8f74db8d73958252ba4718e4e7e",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "algebra",
+  "offset": 100,
+  "limit": 25,
+  "next_offset": 125,
+  "new_substantive_reviews": 25,
+  "skipped_existing": 0,
+  "dispositions_added": {
+    "PASS": 18,
+    "QUARANTINE": 6,
+    "REJECT": 1
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "independent_algebra_fifth_batch_agent",
+    "records_checked": 25,
+    "final_counts": {
+      "PASS": 18,
+      "QUARANTINE": 6,
+      "REJECT": 1
+    },
+    "disposition_changes": [],
+    "review_precision_corrections": [
+      "112: hold primarily for arbitrary constraints not necessarily defining lower-dimensional manifolds; active-set clause is solver-dependent, not an asserted exhaustive/NP-hard theorem.",
+      "104: add direct cofactor method-choice evidence."
+    ],
+    "full_prompt_and_answer_review": true,
+    "all_source_hashes_ids_ordinals_and_ledger_matches": true,
+    "source_sha256": "87dea8584252719990f16589465740a1fa9bfb4f2c161912e7c5e3bd2af2de07",
+    "reviewed_against_local_commit": "fedf9fc4f67b48d1086ab0ea0ada0794fca0443a",
+    "published_base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "independent_human_review": false,
+    "release_approved": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 756,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 568,
+    "REJECT": 45,
+    "QUARANTINE": 169,
+    "NEEDS_HUMAN_REVIEW": 1330
+  },
+  "agent_substantive_reviews": 781,
+  "substantively_unreviewed": 1328,
+  "records": [
+    {
+      "id": "repo-bacb332ea90739ec0a3fd5d0",
+      "ordinal": 100,
+      "messages_sha256": "bacb332ea90739ec0a3fd5d0a9bf50442a12497823b3ed265ece4eb9e312f43b",
+      "state": "PASS",
+      "rationale": "Correct branch-by-branch set construction for a piecewise domain, considering both the formula and the condition before taking the union.",
+      "evidence": [
+        {
+          "method": "set_theoretic_domain_check",
+          "finding": "A branch contributes the intersection of its formula domain with its condition set; taking the union of those intersections gives the inputs where some prescribed branch applies."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Overlapping branches must also agree or have a defined priority to specify a single-valued function, but that is separate from identifying allowable inputs."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L560"
+    },
+    {
+      "id": "repo-e0f1c52262bf772f9ebd3c41",
+      "ordinal": 101,
+      "messages_sha256": "e0f1c52262bf772f9ebd3c4163f86d956b91bd1e9a592d0eb02a7f519e555ad2",
+      "state": "QUARANTINE",
+      "rationale": "The finite-dimensional module-theoretic connections are useful, but the required finite-dimensional/torsion hypotheses are not stated. A general operator on an arbitrary vector space need not have a minimal or characteristic polynomial, and a Jordan form also needs a splitting field.",
+      "evidence": [
+        {
+          "title": "Romyar Sharifi, UCLA Abstract Algebra, section 8.10",
+          "url": "https://math.ucla.edu/~sharifi/notes/algebra-ch08.html",
+          "finding": "The module decomposition and canonical forms use a finite-dimensional vector space; Jordan form over F additionally requires that the characteristic polynomial split over F."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "On V=F[x], let T be multiplication by x. For any nonzero polynomial p, p(T)(1)=p(x)!=0, so T has no annihilating minimal polynomial. Its F[x]-module is free rather than finite torsion."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "For finite-dimensional V, eigenspace means the submodule annihilated by x-lambda; higher-power primary torsion gives the generalized eigenspace."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L565"
+    },
+    {
+      "id": "repo-6c475bfb128d14d87b59c260",
+      "ordinal": 102,
+      "messages_sha256": "6c475bfb128d14d87b59c2607343b7c6bdabdde0a81b993088734548f6b0cf91",
+      "state": "PASS",
+      "rationale": "Correct dimensions and entrywise algorithm for matrix multiplication, with the right associativity and general noncommutativity distinction.",
+      "evidence": [
+        {
+          "method": "independent_matrix_product_definition",
+          "finding": "For conformable finite matrices, (AB)_ij=sum_k A_ik B_kj. Distributivity and associativity prove product associativity; counterexamples show multiplication need not commute."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For A=[[1,1],[0,0]], B=[[0,0],[1,0]], AB=[[1,0],[0,0]] whereas BA=[[0,0],[1,1]]."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L574"
+    },
+    {
+      "id": "repo-d413620e22ee00fe579cd492",
+      "ordinal": 103,
+      "messages_sha256": "d413620e22ee00fe579cd4923698477d241664901f6838a671f850cc7e86a07d",
+      "state": "PASS",
+      "rationale": "The two rational examples share exactly the stated vertical and horizontal asymptotes and differ in sign and pole order, proving asymptotes do not determine a graph.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Symbolic expressions and exact rational arithmetic check each stated result and counterexample."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Both denominators vanish only at x=1 and both functions tend to zero at infinity. 1/(x-1) changes sign across 1, while 5/(x-1)^2 is positive on both sides."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L579"
+    },
+    {
+      "id": "repo-181f6c212c6c1cce3e5187d5",
+      "ordinal": 104,
+      "messages_sha256": "181f6c212c6c1cce3e5187d5bc588ae16ffb92076daba1934447cc53afaa2b8d",
+      "state": "QUARANTINE",
+      "rationale": "The row-reduction method and determinant bookkeeping are correct, but a fastest-by-hand claim cannot be made from size alone. The answer overstates that it is much faster than expansion without inspecting zeros or special structure.",
+      "evidence": [
+        {
+          "method": "independent_elementary_row_operation_check",
+          "finding": "Adding a multiple of one row to another preserves determinant; a row swap negates it, nonzero scaling changes it by that scalar, and a triangular matrix determinant is its diagonal product."
+        },
+        {
+          "title": "Georgia Tech, Interactive Linear Algebra: Determinants and Cofactors",
+          "url": "https://textbooks.math.gatech.edu/ila/determinants-cofactors.html",
+          "finding": "Cofactor expansion can exploit rows or columns with many zeros; method choice depends on matrix structure."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a matrix with an all-zero row, expansion along that row immediately gives determinant zero. A row with one nonzero entry can also make cofactor expansion preferable to a general reduction."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L590"
+    },
+    {
+      "id": "repo-f8aeb2d15e4122081f775e5f",
+      "ordinal": 105,
+      "messages_sha256": "f8aeb2d15e4122081f775e5f9caa1fca1c7d8f872e8f4b5a684e3e162bf26008",
+      "state": "PASS",
+      "rationale": "Correct interpretation of duplicate constraints and complete real parametric solution.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Symbolic expressions and exact rational arithmetic check each stated result and counterexample."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For x=t,y=(8-3t)/2, both copies of 3x+2y=8 hold identically."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L591"
+    },
+    {
+      "id": "repo-64382fb107c0f088646e8c61",
+      "ordinal": 106,
+      "messages_sha256": "64382fb107c0f088646e8c617ce22e57bab4d6bbfaa6f1781548de9e19a8739c",
+      "state": "PASS",
+      "rationale": "Correct geometric image and determinant-area interpretation, with negative determinant reversing orientation.",
+      "evidence": [
+        {
+          "method": "independent_linear_map_area_check",
+          "finding": "The images of the two unit coordinate vectors are the columns of the matrix; the image square is their possibly degenerate parallelogram with area equal to absolute determinant."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A singular matrix yields a degenerate parallelogram, possibly a segment or point, with zero area."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L592"
+    },
+    {
+      "id": "repo-68734c95c86361f56ae943de",
+      "ordinal": 107,
+      "messages_sha256": "68734c95c86361f56ae943dec18023bcb37642ac2ae24ef5c649f88ae721f42b",
+      "state": "PASS",
+      "rationale": "Correct proof-by-contradiction method for nonexistence, assuming all substitutions and deductions preserve the specified domain.",
+      "evidence": [
+        {
+          "method": "direct_logical_and_axiomatic_review",
+          "finding": "A contradiction from the hypothesis that a solution exists proves nonexistence. Definitions fix meanings; axioms give assumed properties in the specified structure."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L598"
+    },
+    {
+      "id": "repo-e17937eeb6fb4cebc2031e61",
+      "ordinal": 108,
+      "messages_sha256": "e17937eeb6fb4cebc2031e61b3f5163bc6d1c50f07448d10d2d5ddbf7d4cdb6b",
+      "state": "PASS",
+      "rationale": "Accurate description of solving a triangular system from its final equation upward.",
+      "evidence": [
+        {
+          "method": "independent_linear_combination_check",
+          "finding": "If the complete equation a_k x=b_k is a linear combination of remaining equations with the same coefficients on both sides, every solution of the remaining equations satisfies it. Deleting it preserves the solution set."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This describes ordinary nonsingular back substitution; zero pivots require separate consistency/free-variable handling."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L602"
+    },
+    {
+      "id": "repo-a4fec0d90bf09fe8be47bc1a",
+      "ordinal": 109,
+      "messages_sha256": "a4fec0d90bf09fe8be47bc1a36fb73034f1ec8a3a7d859b9b5197b2da9a7fa8e",
+      "state": "PASS",
+      "rationale": "Sound introductory distinction between concrete elementary algebra and reasoning from abstract structural axioms.",
+      "evidence": [
+        {
+          "method": "direct_mathematical_review",
+          "finding": "A symbolic identity or implication derived from stated algebraic axioms proves all covered instances; a finite list of numerical tests does not establish an unrestricted universal statement."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The distinction is pedagogical rather than a claim that elementary algebra lacks axioms or that abstract algebra never concerns numbers."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L604"
+    },
+    {
+      "id": "repo-5ca4278023e420d383c8b425",
+      "ordinal": 110,
+      "messages_sha256": "5ca4278023e420d383c8b425243cd4c9d82adf76493d338ce94a7c2e8bb8cafc",
+      "state": "PASS",
+      "rationale": "Correct permutation-determinant proof using identity and row transpositions; parity gives a well-defined sign.",
+      "evidence": [
+        {
+          "method": "independent_elementary_row_operation_check",
+          "finding": "Adding a multiple of one row to another preserves determinant; a row swap negates it, nonzero scaling changes it by that scalar, and a triangular matrix determinant is its diagonal product."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Any permutation decomposes into transpositions. Each swap contributes a factor -1 from determinant alternation, so the final value is +1 or -1."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L605"
+    },
+    {
+      "id": "repo-1680d23a8429354262f46746",
+      "ordinal": 111,
+      "messages_sha256": "1680d23a8429354262f46746c0c31f6c714075012db9a4f68a10f363cb896ba4",
+      "state": "PASS",
+      "rationale": "Correct practical distinction between statements assumed within a theory and definitions specifying terminology, illustrated with groups and normal subgroups.",
+      "evidence": [
+        {
+          "method": "direct_logical_and_axiomatic_review",
+          "finding": "A contradiction from the hypothesis that a solution exists proves nonexistence. Definitions fix meanings; axioms give assumed properties in the specified structure."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Group axioms are also part of the definition of a group; they are assumptions for any object being treated as one."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L619"
+    },
+    {
+      "id": "repo-bb14c4a5ab199ab167a3aef4",
+      "ordinal": 112,
+      "messages_sha256": "bb14c4a5ab199ab167a3aef4e0d64d2d1cdc6761ee11cc5deae47b2f824b7a23",
+      "state": "QUARANTINE",
+      "rationale": "Several real challenges are listed, but arbitrary constraints need not define lower-dimensional manifolds. The manifold claim requires suitable equality constraints and regularity. The active-set complexity remark is also solver-dependent, rather than an inherent property of every inequality formulation.",
+      "evidence": [
+        {
+          "title": "MIT nonlinear programming, constrained optimality",
+          "url": "https://ocw.mit.edu/courses/15-084j-nonlinear-programming-spring-2004/21073fc1bb9e5f68b3319bec0895683f_lec6_constr_opt.pdf",
+          "finding": "Theorem 22 requires a feasible base point, continuously differentiable constraints and a nonsingular Jacobian block for local elimination; multipliers are introduced for constrained optimization with relevant regularity conditions."
+        },
+        {
+          "title": "Boyd and Vandenberghe, Convex Optimization",
+          "url": "https://www.seas.ucla.edu/~vandenbe/cvxbook/bv_cvxbook.pdf",
+          "finding": "Inequality-constrained convex problems can be solved by continuous optimization techniques such as interior-point methods; not all inequalities force combinatorial active-set enumeration."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The equality xy=0 is singular at the origin, while x>=0 defines a full-dimensional half-space. These refute a universal lower-dimensional-manifold description. Interior-point algorithms illustrate a different inequality-handling approach, but do not show that active-set identification has no combinatorial aspect."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L620"
+    },
+    {
+      "id": "repo-7bbec0f66bc83ddae8fa3f48",
+      "ordinal": 113,
+      "messages_sha256": "7bbec0f66bc83ddae8fa3f480bcdbfa7433fd69376588a2d8a20f9d5d122a5e3",
+      "state": "PASS",
+      "rationale": "The exact solution is correct and both equations check. The repeated recalculation is verbose but does not introduce a contradictory result.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Symbolic expressions and exact rational arithmetic check each stated result and counterexample."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With x=119/39,y=49/13, 9x+2y=(357+98)/13=35 and 3x+5y=(119+245)/13=28. gcd(119,39)=1; x is approximately 3.05128."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L621"
+    },
+    {
+      "id": "repo-7b678240c9fc3cebf3e5e951",
+      "ordinal": 114,
+      "messages_sha256": "7b678240c9fc3cebf3e5e951871377add690d6d65ddc580cd498b3ac165931f5",
+      "state": "QUARANTINE",
+      "rationale": "The eigenvector criterion is correct, but the unconditional Jordan-form replacement omits the field-splitting requirement. Nondiagonalizability over the original field can arise from missing eigenvalues rather than deficient geometric multiplicity.",
+      "evidence": [
+        {
+          "title": "Romyar Sharifi, UCLA Abstract Algebra, section 8.10",
+          "url": "https://math.ucla.edu/~sharifi/notes/algebra-ch08.html",
+          "finding": "The module decomposition and canonical forms use a finite-dimensional vector space; Jordan form over F additionally requires that the characteristic polynomial split over F."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The real rotation [[0,-1],[1,0]] has characteristic polynomial lambda^2+1. It has no real Jordan form made of ordinary eigenvalue blocks; over C it is diagonalizable."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L631"
+    },
+    {
+      "id": "repo-ba88aa65277fb5671fa2d255",
+      "ordinal": 115,
+      "messages_sha256": "ba88aa65277fb5671fa2d2552c79ef25da265c3012d691227a17023954b7074b",
+      "state": "QUARANTINE",
+      "rationale": "The warning that a few examples do not prove an unrestricted identity is correct, but the blanket statement that examples never cover all possibilities excludes legitimate exhaustive proof on a finite domain.",
+      "evidence": [
+        {
+          "method": "direct_logical_check",
+          "finding": "If a finite collection of cases covers the domain and the proposition is proved in every case, any putative counterexample belongs to a proved case and is impossible."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "To prove a property for the set {0,1}, checking both elements exhausts every possibility. That differs from a few evaluations of the unrestricted difference-of-squares identity."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L642"
+    },
+    {
+      "id": "repo-1bafd2d63152ed440fee8e2d",
+      "ordinal": 116,
+      "messages_sha256": "1bafd2d63152ed440fee8e2da0948857f5a924df8f45b7d933418f3a1b4e5d46",
+      "state": "PASS",
+      "rationale": "Correct inconsistency proof from proportional left sides and incompatible right sides.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Symbolic expressions and exact rational arithmetic check each stated result and counterexample."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Equation 2 minus twice equation 1 gives 0=1."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L648"
+    },
+    {
+      "id": "repo-75bfd119bc84cf663f6c9276",
+      "ordinal": 117,
+      "messages_sha256": "75bfd119bc84cf663f6c9276e90783b843e802bbf9ee17fb28ea9f94d52e9329",
+      "state": "PASS",
+      "rationale": "Valid proof that the sum of even integers is even, with closure of the integer coefficient explicitly justified.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Symbolic expressions and exact rational arithmetic check each stated result and counterexample."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For integer a,b, 2a+2b=2(a+b), and a+b remains an integer."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L651"
+    },
+    {
+      "id": "repo-8f07c91a6518047c12653329",
+      "ordinal": 118,
+      "messages_sha256": "8f07c91a6518047c1265332923099bec431dd9f37a424881412b8594143897b2",
+      "state": "PASS",
+      "rationale": "All elimination steps and the final triple are correct despite the conversational self-check.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Symbolic expressions and exact rational arithmetic check each stated result and counterexample."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "(1,2,3) gives 1+2+3=6, 2-2+3=3, and 1+4-3=2. The displayed sums 2x+3y=8 and 3x+y=5 yield x=1."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L656"
+    },
+    {
+      "id": "repo-398aa6ae35e87578ccd4bb34",
+      "ordinal": 119,
+      "messages_sha256": "398aa6ae35e87578ccd4bb3491d5684c46c15ba5baaf17ffd51d35860fcb15f8",
+      "state": "PASS",
+      "rationale": "Sensible high-level workflow covering classification, appropriate reduction/formulation, solver matching and post-solve constraint verification.",
+      "evidence": [
+        {
+          "title": "MIT nonlinear programming, constrained optimality",
+          "url": "https://ocw.mit.edu/courses/15-084j-nonlinear-programming-spring-2004/21073fc1bb9e5f68b3319bec0895683f_lec6_constr_opt.pdf",
+          "finding": "Theorem 22 requires a feasible base point, continuously differentiable constraints and a nonsingular Jacobian block for local elimination; multipliers are introduced for constrained optimization with relevant regularity conditions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Different constraint classifications overlap; elimination is explicitly limited to where possible."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L658"
+    },
+    {
+      "id": "repo-f35813d3436fcdf6b13d9b71",
+      "ordinal": 120,
+      "messages_sha256": "f35813d3436fcdf6b13d9b71954e9c0caf4ee73ddf636619cfb5c9a2f899672d",
+      "state": "PASS",
+      "rationale": "Sound caution that physical structure, conservation, stiffness and expected behavior matter to solver selection and validation.",
+      "evidence": [
+        {
+          "title": "Tojaga et al., Hybrid of monolithic and staggered solution techniques",
+          "url": "https://arxiv.org/abs/2203.15924",
+          "finding": "This coupled fracture model has reduced monolithic robustness from non-positive-definite tangent stiffness; alternating solution avoids that difficulty but has suboptimal convergence, motivating a hybrid. The comparison is problem-dependent."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The frequency and professional-quality language is qualitative advice; it is not treated as an empirical probability or a universal impossibility result."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L659"
+    },
+    {
+      "id": "repo-2a907ed527f62095aa6380af",
+      "ordinal": 121,
+      "messages_sha256": "2a907ed527f62095aa6380af8794e40eed3f3ed764e76fbafb2c0bac4cb3210b",
+      "state": "QUARANTINE",
+      "rationale": "The coupling overview is useful, but the recommended element-based elimination is under-specified for general reactive species transport. Element balances constrain composition but do not determine the remaining species or reaction progress without kinetic, equilibrium or independent-progress equations.",
+      "evidence": [
+        {
+          "title": "Cantera, Chemical Reactions",
+          "url": "https://www.cantera.org/dev/reference/kinetics/index.html",
+          "finding": "Chemical kinetics computes species reaction rates from rate constants and the mixture state, including composition and temperature. Conserved elemental totals do not alone specify species composition or reaction progress."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Two moles H2 plus one mole O2 and two moles H2O both contain four H atoms and two O atoms, yet represent different species states. Conserved element totals alone cannot select between them."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A coordinate transformation using conserved elements plus independent progress variables can be valid; the hold targets the missing closure, not all elimination strategies."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L671"
+    },
+    {
+      "id": "repo-e02da2903ff04de3b930d77b",
+      "ordinal": 122,
+      "messages_sha256": "e02da2903ff04de3b930d77b2b11fb58e1366f8d39f5fbc894b093110826726c",
+      "state": "PASS",
+      "rationale": "Correctly states the complete solution set as the line shared by the proportional equations.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Symbolic expressions and exact rational arithmetic check each stated result and counterexample."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Equation 2 minus twice equation 1 gives 0=0; every point satisfying 7x+5y=3 satisfies both."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L676"
+    },
+    {
+      "id": "repo-a43a26bacdabdea9ab7db4f7",
+      "ordinal": 123,
+      "messages_sha256": "a43a26bacdabdea9ab7db4f76561ba545b7b3f46af84fb66d7ac0d9291e0adc4",
+      "state": "PASS",
+      "rationale": "Correct product-power expansion and exponent multiplication for ordinary scalar algebra.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Symbolic expressions and exact rational arithmetic check each stated result and counterexample."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "(a^3 b^2)^2=a^3 b^2 a^3 b^2=a^6 b^4 using commutative multiplication."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L679"
+    },
+    {
+      "id": "repo-63b317e9a180a02d9d6199a4",
+      "ordinal": 124,
+      "messages_sha256": "63b317e9a180a02d9d6199a4387bbbf7cf6b43811a48465d33d46f5096d6c22f",
+      "state": "REJECT",
+      "rationale": "Having some irrational characteristic roots does not imply the absence of rational eigenvalues. A rational matrix can have both rational and irrational eigenvalues; only the irrational ones require a field extension.",
+      "evidence": [
+        {
+          "title": "Romyar Sharifi, UCLA Abstract Algebra, section 8.10",
+          "url": "https://math.ucla.edu/~sharifi/notes/algebra-ch08.html",
+          "finding": "The module decomposition and canonical forms use a finite-dimensional vector space; Jordan form over F additionally requires that the characteristic polynomial split over F."
+        },
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Symbolic expressions and exact rational arithmetic check each stated result and counterexample."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A=[[1,0,0],[0,0,2],[0,1,0]] has characteristic polynomial (lambda-1)(lambda^2-2), so 1 is a rational eigenvalue while +/-sqrt(2) are irrational."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L682"
+    }
+  ]
+}

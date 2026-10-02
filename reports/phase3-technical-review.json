@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 550,
-    "REJECT": 44,
-    "QUARANTINE": 163,
-    "NEEDS_HUMAN_REVIEW": 1355
+    "PASS": 568,
+    "REJECT": 45,
+    "QUARANTINE": 169,
+    "NEEDS_HUMAN_REVIEW": 1330
   },
   "by_domain": {
     "circuits": {
@@ -20,10 +20,10 @@
       "NEEDS_HUMAN_REVIEW": 194
     },
     "algebra": {
-      "PASS": 80,
-      "REJECT": 5,
-      "QUARANTINE": 17,
-      "NEEDS_HUMAN_REVIEW": 114
+      "PASS": 98,
+      "REJECT": 6,
+      "QUARANTINE": 23,
+      "NEEDS_HUMAN_REVIEW": 89
     },
     "thermal_process_engineering": {
       "PASS": 73,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 756,
+  "agent_substantive_reviews": 781,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "ba4cc2a7b1f7e6208e244b7d8b23c3ceb57e00272b975f671b262191727a6f5d",
+  "technical_review_sha256": "831eae5b46a318974c50a69182eddbee31ad270a62631823004594cd06dc9149",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1353,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1328,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -837,11 +837,36 @@
     "The nearby-divergence explanation is correct, but the unconditional claim that the function is undefined at the asymptote is false. Defining f(0)=0 and f(x)=1/x^2 otherwise leaves x=0 a vertical asymptote.": 1,
     "Accurately names common FSI difficulties: heterogeneous equations and discretizations, moving interface geometry, interface balance and strong-coupling iteration instability.": 1,
     "Carefully distinguishes the two common parses and gives explicit parentheses to communicate the intended operation. Both displayed numerical outcomes are correct for their stated grouping.": 1,
-    "Constraint drift can cause the serious failure modes listed, but growth and eventual blow-up are presented as inevitable. Small violations can remain bounded or decay depending on the equations, integrator and stabilization.": 1
+    "Constraint drift can cause the serious failure modes listed, but growth and eventual blow-up are presented as inevitable. Small violations can remain bounded or decay depending on the equations, integrator and stabilization.": 1,
+    "Correct practical distinction between statements assumed within a theory and definitions specifying terminology, illustrated with groups and normal subgroups.": 1,
+    "The row-reduction method and determinant bookkeeping are correct, but a fastest-by-hand claim cannot be made from size alone. The answer overstates that it is much faster than expansion without inspecting zeros or special structure.": 1,
+    "Correct inconsistency proof from proportional left sides and incompatible right sides.": 1,
+    "The coupling overview is useful, but the recommended element-based elimination is under-specified for general reactive species transport. Element balances constrain composition but do not determine the remaining species or reaction progress without kinetic, equilibrium or independent-progress equations.": 1,
+    "Sensible high-level workflow covering classification, appropriate reduction/formulation, solver matching and post-solve constraint verification.": 1,
+    "Correct permutation-determinant proof using identity and row transpositions; parity gives a well-defined sign.": 1,
+    "Having some irrational characteristic roots does not imply the absence of rational eigenvalues. A rational matrix can have both rational and irrational eigenvalues; only the irrational ones require a field extension.": 1,
+    "Correct geometric image and determinant-area interpretation, with negative determinant reversing orientation.": 1,
+    "Correct proof-by-contradiction method for nonexistence, assuming all substitutions and deductions preserve the specified domain.": 1,
+    "Correct dimensions and entrywise algorithm for matrix multiplication, with the right associativity and general noncommutativity distinction.": 1,
+    "Valid proof that the sum of even integers is even, with closure of the integer coefficient explicitly justified.": 1,
+    "The eigenvector criterion is correct, but the unconditional Jordan-form replacement omits the field-splitting requirement. Nondiagonalizability over the original field can arise from missing eigenvalues rather than deficient geometric multiplicity.": 1,
+    "The exact solution is correct and both equations check. The repeated recalculation is verbose but does not introduce a contradictory result.": 1,
+    "All elimination steps and the final triple are correct despite the conversational self-check.": 1,
+    "Correct product-power expansion and exponent multiplication for ordinary scalar algebra.": 1,
+    "Sound introductory distinction between concrete elementary algebra and reasoning from abstract structural axioms.": 1,
+    "The warning that a few examples do not prove an unrestricted identity is correct, but the blanket statement that examples never cover all possibilities excludes legitimate exhaustive proof on a finite domain.": 1,
+    "Correct branch-by-branch set construction for a piecewise domain, considering both the formula and the condition before taking the union.": 1,
+    "Several real challenges are listed, but arbitrary constraints need not define lower-dimensional manifolds. The manifold claim requires suitable equality constraints and regularity. The active-set complexity remark is also solver-dependent, rather than an inherent property of every inequality formulation.": 1,
+    "The two rational examples share exactly the stated vertical and horizontal asymptotes and differ in sign and pole order, proving asymptotes do not determine a graph.": 1,
+    "Correctly states the complete solution set as the line shared by the proportional equations.": 1,
+    "The finite-dimensional module-theoretic connections are useful, but the required finite-dimensional/torsion hypotheses are not stated. A general operator on an arbitrary vector space need not have a minimal or characteristic polynomial, and a Jordan form also needs a splitting field.": 1,
+    "Accurate description of solving a triangular system from its final equation upward.": 1,
+    "Sound caution that physical structure, conservation, stiffness and expected behavior matter to solver selection and validation.": 1,
+    "Correct interpretation of duplicate constraints and complete real parametric solution.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "cb7edb5f88405652fc50d08dd25ba97c46a998397a75003d6a10657dcf835c06",
-  "substantively_unreviewed": 1353,
+  "published_decisions_sha256": "60a4b3d5cf36d1378412d1134e8478acc028902fd95b8cdbf5976debabffa2ba",
+  "substantively_unreviewed": 1328,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
