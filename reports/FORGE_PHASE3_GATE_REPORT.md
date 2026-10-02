@@ -446,3 +446,8 @@ This unpublished local batch added {'PASS': 23, 'REJECT': 1, 'QUARANTINE': 1} af
 ## Local physics checkpoint 225–249
 
 This unpublished local batch added {'PASS': 21, 'QUARANTINE': 3, 'REJECT': 1} after independent agent QA; 0 earlier substantive decisions were skipped and 0 original structural quarantines were preserved. Current local substantive reviews: 1865; remaining unreviewed: 244; next physics offset: 250. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. Original answers, prior 1840 decisions and all release gates are unchanged. [Batch receipt](phase3-review-batches/physics-0225-0250.json).
+
+
+## Completed pending physics review
+
+All 242 previously pending physics records received individual technical review and independent agent QA. With eight preserved prior reviews, all 250 selected records have substantive dispositions. Local total: 1,865 substantive reviews; 244 ordinary records remain unreviewed, plus two existing specialist holds. Original answers, tokens, all earlier decisions and the three original structural-only quarantines are unchanged. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews. See [checkpoint](phase3-physics-domain-checkpoint.json). Technical PASS does not authorize release or training.

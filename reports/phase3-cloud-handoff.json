@@ -88,7 +88,8 @@
     "trigonometry_review_status": "189 previously pending records reviewed; 10 prior substantive reviews and original structural-only quarantine 24 preserved",
     "calculus_review_status": "208 previously pending records reviewed; 7 prior substantive reviews preserved; all215 selected calculus records have substantive dispositions",
     "engineering_mathematics_review_status": "194 previously pending records reviewed; 6 prior substantive reviews preserved; all200 selected engineering_mathematics records have substantive dispositions",
-    "electromagnetism_review_status": "162 previously pending records reviewed; four prior substantive reviews preserved; all 166 selected records have substantive dispositions"
+    "electromagnetism_review_status": "162 previously pending records reviewed; four prior substantive reviews preserved; all 166 selected records have substantive dispositions",
+    "physics_review_status": "242 previously pending records reviewed; eight prior substantive reviews preserved; all 250 selected records have substantive dispositions"
   },
   "public_input_files": [
     {
@@ -221,10 +222,10 @@
     "incomplete_review_index_chunks": 43205,
     "incomplete_review_index_production_approved": false
   },
-  "next_domain": "physics",
+  "next_domain": "materials_manufacturing",
   "next_batch": {
-    "domain": "physics",
-    "offset": 250,
+    "domain": "materials_manufacturing",
+    "offset": 0,
     "limit": 25
   },
   "workers": [],
@@ -235,7 +236,7 @@
   "latest_cloud_continuation": "reports/phase3-cloud-continuation-validation.json",
   "local_continuation": {
     "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
-    "local_predecessor_commit": "f898612ad7a7d6b69a531d3ec5796cbfd23cec13",
+    "local_predecessor_commit": "68d458782dbc87d40063cf390d16a2f345f84acc",
     "publication_status": "LOCAL_ONLY; do not claim these counts are on GitHub",
     "latest_batch": "reports/phase3-review-batches/physics-0225-0250.json",
     "electrical_domain_complete": true,
@@ -255,6 +256,8 @@
     "engineering_mathematics_pending_review_queue_complete": true,
     "engineering_mathematics_checkpoint": "reports/phase3-engineering_mathematics-domain-checkpoint.json",
     "electromagnetism_pending_review_queue_complete": true,
-    "electromagnetism_checkpoint": "reports/phase3-electromagnetism-domain-checkpoint.json"
+    "electromagnetism_checkpoint": "reports/phase3-electromagnetism-domain-checkpoint.json",
+    "physics_pending_review_queue_complete": true,
+    "physics_checkpoint": "reports/phase3-physics-domain-checkpoint.json"
   }
 }

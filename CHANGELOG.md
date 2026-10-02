@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-02 - Pending physics queue completion
+
+- Reviewed 242 pending records with independent agent QA; preserved eight prior decisions. All 250 selected physics records have substantive dispositions.
+- Local total 1,865 reviews; 244 still unreviewed, plus two reviewed specialist holds. Public branch remains at 392 reviews.
+- Preserved source messages, hashes, tokens, all earlier 1,623 decisions, all three structural holds, rights metadata and frozen receipts.
+
+
 ## 2026-10-02 - Local physics review 225–249
 
 - Added {'PASS': 21, 'QUARANTINE': 3, 'REJECT': 1} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1840 reviews unchanged.
