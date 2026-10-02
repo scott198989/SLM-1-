@@ -32851,9 +32851,869 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/calculus-0100-0125.json",
       "original_domain_ordinal": 124
+    },
+    {
+      "id": "repo-fc53dd9328f9c2e1312a8785",
+      "messages_sha256": "fc53dd9328f9c2e1312a8785b1df965fd31e1c2bf9fbe043862b718c2e562f53",
+      "state": "QUARANTINE",
+      "rationale": "The high-order local-basis/geometry explanation is useful, but the unqualified exponential rate for smooth solutions confuses smoothness with analyticity. Smooth nonanalytic functions need not have exponential spectral convergence.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Trefethen, Spectral Methods in MATLAB, chapter4: Smoothness and Spectral Accuracy",
+          "url": "https://epubs.siam.org/doi/10.1137/1.9780898719598.ch4",
+          "finding": "Distinguishes superalgebraic convergence for smooth functions from geometric/exponential convergence for analytic functions; smooth alone is not the analytic hypothesis."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A C-infinity nonanalytic bump can have superalgebraic polynomial/Fourier coefficient decay without any fixed geometric decay rate. Analytic continuation to an appropriate complex neighborhood provides the stronger exponential estimate."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold only the claimed rate/hypotheses. High-order SEM can be highly accurate and reduce dispersion; it is itself a high-order finite-element formulation, and no universal degrees-of-freedom saving is certified."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 166,
+      "assistant_tokens": 133,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 125
+    },
+    {
+      "id": "repo-bdc451a1d2d30d913fb4193f",
+      "messages_sha256": "bdc451a1d2d30d913fb4193f33bb66e3b53a2dcea9782afd682135f41d079f16",
+      "state": "QUARANTINE",
+      "rationale": "The experimental workflow is recognizable, but identifying spectral peaks directly as natural frequencies needs damping/mode-separation qualifications, and physical modal independence is not simply an assumption supplied by the Fourier transform.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Brüel and Kjær, Modal analysis of large structures, BT0001, p51",
+          "url": "https://www.bksv.com/media/doc/bt0001.pdf",
+          "finding": "Peak-amplitude modal estimates need not occur exactly at natural frequencies; damping and off-resonant modes shift peaks, though lightly damped well-separated modes can make the approximation useful."
+        },
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Integrals, differential identities, geometric constraints, convergence-test counterexamples and exact linearization examples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a damped single-degree-of-freedom accelerance FRF, the magnitude peak occurs at omega_n/sqrt(1-2*zeta²) when zeta<1/sqrt2, not exactly omega_n; other modes can shift it further."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Peak picking is a useful approximation for lightly damped separated modes. Hold the unqualified identification, not the validity of FFT/FRF modal analysis."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 137,
+      "assistant_tokens": 109,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 126
+    },
+    {
+      "id": "repo-7ad2500637d6ad9062ccf0fa",
+      "messages_sha256": "7ad2500637d6ad9062ccf0fa7db334f0f6ba5e4d0fd7c88892c341dca6ba65cc",
+      "state": "PASS",
+      "rationale": "Correct applications of multiple integrals to distributed electromagnetic sources, flux and energy.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Integrals, differential identities, geometric constraints, convergence-test counterexamples and exact linearization examples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Q=integral_volume rho dV; electric flux=integral_surface E dot n dS; vacuum field energy integrates(epsilon0|E|²+|B|²/mu0)/2 over volume."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Faraday and Ampere laws also have boundary line integrals; the answer highlights the multiple-integral side rather than giving every term of every Maxwell equation."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 79,
+      "assistant_tokens": 58,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 127
+    },
+    {
+      "id": "repo-16f818bf5fcbcf7b6fcf6d8f",
+      "messages_sha256": "16f818bf5fcbcf7b6fcf6d8fdce81e11b3517ccfeea3fb9910c9913be3b95a73",
+      "state": "PASS",
+      "rationale": "Correct linear decomposition, evaluations and cancellation interpretation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Integrals, differential identities, geometric constraints, convergence-test counterexamples and exact linearization examples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "integral_0^3(x²-4x+3)dx=9-18+9=0; roots1 and3 separate the positive[0,1] and negative(1,3) contributions."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 159,
+      "assistant_tokens": 127,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 128
+    },
+    {
+      "id": "repo-81b9a4a766147efe336d0897",
+      "messages_sha256": "81b9a4a766147efe336d0897c82f2470f6418e1cb3dfe177cb78893b0b838dd0",
+      "state": "PASS",
+      "rationale": "Correct description of the logical direction and inconclusive possibilities of the named standard convergence tests.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Integrals, differential identities, geometric constraints, convergence-test counterexamples and exact linearization examples are checked independently."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The statement concerns what each named test alone establishes; failure of its hypotheses is not automatically a proof of the opposite outcome."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 93,
+      "assistant_tokens": 68,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 129
+    },
+    {
+      "id": "repo-dedce596f8157ba67b3c2aa7",
+      "messages_sha256": "dedce596f8157ba67b3c2aa715b5bc87505d4690d8069fa94ca2c085f8557b51",
+      "state": "PASS",
+      "rationale": "Correct spatial average formula over a finite positive-area region.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Integrals, differential identities, geometric constraints, convergence-test counterexamples and exact linearization examples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "f_avg*Area(R)=integral_R f dA."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Assumes0<Area(R)<infinity and an integrable f; zero-area or infinite-area regions need a different limiting/weighted definition."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 67,
+      "assistant_tokens": 43,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 130
+    },
+    {
+      "id": "repo-f74acc32fc181458a1cd575c",
+      "messages_sha256": "f74acc32fc181458a1cd575c4dce9170c67119219fec6ee2ad63b1c6b1a64e1f",
+      "state": "QUARANTINE",
+      "rationale": "The ceiling/floor intuition omits the nonnegative-term hypothesis needed by the usual direct comparison test. Being below a convergent positive series does not alone force an arbitrary signed series to converge.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Integrals, differential identities, geometric constraints, convergence-test counterexamples and exact linearization examples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "a_n=-1 satisfies a_n<=1/n² termwise, but its partial sums are-n and diverge even though sum1/n² converges."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for the missing positivity/two-sided or absolute-value control, not the standard positive-term comparison argument."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 94,
+      "assistant_tokens": 75,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 131
+    },
+    {
+      "id": "repo-91a669a2563fd47fcfc2b673",
+      "messages_sha256": "91a669a2563fd47fcfc2b673b7ac3b554cbc4d9dc51c565badfd89d3dddc06a9",
+      "state": "PASS",
+      "rationale": "Correct periodic-grid Fourier derivative and pseudospectral nonlinear-evaluation description.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT ES.1803 Fourier/PDE notes, section25",
+          "url": "https://ocw.mit.edu/courses/es-1803-differential-equations-spring-2024/mites_1803_s24_topic_full.pdf",
+          "finding": "Fourier spatial modes diagonalize derivative operators in the usual periodic/separable setting; nonlinear products require separate treatment rather than being independent linear modes."
+        },
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Integrals, differential identities, geometric constraints, convergence-test counterexamples and exact linearization examples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Differentiating exp(i*k*x) gives i*k exp(i*k*x), so DFT coefficients can be multiplied by resolved wavenumbers before inverse FFT."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Wavenumber scaling follows domain length, and nonlinear products require anti-aliasing/resolution care. The prompt already specifies the periodic regular-grid setting in the answer."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 89,
+      "assistant_tokens": 68,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 132
+    },
+    {
+      "id": "repo-bd9f6a9adf77e32358a9bfc7",
+      "messages_sha256": "bd9f6a9adf77e32358a9bfc7b61137f103c4632325ba7cd317dc01ae61b94d6c",
+      "state": "PASS",
+      "rationale": "Correct brief alternating-series test conditions.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Integrals, differential identities, geometric constraints, convergence-test counterexamples and exact linearization examples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Decreasing b_n->0 makes even/odd partial sums monotone toward the same limit."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Both conditions are required to invoke this stated sufficient test; monotonicity is not necessary for every convergent alternating series."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 61,
+      "assistant_tokens": 44,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 133
+    },
+    {
+      "id": "repo-da6b0e2262b29c36717c9f68",
+      "messages_sha256": "da6b0e2262b29c36717c9f6820665cae1f799a2b3ab3913ed578851f3c7f2522",
+      "state": "QUARANTINE",
+      "rationale": "The Kummer formulas are appropriate for a positive-term target series, but the answer specifies positivity only for the auxiliary p_n. Without positive a_n, its divergence branch can give a false conclusion.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Frantisek Duris, On Kummer test of convergence and its relation to basic comparison tests",
+          "url": "https://arxiv.org/abs/1612.05167",
+          "finding": "Kummer criteria concern series of positive terms and positive auxiliary weights; the positivity of the target terms is essential to the comparison argument."
+        },
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Integrals, differential identities, geometric constraints, convergence-test counterexamples and exact linearization examples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Take a_n=(-1)^n/n andp_n=1. K_n=-(n+1)/n-1->-2 and sum1/p_n diverges, yet sum a_n converges. This violates the unstated positive-a_n hypothesis."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold for the missing target-series positivity, not the valid positive-term Kummer/Raabe relationship."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 148,
+      "assistant_tokens": 130,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 134
+    },
+    {
+      "id": "repo-ec3d339100ef74d3887fef0b",
+      "messages_sha256": "ec3d339100ef74d3887fef0ba0ab9f0527cb46b70b14ff57e0ae7548debfbf24",
+      "state": "PASS",
+      "rationale": "Correct unifying derivative-over-region versus field-over-boundary interpretation of generalized Stokes.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Integrals, differential identities, geometric constraints, convergence-test counterexamples and exact linearization examples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The differential-forms identity integral_M d(omega)=integral_boundaryM omega specializes to FTC, Green, curl Stokes and divergence with the appropriate degree and orientation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The derivative/integrand types vary by dimension; sufficient regularity and orientations remain required."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 88,
+      "assistant_tokens": 67,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 135
+    },
+    {
+      "id": "repo-7b3707025d00b1770a6b98f0",
+      "messages_sha256": "7b3707025d00b1770a6b98f070fc42f8125bc733d60d3111e5c0878dcc1430ea",
+      "state": "PASS",
+      "rationale": "Correct optimization-context plain-language basin-of-attraction definition.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Integrals, differential identities, geometric constraints, convergence-test counterexamples and exact linearization examples are checked independently."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A general dynamical attractor need not be a minimum or a single point; the answer explicitly frames algorithms and nonconvex minimization."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 63,
+      "assistant_tokens": 44,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 136
+    },
+    {
+      "id": "repo-34b1d948afaf16e6686db2b9",
+      "messages_sha256": "34b1d948afaf16e6686db2b997ba088877a52e6d927512cb658368b0520e32c4",
+      "state": "PASS",
+      "rationale": "Correct antiderivative, endpoint values and area interpretation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Integrals, differential identities, geometric constraints, convergence-test counterexamples and exact linearization examples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "arctan1-arctan0=pi/4 and the integrand is positive on[0,1]."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 147,
+      "assistant_tokens": 112,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 137
+    },
+    {
+      "id": "repo-ed6bd61a959402b587ea89e1",
+      "messages_sha256": "ed6bd61a959402b587ea89e1a64f54e760add9c7ccaee18e0732a7c3d88fb30e",
+      "state": "PASS",
+      "rationale": "Exact cylindrical Jacobian matrix and determinant proof.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Integrals, differential identities, geometric constraints, convergence-test counterexamples and exact linearization examples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The2x2 block determinant is r*(cos²theta+sin²theta)=r; third coordinate contributes1."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 133,
+      "assistant_tokens": 112,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 138
+    },
+    {
+      "id": "repo-8dac14670208da64efb98cfd",
+      "messages_sha256": "8dac14670208da64efb98cfdcbc76e7a8c840a26c080c4fb505cc8eb39b68429",
+      "state": "PASS",
+      "rationale": "Correct qualitative harmonic-distortion measurement and Fourier-analysis motivation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "Analog Devices, Metrology Terminology",
+          "url": "https://wiki.analog.com/resources/eval/user-guides/metrology-terminology",
+          "finding": "THD compares root-sum-square harmonic RMS components with fundamental RMS, excluding noise; exact conventions and included orders must be specified."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A common voltage THD convention is sqrt(sum_{n>=2}V_n,rms²)/V_1,rms, equivalently the square root of harmonic-power/fundamental-power ratio at common impedance."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "THD measures harmonic distortion, not every possible deviation from a sine such as broadband noise or DC. The answer gives no exact ratio formula, so power versus fundamental is qualitative, not an asserted missing-square-root equation."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 94,
+      "assistant_tokens": 67,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 139
+    },
+    {
+      "id": "repo-ceefb4af81375757304e641d",
+      "messages_sha256": "ceefb4af81375757304e641dc21745cef20865f91898ffcd6d15d27ba532035c",
+      "state": "QUARANTINE",
+      "rationale": "Fourier features can inform power-system protection, but the answer presents a generic odd/interharmonic fault signature and automatic trip-before-damage conclusion without the necessary relay, event and coordination conditions.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "SEL, New Inrush Stability Algorithm Improves Transformer Protection",
+          "url": "https://cdn.selinc.com/assets/Literature/Publications/Technical%20Papers/6839_NewInrush_BK_20171106_Web.pdf?v=20180314-142400",
+          "finding": "Harmonic content may restrain or block transformer differential protection during nonfault inrush, while transient harmonic estimates can delay internal-fault response. Harmonic change alone is not a universal trip-before-damage rule."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Transformer energization can produce strong harmonics during nonfault inrush and cause harmonic blocking/restraint rather than a trip. SEL documents harmonic-filter transients that can delay internal-fault operation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the overgeneralized detection/tripping story; do not claim Fourier relays cannot detect faults or that harmonic analysis is useless."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 90,
+      "assistant_tokens": 69,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 140
+    },
+    {
+      "id": "repo-84e81f72f3f429cfe358a30d",
+      "messages_sha256": "84e81f72f3f429cfe358a30d6ed38f80264136dd29fbb0099c52fa2e92818ca6",
+      "state": "PASS",
+      "rationale": "Correct temperature gradient, steepest ascent/descent directions and magnitude interpretation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Integrals, differential identities, geometric constraints, convergence-test counterexamples and exact linearization examples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "grad T=(-4x,-2y), so at(3,4) it is(-12,-8), with magnitude sqrt208=4sqrt13."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Steepest refers to Euclidean spatial distance and unit directions; the opposite gradient gives fastest decrease."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 168,
+      "assistant_tokens": 128,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 141
+    },
+    {
+      "id": "repo-6b0f6b660bd62f5b30505972",
+      "messages_sha256": "6b0f6b660bd62f5b30505972ad8f5a02423276d41a1584d89e12251fa0a1ea8c",
+      "state": "REJECT",
+      "rationale": "The universal claim that Taylor linearization is exactly correct only at its expansion point and wrong everywhere else is false. Affine functions equal their linearization on the entire domain; nonlinear functions can also intersect their tangent model elsewhere.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Integrals, differential identities, geometric constraints, convergence-test counterexamples and exact linearization examples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For f(x)=2x+3, f(a)+f_prime(a)*(x-a)=2a+3+2(x-a)=f(x) for everyx. For f(x)=x²(x-1), linearization at0 is0 and also matchesf at1."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The local-error/usefulness explanation is sensible for genuinely approximate models, but it does not rescue the explicit only-at-one-point claim."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 124,
+      "assistant_tokens": 87,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 142
+    },
+    {
+      "id": "repo-beb7b9b77e31c3ec682dd16d",
+      "messages_sha256": "beb7b9b77e31c3ec682dd16daa146ae82210e48e39fc704b22e7e9f6ff693dbc",
+      "state": "PASS",
+      "rationale": "Correct root-test limsup thresholds and comparison with the usual ratio test.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Integrals, differential identities, geometric constraints, convergence-test counterexamples and exact linearization examples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "When |a_(n+1)/a_n| has a finite limitL, the nth-root limit is alsoL under the standard nonzero-tail conditions. Oscillatory ratios may fail while the root limsup is decisive."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The comparison is to the standard ratio-limit test, not every strengthened liminf/limsup variant."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 112,
+      "assistant_tokens": 89,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 143
+    },
+    {
+      "id": "repo-e47d54bd631e2127be9290a6",
+      "messages_sha256": "e47d54bd631e2127be9290a68fb567e3116c648266276a45cfe60221788ee22b",
+      "state": "PASS",
+      "rationale": "Correct two-sided derivative criterion and diagnostic use of one-sided limits.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Integrals, differential identities, geometric constraints, convergence-test counterexamples and exact linearization examples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A finite limit of[f(a+h)-f(a)]/h as h->0 exists iff the finite left/right limits exist and agree."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "At endpoints the relevant derivative may be intentionally one-sided."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 77,
+      "assistant_tokens": 59,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 144
+    },
+    {
+      "id": "repo-200db43c3f5a7914e02cbc67",
+      "messages_sha256": "200db43c3f5a7914e02cbc67a59fb65aa6b5e4a5ae38f5c90e4fea224def1bee",
+      "state": "PASS",
+      "rationale": "Correct explanation that algebraically identical functions on the same domain have the same derivative where it exists.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Integrals, differential identities, geometric constraints, convergence-test counterexamples and exact linearization examples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Expanding(x+1)^4 or applying chain rule both give4(x+1)^3."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Domain equivalence matters, and the answer explicitly includes it."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 154,
+      "assistant_tokens": 123,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 145
+    },
+    {
+      "id": "repo-ee1aa6586dbb3ecb0f492f76",
+      "messages_sha256": "ee1aa6586dbb3ecb0f492f76ac4c8b47694abeec86f3d27af3333c7eab5bb7e7",
+      "state": "PASS",
+      "rationale": "Correct qualified claim that no universal terminating mechanical algorithm decides convergence for every effectively specified series.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_reduction_from_halting_undecidability",
+          "finding": "For a fixed encoded program, define computable a_n=1 if it has not halted by step n and0 otherwise. The nonnegative series converges iff the program eventually halts. A universal terminating convergence-deciding algorithm would decide halting."
+        },
+        {
+          "title": "A. M. Turing, On Computable Numbers, with an Application to the Entscheidungsproblem",
+          "url": "https://theory.stanford.edu/~trevisan/cs172-07/turing36.pdf",
+          "finding": "Primary computability/undecidability foundation; the series-to-halting reduction used here is an independent reviewer argument."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The computable0/1 sequence determined by whether a program has halted by stepn has a finite sum iff that program halts, reducing convergence decision to the undecidable halting problem."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Universal mathematical characterizations such as the Cauchy criterion exist; the impossibility is algorithmic over unrestricted effective inputs, as the answer qualifies by mechanical and in a certain sense."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 73,
+      "assistant_tokens": 53,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 146
+    },
+    {
+      "id": "repo-e185a9d16bca306ac40904dd",
+      "messages_sha256": "e185a9d16bca306ac40904dd9ce422ed99144fa1540553a4718d4fbcb3d33b3d",
+      "state": "PASS",
+      "rationale": "Correct path parametrization, differential substitution and exact integral.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Integrals, differential identities, geometric constraints, convergence-test counterexamples and exact linearization examples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "x²dx+xy dy=(t²+2t^4)dt; integral_0^1=1/3+2/5=11/15."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 151,
+      "assistant_tokens": 110,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 147
+    },
+    {
+      "id": "repo-15317d89233cf0402b8828fd",
+      "messages_sha256": "15317d89233cf0402b8828fda03172deacdb99294d186226406e524ca821fa6b",
+      "state": "PASS",
+      "rationale": "Correct concrete nesting of quotient, product and chain rules in one expression.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Integrals, differential identities, geometric constraints, convergence-test counterexamples and exact linearization examples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Numerator derivative=6x*(x²+1)²*sin x+(x²+1)³*cos x; denominator derivative=4x³, combined by quotient rule."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 104,
+      "assistant_tokens": 82,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 148
+    },
+    {
+      "id": "repo-fae64ea1e1ba55ceb642d690",
+      "messages_sha256": "fae64ea1e1ba55ceb642d690d489026369e1fc6007df677ac76e15401a1a7489",
+      "state": "QUARANTINE",
+      "rationale": "Counting constraints alone does not justify unique determination or nothing left to optimize. The answer omits equality, independence, regularity and multiple-solution qualifications; inequalities can leave a full-dimensional feasible set.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Integrals, differential identities, geometric constraints, convergence-test counterexamples and exact linearization examples are checked independently."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Two equalities x²+y²=1 andy=0 give two candidates(±1,0), so minimizingx still requires selection. Two constraints x>=0,y>=0 leave an entire quadrant."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Independent linear equalities with full rank can fix two variables uniquely, and regular independent equalities in three variables can leave one local degree of freedom; those restricted cases do not establish the general claim."
+        }
+      ],
+      "domain": "calculus",
+      "primary_source": "D_calculus.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 85,
+      "assistant_tokens": 61,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/calculus-0125-0150.json",
+      "original_domain_ordinal": 149
     }
   ],
-  "reviewed": 1177,
+  "reviewed": 1202,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

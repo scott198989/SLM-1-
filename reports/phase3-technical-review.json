@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 912,
-    "REJECT": 55,
-    "QUARANTINE": 211,
-    "NEEDS_HUMAN_REVIEW": 934
+    "PASS": 930,
+    "REJECT": 56,
+    "QUARANTINE": 217,
+    "NEEDS_HUMAN_REVIEW": 909
   },
   "by_domain": {
     "circuits": {
@@ -38,10 +38,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "calculus": {
-      "PASS": 111,
-      "REJECT": 3,
-      "QUARANTINE": 11,
-      "NEEDS_HUMAN_REVIEW": 90
+      "PASS": 129,
+      "REJECT": 4,
+      "QUARANTINE": 17,
+      "NEEDS_HUMAN_REVIEW": 65
     },
     "electrical_components": {
       "PASS": 232,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1177,
+  "agent_substantive_reviews": 1202,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "ca5aa0053e64100c50cf0494c9c6f4909e7f971e981f6a0569d172c0480900c6",
+  "technical_review_sha256": "6ffccef0d36068d2390e1d846cb4eebff8481bcb019db2292a1893f0690d7b2b",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 932,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 907,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1258,11 +1258,36 @@
     "The mathematical signed-versus-absolute integral distinction is correct, but total revenue is not the absolute value of net profit. The concluding financial analogy mislabels accumulated gains and losses as revenue.": 1,
     "Exact gradient and zero-curl computation for the smooth xy potential.": 1,
     "The active-set description and feasible barrier intuition are useful, but not all interior-point methods stay inside the feasible region of the original problem. Infeasible-start primal-dual variants can violate equality or original primal constraints until convergence.": 1,
-    "Correct application of Cauchy condensation to the positive decreasing harmonic terms.": 1
+    "Correct application of Cauchy condensation to the positive decreasing harmonic terms.": 1,
+    "Correct concrete nesting of quotient, product and chain rules in one expression.": 1,
+    "Correct linear decomposition, evaluations and cancellation interpretation.": 1,
+    "Correct explanation that algebraically identical functions on the same domain have the same derivative where it exists.": 1,
+    "Correct antiderivative, endpoint values and area interpretation.": 1,
+    "The universal claim that Taylor linearization is exactly correct only at its expansion point and wrong everywhere else is false. Affine functions equal their linearization on the entire domain; nonlinear functions can also intersect their tangent model elsewhere.": 1,
+    "Correct applications of multiple integrals to distributed electromagnetic sources, flux and energy.": 1,
+    "Correct optimization-context plain-language basin-of-attraction definition.": 1,
+    "Correct description of the logical direction and inconclusive possibilities of the named standard convergence tests.": 1,
+    "Correct temperature gradient, steepest ascent/descent directions and magnitude interpretation.": 1,
+    "Correct qualitative harmonic-distortion measurement and Fourier-analysis motivation.": 1,
+    "Correct periodic-grid Fourier derivative and pseudospectral nonlinear-evaluation description.": 1,
+    "Correct brief alternating-series test conditions.": 1,
+    "The experimental workflow is recognizable, but identifying spectral peaks directly as natural frequencies needs damping/mode-separation qualifications, and physical modal independence is not simply an assumption supplied by the Fourier transform.": 1,
+    "Correct root-test limsup thresholds and comparison with the usual ratio test.": 1,
+    "Fourier features can inform power-system protection, but the answer presents a generic odd/interharmonic fault signature and automatic trip-before-damage conclusion without the necessary relay, event and coordination conditions.": 1,
+    "The Kummer formulas are appropriate for a positive-term target series, but the answer specifies positivity only for the auxiliary p_n. Without positive a_n, its divergence branch can give a false conclusion.": 1,
+    "Correct spatial average formula over a finite positive-area region.": 1,
+    "Correct path parametrization, differential substitution and exact integral.": 1,
+    "Correct two-sided derivative criterion and diagnostic use of one-sided limits.": 1,
+    "Correct unifying derivative-over-region versus field-over-boundary interpretation of generalized Stokes.": 1,
+    "Exact cylindrical Jacobian matrix and determinant proof.": 1,
+    "Correct qualified claim that no universal terminating mechanical algorithm decides convergence for every effectively specified series.": 1,
+    "The ceiling/floor intuition omits the nonnegative-term hypothesis needed by the usual direct comparison test. Being below a convergent positive series does not alone force an arbitrary signed series to converge.": 1,
+    "Counting constraints alone does not justify unique determination or nothing left to optimize. The answer omits equality, independence, regularity and multiple-solution qualifications; inequalities can leave a full-dimensional feasible set.": 1,
+    "The high-order local-basis/geometry explanation is useful, but the unqualified exponential rate for smooth solutions confuses smoothness with analyticity. Smooth nonanalytic functions need not have exponential spectral convergence.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "85892f7ace034b2fb936ed560e9ba51a3a1d90f656dc49b545c70e371c6d4983",
-  "substantively_unreviewed": 932,
+  "published_decisions_sha256": "ace706cd8342cbd6d594644fae34891beba47ffcacf25d2c80f8d8da2023a653",
+  "substantively_unreviewed": 907,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
