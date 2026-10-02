@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1557,
+    "PASS": 1580,
     "REJECT": 68,
-    "QUARANTINE": 310,
-    "NEEDS_HUMAN_REVIEW": 177
+    "QUARANTINE": 312,
+    "NEEDS_HUMAN_REVIEW": 152
   },
   "by_domain": {
     "circuits": {
@@ -56,10 +56,10 @@
       "NEEDS_HUMAN_REVIEW": 0
     },
     "materials_manufacturing": {
-      "PASS": 62,
+      "PASS": 85,
       "REJECT": 2,
-      "QUARANTINE": 11,
-      "NEEDS_HUMAN_REVIEW": 175
+      "QUARANTINE": 13,
+      "NEEDS_HUMAN_REVIEW": 150
     },
     "physics": {
       "PASS": 212,
@@ -74,18 +74,18 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1934,
+  "agent_substantive_reviews": 1959,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "96e541001d0db44769500b5ec3f4ddf2d4473677f614d5d903b5100a6b43154e",
+  "technical_review_sha256": "a0f37664790d9906418cdf569c034902f89e6c2aa30e4a06e4f76a7025776630",
   "reasons": {
     "Faithful conceptual paraphrase that conservation and boundary requirements are integral to the coupled solution process. The prose does not explicitly assert exact feasibility of every internal numerical iterate.": 1,
     "Correct practical explanation of boundary data in an ordinary PDE discretization and their effect on closure, accuracy and stability.": 1,
     "Correct elementary local/absolute extrema distinction, including endpoint possibilities.": 1,
     "Universal three-phase-motor size, efficiency and self-starting comparison lacks machine type, rating and comparison conditions; synchronous motors are a counterexample to unqualified self-starting.": 1,
     "The basic inclusion of polynomials among rational expressions is correct, but the claim that polynomials always tend to infinity and can never have horizontal asymptotes fails for constant polynomials.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 175,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 150,
     "Accurate typical FMEA-entry checklist and appropriate acknowledgement that responsibility/action-status fields vary by team. It does not impose one universal risk-priority formula or imply FMEA alone validates safety.": 1,
     "Changing L/C reactance redistributes complex branch currents and voltages; response and cancellation are correctly circuit dependent rather than universally monotone.": 1,
     "Correct current-sign reversal of magnetic wire force and its role in mechanical commutation.": 1,
@@ -2015,11 +2015,36 @@
     "Correct decomposition of indentation response and test-dependent hardness measurement.": 1,
     "Correct standard carbon-steel martensite hardening explanation.": 1,
     "Correct mechanism-level link from tensile loading to crack opening and environmentally assisted fracture.": 1,
-    "Correct terms and forest-spacing origin of the Taylor hardening scale.": 1
+    "Correct terms and forest-spacing origin of the Taylor hardening scale.": 1,
+    "Correct dimensional-stability meaning and conventional retained-austenite/tempering control strategy.": 1,
+    "Correct distinction between consequence/severity and the fracture deformation mode.": 1,
+    "Correct introductory tempering purpose and carbon-steel carbide/stress-relief mechanism.": 1,
+    "Correct rejection of a below-yield static check as proof against fatigue.": 1,
+    "Correct explanation of fatigue-life scatter from local defects, finish and residual stress.": 1,
+    "Correct stored-deformation-energy explanation of lower recrystallization temperatures after greater cold work.": 1,
+    "Correct practical hardness-target use of a steel-specific Hollomon-Jaffe calibration.": 1,
+    "Correct classical three-stage creep-rate and damage-mechanism description.": 1,
+    "Correct electrochemical coupling of metal oxidation with a cathodic reduction reaction.": 1,
+    "Correct screening-index purpose and explicit service-condition limitations of PREN.": 1,
+    "Correct explicitly conditional long-duration polymer creep scenario below short-time strength.": 1,
+    "Correct low-cycle fatigue mechanism for repeatedly plastically bent paperclip material.": 1,
+    "Reasonable conditional exploration of a hypothetical mixed electronic/ionic electrolyte without discarding redox balance.": 1,
+    "Correct distinction between high strength and low fracture ductility, with flaw-size-controlled glass-fiber example.": 1,
+    "Correct immediate notch-to-local-driving-force causal explanation.": 1,
+    "Correct concise fracture definition in terms of new surfaces and crack growth.": 1,
+    "Reasonable conventional quenched carbon-steel explanation of increasing martensite hardness and retained-austenite limitation.": 1,
+    "Correct qualitative localized passive-film breakdown and pitting feedback mechanism in a susceptible chloride electrolyte.": 1,
+    "Correct conventional surface-hydrogen entry, diffusion/trapping and stressed-fracture overview.": 1,
+    "Correct counterexample showing creep cannot be reduced to recoverable elasticity.": 1,
+    "The general over-tempering concern is valid, but a universal 30–50-degree offset and a temperature-only small-hardness-loss assurance omit soak time and alloy-specific tempering behavior.": 1,
+    "Correct kinetic-barrier paraphrase distinguishing passivity from thermodynamic immunity.": 1,
+    "Correct equilibrium two-phase fraction use of the lever rule.": 1,
+    "The likely causes are sensible, but the surface-martensite/contraction sequence blurs thermal shrinkage with transformation strain. Martensite formation itself increases volume, so the proposed stress history needs clarification.": 1,
+    "Correct conditional fatigue-life explanation via larger cyclic crack-driving range.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "8799e2a6c002f5d90839cc3845ce343e11e234de62444b272fb3a58dbee40f37",
-  "substantively_unreviewed": 175,
+  "published_decisions_sha256": "6f44f8365308b7a038a288a8b7fa631738b652a93ba02454a2f3a3d7c3b13e9a",
+  "substantively_unreviewed": 150,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
