@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 379,
+    "PASS": 402,
     "REJECT": 36,
-    "QUARANTINE": 128,
-    "NEEDS_HUMAN_REVIEW": 1569
+    "QUARANTINE": 130,
+    "NEEDS_HUMAN_REVIEW": 1544
   },
   "by_domain": {
     "circuits": {
@@ -44,10 +44,10 @@
       "NEEDS_HUMAN_REVIEW": 208
     },
     "electrical_components": {
-      "PASS": 132,
+      "PASS": 155,
       "REJECT": 9,
-      "QUARANTINE": 34,
-      "NEEDS_HUMAN_REVIEW": 125
+      "QUARANTINE": 36,
+      "NEEDS_HUMAN_REVIEW": 100
     },
     "electromagnetism": {
       "PASS": 2,
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 542,
+  "agent_substantive_reviews": 567,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "3330bc9e604f388bc5038376d18e513127a165ea86f4860d38019ef152416d53",
+  "technical_review_sha256": "23a193026ca6bde3bd47c22bd3c1ae840c415370b0ea24f17920ea4c0952f2c5",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1567,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 1542,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -623,11 +623,36 @@
     "Correct broad energy-conversion definition of a transducer with a valid mechanical-to-electrical example. It is not restricted to sensors and does not claim a numerical conversion efficiency.": 1,
     "Correct distinction and interaction between reducing noise generation and controlling coupling/return/bonding paths. It treats source, path, mode conversion and radiation as separate diagnostic links rather than prescribing a single grounding cure.": 1,
     "Correct feedback-regulation and stability explanation. Inappropriate compensation or output-network characteristics can destabilize the loop; the answer does not claim every oscillation has that one cause or invent a compensation network.": 1,
-    "Correct conduction-loss explanation and conditional thermal consequences for an SSR. It distinguishes mechanical wear advantages from semiconductor temperature limits and says often need heatsinking/derating rather than giving an unsupported universal heatsink or current rating.": 1
+    "Correct conduction-loss explanation and conditional thermal consequences for an SSR. It distinguishes mechanical wear advantages from semiconductor temperature limits and says often need heatsinking/derating rather than giving an unsupported universal heatsink or current rating.": 1,
+    "Accurate static-versus-dynamic MOSFET gate-drive distinction, including charge, Miller coupling, peak current and driver timing. It avoids using threshold voltage as a drive guarantee and does not claim zero real gate leakage or zero switching energy.": 1,
+    "Sound explanation of why an initial correction may not remain valid when layout-induced leakage, thermal offsets or coupling change with operating conditions. The conditional premise is changing parasitic error, not a claim that calibration can never include environmental compensation.": 1,
+    "Correct qualitative low-pass effect when useful sensor changes are slower than the noise: the RC time constant attenuates faster components while passing slower variation. Might help appropriately avoids claiming it can separate overlapping-band signal and noise without distortion.": 1,
+    "Reasonable conditional sensor-selection comparison: target material and distance come first, and the answer separately checks chemical compatibility, sealing and cleaning rather than equating an IP rating with all-environment safety. It does not certify an unnamed fertilizer installation.": 1,
+    "Correct concise LVDS description of small-swing differential signaling over a terminated pair with potential speed/EMI/immunity advantages. Differential current swing is acceptable current-steering language rather than an assertion that voltage is irrelevant; no unconditional cable/data-rate guarantee is made.": 1,
+    "Appropriately multi-hypothesis reasoning: galvanic isolation does not eliminate capacitive common-mode coupling, cable paths, supply disturbances or receiver-margin problems. It explicitly says measurements are needed and does not infer a unique fault or certify barrier safety.": 1,
+    "Reasonable conditional architecture for a large 24-to-3.3 V step-down, with optional low-noise postregulation and no part/rating prescription. Usually preserves exceptions such as extremely small loads; the answer does not claim every linear solution is thermally impossible.": 1,
+    "Certification and breaking capacity are important, but safety-rated versus regular is not defined as one universal fuse class, and without arcing again conflates safe arc interruption with zero internal arc formation. The exact standard, voltage and fault-duty rating must be identified rather than inferred from a generic label.": 1,
+    "Sound topology-aware decomposition of buffering, inductive current dynamics and resistive sensing/damping/loss, with explicit ESR/ESL/core/saturation limitations. It repeatedly qualifies placement and boundary instead of pretending every input stage has one fixed circuit.": 1,
+    "Correct basic four-wire force/sense technique for suppressing lead/contact drop in a resistance measurement. Removing those errors is accepted idealized wording when sense points bracket the DUT; it does not remove contact resistance inside the sensed boundary or other instrument errors.": 1,
+    "The graph-reading steps are broadly correct, but reading maximum allowable current from pulse width alone omits the plotted case temperature and single-versus-repetitive pulse conditions. A vague stay well below cannot establish suitability under hotter or repetitive operation. Hold the unqualified application recipe rather than importing missing thermal conditions.": 1,
+    "Appropriate possible-cause list for a hot contactor, including terminal/contact resistance, load/rating and ambient conditions. Could be several things avoids the unsupported definitive diagnosis seen in another record.": 1,
+    "Correct practical meaning of a logic-compatible SSR input, with the essential explicit warning to check actual voltage/current capability rather than assume every MCU or PLC pin can drive it. No universal logic voltage or input-current rating is invented.": 1,
+    "Correct ideal capacitive-versus-inductive reactance trend, at the conceptual level asked about. It does not address complete real-component impedance beyond self-resonance; easier/harder to drive means lower/higher impedance magnitude here.": 1,
+    "Correct reason to consider shielding for small thermocouple/strain-gauge signals exposed to EMI. It says reduce pickup rather than eliminate every coupling mechanism and does not supply an unqualified shield-termination or protective-earth instruction.": 1,
+    "Appropriate ADC-driver selection checklist covers dynamic settling, noise/distortion, ranges, load stability, DC error and supply rejection, and calls for ADC-specific vendor guidance. It does not mistake bandwidth alone for guaranteed settling precision.": 1,
+    "Correct rejection of the false amplify-versus-switch dichotomy: semiconductor transistors are routinely driven between off and low-loss on states rather than intentionally held in a linear-amplifying regime.": 1,
+    "Reasonable conditional lifecycle/BOM comparison between the stated short-season toy and long-service industrial system. May and more likely preserve business-dependent trade-offs; the answer does not imply cost pressure excuses product-safety duties or invent a specific company's policy.": 1,
+    "Clear, accurate operational paraphrase of component lifecycle exposure and downstream redesign/supply costs. It uses may/can and does not assert a specific supplier or part is actually nearing end of life.": 1,
+    "Defensible conditional recommendation using the prompt's stated lead time, price premium, criticality and supply risks, rather than supplier nationality alone. It acknowledges cases where the alternative could be justified and creates no purchase commitment or invented cost calculation.": 1,
+    "Correct explanation of the common pulse-duration family on an SOA plot: transient thermal impedance permits greater short-pulse stress than continuous operation under the plotted conditions. It is not a complete application-qualification procedure or a promise of unlimited microsecond current.": 1,
+    "Plausible non-exhaustive nanomotion sensing options and appropriate warning about environmental drift. Movement can be dynamic, so mentioning piezoelectric sensing is not a claim of unlimited DC/static position measurement; no chosen system accuracy is certified.": 1,
+    "Correct inductive current-continuity, wiring-parasitic and transient-stress chain. It does not equate occasional survival/avalanche with design qualification and appropriately lists multiple clamp approaches depending on release speed.": 1,
+    "Correct practical LED-current-limiting explanation: the steep I-V relationship makes a bare voltage source an unreliable current control, and a suitable resistor/driver limits stress. Brightness/voltage wording is informal, but the causal current mechanism is explicitly supplied.": 1,
+    "Correct qualified reversibility example: piezoelectric elements can convert mechanical excitation to an electrical signal and electrical excitation to mechanical motion. Sometimes avoids generalizing this to all transducers or promising equal efficiency in both directions.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "26e7faf90a0b5887613f947adf9e08c2a082ea7cdfc3e48ed4480c3488cda383",
-  "substantively_unreviewed": 1567,
+  "published_decisions_sha256": "245454cd5fa357bf77ba1f914ced69285d446b01c9e7214e4ff8adfdc72c3b15",
+  "substantively_unreviewed": 1542,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
