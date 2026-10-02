@@ -53827,9 +53827,937 @@
       "independent_agent_review": true,
       "review_batch": "reports/phase3-review-batches/physics-0125-0150.json",
       "original_domain_ordinal": 149
+    },
+    {
+      "id": "repo-b0c1d74829b93f3ffea2718e",
+      "messages_sha256": "b0c1d74829b93f3ffea2718ee8f21f3cbf5dd40ee85d1f93ea74c2745289191f",
+      "state": "PASS",
+      "rationale": "Correct vacuum parallel-plate capacitance derivation with the fringing approximation explicitly stated.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_electromagnetic_relativistic_and_modal_derivation",
+          "finding": "Individually checked capacitance/field/energy formulas, Lorentz transformations, time dilation and numerical speeds, and generalized mass-stiffness eigenvector conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Opposite infinite-sheet fields add to sigma/epsilon0 between the plates; V=E*d and Q=sigma*A give C=epsilon0*A/d."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This assumes a linear vacuum gap and large plate dimensions relative to separation."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 89,
+      "assistant_tokens": 67,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 150
+    },
+    {
+      "id": "repo-31ea32e7c18a267e13d39f7e",
+      "messages_sha256": "31ea32e7c18a267e13d39f7eacbea51911500cc156983eaccf67b0a2965422e7",
+      "state": "PASS",
+      "rationale": "Correct axial field of a uniformly charged ring and symmetry/far-field checks.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_electromagnetic_relativistic_and_modal_derivation",
+          "finding": "Individually checked capacitance/field/energy formulas, Lorentz transformations, time dilation and numerical speeds, and generalized mass-stiffness eigenvector conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "All charge elements are at sqrt(R²+z²), and their transverse fields cancel; the axial projection gives k*Q*z/(R²+z²)^(3/2)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "For negative z the signed formula gives the corresponding opposite axial direction; k is the vacuum Coulomb constant."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 126,
+      "assistant_tokens": 92,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 151
+    },
+    {
+      "id": "repo-e9f39c2599e773415249774f",
+      "messages_sha256": "e9f39c2599e773415249774fe392dfefbb1a3474fb3acdcf4f6df19036b02c91",
+      "state": "PASS",
+      "rationale": "Correct magnetic stored-energy derivation for an ideal constant-inductance element.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_electromagnetic_relativistic_and_modal_derivation",
+          "finding": "Individually checked capacitance/field/energy formulas, Lorentz transformations, time dilation and numerical speeds, and generalized mass-stiffness eigenvector conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With V=L*dI/dt and passive power V*I, U=integral_0^I L*I_prime dI_prime=L*I²/2."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Nonlinear or hysteretic inductors require flux-current constitutive integration and losses; the standard linear ideal-inductor model is intended."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 79,
+      "assistant_tokens": 61,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 152
+    },
+    {
+      "id": "repo-405c76a8baab5c4ee74ecafb",
+      "messages_sha256": "405c76a8baab5c4ee74ecafb1d095f46fc44e15d3900d138a1205d33e7831443",
+      "state": "PASS",
+      "rationale": "Correct uniform-field magnetic-dipole torque and zero net force, with aligned-gradient attraction qualified.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_electromagnetic_relativistic_and_modal_derivation",
+          "finding": "Individually checked capacitance/field/energy formulas, Lorentz transformations, time dilation and numerical speeds, and generalized mass-stiffness eigenvector conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Torque=mu cross B and force=grad(mu dot B); uniform B makes the latter zero, while an aligned fixed moment is drawn toward increasing field strength."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "An aligned moment has zero torque; no translation means no magnetically induced center-of-mass acceleration, not removal of preexisting translational velocity."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 86,
+      "assistant_tokens": 64,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 153
+    },
+    {
+      "id": "repo-6a1c7c3bffcc7b052a40b98b",
+      "messages_sha256": "6a1c7c3bffcc7b052a40b98b8850f017bb6c17831a762dbe4fdf58bf12fc02af",
+      "state": "PASS",
+      "rationale": "Correct qualitative boosted-line-charge example of electric and magnetic field mixing between inertial frames.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT8.033, Relativity and Spacetime Physics full notes",
+          "url": "https://ocw.mit.edu/courses/8-033-introduction-to-relativity-and-spacetime-physics-fall-2024/mit8_033_f24_lec_full.pdf",
+          "finding": "Derives Lorentz kinematics, proper time and electromagnetic field transformations in a covariant framework."
+        },
+        {
+          "method": "independent_electromagnetic_relativistic_and_modal_derivation",
+          "finding": "Individually checked capacitance/field/energy formulas, Lorentz transformations, time dilation and numerical speeds, and generalized mass-stiffness eigenvector conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A rest charge distribution with transverse E and B=0 acquires nonzero B under a boost parallel to the line, along with transformed charge/current density."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Electric and magnetic fields are components of one tensor, but not every field configuration can be transformed into a purely electric field: invariants constrain that possibility. The example establishes existence/mixing, not universal elimination of B."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF",
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 162,
+      "assistant_tokens": 125,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 154
+    },
+    {
+      "id": "repo-60ed49cebab7ec9c4b0d163f",
+      "messages_sha256": "60ed49cebab7ec9c4b0d163fecd357bb8b6cf3f00eb5ba071bca78408b7882e8",
+      "state": "PASS",
+      "rationale": "Correct distinction between normal local clock/biology behavior and accumulated proper time along different worldlines.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT8.033, Relativity and Spacetime Physics full notes",
+          "url": "https://ocw.mit.edu/courses/8-033-introduction-to-relativity-and-spacetime-physics-fall-2024/mit8_033_f24_lec_full.pdf",
+          "finding": "Derives Lorentz kinematics, proper time and electromagnetic field transformations in a covariant framework."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Comparative elapsed aging is defined between appropriate comparison events; merely seeing a remote clock includes signal-propagation effects that need correction."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "OPERATIONAL_OR_DIAGNOSIS"
+      ],
+      "qwen_tokens": 91,
+      "assistant_tokens": 66,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 155
+    },
+    {
+      "id": "repo-5032d7e3ac46182d858dcd7c",
+      "messages_sha256": "5032d7e3ac46182d858dcd7c884a3311b1a2ec12e9d274411eaefcc3f348da82",
+      "state": "PASS",
+      "rationale": "Correct specified special-relativistic proper-time calculation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT8.033, Relativity and Spacetime Physics full notes",
+          "url": "https://ocw.mit.edu/courses/8-033-introduction-to-relativity-and-spacetime-physics-fall-2024/mit8_033_f24_lec_full.pdf",
+          "finding": "Derives Lorentz kinematics, proper time and electromagnetic field transformations in a covariant framework."
+        },
+        {
+          "method": "independent_electromagnetic_relativistic_and_modal_derivation",
+          "finding": "Individually checked capacitance/field/energy formulas, Lorentz transformations, time dilation and numerical speeds, and generalized mass-stiffness eigenvector conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Delta_tau=Delta_t/gamma=1 hour/2=0.5 hour."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This isolates the given kinematic gamma in the named Earth frame; real satellite gravitational and changing-orbit effects require a spacetime model."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 114,
+      "assistant_tokens": 73,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 156
+    },
+    {
+      "id": "repo-9378cf863c4417f0645770a9",
+      "messages_sha256": "9378cf863c4417f0645770a95e210cfd01adc61a02a08d44c0f21ff47fccd912",
+      "state": "PASS",
+      "rationale": "Correct plain-language relativity principle for inertial frames and distinction from locally measurable acceleration.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT8.033, Relativity and Spacetime Physics full notes",
+          "url": "https://ocw.mit.edu/courses/8-033-introduction-to-relativity-and-spacetime-physics-fall-2024/mit8_033_f24_lec_full.pdf",
+          "finding": "Derives Lorentz kinematics, proper time and electromagnetic field transformations in a covariant framework."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Motion relative to matter, radiation backgrounds or landmarks can be measured; the claim concerns a preferred vacuum inertial state in the laws themselves."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 81,
+      "assistant_tokens": 61,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 157
+    },
+    {
+      "id": "repo-90253d68482e005269ba9565",
+      "messages_sha256": "90253d68482e005269ba9565781763e8ba33cfe3b8ca20c3d715c90229fcdc90",
+      "state": "PASS",
+      "rationale": "Correct resolution of reciprocal length contraction through frame-dependent simultaneity.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT8.033, Relativity and Spacetime Physics full notes",
+          "url": "https://ocw.mit.edu/courses/8-033-introduction-to-relativity-and-spacetime-physics-fall-2024/mit8_033_f24_lec_full.pdf",
+          "finding": "Derives Lorentz kinematics, proper time and electromagnetic field transformations in a covariant framework."
+        },
+        {
+          "method": "independent_electromagnetic_relativistic_and_modal_derivation",
+          "finding": "Individually checked capacitance/field/energy formulas, Lorentz transformations, time dilation and numerical speeds, and generalized mass-stiffness eigenvector conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A moving-rod length uses two endpoint events simultaneous in the measuring frame; the Lorentz time transformation makes those generally nonsimultaneous in the rod rest frame."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Comparing identical events is a different spacetime-interval question from measuring a spatial length at each frame own simultaneous time."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 94,
+      "assistant_tokens": 67,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 158
+    },
+    {
+      "id": "repo-b16a336a9f9f3544a4dc30da",
+      "messages_sha256": "b16a336a9f9f3544a4dc30dadbbdb1a0ccb1fd0855d3ecb2cba7f860a3875987",
+      "state": "PASS",
+      "rationale": "Correct twin proper-time/worldline explanation and turnaround asymmetry.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT8.033, Relativity and Spacetime Physics full notes",
+          "url": "https://ocw.mit.edu/courses/8-033-introduction-to-relativity-and-spacetime-physics-fall-2024/mit8_033_f24_lec_full.pdf",
+          "finding": "Derives Lorentz kinematics, proper time and electromagnetic field transformations in a covariant framework."
+        },
+        {
+          "method": "independent_electromagnetic_relativistic_and_modal_derivation",
+          "finding": "Individually checked capacitance/field/energy formulas, Lorentz transformations, time dilation and numerical speeds, and generalized mass-stiffness eigenvector conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Elapsed proper time is integral sqrt(1-v(t)²/c²) dt in an inertial frame; different reunion paths can yield different totals."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Acceleration changes the traveler frame history but is not a local biological clock-slowing mechanism by itself."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 99,
+      "assistant_tokens": 77,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 159
+    },
+    {
+      "id": "repo-caa43d904590e9918298b16f",
+      "messages_sha256": "caa43d904590e9918298b16f8fe0763fa38bd19ad5bb36a2197de97d55adbd25",
+      "state": "PASS",
+      "rationale": "Correct inversion of gamma and numerical speed.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "method": "independent_electromagnetic_relativistic_and_modal_derivation",
+          "finding": "Individually checked capacitance/field/energy formulas, Lorentz transformations, time dilation and numerical speeds, and generalized mass-stiffness eigenvector conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "v/c=sqrt(1-1/9)=sqrt(8/9)=0.942809..., rounded0.943."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "gamma fixes speed magnitude, not velocity direction."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 116,
+      "assistant_tokens": 91,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 160
+    },
+    {
+      "id": "repo-d0d941a72862dac47e7e849d",
+      "messages_sha256": "d0d941a72862dac47e7e849d2338aa3d1783a1c7c0c2aac4026fe569af2d7ab5",
+      "state": "PASS",
+      "rationale": "Correct central role of relativity of simultaneity in consistent Lorentz measurements.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT8.033, Relativity and Spacetime Physics full notes",
+          "url": "https://ocw.mit.edu/courses/8-033-introduction-to-relativity-and-spacetime-physics-fall-2024/mit8_033_f24_lec_full.pdf",
+          "finding": "Derives Lorentz kinematics, proper time and electromagnetic field transformations in a covariant framework."
+        },
+        {
+          "method": "independent_electromagnetic_relativistic_and_modal_derivation",
+          "finding": "Individually checked capacitance/field/energy formulas, Lorentz transformations, time dilation and numerical speeds, and generalized mass-stiffness eigenvector conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Delta_t_prime=gamma*(Delta_t-v*Delta_x/c²) can be nonzero when Delta_t=0 and separated events have Delta_x nonzero."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The disagreement concerns distant simultaneity, not a disagreement over coincidence of two events at one spacetime point."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 89,
+      "assistant_tokens": 67,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 161
+    },
+    {
+      "id": "repo-56e24e4b3a5b4c5236cbe40d",
+      "messages_sha256": "56e24e4b3a5b4c5236cbe40d61850e65b55c467ca297ce2b520ed2dde86739de",
+      "state": "PASS",
+      "rationale": "Correct rest-frame simultaneous-endpoint measurement of proper length and its standard longitudinal moving-frame comparison.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT8.033, Relativity and Spacetime Physics full notes",
+          "url": "https://ocw.mit.edu/courses/8-033-introduction-to-relativity-and-spacetime-physics-fall-2024/mit8_033_f24_lec_full.pdf",
+          "finding": "Derives Lorentz kinematics, proper time and electromagnetic field transformations in a covariant framework."
+        },
+        {
+          "method": "independent_electromagnetic_relativistic_and_modal_derivation",
+          "finding": "Individually checked capacitance/field/energy formulas, Lorentz transformations, time dilation and numerical speeds, and generalized mass-stiffness eigenvector conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A rod at rest has L0=x2-x1 for simultaneous rest-frame endpoints; for collinear relative motion the simultaneous moving-frame length is L0/gamma."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Only the component parallel to relative motion contracts. A purely transverse rod keeps its length, so the closing sentence is the standard longitudinal length-contraction case rather than every orientation."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 101,
+      "assistant_tokens": 85,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 162
+    },
+    {
+      "id": "repo-21d0ecfa30309d02c7cdd92f",
+      "messages_sha256": "21d0ecfa30309d02c7cdd92fa034cbcd467e0711adc59f236a702c61739990ef",
+      "state": "PASS",
+      "rationale": "Correct collinear relativistic velocity addition and numerical result.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT8.033, Relativity and Spacetime Physics full notes",
+          "url": "https://ocw.mit.edu/courses/8-033-introduction-to-relativity-and-spacetime-physics-fall-2024/mit8_033_f24_lec_full.pdf",
+          "finding": "Derives Lorentz kinematics, proper time and electromagnetic field transformations in a covariant framework."
+        },
+        {
+          "method": "independent_electromagnetic_relativistic_and_modal_derivation",
+          "finding": "Individually checked capacitance/field/energy formulas, Lorentz transformations, time dilation and numerical speeds, and generalized mass-stiffness eigenvector conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "u/c=(0.7+0.8)/(1+0.7*0.8)=1.5/1.56=0.961538..., about0.962."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Speeds are along the same forward axis in the stated frames; noncollinear addition needs component formulas."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 192,
+      "assistant_tokens": 145,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 163
+    },
+    {
+      "id": "repo-9be2c32a9066d6a8119c81c7",
+      "messages_sha256": "9be2c32a9066d6a8119c81c7bca3cc70ecb9b688ca9fa6358ddb291c9face32c",
+      "state": "PASS",
+      "rationale": "Correct average muon travel distance from dilated mean lifetime.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT8.033, Relativity and Spacetime Physics full notes",
+          "url": "https://ocw.mit.edu/courses/8-033-introduction-to-relativity-and-spacetime-physics-fall-2024/mit8_033_f24_lec_full.pdf",
+          "finding": "Derives Lorentz kinematics, proper time and electromagnetic field transformations in a covariant framework."
+        },
+        {
+          "method": "independent_electromagnetic_relativistic_and_modal_derivation",
+          "finding": "Individually checked capacitance/field/energy formulas, Lorentz transformations, time dilation and numerical speeds, and generalized mass-stiffness eigenvector conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "gamma=15.8192999292; lab mean lifetime=34.8024598443 microseconds; v*gamma*tau0=10412.64795 m using c=299792458 m/s."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Individual decay distances are exponentially distributed; the result is the mean for an unchanged-speed beam with negligible energy loss."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 239,
+      "assistant_tokens": 195,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 164
+    },
+    {
+      "id": "repo-0daf5a17b27f87044b633d4d",
+      "messages_sha256": "0daf5a17b27f87044b633d4d915fa2138705e38108f9aa22ab9076a85ffb7dc4",
+      "state": "PASS",
+      "rationale": "Correct accessible statement of the two special-relativity postulates and their kinematic consequences.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT8.033, Relativity and Spacetime Physics full notes",
+          "url": "https://ocw.mit.edu/courses/8-033-introduction-to-relativity-and-spacetime-physics-fall-2024/mit8_033_f24_lec_full.pdf",
+          "finding": "Derives Lorentz kinematics, proper time and electromagnetic field transformations in a covariant framework."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The relativity principle concerns inertial laboratories and vacuum light speed; acceleration/gravity and light propagation in material media require their additional descriptions."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 142,
+      "assistant_tokens": 119,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 165
+    },
+    {
+      "id": "repo-81fad4a7576b84116453ad5a",
+      "messages_sha256": "81fad4a7576b84116453ad5aa2ac0e316862df999cee483099fbaa6e00a3e602",
+      "state": "PASS",
+      "rationale": "Correct derivation outline using linearity, reciprocal inertial-frame symmetry and preservation of both light directions.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT8.033, Relativity and Spacetime Physics full notes",
+          "url": "https://ocw.mit.edu/courses/8-033-introduction-to-relativity-and-spacetime-physics-fall-2024/mit8_033_f24_lec_full.pdf",
+          "finding": "Derives Lorentz kinematics, proper time and electromagnetic field transformations in a covariant framework."
+        },
+        {
+          "method": "independent_electromagnetic_relativistic_and_modal_derivation",
+          "finding": "Individually checked capacitance/field/energy formulas, Lorentz transformations, time dilation and numerical speeds, and generalized mass-stiffness eigenvector conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The light conditions give t_prime=A*(t-v*x/c²); composing the inverse with equal positive scale factor gives A²*(1-v²/c²)=1, hence A=gamma."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Homogeneity, isotropy/reciprocity, aligned origins and the continuous time-orientation branch are part of the stated symmetry assumptions; transverse coordinates are omitted because the question focuses on the x boost."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 224,
+      "assistant_tokens": 196,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 166
+    },
+    {
+      "id": "repo-2feaf10dafdf4b0f448e00c1",
+      "messages_sha256": "2feaf10dafdf4b0f448e00c1bf34914df8a57ce393bb290bc580e8acc651ce1a",
+      "state": "PASS",
+      "rationale": "Correct Minkowski interval-signature and causal-classification explanation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT8.033, Relativity and Spacetime Physics full notes",
+          "url": "https://ocw.mit.edu/courses/8-033-introduction-to-relativity-and-spacetime-physics-fall-2024/mit8_033_f24_lec_full.pdf",
+          "finding": "Derives Lorentz kinematics, proper time and electromagnetic field transformations in a covariant framework."
+        },
+        {
+          "method": "independent_electromagnetic_relativistic_and_modal_derivation",
+          "finding": "Individually checked capacitance/field/energy formulas, Lorentz transformations, time dilation and numerical speeds, and generalized mass-stiffness eigenvector conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The sign of c²*Delta_t²-|Delta_r|² separates timelike, null and spacelike intervals and is invariant under Lorentz boosts."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The opposite overall metric-sign convention is equally valid; relative time-space signs, not one universal sign convention, carry the structure."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 168,
+      "assistant_tokens": 145,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 167
+    },
+    {
+      "id": "repo-f09cd0192d6e08fb125a6097",
+      "messages_sha256": "f09cd0192d6e08fb125a6097a3844494ad016768d3a65b30ae9d46cf94df1a4b",
+      "state": "PASS",
+      "rationale": "Correct concise distinction between system modal frequencies and externally selected drive frequency.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT8.03SC, Coupled Oscillators and Normal Modes transcript",
+          "url": "https://live.ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/119a2ad7e8f7f521d65cf1e6dc1dd167_I0YACDaY-ww.pdf",
+          "finding": "Normal-mode shapes follow the stiffness and mass matrices; symmetry helps identify particular eigenvectors but the full generalized eigenproblem controls the result."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Modal frequencies can depend on load, amplitude or operating state in more complicated systems; the ordinary linear fixed-system meaning is intended."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 39,
+      "assistant_tokens": 25,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 168
+    },
+    {
+      "id": "repo-62156255dd66d4f91bf90ecf",
+      "messages_sha256": "62156255dd66d4f91bf90ecfb629eba373af0754b99c37c2bdb7126a723ad9f1",
+      "state": "PASS",
+      "rationale": "Correct reading of a modal-frequency graph label as a natural-mode property rather than necessarily the applied forcing frequency.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT8.03SC, Coupled Oscillators and Normal Modes transcript",
+          "url": "https://live.ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/119a2ad7e8f7f521d65cf1e6dc1dd167_I0YACDaY-ww.pdf",
+          "finding": "Normal-mode shapes follow the stiffness and mass matrices; symmetry helps identify particular eigenvectors but the full generalized eigenproblem controls the result."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A measured peak still requires proper modal identification; the prompt asks what the label means, not to validate an arbitrary measurement."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS",
+        "VISUAL_CONTEXT_CHECK"
+      ],
+      "qwen_tokens": 55,
+      "assistant_tokens": 29,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 169
+    },
+    {
+      "id": "repo-8813601e76a510f4bf0b6560",
+      "messages_sha256": "8813601e76a510f4bf0b656062922b16e6e0ba2669ad9ee0adcceafb8eae3281",
+      "state": "PASS",
+      "rationale": "Correct ordinary stable linear undamped normal-mode behavior.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT8.03SC, Coupled Oscillators and Normal Modes transcript",
+          "url": "https://live.ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/119a2ad7e8f7f521d65cf1e6dc1dd167_I0YACDaY-ww.pdf",
+          "finding": "Normal-mode shapes follow the stiffness and mass matrices; symmetry helps identify particular eigenvectors but the full generalized eigenproblem controls the result."
+        },
+        {
+          "method": "independent_electromagnetic_relativistic_and_modal_derivation",
+          "finding": "Individually checked capacitance/field/energy formulas, Lorentz transformations, time dilation and numerical speeds, and generalized mass-stiffness eigenvector conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a positive modal eigenvalue omega_n², q_n_doubleprime+omega_n²*q_n=0 and x=v_n*q_n has a fixed spatial shape and constant sinusoidal envelope."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Zero-frequency, unstable, nonlinear or explicitly driven modes need different treatment; the phrase pure oscillator mode is read in the conventional stable free linear setting."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [],
+      "qwen_tokens": 60,
+      "assistant_tokens": 32,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 170
+    },
+    {
+      "id": "repo-68120cc8f15f3612288277af",
+      "messages_sha256": "68120cc8f15f3612288277af7496a713bc7d1b2f52e81ea2e6e8f210de2cd992",
+      "state": "PASS",
+      "rationale": "Correct qualified statement that symmetry often predicts modal structure before a determinant calculation.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT8.03SC, Coupled Oscillators and Normal Modes transcript",
+          "url": "https://live.ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/119a2ad7e8f7f521d65cf1e6dc1dd167_I0YACDaY-ww.pdf",
+          "finding": "Normal-mode shapes follow the stiffness and mass matrices; symmetry helps identify particular eigenvectors but the full generalized eigenproblem controls the result."
+        },
+        {
+          "method": "independent_electromagnetic_relativistic_and_modal_derivation",
+          "finding": "Individually checked capacitance/field/energy formulas, Lorentz transformations, time dilation and numerical speeds, and generalized mass-stiffness eigenvector conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If an exchange symmetry commutes with the appropriate mass-normalized dynamical operator, modes can be chosen in its symmetric/antisymmetric invariant subspaces."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Symmetry may identify subspaces rather than fully determine every eigenvector, particularly with degeneracy; often is appropriately qualified."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 44,
+      "assistant_tokens": 23,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 171
+    },
+    {
+      "id": "repo-779a9fd4c667ce096d06f346",
+      "messages_sha256": "779a9fd4c667ce096d06f34664ca2e603774cf6258ae0e70e4c047aa45eeb350",
+      "state": "QUARANTINE",
+      "rationale": "Checking mass and stiffness symmetry is useful, but broken mirror symmetry does not force every simple guess to become only approximate. Accidental or tuned exact eigenvectors can survive unequal masses.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT8.03SC, Coupled Oscillators and Normal Modes transcript",
+          "url": "https://live.ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/119a2ad7e8f7f521d65cf1e6dc1dd167_I0YACDaY-ww.pdf",
+          "finding": "Normal-mode shapes follow the stiffness and mass matrices; symmetry helps identify particular eigenvectors but the full generalized eigenproblem controls the result."
+        },
+        {
+          "method": "independent_electromagnetic_relativistic_and_modal_derivation",
+          "finding": "Individually checked capacitance/field/energy formulas, Lorentz transformations, time dilation and numerical speeds, and generalized mass-stiffness eigenvector conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For M=diag(1,2) and K=[[2,-1],[-1,3]], the exact in-phase vector v=(1,1) obeys K*v=(1,2)=M*v despite unequal masses and end springs. The definitive test is K*v=omega²*M*v."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The symmetric equal-mass case is a sufficient shortcut, not a necessary condition. Hold the categorical broken-symmetry conclusion, not the general eigenproblem method."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 103,
+      "assistant_tokens": 67,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 172
+    },
+    {
+      "id": "repo-87115da12a7483ca73604867",
+      "messages_sha256": "87115da12a7483ca73604867e65aeb3930f2a54a427c1af7e21f206ccddb09b0",
+      "state": "PASS",
+      "rationale": "Correct forced-modal superposition and participation explanation for a drive between two natural frequencies.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT8.03SC, Coupled Oscillators and Normal Modes transcript",
+          "url": "https://live.ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/119a2ad7e8f7f521d65cf1e6dc1dd167_I0YACDaY-ww.pdf",
+          "finding": "Normal-mode shapes follow the stiffness and mass matrices; symmetry helps identify particular eigenvectors but the full generalized eigenproblem controls the result."
+        },
+        {
+          "method": "independent_electromagnetic_relativistic_and_modal_derivation",
+          "finding": "Individually checked capacitance/field/energy formulas, Lorentz transformations, time dilation and numerical speeds, and generalized mass-stiffness eigenvector conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Each modal response coefficient is proportional to its force projection divided by omega_n²-omega_drive² plus damping terms; summing modal vectors can cancel one coordinate."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Both steady-state modal contributions oscillate at the common drive frequency, with different amplitudes/phases; resonant terms names the modal denominators, not separate free frequencies."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "UNITS_AND_MODEL_ASSUMPTIONS"
+      ],
+      "qwen_tokens": 158,
+      "assistant_tokens": 128,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 173
+    },
+    {
+      "id": "repo-a99971516f743ddfc81ba18b",
+      "messages_sha256": "a99971516f743ddfc81ba18b5ee30260574e485d26aebb4b81b0ceed60aa5ddf",
+      "state": "QUARANTINE",
+      "rationale": "Normal-coordinate decoupling is valid for the standard conservative linear problem, but the particular symmetric/antisymmetric combinations require the appropriate exchange symmetry and are not general for two coupled oscillators.",
+      "reviewer": "Codex_cloud_agent_technical_review_20261002",
+      "independent_human_review": false,
+      "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; independent_agent_QA; no_rewrite",
+      "tool_evidence": [
+        {
+          "title": "MIT8.03SC, Coupled Oscillators and Normal Modes transcript",
+          "url": "https://live.ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/119a2ad7e8f7f521d65cf1e6dc1dd167_I0YACDaY-ww.pdf",
+          "finding": "Normal-mode shapes follow the stiffness and mass matrices; symmetry helps identify particular eigenvectors but the full generalized eigenproblem controls the result."
+        },
+        {
+          "method": "independent_electromagnetic_relativistic_and_modal_derivation",
+          "finding": "Individually checked capacitance/field/energy formulas, Lorentz transformations, time dilation and numerical speeds, and generalized mass-stiffness eigenvector conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With M=diag(1,2),K=[[2,-1],[-1,3]], K*(1,-1)=(3,-4) is not proportional to M*(1,-1)=(1,-2), so the unweighted antisymmetric guess is not a mode."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the unspecified symmetry requirement. Generalized eigenvectors provide the actual normal coordinates without rewriting the original answer."
+        }
+      ],
+      "domain": "physics",
+      "primary_source": "D_physics.jsonl",
+      "risk_flags": [
+        "EQUATIONS_CALCULATIONS_OR_PROOF"
+      ],
+      "qwen_tokens": 80,
+      "assistant_tokens": 55,
+      "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+      "training_authorized": false,
+      "independent_agent_review": true,
+      "review_batch": "reports/phase3-review-batches/physics-0150-0175.json",
+      "original_domain_ordinal": 174
     }
   ],
-  "reviewed": 1765,
+  "reviewed": 1790,
   "not_a_random_accuracy_sample": true,
   "manual_corrections": 0,
   "no_silent_rewrites": true

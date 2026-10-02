@@ -1,10 +1,10 @@
 {
   "curriculum": 2112,
   "dispositions": {
-    "PASS": 1410,
+    "PASS": 1433,
     "REJECT": 66,
-    "QUARANTINE": 290,
-    "NEEDS_HUMAN_REVIEW": 346
+    "QUARANTINE": 292,
+    "NEEDS_HUMAN_REVIEW": 321
   },
   "by_domain": {
     "circuits": {
@@ -62,10 +62,10 @@
       "NEEDS_HUMAN_REVIEW": 244
     },
     "physics": {
-      "PASS": 124,
+      "PASS": 147,
       "REJECT": 5,
-      "QUARANTINE": 21,
-      "NEEDS_HUMAN_REVIEW": 100
+      "QUARANTINE": 23,
+      "NEEDS_HUMAN_REVIEW": 75
     }
   },
   "risk_flags_overlap": {
@@ -74,11 +74,11 @@
     "EQUATIONS_CALCULATIONS_OR_PROOF": 1110,
     "OPERATIONAL_OR_DIAGNOSIS": 187
   },
-  "agent_substantive_reviews": 1765,
+  "agent_substantive_reviews": 1790,
   "review_all_substantive_completed": false,
   "release_approved": 0,
   "technical_PASS_not_rights_or_family_approval": true,
-  "technical_review_sha256": "11524deb629047dc63dc8e574a4342b2ec7e3aa152022c437b3ff135c915f5d0",
+  "technical_review_sha256": "50fbb07f0e93e36acc98f381f67acddf77e33d4863cce434506a01290b1ae54e",
   "reasons": {
     "Switching changes topology; stored LC energy, initial conditions and parasitics explain bounded conditional transient/stress discussion. No missing numeric inputs are assumed.": 1,
     "Complete general impedance-measurement method includes AC magnitude and phase; Z is interpreted as complex phasor ratio at the measurement frequency.": 1,
@@ -291,7 +291,7 @@
     "Phase-sequence reversal applies to appropriate directly supplied machines; any two phases is not a general instruction for drive-controlled outputs or arbitrary equipment.": 1,
     "Even treating 100 hp as 75 kW electrical input, Qc=75*(sqrt(1-0.75^2)/0.75-sqrt(1-0.95^2)/0.95)=41.4924 kvar, outside 35-40. Motor horsepower is mechanical output and requires efficiency for input kW, worsening the sizing error.": 1,
     "Utility meter capabilities, true versus displacement factor and billing aggregation depend on meter/tariff; real/reactive channels alone do not universally establish true PF for distorted currents.": 1,
-    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 344,
+    "SUBSTANTIVE_TECHNICAL_VERIFICATION_NOT_COMPLETED; no correctness inferred from structural checks or tool agreement": 319,
     "Invertible similarity B=P^-1*A*P preserves characteristic polynomial; multiplying Bv=lambda*v by P proves eigenvector mapping.": 1,
     "Basic Lyapunov stability distinguishes staying nearby from asymptotic convergence; definition is qualitatively correct.": 1,
     "Cross-method agreement does not eliminate common wrong assumptions or code error; conditional cross-check value is sound.": 1,
@@ -1846,11 +1846,36 @@
     "Correct marginally stable conservative linear oscillation versus attraction, with nonlinear limit-cycle distinction.": 1,
     "Correct electrostatic scalar-potential versus vector-field distinction and gradient relation.": 1,
     "Correct introductory definition and fixed-geometry linear-capacitor dependence; the plate-area and separation trends follow from C=epsilon*A/d.": 1,
-    "The algebra is correct for a reversible adiabatic calorically perfect ideal gas, but adiabatic alone does not justify internal P*dV work or constant gamma integration.": 1
+    "The algebra is correct for a reversible adiabatic calorically perfect ideal gas, but adiabatic alone does not justify internal P*dV work or constant gamma integration.": 1,
+    "Correct accessible statement of the two special-relativity postulates and their kinematic consequences.": 1,
+    "Correct collinear relativistic velocity addition and numerical result.": 1,
+    "Correct Minkowski interval-signature and causal-classification explanation.": 1,
+    "Correct axial field of a uniformly charged ring and symmetry/far-field checks.": 1,
+    "Correct uniform-field magnetic-dipole torque and zero net force, with aligned-gradient attraction qualified.": 1,
+    "Correct specified special-relativistic proper-time calculation.": 1,
+    "Correct rest-frame simultaneous-endpoint measurement of proper length and its standard longitudinal moving-frame comparison.": 1,
+    "Correct distinction between normal local clock/biology behavior and accumulated proper time along different worldlines.": 1,
+    "Correct reading of a modal-frequency graph label as a natural-mode property rather than necessarily the applied forcing frequency.": 1,
+    "Correct qualified statement that symmetry often predicts modal structure before a determinant calculation.": 1,
+    "Correct qualitative boosted-line-charge example of electric and magnetic field mixing between inertial frames.": 1,
+    "Checking mass and stiffness symmetry is useful, but broken mirror symmetry does not force every simple guess to become only approximate. Accidental or tuned exact eigenvectors can survive unequal masses.": 1,
+    "Correct derivation outline using linearity, reciprocal inertial-frame symmetry and preservation of both light directions.": 1,
+    "Correct forced-modal superposition and participation explanation for a drive between two natural frequencies.": 1,
+    "Correct ordinary stable linear undamped normal-mode behavior.": 1,
+    "Correct resolution of reciprocal length contraction through frame-dependent simultaneity.": 1,
+    "Correct plain-language relativity principle for inertial frames and distinction from locally measurable acceleration.": 1,
+    "Correct average muon travel distance from dilated mean lifetime.": 1,
+    "Normal-coordinate decoupling is valid for the standard conservative linear problem, but the particular symmetric/antisymmetric combinations require the appropriate exchange symmetry and are not general for two coupled oscillators.": 1,
+    "Correct vacuum parallel-plate capacitance derivation with the fringing approximation explicitly stated.": 1,
+    "Correct twin proper-time/worldline explanation and turnaround asymmetry.": 1,
+    "Correct inversion of gamma and numerical speed.": 1,
+    "Correct central role of relativity of simultaneity in consistent Lorentz measurements.": 1,
+    "Correct magnetic stored-energy derivation for an ideal constant-inductance element.": 1,
+    "Correct concise distinction between system modal frequencies and externally selected drive frequency.": 1
   },
   "published_decisions": "data/review/phase3/technical-review.jsonl.gz",
-  "published_decisions_sha256": "5d4b44089a94601570e85f8de5cb332bf7fa8833aea03cbe69efcbebee7499a2",
-  "substantively_unreviewed": 344,
+  "published_decisions_sha256": "10308f517bed313670f056f057977cb8db7bf02ba7640b79baba97cfb8f59842",
+  "substantively_unreviewed": 319,
   "reviewed_specialist_holds": 2,
   "complete_source_domains": [
     "circuits",
