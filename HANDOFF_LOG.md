@@ -1,5 +1,31 @@
 # FORGE handoff log
 
+## 2026-10-06 — publication verified; private Library export blocked
+
+<a id="forge-handoff-20261006-170625z"></a>
+Entry ID: `FORGE-HANDOFF-20261006-170625Z`. Recorded: **2026-10-06 17:06:25 UTC**. Change record: [FORGE-CHANGE-20261006-170625Z](CHANGELOG.md#forge-change-20261006-170625z). This entry closes the recovery/publication steps in the earlier entry; final remote equality for the documentation commit containing this entry must be reported externally after its push.
+
+**GitHub synchronization succeeded.** A normal push advanced `codex/forge-data-consolidation` from `917a9d3bb68ceae5f320004e67b1129202bd7fed` to `72cb2305f69960177805140212ec8c598937b404`. Git and GitHub PR3 independently confirmed that exact head at **2026-10-06 16:57:33 UTC**. PR3 stayed open and draft; main stayed `83d7645758375fa87c7afcb5fee1b2221ab9f463`. No merge or force push occurred. The recovered `90eabf991895f012c14d5f33199b0d62f992f955` and restored `601df14c6e6c103d428dd69027dcabf1e501598f` checkpoints remain preserved ancestors.
+
+**Recovery artifact verified locally.** `FORGE-checkpoint-72cb230-full.bundle` contains all 103 reachable commits through `72cb2305f69960177805140212ec8c598937b404`, tree `d7b720ce163c6d599bbffc9f79ddb821692db36a`, with zero prerequisite commits. Import into an empty repository and `git fsck --full --strict` passed. Its exact bytes/hash and companion artifact hashes are below. This immutable bundle predates the documentation closeout containing this entry; normal GitHub synchronization obtains the later closeout.
+
+| Export artifact | Bytes | SHA256 measured during this export |
+| --- | ---: | --- |
+| `FORGE-checkpoint-72cb230-full.bundle` | 40,576,762 | `0625b0c8cd15a49ef3233f7697c5d5856641154979fab960c9d59fc99a571212` |
+| `FORGE-EXPORT-VERIFICATION.json` | 2,453 | `48d25f1d8c9e3e3709135d374d1d4934817316aee58aa7d129760134e921e7fe` |
+| `FORGE-SAFE-IMPORT.md` | 8,669 | `76eab0901e1f1d0833e48723cd9e77d9035c20fe713c76663610b7ef84c2c552` |
+| `FORGE-CHECKSUMS.sha256` | 287 | `181a4ff21957366669a63b4faaf0730a7879c39b635591d46a7d6c0c51682068` |
+
+**Library transfer failed.** One supported batch attempt for these four files failed with a network error before any per-file result or Library identity was returned. Zero saves are confirmed; no IDs are invented. No retry or alternate Library write was attempted. The artifacts and authoritative failure receipt remain in the cloud export workspace; this is not durable Library delivery. GitHub synchronization is successful independently of this failed transfer.
+
+The reviewed Windows import instructions require an exact bundle hash, an actual Git top-level, a fresh sibling checkout and ordinary paths without reparse-point ancestors. They check exact imported HEAD/tree/clean status and preserve the old branch, HEAD, dirty status and edited handoff hash. An independent mock import preserved a dirty older checkout; the exact PowerShell block still requires laptop execution. No existing user checkout was overwritten or switched.
+
+Fresh export verification rechecked all **2,112 original canonical message hashes**, **1,703 PASS / 72 REJECT / 337 QUARANTINE / 0 pending**, and all **12 frozen-file hashes**. The prior actual CPU result remains **112 passing methods, five tokenizer-dependent methods blocked and one class-setup error** at `2db796cc1762a1e06480028611d1b6464053e064`; no fresh suite run or full-suite pass is claimed for this documentation/export task.
+
+Gunner reports the private Drive root documents are now uploaded and byte-verified owner-only; the separate Drive worker remains their sole writer and laptop Codex owns private snapshots. This cloud task made no Drive writes. Original independent hashes for the three private reports remain unavailable here. All nine academic sources stay HOLD; no extraction pool, model/runtime installation, model execution or training started.
+
+Next: finish normal publication of this documentation closeout and report exact remote equality in the delivery/PR record. Laptop Codex can then read the current GitHub code/docs in a new clean checkout while preserving its dirty older checkout. Coordinate any later Library transfer explicitly with Gunner, keep private snapshots under the existing owner-only Drive root, and reconcile only the seven identified inputs/nine-source scope. Neither a new observed hash nor file availability clears the unresolved provenance, rights, fidelity, family or gold gates.
+
 ## 2026-10-06 — recover completed preparation and establish GitHub synchronization
 
 <a id="forge-handoff-20261006-165427z"></a>

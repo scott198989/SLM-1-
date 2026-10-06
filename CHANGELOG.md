@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-10-06 - Verify GitHub publication and record blocked Library transfer
+
+<a id="forge-change-20261006-170625z"></a>
+Entry ID: `FORGE-CHANGE-20261006-170625Z`. Recorded: **2026-10-06 17:06:25 UTC**. [Handoff entry](HANDOFF_LOG.md#forge-handoff-20261006-170625z) records exact checkpoints, export hashes, validation and next steps.
+
+- Normal push succeeded to `72cb2305f69960177805140212ec8c598937b404`; Git and GitHub verified exact remote equality at 16:57:33 UTC. PR3 remains draft and main is unchanged. This closeout commit still needs its own normal push and external remote-equality confirmation.
+- Built and verified a self-contained 103-commit bundle with zero prerequisites, successful empty-repository import and strict Git integrity. Preserved all earlier checkpoints, 2,112 original message hashes and 12 frozen pins.
+- Reviewed guarded Windows instructions for a new sibling clone preserving the existing dirty checkout; the exact PowerShell block has not run on the laptop.
+- One Library batch failed with a network error; none of four files has a confirmed save/Library ID. Preserved local artifacts and failure receipt without retry or another transfer route. This blocker does not negate the independently verified GitHub push.
+- Recorded parent-reported completion of private Drive root documents and retained separate worker ownership. No private Drive writes, dataset changes, runtime/model operations or training. All nine sources remain HOLD; original pins for three private reports remain unavailable. Prior CPU result remains 112 pass/five asset-blocked methods/one class-setup error, not a fresh full-suite pass.
+
 ## 2026-10-06 - Recover completed preparation and establish durable GitHub handoff
 
 <a id="forge-change-20261006-165427z"></a>
