@@ -1,3 +1,15 @@
+# Current FORGE handoff — October 6, 2026
+
+Start with [HANDOFF_LOG.md](HANDOFF_LOG.md), the root README and CHANGELOG. Scott now authorizes a single-writer GitHub source-of-truth workflow: inspect status, preserve dirty work, fetch/compare safely, commit code and truthful docs, normally push `codex/forge-data-consolidation`, and verify the remote commit. Keep PR3 draft; no merge/force push. The laptop's user-edited handoff must remain intact on its existing branch; use a separate clean checkout.
+
+Recovered preparation is `90eabf991895f012c14d5f33199b0d62f992f955`, including completed 2,112-record review, bounded reconciliation/evaluation fixes and runtime planning. Latest actual tests: 112 pass, five tokenizer-dependent methods blocked (one class-setup error); older 69-pass receipts are historical. The current source-of-truth head is established by a verified Git remote ref, not by older counts or a local bundle.
+
+Gunner now reports all seven requested laptop reconciliation files present, with four prior family/rights pins matching. This cloud has not independently reopened those private inputs. All nine academic sources remain HOLD; three private report hashes remain originally unpinned here. Details, exact checkpoints, hash references, current environment observations and next actions are in the handoff log. No model, training, paid compute or processing-pool permission is added.
+
+The sections below preserve the October 1–2 history. Their old publication prohibition is superseded only by Scott's explicit October 6 code-publication authorization and the guarded workflow above. Historical next-domain directions and passing-test claims must not restart reviews or be presented as fresh results. Existing private-source, gold, release and training boundaries remain in force.
+
+---
+
 # FORGE Phase 3 — Codex Cloud handoff
 
 Read this entire file, including the footer, then the root README and the current gate report before continuing. This handoff was prepared October 1, 2026 at the user's request. It preserves the current review checkpoint; it does **not** authorize model downloads, model loading, training, paid services, automatic checks or publishing private academic sources.

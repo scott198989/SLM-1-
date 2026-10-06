@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-10-06 - Recover completed preparation and establish durable GitHub handoff
+
+<a id="forge-change-20261006-165427z"></a>
+Entry ID: `FORGE-CHANGE-20261006-165427Z`. Recorded: **2026-10-06 16:54:27 UTC**. Recovery baseline: `90eabf991895f012c14d5f33199b0d62f992f955`; [handoff entry](HANDOFF_LOG.md#forge-handoff-20261006-165427z) records exact prior commits and artifact hashes.
+
+- Verified preserved checkpoint 90eabf9/tree cf51a537 and all 12 frozen SHA256 pins. Laptop 2a817b75 and remote PR3 917a9d3 are ancestors; the recovered tip contains 102 commits and is 87 ahead/zero behind that remote observation. No technical reviews or private extraction were redone.
+- Added HANDOFF_LOG.md and current README/handoff directions for a single active writer, preservation of dirty user work, safe fetch/fast-forward synchronization, coherent commits and normal push followed by exact remote verification. Scott explicitly authorized this code-publication workflow; draft PR3 and main remain protected from merge/force push.
+- Recorded completed review/validator/evaluation/runtime checkpoints, actual 112-pass/five-asset-blocked CPU result, laptop-reported availability of seven private inputs and four existing family/rights pins, and absent original pins for three private reports. No private report/content is fabricated or added.
+- Updated the runtime observation to installed WSL2 with no distributions; narrowed the bitsandbytes advisory to actual source-path evidence. Model/package pins and training/release gates remain unchanged. This documentation/export-only task runs repository integrity/import checks, not GPU operations or a fresh CPU suite.
+- Storage/workflow rationale: the root README now fixes the GitHub code/documentation role and links all logs; HANDOFF_LOG links this dated change and ordered next steps. Private Drive snapshots belong only under the separately managed FORGE Private Handoff root (parent-verified owner-only link in README/HANDOFF_LOG), with laptop Codex owning snapshots and sealed answers isolated. This prevents duplicated transfers/writers and preserves private data outside GitHub.
+- A private self-contained bundle is prepared for recovery; transfer/publication success must be confirmed by their actual results. A local commit or failed push is not a synchronized handoff.
+
 ## 2026-10-02 - Document the desktop runtime candidate and validation gates
 
 - Researched official versioned PyTorch, NVIDIA, Microsoft, Transformers, PEFT and bitsandbytes sources against the supplied Windows/RTX 5090 inventory. Retained all runtime/model pins and recorded desktop metadata with its provenance.

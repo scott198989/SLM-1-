@@ -1,0 +1,67 @@
+# FORGE handoff log
+
+## 2026-10-06 — recover completed preparation and establish GitHub synchronization
+
+<a id="forge-handoff-20261006-165427z"></a>
+Entry ID: `FORGE-HANDOFF-20261006-165427Z`. Recorded: **2026-10-06 16:54:27 UTC** (entry creation time, not an invented historical event time). Change record: [FORGE-CHANGE-20261006-165427Z](CHANGELOG.md#forge-change-20261006-165427z). Read the full root and relevant nested READMEs, HANDOFF_README and CHANGELOG before using this entry.
+
+Scott authorized code publication and a GitHub source-of-truth workflow through Gunner on October 6. This cloud task is the single repository writer for recovery/export/publication; the laptop remains reconciliation-only. The authorization covers repository code and truthful documentation, not private-source publication, model work or training.
+
+Repository: `https://github.com/scott198989/SLM-1-.git`. Working branch: `codex/forge-data-consolidation`; keep [PR 3](https://github.com/scott198989/SLM-1-/pull/3) open and draft, targeting main. No merge, force push or replacement of the laptop's user-edited `HANDOFF_README.md`.
+
+### Verified checkpoints
+
+| Checkpoint | Meaning |
+| --- | --- |
+| `2a817b75ce2ea7a48fbaddece748cb26b6b0c940` | Laptop's reported older HEAD; ancestor of recovered checkpoint. Its dirty handoff remains untouched. |
+| `917a9d3bb68ceae5f320004e67b1129202bd7fed` | Remote PR3 head observed by Git fetch and GitHub read on October 6 before this publication; 392-review historical checkpoint. |
+| `601df14c6e6c103d428dd69027dcabf1e501598f` | Restored residual-review checkpoint: 2,112 substantive dispositions, 1,703 PASS / 72 REJECT / 337 QUARANTINE / 0 pending. |
+| `a45ec19e0b585fc997bab45c270b1b9105fefe43` | Reviewed metadata-first nine-source reconciliation validator; every result remains HOLD. |
+| `2db796cc1762a1e06480028611d1b6464053e064` | Evaluation integrity fixes and paired evaluation protocol; 13 additional synthetic regression methods. |
+| `90eabf991895f012c14d5f33199b0d62f992f955` | Recovered desktop-runtime research checkpoint, tree `cf51a537c5f690ab43f214e0c651deb8283f172e`; clean on recovery. |
+
+Verified recovery artifact: `FORGE-recovered-90eabf9-full.bundle`, **40,567,611 bytes**, SHA256 **`36b15c1398290d04e2d5f30529f82c3209484ab1d9fbb26a00aff3eecfa00bf7`**. It contains complete history through `90eabf991895f012c14d5f33199b0d62f992f955`, with zero prerequisite commits; empty-repository import and full strict fsck pass. This hash was measured during the October 6 export, not inherited as an original private-input pin. A later bundle including this documentation must have its own externally recorded hash; no file records its own checksum.
+
+The recovered checkpoint contains 102 reachable commits and is 87 commits ahead / zero behind the observed PR3 head. These figures describe the recovered checkpoint before this documentation commit. Preserve its branch/ref and prior bundles. The current documentation commit is a descendant; obtain its exact identity from `git rev-parse HEAD`, not a self-referential hash embedded in this file.
+
+### Validation and completed work
+
+- All 12 frozen-file SHA256 pins matched on October 6. Original/restored checkouts and historical receipts remain intact. The restoration independently verified all 2,112 canonical message hashes, and the October 6 export check reverified all 2,112 against staging with the exact 1,703/72/337 counts; no original messages or dispositions were edited during this recovery.
+- Academic validator: 35 synthetic tests passed in the prior bounded run. Evaluation integrity corrections reject altered sealed members, duplicate IDs/JSON keys, nonfinite values and invalid citations; terminal failures retain tool receipts.
+- Latest actual CPU-suite result, at `2db796c`: **112 passing methods, five tokenizer-dependent methods blocked by absent pinned assets, one class-setup error**. It is not a full-suite pass. No suite was rerun for this documentation/export-only task; October 1/2 receipts saying 56 or 69 pass are historical.
+- Desktop inventory was relayed by Gunner, not inspected by this cloud runtime. Latest WSL observation: WSL 2.6.3.0, kernel 6.6.87.2-1, default WSL2, no registered Linux distributions and no `.wslconfig`. No Linux distribution, GPU stack, model or training was installed/run by this task.
+- Existing Qwen/model/runtime pins remain candidates, not a resolved or tested stack. See [runtime plan](docs/QWEN_PREPARATION.md). The normal fresh `Params4bit` load path already makes weights contiguous; the documented bitsandbytes strided-input defect is not a demonstrated failure of that path. Exact candidate-kernel exposure to the CUDA compiler advisory remains unknown.
+
+### Private inputs and independently recorded pins
+
+Gunner reports that all seven requested reconciliation files now exist on the laptop, and the four family/rights files match the previously pinned hashes below. This is laptop-reported evidence, not a new cloud read or source qualification. Their original pins are in [the October 1 handoff receipt](reports/phase3-cloud-handoff.json); private contents stay outside Git and export bundles.
+
+| Private basename | Pinned bytes | Original SHA256 |
+| --- | ---: | --- |
+| `family-membership-final.json` | 13,957,197 | `d56d37edd6434c0253407be1986f22a1bd0330b41bf18c7cde7e90bd5f28625c` |
+| `family-analysis-final.json` | 1,693 | `8bdbb427b34e288d8eb79c6e71d8a5493b62539d94abe55fe73494e718425751` |
+| `family-checkpoints.sqlite` | 43,003,904 | `bb673ec7f51c6dc5c61e32757d5ee49436d2128e9db3f96578d848956abf33d6` |
+| `drive-rights-dispositions.json` | 918,486 | `2ef3ab85bd47acfade7372b629ef594af6541cafc73c5a2fab9159038de87fae` |
+
+No original independently recorded per-file hash is available here for `reports/academic-final-ledger-audit-20261001.json`, `reports/ACADEMIC_DRIVE_CONTINUATION_20261001.md` or `reports/academic-settled-rag-accounting-20261001.json`. These files are absent from this cloud tree and all 102 recovered commits. Public references to the latter two identify private-workspace receipts; the nearby 206,577,664-byte index hash is not a report hash. Do not adopt a newly calculated laptop hash as an original independent pin. Retain any new observations with their date/provenance and reconcile against original receipts when available.
+
+All nine academic sources remain HOLD. Exact extraction/cache/family/rights correspondence, source fidelity, rights for each intended use and independence still need bounded reconciliation. No fresh extraction pools or whole-corpus replay are authorized. Exclude the complete VA/Military and sensitive credential/personal/financial scope. Gold answers remain private; the complete statistics source family stays out of SFT/training RAG. The 16-example calculator integration pilot and 12 one-family diagnostic tasks do not supply independent development coverage; development count remains zero.
+
+### Start and close every work session
+
+1. Inspect `git status --short --branch`, current branch/HEAD and `git remote -v`. Read README, this log, HANDOFF_README, CHANGELOG and the relevant schemas/reports. Confirm one active writer with Gunner.
+2. Fetch the authorized origin/branch and inspect ahead/behind ancestry before editing. In a clean checkout already on the correct branch, use `git pull --ff-only origin codex/forge-data-consolidation`. Stop on divergence; do not auto-merge, reset, rebase or force-push.
+3. If the checkout is dirty, preserve it exactly. Use a new separate checkout/worktree for current repository work; leave the user's edited handoff on its original branch. Review that edit separately before any intentional reconciliation. Do not automatically stash, overwrite, clean or discard it.
+4. Perform only the approved bounded task. Keep private raw sources/cache/databases, credentials and sealed answers outside Git; check the staged diff. Update CHANGELOG and append a dated handoff entry with completed work, real tests, blockers, private-file references and the next step. Commit a coherent checkpoint.
+5. Under Scott's code-publication authorization, perform a normal push to `codex/forge-data-consolidation`, then read the remote ref and require exact equality with local HEAD. Preserve draft PR3. A failed/denied push or mismatched remote means **handoff incomplete**; report the exact result and retain the local checkpoint. Do not switch publishing routes after a denial.
+6. A local commit, Library bundle or this log is not proof of GitHub synchronization. Record the final remote-equality result in the session handoff/PR delivery report. When this file is read from GitHub, verify the branch ref against the intended local checkpoint before claiming it is current.
+
+### Next bounded actions
+
+1. Finish the normal branch publication and verify exact remote equality; retain/export the self-contained checkpoint. A failed push remains an incomplete handoff.
+2. Laptop Codex reads the current README/changelog/handoff in a separate clean checkout, preserving the old branch and edited handoff byte-for-byte. Keep one active repository writer coordinated by Gunner.
+3. Use the parent-verified owner-only [FORGE Private Handoff](https://drive.google.com/drive/folders/1YS-YmGaZ-RkOnrwaS5_o2oSzZzwTuZoV) root (shared=false). Its folder/docs worker owns root README/changelog/handoff creation; avoid concurrent edits and do not create a duplicate. All project Drive writes stay inside that root. Laptop Codex owns the authorized private data/database/report/pilot/sealed snapshot transfer with originals unchanged; this cloud task performs no duplicate Drive writes. Preserve sealed-answer separation from training/RAG.
+4. Reconcile only the seven identified local inputs and nine-source scope against existing receipts. Record observed hashes distinctly from original independent pins. Keep all nine sources HOLD until the missing provenance/fidelity/rights/family evidence is resolved; do not repeat completed technical reviews or restart extraction pools.
+5. Ask Gunner for the next separately bounded runtime decision only when appropriate. Linux distribution setup, GPU package resolution/installation, synthetic GPU operations, model download/load and training are separate scopes. Private-input availability does not clear release gates.
+
+The private self-contained bundle is a recovery/transfer aid containing only objects reachable from its advertised repository tip. Verify its supplied SHA256/size, `git bundle verify`, exact tip/tree and clean status. Import into a new directory; do not overlay existing user files. Library transfer is successful only when its returned file identity confirms the save. GitHub publication is successful only after remote equality is verified.

@@ -22,9 +22,14 @@
     },
     "source": "Gunner_relay_of_desktop_inventory_2026-10-02_not_cloud_GPU_inspection",
     "proposed_environment": "WSL2_Linux_preferred_or_native_Windows_x86_64_with_pinned_cu128_candidate",
-    "wsl_installation_status": "NOT_VERIFIED",
+    "wsl_installation_status": "INSTALLED_NO_REGISTERED_DISTRIBUTIONS_RELAYED_BY_GUNNER",
     "runtime_validated": false,
-    "installation_validation_plan": "docs/QWEN_PREPARATION.md"
+    "installation_validation_plan": "docs/QWEN_PREPARATION.md",
+    "wsl_version_reported": "2.6.3.0",
+    "wsl_kernel_reported": "6.6.87.2-1",
+    "wsl_default_version_reported": 2,
+    "wsl_registered_distributions_reported": 0,
+    "wslconfig_present_reported": false
   },
   "format": {
     "assistant_only_loss": true,
