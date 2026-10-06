@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-10-06 - USER PAUSED; minimal GitHub closeout
+
+<a id="forge-change-20261006-190713z"></a>
+Entry ID: `FORGE-CHANGE-20261006-190713Z`. Recorded: **2026-10-06 19:07:13 UTC / 14:07:13 CDT (America/Chicago, UTC-05:00)**. User pause requested at 19:06 UTC / 14:06 CDT. Baseline: `0db0a646989f7fd01107873180c6ad5b85a6aa45`; [paused handoff](HANDOFF_LOG.md#forge-handoff-20261006-190713z).
+
+- Recorded Scott's explicit pause to free resources for studying. No substantive work or automatic continuation may resume until Scott explicitly requests it; future bounded ownership goes through Gunner.
+- Preserved the clean checkout and completed work. Only this changelog and HANDOFF_LOG.md changed; no uncommitted code or user edits were present to incorporate. Normal branch push and remote equality are required for closeout; no merge/force push.
+- Recorded Gunner's diagnostic update: nine sources remain HOLD, no real-input validator run or adapters; split isolation and extraction-region review pending. New books remain deferred metadata-only, with ten PDF objects mapped and no OCR.
+- No tests, workers, processing, OCR, model/training operations, monitoring or Drive writes were started. Prior CPU results and all release/gold/source-family gates remain unchanged. The separate private writer owns its log closeout.
+
 ## 2026-10-06 - Make canonical continuity explicit across all Codex sessions
 
 <a id="forge-change-20261006-171639z"></a>
