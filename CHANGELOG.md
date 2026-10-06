@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-10-06 - Make canonical continuity explicit across all Codex sessions
+
+<a id="forge-change-20261006-171639z"></a>
+Entry ID: `FORGE-CHANGE-20261006-171639Z`. Recorded: **2026-10-06 17:16:39 UTC / 12:16:39 CDT (America/Chicago, UTC-05:00)**. Baseline: `52e436db376c3abf6672b6cc26218ea188c899c3`; [handoff entry](HANDOFF_LOG.md#forge-handoff-20261006-171639z).
+
+- Clarified Scott's requirement: every laptop, desktop and cloud Codex session uses the same GitHub repository and canonical private Drive root, including repeated sessions on one machine. New sessions create versioned snapshots under that root, never another root.
+- Added a shared start/close procedure: read current logs, verify actual access and available files, check full checkpoints, preserve local edits, coordinate one writer, safely fetch/fast-forward and verify normal pushes and private upload receipts separately.
+- Distinguished current worker assignments from permanent machine restrictions. The separate Drive docs worker retains ownership; no Drive edits/uploads were made here.
+- Recorded successful narrowed PR3 metadata update/readback under explicit approval, and the remaining metadata-intake prerequisites. No private details were added to PR text.
+- Documentation only: reviewed four root documents and their links; no dataset/code/configuration changes or test rerun. Prior CPU status remains 112 passing methods, five asset-blocked methods and one class-setup error. All release/training/gold gates remain unchanged.
+
 ## 2026-10-06 - Verify GitHub publication and record blocked Library transfer
 
 <a id="forge-change-20261006-170625z"></a>

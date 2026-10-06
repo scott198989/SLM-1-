@@ -1,5 +1,22 @@
 # FORGE handoff log
 
+## 2026-10-06 — canonical continuity for every FORGE Codex session
+
+<a id="forge-handoff-20261006-171639z"></a>
+Entry ID: `FORGE-HANDOFF-20261006-171639Z`. Recorded: **2026-10-06 17:16:39 UTC / 12:16:39 CDT (America/Chicago, UTC-05:00)**. Change record: [FORGE-CHANGE-20261006-171639Z](CHANGELOG.md#forge-change-20261006-171639z). This is the entry-recording time; Scott's clarification was relayed with an event time of 17:14:54 UTC.
+
+Scott clarified that canonical continuity applies to every future FORGE Codex session, including repeated laptop sessions, long desktop runs and switching to or from cloud. The root README and current HANDOFF_README now state the same GitHub repository and private Drive root must be reused across environments. Only versioned private snapshots belong beneath that root; a new machine/session must not create a new root. Existing worker assignments remain bounded task ownership rather than permanent storage restrictions.
+
+Every session must read current logs/manifests, establish actual access and available bytes, verify local/remote checkpoints, preserve local user edits, coordinate one repository writer with Gunner and verify pushes/uploads independently. Missing access is a concrete blocker, not permission to assume another environment's private files are present. The separate Drive documentation worker owns the concurrent root-document updates; this repository session made no Drive writes.
+
+Pre-edit fetch verified local and remote equality at `52e436db376c3abf6672b6cc26218ea188c899c3`. PR3's narrowed title/description update succeeded under Scott's explicit approval and exact readback at **17:15:26 UTC**; it remained open/draft at that code head, with main unchanged at `83d7645758375fa87c7afcb5fee1b2221ab9f463`. Private paths, Drive metadata, artifact hashes and source contents were excluded from that PR text. This later documentation commit requires its own normal push and external remote-equality report; do not embed its own commit hash here.
+
+Read-only private storage inspection found documentation but no input snapshots in the designated data/report destinations at the observation time. The existing reconciliation validator can run without tokenizer/GPU packages, but its metadata-only mode still checks that declared original/cache paths exist. The next bounded intake therefore belongs in an environment holding the actual scoped inputs: provide the exact nine-source scope, independently reviewed native-to-adapter metadata and a gold-free root containing the nine originals and nine selected-cache adapter files. Do not invent a mapper before the native schema is known. Two metadata JSON files in an otherwise empty cloud workspace are insufficient.
+
+Validation for this change is documentation review, local cross-link checks, diff checks and verification that only the four intended root documents changed. No CPU suite was rerun. The prior actual result remains **112 passing methods, five asset-blocked methods and one class-setup error**. All nine sources remain HOLD; original/frozen artifacts, zero legacy/Drive SFT release, model choice and all compute/gold gates remain unchanged. Library delivery remains failed with zero confirmed saves; no retry was made.
+
+Next: publish this documentation checkpoint normally, verify the remote and preserve draft PR3. Gunner coordinates the next environment's bounded metadata intake and the separate private snapshot/doc workstreams. Repeated or switched sessions resume from verified canonical evidence rather than restarting completed reviews or whole-corpus extraction.
+
 ## 2026-10-06 — publication verified; private Library export blocked
 
 <a id="forge-handoff-20261006-170625z"></a>
