@@ -1,5 +1,28 @@
 # FORGE handoff log
 
+## 2026-10-07 — identity reconciliation completed; machine handoff incomplete
+
+<a id="forge-handoff-20261007-162351z"></a>
+Entry ID: `FORGE-HANDOFF-20261007-162351Z`. Recorded: **2026-10-07 16:23:51 UTC / 11:23:51 CDT (America/Chicago, UTC-05:00)**. [Change record](CHANGELOG.md#forge-change-20261007-162351z). Gunner's audit accepted `e292d6c152e162cc6783ddab408e8a23e66382bb`; the isolated checkout fetched and fast-forward checked at that same head with no local edits. This session remains the sole repository writer. Old dirty checkouts remain untouched.
+
+**Correction:** the prior observer established only zero rows from nine immutable-view queries. It did not establish database/WAL snapshot identity. The old receipt/script remain preserved and the absence inference is superseded. SQLite immutable reads are not inherently complete snapshots. Do not replace this correction with a claim that immutable connections always ignore WAL.
+
+**New evidence:** reconciled existing supplied artifacts, the verified transfer inventory and recorded laptop/desktop locations in a private matrix. Required transferred evidence is retrievable here with exact hash equality. Equal-size versions with distinct hashes remain separate. The family-analysis database and extraction ledger have distinct identities and roles. The current extraction main file and exact sidecars were safely captured under held Windows read locks without source SQLite access; all sidecars were absent at capture time. Ordinary read-only queries on a disposable copy return zero matches for the nine assigned IDs. This captured desktop identity differs from the historical laptop identity; its completeness relative to laptop history is unresolved. All nine original candidate paths exist, while the 76 eligible envelope paths are absent at their recorded desktop locations. Four excluded pages and all original PDF bytes remained untouched.
+
+**Reviewed code and validation:** `windows_snapshot.py` implements guarded physical capture and opaque identity hashing. Nine synthetic Windows tests passed independently under Python 3.12 after fixture-closure and absolute-path review fixes; actual junction refusal and WAL-only committed-row behavior are exercised. The earlier 34 focused passes are worker-reported baseline evidence. No full-suite or published CI result is claimed, and no source-region/fidelity comparison ran. The academic content validator's existing platform refusal remains unchanged.
+
+**Stopping point:** this bounded identity/location audit is complete; the machine handoff is not. Required native extraction inputs, historical snapshot lineage, some supplied-version bindings and independently reviewed split/non-gold/alias evidence remain unresolved. All nine sources remain HOLD, all 25 named regions unqualified, and release authorization false. Do not request reuploads or regenerate caches from this finding. Code/PR publication and exact private artifact references belong in the dated canonical closeout; final commit identity is recorded externally after push.
+
+**Precise resume steps:**
+
+1. Read the private identity/location matrix and canonical dated logs, verify its hashes and the current remote branch, and retain one writer. Use known Library/Drive IDs and exact recorded paths; do not repeat legacy review or broad inventory.
+2. Have the source holder check the already recorded laptop extraction main/sidecars and the 76 eligible envelope paths against the matrix. Resolve existing supplied locations and snapshot lineage before considering another transfer. A current desktop zero does not answer laptop availability.
+3. Resolve remaining supplied-version bindings without same-size substitution. Keep prior receipts, historical pins, fresh local hashes and independent worker attestations distinct.
+4. Establish reviewed split/non-gold/alias isolation and a scoped safe root before source/cache content processing or restrictive-adapter work. Keep excluded pages and all other holds.
+5. Verify that the receiving machine can retrieve every required native input before marking machine handoff complete. Maintain private-only data storage, dated detailed logs, normal code pushes and remote readback. New-book OCR, models, training, paid services and automatic checks remain deferred/prohibited.
+
+Correction to the 15:22 entry below: its unqualified native-database wording describes an incomplete immutable-view observation; it must not be used as native-record absence evidence.
+
 ## 2026-10-07 — resumed; evidence hardening complete, real comparison blocked
 
 <a id="forge-handoff-20261007-152241z"></a>

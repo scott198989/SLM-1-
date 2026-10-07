@@ -5,8 +5,13 @@ continuation directly. Start with the latest entry in [HANDOFF_LOG.md](HANDOFF_L
 The older checkouts and local source workspace were preserved; code work uses an
 isolated checkout synchronized from `a4dbf27c42abf12a54c0dad871f5a7026da08671`.
 Figure hash consistency and safe JSON-depth diagnostics are hardened and covered
-by synthetic tests. The desktop evidence receipt records missing native rows and
-recorded cache paths; it is not a real-input validator result or fidelity review.
+by synthetic tests. The earlier immutable-view zero-row observation did not
+establish snapshot identity or WAL state and cannot establish native-record
+absence. A later source-preserving capture describes only its current physical
+file set. Existing-file reconciliation and missing recorded cache paths remain
+documented privately; the machine handoff is incomplete. Read the latest
+correction in [HANDOFF_LOG.md](HANDOFF_LOG.md) and the
+[SQLite observation contract](docs/SQLITE_SNAPSHOT_IDENTITY.md).
 All nine sources remain HOLD. New-book OCR, model downloads/loading, training and
 paid services remain deferred/prohibited under Scott's current instruction.
 Historical pause and older next-step lists below are preserved as history.

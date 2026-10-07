@@ -3,9 +3,12 @@
 
 October 7 continuation: Scott explicitly lifted the October 6 pause for bounded
 nine-source isolation/extraction-quality preparation. The latest
-[handoff](HANDOFF_LOG.md) records verified synchronization, desktop evidence gaps
-and the tested validator hardening. All nine sources remain HOLD; no real-input
-comparison or adapter construction was possible. New-book OCR stays deferred.
+[handoff](HANDOFF_LOG.md) corrects the earlier immutable-database inference,
+records existing-file identity/location reconciliation, and documents the tested
+[source-preserving SQLite capture](docs/SQLITE_SNAPSHOT_IDENTITY.md).
+Machine handoff remains incomplete until required native inputs are accounted
+for and retrievable on the receiving machine. All nine sources remain HOLD;
+no real-input content comparison or adapter construction ran. New-book OCR stays deferred.
 No model downloads/loading, training or paid services are authorized.
 
 Workflow for every FORGE Codex session (October 6): read [HANDOFF_LOG.md](HANDOFF_LOG.md), [HANDOFF_README.md](HANDOFF_README.md) and CHANGELOG; use branch `codex/forge-data-consolidation` / draft PR3. Scott authorizes code publication with one active writer, preservation of dirty work, safe fetch/fast-forward synchronization, coherent documentation and a verified normal push. A failed push means handoff incomplete. All ten selected source domains have complete agent technical dispositions in the local checkpoint; no legacy SFT released.

@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-10-07 - Correct database inference and reconcile existing handoff identities
+
+<a id="forge-change-20261007-162351z"></a>
+Entry ID: `FORGE-CHANGE-20261007-162351Z`. Recorded: **2026-10-07 16:23:51 UTC / 11:23:51 CDT (America/Chicago, UTC-05:00)**. Baseline: `e292d6c152e162cc6783ddab408e8a23e66382bb`; [handoff](HANDOFF_LOG.md#forge-handoff-20261007-162351z).
+
+- Corrected the earlier database-absence inference. Nine immutable-view queries returned zero rows, but the observer did not establish snapshot/WAL identity. Preserve the original receipt/script unchanged; this entry supersedes that conclusion rather than retroactively validating it.
+- Added a bounded Windows physical-snapshot helper: exact main/sidecar paths, held deny-write/delete read handles, source/copy SHA-256 equality, new destinations only, and refusal of reparse paths, active writable handles, changed identities and nonempty rollback journals. SQLite never opens source files through this helper. Its guarantee concerns the current captured file set under ordinary Windows sharing rules, not historical completeness or hostile filesystem changes.
+- Reconciled existing supplied-file and transfer identities in the canonical private location matrix. Kept equal-size but different-hash versions distinct. Verified receiving-machine retrieval of required transferred evidence. Distinguished the family checkpoint from the extraction ledger; no reupload or regeneration was requested. Private identifiers, machine paths and artifact hashes remain outside GitHub.
+- The current captured desktop extraction file set has no sidecars at capture time. Nine exact-ID queries against an ordinary read-only disposable derivative return zero matches. Its identity differs from the recorded laptop snapshot. This does not prove the laptop rows or formerly missing WAL are unavailable. The nine original candidate locations exist; 76 eligible cache paths are absent at recorded desktop locations. Four excluded pages were not statted, opened, hashed or copied. Original PDF bytes were not read.
+- Added nine native-Windows synthetic methods, independently rerun under Python 3.12: **9 passed**. The first 3.12 review exposed an unclosed fixture connection; explicit closure fixed it. Review also prompted absolute-path normalization and a real junction test. WAL-only committed-row recovery in a derivative, active-writer refusal, byte preservation and fail-closed boundaries are covered. Prior 34 focused passes remain worker-reported at the baseline; no fresh full suite or published CI pass is claimed.
+- Updated current READMEs/contracts and prepared a public-facts-only PR3 refresh. Keep PR3 draft and main unchanged. All nine HOLDs and isolation/fidelity gates remain. No source-page processing, adapter execution, model operations, training or paid services. A machine handoff is incomplete until required native inputs are accounted for and retrievable; code publication and private evidence closeout are separate verified steps.
+
+Correction to the 15:22 entry below: “No selected native rows were present” is an overstatement. Only the immutable-view zero-row observation was established then; use the qualified result above.
+
 ## 2026-10-07 - Resume bounded preparation and harden evidence validation
 
 <a id="forge-change-20261007-152241z"></a>

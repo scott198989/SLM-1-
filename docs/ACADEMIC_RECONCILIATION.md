@@ -33,11 +33,19 @@ rights permission resolves these evidence requirements.
 The verified public checkpoint and handoff scope are available. The canonical
 private handoff now preserves the authenticated scope, an accepted native mapping
 worksheet and a completed prerequisite diagnostic. Their availability does not
-supply runnable intake or selected-cache adapters. The October 7 desktop check
-found no matching rows for the nine sources in its local native database and no
-files at the 76 recorded nonexcluded extracted/normalized envelope paths. Nine
+supply runnable intake or selected-cache adapters. The first October 7 desktop
+check returned zero rows for nine exact-ID queries through an immutable view,
+without establishing snapshot identity or WAL state. That result cannot prove
+native-record absence. A later guarded physical capture and ordinary read-only
+query of its disposable derivative also returned zero matches, scoped only to
+that current desktop file set; historical completeness remains unknown. See the
+[SQLite identity contract](SQLITE_SNAPSHOT_IDENTITY.md). There are no files at the
+76 recorded nonexcluded extracted/normalized desktop envelope paths. Nine
 candidate original paths exist with matching sizes; their bytes were not opened
 or hashed. These are bounded environment observations, not global absence claims.
+The family-analysis checkpoint is a separate artifact from the native extraction
+ledger. Supplied-file receipt verification does not make missing native inputs
+retrievable or establish a complete machine handoff.
 Authenticated extractor provenance, reviewed original/cache bindings, independent
 alias/split/non-gold evidence and selected-region fidelity remain unresolved.
 Do not infer them from directory names or invent missing values. See the current
