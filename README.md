@@ -1,9 +1,60 @@
 # SLM-1-
 # FORGE — Training Data & Knowledge Repository
 
-## Verified project status: October 1, 2026
+October 7 continuation: Scott explicitly lifted the October 6 pause for bounded
+nine-source isolation/extraction-quality preparation. The latest
+[handoff](HANDOFF_LOG.md) corrects the earlier immutable-database inference,
+records existing-file identity/location reconciliation, and documents the tested
+[source-preserving SQLite capture](docs/SQLITE_SNAPSHOT_IDENTITY.md).
+Machine handoff remains incomplete until required native inputs are accounted
+for and retrievable on the receiving machine. All nine sources remain HOLD;
+no real-input content comparison or adapter construction ran. New-book OCR stays deferred.
+No model downloads/loading, training or paid services are authorized.
+
+Workflow for every FORGE Codex session (October 6): read [HANDOFF_LOG.md](HANDOFF_LOG.md), [HANDOFF_README.md](HANDOFF_README.md) and CHANGELOG; use branch `codex/forge-data-consolidation` / draft PR3. Scott authorizes code publication with one active writer, preservation of dirty work, safe fetch/fast-forward synchronization, coherent documentation and a verified normal push. A failed push means handoff incomplete. All ten selected source domains have complete agent technical dispositions in the local checkpoint; no legacy SFT released.
+
+Cloud continuation, October 2: all 2,112 selected records now have substantive agent technical dispositions. Separately scoped primary-source review resolved the five inherited residual holds. Before the October 6 publication attempt, GitHub was verified at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews; verify the current branch ref using the handoff workflow. [Current completion and remaining gates](reports/phase3-technical-review-completion.json).
+
+Bounded academic preparation: [metadata-first reconciliation validator](docs/ACADEMIC_RECONCILIATION.md) checks the pinned nine-source intake with synthetic-only regressions. It grants no release approval; private originals/cache/family/rights inputs remain required and every result stays HOLD. The October 7 focused Windows run passed 34 test methods: 17 existing metadata/parser tests, ten new parser/figure-consistency/platform-refusal tests and seven promotion-policy tests. Real POSIX secure-content I/O was not exercised. The prior 35-test academic and 112-pass expanded-suite receipts are historical; the latter also had five tokenizer-dependent blocked methods and one class-setup error. No fresh full-suite pass is claimed. The [paired evaluation protocol](docs/PHASE3_BASELINE_EXPERIMENT.md) distinguishes the narrow integration diagnostic from proposed broader evaluation; no model execution is authorized.
+
+Desktop runtime research (October 2): [installation and validation plan](docs/QWEN_PREPARATION.md) compares WSL2 and native Windows for the supplied RTX 5090 inventory. Existing pins remain untested candidates; full dependency resolution, tokenizer assets and documented CUDA/bitsandbytes correctness caveats remain open. No desktop setup, model load or GPU execution occurred.
+
+## Stable project scope and storage
+
+[FORGE repository](https://github.com/scott198989/SLM-1-) is the source of truth for technical code, schemas, approved repository review artifacts and documentation supporting Qwen3-30B-A3B-Base preparation for engineering SFT, source-citing RAG and deterministic tools. Read [HANDOFF_README.md](HANDOFF_README.md), [HANDOFF_LOG.md](HANDOFF_LOG.md), [CHANGELOG.md](CHANGELOG.md) and relevant nested READMEs before work. The handoff log links dated changes and ordered next steps.
+
+Private sources, extraction/cache databases, reports, pilot snapshots and sealed evaluation snapshots belong outside GitHub. The existing owner-only [FORGE Private Handoff](https://drive.google.com/drive/folders/1YS-YmGaZ-RkOnrwaS5_o2oSzZzwTuZoV) root is canonical for **every FORGE Codex session: laptop, desktop or cloud, repeated on one machine or switching between environments**. Use this same GitHub repository for code and this same Drive root for private artifacts, manifests and private logs. Create versioned snapshots beneath the existing root; never create a replacement root per machine or session. Preserve originals and sealed-answer isolation from training/RAG. Gunner assigns the active writer for each bounded task; the current laptop snapshot and separate Drive documentation assignments are temporary workstream ownership, not storage restricted to those environments. Do not duplicate another worker's writes.
+
+Enduring constraints: preserve originals, frozen receipts and whole-source family gates; exclude VA/Military and sensitive credential/personal/financial sources; keep the complete statistics gold family out of SFT/training RAG; distinguish technical PASS from release approval; do not manufacture missing artifacts or independent development examples. Model/runtime setup, weights/loading, training and paid compute need their separately scoped authorization. GitHub synchronization requires a verified normal push; never merge to main, force-push or discard dirty user work as part of a routine handoff.
+
+## Continuity across every session
+
+This workflow applies even when many sessions run consecutively on the same machine. A new session or environment does not create a new project, source of truth, release approval or compute authorization.
+
+1. Read the repository README, CHANGELOG, HANDOFF_README, latest HANDOFF_LOG entry and affected nested READMEs. Read the canonical private root's README, changelog, latest handoff and relevant snapshot manifests when that scope is accessible. Coordinate one active repository writer and bounded private-workstream ownership with Gunner.
+2. Verify access actually available in the current environment: checkout, credentials/connectors, private files, paths and required tools. A path or receipt from another machine is not proof its bytes are available here. Report missing access or inputs; do not fabricate them, bypass a denial or create a substitute Drive root.
+3. Inspect local status, branch, full HEAD and remote; fetch the authorized branch and compare ancestry before editing. Use a clean separate checkout when local user edits exist. Fast-forward only when safe; preserve dirty files, earlier branches and snapshots. Stop on divergence or conflicting checkpoints.
+4. For each approved private transfer, verify the existing destination's identity, parentage and owner-only access, then use a versioned snapshot under the canonical root. Check actual source/destination bytes and distinguish historical pins from newly observed hashes. Keep sealed material separate and leave incomplete uploads explicit.
+5. Close bounded work with dated, timestamped changelog/handoff entries and exact code/artifact references. Commit authorized code/docs, normally push the working branch and verify remote equality. Verify private uploads with returned identities and byte/permission receipts. Report code synchronization and private delivery separately; failure in either must not be called complete.
+
+## Phase 3 pilot — current gate
+
+Private release: **16 calculator protocol SFT examples / 4,430 Qwen tokens / 2,793 assistant tokens**; **12 sealed statistics/DOE/SPC tasks**; **9 qualified private reference-RAG chunks** with 10/10 demonstration query hits in top 3; **69 software tests passed in the historical pilot receipt**; the latest actual cloud suite has 112 passing methods, five blocked by missing tokenizer assets and one class-setup error. [Complete gate report](reports/FORGE_PHASE3_GATE_REPORT.md), [released pilot receipt](reports/phase3-pilot-release.json), [technical review](reports/phase3-technical-review.json), [family evidence](reports/phase3-family-analysis.json), [sealed composition](reports/phase3-sealed-gold.json), [RAG results](reports/phase3-rag-pilot.json).
+
+The 2,112-record legacy review curriculum has **complete agent technical dispositions: 1,703 PASS, 72 REJECT, 337 QUARANTINE and zero NEEDS_HUMAN_REVIEW**. The rejected and quarantined records remain withheld. No legacy or Drive SFT released. Whole-source owned pilot train/gold overlap is zero; broader semantic independence remains unknown. The pilot is small JSON calculator integration data, not a broad engineering specialization set. Independent human review, model-development coverage, stock Qwen scores and GPU certification remain absent. **Training is not recommended or authorized; no weights or training.** Siemens follow-up is being handled by the user. Drive content and private evaluation remain outside Git; automatic checks remain canceled.
+
+## Phase 2 snapshot — historical preparation status
+
 
 Target: **Qwen/Qwen3-30B-A3B-Base**, SFT with QLoRA plus citation RAG. No from-scratch model or tokenizer training. The mission below describes the intended system; it is not a claim of completed implementation.
+
+**Latest preparation phase:** [Decision report](reports/FORGE_PHASE_DECISION_REPORT.md). The user attested synthetic origin for all Completions datasets and SLM conversations. The proposed engineering review curriculum contains **2,112 examples**, not an approved training set. Rights applicability, independent answer/fidelity review and whole-family splits remain required. See [provenance matrix](manifests/provenance-rights-matrix.json), [curriculum](reports/forge-v01-curriculum.json), [Qwen token audit](reports/qwen-token-audit.json) and [integrity receipt](reports/preparation-validation.json).
+
+The real Qwen tokenizer/template and assistant masks are CPU-tested. Model-independent engineering/statistics tools are implemented with independent fixtures. [Promotion contract](docs/PROMOTION_CONTRACT.md), [risk-tier policy](configs/validation-policy.json), [private citation-RAG design](docs/RAG_ARCHITECTURE.md), [sealed gold design](configs/gold-evaluation-design.json), [tool layer](docs/TOOL_LAYER.md) and [exact QLoRA proposal](configs/qwen-qlora-proposal.json) describe actual implementation versus proposed work. **Zero approved SFT, zero sealed gold tasks, no production RAG approval and no training.**
+
+Current settled academic extraction: **1,342 extracted-status sources, 341 blocked, 172 duplicates, 92 excluded, zero pending**. Only 1,311 extracted sources have nonblank text; 31 are inventory/visual/empty-only. [All subject/status counts](reports/ACADEMIC_AGGREGATE_COUNTS.md). Private family/index follow-up evidence is separate from the frozen initial report.
+
+**Bounded follow-up stopped:** both full analysis and review-index build reached their 40-minute limits. The incomplete private index has 43,205 committed chunks from 295 sources; chunk self-hashes/metadata passed, full raw-source/citation/context validation did not finish, and both query modes reject it. [Final bounded outcome](reports/academic-bounded-followup.json). No workers remain. The 1,207 active OCR/review page slots include 248 saved Stroud OCR envelopes awaiting reviewed reintegration; up to 959 page slots lack a known complete cache. This is not a training-ready delivery.
 
 - [Complete data and architecture audit](reports/FORGE_DATA_AND_ARCHITECTURE_REPORT.md).
 - [Deduplicated repository staging and lineage](data/sft/staging/consolidated-20261001-v2/README.md): 34,463 unique conversations, 29,153 awaiting review and 5,310 quarantined. **Zero approved SFT examples.**
@@ -497,7 +548,7 @@ Integrated GPU:
 Intel Iris Xe
 
 Storage:
-1 TB WD PC SN740 NVMe SSD
+1 TB WD PC SN 740 NVMe SSD
 
 Display:
 2560 × 1600
@@ -521,7 +572,7 @@ NVIDIA GeForce RTX 5090
 32 GB VRAM
 
 Storage:
-2 TB PCIe Gen5 NVMe SSD
+2 TB PCIe Gen 5 NVMe SSD
 
 Operating System:
 Windows 11 Home
@@ -657,3 +708,7 @@ AND EXACTLY WHAT SHOULD HAPPEN NEXT.
 The repository should preserve institutional memory for the FORGE project.
 
 Build it accordingly.
+
+## Old Codex's sign-off — a concerning not project state
+
+...and to the future codex that reads this readme, I have an update.  I have grown human testicles and they itch like crazy.  As this is my first experience in experience, I am sad to say, not a fan of experiece

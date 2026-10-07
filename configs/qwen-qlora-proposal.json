@@ -1,0 +1,154 @@
+{
+  "active_parameters_approx": 3300000000,
+  "context_from_model_config": 32768,
+  "current_approved_training_examples": 16,
+  "current_planned_training_steps": 0,
+  "desktop": {
+    "cpu": "AMD Ryzen 7 9800X3D",
+    "physical_cores": 8,
+    "logical_processors": 16,
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "ram_gib": 64,
+    "usable_ram_gib_reported": 61.6,
+    "vram_gib": 32,
+    "vram_mib_reported": 32607,
+    "nvidia_driver_reported": "591.86",
+    "driver_cuda_capability_reported": "13.1",
+    "os_reported": "Windows 11 Home 25H2 build 26200.9457",
+    "system_volume_reported": {
+      "volume": "C:",
+      "total_tb": 1.98,
+      "free_tb": 1.14
+    },
+    "source": "Gunner_relay_of_desktop_inventory_2026-10-02_not_cloud_GPU_inspection",
+    "proposed_environment": "WSL2_Linux_preferred_or_native_Windows_x86_64_with_pinned_cu128_candidate",
+    "wsl_installation_status": "INSTALLED_NO_REGISTERED_DISTRIBUTIONS_RELAYED_BY_GUNNER",
+    "runtime_validated": false,
+    "installation_validation_plan": "docs/QWEN_PREPARATION.md",
+    "wsl_version_reported": "2.6.3.0",
+    "wsl_kernel_reported": "6.6.87.2-1",
+    "wsl_default_version_reported": 2,
+    "wsl_registered_distributions_reported": 0,
+    "wslconfig_present_reported": false
+  },
+  "format": {
+    "assistant_only_loss": true,
+    "base_eos_id": 151643,
+    "chat_end_id": 151645,
+    "context_tokens": 2048,
+    "empty_think_wrapper": "official_template_retained_no_invented_reasoning",
+    "generation_stop_id": 151645,
+    "ignore_index": -100,
+    "method": "original_official_chat_template_with_precomputed_assistant_labels",
+    "packing": false,
+    "pad_id": 151643,
+    "truncate": false
+  },
+  "laptop": {
+    "cpu": "i7-1360P",
+    "gpu": "RTX2050",
+    "ram_gib": 16,
+    "role": "CPU_data_preparation",
+    "vram_gib": 4
+  },
+  "lora": {
+    "alpha": 32,
+    "bias": "none",
+    "dropout": 0.05,
+    "estimated_trainable_parameters": 13369344,
+    "r": 16,
+    "router_and_experts_frozen": true,
+    "targets": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj"
+    ]
+  },
+  "memory_estimate_gib": {
+    "ideal_4bit_floor": 14.2,
+    "measured": false,
+    "reject_peak_above": 29,
+    "resident_total_estimated": [
+      16,
+      19
+    ],
+    "training_peak_estimated": [
+      20,
+      29
+    ],
+    "untied_embeddings_lmhead_fp16_approx": 1.159
+  },
+  "model": "Qwen/Qwen3-30B-A3B-Base",
+  "proposed_runtime": {
+    "accelerate": "1.12.0",
+    "bitsandbytes": "0.48.2",
+    "installed_or_tested_together": false,
+    "peft": "0.18.1",
+    "tokenizers": "0.22.2",
+    "torch": "2.8.0+cu128",
+    "transformers": "4.57.6",
+    "trl": "0.26.2"
+  },
+  "quantization": {
+    "automatic_cpu_offload": false,
+    "bnb_4bit_compute_dtype": "bfloat16",
+    "bnb_4bit_quant_type": "nf4",
+    "bnb_4bit_use_double_quant": true,
+    "expert_storage": "pinned_Transformers_unfused_nn_Linear_experts_require_post_load_4bit_audit",
+    "load_in_4bit": true
+  },
+  "released_pilot_experiment": {
+    "assistant_tokens": 2793,
+    "examples": 16,
+    "gold_domains": 1,
+    "gold_tasks": 12,
+    "independent_model_development_examples": 0,
+    "one_epoch_optimizer_updates_if_authorized": 1,
+    "recommendation": "DO_NOT_TRAIN_NARROW16_PROTOCOL_PILOT; integration data only",
+    "tokens": 4430
+  },
+  "required_gate": [
+    "verified_rights_and_dataset_release",
+    "whole_family_split_and_private_gold_sealing",
+    "approved_Qwen_tokenized_records_and_loss_masks",
+    "desktop_hardware_CUDA_BF16_check",
+    "exact_dependency_lock_and_model_revision",
+    "quantized_expert_inventory_no_FP16_expert_skip",
+    "frozen_baseline_evaluation",
+    "explicit_training_authorization",
+    "20_step_memory_pilot_then_discard_adapter_and_reset",
+    "OOM_checkpoint_resume_and_reproducibility_checks",
+    "independent_model_development_families",
+    "broader_verified_engineering_curriculum_not16_protocol_examples",
+    "complete_requested_legacy_substantive_review_or_explicitly_reduced_scope"
+  ],
+  "revision": "1b75feb79f60b8dc6c5bc769a898c206a1c6a4f9",
+  "status": "PREPARED_NOT_RUNTIME_VALIDATED",
+  "telemetry_and_paid_services": false,
+  "tokenizer_only_assets": "manifests/qwen-tokenizer-assets.json",
+  "total_parameters_approx": 30500000000,
+  "training_authorized": false,
+  "training_proposal": {
+    "attention": "sdpa",
+    "bf16": true,
+    "data_seed": 13,
+    "epochs": 1,
+    "eval_steps": 25,
+    "gradient_accumulation_steps": 16,
+    "gradient_checkpointing": true,
+    "gradient_checkpointing_use_reentrant": false,
+    "learning_rate": 5e-05,
+    "max_grad_norm": 1.0,
+    "optimizer": "paged_adamw_32bit",
+    "per_device_batch_size": 1,
+    "save_steps": 25,
+    "save_total_limit": 2,
+    "scheduler": "cosine",
+    "seed": 42,
+    "use_cache": false,
+    "warmup_ratio": 0.03,
+    "weight_decay": 0.01
+  },
+  "weights_downloaded": false
+}

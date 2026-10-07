@@ -1,0 +1,417 @@
+[
+  {
+    "repository": "scott198989/Completions",
+    "revision": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "Conversations_SFT.jsonl.bak",
+    "method": "GitHub_public_commits_path_filter",
+    "maximum_commits": 100,
+    "possibly_incomplete": false,
+    "commits": [
+      {
+        "sha": "3b013383d12033cdcd966de5820543b5ed1e9e0b",
+        "at": "2026-05-12T22:43:11Z",
+        "message": "sending convo data"
+      }
+    ]
+  },
+  {
+    "repository": "scott198989/Completions",
+    "revision": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_AC_Circuits.jsonl",
+    "method": "GitHub_public_commits_path_filter",
+    "maximum_commits": 100,
+    "possibly_incomplete": false,
+    "commits": [
+      {
+        "sha": "a8c841588aef980a964eb7651722d4bd602653dd",
+        "at": "2026-05-06T01:22:22Z",
+        "message": "materials science done"
+      }
+    ]
+  },
+  {
+    "repository": "scott198989/Completions",
+    "revision": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_Advanced_Eng_Math.jsonl",
+    "method": "GitHub_public_commits_path_filter",
+    "maximum_commits": 100,
+    "possibly_incomplete": false,
+    "commits": [
+      {
+        "sha": "3adefa3dbf5ef351e2b5c5c22bebe28c9deb5d6f",
+        "at": "2026-05-09T11:49:29Z",
+        "message": "flags and audit"
+      },
+      {
+        "sha": "a8c841588aef980a964eb7651722d4bd602653dd",
+        "at": "2026-05-06T01:22:22Z",
+        "message": "materials science done"
+      }
+    ]
+  },
+  {
+    "repository": "scott198989/Completions",
+    "revision": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_Algebra.jsonl",
+    "method": "GitHub_public_commits_path_filter",
+    "maximum_commits": 100,
+    "possibly_incomplete": false,
+    "commits": [
+      {
+        "sha": "a8c841588aef980a964eb7651722d4bd602653dd",
+        "at": "2026-05-06T01:22:22Z",
+        "message": "materials science done"
+      }
+    ]
+  },
+  {
+    "repository": "scott198989/Completions",
+    "revision": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_Conversations.jsonl",
+    "method": "GitHub_public_commits_path_filter",
+    "maximum_commits": 100,
+    "possibly_incomplete": false,
+    "commits": [
+      {
+        "sha": "a8c841588aef980a964eb7651722d4bd602653dd",
+        "at": "2026-05-06T01:22:22Z",
+        "message": "materials science done"
+      }
+    ]
+  },
+  {
+    "repository": "scott198989/Completions",
+    "revision": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_Conversations_SFT.jsonl",
+    "method": "GitHub_public_commits_path_filter",
+    "maximum_commits": 100,
+    "possibly_incomplete": false,
+    "commits": [
+      {
+        "sha": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+        "at": "2026-05-13T22:27:08Z",
+        "message": "sending last upate"
+      }
+    ]
+  },
+  {
+    "repository": "scott198989/Completions",
+    "revision": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_Thermodynamics.jsonl",
+    "method": "GitHub_public_commits_path_filter",
+    "maximum_commits": 100,
+    "possibly_incomplete": false,
+    "commits": [
+      {
+        "sha": "a8c841588aef980a964eb7651722d4bd602653dd",
+        "at": "2026-05-06T01:22:22Z",
+        "message": "materials science done"
+      }
+    ]
+  },
+  {
+    "repository": "scott198989/Completions",
+    "revision": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_Trigonometry.jsonl",
+    "method": "GitHub_public_commits_path_filter",
+    "maximum_commits": 100,
+    "possibly_incomplete": false,
+    "commits": [
+      {
+        "sha": "a8c841588aef980a964eb7651722d4bd602653dd",
+        "at": "2026-05-06T01:22:22Z",
+        "message": "materials science done"
+      }
+    ]
+  },
+  {
+    "repository": "scott198989/Completions",
+    "revision": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_calculus.jsonl",
+    "method": "GitHub_public_commits_path_filter",
+    "maximum_commits": 100,
+    "possibly_incomplete": false,
+    "commits": [
+      {
+        "sha": "a8c841588aef980a964eb7651722d4bd602653dd",
+        "at": "2026-05-06T01:22:22Z",
+        "message": "materials science done"
+      }
+    ]
+  },
+  {
+    "repository": "scott198989/Completions",
+    "revision": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_elect_components.jsonl",
+    "method": "GitHub_public_commits_path_filter",
+    "maximum_commits": 100,
+    "possibly_incomplete": false,
+    "commits": [
+      {
+        "sha": "a8c841588aef980a964eb7651722d4bd602653dd",
+        "at": "2026-05-06T01:22:22Z",
+        "message": "materials science done"
+      }
+    ]
+  },
+  {
+    "repository": "scott198989/Completions",
+    "revision": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_electrodynamics.jsonl",
+    "method": "GitHub_public_commits_path_filter",
+    "maximum_commits": 100,
+    "possibly_incomplete": false,
+    "commits": [
+      {
+        "sha": "a8c841588aef980a964eb7651722d4bd602653dd",
+        "at": "2026-05-06T01:22:22Z",
+        "message": "materials science done"
+      }
+    ]
+  },
+  {
+    "repository": "scott198989/Completions",
+    "revision": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_material_science.jsonl",
+    "method": "GitHub_public_commits_path_filter",
+    "maximum_commits": 100,
+    "possibly_incomplete": false,
+    "commits": [
+      {
+        "sha": "3adefa3dbf5ef351e2b5c5c22bebe28c9deb5d6f",
+        "at": "2026-05-09T11:49:29Z",
+        "message": "flags and audit"
+      }
+    ]
+  },
+  {
+    "repository": "scott198989/Completions",
+    "revision": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "D_physics.jsonl",
+    "method": "GitHub_public_commits_path_filter",
+    "maximum_commits": 100,
+    "possibly_incomplete": false,
+    "commits": [
+      {
+        "sha": "a8c841588aef980a964eb7651722d4bd602653dd",
+        "at": "2026-05-06T01:22:22Z",
+        "message": "materials science done"
+      }
+    ]
+  },
+  {
+    "repository": "scott198989/Completions",
+    "revision": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "README.md",
+    "method": "GitHub_public_commits_path_filter",
+    "maximum_commits": 100,
+    "possibly_incomplete": false,
+    "commits": [
+      {
+        "sha": "3adefa3dbf5ef351e2b5c5c22bebe28c9deb5d6f",
+        "at": "2026-05-09T11:49:29Z",
+        "message": "flags and audit"
+      },
+      {
+        "sha": "a8c841588aef980a964eb7651722d4bd602653dd",
+        "at": "2026-05-06T01:22:22Z",
+        "message": "materials science done"
+      },
+      {
+        "sha": "4e8eb4a1dacb6008b0893e8c0482e1c83be198f9",
+        "at": "2026-04-25T14:55:29Z",
+        "message": "physics done"
+      },
+      {
+        "sha": "1d142e5ed08cf3b9ef2c38ff6ad8a8a6a2dc316a",
+        "at": "2026-04-21T10:14:32Z",
+        "message": "adjustments and physics added"
+      },
+      {
+        "sha": "7eaceda6c5291765c19b65c4ddd704a164ce5541",
+        "at": "2026-04-21T03:13:37Z",
+        "message": "electrodynamics done"
+      },
+      {
+        "sha": "172d35bc251c45743022c6caa6f65f3ff9d41f23",
+        "at": "2026-04-20T19:33:10Z",
+        "message": "created stub files"
+      },
+      {
+        "sha": "1eb0da867f90aa2d2fa53f2f72c138e6235de5ad",
+        "at": "2026-04-20T19:27:52Z",
+        "message": "thermo done"
+      },
+      {
+        "sha": "c06c30b51a4f313197a1bb7ae3927a5c627f80d7",
+        "at": "2026-04-15T01:44:06Z",
+        "message": "first commit"
+      }
+    ]
+  },
+  {
+    "repository": "scott198989/Completions",
+    "revision": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "build_sft.py",
+    "method": "GitHub_public_commits_path_filter",
+    "maximum_commits": 100,
+    "possibly_incomplete": false,
+    "commits": [
+      {
+        "sha": "3adefa3dbf5ef351e2b5c5c22bebe28c9deb5d6f",
+        "at": "2026-05-09T11:49:29Z",
+        "message": "flags and audit"
+      },
+      {
+        "sha": "1477d48cf3a232788641759828f2a25a8eff6e28",
+        "at": "2026-04-15T15:16:19Z",
+        "message": "adding completions"
+      }
+    ]
+  },
+  {
+    "repository": "scott198989/Completions",
+    "revision": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+    "path": "core_world_model.jsonl",
+    "method": "GitHub_public_commits_path_filter",
+    "maximum_commits": 100,
+    "possibly_incomplete": false,
+    "commits": [
+      {
+        "sha": "3b013383d12033cdcd966de5820543b5ed1e9e0b",
+        "at": "2026-05-12T22:43:11Z",
+        "message": "sending convo data"
+      }
+    ]
+  },
+  {
+    "repository": "scott198989/LLM",
+    "revision": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+    "path": "data/sft_v0/all.jsonl",
+    "method": "GitHub_public_commits_path_filter",
+    "maximum_commits": 100,
+    "possibly_incomplete": false,
+    "commits": [
+      {
+        "sha": "3da907ec7fcf76855aefa65db8d2499d29b03031",
+        "at": "2026-05-11T06:02:22Z",
+        "message": "restructure"
+      }
+    ]
+  },
+  {
+    "repository": "scott198989/SLM",
+    "revision": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "README.md",
+    "method": "GitHub_public_commits_path_filter",
+    "maximum_commits": 100,
+    "possibly_incomplete": false,
+    "commits": [
+      {
+        "sha": "1c3b1f4eb175b7ca9a8ac5b10c1cc5fce583c9c8",
+        "at": "2025-11-24T21:33:33Z",
+        "message": "fix readmes"
+      },
+      {
+        "sha": "124c570bcf9550f600d21eb61908f6414403ee67",
+        "at": "2025-11-24T03:18:44Z",
+        "message": "Set up HAVOC-7B scaffolding and SRS stack"
+      },
+      {
+        "sha": "af173c48d7569e5e5535df4756939083ce35c070",
+        "at": "2025-11-24T02:43:07Z",
+        "message": "Revise README for clarity and structure\n\nUpdated README.md for improved clarity and formatting."
+      },
+      {
+        "sha": "fd8ec3ffd541ea808124995a1930cfc99f7d347b",
+        "at": "2025-11-24T02:27:56Z",
+        "message": "Update README with project details and goals\n\nAdded detailed project overview and structure for HAVOC-7B."
+      },
+      {
+        "sha": "8877a484101c6b1f1b06b259e77d5db84e8b51ec",
+        "at": "2025-11-22T20:40:30Z",
+        "message": "readme push"
+      },
+      {
+        "sha": "687ceb76607c0697d4bb9b6cc773f1b41c899257",
+        "at": "2025-11-22T20:35:18Z",
+        "message": "first commit"
+      }
+    ]
+  },
+  {
+    "repository": "scott198989/SLM",
+    "revision": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+    "method": "GitHub_public_commits_path_filter",
+    "maximum_commits": 100,
+    "possibly_incomplete": false,
+    "commits": [
+      {
+        "sha": "091bcbd6e1767937959a06c0ee7d0f140bd4e78e",
+        "at": "2025-11-30T09:31:16Z",
+        "message": "sft data"
+      }
+    ]
+  },
+  {
+    "repository": "scott198989/SLM",
+    "revision": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+    "method": "GitHub_public_commits_path_filter",
+    "maximum_commits": 100,
+    "possibly_incomplete": false,
+    "commits": [
+      {
+        "sha": "091bcbd6e1767937959a06c0ee7d0f140bd4e78e",
+        "at": "2025-11-30T09:31:16Z",
+        "message": "sft data"
+      }
+    ]
+  },
+  {
+    "repository": "scott198989/SLM",
+    "revision": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+    "method": "GitHub_public_commits_path_filter",
+    "maximum_commits": 100,
+    "possibly_incomplete": false,
+    "commits": [
+      {
+        "sha": "091bcbd6e1767937959a06c0ee7d0f140bd4e78e",
+        "at": "2025-11-30T09:31:16Z",
+        "message": "sft data"
+      }
+    ]
+  },
+  {
+    "repository": "scott198989/SLM",
+    "revision": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+    "method": "GitHub_public_commits_path_filter",
+    "maximum_commits": 100,
+    "possibly_incomplete": false,
+    "commits": [
+      {
+        "sha": "091bcbd6e1767937959a06c0ee7d0f140bd4e78e",
+        "at": "2025-11-30T09:31:16Z",
+        "message": "sft data"
+      }
+    ]
+  },
+  {
+    "repository": "scott198989/SLM",
+    "revision": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+    "path": "sft_data/havoc_sft_phase1_full.jsonl",
+    "method": "GitHub_public_commits_path_filter",
+    "maximum_commits": 100,
+    "possibly_incomplete": false,
+    "commits": [
+      {
+        "sha": "091bcbd6e1767937959a06c0ee7d0f140bd4e78e",
+        "at": "2025-11-30T09:31:16Z",
+        "message": "sft data"
+      }
+    ]
+  }
+]

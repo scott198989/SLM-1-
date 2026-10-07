@@ -1,0 +1,567 @@
+{
+  "base_commit": "9e60dfd631c7871ba5940d7b01bcad9d3420d657",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "calculus",
+  "offset": 100,
+  "limit": 25,
+  "next_offset": 125,
+  "selected_window_end_exclusive": 125,
+  "selected_rows_in_window": 25,
+  "new_substantive_reviews": 25,
+  "skipped_existing": 0,
+  "preserved_structural_quarantines": [],
+  "dispositions_added": {
+    "PASS": 23,
+    "QUARANTINE": 2
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "independent_calculus_fifth_batch_agent",
+    "records_checked": 25,
+    "final_counts": {
+      "PASS": 23,
+      "QUARANTINE": 2
+    },
+    "disposition_changes": [],
+    "review_precision_corrections": [],
+    "full_prompt_and_answer_review": true,
+    "all_source_hashes_ids_ordinals_and_ledger_matches": true,
+    "source_sha256": "b0d723661de91b79a32a417e4cd52c1f9fb36dac64053d86ad5fc18a63f85e21",
+    "reviewed_against_local_commit": "994a4b16a3b6c4826a3ab34566e5aa9b6aeb90a1",
+    "candidate_preparation_predecessor_commit": "a0bf6e6b4b6731398ce12e4c0a2e2fb2aedc8d97",
+    "published_base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "independent_human_review": false,
+    "release_approved": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 1152,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 912,
+    "REJECT": 55,
+    "QUARANTINE": 211,
+    "NEEDS_HUMAN_REVIEW": 934
+  },
+  "agent_substantive_reviews": 1177,
+  "substantively_unreviewed": 932,
+  "records": [
+    {
+      "id": "repo-6366e78049e14e121145581e",
+      "ordinal": 100,
+      "messages_sha256": "6366e78049e14e121145581eb5e893188382cef218283c10985fd81158b1fd36",
+      "state": "PASS",
+      "rationale": "Correct SI Gauss-law surface-flux statement and divergence-theorem connection.",
+      "evidence": [
+        {
+          "method": "Maxwell_Gauss_electric_contract",
+          "finding": "In SI vacuum form, outward closed-surface E flux equals enclosed total charge divided by epsilon0; div E=rho/epsilon0 gives the integral statement."
+        },
+        {
+          "method": "independent_vector_calculus",
+          "finding": "Gradients, divergence, curl, circulation and orientation conventions are checked in the stated coordinate system."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "epsilon0 is vacuum permittivity and Q_enc is total enclosed charge for the E-field form; the D-field/free-charge formulation uses different quantities."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L781"
+    },
+    {
+      "id": "repo-829ec9f81338ed0e82b94007",
+      "ordinal": 101,
+      "messages_sha256": "829ec9f81338ed0e82b94007b870e0d5b05cec15b97e03a32234a78abad7b61f",
+      "state": "PASS",
+      "rationale": "Correct winding-number graphics example and plausible qualified accumulation/path-functional applications outside elementary mechanics.",
+      "evidence": [
+        {
+          "title": "CMU geometry-processing lecture, Winding number discretization",
+          "url": "https://www.cs.cmu.edu/~scoros/cs15869-s15/lectures/05-CSG_Procedural.pdf",
+          "finding": "The planar winding number is(1/(2pi))*integral_C dtheta and discretizes to signed angles of polygon edges, supporting inside/outside classification."
+        },
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative, series, integral, local approximation and path counterexamples are verified directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a simple positively oriented planar loop, winding=(1/(2pi i))*integral dz/(z-p) is1 inside and0 outside. A path-dependent cumulative cost can be represented as integral c(r(s))ds."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The supply-chain statement is a modeling possibility, not a documented specific deployment. Random nonrectifiable paths may require a stochastic integral rather than an ordinary smooth-curve line integral."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L782"
+    },
+    {
+      "id": "repo-799a1d755e9b959b4f6c3523",
+      "ordinal": 102,
+      "messages_sha256": "799a1d755e9b959b4f6c352350704e75720b95cb00de64137aa15dc6f7468693",
+      "state": "PASS",
+      "rationale": "Correct intuition and threshold cases of the ratio test.",
+      "evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative, series, integral, local approximation and path counterexamples are verified directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For limit L<1 choose q withL<q<1; eventually|a_(n+1)|<=q|a_n|, giving a geometric upper bound. L>1 makes nonzero term magnitudes eventually grow."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The eventual fixed fraction is a bound, not an assertion every consecutive ratio becomes exactly constant; denominator terms must be nonzero where ratios are taken."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L794"
+    },
+    {
+      "id": "repo-f6b896661d4576cea79d245b",
+      "ordinal": 103,
+      "messages_sha256": "f6b896661d4576cea79d245b793f05fca298ca8af6aba9166e9803f891948938",
+      "state": "PASS",
+      "rationale": "Correct application of Cauchy condensation to the positive decreasing harmonic terms.",
+      "evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative, series, integral, local approximation and path counterexamples are verified directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "2^n*a_(2^n)=2^n/2^n=1, so the condensed sum diverges."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L809"
+    },
+    {
+      "id": "repo-b9910f440da0fa61ea673cf8",
+      "ordinal": 104,
+      "messages_sha256": "b9910f440da0fa61ea673cf89dc1058d3c7b0253d26e62eb72f5d2d48aa412df",
+      "state": "PASS",
+      "rationale": "Correct concise partial-fractions integration plan for rational functions.",
+      "evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative, series, integral, local approximation and path counterexamples are verified directly."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Checking properness includes polynomial division when needed; real irreducible quadratics and repeated factors require the appropriate decomposition terms."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L810"
+    },
+    {
+      "id": "repo-cedceda27a7da0d11264c994",
+      "ordinal": 105,
+      "messages_sha256": "cedceda27a7da0d11264c994fabca2d201f4bf425f701af87b8314da9f7951bf",
+      "state": "PASS",
+      "rationale": "Correct intuitive right-hand orientation relationship between boundary traversal and a surface normal.",
+      "evidence": [
+        {
+          "method": "independent_vector_calculus",
+          "finding": "Gradients, divergence, curl, circulation and orientation conventions are checked in the stated coordinate system."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "For an open spanning surface, outward means the selected positive normal rather than a uniquely defined outward-from-a-volume direction; on curved surfaces use the local induced orientation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L818"
+    },
+    {
+      "id": "repo-0129297213b1c5bbb3d0f5bf",
+      "ordinal": 106,
+      "messages_sha256": "0129297213b1c5bbb3d0f5bfd9af87e80aa896194e3ed15ec50cdb72fcfa12df",
+      "state": "PASS",
+      "rationale": "Exact gradient, divergence and curl values, and valid nonuniqueness lesson.",
+      "evidence": [
+        {
+          "method": "independent_vector_calculus",
+          "finding": "Gradients, divergence, curl, circulation and orientation conventions are checked in the stated coordinate system."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "grad(x²-y²)=(2x,-2y,0); div=2-2=0; every curl component=0."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L838"
+    },
+    {
+      "id": "repo-373bae8be1e7b2bdd0715a71",
+      "ordinal": 107,
+      "messages_sha256": "373bae8be1e7b2bdd0715a71481d97c9ff5062b7e704638b8cf4c354dca8c8e9",
+      "state": "PASS",
+      "rationale": "Correct unit-circle parametrization and circulation for the counterclockwise orientation shown.",
+      "evidence": [
+        {
+          "method": "independent_vector_calculus",
+          "finding": "Gradients, divergence, curl, circulation and orientation conventions are checked in the stated coordinate system."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "F(r(t))=r_prime(t)=(-sin t,cos t), so their dot product=1 and the integral is2pi."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Reversing orientation gives-2pi; the original explicitly supplies the standard counterclockwise parametrization."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L844"
+    },
+    {
+      "id": "repo-0f6706e28a58f2ea95af8520",
+      "ordinal": 108,
+      "messages_sha256": "0f6706e28a58f2ea95af85200174b7449cd38a21b1f63e8f236c2d31b7f486a6",
+      "state": "PASS",
+      "rationale": "Correct meaning of successive variable integrations in an iterated definite integral.",
+      "evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative, series, integral, local approximation and path counterexamples are verified directly."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "For a fully evaluated definite integral over all variables the result is a number; external parameters can remain if present."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L860"
+    },
+    {
+      "id": "repo-3404bb2aa837b1941cc68357",
+      "ordinal": 109,
+      "messages_sha256": "3404bb2aa837b1941cc6835762e604a66f1fa83a6d6dc069910c176006af9e85",
+      "state": "PASS",
+      "rationale": "Complete practical cylindrical-coordinate integration workflow, including the indispensable radial Jacobian.",
+      "evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative, series, integral, local approximation and path counterexamples are verified directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For r>=0, volume measure is r dr dtheta dz; bounds must match the chosen nesting order."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L865"
+    },
+    {
+      "id": "repo-ccd76fa98bc13a77d56736cc",
+      "ordinal": 110,
+      "messages_sha256": "ccd76fa98bc13a77d56736cc338570fde16e028d0c18b4d7c0730c4cf0c0ad58",
+      "state": "PASS",
+      "rationale": "Correct IVT statement and role of continuity/completeness.",
+      "evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative, series, integral, local approximation and path counterexamples are verified directly."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Smoothly here means without value gaps, not differentiability. Some discontinuous functions still have the intermediate-value property; the answer says they can skip values, so no universal converse is asserted."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L866"
+    },
+    {
+      "id": "repo-dbfe85825ec789b67a33f931",
+      "ordinal": 111,
+      "messages_sha256": "dbfe85825ec789b67a33f9313d898789ffb57c98aec7b7cc07fb54e497fc20e6",
+      "state": "QUARANTINE",
+      "rationale": "The mathematical signed-versus-absolute integral distinction is correct, but total revenue is not the absolute value of net profit. The concluding financial analogy mislabels accumulated gains and losses as revenue.",
+      "evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative, series, integral, local approximation and path counterexamples are verified directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A transaction with revenue1 and cost3 has net profit-2, whose absolute value is2, not revenue1. Likewise integrating|net profit density| does not reconstruct revenue."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for the analogy; do not reject the correct cancellation explanation or infer a financial recommendation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L881"
+    },
+    {
+      "id": "repo-8c38980ee61837849c8802f0",
+      "ordinal": 112,
+      "messages_sha256": "8c38980ee61837849c8802f0dad2616fd8e650295fc163c50b584ba00a841b80",
+      "state": "PASS",
+      "rationale": "Correct practical motivation for multipliers when solving constraints explicitly would be awkward.",
+      "evidence": [
+        {
+          "title": "Boyd and Vandenberghe, Convex Optimization, chapters10-11",
+          "url": "https://www.seas.ucla.edu/~vandenbe/cvxbook/bv_cvxbook.pdf",
+          "finding": "KKT/Newton methods use Hessian and constraint data. Interior-point families include infeasible-start formulations; they need not satisfy all original constraints at intermediate iterates."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Constraint qualifications, singular points and boundary conditions still need checking; multiple constraints do not automatically make substitution impossible."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L903"
+    },
+    {
+      "id": "repo-9268ef5fd95a7d686aeb62c7",
+      "ordinal": 113,
+      "messages_sha256": "9268ef5fd95a7d686aeb62c7cb69bc8f088d499ab3335768905820d75f064ba4",
+      "state": "PASS",
+      "rationale": "Correct principal-value concept and canonical zero PV example, distinguished from ordinary improper convergence.",
+      "evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative, series, integral, local approximation and path counterexamples are verified directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For1/x on[-1,1], the symmetric truncated sum is ln(epsilon)-ln(epsilon)=0 for everyepsilon>0, whereas each one-sided improper integral diverges."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The displayed schematic must include the actual integrand and fixed endpoints in a fully specified problem; principal values can also be defined at infinity or around other singular points."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L912"
+    },
+    {
+      "id": "repo-e46280ebb56cfc44bc70760a",
+      "ordinal": 114,
+      "messages_sha256": "e46280ebb56cfc44bc70760a58cf7810506f06205d288d3c391f441c65b0f7c3",
+      "state": "QUARANTINE",
+      "rationale": "The active-set description and feasible barrier intuition are useful, but not all interior-point methods stay inside the feasible region of the original problem. Infeasible-start primal-dual variants can violate equality or original primal constraints until convergence.",
+      "evidence": [
+        {
+          "title": "Boyd and Vandenberghe, Convex Optimization, chapters10-11",
+          "url": "https://www.seas.ucla.edu/~vandenbe/cvxbook/bv_cvxbook.pdf",
+          "finding": "KKT/Newton methods use Hessian and constraint data. Interior-point families include infeasible-start formulations; they need not satisfy all original constraints at intermediate iterates."
+        },
+        {
+          "title": "UCLA EE236A, Initialization and infeasibility detection",
+          "url": "https://seas.ucla.edu/~vandenbe/ee236a/lectures/hsd.pdf",
+          "finding": "Distinguishes a feasible-start barrier method from an infeasible primal-dual interior-point method that does not require feasible starting points."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "An infeasible primal-dual interior-point iterate can have positive primal/slack variables while residual Ax-b is nonzero; positivity of barrier variables is not full original feasibility."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The original is accurate for a feasible-start barrier subclass. Hold for its class-wide statement, not because barrier terms or active-set guesses are invalid."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L917"
+    },
+    {
+      "id": "repo-79b8f15e7c63dd86323d3c19",
+      "ordinal": 115,
+      "messages_sha256": "79b8f15e7c63dd86323d3c19703f023077ab0731061fb81813cdbda07062b684",
+      "state": "PASS",
+      "rationale": "Correct elementary three-condition continuity checklist and its possible failures.",
+      "evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative, series, integral, local approximation and path counterexamples are verified directly."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "At a boundary point use the limit relative to the domain. A missing-domain point is usually discussed as a failure to extend continuously there, rather than continuity of the function at a point outside its domain."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L926"
+    },
+    {
+      "id": "repo-e055df8a387d53deed550aaf",
+      "ordinal": 116,
+      "messages_sha256": "e055df8a387d53deed550aaff90736b5271a4457ce6523d7863b896508c5ad82",
+      "state": "PASS",
+      "rationale": "Exact gradient and zero-curl computation for the smooth xy potential.",
+      "evidence": [
+        {
+          "method": "independent_vector_calculus",
+          "finding": "Gradients, divergence, curl, circulation and orientation conventions are checked in the stated coordinate system."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "F=(y,x,0); z-curl component is partial_x(x)-partial_y(y)=1-1=0, and other components vanish."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L932"
+    },
+    {
+      "id": "repo-4bb4bf1d812e4234b8bb8b3a",
+      "ordinal": 117,
+      "messages_sha256": "4bb4bf1d812e4234b8bb8b3a965e8b2d70c7fd8153e7406011104bb9803b8778",
+      "state": "PASS",
+      "rationale": "Correct Hessian/quadratic-model role and positive-definite critical-point test in the ordinary smooth setting.",
+      "evidence": [
+        {
+          "title": "Boyd and Vandenberghe, Convex Optimization, chapters10-11",
+          "url": "https://www.seas.ucla.edu/~vandenbe/cvxbook/bv_cvxbook.pdf",
+          "finding": "KKT/Newton methods use Hessian and constraint data. Interior-point families include infeasible-start formulations; they need not satisfy all original constraints at intermediate iterates."
+        },
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative, series, integral, local approximation and path counterexamples are verified directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For C2f at a critical point, f(x0+p)=f(x0)+0.5p^T H p+o(||p||²); H positive definite gives a strict local minimum."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The actual Newton step is-H_inverse*gradient (or the equivalent linear solve), and an arbitrary indefinite/singular Hessian does not ensure minimization. The source says uses H_inverse*gradient to determine direction rather than explicitly setting the step to its positive value."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L939"
+    },
+    {
+      "id": "repo-99047691c97732d252c859bc",
+      "ordinal": 118,
+      "messages_sha256": "99047691c97732d252c859bc476ae2abbcf6b96760b724a1f5a008511249d219",
+      "state": "PASS",
+      "rationale": "Correct warning against line-only multivariable limit tests and appropriate all-path proof techniques.",
+      "evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative, series, integral, local approximation and path counterexamples are verified directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "f(x,y)=x²*y/(x^4+y²) tends to0 along every line through0 but equals1/2 along y=x² forx!=0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "One additional path with a different limit refutes the common line-test candidate; one nonconvergent path can also disprove existence. An arbitrary single convergent path alone does not disprove a limit."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L940"
+    },
+    {
+      "id": "repo-5bdf54c6dec95f5a2fa35b89",
+      "ordinal": 119,
+      "messages_sha256": "5bdf54c6dec95f5a2fa35b892717211980002f192578ac61a8744f26df9f8f33",
+      "state": "PASS",
+      "rationale": "Correct conceptual Euler-Maclaurin sum/integral bridge with Bernoulli and derivative corrections and standard asymptotic uses.",
+      "evidence": [
+        {
+          "title": "NIST DLMF2.10, Sums and Sequences",
+          "url": "https://dlmf.nist.gov/2.10",
+          "finding": "Euler-Maclaurin expresses sums using integrals, endpoint derivatives/Bernoulli corrections and a remainder, enabling controlled asymptotic estimates under regularity conditions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A rigorous application retains a controlled remainder and regularity conditions. Calling it the backbone of integral-test intuition is explanatory language, not a claim that the elementary integral test requires the full formula."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L950"
+    },
+    {
+      "id": "repo-8688d809ac8466948efca014",
+      "ordinal": 120,
+      "messages_sha256": "8688d809ac8466948efca01487bae5ab2f3c655d3c2142ea3e0c1acccd79fa6a",
+      "state": "PASS",
+      "rationale": "Correct standard related-rates workflow, with differentiation before substitution.",
+      "evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative, series, integral, local approximation and path counterexamples are verified directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For constraint F(x(t),y(t))=0, differentiate F_x*x_prime+F_y*y_prime=0, then insert instantaneous values and known rates."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L952"
+    },
+    {
+      "id": "repo-018e7fbbfbf083d2120d58ea",
+      "ordinal": 121,
+      "messages_sha256": "018e7fbbfbf083d2120d58ea3dc0f37f2c4feb6aa9ef32f26538c284a66d55d5",
+      "state": "PASS",
+      "rationale": "Correct odd-function cancellation on the symmetric finite interval.",
+      "evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative, series, integral, local approximation and path counterexamples are verified directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Substitutionu=-x pairs every positive x^5 contribution with its negative; polynomial integrability is assured."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L955"
+    },
+    {
+      "id": "repo-7599d263b81e8cffbd86cc27",
+      "ordinal": 122,
+      "messages_sha256": "7599d263b81e8cffbd86cc27561d823f3227167a66082e49afd0ee71cb01b83e",
+      "state": "PASS",
+      "rationale": "Correct qualified explanation of interval-wide derivative information yielding monotonicity and shape conclusions.",
+      "evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative, series, integral, local approximation and path counterexamples are verified directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If f_prime>0 throughout an interval, the mean value theorem makes f(b)-f(a)>0 wheneverb>a."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The sign-change local-maximum test assumes continuity/differentiability in the usual neighborhood setting, not an arbitrary discontinuous function."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L963"
+    },
+    {
+      "id": "repo-d497e8bbdf6b94489cc5b371",
+      "ordinal": 123,
+      "messages_sha256": "d497e8bbdf6b94489cc5b3712c9d502215db4db94a728bd8112b2b7f12dfddbb",
+      "state": "PASS",
+      "rationale": "Exact partial derivative and fixed-y interpretation.",
+      "evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative, series, integral, local approximation and path counterexamples are verified directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "partial_x(x²*y)=2xy."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L965"
+    },
+    {
+      "id": "repo-2acf48b2004ca9c73ec02981",
+      "ordinal": 124,
+      "messages_sha256": "2acf48b2004ca9c73ec029815de4c464001bda2e08776d0ecaff42381c86dd14",
+      "state": "PASS",
+      "rationale": "Correct introductory distinction between separability and linearity, including possible overlap.",
+      "evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Derivative, series, integral, local approximation and path counterexamples are verified directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "y_prime=x*y is both; y_prime=y² is separable nonlinear; y_prime+y=x is linear but not directly separable asf(x)g(y)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Linear means y and its derivatives occur linearly, with coefficients depending only on the independent variable; the phrase without products or powers concerns products/powers of the dependent quantity, not variable coefficients such asx*y."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L972"
+    }
+  ]
+}

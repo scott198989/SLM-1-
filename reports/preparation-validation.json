@@ -1,0 +1,49 @@
+{
+  "checked_candidates": 34463,
+  "selected_review_candidates": 2112,
+  "selected_domains": {
+    "circuits": 211,
+    "engineering_mathematics": 200,
+    "algebra": 216,
+    "thermal_process_engineering": 104,
+    "trigonometry": 200,
+    "calculus": 215,
+    "electrical_components": 300,
+    "electromagnetism": 166,
+    "materials_manufacturing": 250,
+    "physics": 250
+  },
+  "manual_holds": 4,
+  "selected_qwen_tokens": {
+    "formatted": 216599,
+    "assistant": 165623
+  },
+  "rights_families": 23,
+  "tokenizer_0222_matches_prior0232_counts": true,
+  "approved_training_records": 0,
+  "training_run": false,
+  "production_rag_approved": false,
+  "artifacts": [
+    {
+      "path": "data/sft/staging/forge-v01-review-curriculum.jsonl.gz",
+      "bytes": 654330,
+      "sha256": "81ed89390722b15e255719fbcbe929e3b1d78259078960e15ef6e633e297e0eb"
+    },
+    {
+      "path": "reports/qwen-token-audit.json",
+      "bytes": 1552,
+      "sha256": "77724a540cf3c712ef8a7e4508fb020156a48332d61389cb16817377826745b2"
+    },
+    {
+      "path": "manifests/provenance-rights-matrix.json",
+      "bytes": 43720,
+      "sha256": "811699f9809a1f1e9dcc60eaf975186368dc92e801a5f4cfc02c21b808129640"
+    },
+    {
+      "path": "configs/qwen-qlora-proposal.json",
+      "bytes": 2938,
+      "sha256": "78ed2d44e261c02a3c5675eec397aa04019185cfcb630ea72083cd3fda1cd45a"
+    }
+  ],
+  "claim_scope": "schema_lineage_count_hash_release_status_not_technical_correctness"
+}

@@ -1,0 +1,31 @@
+{
+  "actual_domains": 1,
+  "authorship": "original_programmatic_tasks_independent_exact_analytic_oracles_reviewed_by_agent; not human-authored; no legacy/API or Drive content",
+  "baseline_run": false,
+  "domain_counts": {
+    "data_analysis_doe_spc": 12
+  },
+  "grader_reference_roundtrips": 12,
+  "grader_wrong_unit_or_citation_or_boolean_rejections": 22,
+  "independent_human_review": false,
+  "mode_counts": {
+    "closed_book": 5,
+    "deterministic_tools": 5,
+    "source_grounded_citations": 2
+  },
+  "model_development_tasks": 0,
+  "model_outputs_seen_before_sealing": false,
+  "no_claim_full_forge_engineering_gold": true,
+  "planned_domains": 12,
+  "planned_tasks": 240,
+  "private_reference_contains_task_answers": false,
+  "private_seal_sha256": "d52888a1662243d0d6fc60203277edd284ce877e0052cc4f658e6d7d70d1023d",
+  "production_training_rag_contains_sealed_statistics": false,
+  "public_development_fixtures_counted_as_gold": false,
+  "reference_roundtrips_are_not_model_scores": true,
+  "seal_and_frozen_source_verified": true,
+  "sealed_at": "2026-10-01T21:01:08.879210+00:00",
+  "tasks": 12,
+  "training_authorized": false,
+  "version": "forge-private-sealed-gold-v03"
+}

@@ -1,6 +1,704 @@
 # Changelog
 
+## 2026-10-07 - Correct database inference and reconcile existing handoff identities
+
+<a id="forge-change-20261007-162351z"></a>
+Entry ID: `FORGE-CHANGE-20261007-162351Z`. Recorded: **2026-10-07 16:23:51 UTC / 11:23:51 CDT (America/Chicago, UTC-05:00)**. Baseline: `e292d6c152e162cc6783ddab408e8a23e66382bb`; [handoff](HANDOFF_LOG.md#forge-handoff-20261007-162351z).
+
+- Corrected the earlier database-absence inference. Nine immutable-view queries returned zero rows, but the observer did not establish snapshot/WAL identity. Preserve the original receipt/script unchanged; this entry supersedes that conclusion rather than retroactively validating it.
+- Added a bounded Windows physical-snapshot helper: exact main/sidecar paths, held deny-write/delete read handles, source/copy SHA-256 equality, new destinations only, and refusal of reparse paths, active writable handles, changed identities and nonempty rollback journals. SQLite never opens source files through this helper. Its guarantee concerns the current captured file set under ordinary Windows sharing rules, not historical completeness or hostile filesystem changes.
+- Reconciled existing supplied-file and transfer identities in the canonical private location matrix. Kept equal-size but different-hash versions distinct. Verified receiving-machine retrieval of required transferred evidence. Distinguished the family checkpoint from the extraction ledger; no reupload or regeneration was requested. Private identifiers, machine paths and artifact hashes remain outside GitHub.
+- The current captured desktop extraction file set has no sidecars at capture time. Nine exact-ID queries against an ordinary read-only disposable derivative return zero matches. Its identity differs from the recorded laptop snapshot. This does not prove the laptop rows or formerly missing WAL are unavailable. The nine original candidate locations exist; 76 eligible cache paths are absent at recorded desktop locations. Four excluded pages were not statted, opened, hashed or copied. Original PDF bytes were not read.
+- Added nine native-Windows synthetic methods, independently rerun under Python 3.12: **9 passed**. The first 3.12 review exposed an unclosed fixture connection; explicit closure fixed it. Review also prompted absolute-path normalization and a real junction test. WAL-only committed-row recovery in a derivative, active-writer refusal, byte preservation and fail-closed boundaries are covered. Prior 34 focused passes remain worker-reported at the baseline; no fresh full suite or published CI pass is claimed.
+- Updated current READMEs/contracts and prepared a public-facts-only PR3 refresh. Keep PR3 draft and main unchanged. All nine HOLDs and isolation/fidelity gates remain. No source-page processing, adapter execution, model operations, training or paid services. A machine handoff is incomplete until required native inputs are accounted for and retrievable; code publication and private evidence closeout are separate verified steps.
+
+Correction to the 15:22 entry below: “No selected native rows were present” is an overstatement. Only the immutable-view zero-row observation was established then; use the qualified result above.
+
+## 2026-10-07 - Resume bounded preparation and harden evidence validation
+
+<a id="forge-change-20261007-152241z"></a>
+Entry ID: `FORGE-CHANGE-20261007-152241Z`. Recorded: **2026-10-07 15:22:41 UTC / 10:22:41 CDT (America/Chicago, UTC-05:00)**. This is the entry recording label; operational times are retained in private receipts. Baseline: `a4dbf27c42abf12a54c0dad871f5a7026da08671`; [handoff](HANDOFF_LOG.md#forge-handoff-20261007-152241z).
+
+- Scott explicitly lifted the October 6 pause and authorized bounded nine-source isolation/extraction-quality continuation plus normal code publication. Read the canonical Drive README, detailed changelog/latest handoff and repository contracts. Verified current GitHub/Drive access, PR3 open/draft state and baseline SHA. Preserved both existing desktop workspaces; cloned the working branch into an isolated checkout and ran `git pull --ff-only`, which reported already up to date. No stash, reset, clean, merge or force push.
+- Reverified the private scope, accepted native mapping worksheet, mapping receipt, diagnostic and provenance against their recorded SHA-256 pins. Root document bytes also match the latest private documentation checkpoint. Verified owner-only destination parentage. This is evidence integrity, not another legacy review or a real-input reconciliation run.
+- Completed one bounded desktop metadata observation using read-only/immutable SQLite and nine exact source-ID queries. No selected native rows were present; all nine candidate original paths exist with matching sizes, while all 76 recorded nonexcluded extracted/normalized page-envelope paths are absent at those locations. Source/cache/gold content was not opened. These findings do not authenticate bytes, establish a gold-free root, prove global absence, or supersede the accepted historical mapping. Detailed source/path evidence remains exclusively private.
+- Fixed figure evidence consistency: one relative asset path must declare one SHA-256 throughout all regions and all source caches sharing the data root. Contradictory declarations now block comparison. Consistent repeat references are allowed, linked assets remain unopened, and a rejected payload cannot update the shared registry. Table/header semantics are unchanged.
+- Fixed unsafe JSON-depth failure reporting: decoder recursion errors become `json_nesting_too_deep`; a deterministic maximum of 64 nested containers is checked iteratively across supported Python runtimes. Excess depth produces HOLD/exit 2 without echoing input. An independent test run exposed differing Python decoder limits; the explicit bound and exact boundary regression resolved that issue.
+- Added ten synthetic regression methods. Final focused Python 3.12.10 Windows validation: **34 passing methods** (17 existing metadata/parser, ten new parser/figure/platform-refusal, seven promotion-policy). The ten new methods received independent read-only review and execution. Mocked reader tests validate orchestration only. POSIX secure-content I/O and the complete tokenizer-dependent suite were not run; no full-suite or real-input fidelity claim is made. Historical 112-pass/five-asset-blocked/one-class-setup-error results remain historical.
+- Updated the relevant READMEs and reconciliation contract. All nine sources and all 25 required regions retain their existing holds: three regions on withheld pages, 22 without verified boundaries/fidelity; the separate context-only excluded page remains excluded. No runnable adapters, replacement caches, book OCR, model downloads/loading, training, paid services, automatic checks or releases were created.
+- Publication must use a normal push followed by exact remote SHA/PR-head verification. This entry does not embed its own commit SHA. The private closeout records the resulting code SHA and separate upload/readback evidence after those operations succeed.
+
+## 2026-10-06 - USER PAUSED; minimal GitHub closeout
+
+<a id="forge-change-20261006-190713z"></a>
+Entry ID: `FORGE-CHANGE-20261006-190713Z`. Recorded: **2026-10-06 19:07:13 UTC / 14:07:13 CDT (America/Chicago, UTC-05:00)**. User pause requested at 19:06 UTC / 14:06 CDT. Baseline: `0db0a646989f7fd01107873180c6ad5b85a6aa45`; [paused handoff](HANDOFF_LOG.md#forge-handoff-20261006-190713z).
+
+- Recorded Scott's explicit pause to free resources for studying. No substantive work or automatic continuation may resume until Scott explicitly requests it; future bounded ownership goes through Gunner.
+- Preserved the clean checkout and completed work. Only this changelog and HANDOFF_LOG.md changed; no uncommitted code or user edits were present to incorporate. Normal branch push and remote equality are required for closeout; no merge/force push.
+- Recorded Gunner's diagnostic update: nine sources remain HOLD, no real-input validator run or adapters; split isolation and extraction-region review pending. New books remain deferred metadata-only, with ten PDF objects mapped and no OCR.
+- No tests, workers, processing, OCR, model/training operations, monitoring or Drive writes were started. Prior CPU results and all release/gold/source-family gates remain unchanged. The separate private writer owns its log closeout.
+
+## 2026-10-06 - Make canonical continuity explicit across all Codex sessions
+
+<a id="forge-change-20261006-171639z"></a>
+Entry ID: `FORGE-CHANGE-20261006-171639Z`. Recorded: **2026-10-06 17:16:39 UTC / 12:16:39 CDT (America/Chicago, UTC-05:00)**. Baseline: `52e436db376c3abf6672b6cc26218ea188c899c3`; [handoff entry](HANDOFF_LOG.md#forge-handoff-20261006-171639z).
+
+- Clarified Scott's requirement: every laptop, desktop and cloud Codex session uses the same GitHub repository and canonical private Drive root, including repeated sessions on one machine. New sessions create versioned snapshots under that root, never another root.
+- Added a shared start/close procedure: read current logs, verify actual access and available files, check full checkpoints, preserve local edits, coordinate one writer, safely fetch/fast-forward and verify normal pushes and private upload receipts separately.
+- Distinguished current worker assignments from permanent machine restrictions. The separate Drive docs worker retains ownership; no Drive edits/uploads were made here.
+- Recorded successful narrowed PR3 metadata update/readback under explicit approval, and the remaining metadata-intake prerequisites. No private details were added to PR text.
+- Documentation only: reviewed four root documents and their links; no dataset/code/configuration changes or test rerun. Prior CPU status remains 112 passing methods, five asset-blocked methods and one class-setup error. All release/training/gold gates remain unchanged.
+
+## 2026-10-06 - Verify GitHub publication and record blocked Library transfer
+
+<a id="forge-change-20261006-170625z"></a>
+Entry ID: `FORGE-CHANGE-20261006-170625Z`. Recorded: **2026-10-06 17:06:25 UTC**. [Handoff entry](HANDOFF_LOG.md#forge-handoff-20261006-170625z) records exact checkpoints, export hashes, validation and next steps.
+
+- Normal push succeeded to `72cb2305f69960177805140212ec8c598937b404`; Git and GitHub verified exact remote equality at 16:57:33 UTC. PR3 remains draft and main is unchanged. This closeout commit still needs its own normal push and external remote-equality confirmation.
+- Built and verified a self-contained 103-commit bundle with zero prerequisites, successful empty-repository import and strict Git integrity. Preserved all earlier checkpoints, 2,112 original message hashes and 12 frozen pins.
+- Reviewed guarded Windows instructions for a new sibling clone preserving the existing dirty checkout; the exact PowerShell block has not run on the laptop.
+- One Library batch failed with a network error; none of four files has a confirmed save/Library ID. Preserved local artifacts and failure receipt without retry or another transfer route. This blocker does not negate the independently verified GitHub push.
+- Recorded parent-reported completion of private Drive root documents and retained separate worker ownership. No private Drive writes, dataset changes, runtime/model operations or training. All nine sources remain HOLD; original pins for three private reports remain unavailable. Prior CPU result remains 112 pass/five asset-blocked methods/one class-setup error, not a fresh full-suite pass.
+
+## 2026-10-06 - Recover completed preparation and establish durable GitHub handoff
+
+<a id="forge-change-20261006-165427z"></a>
+Entry ID: `FORGE-CHANGE-20261006-165427Z`. Recorded: **2026-10-06 16:54:27 UTC**. Recovery baseline: `90eabf991895f012c14d5f33199b0d62f992f955`; [handoff entry](HANDOFF_LOG.md#forge-handoff-20261006-165427z) records exact prior commits and artifact hashes.
+
+- Verified preserved checkpoint 90eabf9/tree cf51a537 and all 12 frozen SHA256 pins. Laptop 2a817b75 and remote PR3 917a9d3 are ancestors; the recovered tip contains 102 commits and is 87 ahead/zero behind that remote observation. No technical reviews or private extraction were redone.
+- Added HANDOFF_LOG.md and current README/handoff directions for a single active writer, preservation of dirty user work, safe fetch/fast-forward synchronization, coherent commits and normal push followed by exact remote verification. Scott explicitly authorized this code-publication workflow; draft PR3 and main remain protected from merge/force push.
+- Recorded completed review/validator/evaluation/runtime checkpoints, actual 112-pass/five-asset-blocked CPU result, laptop-reported availability of seven private inputs and four existing family/rights pins, and absent original pins for three private reports. No private report/content is fabricated or added.
+- Updated the runtime observation to installed WSL2 with no distributions; narrowed the bitsandbytes advisory to actual source-path evidence. Model/package pins and training/release gates remain unchanged. This documentation/export-only task runs repository integrity/import checks, not GPU operations or a fresh CPU suite.
+- Storage/workflow rationale: the root README now fixes the GitHub code/documentation role and links all logs; HANDOFF_LOG links this dated change and ordered next steps. Private Drive snapshots belong only under the separately managed FORGE Private Handoff root (parent-verified owner-only link in README/HANDOFF_LOG), with laptop Codex owning snapshots and sealed answers isolated. This prevents duplicated transfers/writers and preserves private data outside GitHub.
+- A private self-contained bundle is prepared for recovery; transfer/publication success must be confirmed by their actual results. A local commit or failed push is not a synchronized handoff.
+
+## 2026-10-02 - Document the desktop runtime candidate and validation gates
+
+- Researched official versioned PyTorch, NVIDIA, Microsoft, Transformers, PEFT and bitsandbytes sources against the supplied Windows/RTX 5090 inventory. Retained all runtime/model pins and recorded desktop metadata with its provenance.
+- Expanded the existing Qwen preparation plan with native Windows/WSL support, WSL RAM limits, unresolved transitive locking, MoE quantization/adapter coverage and known correctness caveats. Defined separate approval gates for setup, synthetic GPU checks, model loading and training.
+- Documentation/metadata only: no installation, GPU/model execution, system change, dataset change, release, publication or access-restriction retry. The prior CPU result remains 112 pass and five asset-blocked methods; no fresh suite pass is claimed.
+
+## 2026-10-02 - Tighten evaluation preparation integrity and protocol
+
+- Fixed reproduced synthetic failures: required sealed questions/answers must be present and the exact authenticated bytes are consumed; duplicate/empty task IDs cannot inflate a score. Model JSON rejects duplicate keys and nonfinite overflow, exact citations preserve JSON types, oversized numeric answers fail without crashing, and terminal tool failures retain receipts.
+- Extended the existing baseline experiment with paired base/adapter modes, independent family/development requirements, scoring denominators, proposed thresholds and explicit missing-input gates. Frozen-reference evaluation is distinguished from retrieval; 16 integration examples and 12 single-domain diagnostic tasks do not establish broad specialization.
+- Corrected the preparation runbook: historical artifact-generating commands are not read-only verification, the 37-test expectation is stale, and blocked asset downloads must not be retried.
+- Added 13 synthetic regression methods; independent code/protocol review completed. Fresh CPU suite: 112 pass, five Qwen methods blocked by absent pinned assets (one class-setup error). No full-suite pass or private requalification is claimed.
+- Preserved a45ec19, original messages, frozen artifacts, historical receipts and all source/release holds. No private gold inspection, model load, training, paid compute, network fetch or publication.
+
+## 2026-10-02 - Add bounded academic reconciliation preflight
+
+- Added a read-only nine-source intake validator with a pinned external scope digest, full metadata preflight before original/cache reads, gold/alias/split/rights gates, safe confined paths, byte pins and region/link checks. All outputs remain HOLD; rights declarations do not establish permission or fidelity.
+- Kept the missing private extraction schema explicit: the documented intake is an adapter contract, not fabricated native records. No academic originals, cache text, IDs, gold or approvals were added to Git.
+- Added 35 synthetic regressions; independent code review completed and findings corrected, including fixed-pin forgery, post-preflight symlink swaps and explicit unverified cache/metadata provenance. Expanded CPU suite: 99 tests pass, with five Qwen tests blocked by missing pinned tokenizer assets (one class-setup error). This is not a complete suite pass.
+- Preserved checkpoint 601df14, all dataset/review/source/frozen artifacts and historical receipts on a separate local preparation branch. No remote operation, tokenizer retry, model load, training or paid compute.
+
+## 2026-10-02 - Resolve five residual technical holds locally
+
+- Independently reviewed all five complete original pairs with primary evidence: five technical PASS, with three new substantive reviews and two explicitly superseded specialist holds.
+- Current total: 2,112 substantive records; 1,703 PASS, 72 REJECT, 337 QUARANTINE and zero NEEDS_HUMAN_REVIEW. All ten selected source domains are complete.
+- Preserved all original messages/tokens, 2,107 non-target ledger records, frozen inputs, historical receipts and previously delivered packages. Updated current aggregate and gate prose.
+- Local only; no publication retry, human approval, private requalification, release or training. The residual receipt stores each prior decision and the exact superseding evidence.
+
+
+## 2026-10-02 - Ordinary selected-curriculum review complete
+
+- Reviewed 244 pending materials records in ten independently checked windows; preserved six earlier materials reviews.
+- Local total 2,109 substantive reviews across 2,112 records; zero ordinary unreviewed records. Two specialist holds and three structural-only quarantines remain.
+- Preserved all prior 1,865 checkpoint decisions, original answers/tokens, rights/family metadata and frozen receipts. No release/training authorization follows.
+- Remote publication remains blocked at 392 reviews. No retry or alternative publication route was attempted.
+
+
+## 2026-10-02 - Local materials_manufacturing review 225–249
+
+- Added {'PASS': 11, 'QUARANTINE': 12, 'REJECT': 2} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 2084 reviews unchanged.
+- Current local reviews: 2109; dispositions: {'PASS': 1698, 'REJECT': 72, 'QUARANTINE': 340, 'NEEDS_HUMAN_REVIEW': 2}; next materials_manufacturing offset: 250.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local materials_manufacturing review 200–224
+
+- Added {'PASS': 25} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 2059 reviews unchanged.
+- Current local reviews: 2084; dispositions: {'PASS': 1687, 'REJECT': 70, 'QUARANTINE': 328, 'NEEDS_HUMAN_REVIEW': 27}; next materials_manufacturing offset: 225.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local materials_manufacturing review 175–199
+
+- Added {'PASS': 13, 'QUARANTINE': 12} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 2034 reviews unchanged.
+- Current local reviews: 2059; dispositions: {'PASS': 1662, 'REJECT': 70, 'QUARANTINE': 328, 'NEEDS_HUMAN_REVIEW': 52}; next materials_manufacturing offset: 200.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local materials_manufacturing review 150–174
+
+- Added {'PASS': 24, 'QUARANTINE': 1} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 2009 reviews unchanged.
+- Current local reviews: 2034; dispositions: {'PASS': 1649, 'REJECT': 70, 'QUARANTINE': 316, 'NEEDS_HUMAN_REVIEW': 77}; next materials_manufacturing offset: 175.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local materials_manufacturing review 125–149
+
+- Added {'PASS': 21, 'REJECT': 1, 'QUARANTINE': 3} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1984 reviews unchanged.
+- Current local reviews: 2009; dispositions: {'PASS': 1625, 'REJECT': 70, 'QUARANTINE': 315, 'NEEDS_HUMAN_REVIEW': 102}; next materials_manufacturing offset: 150.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local materials_manufacturing review 100–124
+
+- Added {'PASS': 24, 'REJECT': 1} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1959 reviews unchanged.
+- Current local reviews: 1984; dispositions: {'PASS': 1604, 'REJECT': 69, 'QUARANTINE': 312, 'NEEDS_HUMAN_REVIEW': 127}; next materials_manufacturing offset: 125.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local materials_manufacturing review 75–99
+
+- Added {'PASS': 23, 'QUARANTINE': 2} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1934 reviews unchanged.
+- Current local reviews: 1959; dispositions: {'PASS': 1580, 'REJECT': 68, 'QUARANTINE': 312, 'NEEDS_HUMAN_REVIEW': 152}; next materials_manufacturing offset: 100.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local materials_manufacturing review 50–74
+
+- Added {'PASS': 22, 'QUARANTINE': 3} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1909 reviews unchanged.
+- Current local reviews: 1934; dispositions: {'PASS': 1557, 'REJECT': 68, 'QUARANTINE': 310, 'NEEDS_HUMAN_REVIEW': 177}; next materials_manufacturing offset: 75.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local materials_manufacturing review 25–49
+
+- Added {'PASS': 20, 'QUARANTINE': 5} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1884 reviews unchanged.
+- Current local reviews: 1909; dispositions: {'PASS': 1535, 'REJECT': 68, 'QUARANTINE': 307, 'NEEDS_HUMAN_REVIEW': 202}; next materials_manufacturing offset: 50.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local materials_manufacturing review 0–24
+
+- Added {'PASS': 17, 'QUARANTINE': 2} after independent agent QA; 6 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1865 reviews unchanged.
+- Current local reviews: 1884; dispositions: {'PASS': 1515, 'REJECT': 68, 'QUARANTINE': 302, 'NEEDS_HUMAN_REVIEW': 227}; next materials_manufacturing offset: 25.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Pending physics queue completion
+
+- Reviewed 242 pending records with independent agent QA; preserved eight prior decisions. All 250 selected physics records have substantive dispositions.
+- Local total 1,865 reviews; 244 still unreviewed, plus two reviewed specialist holds. Public branch remains at 392 reviews.
+- Preserved source messages, hashes, tokens, all earlier 1,623 decisions, all three structural holds, rights metadata and frozen receipts.
+
+
+## 2026-10-02 - Local physics review 225–249
+
+- Added {'PASS': 21, 'QUARANTINE': 3, 'REJECT': 1} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1840 reviews unchanged.
+- Current local reviews: 1865; dispositions: {'PASS': 1498, 'REJECT': 68, 'QUARANTINE': 300, 'NEEDS_HUMAN_REVIEW': 246}; next physics offset: 250.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local physics review 200–224
+
+- Added {'PASS': 23, 'REJECT': 1, 'QUARANTINE': 1} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1815 reviews unchanged.
+- Current local reviews: 1840; dispositions: {'PASS': 1477, 'REJECT': 67, 'QUARANTINE': 297, 'NEEDS_HUMAN_REVIEW': 271}; next physics offset: 225.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local physics review 175–199
+
+- Added {'PASS': 21, 'QUARANTINE': 4} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1790 reviews unchanged.
+- Current local reviews: 1815; dispositions: {'PASS': 1454, 'REJECT': 66, 'QUARANTINE': 296, 'NEEDS_HUMAN_REVIEW': 296}; next physics offset: 200.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local physics review 150–174
+
+- Added {'PASS': 23, 'QUARANTINE': 2} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1765 reviews unchanged.
+- Current local reviews: 1790; dispositions: {'PASS': 1433, 'REJECT': 66, 'QUARANTINE': 292, 'NEEDS_HUMAN_REVIEW': 321}; next physics offset: 175.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local physics review 125–149
+
+- Added {'PASS': 19, 'REJECT': 2, 'QUARANTINE': 4} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1740 reviews unchanged.
+- Current local reviews: 1765; dispositions: {'PASS': 1410, 'REJECT': 66, 'QUARANTINE': 290, 'NEEDS_HUMAN_REVIEW': 346}; next physics offset: 150.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local physics review 100–124
+
+- Added {'PASS': 18, 'QUARANTINE': 7} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1715 reviews unchanged.
+- Current local reviews: 1740; dispositions: {'PASS': 1391, 'REJECT': 64, 'QUARANTINE': 286, 'NEEDS_HUMAN_REVIEW': 371}; next physics offset: 125.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local physics review 75–99
+
+- Added {'PASS': 21, 'QUARANTINE': 4} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1690 reviews unchanged.
+- Current local reviews: 1715; dispositions: {'PASS': 1373, 'REJECT': 64, 'QUARANTINE': 279, 'NEEDS_HUMAN_REVIEW': 396}; next physics offset: 100.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local physics review 50–74
+
+- Added {'REJECT': 1, 'PASS': 24} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1665 reviews unchanged.
+- Current local reviews: 1690; dispositions: {'PASS': 1352, 'REJECT': 64, 'QUARANTINE': 275, 'NEEDS_HUMAN_REVIEW': 421}; next physics offset: 75.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local physics review 25–49
+
+- Added {'PASS': 22, 'QUARANTINE': 3} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1640 reviews unchanged.
+- Current local reviews: 1665; dispositions: {'PASS': 1328, 'REJECT': 63, 'QUARANTINE': 275, 'NEEDS_HUMAN_REVIEW': 446}; next physics offset: 50.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local physics review 0–24
+
+- Added {'PASS': 16, 'QUARANTINE': 1} after independent agent QA; 8 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1623 reviews unchanged.
+- Current local reviews: 1640; dispositions: {'PASS': 1306, 'REJECT': 63, 'QUARANTINE': 272, 'NEEDS_HUMAN_REVIEW': 471}; next physics offset: 25.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Pending electromagnetism queue completion
+
+- Reviewed 162 pending records with independent agent QA; preserved four prior decisions. All 166 selected electromagnetism records have substantive dispositions.
+- Local total 1,623 reviews; 486 still unreviewed, plus two reviewed specialist holds. Public branch remains at 392 reviews.
+- Preserved source messages, hashes, tokens, all earlier 1,461 decisions, all three structural holds, rights metadata and frozen receipts.
+
+
+## 2026-10-02 - Local electromagnetism review 150–165
+
+- Added {'PASS': 14, 'QUARANTINE': 2} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1607 reviews unchanged.
+- Current local reviews: 1623; dispositions: {'PASS': 1290, 'REJECT': 63, 'QUARANTINE': 271, 'NEEDS_HUMAN_REVIEW': 488}; next electromagnetism offset: 175.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local electromagnetism review 125–149
+
+- Added {'PASS': 21, 'QUARANTINE': 4} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1582 reviews unchanged.
+- Current local reviews: 1607; dispositions: {'PASS': 1276, 'REJECT': 63, 'QUARANTINE': 269, 'NEEDS_HUMAN_REVIEW': 504}; next electromagnetism offset: 150.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local electromagnetism review 100–124
+
+- Added {'QUARANTINE': 2, 'PASS': 21, 'REJECT': 2} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1557 reviews unchanged.
+- Current local reviews: 1582; dispositions: {'PASS': 1255, 'REJECT': 63, 'QUARANTINE': 265, 'NEEDS_HUMAN_REVIEW': 529}; next electromagnetism offset: 125.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local electromagnetism review 75–99
+
+- Added {'PASS': 18, 'QUARANTINE': 6, 'REJECT': 1} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1532 reviews unchanged.
+- Current local reviews: 1557; dispositions: {'PASS': 1234, 'REJECT': 61, 'QUARANTINE': 263, 'NEEDS_HUMAN_REVIEW': 554}; next electromagnetism offset: 100.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local electromagnetism review 50–74
+
+- Added {'QUARANTINE': 5, 'PASS': 20} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1507 reviews unchanged.
+- Current local reviews: 1532; dispositions: {'PASS': 1216, 'REJECT': 60, 'QUARANTINE': 257, 'NEEDS_HUMAN_REVIEW': 579}; next electromagnetism offset: 75.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local electromagnetism review 25–49
+
+- Added {'PASS': 20, 'QUARANTINE': 5} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1482 reviews unchanged.
+- Current local reviews: 1507; dispositions: {'PASS': 1196, 'REJECT': 60, 'QUARANTINE': 252, 'NEEDS_HUMAN_REVIEW': 604}; next electromagnetism offset: 50.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local electromagnetism review 0–24
+
+- Added {'PASS': 15, 'QUARANTINE': 5, 'REJECT': 1} after independent agent QA; 4 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1461 reviews unchanged.
+- Current local reviews: 1482; dispositions: {'PASS': 1176, 'REJECT': 60, 'QUARANTINE': 247, 'NEEDS_HUMAN_REVIEW': 629}; next electromagnetism offset: 25.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Pending engineering_mathematics queue completion
+
+- Reviewed 194 pending engineering_mathematics records with independent agent QA; preserved six prior substantive decisions. All 200 selected engineering_mathematics records have substantive dispositions.
+- Local total 1,461 substantive reviews; 648 still unreviewed, plus two reviewed specialist holds. Public branch remains at 392 reviews.
+- Preserved original messages, hashes, tokens, all earlier 1,267 decisions, all three structural holds, rights/family metadata and frozen receipts.
+
+
+## 2026-10-02 - Local engineering_mathematics review 175–199
+
+- Added {'PASS': 22, 'QUARANTINE': 2, 'REJECT': 1} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1436 reviews unchanged.
+- Current local reviews: 1461; dispositions: {'PASS': 1161, 'REJECT': 59, 'QUARANTINE': 242, 'NEEDS_HUMAN_REVIEW': 650}; next engineering_mathematics offset: 200.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local engineering_mathematics review 150–174
+
+- Added {'PASS': 21, 'QUARANTINE': 3, 'REJECT': 1} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1411 reviews unchanged.
+- Current local reviews: 1436; dispositions: {'PASS': 1139, 'REJECT': 58, 'QUARANTINE': 240, 'NEEDS_HUMAN_REVIEW': 675}; next engineering_mathematics offset: 175.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local engineering_mathematics review 125–149
+
+- Added {'PASS': 24, 'QUARANTINE': 1} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1386 reviews unchanged.
+- Current local reviews: 1411; dispositions: {'PASS': 1118, 'REJECT': 57, 'QUARANTINE': 237, 'NEEDS_HUMAN_REVIEW': 700}; next engineering_mathematics offset: 150.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local engineering_mathematics review 100–124
+
+- Added {'QUARANTINE': 2, 'PASS': 22, 'REJECT': 1} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1361 reviews unchanged.
+- Current local reviews: 1386; dispositions: {'PASS': 1094, 'REJECT': 57, 'QUARANTINE': 236, 'NEEDS_HUMAN_REVIEW': 725}; next engineering_mathematics offset: 125.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local engineering_mathematics review 75–99
+
+- Added {'PASS': 24, 'QUARANTINE': 1} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1336 reviews unchanged.
+- Current local reviews: 1361; dispositions: {'PASS': 1072, 'REJECT': 56, 'QUARANTINE': 234, 'NEEDS_HUMAN_REVIEW': 750}; next engineering_mathematics offset: 100.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local engineering_mathematics review 50–74
+
+- Added {'PASS': 21, 'QUARANTINE': 4} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1311 reviews unchanged.
+- Current local reviews: 1336; dispositions: {'PASS': 1048, 'REJECT': 56, 'QUARANTINE': 233, 'NEEDS_HUMAN_REVIEW': 775}; next engineering_mathematics offset: 75.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local engineering_mathematics review 25–49
+
+- Added {'PASS': 22, 'QUARANTINE': 3} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1286 reviews unchanged.
+- Current local reviews: 1311; dispositions: {'PASS': 1027, 'REJECT': 56, 'QUARANTINE': 229, 'NEEDS_HUMAN_REVIEW': 800}; next engineering_mathematics offset: 50.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local engineering_mathematics review 0–24
+
+- Added {'PASS': 19} after independent agent QA; 6 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1267 reviews unchanged.
+- Current local reviews: 1286; dispositions: {'PASS': 1005, 'REJECT': 56, 'QUARANTINE': 226, 'NEEDS_HUMAN_REVIEW': 825}; next engineering_mathematics offset: 25.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Pending calculus queue completion
+
+- Reviewed 208 pending calculus records with independent agent QA; preserved seven prior substantive decisions. All 215 selected calculus records have substantive dispositions.
+- Local total 1,267 substantive reviews; 842 still unreviewed, plus two reviewed specialist holds. Public branch remains at 392 reviews.
+- Preserved original messages, hashes, tokens, all earlier 1,059 decisions, all three structural holds, rights/family metadata and frozen receipts.
+
+
+## 2026-10-02 - Local calculus review 200–214
+
+- Added {'PASS': 14, 'QUARANTINE': 1} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1252 reviews unchanged.
+- Current local reviews: 1267; dispositions: {'PASS': 986, 'REJECT': 56, 'QUARANTINE': 226, 'NEEDS_HUMAN_REVIEW': 844}; next calculus offset: 225.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local calculus review 175–199
+
+- Added {'PASS': 22, 'QUARANTINE': 3} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1227 reviews unchanged.
+- Current local reviews: 1252; dispositions: {'PASS': 972, 'REJECT': 56, 'QUARANTINE': 225, 'NEEDS_HUMAN_REVIEW': 859}; next calculus offset: 200.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local calculus review 150–174
+
+- Added {'QUARANTINE': 5, 'PASS': 20} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1202 reviews unchanged.
+- Current local reviews: 1227; dispositions: {'PASS': 950, 'REJECT': 56, 'QUARANTINE': 222, 'NEEDS_HUMAN_REVIEW': 884}; next calculus offset: 175.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local calculus review 125–149
+
+- Added {'QUARANTINE': 6, 'PASS': 18, 'REJECT': 1} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1177 reviews unchanged.
+- Current local reviews: 1202; dispositions: {'PASS': 930, 'REJECT': 56, 'QUARANTINE': 217, 'NEEDS_HUMAN_REVIEW': 909}; next calculus offset: 150.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local calculus review 100–124
+
+- Added {'PASS': 23, 'QUARANTINE': 2} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1152 reviews unchanged.
+- Current local reviews: 1177; dispositions: {'PASS': 912, 'REJECT': 55, 'QUARANTINE': 211, 'NEEDS_HUMAN_REVIEW': 934}; next calculus offset: 125.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local calculus review 75–99
+
+- Added {'PASS': 22, 'QUARANTINE': 3} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1127 reviews unchanged.
+- Current local reviews: 1152; dispositions: {'PASS': 889, 'REJECT': 55, 'QUARANTINE': 209, 'NEEDS_HUMAN_REVIEW': 959}; next calculus offset: 100.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local calculus review 50–74
+
+- Added {'PASS': 22, 'QUARANTINE': 3} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1102 reviews unchanged.
+- Current local reviews: 1127; dispositions: {'PASS': 867, 'REJECT': 55, 'QUARANTINE': 206, 'NEEDS_HUMAN_REVIEW': 984}; next calculus offset: 75.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local calculus review 25–49
+
+- Added {'PASS': 22, 'REJECT': 1, 'QUARANTINE': 2} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1077 reviews unchanged.
+- Current local reviews: 1102; dispositions: {'PASS': 845, 'REJECT': 55, 'QUARANTINE': 203, 'NEEDS_HUMAN_REVIEW': 1009}; next calculus offset: 50.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local calculus review 0–24
+
+- Added {'PASS': 17, 'QUARANTINE': 1} after independent agent QA; 7 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1059 reviews unchanged.
+- Current local reviews: 1077; dispositions: {'PASS': 823, 'REJECT': 54, 'QUARANTINE': 201, 'NEEDS_HUMAN_REVIEW': 1034}; next calculus offset: 25.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Pending trigonometry queue completion
+
+- Reviewed all 189 pending trigonometry records with independent agent QA; preserved 10 prior substantive reviews and original structural-only quarantine 24.
+- Local total 1,059 substantive reviews; 1,050 still unreviewed, plus two existing specialist holds. Public branch remains at 392 reviews.
+- Preserved original messages, hashes, tokens, all earlier 870 decisions, rights/family metadata and frozen receipts.
+
+
+## 2026-10-02 - Local trigonometry review 175–199
+
+- Added {'QUARANTINE': 4, 'PASS': 20, 'REJECT': 1} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1034 reviews unchanged.
+- Current local reviews: 1059; dispositions: {'PASS': 806, 'REJECT': 54, 'QUARANTINE': 200, 'NEEDS_HUMAN_REVIEW': 1052}; next trigonometry offset: 200.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local trigonometry review 150–174
+
+- Added {'PASS': 23, 'REJECT': 1, 'QUARANTINE': 1} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 1009 reviews unchanged.
+- Current local reviews: 1034; dispositions: {'PASS': 786, 'REJECT': 53, 'QUARANTINE': 196, 'NEEDS_HUMAN_REVIEW': 1077}; next trigonometry offset: 175.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local trigonometry review 125–149
+
+- Added {'PASS': 20, 'QUARANTINE': 3, 'REJECT': 2} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 984 reviews unchanged.
+- Current local reviews: 1009; dispositions: {'PASS': 763, 'REJECT': 52, 'QUARANTINE': 195, 'NEEDS_HUMAN_REVIEW': 1102}; next trigonometry offset: 150.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local trigonometry review 100–124
+
+- Added {'PASS': 22, 'QUARANTINE': 2, 'REJECT': 1} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 959 reviews unchanged.
+- Current local reviews: 984; dispositions: {'PASS': 743, 'REJECT': 50, 'QUARANTINE': 192, 'NEEDS_HUMAN_REVIEW': 1127}; next trigonometry offset: 125.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local trigonometry review 75–99
+
+- Added {'PASS': 21, 'QUARANTINE': 4} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 934 reviews unchanged.
+- Current local reviews: 959; dispositions: {'PASS': 721, 'REJECT': 49, 'QUARANTINE': 190, 'NEEDS_HUMAN_REVIEW': 1152}; next trigonometry offset: 100.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local trigonometry review 50–74
+
+- Added {'PASS': 24, 'QUARANTINE': 1} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 909 reviews unchanged.
+- Current local reviews: 934; dispositions: {'PASS': 700, 'REJECT': 49, 'QUARANTINE': 186, 'NEEDS_HUMAN_REVIEW': 1177}; next trigonometry offset: 75.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local trigonometry review 25–49
+
+- Added {'PASS': 19, 'QUARANTINE': 5, 'REJECT': 1} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 884 reviews unchanged.
+- Current local reviews: 909; dispositions: {'PASS': 676, 'REJECT': 49, 'QUARANTINE': 185, 'NEEDS_HUMAN_REVIEW': 1202}; next trigonometry offset: 50.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local trigonometry review 0–24
+
+- Added {'PASS': 11, 'REJECT': 1, 'QUARANTINE': 2} after independent agent QA; 10 existing substantive decisions skipped and 1 original structural quarantines preserved, all original answers and prior 870 reviews unchanged.
+- Current local reviews: 884; dispositions: {'PASS': 657, 'REJECT': 48, 'QUARANTINE': 180, 'NEEDS_HUMAN_REVIEW': 1227}; next trigonometry offset: 25.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Pending algebra queue completion
+
+- Reviewed 203 pending algebra records with independent agent QA, preserving 11 prior substantive reviews and two structural-only quarantines.
+- Local total 870 substantive reviews; 1,239 still unreviewed. Public branch remains at 392 reviews.
+- Preserved all original message hashes, tokens, rights/family/private receipts and previous 667 decisions.
+
+
+## 2026-10-02 - Local algebra review 200–215
+
+- Added {'PASS': 14, 'QUARANTINE': 1} after independent agent QA; 0 existing substantive decisions skipped and 1 original structural quarantines preserved, all original answers and prior 855 reviews unchanged.
+- Current local reviews: 870; dispositions: {'PASS': 646, 'REJECT': 47, 'QUARANTINE': 178, 'NEEDS_HUMAN_REVIEW': 1241}; next algebra offset: 225.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local algebra review 175–199
+
+- Added {'QUARANTINE': 4, 'PASS': 21} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 830 reviews unchanged.
+- Current local reviews: 855; dispositions: {'PASS': 632, 'REJECT': 47, 'QUARANTINE': 177, 'NEEDS_HUMAN_REVIEW': 1256}; next algebra offset: 200.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local algebra review 150–174
+
+- Added {'PASS': 22, 'QUARANTINE': 2} after independent agent QA; 0 existing substantive decisions skipped and 1 original structural quarantines preserved, all original answers and prior 806 reviews unchanged.
+- Current local reviews: 830; dispositions: {'PASS': 611, 'REJECT': 47, 'QUARANTINE': 173, 'NEEDS_HUMAN_REVIEW': 1281}; next algebra offset: 175.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local algebra review 125–149
+
+- Added {'PASS': 21, 'QUARANTINE': 2, 'REJECT': 2} after independent agent QA; 0 existing substantive decisions skipped and 0 original structural quarantines preserved, all original answers and prior 781 reviews unchanged.
+- Current local reviews: 806; dispositions: {'PASS': 589, 'REJECT': 47, 'QUARANTINE': 171, 'NEEDS_HUMAN_REVIEW': 1305}; next algebra offset: 150.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local algebra review 100–124
+
+- Added {'PASS': 18, 'QUARANTINE': 6, 'REJECT': 1} after independent agent QA; 0 existing decisions skipped, all original answers and prior 756 reviews unchanged.
+- Current local reviews: 781; dispositions: {'PASS': 568, 'REJECT': 45, 'QUARANTINE': 169, 'NEEDS_HUMAN_REVIEW': 1330}; next algebra offset: 125.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local algebra review 75–99
+
+- Added {'PASS': 19, 'QUARANTINE': 5, 'REJECT': 1} after independent agent QA; 0 existing decisions skipped, all original answers and prior 731 reviews unchanged.
+- Current local reviews: 756; dispositions: {'PASS': 550, 'REJECT': 44, 'QUARANTINE': 163, 'NEEDS_HUMAN_REVIEW': 1355}; next algebra offset: 100.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local algebra review 50–74
+
+- Added {'PASS': 22, 'REJECT': 1, 'QUARANTINE': 2} after independent agent QA; 0 existing decisions skipped, all original answers and prior 706 reviews unchanged.
+- Current local reviews: 731; dispositions: {'PASS': 531, 'REJECT': 43, 'QUARANTINE': 158, 'NEEDS_HUMAN_REVIEW': 1380}; next algebra offset: 75.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local algebra review 25–49
+
+- Added {'PASS': 18, 'REJECT': 1, 'QUARANTINE': 4} after independent agent QA; 2 existing decisions skipped, all original answers and prior 683 reviews unchanged.
+- Current local reviews: 706; dispositions: {'PASS': 509, 'REJECT': 42, 'QUARANTINE': 156, 'NEEDS_HUMAN_REVIEW': 1405}; next algebra offset: 50.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local algebra review 0–24
+
+- Added {'PASS': 12, 'QUARANTINE': 4} after independent agent QA; 9 existing decisions skipped, all original answers and prior 667 reviews unchanged.
+- Current local reviews: 683; dispositions: {'PASS': 491, 'REJECT': 41, 'QUARANTINE': 152, 'NEEDS_HUMAN_REVIEW': 1428}; next algebra offset: 25.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local electrical-domain completion
+
+- Completed all 300 selected electrical curriculum dispositions after serial record-level review and independent agent QA.
+- Preserved all original source messages/tokens and every prior published decision. Local substantive total: 667; public remote remains at 392.
+- Next electrical offset 300 is complete. Await next-domain selection; publication remains blocked, and no alternate upload route was used.
+
+
+## 2026-10-02 - Local electrical review 275–299
+
+- Added {'PASS': 18, 'QUARANTINE': 5, 'REJECT': 2} after independent agent QA; original answers and prior 642 decisions remain unchanged.
+- Current local reviews: 667; dispositions: {'PASS': 479, 'REJECT': 41, 'QUARANTINE': 148, 'NEEDS_HUMAN_REVIEW': 1444}; next electrical offset: 300.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local electrical review 250–274
+
+- Added {'PASS': 18, 'QUARANTINE': 6, 'REJECT': 1} after independent agent QA; original answers and prior 617 decisions remain unchanged.
+- Current local reviews: 642; dispositions: {'PASS': 461, 'REJECT': 39, 'QUARANTINE': 143, 'NEEDS_HUMAN_REVIEW': 1469}; next electrical offset: 275.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local electrical review 225–249
+
+- Added {'PASS': 21, 'QUARANTINE': 3, 'REJECT': 1} after independent agent QA; original answers and prior 592 decisions remain unchanged.
+- Current local reviews: 617; dispositions: {'PASS': 443, 'REJECT': 38, 'QUARANTINE': 137, 'NEEDS_HUMAN_REVIEW': 1494}; next electrical offset: 250.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local electrical review 200–224
+
+- Added {'PASS': 20, 'REJECT': 1, 'QUARANTINE': 4} after independent agent QA; original answers and prior 567 decisions remain unchanged.
+- Current local reviews: 592; dispositions: {'PASS': 422, 'REJECT': 37, 'QUARANTINE': 134, 'NEEDS_HUMAN_REVIEW': 1519}; next electrical offset: 225.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local electrical review 175–199
+
+- Added {'PASS': 23, 'QUARANTINE': 2} after independent agent QA; original answers and prior 542 decisions remain unchanged.
+- Current local reviews: 567; dispositions: {'PASS': 402, 'REJECT': 36, 'QUARANTINE': 130, 'NEEDS_HUMAN_REVIEW': 1544}; next electrical offset: 200.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local electrical review 150–174
+
+- Added {'PASS': 22, 'QUARANTINE': 3} after independent agent QA; original answers and prior 517 decisions remain unchanged.
+- Current local reviews: 542; dispositions: {'PASS': 379, 'REJECT': 36, 'QUARANTINE': 128, 'NEEDS_HUMAN_REVIEW': 1569}; next electrical offset: 175.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local electrical review 125–149
+
+- Added {'PASS': 16, 'REJECT': 4, 'QUARANTINE': 5} after independent agent QA; original answers and prior 492 decisions remain unchanged.
+- Current local reviews: 517; dispositions: {'PASS': 357, 'REJECT': 36, 'QUARANTINE': 125, 'NEEDS_HUMAN_REVIEW': 1594}; next electrical offset: 150.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local electrical review 100–124
+
+- Added {'PASS': 19, 'QUARANTINE': 5, 'REJECT': 1} after independent agent QA; original answers and prior 467 decisions remain unchanged.
+- Current local reviews: 492; dispositions: {'PASS': 341, 'REJECT': 32, 'QUARANTINE': 120, 'NEEDS_HUMAN_REVIEW': 1619}; next electrical offset: 125.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local electrical review 75–99
+
+- Added {'PASS': 18, 'QUARANTINE': 6, 'REJECT': 1} after independent agent QA; original answers and prior 442 decisions remain unchanged.
+- Current local reviews: 467; dispositions: {'PASS': 322, 'REJECT': 31, 'QUARANTINE': 115, 'NEEDS_HUMAN_REVIEW': 1644}; next electrical offset: 100.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Local electrical review 50–74
+
+- Added {'PASS': 20, 'QUARANTINE': 5} after independent agent QA; original answers and prior 417 decisions remain unchanged.
+- Current local reviews: 442; dispositions: {'PASS': 304, 'REJECT': 30, 'QUARANTINE': 109, 'NEEDS_HUMAN_REVIEW': 1669}; next electrical offset: 75.
+- Unpublished local checkpoint. GitHub remains at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews.
+
+
+## 2026-10-02 - Second electrical review batch
+
+- Independently reviewed original electrical ordinals25–49:20 PASS,3 REJECT,2 QUARANTINE. Rejected an amperes-versus-I²t comparison, unsupported universal LED-current/lifetime claims and incorrect loss-of-overload-protection claim for shared contactors.
+- Preserved original messages, hashes, token counts, earlier392 reviews and all release/family/rights holds. Current417 substantive reviews;284 PASS/30 REJECT/104 QUARANTINE/1694 NEEDS_HUMAN_REVIEW. Next offset50.
+- Rechecked all2,112 hashes and deterministic ledger transport; no private qualification, weights, training, paid compute or automation.
+
+
+## 2026-10-02 - Read-only verifier and first electrical review batch
+
+- Fixed the private RAG trust anchor: expected manifest/index hashes come from existing public receipts; drift fails closed. Legacy receipt output now verifies existing JSON instead of overwriting it; missing released files are not reconstructed.
+- Rejected unpinned SQLite WAL/SHM/journal sidecars and made all verifier/RAG database reads immutable and read-only; no recovery writes.
+- Added thirteen synthetic real-entrypoint regression tests. The complete cloud CPU preparation suite passes 69 tests with declared dependencies and exact pinned tokenizer assets; no private artifacts were requalified.
+- Applied 18 independently agent-reviewed electrical-component decisions at original ordinals 0–24: 11 technical PASS and 7 QUARANTINE; preserved seven prior reviews, all original answers and token counts.
+- Current curriculum: 392 substantive reviews; 264 PASS / 27 REJECT / 102 QUARANTINE / 1719 NEEDS_HUMAN_REVIEW. Next electrical offset25. No legacy/Drive release, model load, training, paid compute or automatic checks.
+
+
+## 2026-10-01 - Cloud handoff and completed circuit review
+
+- Saved 185 more substantive reviews; all 211 circuit candidates dispositioned, with 374 total reviews and 253 PASS /27 REJECT /95 QUARANTINE /1737 NEEDS_HUMAN_REVIEW across the curriculum.
+- Added portable bounded review reader and explicit cloud continuation/checksum manifest. Updated current gate counts; retained historical review receipts.
+- Private Drive content and sealed evaluation remain local; no model download, training, automatic checks or cloud task creation.
+
+
+## 2026-10-01 — Phase 3 pilot
+
+- Added 400-row checkpointed selected-anchor family evidence across 34,463 candidates and 136,879 authorized active Drive units; preserved semantic uncertainty and source-level exclusion.
+- Recorded 189 substantive legacy reviews and complete 104-row thermal dispositions; all 2,112 structurally screened, with 1917 still substantively unreviewed. No silent answer corrections or legacy release.
+- Released 16 private independently checked calculator protocol examples with exact 4430/2793 Qwen/assistant counts, source/family/rights/mask receipts and no imported API/Drive text.
+- Sealed 12 private statistics tasks with full source-family exclusion and fixed graders; retired two pre-model construction versions. No broad 240-task benchmark or baseline score claimed.
+- Qualified 9 private frozen-reference chunks and an original reviewed model graph;10 curated top 3 retrieval demonstrations. Existing incomplete academic index remains rejected.
+- Added strict offline evaluation tool controller and 56 passing software tests. Published scoped capability/gap/rights/baseline/configuration reports; model-development and GPU gates remain unmet.
+- No weights, training, automatic checks, paid services or private Drive content in Git.
+
 ## 2026-10-01
+
+- Recorded direct synthetic-origin attestation for all Completions families and 198 SLM conversations; formal rights matrix retains historical-contract applicability as PARTIAL without conflating ownership and usage.
+- Added a deterministic 2,112-candidate engineering review proposal, manual hold receipts, risk-tier validation and explicit SFT/RAG/evaluation/tool/quarantine/archive roles.
+- Implemented fail-closed promotion, approved-batch preflight, real pinned Qwen tokenizer/template, assistant labels, padding and overflow rejection. Measured full-corpus Qwen tokens with compatible CPU tokenizer version; no weights or training.
+- Transplanted the pinned model-independent engineering calculator; repaired Welch/ANOVA/regression contracts in new bounded statistics and added independent analytic/numeric/refusal tests.
+- Prepared private citation-RAG and 240-task sealed evaluation designs, an exact attention-only QLoRA proposal and honest unmeasured desktop memory limits.
+- Refreshed aggregate academic extraction counts and explicit OCR/format backlog; bounded private family/index work remains separately receipted. Initial frozen audit remains historical evidence.
+- Final bounded analysis and index stages both timed out; recorded partial committed index coverage, internal hash/metadata checks and missing full source/citation validation. Both query modes reject the incomplete artifact; ownership is empty and no retries were started.
+- Found 248 complete saved Stroud OCR envelopes outside active normalized units (247 nonblank); distinguished 1,207 review slots from at most 959 slots without a known complete cache.
+- Formatted 14 checked Python files with identical ASTs and preserved the calculator's exact bytes; undefined-name/import checks passed. No semantic or training change.
 
 - Audited pinned branches of Completions, LLM, SLM and SLM-1-, including all README variants and populated candidate rows.
 - Consolidated 34,463 unique repository conversations into review staging with full source aliases; removed 67,767 repeated row occurrences.

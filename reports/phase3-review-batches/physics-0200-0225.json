@@ -1,0 +1,610 @@
+{
+  "base_commit": "e2f69ab3d117456c12d594925edc20f4e913e09a",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "physics",
+  "offset": 200,
+  "limit": 25,
+  "next_offset": 225,
+  "selected_window_end_exclusive": 225,
+  "selected_rows_in_window": 25,
+  "new_substantive_reviews": 25,
+  "skipped_existing": 0,
+  "preserved_structural_quarantines": [],
+  "dispositions_added": {
+    "PASS": 23,
+    "REJECT": 1,
+    "QUARANTINE": 1
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "/root/review_physics_ninth_batch",
+    "records_checked": 25,
+    "final_counts": {
+      "PASS": 23,
+      "REJECT": 1,
+      "QUARANTINE": 1
+    },
+    "disposition_changes": [],
+    "review_precision_corrections": [
+      "218 clarifies that quasiperiodicity depends on unspecified forcing/damping structure.",
+      "210 remains a narrow nonhyperbolic-boundary hold;215 is a qualitative threshold description."
+    ],
+    "full_prompt_and_answer_review": true,
+    "all_source_hashes_ids_ordinals_and_ledger_matches": true,
+    "source_sha256": "080c95bcf16135143d3609bd39c6d8bccd90385405dc49b8673ccb8e7e5cab93",
+    "candidate_preparation_predecessor_commit": "67994b7933dd378ff53c8baf77c0afce90467e17",
+    "reviewed_against_local_commit": "67994b7933dd378ff53c8baf77c0afce90467e17",
+    "published_base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "independent_human_review": false,
+    "release_approved": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 1815,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 1477,
+    "REJECT": 67,
+    "QUARANTINE": 297,
+    "NEEDS_HUMAN_REVIEW": 271
+  },
+  "agent_substantive_reviews": 1840,
+  "substantively_unreviewed": 269,
+  "records": [
+    {
+      "id": "repo-2608775d1b4850d0cb9c38cc",
+      "ordinal": 200,
+      "messages_sha256": "2608775d1b4850d0cb9c38cca48d883f5df0a9f577ff253f7b10abd4fd203c40",
+      "state": "PASS",
+      "rationale": "Correct interior/exterior uniformly charged spherical-shell field and normal jump.",
+      "evidence": [
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Spherical symmetry gives E_r=Q/(4*pi*epsilon0*r²) outside and0 inside; the one-sided difference at R is Q/(4*pi*R²*epsilon0)=sigma/epsilon0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The ideal sheet itself has a discontinuous one-sided field; a value exactly on it requires a limiting convention."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1280"
+    },
+    {
+      "id": "repo-fb6f6bef7e80ae441073b8e8",
+      "ordinal": 201,
+      "messages_sha256": "fb6f6bef7e80ae441073b8e818e639cb98290006af76dc6e09a5148dd1bbbd07",
+      "state": "REJECT",
+      "rationale": "The need to distinguish velocities is correct, but the categorical claim that group velocity cannot exceed c is false. Causal anomalously dispersive media can have superluminal or negative group velocities without superluminal information fronts.",
+      "evidence": [
+        {
+          "title": "Wang, Kuzmich and Dogariu, Gain-assisted superluminal light propagation",
+          "url": "https://www.nature.com/articles/35018520",
+          "finding": "Experimentally observed anomalous group propagation and explains why superluminal or negative group velocity need not violate causality."
+        },
+        {
+          "title": "Kuzmich et al., Signal velocity, causality, and quantum noise in superluminal light pulse propagation",
+          "url": "https://arxiv.org/abs/physics/0101068",
+          "finding": "Explicitly distinguishes group velocities above c or negative from the information/causality question."
+        },
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Group velocity d(omega)/d(k) describes pulse-envelope behavior only within its regime and can exceed c through dispersive reshaping; the front/information constraint is separate."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Reject the group-velocity prohibition, preserving the warning that a signal/front interpretation must respect causality and that vacuum fronts propagate at c."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1291"
+    },
+    {
+      "id": "repo-bea7b13bd6482bae385f60b6",
+      "ordinal": 202,
+      "messages_sha256": "bea7b13bd6482bae385f60b65939cbec29f13ef4e0f5a45bcf648d08979fb87e",
+      "state": "PASS",
+      "rationale": "Correct qualified link from dissipation to attracting behavior.",
+      "evidence": [
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Energy loss alone does not guarantee a unique global attractor or exclude forcing, constraints and transient complications; often is an appropriate limitation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1307"
+    },
+    {
+      "id": "repo-d478db136be816b244298527",
+      "ordinal": 203,
+      "messages_sha256": "d478db136be816b2442985277be95949b42505997e38f257b949759ceb50c6ed",
+      "state": "PASS",
+      "rationale": "Correct logistic-map iteration and discrete-time interpretation.",
+      "evidence": [
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "3*0.2*(1-0.2)=0.48."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1310"
+    },
+    {
+      "id": "repo-417dc0e7b87fb887f879be27",
+      "ordinal": 204,
+      "messages_sha256": "417dc0e7b87fb887f879be273bc6c561682206522c09b314feee6a7edec1dcfc",
+      "state": "PASS",
+      "rationale": "Correct one-dimensional autonomous phase-line ingredients and nonzero-slope local stability test.",
+      "evidence": [
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Linearizing at f(x_star)=0 gives u_dot=f_prime(x_star)*u; a negative derivative attracts and a positive derivative repels locally."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A zero derivative is inconclusive and requires nonlinear terms; the answer gives the positive/negative cases without asserting a zero-slope classification."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1311"
+    },
+    {
+      "id": "repo-eef78d441a9f7cee91a685dd",
+      "ordinal": 205,
+      "messages_sha256": "eef78d441a9f7cee91a685ddb4dac8524ad894fe969a7d7354819d2d348dd825",
+      "state": "PASS",
+      "rationale": "Correct concise local-versus-global stability scope distinction.",
+      "evidence": [
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The precise type of stability or attraction and the allowed invariant state domain should be specified in a theorem; the basic nearby/all-states contrast is correct."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1324"
+    },
+    {
+      "id": "repo-bb2221e29485ca1a907859f8",
+      "ordinal": 206,
+      "messages_sha256": "bb2221e29485ca1a907859f8979caccf227ef4c9738eda1a0002da3b688aaa79",
+      "state": "PASS",
+      "rationale": "Acceptable introductory relationship between linearized eigenvalues and leading-order local dynamics.",
+      "evidence": [
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For u_dot=J*u, modes have exp(lambda*t) behavior, with real part controlling exponential growth/decay and imaginary part oscillation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This describes the linearized model. Nonhyperbolic eigenvalues and nonlinear terms can prevent a full nonlinear stability conclusion from eigenvalues alone."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1325"
+    },
+    {
+      "id": "repo-fdfb52741e1c453e90226399",
+      "ordinal": 207,
+      "messages_sha256": "fdfb52741e1c453e902263990cbef30cc3a4a0f2f45e370a064167604b640fe0",
+      "state": "PASS",
+      "rationale": "Correct plain-language period-doubling sequence.",
+      "evidence": [
+        {
+          "title": "MIT8.09 Advanced Classical Mechanics, nonlinear maps",
+          "url": "https://live.ocw.mit.edu/courses/8-09-classical-mechanics-iii-fall-2014/d9bac33f6c60b304dc0398e99b327102_MIT8_09F14_full.pdf",
+          "finding": "Discusses logistic-map fixed points, linearized multiplier tests and period doubling; boundary-multiplier cases require further nonlinear analysis."
+        },
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A period-n orbit can bifurcate into a period-2n orbit; repeated events produce1,2,4,8-step repetition."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Not every system follows an endless doubling cascade; this describes the named mechanism."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1328"
+    },
+    {
+      "id": "repo-14352a9adffa4a78c732c24c",
+      "ordinal": 208,
+      "messages_sha256": "14352a9adffa4a78c732c24cd811bbe053badb8e9f12ca9541d75eb3ecb34944",
+      "state": "PASS",
+      "rationale": "Correct physical-role overview of the Lorenz convection variables and nonlinear exchange terms.",
+      "evidence": [
+        {
+          "title": "Edward Lorenz, On the Prevalence of Aperiodicity in Simple Systems",
+          "url": "https://wind.mit.edu/~emanuel/Lorenz/EdLorenz/On_the_Prevalence_of_Aperiodicity_In_Simple_1979.pdf",
+          "finding": "Identifies convective overturning and horizontal/vertical temperature variables in the low-order Lorenz convection model."
+        },
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The nonlinear contributions to y_dot and z_dot are-x*z and x*y; their contribution to d(y²+z²)/dt cancels as2*y*(-x*z)+2*z*(x*y)=0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The y equation also contains linear damping-y; the brief role summary is not an exhaustive term-by-term energy budget."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1330"
+    },
+    {
+      "id": "repo-69def7bf58684e78e79302eb",
+      "ordinal": 209,
+      "messages_sha256": "69def7bf58684e78e79302eb1b2daf619e669d373baa4cf38ec79ac51d731515",
+      "state": "PASS",
+      "rationale": "Correct qualitative deterministic-chaos mechanism with sensitivity and bounded folding.",
+      "evidence": [
+        {
+          "title": "MIT8.09 Advanced Classical Mechanics, nonlinear maps",
+          "url": "https://live.ocw.mit.edu/courses/8-09-classical-mechanics-iii-fall-2014/d9bac33f6c60b304dc0398e99b327102_MIT8_09F14_full.pdf",
+          "finding": "Discusses logistic-map fixed points, linearized multiplier tests and period doubling; boundary-multiplier cases require further nonlinear analysis."
+        },
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Not every stretching/folding map is chaotic on every invariant set, and actual measurement noise may coexist. The answer explains how deterministic irregularity can arise without adding random forcing."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1331"
+    },
+    {
+      "id": "repo-a28f233fd1ad330ee0b6bf09",
+      "ordinal": 210,
+      "messages_sha256": "a28f233fd1ad330ee0b6bf09f85e6e77f49c6f82c4a0ee35f41ece175d8dafd9",
+      "state": "QUARANTINE",
+      "rationale": "The derivative and open interval1<r<3 are correct for strict linear attraction, but treating |F_prime|<1 as necessary for all stability omits the nonlinear boundary case at r=3.",
+      "evidence": [
+        {
+          "title": "MIT8.09 Advanced Classical Mechanics, nonlinear maps",
+          "url": "https://live.ocw.mit.edu/courses/8-09-classical-mechanics-iii-fall-2014/d9bac33f6c60b304dc0398e99b327102_MIT8_09F14_full.pdf",
+          "finding": "Discusses logistic-map fixed points, linearized multiplier tests and period doubling; boundary-multiplier cases require further nonlinear analysis."
+        },
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At r=3 and x_star=2/3, deviations obey u_next=-u-3u². The second iterate is u_next2=u-18u³-27u⁴, which attracts sufficiently small nonzero deviations algebraically despite |F_prime|=1."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the unqualified necessity/boundary conclusion, not the standard strict-multiplier test or its interior interval."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1357"
+    },
+    {
+      "id": "repo-c691e59fd7f6bdc06ef6ae3f",
+      "ordinal": 211,
+      "messages_sha256": "c691e59fd7f6bdc06ef6ae3f1e484f8195e90540f9c05827d010c85882a3df28",
+      "state": "PASS",
+      "rationale": "Correct generic nondegenerate Hopf linear-crossing and nonlinear-saturation distinction.",
+      "evidence": [
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A normal form z_dot=(mu+i*omega)*z+l1*z*|z|²+... has cubic radial coefficient determining small-cycle direction and stability when it is nonzero."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Nonzero crossing frequency, transversality and a nonzero first Lyapunov coefficient are part of the generic Hopf setting; degenerate cases need higher-order terms."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1358"
+    },
+    {
+      "id": "repo-07c65d98a592ffe56a2de572",
+      "ordinal": 212,
+      "messages_sha256": "07c65d98a592ffe56a2de57273f5dc130ebb2661f8b860795533d57628845d9b",
+      "state": "PASS",
+      "rationale": "Correct positive largest-Lyapunov-rate and e-folding-time interpretation with estimation and chaos caveats.",
+      "evidence": [
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "1/0.12=8.333... s; infinitesimal perturbations in the dominant direction have long-time rate exp(0.12*t) before finite-amplitude saturation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A bounded special unstable orbit can have a positive exponent without representing a chaotic attracting trajectory. The source says suggests rather than proves and warns about asymptotic estimation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1362"
+    },
+    {
+      "id": "repo-0dd9827c29e6b1ec66f176f8",
+      "ordinal": 213,
+      "messages_sha256": "0dd9827c29e6b1ec66f176f8abf0c01932dca78b0cdf820d5eba54886aafe55d",
+      "state": "PASS",
+      "rationale": "Correct ordinary Lorenz convection onset and qualified higher-parameter chaotic possibility.",
+      "evidence": [
+        {
+          "title": "Edward Lorenz, On the Prevalence of Aperiodicity in Simple Systems",
+          "url": "https://wind.mit.edu/~emanuel/Lorenz/EdLorenz/On_the_Prevalence_of_Aperiodicity_In_Simple_1979.pdf",
+          "finding": "Identifies convective overturning and horizontal/vertical temperature variables in the low-order Lorenz convection model."
+        },
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For sigma,beta>0, the origin changes stability at rho=1 and nonzero equilibria are(+/-sqrt(beta*(rho-1)),+/-sqrt(beta*(rho-1)),rho-1)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The later loss-of-stability and attractor thresholds depend on parameters and basins; the original explicitly notes this and uses may."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1364"
+    },
+    {
+      "id": "repo-ba8c1675112249cac6823923",
+      "ordinal": 214,
+      "messages_sha256": "ba8c1675112249cac6823923bf66be58aa54c1a07cfe6ef719979db3235ab0ae",
+      "state": "PASS",
+      "rationale": "Correct autonomous-state augmentation and stroboscopic Poincare reduction for periodic pendulum forcing.",
+      "evidence": [
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Adding phi_dot=Omega with phi modulo2*pi makes the time-periodic forcing an autonomous function of(theta,omega,phi). Sampling each2*pi/Omega fixes the drive phase."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Whether theta is unwrapped or modulo2*pi depends on tracking rotations; the state choice remains valid."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1367"
+    },
+    {
+      "id": "repo-27a41580b7be166bd74aed86",
+      "ordinal": 215,
+      "messages_sha256": "27a41580b7be166bd74aed860f731f3c4c8bac44060b04b934850be20a794f6d",
+      "state": "PASS",
+      "rationale": "Correct qualitative logistic-map period-doubling route and periodic-window caveat.",
+      "evidence": [
+        {
+          "title": "MIT8.09 Advanced Classical Mechanics, nonlinear maps",
+          "url": "https://live.ocw.mit.edu/courses/8-09-classical-mechanics-iii-fall-2014/d9bac33f6c60b304dc0398e99b327102_MIT8_09F14_full.pdf",
+          "finding": "Discusses logistic-map fixed points, linearized multiplier tests and period doubling; boundary-multiplier cases require further nonlinear analysis."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "r=3 marks the flip threshold; the distinct period-2 orbit exists just beyond it, while the critical fixed point needs nonlinear boundary analysis. Feigenbaum scaling is asymptotic, not exact for the earliest spacings."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1368"
+    },
+    {
+      "id": "repo-e6e47489190d76d5c1328f4e",
+      "ordinal": 216,
+      "messages_sha256": "e6e47489190d76d5c1328f4ec14564f16f60667a36ac89118968c2f58a32e965",
+      "state": "PASS",
+      "rationale": "Correct full Lorenz Jacobian.",
+      "evidence": [
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Differentiating gives rows(-sigma,sigma,0),(rho-z,-1,-x),(y,x,-beta), matching every displayed entry."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is the local variational matrix at any state, not by itself a global stability proof."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1371"
+    },
+    {
+      "id": "repo-c0f1a25bf7decb130c583d96",
+      "ordinal": 217,
+      "messages_sha256": "c0f1a25bf7decb130c583d9665271734c48112b4f1a8239ce0fb887577707448",
+      "state": "PASS",
+      "rationale": "Correct separation between a locally attracting hyperbolic equilibrium and different global invariant dynamics.",
+      "evidence": [
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a smooth autonomous system, all Jacobian eigenvalues with negative real part imply local asymptotic stability; this does not constrain dynamics outside that neighborhood."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A separate chaotic invariant set can be nonattracting or lie in another basin, consistent with the answer alternatives."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1374"
+    },
+    {
+      "id": "repo-06d992aba47df619bacb3444",
+      "ordinal": 218,
+      "messages_sha256": "06d992aba47df619bacb34442d59859a0b50d7a5633e997f920f2780473ff408",
+      "state": "PASS",
+      "rationale": "Correct qualified menu of nonlinear Duffing responses as forcing changes.",
+      "evidence": [
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The sequence is parameter- and basin-dependent. Quasiperiodicity depends on forcing and damping structure, not merely increasing a single periodic drive in the narrower positive-constant-linear-damping model; the source does not fix that structure."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1376"
+    },
+    {
+      "id": "repo-7e8af2929628ad93be9d2e46",
+      "ordinal": 219,
+      "messages_sha256": "7e8af2929628ad93be9d2e4643c6188dda8c71f65c9a4a1667959991f3d10dca",
+      "state": "PASS",
+      "rationale": "Correct symbolic-itinerary and horseshoe connection to rigorous chaotic orbit structure.",
+      "evidence": [
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A hyperbolic two-strip horseshoe admits a shift-like symbolic coding with many periodic sequences and positive topological entropy."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A useful partition/coding must actually be established; merely assigning symbols to arbitrary data does not prove a horseshoe."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1378"
+    },
+    {
+      "id": "repo-48644b4a5fe0b0f6c69478d5",
+      "ordinal": 220,
+      "messages_sha256": "48644b4a5fe0b0f6c69478d503b1f865b786707b23274e9ff4b3bcffdb7fc459",
+      "state": "PASS",
+      "rationale": "Correct supercritical pitchfork equilibria and branch stability.",
+      "evidence": [
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "f_prime=r-3*x² gives r on the central branch and-2*r on the nonzero branches; those stable branches appear for r>0 as the origin becomes unstable."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "At r=0, x_dot=-x³ remains nonlinearly attracting but nonhyperbolic; the source only classifies the strict sides of the bifurcation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1382"
+    },
+    {
+      "id": "repo-7cc1dca189de2b53fa09a078",
+      "ordinal": 221,
+      "messages_sha256": "7cc1dca189de2b53fa09a078af334bae7b060093caaf6139fed6a24a59f1437d",
+      "state": "PASS",
+      "rationale": "Correct generic saddle homoclinic-loop and diverging-period explanation.",
+      "evidence": [
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A near-saddle trajectory spends logarithmically long time near the equilibrium as a homoclinic loop is approached, producing diverging cycle periods when a nearby limit cycle exists."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The answer correctly says can; the saddle quantity and unfolding determine cycle existence and stability."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1383"
+    },
+    {
+      "id": "repo-730bc1f3eff7d2ceb445c0e9",
+      "ordinal": 222,
+      "messages_sha256": "730bc1f3eff7d2ceb445c0e97038972c3c74cd9e721d5b97f3b3ec38256fbf20",
+      "state": "PASS",
+      "rationale": "Correct warning that broadband spectra alone do not establish deterministic chaos and appropriate corroborating analysis.",
+      "evidence": [
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Positive estimated exponents can also be biased by noise or finite data, so reconstruction and surrogate tests need their own validation; the answer calls for multiple checks."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1385"
+    },
+    {
+      "id": "repo-fcaf24aa90ead4eae51d8a6a",
+      "ordinal": 223,
+      "messages_sha256": "fcaf24aa90ead4eae51d8a6ab02895858d0897923a8a8992b1c091d89b399fe3",
+      "state": "PASS",
+      "rationale": "Correct concise material constitutive-relation definition with representative examples.",
+      "evidence": [
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Constitutive equations can include history, rate, temperature, internal variables and tensor structure; cause/response is an introductory explanation rather than a universal one-way causality theorem."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1394"
+    },
+    {
+      "id": "repo-e59f62276db11ba65f56bd83",
+      "ordinal": 224,
+      "messages_sha256": "e59f62276db11ba65f56bd83ce77401da3d850452610de3c0b19f8a87a12fb1e",
+      "state": "PASS",
+      "rationale": "Correct standard lumped-versus-distributed modeling distinction.",
+      "evidence": [
+        {
+          "method": "independent_electromagnetic_and_dynamical_systems_derivation",
+          "finding": "Individually checked shell fields, fixed points and Jacobians, map boundary stability, bifurcation normal forms, Lyapunov-rate interpretation, modal/chaotic scope and model definitions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A lumped network can represent differences between discrete nodes or compartments; it neglects continuous spatial variation within each lump rather than requiring the entire multi-node model to be spatially uniform."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1404"
+    }
+  ]
+}

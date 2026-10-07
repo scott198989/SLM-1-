@@ -1,0 +1,19 @@
+{
+  "version":"FORGE_private_gold_design_v0.1",
+  "status":"DESIGN_ONLY_240_TASK_BENCHMARK_NOT_CREATED",
+  "existing_narrow_diagnostic_receipt":"reports/phase3-sealed-gold.json",
+  "execution_and_comparison_protocol":"docs/PHASE3_BASELINE_EXPERIMENT.md",
+  "proposed_tasks":240,
+  "domains":["statics_strength","circuits","motors_drives","controls","instrumentation","plc_ladder","siemens_tia","thermal_process","materials_manufacturing","troubleshooting","data_analysis_doe_spc","engineering_problem_solving"],
+  "tasks_per_domain":20,
+  "modes":{"closed_book":80,"deterministic_tools":80,"source_grounded_citations":80},
+  "selection":"private independent human-authored tasks after whole-family holdout; balance modes across domains; no generated reference without independent verification",
+  "family_policy":"connected components of document editions, solutions, screenshots, paraphrases, repository duplicates and prompt collisions assigned before curation; uncertain links withheld",
+  "private_storage":"outside public Git; separate access-controlled question, answer, grader and asset manifests",
+  "rag_policy":"sealed question/answer/solution families excluded from index; source-grounded tasks use a frozen allowed reference family set containing no task answers; development tasks use different families",
+  "grader":{"numeric":"independent oracle, units, absolute/relative tolerances fixed before outputs","conceptual":"blind rubric review with explicit assumptions and errors","citation":"document hash, location, offset/asset fidelity, entailment and answer coverage","abstention":"missing-context tasks require justified refusal rather than invented values"},
+  "comparison":{"baseline":"same pinned base, prompt template, decoder, tools and index as trained model","sampling":"do_sample=false; fixed max_new_tokens and im_end stop; same context budget","development":"checkpoint selection on separate dev families only","sealed_gold":"one final frozen baseline-versus-adapter comparison; no tuning on gold feedback","report":"per-domain/mode pass rates, error taxonomy, paired differences with uncertainty, units, citation precision and latency"},
+  "current_independent_gold_tasks":0,
+  "public_fixtures_are_final_gold":false,
+  "training_authorized":false
+}

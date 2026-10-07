@@ -1,0 +1,555 @@
+{
+  "base_commit": "1a297676deb68c4a8d9b5bcb81a6d75f7d7683c3",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "algebra",
+  "offset": 175,
+  "limit": 25,
+  "next_offset": 200,
+  "selected_window_end_exclusive": 200,
+  "selected_rows_in_window": 25,
+  "new_substantive_reviews": 25,
+  "skipped_existing": 0,
+  "preserved_structural_quarantines": [],
+  "dispositions_added": {
+    "QUARANTINE": 4,
+    "PASS": 21
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "independent_algebra_eighth_batch_agent",
+    "records_checked": 25,
+    "final_counts": {
+      "QUARANTINE": 4,
+      "PASS": 21
+    },
+    "disposition_changes": [
+      {
+        "ordinal": 177,
+        "from": "QUARANTINE",
+        "to": "PASS",
+        "basis": "Explicit often qualifies useful scalar-interface strategy; branch limits are caveats, not refutations."
+      }
+    ],
+    "review_precision_corrections": [
+      "175: use right-infinite/left-finite counterexample to avoid +/-infinity shorthand ambiguity.",
+      "179: distinct roots are required for the displayed companion recurrence formula."
+    ],
+    "full_prompt_and_answer_review": true,
+    "all_source_hashes_ids_ordinals_and_ledger_matches": true,
+    "source_sha256": "87dea8584252719990f16589465740a1fa9bfb4f2c161912e7c5e3bd2af2de07",
+    "reviewed_against_local_commit": "1a297676deb68c4a8d9b5bcb81a6d75f7d7683c3",
+    "published_base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "independent_human_review": false,
+    "release_approved": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 830,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 632,
+    "REJECT": 47,
+    "QUARANTINE": 177,
+    "NEEDS_HUMAN_REVIEW": 1256
+  },
+  "agent_substantive_reviews": 855,
+  "substantively_unreviewed": 1254,
+  "records": [
+    {
+      "id": "repo-09e3e7207444bbb8e239f22b",
+      "ordinal": 175,
+      "messages_sha256": "09e3e7207444bbb8e239f22b15833191941770ae5463d2358f33a532e112345c",
+      "state": "QUARANTINE",
+      "rationale": "The limits-to-asymptotes connection is correct, but the vertical-asymptote statement uses an unqualified two-sided limit. A single divergent one-sided limit is enough, and the opposite side may diverge differently or stay finite.",
+      "evidence": [
+        {
+          "title": "University of Toronto, One-sided Limits",
+          "url": "https://www.utm.utoronto.ca/rgasc/student-resource-hub/math-resources/one-sided-limits",
+          "finding": "A vertical asymptote is established when either one-sided limit is positive or negative infinity; a common two-sided infinite limit is not required."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Let f(x)=1/x for x>0 and f(x)=0 for x<0. The right-side limit at 0 is +infinity, giving a vertical asymptote, while the left limit is 0; no common two-sided infinite limit exists."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Horizontal asymptotes can likewise refer to either end separately; the hold principally concerns the stated vertical-limit notation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1078"
+    },
+    {
+      "id": "repo-52bc0984727f68b94adeb2c2",
+      "ordinal": 176,
+      "messages_sha256": "52bc0984727f68b94adeb2c235c09f4d79f7eb84ae69c6e65bc8ea3551abfd38",
+      "state": "PASS",
+      "rationale": "Correct basis-free determinant definition through the induced action on the one-dimensional top exterior power, with the right wedge equation.",
+      "evidence": [
+        {
+          "method": "independent_top_exterior_power_definition",
+          "finding": "The top exterior power of an n-dimensional vector space is one-dimensional. The induced map Lambda^n(T) is scalar multiplication by det(T); expanding a basis wedge gives the determinant's alternating sum."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Here n is the finite dimension supplied by the listed basis; alternation and multilinearity refer to the columns/images in the wedge construction."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1079"
+    },
+    {
+      "id": "repo-728c62bc6343eb26655d0d50",
+      "ordinal": 177,
+      "messages_sha256": "728c62bc6343eb26655d0d50eb4304bd95daa11b39031de8984e8989da56629f",
+      "state": "PASS",
+      "rationale": "Correct conceptual scalar-interface strategy: treating the shared scalar as a parameter can reduce the remaining coupling to a one-variable consistency solve. The answer explicitly says often, so its tractability language is a typical benefit rather than a universal guarantee.",
+      "evidence": [
+        {
+          "title": "MIT nonlinear programming, constrained optimality",
+          "url": "https://ocw.mit.edu/courses/15-084j-nonlinear-programming-spring-2004/21073fc1bb9e5f68b3319bec0895683f_lec6_constr_opt.pdf",
+          "finding": "Theorem 22 requires a feasible base point, continuously differentiable constraints and a nonsingular Jacobian block for local elimination; multipliers are introduced for constrained optimization with relevant regularity conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If each subsystem yields a well-defined response to scalar s and their compatibility is a scalar residual r(s), solving r(s)=0 reduces the remaining interface solve to one dimension."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Subsystem branches, existence, singular Jacobians and evaluation cost still matter. For u^2=s there are two branches at s>0 and none at s<0; this bounds the approach rather than refuting its stated usefulness."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1080"
+    },
+    {
+      "id": "repo-601aa124b26ccb61be19ead9",
+      "ordinal": 178,
+      "messages_sha256": "601aa124b26ccb61be19ead9d9b5e2d8b0501c7715cbb95b58641c913a40b7b2",
+      "state": "PASS",
+      "rationale": "Correct direct corollary of Lagrange applied to the cyclic subgroup generated by the element.",
+      "evidence": [
+        {
+          "method": "independent_axiom_and_subgroup_check",
+          "finding": "Group claims are checked directly against closure, inherited associativity, identity and inverses. No numerical example substitutes for the general proof."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The subgroup <g> has exactly ord(g) elements, so its size divides the finite group size."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1081"
+    },
+    {
+      "id": "repo-4967491298297760c5531e04",
+      "ordinal": 179,
+      "messages_sha256": "4967491298297760c5531e04020c5b6a6ab245d7fd672846f5092fb48afa8a1a",
+      "state": "QUARANTINE",
+      "rationale": "The companion-matrix connection is correct, but the two-exponential general-solution formula requires distinct characteristic roots. Repeated roots of a 2 by 2 companion matrix are defective and need additional polynomial factors.",
+      "evidence": [
+        {
+          "title": "MIT 6.042J, Lecture 12: Recurrences",
+          "url": "https://courses.csail.mit.edu/6.042/past-devel/archive/spring00/archive/lectures/L12.pdf",
+          "finding": "Section 3.2 distinguishes repeated characteristic roots, requiring polynomial-in-n factors multiplying the exponential root terms."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a_n=2*a_(n-1)-a_(n-2), the repeated root is 1 and a_n=n is a solution. The displayed alpha*1^n+beta*1^n only gives constants and misses it."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1083"
+    },
+    {
+      "id": "repo-587a9e28d1b31e2cc7fb9130",
+      "ordinal": 180,
+      "messages_sha256": "587a9e28d1b31e2cc7fb913036d53741e739efd5e4ae84357de5bba4ef5ffba4",
+      "state": "PASS",
+      "rationale": "Good beginner description of a domain as allowed inputs, with valid real-arithmetic exclusion examples.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Each stated relation is checked analytically from the complete original pair, including limiting, recurrence and matrix counterexamples."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The even-root example is in real-valued arithmetic; complex-valued functions can have a different domain."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1096"
+    },
+    {
+      "id": "repo-546388d3b2f7bcd5286abe8f",
+      "ordinal": 181,
+      "messages_sha256": "546388d3b2f7bcd5286abe8f5240d60561d59c563c8e6998855697d3fe3a1a66",
+      "state": "PASS",
+      "rationale": "Correct multilinearity proof that scaling all n rows by k multiplies determinant by k^n.",
+      "evidence": [
+        {
+          "method": "independent_symbolic_derivation",
+          "finding": "In the Leibniz sum for det(A^T), substitute inverse permutations. The inverse has the same sign and reindexes the product to the corresponding term of det(A)."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Each term in the determinant's permutation sum contains n entries, so replacing every entry by k times itself contributes k^n, including k=0."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1098"
+    },
+    {
+      "id": "repo-421fcf6463bd093b72e53b73",
+      "ordinal": 182,
+      "messages_sha256": "421fcf6463bd093b72e53b7398a13cfa33a3936cccfa5f5b9168763835dc1773",
+      "state": "PASS",
+      "rationale": "Correct volume-scaling analogy and orientation/degeneracy interpretation.",
+      "evidence": [
+        {
+          "method": "independent_top_exterior_power_definition",
+          "finding": "The top exterior power of an n-dimensional vector space is one-dimensional. The induced map Lambda^n(T) is scalar multiplication by det(T); expanding a basis wedge gives the determinant's alternating sum."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A singular map loses at least one dimension; the phrase 'a dimension' is informal, not a rank-deficiency-equals-one claim."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1103"
+    },
+    {
+      "id": "repo-4e2e8239f08a09307d16c9b1",
+      "ordinal": 183,
+      "messages_sha256": "4e2e8239f08a09307d16c9b106932351e8c7f163eed0450c2d08fb19787196c6",
+      "state": "PASS",
+      "rationale": "Correct sum-of-cubes factorization and cancellation with the original excluded input explicitly preserved.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Each stated relation is checked analytically from the complete original pair, including limiting, recurrence and matrix counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "(x+1)(x^2-x+1)=x^3+1. The original ratio remains undefined at x=-1."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1107"
+    },
+    {
+      "id": "repo-41be1b8bf9579257ce04991f",
+      "ordinal": 184,
+      "messages_sha256": "41be1b8bf9579257ce04991f9f88c10fd8caf3337ef68a56832e70d61ac53e59",
+      "state": "PASS",
+      "rationale": "Accurate qualitative roles of quadratic, linear and constant coefficients, with type and placement correctly attributed to their combined effects.",
+      "evidence": [
+        {
+          "method": "real_symmetric_spectral_theorem",
+          "finding": "An orthonormal eigenbasis diagonalizes a real symmetric matrix: x^T A x=sum_i lambda_i y_i^2. Positive, negative and mixed signs yield the stated definiteness classes."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Special degeneracies and empty loci depend on the full coefficient set; no one-coefficient-only classification is claimed."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1114"
+    },
+    {
+      "id": "repo-3869c93cf73c27d6ef793adc",
+      "ordinal": 185,
+      "messages_sha256": "3869c93cf73c27d6ef793adc9778b4c604b0983e4b28587aef28f7f36ae88fcc",
+      "state": "PASS",
+      "rationale": "Correct no-zero-divisors proof in a field using the nonzero factor's multiplicative inverse.",
+      "evidence": [
+        {
+          "method": "independent_axiom_and_subgroup_check",
+          "finding": "Group claims are checked directly against closure, inherited associativity, identity and inverses. No numerical example substitutes for the general proof."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "a^-1(ab)=(a^-1 a)b=b, and a^-1*0=0, so b=0 when a!=0."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1121"
+    },
+    {
+      "id": "repo-54070a2bfd9ab135b2f927a6",
+      "ordinal": 186,
+      "messages_sha256": "54070a2bfd9ab135b2f927a680f582a660695480f6baac26b11051474dd00bbd",
+      "state": "PASS",
+      "rationale": "Correct eigenvalue-sign criteria for the listed definiteness cases of a real symmetric quadratic form.",
+      "evidence": [
+        {
+          "method": "real_symmetric_spectral_theorem",
+          "finding": "An orthonormal eigenbasis diagonalizes a real symmetric matrix: x^T A x=sum_i lambda_i y_i^2. Positive, negative and mixed signs yield the stated definiteness classes."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Orthogonal diagonalization gives Q=sum lambda_i*y_i^2, making the sign tests immediate."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Zero-eigenvalue semidefinite cases are not detailed, but the three stated tests are correct."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1126"
+    },
+    {
+      "id": "repo-b993ef6e779d59716b33b515",
+      "ordinal": 187,
+      "messages_sha256": "b993ef6e779d59716b33b5151913538507dc96aa5792810fee61b0381713ae11",
+      "state": "PASS",
+      "rationale": "Useful high-level checklist combining structure, constraint formulation, coupling strategy, solver matching and verification/error control.",
+      "evidence": [
+        {
+          "title": "MIT nonlinear programming, constrained optimality",
+          "url": "https://ocw.mit.edu/courses/15-084j-nonlinear-programming-spring-2004/21073fc1bb9e5f68b3319bec0895683f_lec6_constr_opt.pdf",
+          "finding": "Theorem 22 requires a feasible base point, continuously differentiable constraints and a nonsingular Jacobian block for local elimination; multipliers are introduced for constrained optimization with relevant regularity conditions."
+        },
+        {
+          "title": "Tojaga et al., Hybrid of monolithic and staggered solution techniques",
+          "url": "https://arxiv.org/abs/2203.15924",
+          "finding": "This coupled fracture model has reduced monolithic robustness from non-positive-definite tangent stiffness; alternating solution avoids that difficulty but has suboptimal convergence, motivating a hybrid. The comparison is problem-dependent."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Checking constraints throughout is monitoring numerical satisfaction to appropriate tolerances; it is not a claim that every internal iterate is exactly feasible."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1131"
+    },
+    {
+      "id": "repo-d9a7d1d76b9a85495c91ad0e",
+      "ordinal": 188,
+      "messages_sha256": "d9a7d1d76b9a85495c91ad0e4906f778bfed6bc7fd33b4c1372c109d9a1b2a5a",
+      "state": "QUARANTINE",
+      "rationale": "The eigenmode formula is valid when A has a full eigenbasis, but the answer labels it the general solution of x'=Ax without the required diagonalizability condition. Defective matrices need generalized-eigenvector polynomial factors.",
+      "evidence": [
+        {
+          "title": "James Demmel, Berkeley MA221 Lecture 15",
+          "url": "https://people.eecs.berkeley.edu/~demmel/ma221_Fall09/Lectures/Lecture_15.html",
+          "finding": "Defines eigenvalues through the characteristic determinant and nonzero null vectors; shows similarity preserves eigenvalues and presents unique Jordan blocks up to ordering."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For A=[[0,1],[0,0]], x(t)=(t,1) is a solution. A has only the e1 eigenvector direction and eigenvalue zero, so ordinary eigenvector exponentials alone cannot represent that solution."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1133"
+    },
+    {
+      "id": "repo-f732433ca9e894ab0e0cabb5",
+      "ordinal": 189,
+      "messages_sha256": "f732433ca9e894ab0e0cabb559e7ba2f694692f40bbe69bf14e02e9c6be47770",
+      "state": "PASS",
+      "rationale": "Appropriate elementary explanation of positive-integer exponents and order of operations with a clear 3^2 example.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Each stated relation is checked analytically from the complete original pair, including limiting, recurrence and matrix counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "3^2=3*3=9, whereas 3*2=6."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The multiplicative repetition description is introductory for positive integers, not a definition for every real or complex exponent. No missing specific expression is needed for this general explanation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1137"
+    },
+    {
+      "id": "repo-46893044cae3c5b4a7b6442c",
+      "ordinal": 190,
+      "messages_sha256": "46893044cae3c5b4a7b6442c9b603c78711049610f1669b1fb318d1299500950",
+      "state": "PASS",
+      "rationale": "Accurate list of common sources of numerical difficulty in coupled constrained problems, presented as possible features rather than a universal diagnosis.",
+      "evidence": [
+        {
+          "title": "MIT nonlinear programming, constrained optimality",
+          "url": "https://ocw.mit.edu/courses/15-084j-nonlinear-programming-spring-2004/21073fc1bb9e5f68b3319bec0895683f_lec6_constr_opt.pdf",
+          "finding": "Theorem 22 requires a feasible base point, continuously differentiable constraints and a nonsingular Jacobian block for local elimination; multipliers are introduced for constrained optimization with relevant regularity conditions."
+        },
+        {
+          "title": "Tojaga et al., Hybrid of monolithic and staggered solution techniques",
+          "url": "https://arxiv.org/abs/2203.15924",
+          "finding": "This coupled fracture model has reduced monolithic robustness from non-positive-definite tangent stiffness; alternating solution avoids that difficulty but has suboptimal convergence, motivating a hybrid. The comparison is problem-dependent."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The relative importance of each feature depends on the actual equations and solver."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1142"
+    },
+    {
+      "id": "repo-48e2a1e0b252e2cd3001626f",
+      "ordinal": 191,
+      "messages_sha256": "48e2a1e0b252e2cd3001626f2b970dd944ef02f34cd5f0046982539a114b45f9",
+      "state": "PASS",
+      "rationale": "Correct explanation that symbolic distributivity establishes an identity across its ordinary scalar domain.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Each stated relation is checked analytically from the complete original pair, including limiting, recurrence and matrix counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "(a+b)^2=a^2+ab+ba+b^2=a^2+2ab+b^2 for commutative scalar multiplication."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1148"
+    },
+    {
+      "id": "repo-64e5b07c27b7b02b8affa427",
+      "ordinal": 192,
+      "messages_sha256": "64e5b07c27b7b02b8affa4277de348e87dc9ac1b405cefe781e54aa5934b18e8",
+      "state": "PASS",
+      "rationale": "Correct polynomial-evaluation homomorphism, principal kernel generated by the minimal polynomial and Cayley-Hamilton inclusion.",
+      "evidence": [
+        {
+          "title": "Romyar Sharifi, UCLA Abstract Algebra, section 8.10",
+          "url": "https://math.ucla.edu/~sharifi/notes/algebra-ch08.html",
+          "finding": "Finite-dimensional operator modules yield invariant factors, minimal and characteristic polynomials and Jordan structures; polynomial evaluation describes the algebraic relations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "p(A)q(A)=(pq)(A), because powers of the same A commute with scalar coefficients. Division by the monic minimal polynomial shows every annihilating p is its multiple."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1150"
+    },
+    {
+      "id": "repo-0be8d914c4ccb6538d8053be",
+      "ordinal": 193,
+      "messages_sha256": "0be8d914c4ccb6538d8053be23fa7d581695b6aa15935637fc7db71b130f4d3a",
+      "state": "PASS",
+      "rationale": "Correct finite-dimensional trace/product formulas with algebraic multiplicities explicitly counted, plus the proper warning that the two invariants do not recover the entire operator.",
+      "evidence": [
+        {
+          "title": "James Demmel, Berkeley MA221 Lecture 15",
+          "url": "https://people.eecs.berkeley.edu/~demmel/ma221_Fall09/Lectures/Lecture_15.html",
+          "finding": "Defines eigenvalues through the characteristic determinant and nonzero null vectors; shows similarity preserves eigenvalues and presents unique Jordan blocks up to ordering."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Eigenvalues are counted over a splitting field when necessary; the resulting trace and determinant equal the original-field coefficients."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1159"
+    },
+    {
+      "id": "repo-53db5e7c5f9328ecabd05ff0",
+      "ordinal": 194,
+      "messages_sha256": "53db5e7c5f9328ecabd05ff03ccebb689034d16db312df5530c72e4c69d10019",
+      "state": "PASS",
+      "rationale": "Correctly identifies lambda as the scalar unknown in the eigenvalue equation and requires a nonzero eigenvector.",
+      "evidence": [
+        {
+          "title": "James Demmel, Berkeley MA221 Lecture 15",
+          "url": "https://people.eecs.berkeley.edu/~demmel/ma221_Fall09/Lectures/Lecture_15.html",
+          "finding": "Defines eigenvalues through the characteristic determinant and nonzero null vectors; shows similarity preserves eigenvalues and presents unique Jordan blocks up to ordering."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The value may coincide with a matrix entry in special forms, but its role in the equation remains a scalar parameter."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1161"
+    },
+    {
+      "id": "repo-4379d6372a81e58e6e2ef233",
+      "ordinal": 195,
+      "messages_sha256": "4379d6372a81e58e6e2ef2332336ba10c1b22656f29ff90ec9eb7495f4f37d3b",
+      "state": "PASS",
+      "rationale": "Correct common-base transformation, use of injectivity of 2^x on the reals and verified solution x=2.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Each stated relation is checked analytically from the complete original pair, including limiting, recurrence and matrix counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "2^(x+1)=2^(3x-3) implies x+1=3x-3 and x=2. Both original sides are then 8."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1177"
+    },
+    {
+      "id": "repo-8addc9400b0f3c6b4136a196",
+      "ordinal": 196,
+      "messages_sha256": "8addc9400b0f3c6b4136a19659f43cf2fd343fc323f09a5155ae8f19c031cddc",
+      "state": "PASS",
+      "rationale": "Correct distinction between declared codomain and achieved range for the explicitly real-domain square function.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Each stated relation is checked analytically from the complete original pair, including limiting, recurrence and matrix counterexamples."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Every square is nonnegative, and any y>=0 is reached by x=sqrt(y), so the range is [0,infinity) while codomain may be R."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1178"
+    },
+    {
+      "id": "repo-89ad80e8ac8909df5fd1bd21",
+      "ordinal": 197,
+      "messages_sha256": "89ad80e8ac8909df5fd1bd2177add6948b98b8c3d09ce82195e727d1d615bf66",
+      "state": "PASS",
+      "rationale": "Correct reverse-order inverse identity in a group. A right inverse already equals the unique group inverse.",
+      "evidence": [
+        {
+          "method": "independent_axiom_and_subgroup_check",
+          "finding": "Group claims are checked directly against closure, inherited associativity, identity and inverses. No numerical example substitutes for the general proof."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "(ab)(b^-1 a^-1)=e. Also (b^-1 a^-1)(ab)=b^-1 b=e, confirming the two-sided identity."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1188"
+    },
+    {
+      "id": "repo-1409cd9802fc563a0ed8e783",
+      "ordinal": 198,
+      "messages_sha256": "1409cd9802fc563a0ed8e783618411756cb06678e3a9819187fba4b823af7959",
+      "state": "QUARANTINE",
+      "rationale": "The labels describe two possible enforcement patterns, but the claimed drift disadvantage of post-step projection is misleading. Projection or correction can itself remove constraint drift; its effectiveness depends on the constraint, tolerances and projection method.",
+      "evidence": [
+        {
+          "title": "SciML, Manifold Projection",
+          "url": "https://docs.sciml.ai/DiffEqCallbacks/v4.4/projection/",
+          "finding": "Post-step projection corrects the solution onto a specified manifold to preserve a constraint or conserved property; it is itself a mechanism for controlling drift."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For the linear constraint x=0, projecting each tentative step (x_tilde,y_tilde) to (0,y_tilde) makes the constraint residual exactly zero at every corrected endpoint without an additional Baumgarte term."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This does not assert exact conservation of all properties by an arbitrary numerical projection or conflate endpoint projection with internal-stage constraints."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1202"
+    },
+    {
+      "id": "repo-cec1612a2c4b372850dbe088",
+      "ordinal": 199,
+      "messages_sha256": "cec1612a2c4b372850dbe088d237bfd6ae33a626131b4ce0516843a0a292ba06",
+      "state": "PASS",
+      "rationale": "Correct finitely generated torsion-module explanation with finite-dimensional V explicitly stated and invariant/elementary factor consequences accurately described.",
+      "evidence": [
+        {
+          "title": "Romyar Sharifi, UCLA Abstract Algebra, section 8.10",
+          "url": "https://math.ucla.edu/~sharifi/notes/algebra-ch08.html",
+          "finding": "Finite-dimensional operator modules yield invariant factors, minimal and characteristic polynomials and Jordan structures; polynomial evaluation describes the algebraic relations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Polynomial action through T obeys the F[x]-module axioms; finite dimension ensures a nonzero annihilating polynomial and allows the PID torsion decomposition."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1210"
+    }
+  ]
+}

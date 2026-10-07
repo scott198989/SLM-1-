@@ -1,0 +1,290 @@
+{
+  "snapshot": "2026-10-01T18:47:32.288346+00:00",
+  "academic_scope_only": true,
+  "files_total": 1947,
+  "status_totals": {
+    "blocked": 341,
+    "duplicate": 172,
+    "extracted_needs_review": 1342,
+    "excluded": 92
+  },
+  "subjects": {
+    "AC Circuits": {
+      "blocked": 10,
+      "duplicate": 2,
+      "extracted_needs_review": 93
+    },
+    "ANSYS": {
+      "extracted_needs_review": 1
+    },
+    "Accounting": {
+      "extracted_needs_review": 3
+    },
+    "AutoDesk": {
+      "extracted_needs_review": 3
+    },
+    "Business": {
+      "extracted_needs_review": 5
+    },
+    "Business Ethics": {
+      "extracted_needs_review": 1
+    },
+    "Business Law": {
+      "extracted_needs_review": 1
+    },
+    "CAD": {
+      "extracted_needs_review": 6
+    },
+    "Calculus": {
+      "duplicate": 4,
+      "extracted_needs_review": 33,
+      "blocked": 42
+    },
+    "Code Cheat Sheets": {
+      "blocked": 9,
+      "extracted_needs_review": 4
+    },
+    "College Algebra": {
+      "extracted_needs_review": 14
+    },
+    "Creo": {
+      "extracted_needs_review": 1
+    },
+    "Economics": {
+      "extracted_needs_review": 3
+    },
+    "Electric Motors": {
+      "duplicate": 3,
+      "extracted_needs_review": 16
+    },
+    "Electrical Components": {
+      "blocked": 2,
+      "duplicate": 4,
+      "extracted_needs_review": 3
+    },
+    "Electromechanical Power": {
+      "extracted_needs_review": 3,
+      "excluded": 1
+    },
+    "Engineering": {
+      "duplicate": 23,
+      "extracted_needs_review": 508,
+      "blocked": 3
+    },
+    "Hydraulics Pneumatics and Electric Motors": {
+      "duplicate": 6,
+      "extracted_needs_review": 27
+    },
+    "Industrial Totally Automation": {
+      "extracted_needs_review": 14,
+      "blocked": 1
+    },
+    "Intellectual Property": {
+      "extracted_needs_review": 1
+    },
+    "Intro to Engineering": {
+      "blocked": 5,
+      "duplicate": 4,
+      "extracted_needs_review": 27
+    },
+    "Introductory Transport Phenomena": {
+      "extracted_needs_review": 2
+    },
+    "Manufacturing Process 1": {
+      "extracted_needs_review": 13,
+      "duplicate": 1
+    },
+    "Materials Science 2": {
+      "extracted_needs_review": 10,
+      "blocked": 7,
+      "duplicate": 3
+    },
+    "Mathematics": {
+      "blocked": 1
+    },
+    "Microsoft products": {
+      "extracted_needs_review": 4,
+      "blocked": 1
+    },
+    "PLC": {
+      "blocked": 159,
+      "excluded": 1,
+      "extracted_needs_review": 2
+    },
+    "Physics 1": {
+      "duplicate": 76,
+      "extracted_needs_review": 134,
+      "blocked": 48
+    },
+    "Physics 2": {
+      "duplicate": 14,
+      "extracted_needs_review": 204,
+      "blocked": 23
+    },
+    "Problem Solving in ET": {
+      "duplicate": 5,
+      "extracted_needs_review": 30
+    },
+    "Process Control Technologies": {
+      "extracted_needs_review": 28,
+      "duplicate": 11,
+      "blocked": 3
+    },
+    "Programming": {
+      "extracted_needs_review": 15
+    },
+    "Random School Stuff": {
+      "blocked": 5,
+      "extracted_needs_review": 13,
+      "duplicate": 1
+    },
+    "Robotics": {
+      "extracted_needs_review": 11
+    },
+    "Siemens": {
+      "extracted_needs_review": 3
+    },
+    "Six Sigma": {
+      "extracted_needs_review": 9
+    },
+    "Six Sigma Green Belt": {
+      "duplicate": 3,
+      "extracted_needs_review": 23
+    },
+    "Software and Skills": {
+      "blocked": 1
+    },
+    "SolidWorks": {
+      "extracted_needs_review": 5
+    },
+    "Statics and Strengths of Materials": {
+      "extracted_needs_review": 1
+    },
+    "Statistics": {
+      "duplicate": 9,
+      "extracted_needs_review": 41,
+      "blocked": 20
+    },
+    "Stats": {
+      "extracted_needs_review": 3
+    },
+    "Trig": {
+      "duplicate": 3,
+      "extracted_needs_review": 22,
+      "blocked": 1
+    },
+    "WIP": {
+      "extracted_needs_review": 1
+    },
+    "excluded": {
+      "excluded": 90
+    },
+    "unclassified": {
+      "extracted_needs_review": 1
+    }
+  },
+  "mime_counts": {
+    "application/octet-stream": {
+      "blocked": 169,
+      "excluded": 23
+    },
+    "application/pdf": {
+      "duplicate": 41,
+      "extracted_needs_review": 328,
+      "blocked": 3,
+      "excluded": 9
+    },
+    "application/vnd.google-apps.document": {
+      "extracted_needs_review": 2
+    },
+    "application/vnd.openxmlformats-officedocument.presentationml.presentation": {
+      "extracted_needs_review": 54,
+      "duplicate": 2
+    },
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document": {
+      "extracted_needs_review": 174,
+      "duplicate": 26,
+      "excluded": 2,
+      "blocked": 2
+    },
+    "image/jpeg": {
+      "extracted_needs_review": 35,
+      "blocked": 10,
+      "duplicate": 4
+    },
+    "image/png": {
+      "extracted_needs_review": 210,
+      "duplicate": 70
+    },
+    "text/html": {
+      "extracted_needs_review": 9,
+      "duplicate": 1
+    },
+    "application/epub+zip": {
+      "extracted_needs_review": 24,
+      "duplicate": 1,
+      "excluded": 6
+    },
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": {
+      "extracted_needs_review": 15
+    },
+    "application/x-iwork-numbers-sffnumbers": {
+      "blocked": 2
+    },
+    "application/x-iwork-pages-sffpages": {
+      "blocked": 18
+    },
+    "application/zip": {
+      "blocked": 3
+    },
+    "video/mp4": {
+      "blocked": 110
+    },
+    "application/msword": {
+      "blocked": 4
+    },
+    "text/plain": {
+      "duplicate": 19,
+      "extracted_needs_review": 471,
+      "excluded": 2
+    },
+    "application/x-tar": {
+      "blocked": 1
+    },
+    "application/vnd.oasis.opendocument.presentation": {
+      "blocked": 1
+    },
+    "application/vnd.ms-powerpoint": {
+      "blocked": 6
+    },
+    "application/vnd.ms-powerpoint.presentation.macroenabled.12": {
+      "extracted_needs_review": 1
+    },
+    "application/cap": {
+      "blocked": 2
+    },
+    "image/heif": {
+      "duplicate": 8,
+      "extracted_needs_review": 19
+    },
+    "video/quicktime": {
+      "blocked": 8
+    },
+    "audio/mpeg": {
+      "blocked": 2
+    },
+    "application/x-cab": {
+      "excluded": 1
+    },
+    "application/x-ms-shortcut": {
+      "excluded": 47
+    },
+    "application/x-msdos-program": {
+      "excluded": 2
+    }
+  },
+  "private_paths_ids_text_assets_omitted": true,
+  "approved_sft_examples": 0,
+  "production_rag_approved": false,
+  "family_analysis_and_review_rag": "see_private_final_receipts_not_approved_by_this_aggregate"
+}

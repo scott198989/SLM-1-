@@ -1,0 +1,23 @@
+{
+  "checkpoint": "FORGE_PHASE3_CLOUD_HANDOFF_20261001",
+  "environment": "existing local CPU preparation dependencies; not Codex Cloud or GPU",
+  "candidate_message_hashes_verified": 2112,
+  "substantive_decisions_verified": 374,
+  "public_input_file_hashes_verified": 8,
+  "all_disposition_counts_sum_to_curriculum": true,
+  "reader_completed_circuit_batch_outputs": 0,
+  "reader_electrical_components_ordinal_0_limit_25_outputs": 18,
+  "reader_preserves_original_ordinals_and_skips_reviewed_ids": true,
+  "gzip_byte_roundtrip_verified": true,
+  "relative_handoff_and_gate_document_links_valid": true,
+  "footer_preserved_in_both_readmes": true,
+  "new_reader_ruff_format_and_undefined_name_checks": "PASS",
+  "preparation_unittest_tests": 56,
+  "preparation_unittest_result": "PASS",
+  "private_release_requalified_this_handoff": false,
+  "private_gold_or_drive_content_published": false,
+  "model_weights_downloaded_or_loaded": false,
+  "model_baseline_or_training_run": false,
+  "cloud_task_created": false,
+  "automatic_checks_recreated": false
+}
