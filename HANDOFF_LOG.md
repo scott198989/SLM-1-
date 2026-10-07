@@ -1,5 +1,28 @@
 # FORGE handoff log
 
+## 2026-10-07 — resumed; evidence hardening complete, real comparison blocked
+
+<a id="forge-handoff-20261007-152241z"></a>
+Entry ID: `FORGE-HANDOFF-20261007-152241Z`. Recorded: **2026-10-07 15:22:41 UTC / 10:22:41 CDT (America/Chicago, UTC-05:00)**. Change record: [FORGE-CHANGE-20261007-152241Z](CHANGELOG.md#forge-change-20261007-152241z). This bounded continuation follows Scott's direct instruction lifting the October 6 pause. It creates no recurring continuation or wider compute authority.
+
+**Code and writer:** one repository writer and one serial private-metadata stream; the delegated agent performed only read-only code review and synthetic tests. The desktop's older dirty foundation checkout and uncommitted source workspace remain intact. A separate clean branch checkout was fetched/fast-forward synchronized at `a4dbf27c42abf12a54c0dad871f5a7026da08671`; Git and PR3 independently agreed on that full SHA, open/draft, before changes. Keep PR3 draft and main unchanged. The final commit and remote equality are recorded externally after normal push, not as a self-referential hash here.
+
+**Verified evidence:** the exact recovered nine-source scope, previously accepted native mapping worksheet, mapping receipt, completed diagnostic and provenance matched their saved hashes. The root documentation matched the private v08 checkpoint. Current Drive root/category/snapshot permissions were owner-only. This reestablishes access and integrity on this environment; the prior embedded mapping review is not a second native-database attestation. No completed technical-review or transfer work was repeated.
+
+**New environment result:** read-only/immutable SQLite queries for exactly the nine source IDs found zero matching rows in the desktop native database. All nine historical-rule candidate original paths exist and match expected sizes; their PDF bytes were not read or hashed. All 76 exact nonexcluded extracted/normalized envelope paths recorded by the worksheet are absent on this desktop. Four excluded selected/context pages were not accessed. The detailed receipt `FG-DESKTOP-20261007-001` and its reproducibility script belong in the existing private Drive manifest hierarchy, never GitHub. Path existence and matching sizes do not establish content identity, independent non-gold/split/alias evidence or a safe comparison root. Absence at those exact paths does not prove absence on another machine or in another preserved snapshot.
+
+**Code changes and validation:** figure paths now require a consistent declared hash across regions and source caches; invalid payloads cannot commit declarations. Deep JSON receives deterministic depth checks and safe HOLD diagnostics. All ten new methods passed independent review/execution under Python 3.12.10; 17 existing metadata/parser tests and seven promotion-policy methods also passed, **34 focused methods total**. There is no fresh full-suite result. The Windows content reader still refuses unsupported secure opens; POSIX no-follow hashing/confinement tests were not exercised. In-memory reader mocks test control flow only. No model or tokenizer assets were fetched or loaded.
+
+**Exact stopping point:** no real-input reconciliation invocation, no runnable intake/selected-cache adapter and no source-region visual comparison. Every source remains HOLD and `release_authorized=false`. All 25 named regions remain unqualified: three on withheld pages and 22 without verified boundaries/associations/fidelity. The context-only excluded page remains excluded. Independent rights, family/split/gold/alias evidence, original/cache byte bindings, authenticated extractor provenance and native source availability remain unresolved. Ten deferred new-book objects remain outside the cohort; no new-book OCR or processing was started.
+
+### Next work for Gunner to audit and direct
+
+1. Read this outcome alongside the canonical private closeout and verify the published full commit SHA plus receipt hashes. Preserve the completed 2,112 legacy dispositions, accepted worksheet, exact scope and earlier receipts. Do not repeat the same blocked preflight or legacy reviews.
+2. Assign one bounded source-holder task to make the existing native rows and the recorded eligible cache envelopes available through the approved private root, or identify another already-preserved exact location. Authenticate their original/cache/version relationships against the accepted worksheet. Do not substitute editions, regenerate caches, infer absent gold flags as false, or scan unrelated/excluded content.
+3. Establish the reviewed split/non-gold/alias evidence and an explicitly scoped safe root before any PDF/cache content comparison. Keep current ledger/rights holds and all withheld pages. A new empty folder or a copied mixed corpus does not prove isolation.
+4. Only when actual prerequisites exist, construct and independently review the restrictive adapters and perform the authorized comparison with supported file protections. Distinguish structural checks from original-region fidelity and preserve unknowns. Any proposed extension for Windows secure content I/O requires its own meaningful platform tests; do not bypass no-follow checks.
+5. Continue to defer new-book OCR and all model downloads/loading, training and paid services. Append dated results to both canonical histories, commit/push code normally and verify remote equality. No background worker or automatic resumption is left running by this work package.
+
 ## 2026-10-06 — USER PAUSED; stop until Scott explicitly resumes
 
 <a id="forge-handoff-20261006-190713z"></a>

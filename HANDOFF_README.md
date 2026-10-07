@@ -1,12 +1,23 @@
-# Current FORGE handoff — October 6, 2026
+# Current FORGE handoff — October 7, 2026
+
+Scott lifted the October 6 pause and assigned this bounded nine-source
+continuation directly. Start with the latest entry in [HANDOFF_LOG.md](HANDOFF_LOG.md).
+The older checkouts and local source workspace were preserved; code work uses an
+isolated checkout synchronized from `a4dbf27c42abf12a54c0dad871f5a7026da08671`.
+Figure hash consistency and safe JSON-depth diagnostics are hardened and covered
+by synthetic tests. The desktop evidence receipt records missing native rows and
+recorded cache paths; it is not a real-input validator result or fidelity review.
+All nine sources remain HOLD. New-book OCR, model downloads/loading, training and
+paid services remain deferred/prohibited under Scott's current instruction.
+Historical pause and older next-step lists below are preserved as history.
 
 Every FORGE Codex session uses the same GitHub repository and the same canonical private Drive root identified in the root README—laptop, desktop or cloud, repeated sessions on one machine or any sequence of switches. Read the latest repository and accessible private handoffs, verify actual current access and full checkpoints, preserve local edits, coordinate one writer with Gunner, and verify normal pushes and private upload receipts separately. Create only versioned snapshots beneath the existing private root; never create a new root per environment or assume another session's paths/files are available here. Current worker assignments describe ownership of specific tasks, not permanent machine restrictions. See [session continuity](README.md#continuity-across-every-session).
 
 Start with [HANDOFF_LOG.md](HANDOFF_LOG.md), the root README and CHANGELOG. Scott now authorizes a single-writer GitHub source-of-truth workflow: inspect status, preserve dirty work, fetch/compare safely, commit code and truthful docs, normally push `codex/forge-data-consolidation`, and verify the remote commit. Keep PR3 draft; no merge/force push. The laptop's user-edited handoff must remain intact on its existing branch; use a separate clean checkout.
 
-Recovered preparation is `90eabf991895f012c14d5f33199b0d62f992f955`, including completed 2,112-record review, bounded reconciliation/evaluation fixes and runtime planning. Latest actual tests: 112 pass, five tokenizer-dependent methods blocked (one class-setup error); older 69-pass receipts are historical. The current source-of-truth head is established by a verified Git remote ref, not by older counts or a local bundle.
+Recovered preparation is `90eabf991895f012c14d5f33199b0d62f992f955`, including completed 2,112-record review, bounded reconciliation/evaluation fixes and runtime planning. Historical expanded-suite tests: 112 pass, five tokenizer-dependent methods blocked (one class-setup error); older 69-pass receipts are historical. The current source-of-truth head is established by a verified Git remote ref, not by older counts or a local bundle.
 
-Gunner now reports all seven requested laptop reconciliation files present, with four prior family/rights pins matching. This cloud has not independently reopened those private inputs. All nine academic sources remain HOLD; three private report hashes remain originally unpinned here. Details, exact checkpoints, hash references, current environment observations and next actions are in the handoff log. No model, training, paid compute or processing-pool permission is added.
+On October 6, Gunner reported all seven requested laptop reconciliation files present, with four prior family/rights pins matching. That cloud workstream did not independently reopen those private inputs. All nine academic sources remain HOLD; three private report hashes remain originally unpinned here. Details, exact checkpoints, hash references, current environment observations and next actions are in the handoff log. No model, training, paid compute or processing-pool permission is added.
 
 The sections below preserve the October 1–2 history. Their old publication prohibition is superseded only by Scott's explicit October 6 code-publication authorization and the guarded workflow above. Historical next-domain directions and passing-test claims must not restart reviews or be presented as fresh results. Existing private-source, gold, release and training boundaries remain in force.
 

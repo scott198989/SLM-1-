@@ -57,6 +57,7 @@ CACHE_SCHEMA = "forge-academic-selected-cache-v1"
 INTAKE_SCHEMA = "forge-academic-reconciliation-intake-v1"
 MAX_METADATA_BYTES = 2 * 1024 * 1024
 MAX_CACHE_BYTES = 8 * 1024 * 1024
+MAX_JSON_DEPTH = 64
 NON_EVAL_SPLITS = {"unassigned", "train", "reference"}
 PURPOSES = {"training", "rag", "redistribution"}
 DECLARATIONS = {"permitted", "held", "restricted", "prohibited", "unknown"}
@@ -98,13 +99,26 @@ def parse_json(data):
         return number
 
     try:
-        return json.loads(data, object_pairs_hook=_pairs,
-                          parse_float=finite_float,
-                          parse_constant=lambda _: (_ for _ in ()).throw(InputError("nonfinite_json")))
+        result = json.loads(data, object_pairs_hook=_pairs,
+                            parse_float=finite_float,
+                            parse_constant=lambda _: (_ for _ in ()).throw(InputError("nonfinite_json")))
+    except RecursionError:
+        raise InputError("json_nesting_too_deep") from None
     except (ValueError, UnicodeError) as exc:
         if isinstance(exc, InputError):
             raise
         raise InputError("invalid_json") from None
+    # Decoder recursion limits differ across Python versions. Apply an explicit
+    # contract limit without recursively traversing untrusted values ourselves.
+    pending = [(result, 1)]
+    while pending:
+        value, depth = pending.pop()
+        if isinstance(value, (dict, list)):
+            _require(depth <= MAX_JSON_DEPTH, "json_nesting_too_deep")
+            children = value.values() if isinstance(value, dict) else value
+            pending.extend((child, depth + 1) for child in children
+                           if isinstance(child, (dict, list)))
+    return result
 
 
 def scope_digest(sources):
@@ -279,7 +293,10 @@ def _span(value, text, within=None):
         _require(within["start"] <= start < end <= within["end"], "link_outside_region_span")
 
 
-def _cache(payload, source, descriptor):
+def _cache(payload, source, descriptor, *, figure_pins=None):
+    # Asset paths share one data root, including across source adapters. Stage
+    # declarations locally so a rejected payload cannot poison later checks.
+    checked_figure_pins = dict(figure_pins) if figure_pins is not None else {}
     fields = {"schema_version", "internal_source_id", "raw_sha256", "extraction_version", "regions"}
     _require(isinstance(payload, dict) and set(payload) == fields, "cache_fields_missing_or_extra")
     _require(payload["schema_version"] == CACHE_SCHEMA, "cache_schema_unsupported")
@@ -329,8 +346,14 @@ def _cache(payload, source, descriptor):
                 link_ids.add(key)
                 if "asset_sha256" in extras:
                     _require(_digest(link["asset_sha256"]), "figure_hash_invalid")
-                    _parts(link["asset_path"])
+                    path = _parts(link["asset_path"])
+                    prior_hash = checked_figure_pins.get(path)
+                    _require(prior_hash is None or prior_hash == link["asset_sha256"],
+                             "figure_asset_hash_conflict")
+                    checked_figure_pins[path] = link["asset_sha256"]
     _require(locators == REGIONS[source["handoff_source_number"]], "selected_region_coverage_incomplete")
+    if figure_pins is not None:
+        figure_pins.update(checked_figure_pins)
     return len(rows)
 
 
@@ -410,6 +433,7 @@ def reconcile(scope, intake, data_root, *, read_content=False):
         report["metadata_eligible"] = True
         if not read_content:
             return report
+        figure_pins = {}
         for source, result in zip(sources, report["sources"]):
             field = "original"
             try:
@@ -420,7 +444,7 @@ def reconcile(scope, intake, data_root, *, read_content=False):
                 field = "selected_cache"
                 payload = parse_json(_read_confined(data_root, descriptor["cache_path"], descriptor["cache_byte_size"],
                                                    descriptor["cache_sha256"], MAX_CACHE_BYTES))
-                result["checked_regions"] = _cache(payload, source, descriptor)
+                result["checked_regions"] = _cache(payload, source, descriptor, figure_pins=figure_pins)
                 result["comparison"] = "BYTE_PINS_AND_LINK_STRUCTURE_MATCH_FIDELITY_UNASSESSED"
                 report["content_checked_sources"] += 1
             except InputError as exc:

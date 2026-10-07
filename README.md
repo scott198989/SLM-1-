@@ -1,11 +1,18 @@
 # SLM-1-
 # FORGE — Training Data & Knowledge Repository
 
+October 7 continuation: Scott explicitly lifted the October 6 pause for bounded
+nine-source isolation/extraction-quality preparation. The latest
+[handoff](HANDOFF_LOG.md) records verified synchronization, desktop evidence gaps
+and the tested validator hardening. All nine sources remain HOLD; no real-input
+comparison or adapter construction was possible. New-book OCR stays deferred.
+No model downloads/loading, training or paid services are authorized.
+
 Workflow for every FORGE Codex session (October 6): read [HANDOFF_LOG.md](HANDOFF_LOG.md), [HANDOFF_README.md](HANDOFF_README.md) and CHANGELOG; use branch `codex/forge-data-consolidation` / draft PR3. Scott authorizes code publication with one active writer, preservation of dirty work, safe fetch/fast-forward synchronization, coherent documentation and a verified normal push. A failed push means handoff incomplete. All ten selected source domains have complete agent technical dispositions in the local checkpoint; no legacy SFT released.
 
 Cloud continuation, October 2: all 2,112 selected records now have substantive agent technical dispositions. Separately scoped primary-source review resolved the five inherited residual holds. Before the October 6 publication attempt, GitHub was verified at 917a9d3bb68ceae5f320004e67b1129202bd7fed with 392 reviews; verify the current branch ref using the handoff workflow. [Current completion and remaining gates](reports/phase3-technical-review-completion.json).
 
-Bounded academic preparation: [metadata-first reconciliation validator](docs/ACADEMIC_RECONCILIATION.md) checks the pinned nine-source intake with synthetic-only regressions. It grants no release approval; private originals/cache/family/rights inputs remain required and every result stays HOLD. The academic validator has 35 passing tests. After the bounded evaluation audit, the expanded suite has 112 passing methods, five tokenizer-dependent methods blocked and one class-setup error. Prior 69-test passing receipts remain historical. The [paired evaluation protocol](docs/PHASE3_BASELINE_EXPERIMENT.md) distinguishes the narrow integration diagnostic from proposed broader evaluation; no model execution is authorized.
+Bounded academic preparation: [metadata-first reconciliation validator](docs/ACADEMIC_RECONCILIATION.md) checks the pinned nine-source intake with synthetic-only regressions. It grants no release approval; private originals/cache/family/rights inputs remain required and every result stays HOLD. The October 7 focused Windows run passed 34 test methods: 17 existing metadata/parser tests, ten new parser/figure-consistency/platform-refusal tests and seven promotion-policy tests. Real POSIX secure-content I/O was not exercised. The prior 35-test academic and 112-pass expanded-suite receipts are historical; the latter also had five tokenizer-dependent blocked methods and one class-setup error. No fresh full-suite pass is claimed. The [paired evaluation protocol](docs/PHASE3_BASELINE_EXPERIMENT.md) distinguishes the narrow integration diagnostic from proposed broader evaluation; no model execution is authorized.
 
 Desktop runtime research (October 2): [installation and validation plan](docs/QWEN_PREPARATION.md) compares WSL2 and native Windows for the supplied RTX 5090 inventory. Existing pins remain untested candidates; full dependency resolution, tokenizer assets and documented CUDA/bitsandbytes correctness caveats remain open. No desktop setup, model load or GPU execution occurred.
 

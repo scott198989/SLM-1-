@@ -30,10 +30,18 @@ rights permission resolves these evidence requirements.
 
 ## What is and is not available
 
-The verified public checkpoint and handoff scope are available. The authoritative
-private extraction database/cache path, native schema, version, original paths,
-internal IDs, alias/family/split records and rights evidence remain unavailable.
-Do not infer their structure from directory names or invent missing values.
+The verified public checkpoint and handoff scope are available. The canonical
+private handoff now preserves the authenticated scope, an accepted native mapping
+worksheet and a completed prerequisite diagnostic. Their availability does not
+supply runnable intake or selected-cache adapters. The October 7 desktop check
+found no matching rows for the nine sources in its local native database and no
+files at the 76 recorded nonexcluded extracted/normalized envelope paths. Nine
+candidate original paths exist with matching sizes; their bytes were not opened
+or hashed. These are bounded environment observations, not global absence claims.
+Authenticated extractor provenance, reviewed original/cache bindings, independent
+alias/split/non-gold evidence and selected-region fidelity remain unresolved.
+Do not infer them from directory names or invent missing values. See the current
+[handoff](../HANDOFF_LOG.md) and the private receipt for the exact evidence.
 
 This document defines a **new explicit intake adapter**, not the native private
 cache schema. A reviewed mapping from actual existing records is still required.
@@ -93,6 +101,12 @@ Only these top-level fields are accepted: `schema_version` (exactly
 `cache_descriptors`. All four collections are arrays. Unknown fields and
 duplicate JSON keys/identifiers are rejected. Do not include cached prose in
 this metadata file.
+
+All JSON inputs allow at most 64 nested object/array containers. This limit is
+checked iteratively and is independent of Python's decoder recursion limit.
+Either excessive depth or a decoder recursion failure produces the fixed
+`json_nesting_too_deep` diagnostic, HOLD and CLI exit 2; input values are not
+included in the diagnostic.
 
 Every ledger record has exactly:
 
@@ -182,6 +196,12 @@ match the descriptor. Each region contains exactly:
   formulas, tables or figures. Hash syntax does not verify an unopened asset.
   Object IDs, header strings and spans are only structural references; semantic
   correspondence and required-association completeness remain unassessed.
+- A figure path must declare the same SHA-256 everywhere it appears, both within
+  one cache and across all nine caches sharing the data root. Contradictions
+  produce `figure_asset_hash_conflict`. Consistent references across regions or
+  sources remain valid; linked assets remain unopened. A rejected cache commits
+  no figure declarations to the comparison's shared registry. Table/header
+  association semantics are unchanged.
 
 ## Remaining acceptance work
 

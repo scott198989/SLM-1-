@@ -5,6 +5,7 @@ import contextlib
 import hashlib
 import io
 import json
+import os
 from pathlib import Path
 import tempfile
 import unittest
@@ -639,6 +640,137 @@ class AcademicReconciliationTests(unittest.TestCase):
                 with self.assertRaisesRegex(reconciliation.InputError, "^nonfinite_json$"):
                     reconciliation.parse_json(raw)
         self.assertEqual(reconciliation.parse_json(b'{"value":1e308}'), {"value": 1e308})
+
+    def test_figure_hash_conflict_within_region_is_rejected_without_reads(self):
+        links = self.payloads[0]["regions"][0]["figure_asset_hash_and_region_links"]
+        conflict = copy.deepcopy(links[0])
+        conflict["asset_sha256"] = "a" * 64
+        links.append(conflict)
+        with mock.patch.object(Path, "open", side_effect=AssertionError("asset read")):
+            with self.assertRaisesRegex(reconciliation.InputError, "^figure_asset_hash_conflict$"):
+                reconciliation._cache(self.payloads[0], self.scope["sources"][0],
+                                      self.intake["cache_descriptors"][0])
+
+    def test_figure_hash_conflict_across_regions_is_rejected(self):
+        self.payloads[0]["regions"][1]["figure_asset_hash_and_region_links"][0]["asset_sha256"] = "b" * 64
+        with self.assertRaisesRegex(reconciliation.InputError, "^figure_asset_hash_conflict$"):
+            reconciliation._cache(self.payloads[0], self.scope["sources"][0],
+                                  self.intake["cache_descriptors"][0])
+
+    def test_consistent_and_distinct_figure_references_remain_valid(self):
+        pins = {}
+        with mock.patch.object(Path, "open", side_effect=AssertionError("asset read")):
+            count = reconciliation._cache(self.payloads[0], self.scope["sources"][0],
+                                          self.intake["cache_descriptors"][0], figure_pins=pins)
+        self.assertEqual(count, 4)
+        self.assertEqual(len(pins), 1)
+        link = self.payloads[0]["regions"][1]["figure_asset_hash_and_region_links"][0]
+        link.update(asset_path="figures/another-unopened.png", asset_sha256="c" * 64)
+        self.assertEqual(reconciliation._cache(self.payloads[0], self.scope["sources"][0],
+                         self.intake["cache_descriptors"][0], figure_pins=pins), 4)
+        self.assertEqual(len(pins), 2)
+
+    def test_rejected_cache_does_not_commit_figure_declarations(self):
+        pins = {("figures", "already-seen.png"): "d" * 64}
+        before = dict(pins)
+        self.payloads[0]["regions"].pop()
+        with self.assertRaisesRegex(reconciliation.InputError, "^selected_region_coverage_incomplete$"):
+            reconciliation._cache(self.payloads[0], self.scope["sources"][0],
+                                  self.intake["cache_descriptors"][0], figure_pins=pins)
+        self.assertEqual(pins, before)
+
+    def synthetic_content_reader(self):
+        """In-memory pipeline fixture, never a substitute for secure I/O tests."""
+        content = {}
+        for source, row, payload, descriptor in zip(
+            self.scope["sources"], self.intake["ledger"], self.payloads,
+            self.intake["cache_descriptors"],
+        ):
+            content[row["original_path"]] = (self.root / row["original_path"]).read_bytes()
+            content[descriptor["cache_path"]] = json.dumps(payload).encode()
+
+        def read(root, relative, expected_size, expected_hash, limit):
+            # This mock exercises cohort orchestration, not hash or confinement.
+            return content[relative]
+
+        return content, read
+
+    def test_figure_hash_conflict_across_sources_blocks_comparison(self):
+        for region in self.payloads[-1]["regions"]:
+            region["figure_asset_hash_and_region_links"][0]["asset_sha256"] = "e" * 64
+        _, reader = self.synthetic_content_reader()
+        with mock.patch.object(reconciliation, "_read_confined", side_effect=reader) as reads:
+            result = self.run_reconciliation()
+        self.assert_hold(result)
+        self.assertEqual(result["content_checked_sources"], 8)
+        self.assertEqual(result["sources"][-1]["comparison"], "COMPARISON_BLOCKED")
+        self.assertEqual(result["diagnostics"][0]["code"], "figure_asset_hash_conflict")
+        self.assertEqual(reads.call_count, 18)
+        self.assertTrue(all(not call.args[1].startswith("figures/") for call in reads.call_args_list))
+
+    def test_shared_consistent_figure_hashes_across_sources_remain_hold(self):
+        _, reader = self.synthetic_content_reader()
+        with mock.patch.object(reconciliation, "_read_confined", side_effect=reader):
+            result = self.run_reconciliation()
+        self.assert_hold(result)
+        self.assertEqual(result["content_checked_sources"], 9)
+        self.assertEqual(result["diagnostics"], [])
+
+    def test_deeply_nested_json_has_safe_diagnostic(self):
+        depth = reconciliation.MAX_JSON_DEPTH
+        allowed = b"[" * depth + b'"literal [ and ]"' + b"]" * depth
+        reconciliation.parse_json(allowed)
+        nested = b"[" + allowed + b"]"
+        with self.assertRaisesRegex(reconciliation.InputError, "^json_nesting_too_deep$"):
+            reconciliation.parse_json(nested)
+        with mock.patch.object(json, "loads", side_effect=RecursionError):
+            with self.assertRaisesRegex(reconciliation.InputError, "^json_nesting_too_deep$"):
+                reconciliation.parse_json(b"[]")
+
+    def test_cli_deep_scope_or_intake_returns_hold_without_content_reads(self):
+        scope_path, intake_path = self.root / "scope.json", self.root / "intake.json"
+        for kind in ("scope", "intake"):
+            with self.subTest(kind=kind):
+                scope_path.write_text(json.dumps(self.scope))
+                intake_path.write_text(json.dumps(self.intake))
+                target = scope_path if kind == "scope" else intake_path
+                target.write_bytes(b"[" * 2000 + b"0" + b"]" * 2000)
+                output = io.StringIO()
+                with contextlib.redirect_stdout(output), mock.patch.object(reconciliation, "_read_confined") as reader:
+                    code = reconciliation.main([
+                        "--scope", str(scope_path), "--intake", str(intake_path),
+                        "--data-root", str(self.root), "--read-content",
+                    ])
+                reader.assert_not_called()
+                self.assertEqual(code, 2)
+                result = json.loads(output.getvalue())
+                self.assertEqual(result["status"], "HOLD")
+                self.assertIs(result["release_authorized"], False)
+                self.assertEqual(result["diagnostics"][0]["code"], "json_nesting_too_deep")
+                self.assertNotIn(str(self.root), output.getvalue())
+
+    def test_deep_cache_is_source_specific_and_never_counts_as_checked(self):
+        content, reader = self.synthetic_content_reader()
+        content[self.intake["cache_descriptors"][0]["cache_path"]] = b"[" * 2000 + b"0" + b"]" * 2000
+        with mock.patch.object(reconciliation, "_read_confined", side_effect=reader):
+            result = self.run_reconciliation()
+        self.assert_hold(result)
+        self.assertEqual(result["content_checked_sources"], 8)
+        self.assertEqual(result["sources"][0]["comparison"], "COMPARISON_BLOCKED")
+        self.assertEqual(result["diagnostics"][0]["source_number"], 1)
+        self.assertEqual(result["diagnostics"][0]["code"], "json_nesting_too_deep")
+
+    def test_unsupported_secure_open_fails_closed_before_any_file_open(self):
+        with mock.patch.object(os, "open", side_effect=AssertionError("unsupported content read")) as opener:
+            with mock.patch.dict(os.__dict__):
+                os.__dict__.pop("O_NOFOLLOW", None)
+                result = self.run_reconciliation()
+        opener.assert_not_called()
+        self.assert_hold(result)
+        self.assertEqual(result["content_checked_sources"], 0)
+        self.assertTrue(result["metadata_eligible"])
+        self.assertEqual(len(result["diagnostics"]), 9)
+        self.assertEqual({row["code"] for row in result["diagnostics"]}, {"secure_open_unsupported"})
 
 
 if __name__ == "__main__":
