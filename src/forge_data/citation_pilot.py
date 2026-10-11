@@ -5,7 +5,7 @@ manifest, index digest, every cited source and exact source slice. This pilot is
 for individually approved references, never the bulk academic review DB.
 """
 
-import hashlib, json, re, sqlite3
+import hashlib, json, math, re, sqlite3
 from pathlib import Path
 
 
@@ -22,11 +22,60 @@ def reject_sqlite_sidecars(index):
             raise ValueError("sqlite_sidecar_present")
 
 
-def open_frozen_index(index):
-    """Read the pinned main database only, with no recovery or sidecar writes."""
+def strict_json(payload):
+    """Reject ambiguous JSON rather than silently accepting duplicate fields."""
+    def pairs(items):
+        result = {}
+        for key, value in items:
+            if key in result:
+                raise ValueError("duplicate_json_key")
+            result[key] = value
+        return result
+    def finite(value):
+        number = float(value)
+        if not math.isfinite(number):
+            raise ValueError("nonfinite_json_number")
+        return number
+    def constant(value):
+        raise ValueError("nonfinite_json_constant")
+    try:
+        return json.loads(payload, object_pairs_hook=pairs, parse_float=finite,
+                          parse_constant=constant)
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        raise ValueError("malformed_json") from exc
+
+
+def open_frozen_index(index, *, expected_sha256=None):
+    """Query one captured main-file buffer; never reopen its path in SQLite.
+
+Without a pin this helper provides only a coherent read, not authentication.
+Search always supplies the trusted manifest's index hash. For checkpointed WAL
+files, only in-memory header bytes 18/19 are changed to rollback mode, as SQLite
+documents for deserialize; original bytes are hashed first and never written.
+https://www.sqlite.org/c3ref/deserialize.html
+"""
     index = Path(index).resolve()
     reject_sqlite_sidecars(index)
-    return sqlite3.connect(index.as_uri() + "?mode=ro&immutable=1", uri=True)
+    payload = index.read_bytes()
+    reject_sqlite_sidecars(index)
+    if expected_sha256 is not None and sha(payload) != expected_sha256:
+        raise ValueError("pilot_manifest_or_index_drift")
+    if (len(payload) < 100 or payload[:16] != b"SQLite format 3\0"
+            or payload[18:20] not in {b"\x01\x01", b"\x02\x02"}):
+        raise ValueError("malformed_sqlite_snapshot")
+    if payload[18:20] == b"\x02\x02":
+        payload = payload[:18] + b"\x01\x01" + payload[20:]
+    db = sqlite3.connect(":memory:")
+    try:
+        db.deserialize(payload)
+        db.execute("PRAGMA query_only=ON")
+        db.execute("PRAGMA trusted_schema=OFF")
+        if db.execute("PRAGMA quick_check").fetchone() != ("ok",):
+            raise ValueError("malformed_sqlite_snapshot")
+    except (sqlite3.Error, AttributeError, ValueError) as exc:
+        db.close()
+        raise ValueError("malformed_or_unsupported_sqlite_snapshot") from exc
+    return db
 
 
 def source_slice(root, source):
@@ -161,7 +210,9 @@ def search(index, manifest_path, query, *, expected_manifest_sha256, limit=3):
     encoded_manifest = Path(manifest_path).read_bytes()
     if sha(encoded_manifest) != expected_manifest_sha256:
         raise ValueError("pilot_manifest_anchor_drift")
-    manifest = json.loads(encoded_manifest.decode("utf-8"))
+    manifest = strict_json(encoded_manifest.decode("utf-8"))
+    if not isinstance(manifest, dict) or not isinstance(manifest.get("approved_sources"), list) or not manifest["approved_sources"]:
+        raise ValueError("malformed_manifest")
     reject_sqlite_sidecars(index)
     prose = manifest.get("profile") == PROSE_PROFILE
     if manifest.get("profile") not in {None, PROSE_PROFILE}:
@@ -176,29 +227,36 @@ def search(index, manifest_path, query, *, expected_manifest_sha256, limit=3):
         raise ValueError("prose_manifest_scope_drift")
     if (
         manifest["status"] != ("PRIVATE_REFERENCE_PILOT" if prose else "PRIVATE_PRODUCTION_PILOT")
-        or sha(Path(index).read_bytes()) != manifest["index_sha256"]
     ):
         raise ValueError("pilot_manifest_or_index_drift")
+    db = open_frozen_index(index, expected_sha256=manifest["index_sha256"])
     words = re.findall(r"[A-Za-z_][A-Za-z_0-9]*", query)
-    if not words:
-        return []
-    match = " OR ".join('"' + word + '"' for word in words)
-    db = open_frozen_index(index)
     try:
-        rows = db.execute(
+        if not words:
+            rows = []
+        else:
+            match = " OR ".join('"' + word + '"' for word in words)
+            rows = db.execute(
             "SELECT c.id,c.text,c.citation FROM search s JOIN chunks c ON c.id=s.id WHERE search MATCH ? ORDER BY bm25(search),c.id LIMIT ?",
             (match, limit),
-        ).fetchall()
+            ).fetchall()
+    except sqlite3.Error as exc:
+        raise ValueError("malformed_sqlite_query_snapshot") from exc
     finally:
         db.close()
     results = []
     for identifier, text, encoded in rows:
-        cite = json.loads(encoded)
+        cite = strict_json(encoded)
         if (
             identifier not in manifest["chunk_ids"]
+            or not isinstance(cite, dict)
+            or cite.get("id") != identifier
             or cite["family_id"] in manifest["sealed_families"]
         ):
             raise ValueError("index_family_or_identity_drift")
+        descriptor = json.dumps(cite.get("source"), sort_keys=True, allow_nan=False)
+        if descriptor not in {json.dumps(s, sort_keys=True, allow_nan=False) for s in manifest["approved_sources"]}:
+            raise ValueError("source_descriptor_not_approved")
         if source_slice(manifest["source_root"], cite["source"]) != text:
             raise ValueError("citation_text_drift")
         verify_assets(manifest["source_root"], cite.get("visual_assets", []))
@@ -216,6 +274,4 @@ def search(index, manifest_path, query, *, expected_manifest_sha256, limit=3):
             }
         )
     reject_sqlite_sidecars(index)
-    if sha(Path(index).read_bytes()) != manifest["index_sha256"]:
-        raise ValueError("pilot_manifest_or_index_drift")
     return results

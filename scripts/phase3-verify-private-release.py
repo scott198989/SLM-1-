@@ -94,7 +94,7 @@ def verify_rag_release(root, workspace, gold_families=None):
         or (gold_families is not None and set(gold_families) != expected_gold)
     ):
         raise ValueError("rag_gold_family_partition_drift")
-    db = open_frozen_index(rag / "index.sqlite")
+    db = open_frozen_index(rag / "index.sqlite", expected_sha256=index_pin)
     try:
         if db.execute("PRAGMA quick_check").fetchone()[0] != "ok":
             raise ValueError("rag_index_integrity")

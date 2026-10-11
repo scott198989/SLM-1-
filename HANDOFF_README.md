@@ -1,5 +1,14 @@
 # Current FORGE handoff — October 11, 2026 local continuation
 
+Latest local checkpoint: read the [reference snapshot fix and CPU results](docs/REFERENCE_SNAPSHOT_FIX_20261011.md).
+The frozen v17 academic launcher has a reproduced P2 index-replacement race;
+use the fixed v19 review launcher over the same single excerpt, pending independent
+retest. No new candidate content is released. Private v18 records exact dependency
+pins and the complete 218-method Windows result (200 pass, 17 fail, one error).
+The remaining limitations are POSIX-only secure-I/O and Windows symlink privilege.
+The owned-code prototype remains unchanged; its earlier final independent report
+passed 54 checks. Older pending-review/all-nine-HOLD statements below are historical.
+
 The usable entry point is the [structured request wizard/CLI](tools/owned_request/README.md),
 with its trusted local launcher in private v15. It collects explicit fields,
 previews authenticated evidence without calculating, then requires confirmation

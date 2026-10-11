@@ -1,5 +1,40 @@
 # FORGE handoff log
 
+## 2026-10-11 - verified SQLite snapshot and complete CPU regression
+
+Independent academic review passed 38/39 checks and found a P2 race in the generic
+citation path. Owner reproduction against frozen v17 returned an unapproved
+synthetic quote while the final index hash matched. The fix hashes one captured
+database buffer and queries its in-memory snapshot, checks source descriptors
+against the approved list, rejects malformed/ambiguous inputs and retains sidecar
+refusal. The legacy private verifier supplies its trusted pin to the same capture.
+The owner's replacement reproduction now rejects; eight new snapshot tests plus
+one legacy-verifier race test pass. The original source/release package is intact.
+
+V19 freezes only the corrected runtime and reuses v17's unchanged one-chunk
+manifest. Its launcher supersedes the vulnerable frozen v17 launcher for review.
+Independent retest is pending; no broader corpus release. Eighteen existing
+development requests pass against fixed code. All owned prototype bytes remain
+unchanged from the earlier independently verified 54-check checkpoint.
+
+Resolved the SciPy import blocker in a separate CPU environment matching all five
+project dependency pins. Existing host/embedding runtimes were preserved. Official
+binary wheels are URL/hash-locked, and only the three pinned tokenizer/config text
+assets were added for formatting tests. No model weights, GPU, training or uploads.
+Full native Windows result: 218 methods, 200 pass, 17 fail and one error. All 18
+remaining nonpassing methods are legacy reconciliation POSIX-read/symlink cases;
+no bypass, skip or false full-pass claim. Focused changed-path/contracts tests pass
+47/47, owned suites 48/48, tokenizer 5/5 and Windows snapshot 9/9.
+
+Private v18 also inventories four exact prose candidates with source/page/region
+and text hashes. First is page-one charge-sign/unit bullets in the already grouped
+Coulomb source. Other candidates cover latent-heat definitions, the induced-current
+checklist and periodic-wave definitions. Additional family/component qualification
+is recorded, not cleared. An apparent latent-heat wording mismatch was an initial
+visual reading error; fresh PDF rendering and enlarged preserved pixels agree.
+See [fix and detailed limits](docs/REFERENCE_SNAPSHOT_FIX_20261011.md). Local only;
+no push, source deletion or additional release. Parent owns independent retest.
+
 ## 2026-10-11 - narrow academic reference release
 
 User clarification supports private project use of professor-provided slides;

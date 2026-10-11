@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-10-11 - bind SQLite queries to verified bytes
+
+- Fixed the independently reproduced transient-index replacement race: hash one
+  captured buffer, query its in-memory SQLite snapshot, and require approved
+  source descriptors. Malformed JSON/database inputs and sidecars reject.
+- Added eight snapshot boundary tests and a trusted-pin capture regression for
+  the legacy verifier. Fixed-path/contracts suites pass 47/47; actual development
+  requests pass 18/18. V19 replaces the old v17 launcher for independent retest.
+- Resolved SciPy in an exact-pin isolated CPU environment. Complete Windows run:
+  218 methods, 200 pass, 17 fail, one error; remaining cases require POSIX secure
+  reads or unavailable symlink privilege. No all-green full-suite claim.
+- Inventoried four source-bound next candidates without releasing any. Original
+  v17 and owned-code behavior are preserved. No GPU/training/upload/push.
+  [Details](docs/REFERENCE_SNAPSHOT_FIX_20261011.md).
+
 ## 2026-10-11 - one private academic prose reference
 
 - Reused the citation index for a separate one-chunk static-prose profile with

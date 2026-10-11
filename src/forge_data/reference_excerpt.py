@@ -8,7 +8,7 @@ import argparse
 import json
 from pathlib import Path
 
-from .citation_pilot import PROSE_PROFILE, search, sha
+from .citation_pilot import PROSE_PROFILE, search, sha, strict_json
 
 
 def request(index, manifest, *, expected_manifest_sha256, task, query="", chunk_id=None):
@@ -18,8 +18,8 @@ def request(index, manifest, *, expected_manifest_sha256, task, query="", chunk_
     payload = Path(manifest).read_bytes()
     if sha(payload) != expected_manifest_sha256:
         raise ValueError("pilot_manifest_anchor_drift")
-    record = json.loads(payload.decode("utf-8"))
-    if record.get("profile") != PROSE_PROFILE:
+    record = strict_json(payload.decode("utf-8"))
+    if not isinstance(record, dict) or record.get("profile") != PROSE_PROFILE:
         raise ValueError("reviewed_prose_profile_required")
     if task == "quote_reference":
         if chunk_id not in record["chunk_ids"]:

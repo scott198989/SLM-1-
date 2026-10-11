@@ -111,6 +111,21 @@ class PrivateReleaseVerifierTests(unittest.TestCase):
         self.assertFalse(result["new_visual_approval"])
         self.assertEqual(self.snapshot(), before)
 
+    def test_index_pin_binds_capture_after_transient_replacement(self):
+        from forge_data import citation_pilot
+        original = self.index.read_bytes()
+        opener = citation_pilot.open_frozen_index
+        def replace_before_capture(path, **kwargs):
+            self.index.write_bytes(b"UNAPPROVED_DATABASE_BYTES")
+            try:
+                return opener(path, **kwargs)
+            finally:
+                self.index.write_bytes(original)
+        with patch.object(citation_pilot, "open_frozen_index", side_effect=replace_before_capture):
+            with self.assertRaisesRegex(ValueError, "pilot_manifest_or_index_drift"):
+                self.run_entrypoint()
+        self.assertEqual(self.index.read_bytes(), original)
+
     def test_changed_manifest_cannot_supply_its_own_new_pin(self):
         value = json.loads(self.manifest.read_text())
         value["unexpected_changed_metadata"] = True
