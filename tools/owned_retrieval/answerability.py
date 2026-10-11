@@ -17,6 +17,7 @@ import sys
 import types
 
 from .harness import IntegrityError, LocalRetriever, SOURCE_SHA, read_json
+from . import numerical_policy
 
 CAPABILITIES = frozenset(('convert_units', 'check_dimensional_equation',
     'axial_stress', 'dc_motor', 'thermal_expansion', 'second_order_step',
@@ -137,6 +138,9 @@ class AnswerabilityGate:
         self.retriever._verify_sources()
         return copy.deepcopy(self._catalog)
 
+    def numerical_policy(self):
+        return numerical_policy.description()
+
     def search_and_assess(self, query, request=None, **retrieval_options):
         search = self.retriever.query(query, **retrieval_options)
         return {'search_result': search, 'assessment': self.assess(search, request)}
@@ -232,14 +236,31 @@ class AnswerabilityGate:
                 return finish('ABSTAIN_UNSUPPORTED_UNITS', 'This pair has no approved same-quantity unit policy; equal dimensions do not suffice.', **common)
         if cap == 'check_dimensional_equation' and any(not isinstance(v, str) or not v for v in arguments.values()):
             return finish('CLARIFY_MISSING_UNITS', 'Both dimensional expressions must be explicit strings.', **common)
+        common['numerical_policy'] = self.numerical_policy()
+        range_problem = numerical_policy.range_issue(cap, arguments)
+        if range_problem:
+            return finish('ABSTAIN_NUMERICAL_RANGE', range_problem['reason'], input=range_problem['input'], **common)
         try:
             result = self._calculator.execute_tool(cap, arguments)['result']
         except self._calculator.EngineeringError as exc:
             return finish('ABSTAIN_INPUT_DOMAIN', str(exc), **common)
         if cap == 'convert_units':
             result = {'value': {'value': result, 'unit': arguments['to_unit']}}
+        output_status = {}
+        for field in wanted:
+            if cap == 'axial_stress' and field == 'factor_of_safety' and result[field] is None:
+                output_status[field] = {'status': 'UNBOUNDED_ZERO_LOAD', 'explanation': 'Zero applied force gives zero stress; strength/stress has no finite numerical factor. The source reports unbounded_zero_load.'}
+            elif cap == 'dc_motor' and field == 'efficiency' and result[field] is None:
+                output_status[field] = {'status': 'UNDEFINED_ZERO_INPUT_POWER', 'explanation': 'Mechanical output power and copper loss are both zero; efficiency would be 0/0 and is undefined.'}
+            elif cap == 'second_order_step' and field == 'settling_time_2pct_approx':
+                output_status[field] = {'status': 'APPROXIMATION', 'explanation': 'Common 4/(zeta*wn) approximation, not an exact last crossing time.'}
+            elif cap == 'quadratic_roots' and field == 'real_roots' and result[field] == []:
+                output_status[field] = {'status': 'NO_REAL_ROOTS', 'explanation': 'The computed discriminant is negative; this tool supplies no complex roots.'}
+            else:
+                output_status[field] = {'status': 'DEFINED_WITH_SOURCE_LIMITS'}
         return finish('SUPPORTED_CALCULATION', 'Authenticated deterministic tool result under the explicit supplied conditions.',
                       supported_answer={s: result[s] for s in wanted},
+                      output_status=output_status,
                       evidence_coverage={'requested': len(wanted), 'covered': len(wanted)},
                       numerical_method='PINNED_OWNED_CALCULATOR_FLOAT64', **common)
 

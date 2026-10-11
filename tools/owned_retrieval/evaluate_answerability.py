@@ -7,15 +7,28 @@ from .answerability import AnswerabilityGate
 
 
 def _matches(actual, expected):
-    if isinstance(actual, dict) and set(actual) == {'value', 'unit'}:
-        actual = actual['value']
+    # Quantity expectations must include units. Never strip schema information
+    # to accommodate older weak scalar-only labels. Those labels must fail.
+    if isinstance(expected, dict):
+        return isinstance(actual, dict) and set(actual) == set(expected) and all(_matches(actual[k], v) for k, v in expected.items())
     if isinstance(expected, bool):
         return actual is expected
     if isinstance(expected, list):
         return isinstance(actual, list) and len(actual) == len(expected) and all(_matches(a, b) for a, b in zip(actual, expected))
     if isinstance(expected, (int, float)):
-        return isinstance(actual, (int, float)) and not isinstance(actual, bool) and math.isclose(actual, expected, rel_tol=1e-12, abs_tol=1e-14)
-    return actual == expected
+        if not isinstance(actual, (int, float)) or isinstance(actual, bool):
+            return False
+        try:
+            if not math.isfinite(actual) or not math.isfinite(expected):
+                return False
+            if expected == 0:
+                return actual == 0  # No blanket absolute tolerance near zero.
+            if actual == 0 or (actual > 0) != (expected > 0):
+                return False
+            return math.isclose(actual, expected, rel_tol=1e-12, abs_tol=0.0)
+        except OverflowError:
+            return False
+    return type(actual) is type(expected) and actual == expected
 
 
 def evaluate(retriever, probes, *, methods=('lexical',), saved_vectors=None):

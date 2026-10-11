@@ -184,12 +184,46 @@ class AnswerabilityTests(unittest.TestCase):
 
     def test_numerical_overflow_and_zero_load_are_distinct(self):
         r = self.request(); r['arguments']['force']['value'] = 1e308; r['arguments']['area']['value'] = 1e-308
-        self.assertEqual(self.run_request(r)['status'], 'ABSTAIN_INPUT_DOMAIN')
+        self.assertEqual(self.run_request(r)['status'], 'ABSTAIN_NUMERICAL_RANGE')
         r = self.request(); r['arguments']['force']['value'] = 0
         result = self.run_request(r)
         self.assertEqual(result['status'], 'SUPPORTED_CALCULATION')
         self.assertIsNone(result['supported_answer']['factor_of_safety'])
         self.assertEqual(result['supported_answer']['factor_of_safety_status'], 'unbounded_zero_load')
+
+    def test_independent_extreme_intermediate_failures_now_refuse(self):
+        cases = [
+            ('thermal_expansion', {'length': quantity(1e-200, 'm'), 'coefficient': quantity(1e-130, '1/K'), 'delta_temperature': quantity(1e130, 'delta_K')}),
+            ('dc_motor', {'torque_constant': quantity(1e-200, 'N*m/A'), 'current': quantity(1e-130, 'A'), 'angular_speed': quantity(1e130, 'rad/s'), 'winding_resistance': quantity(0, 'Ohm')}),
+            ('series_rlc', {'resistance': quantity(1e-154, 'Ohm'), 'inductance': quantity(1e308, 'H'), 'capacitance': quantity(1, 'F')}),
+        ]
+        for cap, args in cases:
+            request = self.request(cap); request['arguments'] = args
+            result = self.run_request(request)
+            self.assertEqual(result['status'], 'ABSTAIN_NUMERICAL_RANGE')
+            self.assertIsNone(result['supported_answer'])
+
+    def test_range_envelope_and_exponential_edges(self):
+        for value in [1e-50, 1e50]:
+            r = self.request('convert_units'); r['arguments'].update(value=value, from_unit='m', to_unit='m')
+            self.assertEqual(self.run_request(r)['status'], 'SUPPORTED_CALCULATION')
+        for value in [1e-51, 1e51]:
+            r = self.request('convert_units'); r['arguments']['value'] = value
+            self.assertEqual(self.run_request(r)['status'], 'ABSTAIN_NUMERICAL_RANGE')
+        for changes in [{'elapsed_time': quantity(1e-20, 's')},
+                        {'elapsed_time': quantity(1e5, 's')}, {'damping_ratio': .99999999}]:
+            r = self.request('second_order_step'); r['arguments'].update(changes)
+            self.assertEqual(self.run_request(r)['status'], 'ABSTAIN_NUMERICAL_RANGE')
+
+    def test_nullable_and_approximate_outputs_always_carry_status(self):
+        r = self.request(wanted=['factor_of_safety']); r['arguments']['force']['value'] = 0
+        result = self.run_request(r)
+        self.assertEqual(result['output_status']['factor_of_safety']['status'], 'UNBOUNDED_ZERO_LOAD')
+        r = self.request('dc_motor', wanted=['efficiency']); r['arguments']['current']['value'] = 0
+        result = self.run_request(r)
+        self.assertEqual(result['output_status']['efficiency']['status'], 'UNDEFINED_ZERO_INPUT_POWER')
+        result = self.run_request(self.request('second_order_step', wanted=['settling_time_2pct_approx']))
+        self.assertEqual(result['output_status']['settling_time_2pct_approx']['status'], 'APPROXIMATION')
 
     def test_schema_unknown_and_duplicate_selectors_refuse(self):
         for modify in [lambda r: r.update(unverified_claim='extra'),

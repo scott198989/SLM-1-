@@ -1,6 +1,11 @@
 # SLM-1-
 # FORGE — Training Data & Knowledge Repository
 
+Independent review found and reproduced extreme-range arithmetic failures and
+a unit/near-zero test-oracle gap in the initial gate. The [review corrections](docs/OWNED_NUMERIC_REVIEW_FIXES_20261011.md)
+add explicit numerical limits, strict quantity oracles and nullable-output
+statuses. Original results remain historical; independent recheck is pending.
+
 Latest October 11 milestone: the [owned-code answerability gate](docs/OWNED_ANSWERABILITY_RESULTS_20261011.md)
 separates search candidates from source extracts and deterministic results for
 explicit structured requests. Thirty CPU boundary tests and 48 frozen cycle

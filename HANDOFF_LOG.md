@@ -1,5 +1,23 @@
 # FORGE handoff log
 
+## 2026-10-11 - independent numerical review corrections
+
+The independent 27-probe review of 4122080 identified three extreme-range
+calculations silently returning supported zeros, and a comparator that discarded
+units and accepted zero for tiny expectations. Owner reproductions confirmed
+both findings before edits; reviewer files and original v14 evidence are intact.
+Gate-level range restrictions now refuse those cases without changing the pinned
+calculator source. Strict schema/unit/near-zero oracles and companion statuses
+for nullable/approximate outputs are added. Thirty-six CPU tests pass. A replay
+with old weak labels is preserved (42/48), separately from revised unit-bearing
+regression labels (48/48). Neither is new independent evidence. The existing 24
+annotated development probes still pass across all three rankers.
+
+See [review corrections](docs/OWNED_NUMERIC_REVIEW_FIXES_20261011.md). Independent
+recheck remains pending. A separate additive explicit-request wizard/preview is
+in progress; it will not accept free-form questions or claim intent alignment.
+No held data, source/hold changes, GPU workload, Qwen generation or remote push.
+
 ## 2026-10-11 15:30 UTC - structured answerability and abstention boundary
 
 From local baseline f9c30ddd536e4d66bf8c306f5aca9e4469fc48bd, added the

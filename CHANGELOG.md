@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-10-11 - independent numerical review corrections
+
+- Reproduced three supported-but-wrong extreme-range zeros and the comparator's
+  missing unit/tiny-value checks. Preserved original evidence and source bytes.
+- Added conservative numeric operating limits and nullable/approximate result
+  statuses. The evaluator now checks schemas, exact units, nonzero/sign behavior
+  and relative tolerance without a universal absolute allowance.
+- Thirty-six CPU tests pass. Original scalar-oracle cycle replay now correctly
+  fails six weak quantity labels (42/48); a separate exposed revision with unit
+  expectations passes 48/48. It is not a fresh holdout. All three review cases
+  refuse numerical range; independent recheck is requested separately.
+- See [correction scope](docs/OWNED_NUMERIC_REVIEW_FIXES_20261011.md).
+
 ## 2026-10-11 15:30 UTC - conservative owned-code answerability
 
 - Added an explicit structured request gate over eight source-bound capabilities:
