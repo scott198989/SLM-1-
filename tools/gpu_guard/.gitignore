@@ -1,0 +1,6 @@
+__pycache__/
+evidence/
+logs/
+tests/
+*.spec.json
+.venv/

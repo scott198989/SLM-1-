@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<nvidia_smi_log>
+  <driver_version>591.86</driver_version>
+  <gpu>
+    <uuid>GPU-SYNTHETIC-TEST</uuid>
+    <product_name>SYNTHETIC TEST GPU</product_name>
+    <performance_state>P8</performance_state>
+    <gpu_recovery_action>None</gpu_recovery_action>
+    <temperature>
+      <gpu_temp>38 C</gpu_temp>
+      <gpu_temp_tlimit>52 C</gpu_temp_tlimit>
+      <memory_temp>N/A</memory_temp>
+    </temperature>
+    <gpu_power_readings>
+      <instant_power_draw>20 W</instant_power_draw>
+      <average_power_draw>20 W</average_power_draw>
+      <current_power_limit>600 W</current_power_limit>
+    </gpu_power_readings>
+    <fan_speed>0 %</fan_speed>
+    <clocks>
+      <graphics_clock>300 MHz</graphics_clock>
+      <mem_clock>405 MHz</mem_clock>
+    </clocks>
+    <utilization>
+      <gpu_util>1 %</gpu_util>
+      <memory_util>1 %</memory_util>
+    </utilization>
+    <fb_memory_usage>
+      <used>1800 MiB</used>
+      <total>32607 MiB</total>
+    </fb_memory_usage>
+    <pci>
+      <replay_counter>0</replay_counter>
+    </pci>
+    <clocks_event_reasons>
+      <clocks_event_reason_hw_slowdown>Not Active</clocks_event_reason_hw_slowdown>
+      <clocks_event_reason_hw_thermal_slowdown>Not Active</clocks_event_reason_hw_thermal_slowdown>
+      <clocks_event_reason_sw_thermal_slowdown>Not Active</clocks_event_reason_sw_thermal_slowdown>
+      <clocks_event_reason_hw_power_brake_slowdown>Not Active</clocks_event_reason_hw_power_brake_slowdown>
+      <clocks_event_reason_sw_power_cap>Not Active</clocks_event_reason_sw_power_cap>
+    </clocks_event_reasons>
+  </gpu>
+</nvidia_smi_log>
