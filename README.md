@@ -1,14 +1,15 @@
 # SLM-1-
 # FORGE — Training Data & Knowledge Repository
 
-Current checkpoint: [second exact reference and Windows reconciliation](docs/COULOMB_COMPONENT_WINDOWS_20261011.md).
-Independent v19 integrity review passed 75 checks and 18 pinned regressions. Its
-accepted runtime now also serves one separately packaged page-one charge/unit
-reference in private v21; the existing page-four reference remains in v19.
-The old vulnerable v17 launcher must not be used. Native Windows reconciliation
-now uses the existing locked reader. The final CPU suite has 227 passes, zero
-failures/errors and two file-symlink privilege skips across 229 methods. Native
-POSIX execution and independent review of the new Windows adapter remain open.
+Current checkpoint: [three further private prose references](docs/PROFESSOR_PROSE_BATCH_20261011.md).
+Private v22 qualifies latent-heat definitions, the induced-current checklist and
+periodic-wave definitions as separate one-chunk references. Five academic
+references are now pinned individually; zero SFT records or training are added.
+The unchanged accepted runtime passed 18 pinned regressions, and 129 batch checks
+passed. The previous Windows adapter/page-one checkpoint passed independent review.
+Native POSIX and two privilege-dependent file-symlink cases remain open. New batch
+content awaits independent review. Prior packages and source-wide holds are intact;
+the historical vulnerable v17 launcher must not be used.
 
 First bounded release: [one private static prose reference](docs/ACADEMIC_REFERENCE_EXCERPT_20261011.md)
 is available for local search and explicit attributed quotation. The private

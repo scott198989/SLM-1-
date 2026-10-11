@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-10-11 - three separately qualified prose components
+
+- Qualified latent-heat definitions, induced-current direction checklist and
+  periodic-wave definitions with exact source/pixel/citation pins, individual
+  private-use receipts and separate scientific context. Five references total;
+  zero SFT/training additions or source-wide approvals.
+- Reused the accepted runtime unchanged. Batch checks pass 129/129; pinned
+  reference/snapshot regressions pass 18/18. All 156 earlier inventoried files,
+  six owned-code pins and selected original source/page evidence are preserved.
+- Recorded independent acceptance of the prior Windows/page-one checkpoint.
+  New batch review, Linux execution and two native file-symlink cases remain
+  open. [Scope, evidence and remaining holds](docs/PROFESSOR_PROSE_BATCH_20261011.md).
+
 ## 2026-10-11 - bounded charge reference and Windows secure reader
 
 - Recorded independent v19 acceptance: 75 checks and 18 regressions pass. Added

@@ -1,5 +1,32 @@
 # FORGE handoff log
 
+## 2026-10-11 - three further professor-slide prose references
+
+Independent review accepted 85c179f with 25/25 Windows safety probes, 44/44
+release/component checks and 83 regressions: 81 pass, two privilege skips, no
+actionable finding. Native POSIX and Windows file-symlink coverage remain open.
+
+Completed the remaining v18 candidate batch in private v22: latent-heat page-two
+definitions (413 characters), page-six induced-current checklist (300), and
+page-two periodic-wave definitions (413). All exact selections match pinned
+reviewed text, fresh PDF crops and preserved rasters. Native heading order and
+lambda extraction were explicitly reconciled without rewriting quotations.
+Each has a separate private-use receipt, scientific annotations, family role,
+manifest and one-chunk index using byte-identical accepted serving code.
+
+Three newly qualified references; five total across separately pinned packages.
+No candidate in this exact batch remains held, but all surrounding table/formula,
+diagram/media, protected-page and partial-page issues remain held. Conservative
+metadata role groups cover 20 known families / 118 members / 20 named sources,
+excluded from independent evaluation. Unknown aliases are not independence proof.
+
+129/129 batch checks and 18/18 pinned runtime regressions passed. Earlier v17-v21
+inventories (156 files), six owned implementations, three PDFs and their pinned
+review/raster evidence are unchanged. No implementation change, training, GPU,
+embeddings, source deletion, publication, upload, privilege change or push.
+V22 review-target.json scopes the next independent content/receipt review; see
+[batch scope and concrete holds](docs/PROFESSOR_PROSE_BATCH_20261011.md).
+
 ## 2026-10-11 - second exact reference and Windows reconciliation
 
 Independent v19 review accepted the integrity fix with 75/75 checks and 18/18

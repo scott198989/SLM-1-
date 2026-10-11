@@ -1,14 +1,15 @@
 # Current FORGE handoff — October 11, 2026 local continuation
 
-Latest checkpoint: [Coulomb component and Windows results](docs/COULOMB_COMPONENT_WINDOWS_20261011.md).
-Independent v19 acceptance resolved the P2 index race: 75 checks and 18 regressions
-passed. Use v19 for the existing page-four excerpt and private v21 for the new
-page-one charge/unit component. Both use the same accepted one-chunk runtime;
-v17's historical launcher is vulnerable. V20 preserves inactive preparation,
-baseline replay and platform diagnosis. Native Windows suite: 229 methods,
-227 passes, zero failures/errors, two privilege-probed file-symlink skips.
-Linux execution and independent review of the new Windows adapter remain open.
-The six owned-code pins remain unchanged from the independent 54-check report.
+Latest checkpoint: [bounded professor-slide batch](docs/PROFESSOR_PROSE_BATCH_20261011.md).
+Private v22 adds three separately pinned one-chunk packages for latent-heat,
+induced-current and periodic-wave prose. Owner checks pass 129/129 plus 18/18
+pinned runtime regressions. Five exact academic references are available across
+v19, v21 and v22, with no source-wide approval or new SFT records. Prior v17-v21
+inventories (156 files), six owned-code pins and selected source evidence match.
+Independent review accepted 85c179f: 25 Windows probes, 44 release checks and
+81/83 regressions with two explicit privilege skips. New v22 content review,
+native POSIX execution and native Windows file-symlink coverage remain open.
+See v22/review-target.json. V17's historical launcher remains vulnerable.
 Older pending-review/all-nine-HOLD statements below are historical.
 
 The usable entry point is the [structured request wizard/CLI](tools/owned_request/README.md),
