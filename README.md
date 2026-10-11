@@ -1,11 +1,14 @@
 # SLM-1-
 # FORGE — Training Data & Knowledge Repository
 
-Latest October 11 milestone: [local owned-code retrieval](docs/OWNED_RETRIEVAL_RESULTS_20261011.md)
-now compares lexical, dense and hybrid ranking over eight authenticated chunks.
-All three find 16/16 development targets first, but none establishes answerability
-for eight unsupported requests. The CLI returns evidence only. New query encoding
-used CPU after GPU idle preparation was refused; original smoke vectors remain.
+Latest October 11 milestone: the [owned-code answerability gate](docs/OWNED_ANSWERABILITY_RESULTS_20261011.md)
+separates search candidates from source extracts and deterministic results for
+explicit structured requests. Thirty CPU boundary tests and 48 frozen cycle
+probes passed; this remains same-agent validation, not independent certification.
+All three rankers retain 16/16 development targets first. Raw text alone requests
+clarification; no intent parser or Qwen generator is qualified. The earlier
+[retrieval stage](docs/OWNED_RETRIEVAL_RESULTS_20261011.md) encoded queries on CPU
+after GPU idle preparation was refused; original smoke vectors remain.
 Training is authorized in principle subject to the GPU guard and qualified data;
 historical receipt flags are not a statement of current user permission.
 
@@ -60,7 +63,7 @@ This workflow applies even when many sessions run consecutively on the same mach
 
 Private release: **16 calculator protocol SFT examples / 4,430 Qwen tokens / 2,793 assistant tokens**; **12 sealed statistics/DOE/SPC tasks**; **9 qualified private reference-RAG chunks** with 10/10 demonstration query hits in top 3; **69 software tests passed in the historical pilot receipt**; the latest actual cloud suite has 112 passing methods, five blocked by missing tokenizer assets and one class-setup error. [Complete gate report](reports/FORGE_PHASE3_GATE_REPORT.md), [released pilot receipt](reports/phase3-pilot-release.json), [technical review](reports/phase3-technical-review.json), [family evidence](reports/phase3-family-analysis.json), [sealed composition](reports/phase3-sealed-gold.json), [RAG results](reports/phase3-rag-pilot.json).
 
-The 2,112-record legacy review curriculum has **complete agent technical dispositions: 1,703 PASS, 72 REJECT, 337 QUARANTINE and zero NEEDS_HUMAN_REVIEW**. The rejected and quarantined records remain withheld. No legacy or Drive SFT released. Whole-source owned pilot train/gold overlap is zero; broader semantic independence remains unknown. The pilot is small JSON calculator integration data, not a broad engineering specialization set. Independent human review, model-development coverage, stock Qwen scores and GPU certification remain absent. **Training is not recommended or authorized; no weights or training.** Siemens follow-up is being handled by the user. Drive content and private evaluation remain outside Git; automatic checks remain canceled.
+The 2,112-record legacy review curriculum has **complete agent technical dispositions: 1,703 PASS, 72 REJECT, 337 QUARANTINE and zero NEEDS_HUMAN_REVIEW**. The rejected and quarantined records remain withheld. No legacy or Drive SFT released. Whole-source owned pilot train/gold overlap is zero; broader semantic independence remains unknown. The pilot is small JSON calculator integration data, not a broad engineering specialization set. Independent human review, model-development coverage, stock Qwen scores and GPU certification remain absent. **As of October 11 at 13:02 UTC, training is authorized in principle subject to qualified inputs and guarded GPU use; no Qwen weights or training have been run in this continuation.** The narrow pilot still does not justify broad specialization. Siemens follow-up is being handled by the user. Drive content and private evaluation remain outside Git; automatic checks remain canceled.
 
 ## Phase 2 snapshot — historical preparation status
 

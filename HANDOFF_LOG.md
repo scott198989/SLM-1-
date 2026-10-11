@@ -1,5 +1,35 @@
 # FORGE handoff log
 
+## 2026-10-11 15:30 UTC - structured answerability and abstention boundary
+
+From local baseline f9c30ddd536e4d66bf8c306f5aca9e4469fc48bd, added the
+source-bound capability gate and its evaluation harness. It supports exact source
+declarations/excerpts and deterministic calculations only when the explicit
+request has matching evidence, valid complete inputs/units and asserted model
+conditions. Unknown outputs/domains, missing evidence and contradictions refuse;
+missing inputs or conditions clarify. No cosine threshold or query-string match
+is treated as confidence. Search candidates are not intrinsically errors.
+
+Thirty CPU tests passed. Prior sixteen answerable rankings/scores remain unchanged
+across all rankers. With separate manual intent annotations, sixteen source
+extracts preserve their grounding clauses and eight unsupported requests refuse.
+All twenty-four unstructured questions still clarify, including the sixteen
+answerable ones: no automated language-understanding success is claimed.
+
+Forty-eight new cycle probes were frozen before implementation and first run
+after a code-hash freeze. All passed on CPU lexical retrieval, including eight
+reference/paraphrase cases, eight numerical cases and 32 refusal/clarification
+cases. This same agent knew the construction templates; no blind or independent
+expert certification, dense holdout claim or post-result tuning. Earlier v1/v2
+comparison evidence and all original vectors/private packages were preserved.
+
+The [result report](docs/OWNED_ANSWERABILITY_RESULTS_20261011.md) and private v14
+bundle contain the limits and receipts. Next is a reviewed structured-request
+preview and independent/end-to-end intent review, not Qwen generation. No new
+model inference, GPU work, quarantined content, academic release, upload or push.
+Training permission remains Scott's 13:02 authorization in principle with guard
+and qualified-input requirements; old run receipts are historical.
+
 ## 2026-10-11 - local owned-code retrieval harness and development comparison
 
 Built manifest-bound lexical, dense and hybrid retrieval over eight authenticated

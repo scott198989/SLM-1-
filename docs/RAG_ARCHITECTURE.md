@@ -6,7 +6,11 @@ The subsequent [local owned-code CLI](OWNED_RETRIEVAL_RESULTS_20261011.md) compa
 BM25, saved dense vectors and RRF with source/citation/use/access checks. It
 returns evidence candidates only. New development probes expose the remaining
 answerability gap; this does not authorize academic-index promotion or establish
-an answering service.
+an answering service. A subsequent [structured answerability gate](OWNED_ANSWERABILITY_RESULTS_20261011.md)
+now checks capability evidence, requested scope, units and model conditions and
+returns exact source extracts or deterministic calculator results. It does not
+infer natural-language intent or authorize any generator. Free-form requests
+still clarify; the frozen cycle probes are same-agent, not independent evidence.
 
 ## Data contracts and flow
 

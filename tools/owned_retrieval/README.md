@@ -33,11 +33,70 @@ and records the CPU/FP32 versus saved GPU/BF16 document-vector distinction.
 Ranking is not answerability. Unsupported requests can still retrieve nearby
 code or a limitations statement. Results are labeled
 `EVIDENCE_CANDIDATES_NOT_AN_ANSWER`; zero approved matches yield an abstention.
-No relevance score is a confidence or entailment guarantee. A future answer
-system needs a separate evidence/limitations gate and its own validation.
+No relevance score is a confidence or entailment guarantee. The separately
+tested `answerability.py` gate below accepts explicit structured requests only.
 
 Development probes are authored from the allowed code by the same agent as the
 implementation, with new strings distinct from the prior eight demonstration
 queries. They are not blind, independent expert or general engineering evaluation.
 The evaluator uses expected labels only after ranking, and reports no-answer
 candidate leakage separately from unsupported answers (none are generated).
+
+## Structured answerability gate
+
+`AnswerabilityGate` requires a corresponding authenticated function chunk before
+returning source declarations or executing the pinned owned calculator. It derives
+input/output/assumption declarations from that exact source. It never interprets
+the query text, uses a cosine cutoff, or silently fills model conditions. It loads
+only the authenticated standalone calculator, not the repository package or any
+sealed evaluation module. Its public `catalog()` returns the supported fields.
+
+```powershell
+python -B -m tools.owned_retrieval.answerability --manifest <private-manifest.json> --expected-manifest-sha <sha256> --query "axial stress under the explicit supplied model" --request <reviewed-request.json>
+python -B -m unittest tools.owned_retrieval.test_answerability tools.owned_retrieval.test_harness -v
+```
+
+The request has exactly five fields:
+
+```json
+{
+  "capability": "axial_stress",
+  "mode": "calculate",
+  "requested": ["stress"],
+  "arguments": {
+    "force": {"value": 100, "unit": "N"},
+    "area": {"value": 0.01, "unit": "m^2"},
+    "allowable_strength": {"value": 1000000, "unit": "Pa"}
+  },
+  "conditions": {
+    "uniform_axial_tension": true,
+    "static_loading": true,
+    "no_stress_concentration": true
+  }
+}
+```
+
+`calculate` requires every declared argument, canonical physical units, finite
+valid values, supported output fields, and explicitly true model conditions.
+Missing inputs/units/conditions request clarification. Conflicting or additional
+unknown requirements, unsupported capabilities/outputs, wrong/missing evidence
+and invalid domains refuse. The original calculator supplies the result and its
+limitations, not a language model. Unit policy is intentionally narrower than
+the calculator: e.g. physical inputs use rad/s rather than rpm; temperature
+changes require delta_K or delta_degC. Unit conversion allows a bounded list of
+same-quantity unit families with explicit same_physical_quantity assertion;
+K is absolute there. Dimensional checking requires dimensions_only and cannot
+prove a physical equation. Valid unsupported unit forms can therefore abstain.
+
+`reference` accepts empty arguments/conditions and one or more exact sections:
+input_contract, output_contract, conditions, limitations, implementation. The
+answer is a literal source extract or structured source declaration. Coverage
+counts selected sections/outputs, not arbitrary claims in natural language.
+
+Without a request the CLI returns CLARIFY_REQUEST_SCOPE. A successful result
+applies only to the explicit request; query_intent_alignment remains
+NOT_ESTABLISHED and generator_allowed remains false. A caller must not claim
+that a contradictory free-form question was answered simply because a supplied
+structured request succeeded. Model assumptions are user/caller assertions,
+not independently checked physical facts. There is no serving endpoint or NLP
+intent parser. See [results and remaining limits](../../docs/OWNED_ANSWERABILITY_RESULTS_20261011.md).

@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-10-11 15:30 UTC - conservative owned-code answerability
+
+- Added an explicit structured request gate over eight source-bound capabilities:
+  evidence coverage, units, complete inputs, required conditions and refusals.
+  No similarity threshold, query-string rules or language-model generation.
+- Passed 17 new gate tests plus 13 retrieval tests on CPU; preserved 16/16 prior
+  answerable rankings and separately reported raw-text clarification coverage.
+- Froze 48 same-agent cycle probes before implementation and code hashes before
+  first execution: 48 passed, including 32 incomplete/unsupported cases with zero
+  supported results. No post-holdout tuning or independent expert claim.
+- Preserved earlier evidence/baselines and academic holds. Corrected the stale
+  current-gate training permission sentence. See [results](docs/OWNED_ANSWERABILITY_RESULTS_20261011.md).
+
 ## 2026-10-11 - bounded owned-code retrieval
 
 - Added local BM25/dense/RRF retrieval with exact source/hash/citation and
