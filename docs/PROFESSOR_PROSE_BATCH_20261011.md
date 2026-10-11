@@ -1,5 +1,11 @@
 # Three further private prose references
 
+Update: v22 was independently accepted at `bc60803`, with 160/160 checks and
+18/18 regressions, exact-source fidelity/citations and the pinned family exclusions
+verified. The pending-review language below is the historical owner handoff.
+The next checkpoint is [six scientific-fidelity dispositions](SCIENTIFIC_DISPOSITIONS_20261011.md);
+it does not add serving references or modify this accepted batch.
+
 The remaining three candidates inventoried in private v18 are now individually
 qualified for local reference search and exact attributed quotation. Private v22
 contains three separate one-chunk packages using the accepted snapshot runtime

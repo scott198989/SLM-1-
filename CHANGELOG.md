@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-10-11 - six scientific-fidelity dispositions
+
+- Inspected six original pages, preserved rasters, native/OCR alternatives and
+  original embedded images. Four issues support separate qualified explanations;
+  the clipped loop remains image-only with uncertainty, and the copper row stays
+  blocked for numerical use with a separately sourced JANAF comparison.
+- Passed 199 provenance/role/artifact checks, eight scientific oracle methods and
+  18 pinned runtime regressions. Preserved 269 earlier files, six owned-code pins,
+  originals, receipts, family roles and protected exclusions. Five references
+  remain; no new serving index, SFT, training or source-wide approval.
+- Recorded v22 independent acceptance (160/160 checks, 18/18 regressions).
+  New v23 notes await bounded independent review. [Evidence and limits](docs/SCIENTIFIC_DISPOSITIONS_20261011.md).
+
 ## 2026-10-11 - three separately qualified prose components
 
 - Qualified latent-heat definitions, induced-current direction checklist and

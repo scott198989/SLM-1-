@@ -1,15 +1,16 @@
 # SLM-1-
 # FORGE — Training Data & Knowledge Repository
 
-Current checkpoint: [three further private prose references](docs/PROFESSOR_PROSE_BATCH_20261011.md).
-Private v22 qualifies latent-heat definitions, the induced-current checklist and
-periodic-wave definitions as separate one-chunk references. Five academic
-references are now pinned individually; zero SFT records or training are added.
-The unchanged accepted runtime passed 18 pinned regressions, and 129 batch checks
-passed. The previous Windows adapter/page-one checkpoint passed independent review.
-Native POSIX and two privilege-dependent file-symlink cases remain open. New batch
-content awaits independent review. Prior packages and source-wide holds are intact;
-the historical vulnerable v17 launcher must not be used.
+Current checkpoint: [six scientific-fidelity dispositions](docs/SCIENTIFIC_DISPOSITIONS_20261011.md).
+Private v23 supplies four separate qualified explanations, an uncertain image-only
+loop disposition and a blocked copper-row disposition with a reference comparison.
+All six named issues have evidence-backed outcomes; no source quote was corrected
+in place and no new serving/SFT release was made. Five academic references remain.
+V22 was independently accepted: 160/160 checks and 18/18 regressions. V23 passes
+199 artifact checks, eight scientific oracle methods and 18 pinned regressions;
+its new scientific notes await independent review. All 269 earlier inventoried
+files and six owned-code pins are unchanged. Native POSIX and two file-symlink
+cases remain open. The historical vulnerable v17 launcher must not be used.
 
 First bounded release: [one private static prose reference](docs/ACADEMIC_REFERENCE_EXCERPT_20261011.md)
 is available for local search and explicit attributed quotation. The private

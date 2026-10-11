@@ -1,5 +1,30 @@
 # FORGE handoff log
 
+## 2026-10-11 - six scientific issues adjudicated within bounded scope
+
+Accepted the independent v22 result at bc60803: 160/160 checks, 18/18 regressions,
+verified exact-source fidelity/citations and matching 20-family/118-member/
+20-named-source exclusion sets. Five academic references are available.
+
+Private v23 inspects only the six requested holds: copper table, expansion
+coefficients, clipped loop, AC power, wave amplitude and electromagnetic speed.
+Four support separate explanations with explicit context/correction. The clipped
+mark is already incomplete in the original embedded JPEG and remains image-only
+with uncertainty. The literal copper row remains blocked for calculations;
+separate JANAF comparison values have explicit phase/pressure conditions and are
+not substituted into the source. Full recovery needs the attributable uncropped
+loop asset and the copper table's original/erratum plus conditions.
+
+199/199 artifact/provenance/role checks, 8/8 scientific arithmetic/oracle methods
+and 18/18 pinned runtime regressions pass. All 269 earlier inventoried files,
+six owned-code pins, selected originals and evidence remain unchanged. Four
+protected pages remain excluded. No serving code/index, SFT, source-wide hold,
+rights inference, GPU/training, source deletion, publication, upload or push.
+
+The six notes remain owner-reviewed pending independent scientific review, pinned
+by v23/review-target.json. The task does not expand to unrelated holds or media.
+[Dispositions, evidence and remaining inputs](docs/SCIENTIFIC_DISPOSITIONS_20261011.md).
+
 ## 2026-10-11 - three further professor-slide prose references
 
 Independent review accepted 85c179f with 25/25 Windows safety probes, 44/44

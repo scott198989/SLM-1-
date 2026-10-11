@@ -1,15 +1,16 @@
 # Current FORGE handoff — October 11, 2026 local continuation
 
-Latest checkpoint: [bounded professor-slide batch](docs/PROFESSOR_PROSE_BATCH_20261011.md).
-Private v22 adds three separately pinned one-chunk packages for latent-heat,
-induced-current and periodic-wave prose. Owner checks pass 129/129 plus 18/18
-pinned runtime regressions. Five exact academic references are available across
-v19, v21 and v22, with no source-wide approval or new SFT records. Prior v17-v21
-inventories (156 files), six owned-code pins and selected source evidence match.
-Independent review accepted 85c179f: 25 Windows probes, 44 release checks and
-81/83 regressions with two explicit privilege skips. New v22 content review,
-native POSIX execution and native Windows file-symlink coverage remain open.
-See v22/review-target.json. V17's historical launcher remains vulnerable.
+Latest checkpoint: [six scientific-fidelity dispositions](docs/SCIENTIFIC_DISPOSITIONS_20261011.md).
+V23 records four usable explanations with explicit correction/context, one
+image-only uncertain loop and one copper row blocked for numerical use. Separate
+notes retain derivations and official corroboration; originals and quotations
+are unchanged. The bounded task ends at these six dispositions. No new serving
+reference or SFT record was added; five accepted academic references remain.
+V22 independently passed 160/160 checks and 18/18 regressions. V23 owner validation
+passes 199 artifact checks, eight scientific oracle methods and 18 runtime methods.
+All 269 inventoried v17-v22 files and six owned-code pins remain unchanged.
+Use v23/review-target.json for the next independent review. Native POSIX and two
+Windows file-symlink privilege cases remain open. V17's old launcher is vulnerable.
 Older pending-review/all-nine-HOLD statements below are historical.
 
 The usable entry point is the [structured request wizard/CLI](tools/owned_request/README.md),
