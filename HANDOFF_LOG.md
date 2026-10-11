@@ -1,5 +1,32 @@
 # FORGE handoff log
 
+## 2026-10-11 - second exact reference and Windows reconciliation
+
+Independent v19 review accepted the integrity fix with 75/75 checks and 18/18
+pinned regressions. After the parent explicitly cleared the activation gate,
+private v21 released only the qualified page-one charge-sign/unit bullets.
+The reviewed 268-character text, source/page/region, private-use basis and
+separate scientific assumptions are pinned. Ten component checks and 31 actual
+package/CLI probes pass. The three runtime files are byte-identical to accepted
+v19. Its one-chunk restriction is preserved: page four stays in its own package,
+so there are two separately pinned references and zero added SFT records.
+
+Native baseline replay reproduced all 18 prior Windows nonpassing methods at
+a5a2b1c; the reconciliation source/tests were unchanged through 4f32ad9. Added
+a Windows adapter using the existing locked reader with bounded descriptor
+verification, reparse/path/identity checks and write/delete sharing refusal.
+Ten new native Windows methods pass. Final full CPU run: 229 methods, 227 pass,
+zero failures/errors, two explicit WinError 1314 file-symlink skips. Sixteen
+formerly failing methods now exercise and pass their content assertions.
+
+Remaining gaps: native file-symlink cases on a capable host, native POSIX CI and
+independent review of this Windows adapter. No security settings were changed;
+no private nine-source content reconciliation was run. Frozen v17/v19 inventory
+pins and six owned-code pins are unchanged. V20 remains an inactive preparation
+record; v21 holds its later activation receipt. Other held material and all page
+exclusions remain withheld. Local only; no training/GPU/upload/push. See
+[component, evidence and categorized limits](docs/COULOMB_COMPONENT_WINDOWS_20261011.md).
+
 ## 2026-10-11 - verified SQLite snapshot and complete CPU regression
 
 Independent academic review passed 38/39 checks and found a P2 race in the generic

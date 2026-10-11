@@ -357,6 +357,7 @@ class AcademicReconciliationTests(unittest.TestCase):
                     self.assert_metadata_blocked("unsafe_path")
 
     def test_symlink_original_directory_and_data_root_are_rejected(self):
+        self.require_native_symlinks()
         original = self.root / self.intake["ledger"][-1]["original_path"]
         moved = original.with_suffix(".saved")
         original.rename(moved)
@@ -407,6 +408,7 @@ class AcademicReconciliationTests(unittest.TestCase):
         self.assertEqual(result["sources"], [])
 
     def test_post_preflight_symlink_substitution_never_reads_forbidden_target(self):
+        self.require_native_symlinks()
         isolated = self.root / "isolated-source"
         isolated.mkdir()
         original = isolated / "synthetic-original.pdf"
@@ -762,8 +764,7 @@ class AcademicReconciliationTests(unittest.TestCase):
 
     def test_unsupported_secure_open_fails_closed_before_any_file_open(self):
         with mock.patch.object(os, "open", side_effect=AssertionError("unsupported content read")) as opener:
-            with mock.patch.dict(os.__dict__):
-                os.__dict__.pop("O_NOFOLLOW", None)
+            with mock.patch.object(reconciliation, "_secure_open_backend", return_value=None):
                 result = self.run_reconciliation()
         opener.assert_not_called()
         self.assert_hold(result)
@@ -771,6 +772,38 @@ class AcademicReconciliationTests(unittest.TestCase):
         self.assertTrue(result["metadata_eligible"])
         self.assertEqual(len(result["diagnostics"]), 9)
         self.assertEqual({row["code"] for row in result["diagnostics"]}, {"secure_open_unsupported"})
+
+    def require_native_symlinks(self):
+        """Skip only a demonstrated missing Windows privilege, not I/O failures."""
+        if os.name != "nt":
+            return
+        target = self.root / "symlink-capability-target"
+        link = self.root / "symlink-capability-probe"
+        target.write_bytes(b"synthetic privilege probe")
+        try:
+            link.symlink_to(target.name)
+        except OSError as exc:
+            if exc.winerror == 1314:
+                self.skipTest("Native file symlink creation unavailable: WinError 1314; junction tests run separately")
+            raise
+        finally:
+            if link.is_symlink():
+                link.unlink()
+            target.unlink()
+
+    def test_posix_backend_requires_each_secure_open_capability(self):
+        with mock.patch.object(os, "name", "posix"), mock.patch.dict(os.__dict__):
+            os.supports_dir_fd = {os.open}
+            for flag in ("O_NOFOLLOW", "O_DIRECTORY", "O_NONBLOCK"):
+                setattr(os, flag, 1)
+            self.assertEqual(reconciliation._secure_open_backend(), "posix")
+            for flag in ("O_NOFOLLOW", "O_DIRECTORY", "O_NONBLOCK"):
+                with self.subTest(flag=flag):
+                    value = os.__dict__.pop(flag)
+                    self.assertIsNone(reconciliation._secure_open_backend())
+                    setattr(os, flag, value)
+            os.supports_dir_fd = set()
+            self.assertIsNone(reconciliation._secure_open_backend())
 
 
 if __name__ == "__main__":

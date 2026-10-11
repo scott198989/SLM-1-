@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-10-11 - bounded charge reference and Windows secure reader
+
+- Recorded independent v19 acceptance: 75 checks and 18 regressions pass. Added
+  one separately pinned page-one prose reference using the same accepted runtime;
+  ten component checks and 31 package/CLI probes pass. Two references total,
+  zero new SFT records or model training.
+- Added native Windows reconciliation through the existing locked reader,
+  preserving reparse, handle/path identity, size, hash and sharing checks.
+  Baseline replay proves the previous 18 nonpassing methods predated v19.
+- Final CPU suite: 229 methods, 227 pass, zero failures/errors, two explicit
+  file-symlink privilege skips. Ten new Windows tests pass. Linux execution and
+  independent adapter review remain open; no security setting changes.
+  [Details and evidence](docs/COULOMB_COMPONENT_WINDOWS_20261011.md).
+
 ## 2026-10-11 - bind SQLite queries to verified bytes
 
 - Fixed the independently reproduced transient-index replacement race: hash one

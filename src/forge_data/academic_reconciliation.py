@@ -180,16 +180,63 @@ def _path_metadata(root, relative):
     for number, part in enumerate(parts):
         current = current / part
         info = current.lstat()
-        _require(not stat.S_ISLNK(info.st_mode), "symlink_path")
+        _require(not stat.S_ISLNK(info.st_mode)
+                 and not (getattr(info, "st_file_attributes", 0) & 0x400), "symlink_path")
         _require(stat.S_ISREG(info.st_mode) if number == len(parts) - 1
                  else stat.S_ISDIR(info.st_mode), "nonregular_path")
 
 
+def _secure_open_backend():
+    if os.name == "nt":
+        return "windows"
+    if (os.name == "posix" and all(hasattr(os, flag) for flag in
+            ("O_NOFOLLOW", "O_DIRECTORY", "O_NONBLOCK"))
+            and os.open in os.supports_dir_fd):
+        return "posix"
+    return None
+
+
+def _read_verified_descriptor(fd, expected_size, expected_hash, limit):
+    """Bound and verify bytes from the already secured descriptor."""
+    before = os.fstat(fd)
+    _require(stat.S_ISREG(before.st_mode), "nonregular_content")
+    _require(type(expected_size) is int and 0 < expected_size <= limit
+             and before.st_size == expected_size, "content_size_mismatch")
+    chunks = []
+    remaining = expected_size + 1
+    while remaining:
+        chunk = os.read(fd, min(remaining, 65536))
+        if not chunk:
+            break
+        chunks.append(chunk)
+        remaining -= len(chunk)
+    after = os.fstat(fd)
+    signature = lambda s: (s.st_dev, s.st_ino, s.st_size, s.st_mtime_ns, s.st_ctime_ns)
+    _require(signature(before) == signature(after), "content_changed_during_read")
+    data = b"".join(chunks)
+    _require(len(data) == expected_size, "content_size_mismatch")
+    _require(_sha(data) == expected_hash, "content_hash_mismatch")
+    return data
+
+
 def _read_confined(root, relative, expected_size, expected_hash, limit):
-    """Open every component without following links; verify one descriptor."""
-    _require(hasattr(os, "O_NOFOLLOW"), "secure_open_unsupported")
+    """Reject linked paths and verify bytes from one secured descriptor.
+
+    Windows uses the existing locked reader's reparse, final-path and identity
+    checks before reading; its held handle denies ordinary write/delete opens.
+    POSIX walks components with dir_fd/O_NOFOLLOW. Unsupported backends fail closed.
+    """
+    backend = _secure_open_backend()
+    _require(backend in {"windows", "posix"}, "secure_open_unsupported")
     parts = _parts(relative)
     absolute = Path(root).absolute()
+    if backend == "windows":
+        from .windows_snapshot import SnapshotBlocked, locked_reader
+        try:
+            with locked_reader(absolute.joinpath(*parts)) as stream:
+                return _read_verified_descriptor(stream.fileno(), expected_size, expected_hash, limit)
+        except SnapshotBlocked:
+            raise InputError("content_missing_changed_or_inaccessible") from None
     descriptors = []
     try:
         directory = os.open("/", os.O_RDONLY | os.O_DIRECTORY)
@@ -200,25 +247,7 @@ def _read_confined(root, relative, expected_size, expected_hash, limit):
             descriptors.append(directory)
         fd = os.open(parts[-1], os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK, dir_fd=directory)
         descriptors.append(fd)
-        before = os.fstat(fd)
-        _require(stat.S_ISREG(before.st_mode), "nonregular_content")
-        _require(type(expected_size) is int and 0 < expected_size <= limit
-                 and before.st_size == expected_size, "content_size_mismatch")
-        chunks = []
-        remaining = expected_size + 1
-        while remaining:
-            chunk = os.read(fd, min(remaining, 65536))
-            if not chunk:
-                break
-            chunks.append(chunk)
-            remaining -= len(chunk)
-        after = os.fstat(fd)
-        signature = lambda s: (s.st_dev, s.st_ino, s.st_size, s.st_mtime_ns, s.st_ctime_ns)
-        _require(signature(before) == signature(after), "content_changed_during_read")
-        data = b"".join(chunks)
-        _require(len(data) == expected_size, "content_size_mismatch")
-        _require(_sha(data) == expected_hash, "content_hash_mismatch")
-        return data
+        return _read_verified_descriptor(fd, expected_size, expected_hash, limit)
     finally:
         for descriptor in reversed(descriptors):
             os.close(descriptor)

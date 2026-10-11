@@ -1,16 +1,16 @@
 # SLM-1-
 # FORGE — Training Data & Knowledge Repository
 
-Current reference runtime: [authenticated SQLite snapshot fix](docs/REFERENCE_SNAPSHOT_FIX_20261011.md).
-Independent v17 review found a reproducible temporary-index replacement race.
-The fixed v19 review launcher uses captured, hash-verified database bytes and
-approved source descriptors; the old v17 launcher remains historical and should
-not be used. Independent retest is pending. The source excerpt is unchanged and
-no additional content is released. Exact CPU dependencies are now available;
-the full Windows run is 200 pass / 17 fail / one error, with all remaining limits
-confined to POSIX-dependent reconciliation and symlink privilege tests.
+Current checkpoint: [second exact reference and Windows reconciliation](docs/COULOMB_COMPONENT_WINDOWS_20261011.md).
+Independent v19 integrity review passed 75 checks and 18 pinned regressions. Its
+accepted runtime now also serves one separately packaged page-one charge/unit
+reference in private v21; the existing page-four reference remains in v19.
+The old vulnerable v17 launcher must not be used. Native Windows reconciliation
+now uses the existing locked reader. The final CPU suite has 227 passes, zero
+failures/errors and two file-symlink privilege skips across 229 methods. Native
+POSIX execution and independent review of the new Windows adapter remain open.
 
-Latest bounded release: [one private static prose reference](docs/ACADEMIC_REFERENCE_EXCERPT_20261011.md)
+First bounded release: [one private static prose reference](docs/ACADEMIC_REFERENCE_EXCERPT_20261011.md)
 is available for local search and explicit attributed quotation. The private
 receipt records the user's use basis, exact text/source hashes and page region.
 Known related families are reference-only and excluded from independent
