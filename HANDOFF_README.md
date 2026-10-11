@@ -1,17 +1,18 @@
 # Current FORGE handoff — October 11, 2026 local continuation
 
-Latest checkpoint: [four separately served annotations](docs/REVIEWED_ANNOTATIONS_20261011.md).
-V23 independently passed 677 artifact assertions, 16 scientific methods and 18
-runtime regressions, with two minor text corrections requested. V24 applies them
-in new notes and serves four original excerpts with complete separate reviewed
-annotations/corroboration. The existing safe runtime preserves the distinction
-in actual find and quote JSON output without implementation changes.
-Nine references total; the prior five and all 342 inventoried v17-v23 files are
-unchanged. Owner checks pass 258/258, three correction methods and 18 runtime
-methods. Copper numbers and the missing loop mark remain unreleased; no SFT or
-training is added. Use v24/review-target.json for independent revision/display
-review. Native POSIX and two Windows file-symlink cases remain open. V17's old
-launcher is vulnerable.
+Latest checkpoint: [one local catalog for all nine references](docs/REFERENCE_CATALOG_20261011.md).
+V24 independently passed 1,274 artifact assertions, 56 tampering probes, 16
+scientific methods and 18 runtime methods, with bounded acceptance requiring
+complete JSON citation context. V25 supplies one pinned catalog/find/quote entry
+point, preserving full package responses and visibly separate annotations.
+See the [usage guide](tools/academic_references/README.md); no individual launcher
+knowledge is needed. Every operation verifies all nine packages before output.
+Owner validation passed 12 wrapper methods, 222 assertions across 44 CLI calls,
+and 18 unchanged runtime methods. All 472 inventoried v17-v24 files and six
+owned-code pins remain unchanged. V25/review-target.json is the new independent
+review target. No SFT, training, general Qwen generator or calculation coupling
+is added. Copper/loop/protected holds and the prior platform gaps remain.
+
 Older pending-review/all-nine-HOLD statements below are historical.
 
 The usable entry point is the [structured request wizard/CLI](tools/owned_request/README.md),

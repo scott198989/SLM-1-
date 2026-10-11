@@ -1,5 +1,28 @@
 # FORGE handoff log
 
+## 2026-10-11 - one entry point for nine accepted references
+
+Independent v24 review accepted all nine separately pinned references with the
+complete JSON citation context preserved. V25 adds a small CPU-only wrapper and
+private pinned catalog over the unchanged accepted runtime and individual indexes.
+The readable view labels original source and separate annotation, then includes
+the complete response. Catalog filtering, separate lexical searches and explicit
+quotation are supported. No retrieval-to-calculation path exists.
+
+Owner validation passed 12 synthetic wrapper methods, 222 assertions across 44
+actual CLI calls, and 18 unchanged runtime regression methods. The initial test
+fixture lacked the identifier required by the accepted quote protocol; fixing the
+fixture resolved that failure. Frozen historical logs retain the failed attempt.
+All 472 inventoried v17-v24 files, six owned-code pins, 42 prior source/evidence
+pins, five relation metadata inputs and the table register remain unchanged.
+
+The new private v25 review-target.json is ready for independent wrapper review.
+General Qwen generation remains unavailable. The eight-function calculation tool
+is separate. No SFT, training, GPU work, upload, push or source deletion occurred.
+Prior source-wide/protected holds and platform gaps remain. See
+[commands](tools/academic_references/README.md) and
+[review scope](docs/REFERENCE_CATALOG_20261011.md).
+
 ## 2026-10-11 - corrected notes served as separate reference annotations
 
 Independent v23 review accepted the six bounded dispositions with two precision

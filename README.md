@@ -1,17 +1,18 @@
 # SLM-1-
 # FORGE — Training Data & Knowledge Repository
 
-Current checkpoint: [four separate reviewed annotations](docs/REVIEWED_ANNOTATIONS_20261011.md).
-Private v24 adds four individually pinned source references with clearly labeled
-annotations, using the accepted runtime unchanged. Original excerpts stay separate
-from the complete explanations and corroborating citations in find/quote output.
-The two v23 review corrections are applied only in this successor version.
-There are nine separate references; the five earlier references and all 342
-inventoried v17-v23 files are unchanged. All 258 serving checks, three correction
-regressions and 18 runtime regressions pass. Revision/serving review is pending.
-Copper numbers and the missing loop mark remain unreleased. No SFT or training.
-Native POSIX and two file-symlink cases remain open. The vulnerable v17 launcher
-must not be used.
+Current checkpoint: [one local catalog for nine accepted references](docs/REFERENCE_CATALOG_20261011.md).
+The private v25 entry point provides catalog/find/quote over the existing separate
+indexes. Readable output labels source and reviewed annotation, and includes the
+complete original JSON citation context. No merged index or calculation is added.
+Independent v24 review accepted the nine references with complete context. V25
+passes 12 wrapper methods, 222 CLI assertions and 18 runtime regressions; its own
+independent review is pending. All 472 prior files and six owned-tool pins remain
+unchanged. See the [command guide](tools/academic_references/README.md).
+Copper numbers and the clipped loop remain unreleased. No new SFT or training.
+General Qwen generation is unavailable; the eight-function calculation prototype
+is a separate tool. Native POSIX and two file-symlink cases remain open.
+The vulnerable v17 launcher must not be used.
 
 First bounded release: [one private static prose reference](docs/ACADEMIC_REFERENCE_EXCERPT_20261011.md)
 is available for local search and explicit attributed quotation. The private

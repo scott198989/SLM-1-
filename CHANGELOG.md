@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-10-11 - unified local reference catalog
+
+- Added one CPU-only catalog/find/quote wrapper for all nine accepted packages.
+  Every operation verifies all packages; original indexes and runtime are reused
+  separately. Complete JSON context accompanies the readable source/annotation view.
+- Recorded v24 independent bounded acceptance. V25 passes 12 wrapper methods,
+  222 CLI assertions and 18 runtime methods; new-wrapper independent review is pending.
+  Preserved 472 prior files, six owned pins and existing source/evidence/role holds.
+- Added no SFT, training, GPU work, uploads or calculation coupling.
+  [Usage and validation](docs/REFERENCE_CATALOG_20261011.md).
+
 ## 2026-10-11 - separately served reviewed annotations
 
 - Recorded bounded v23 independent acceptance with two precision corrections.
