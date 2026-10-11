@@ -1,5 +1,23 @@
 # FORGE handoff log
 
+## 2026-10-11 — local visible-page reconciliation complete with three obstacles
+
+Recorded 14:29 UTC. Scott's authorized continuation reviewed all 38 candidate
+pages against preserved source rasters and alternate representations. The private
+v11 package records 35 visible-page passes, three explicit partial pages, 97
+figure occurrences and seven tables. Four exclusions and all nine source-family
+HOLDs remain; zero downstream releases. This is one model-assisted review, with
+scientific correctness and unavailable media explicitly separate.
+
+Fifteen synthetic boundary tests and the full private structural check passed,
+including 566 evidence hashes and exact crop pixels. Source-obscured caption/axis
+text and a source-truncated panel mark need clean source-side evidence. The
+[detailed public summary](docs/VISIBLE_PAGE_FIDELITY_20261011.md) records scope,
+validation, limitations and next steps. Private transcripts/images stay outside
+Git. Only local code/docs commits are authorized for this continuation; no push,
+upload, deletion, Qwen training or additional GPU run occurred. The earlier
+embedding smoke remains a separate completed runtime diagnostic.
+
 ## 2026-10-07 — identity reconciliation completed; machine handoff incomplete
 
 <a id="forge-handoff-20261007-162351z"></a>

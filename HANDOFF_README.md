@@ -1,4 +1,14 @@
-# Current FORGE handoff — October 7, 2026
+# Current FORGE handoff — October 11, 2026 local continuation
+
+Read the latest [handoff log](HANDOFF_LOG.md) and
+[visible-page report](docs/VISIBLE_PAGE_FIDELITY_20261011.md). All 38 candidate
+pages now have detailed private records: 35 visible-content passes and three
+source-pixel obstacles. All nine source families remain HOLD; no data release or
+Qwen training follows from this result. Generic code and docs are local commits;
+private evidence remains outside Git and no remote synchronization was performed.
+The earlier guarded embedding runtime diagnostic is separately documented.
+
+## Historical October 7 checkpoint
 
 Scott lifted the October 6 pause and assigned this bounded nine-source
 continuation directly. Start with the latest entry in [HANDOFF_LOG.md](HANDOFF_LOG.md).

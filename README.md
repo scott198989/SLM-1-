@@ -1,6 +1,14 @@
 # SLM-1-
 # FORGE — Training Data & Knowledge Repository
 
+October 11 local continuation: the authorized private 38-page reconciliation now
+has **35 visible-page fidelity passes and three explicit partial pages**; all nine
+source families remain HOLD and no training/RAG data were released. See the
+[review and validation report](docs/VISIBLE_PAGE_FIDELITY_20261011.md) and
+[guarded embedding runtime report](docs/EMBEDDING_RUNTIME_RESULTS_20261011.md).
+These local branch results supersede older status statements only for their
+bounded scopes. No Qwen training, remote push or private upload occurred.
+
 October 7 continuation: Scott explicitly lifted the October 6 pause for bounded
 nine-source isolation/extraction-quality preparation. The latest
 [handoff](HANDOFF_LOG.md) corrects the earlier immutable-database inference,

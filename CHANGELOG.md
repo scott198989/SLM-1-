@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-10-11 — source-bound visible-page reconciliation
+
+- Completed detailed private review records for all 38 candidate pages: 35 visible
+  fidelity passes, three partial pages with explicit source-pixel obstacles,
+  97 figure occurrences and seven tables. Preserved raw representations, earlier
+  review revisions, four exclusions and every downstream hold.
+- Added a read-only evidence checker and 15 synthetic boundary tests. The private
+  validation passed 566 evidence hashes, page bindings, exact crop pixels, table
+  associations and the omission ledger. Structural checks cannot grant semantic
+  or release approval.
+- Documented source errors separately from extraction errors and static-content
+  completeness separately from unavailable media. See
+  [review results](docs/VISIBLE_PAGE_FIDELITY_20261011.md). Local checkpoint only;
+  no remote push or private data publication.
+
 ## 2026-10-07 - Correct database inference and reconcile existing handoff identities
 
 <a id="forge-change-20261007-162351z"></a>
