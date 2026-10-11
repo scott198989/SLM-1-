@@ -1,6 +1,7 @@
 """Meaningful preview/confirmation boundaries and scripted wizard workflows."""
 import contextlib
 import copy
+import hashlib
 import io
 import json
 from pathlib import Path
@@ -9,7 +10,7 @@ from unittest.mock import patch
 
 from tools.owned_retrieval import answerability, harness
 from tools.owned_retrieval import test_answerability as source_fixture
-from .cli import RequestSession, print_preview, save_new, sha_value, wizard
+from .cli import RequestSession, print_preview, read_verified_json, save_new, sha_value, wizard
 
 
 class RequestInterfaceTests(unittest.TestCase):
@@ -48,6 +49,90 @@ class RequestInterfaceTests(unittest.TestCase):
         self.assertEqual(result['status'], 'SUPPORTED_CALCULATION')
         self.assertEqual(result['confirmed_request'], request)
         self.assertEqual(result['assessment']['supported_answer']['stress']['value'], 10000)
+
+    def test_replace_after_capture_executes_only_acknowledged_bytes(self):
+        request = self.fixture.request(wanted=['stress'])
+        request['arguments'].update(force={'value': 18, 'unit': 'N'},
+                                    area={'value': .03, 'unit': 'm^2'},
+                                    allowable_strength={'value': 9000, 'unit': 'Pa'})
+        path, pin = save_new(self.root/'race-after.json', self.session.preview(request))
+        changed = copy.deepcopy(request); changed['arguments']['force']['value'] = 36
+        replacement = (json.dumps(self.session.preview(changed), indent=2) + '\n').encode()
+        original_read = Path.read_bytes
+        reads = []
+
+        def capture_then_replace(file):
+            payload = original_read(file)
+            if file.resolve() == path:
+                reads.append(file)
+                file.write_bytes(replacement)
+            return payload
+
+        with patch.object(Path, 'read_bytes', capture_then_replace):
+            result = self.session.execute(path, pin)
+        self.assertEqual(len(reads), 1)
+        self.assertNotEqual(harness.digest(path), pin)
+        self.assertEqual(result['preview_sha256'], pin)
+        self.assertEqual(result['confirmed_request'], request)
+        self.assertEqual(result['assessment']['supported_answer']['stress'], {'value': 600.0, 'unit': 'Pa'})
+
+    def test_replace_before_capture_rejects_old_confirmation(self):
+        request = self.fixture.request()
+        path, pin = save_new(self.root/'race-before.json', self.session.preview(request))
+        changed = copy.deepcopy(request); changed['arguments']['force']['value'] *= 2
+        replacement = (json.dumps(self.session.preview(changed), indent=2) + '\n').encode()
+        original_read = Path.read_bytes
+
+        def replace_then_capture(file):
+            if file.resolve() == path:
+                file.write_bytes(replacement)
+            return original_read(file)
+
+        with patch.object(Path, 'read_bytes', replace_then_capture), patch.object(self.session.gate._calculator, 'execute_tool', side_effect=AssertionError('Changed preview must not execute')):
+            with self.assertRaises(harness.IntegrityError):
+                self.session.execute(path, pin)
+
+    def test_save_token_binds_serialized_bytes_even_if_file_replaced_on_close(self):
+        path = (self.root/'race-save.json').resolve()
+        value = {'reviewed': 'original'}
+        payload = (json.dumps(value, indent=2) + '\n').encode()
+        original_open = Path.open
+
+        class ReplaceOnClose:
+            def __enter__(self):
+                self.stream = original_open(path, 'xb')
+                return self.stream
+
+            def __exit__(self, exc_type, exc, tb):
+                self.stream.close()
+                with original_open(path, 'wb') as replacement:
+                    replacement.write(b'{"reviewed":"replacement"}')
+
+        def racing_open(file, mode='r', *args, **kwargs):
+            if file.resolve() == path and mode in ('x', 'xb'):
+                return ReplaceOnClose()
+            return original_open(file, mode, *args, **kwargs)
+
+        with patch.object(Path, 'open', racing_open):
+            _, token = save_new(path, value)
+        self.assertEqual(token, hashlib.sha256(payload).hexdigest())
+        self.assertNotEqual(token, harness.digest(path))
+        with self.assertRaises(harness.IntegrityError):
+            read_verified_json(path, token, 'Snapshot changed')
+
+    def test_verified_buffer_strict_json_rejects_duplicate_nonfinite_and_invalid_text(self):
+        bad = [b'{"request":1,"request":2}', b'{"request":{"x":1,"x":2}}',
+               b'{"x":NaN}', b'{"x":Infinity}', b'{"x":-Infinity}',
+               b'{"x":1e999}', b'{"x":-1e999}', b'{"x":1} trailing',
+               b'{"x":"\xff"}', b'{"x":1,}']
+        for index, payload in enumerate(bad):
+            with self.subTest(payload=payload):
+                path = self.root/f'invalid-{index}.json'; path.write_bytes(payload)
+                with self.assertRaises(harness.IntegrityError):
+                    read_verified_json(path, hashlib.sha256(payload).hexdigest(), 'Bad hash')
+        good = {'nested': {'tiny': 1e-200}, 'number': 600, 'flag': True, 'empty': None}
+        path, token = save_new(self.root/'valid-strict.json', good)
+        self.assertEqual(read_verified_json(path, token, 'Bad hash'), good)
 
     def test_edited_preview_or_source_requires_new_review(self):
         p = self.session.preview(self.fixture.request())

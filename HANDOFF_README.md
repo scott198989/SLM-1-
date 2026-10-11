@@ -4,10 +4,12 @@ The usable entry point is the [structured request wizard/CLI](tools/owned_reques
 with its trusted local launcher in private v15. It collects explicit fields,
 previews authenticated evidence without calculating, then requires confirmation
 of the exact saved preview. Results echo inputs and assumptions and display
-nullable/approximate statuses. The gate's independent-review findings have owner
-fixes at 281807c; recheck dispatch is blocked pending direct user authorization to
-message the reviewer task. Read the [numerical correction scope](docs/OWNED_NUMERIC_REVIEW_FIXES_20261011.md)
-before treating older 48/48 statements as current qualification.
+nullable/approximate statuses. Independent recheck confirmed the numerical fixes
+at 281807c and found one preview hash/read race. The [confirmation fix](docs/PREVIEW_CONFIRMATION_FIX_20261011.md)
+now hashes and parses the same captured bytes and binds creation tokens to the
+written serialization. All 48 relevant CPU tests pass; parent coordination will
+route independent verification. Read the [numerical correction scope](docs/OWNED_NUMERIC_REVIEW_FIXES_20261011.md)
+before treating older 48/48 probe statements as current qualification.
 
 Start with the [owned-code answerability milestone](docs/OWNED_ANSWERABILITY_RESULTS_20261011.md).
 The local gate requires an explicit capability, requested facts/outputs, units

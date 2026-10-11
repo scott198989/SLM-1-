@@ -1,5 +1,30 @@
 # FORGE handoff log
 
+## 2026-10-11 16:11 UTC - exact preview snapshot confirmation fix
+
+Independent recheck passed 20 prior request probes and six numerical-oracle
+checks, confirming the earlier fixes. Its interface checks passed 19/20 and
+found a P2 time-of-check/time-of-use race. Owner reproduction confirmed that
+hashing an 18 N preview and then parsing a substituted 36 N preview returned
+1200 Pa with the original token. The before-fix result is preserved in v16.
+
+The CLI now reads bytes once, verifies that buffer and strictly parses the same
+buffer. The review-target loader uses this helper too. Token creation hashes
+the serialized bytes it writes, eliminating a related path reopen after write.
+Duplicate keys, nonfinite/overflowing numbers, malformed JSON and invalid UTF-8
+reject. Existing source/contract/schema checks remain; numerical gate and source
+bytes are unchanged. Four deterministic regression methods bring the relevant
+CPU suite to 48 passing tests (12 interface, 20 gate, three oracle, 13 retrieval).
+Actual owned-data checks confirm one preview read, rejection for replacement
+before capture and 18 N / 600 Pa preservation for replacement after capture.
+The existing trusted launcher also passed a normal confirmed run.
+
+Parent coordination owns independent verification dispatch for this fix; no
+child cross-task message is required. Preserve reviewer workspaces and earlier
+frozen bundles. See [fix scope](docs/PREVIEW_CONFIRMATION_FIX_20261011.md) and
+private v16 for baseline, tests and verification. No GPU, source release, model
+generation/download, training, held-data use, remote push or publication.
+
 ## 2026-10-11 - usable explicit request preview and execution
 
 Added tools/owned_request without further gate edits after 281807c. The wizard

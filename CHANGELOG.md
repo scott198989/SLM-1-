@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-10-11 16:11 UTC - preview confirmation byte binding
+
+- Reproduced the independent P2 preview replacement race: 18 N acknowledgment
+  could execute a swapped 36 N request. Preserve that failed baseline.
+- Hash and strictly parse the same single-read buffer for preview and review
+  target loading. Creation tokens hash the exact serialized bytes written.
+- Added deterministic before/after-capture, write-close and strict JSON
+  regressions. All 48 relevant CPU tests passed; actual owned-data checks reject
+  a pre-capture replacement or preserve the acknowledged 18 N / 600 Pa result.
+- Independent numerical/oracle recheck is confirmed; parent coordination will
+  route verification of this additional fix. [Details](docs/PREVIEW_CONFIRMATION_FIX_20261011.md).
+
 ## 2026-10-11 - usable local structured request preview
 
 - Added an eight-operation wizard and list/describe/template/preview/run commands.

@@ -38,5 +38,8 @@ values and source limits rather than showing unexplained nulls.
 
 Thirty-six CPU tests passed (20 gate, three numerical-oracle, 13 retrieval).
 Owner rechecks and before/after receipts live in private v15. Independent recheck
-is requested separately; owner tests do not close that review themselves.
+subsequently confirmed the fixes in 20 prior request and six oracle checks. It
+also found a separate interface preview race, addressed in the
+[confirmation fix](PREVIEW_CONFIRMATION_FIX_20261011.md). This bounded evidence
+does not certify general numerical or engineering validity.
 No GPU, model generation/download, training, held-data use, release or publication.

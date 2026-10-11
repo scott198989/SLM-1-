@@ -4,14 +4,17 @@
 The [local request wizard and preview CLI](tools/owned_request/README.md) now
 provides explicit operation/output/quantity/unit/assumption selection, a cited
 scope preview, and confirmation before deterministic execution. It echoes the
-confirmed request and explains nullable/approximate outputs. Eight interface
-tests and sixteen actual CLI workflows passed on CPU. Independent recheck of
-the numerical corrections is pending; no free-form understanding is claimed.
+confirmed request and explains nullable/approximate outputs. The independent
+recheck confirmed the numerical fixes and found a preview replacement race.
+The [confirmation fix](docs/PREVIEW_CONFIRMATION_FIX_20261011.md) binds hashing and
+parsing to one byte buffer; 48 relevant CPU tests pass. Parent coordination will
+route its independent verification. No free-form understanding is claimed.
 
 Independent review found and reproduced extreme-range arithmetic failures and
 a unit/near-zero test-oracle gap in the initial gate. The [review corrections](docs/OWNED_NUMERIC_REVIEW_FIXES_20261011.md)
 add explicit numerical limits, strict quantity oracles and nullable-output
-statuses. Original results remain historical; independent recheck is pending.
+statuses. Independent recheck confirmed these bounded fixes; it is not a general
+numerical or engineering certification. Original results remain historical.
 
 Latest October 11 milestone: the [owned-code answerability gate](docs/OWNED_ANSWERABILITY_RESULTS_20261011.md)
 separates search candidates from source extracts and deterministic results for

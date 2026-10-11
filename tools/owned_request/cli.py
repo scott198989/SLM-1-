@@ -32,13 +32,46 @@ def sha_value(value):
     return hashlib.sha256(canonical(value)).hexdigest()
 
 
+def read_verified_json(path, expected_sha, mismatch_message):
+    """Hash and parse one captured buffer; never reopen a verified path."""
+    if not expected_sha:
+        raise harness.IntegrityError(mismatch_message)
+    payload = Path(path).read_bytes()
+    if hashlib.sha256(payload).hexdigest() != expected_sha:
+        raise harness.IntegrityError(mismatch_message)
+
+    def pairs(items):
+        result = {}
+        for key, value in items:
+            if key in result:
+                raise harness.IntegrityError('Duplicate JSON key: ' + key)
+            result[key] = value
+        return result
+
+    def finite_float(text):
+        value = float(text)
+        if not math.isfinite(value):
+            raise harness.IntegrityError('Nonfinite JSON number')
+        return value
+
+    def reject_constant(text):
+        raise harness.IntegrityError('Nonfinite JSON constant: ' + text)
+
+    try:
+        return json.loads(payload.decode('utf-8'), object_pairs_hook=pairs,
+                          parse_float=finite_float, parse_constant=reject_constant)
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        raise harness.IntegrityError('Invalid UTF-8 JSON snapshot: ' + str(exc)) from exc
+
+
 def save_new(path, value):
     path = Path(path).resolve()
+    payload = (json.dumps(value, indent=2, allow_nan=False) + '\n').encode('utf-8')
+    token = hashlib.sha256(payload).hexdigest()
     path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open('x', encoding='utf-8', newline='\n') as stream:
-        json.dump(value, stream, indent=2, allow_nan=False)
-        stream.write('\n')
-    return path, harness.digest(path)
+    with path.open('xb') as stream:
+        stream.write(payload)
+    return path, token
 
 
 def show_value(value):
@@ -55,11 +88,10 @@ def show_value(value):
 
 class RequestSession:
     def __init__(self, target_path, target_sha):
-        if harness.digest(target_path) != target_sha:
-            raise harness.IntegrityError('Review target hash does not match the trusted launcher.')
         self.target_sha = target_sha
         self.target_path = Path(target_path).resolve()
-        self.target = harness.read_json(target_path)
+        self.target = read_verified_json(target_path, target_sha,
+                                        'Review target hash does not match the trusted launcher.')
         self._check_code()
         source = self.target['manifest']
         self.gate = answerability.AnswerabilityGate(harness.LocalRetriever(source['path'], source['sha256']))
@@ -205,9 +237,8 @@ class RequestSession:
                 'notice': 'Preflight checks scope/completeness only. Numerical/domain validation occurs after confirmation in the frozen gate. No free-form interpretation.'}
 
     def execute(self, preview_path, confirmation):
-        if not confirmation or harness.digest(preview_path) != confirmation:
-            raise harness.IntegrityError('Confirmation must match the exact saved preview SHA-256. Preview and review it again.')
-        saved = harness.read_json(preview_path)
+        saved = read_verified_json(preview_path, confirmation,
+                                   'Confirmation must match the exact saved preview SHA-256. Preview and review it again.')
         if not isinstance(saved, dict) or 'request' not in saved:
             raise harness.IntegrityError('Not a saved request preview.')
         fresh = self.preview(saved['request'])

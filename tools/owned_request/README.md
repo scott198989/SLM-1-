@@ -55,6 +55,11 @@ these in the editable request and save a new preview. The saved preview binds th
 request, source, gate code, contract and scope. A changed preview or dependency
 fails closed and requires a new review. A hash acknowledgment records which
 preview was accepted; it is not proof of human identity or independent review.
+Execution captures bytes once, verifies their hash, and parses that same buffer
+with duplicate-key/nonfinite/malformed JSON rejection. Creation tokens likewise
+hash the exact serialized bytes written, rather than reopening the file. A
+concurrent replacement either fails the hash or leaves execution bound to the
+already captured acknowledged snapshot.
 
 `run` rechecks the exact preview and current evidence, then passes the same
 structured request through the restrictive gate. The gate may still refuse
@@ -65,7 +70,8 @@ made. Conditions are assertions supplied by the caller, not observed facts.
 
 ## Numerical policy and review status
 
-The corrected gate is frozen at commit 281807c for independent recheck. Nonzero
+The corrected gate is frozen at commit 281807c. Independent recheck confirmed
+the earlier numerical/oracle fixes in 20 request and six oracle checks. Nonzero
 numeric inputs must have magnitude 1e-50 through 1e50, with additional bounded
 time/exponential limits for step response. Source sign/domain rules remain.
 These are conservative operating bounds, not a general precision guarantee;
@@ -73,10 +79,11 @@ rounding, cancellation and ill-conditioning can remain within them. Unit
 conversion is algebraic, not a physical plausibility test. See
 [review fixes](../../docs/OWNED_NUMERIC_REVIEW_FIXES_20261011.md).
 
-Eight interface boundary/workflow tests and sixteen real CLI request-preview-run
-cases passed on CPU, plus a scripted interactive wizard and confirmation/free-text
-option checks. These are owner-run tests, not independent user or expert review.
-The original failed `.01` entry test and subsequent fix are retained privately.
-The independent recheck request was blocked by automatic approval review pending
-direct user authorization to message the reviewer task. No completed recheck is
-claimed. Academic decisions and all existing data holds remain separate.
+The independent interface recheck passed 19/20 cases and exposed a hash/read
+replacement race. After the [confirmation fix](../../docs/PREVIEW_CONFIRMATION_FIX_20261011.md),
+12 interface tests and 36 relevant gate/oracle/retrieval tests pass on CPU. A new
+owner reproduction checks both sides of the capture boundary and a real CLI run.
+Parent coordination will route independent verification of this fix. The earlier
+16 CLI workflows and `.01` failure/fix records remain historical evidence.
+No broad expert certification is claimed. Academic decisions and holds remain
+separate and unchanged.
