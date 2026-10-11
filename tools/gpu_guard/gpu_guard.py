@@ -30,7 +30,7 @@ def main():
     simulation=spec.get("simulation",False)
     command=spec["command"]
     script=Path(command[1]).resolve()
-    allowed=[ROOT/"test_worker.py"] if simulation or spec.get("cpu_only_diagnostic",False) else [ROOT/"smoke_inference.py",ROOT/"runtime_capability.py"]
+    allowed=[ROOT/"test_worker.py"] if simulation or spec.get("cpu_only_diagnostic",False) else [ROOT/"smoke_inference.py",ROOT/"runtime_capability.py",ROOT/"query_inference.py"]
     if script not in allowed or not Path(command[0]).is_absolute():
         raise ValueError("Workload outside the explicit reviewed allowlist")
     if not 0 < spec.get("max_seconds",600) <= POLICY["max_workload_seconds"]:

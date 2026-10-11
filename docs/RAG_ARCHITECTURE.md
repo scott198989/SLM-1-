@@ -2,6 +2,12 @@
 
 The current local academic index is a review artifact. Production promotion requires chunk fidelity review, reliable family assignment, rights/privacy review and measured engineering retrieval quality. The tested lexical SQLite retrieval remains the baseline. On October 11, a separately authorized guarded embedding runtime smoke completed on eight owned-code reference chunks and eight demonstrator queries; it did not qualify the academic index or establish a serving deployment. See the [runtime results](EMBEDDING_RUNTIME_RESULTS_20261011.md) and [current readiness audit](READINESS_AUDIT_20261011.md).
 
+The subsequent [local owned-code CLI](OWNED_RETRIEVAL_RESULTS_20261011.md) compares
+BM25, saved dense vectors and RRF with source/citation/use/access checks. It
+returns evidence candidates only. New development probes expose the remaining
+answerability gap; this does not authorize academic-index promotion or establish
+an answering service.
+
 ## Data contracts and flow
 
 Immutable authorized source → extraction with page/slide/sheet/image identity → reviewed normalization with an edit map → exact and family deduplication → role/split assignment → approved text/table/visual records → frozen lexical index → retrieval → citation validation → answer plus evidence. Store original bytes and raw extraction privately. Preserve document SHA-256, processor revision, normalized unit hash, exact offsets, source location and reversible lineage for each chunk. Chunk at paragraphs/equations/table boundaries; never separate a question from its diagram or equation definitions. Duplicate text can have multiple citation aliases while stored once.

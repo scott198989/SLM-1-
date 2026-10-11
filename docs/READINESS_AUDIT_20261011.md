@@ -49,7 +49,7 @@ semantic independence. No sealed evaluation content was accessed.
 | Asset | Available evidence | Next requirement |
 |---|---|---|
 | Owned calculator reference | Eight local source-bound code chunks, eight demo queries and 16 finite normalized 768-dimensional vectors verified on CPU; existing private reference authorization | Reconcile the new snapshot with the approved chunk manifest, package citations/access filters and verify stale-source/abstention/serving behavior. Original nine-chunk index and graph remain unauthenticated here. |
-| Calculator SFT | Existing report: 16 examples, 4,430 Qwen / 2,793 assistant tokens | Actual artifact authentication, independent development data, appropriate evaluation and separate training decision. Training remains unauthorized. |
+| Calculator SFT | Existing report: 16 examples, 4,430 Qwen / 2,793 assistant tokens | Actual artifact authentication, independent development data and appropriate evaluation. Scott authorized training in principle at 13:02 UTC subject to the GPU guard and qualified data; older receipt flags are not current user-permission claims. No training is needed for the current retrieval stage. |
 | Academic references | Reviewed pages/figures/tables and explicit partial regions | Per-family rights/attribution/evaluation decisions, source-error review and exact release receipt before serving. |
 | Larger historical index / legacy SFT | Review and accounting receipts | Existing quality, rights and family gates; neither count nor technical PASS authorizes training or production retrieval. |
 | Embedding runtime | Earlier guarded frozen smoke completed; saved artifacts rechecked without loading the model | Versioned serving layer, qualified development comparisons, citation entailment and refusal checks. Demo hits are not statistical quality evidence. |
@@ -57,3 +57,10 @@ semantic independence. No sealed evaluation content was accessed.
 Local documentation only in this checkpoint. No original or reviewed dataset
 was changed, no partial content discarded, no exclusion broadened, no hold
 changed, no GPU run repeated, and no training, push or private upload occurred.
+
+Permission correction for subsequent work: the earlier “training unauthorized”
+wording described historical receipt fields too broadly. Current user authority
+permits guarded training in principle on qualified inputs; data qualification
+and all academic source holds remain separate and unchanged. The frozen private
+v12 receipt is retained, with the explicit correction in the subsequent v13
+decision bundle.

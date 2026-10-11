@@ -1,6 +1,14 @@
 # SLM-1-
 # FORGE — Training Data & Knowledge Repository
 
+Latest October 11 milestone: [local owned-code retrieval](docs/OWNED_RETRIEVAL_RESULTS_20261011.md)
+now compares lexical, dense and hybrid ranking over eight authenticated chunks.
+All three find 16/16 development targets first, but none establishes answerability
+for eight unsupported requests. The CLI returns evidence only. New query encoding
+used CPU after GPU idle preparation was refused; original smoke vectors remain.
+Training is authorized in principle subject to the GPU guard and qualified data;
+historical receipt flags are not a statement of current user permission.
+
 October 11 local continuation: the authorized private 38-page reconciliation now
 has **35 visible-page fidelity passes and three explicit partial pages**; all nine
 source families remain HOLD and no training/RAG data were released. See the

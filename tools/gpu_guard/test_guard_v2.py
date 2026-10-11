@@ -19,6 +19,17 @@ class HeartbeatTests(unittest.TestCase):
         self.assertIn('Synthetic test evidence cannot authorize live execution',result.stderr)
         self.assertFalse((run/'owned-workload.json').exists())
 
+    def test_query_workload_still_refuses_synthetic_live_baseline(self):
+        tag='query-synthetic-live-refusal-'+str(time.time_ns())
+        run=ROOT/'logs'/tag; spec=ROOT/'tests'/(tag+'.json')
+        atomic_json(spec,{'run_dir':str(run),'simulation':False,'max_seconds':10,
+            'command':[sys.executable,str(ROOT/'query_inference.py'),str(run)]})
+        result=subprocess.run([sys.executable,str(ROOT/'gpu_guard.py'),'--spec',str(spec)],
+            capture_output=True,text=True,timeout=5,creationflags=subprocess.CREATE_NO_WINDOW)
+        self.assertNotEqual(result.returncode,0)
+        self.assertIn('Synthetic test evidence cannot authorize live execution',result.stderr)
+        self.assertFalse((run/'owned-workload.json').exists())
+
     def test_transient_replace_contention(self):
         p=ROOT/'tests'/('transient-'+str(time.time_ns())+'.json')
         real=os.replace

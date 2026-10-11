@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-10-11 - bounded owned-code retrieval
+
+- Added local BM25/dense/RRF retrieval with exact source/hash/citation and
+  use/family/evaluation/access filters; 13 CPU boundary tests passed.
+- Compared 24 new same-agent development probes. All rankers found 16 answerable
+  targets first; all returned candidates for eight unsupported requests. No
+  automatic answerability claim or answer generator was added.
+- Preserved the original smoke vectors; encoded only new queries on CPU after
+  the fresh GPU idle check refused background utilization. GPU limits unchanged;
+  expanded guard CPU suite passed 33 tests.
+- Corrected training authority wording and prepared a concrete academic decision
+  bundle. See [results](docs/OWNED_RETRIEVAL_RESULTS_20261011.md).
+
 ## 2026-10-11 - source-family and deployment readiness audit
 
 - Audited exact per-family rights, attribution, evaluation, split and alias gaps

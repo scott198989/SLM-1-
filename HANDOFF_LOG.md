@@ -1,5 +1,31 @@
 # FORGE handoff log
 
+## 2026-10-11 - local owned-code retrieval harness and development comparison
+
+Built manifest-bound lexical, dense and hybrid retrieval over eight authenticated
+owned-code chunks with exact source/line/slice citations and pre-ranking use,
+family, evaluation and access filters. Original sixteen smoke vectors preserved;
+old nine-chunk index/graph not recovered. Twenty-four new same-agent development
+queries were created from the allowed source: sixteen answerable, eight unsupported.
+All rankers hit 16/16 targets first; all still return candidates for 8/8 unsupported
+requests. No answers are generated. A zero-lexical-score fusion bug was corrected
+with a regression test; original and corrected comparisons are retained.
+
+Thirteen retrieval tests and 33 GPU-guard CPU tests passed. Fresh GPU idle
+observation refused at 21% utilization; no inference launched, no thresholds
+relaxed. Bounded CPU/FP32 encoding completed in 19.39 seconds with the same pinned
+model, CUDA hidden and no document re-encoding. The backend difference from the
+saved GPU/BF16 document vectors is explicit. No new GPU cooldown was required.
+
+Scott's 13:02 training-in-principle authorization is recorded accurately: qualified
+data and guard requirements remain, while old dataset receipt flags do not revoke
+live authority. No training is required for this stage. The academic decision
+bundle asks for a use basis/attribution and a prospective evaluation-role choice;
+it invents no custodian and requests no guarantee about unknown facts.
+
+See [results and limitations](docs/OWNED_RETRIEVAL_RESULTS_20261011.md). Local
+commits only; no academic release, Qwen download, public server or external upload.
+
 ## 2026-10-11 - family release-readiness and deployment audit
 
 The private v12 audit separates completed fidelity work from rights/attribution,

@@ -1,5 +1,12 @@
 # Current FORGE handoff — October 11, 2026 local continuation
 
+Start with the [owned-code retrieval milestone](docs/OWNED_RETRIEVAL_RESULTS_20261011.md).
+The local CLI has tested source/citation/access filtering and lexical/dense/hybrid
+ranking. Development hits do not establish answerability; unsupported requests
+still retrieve candidates. No answering server or training was launched. The
+private v13 bundle contains the plain-English academic decision and explicitly
+corrects the earlier training-permission wording without changing data holds.
+
 Read the latest [handoff log](HANDOFF_LOG.md) and
 [visible-page report](docs/VISIBLE_PAGE_FIDELITY_20261011.md). All 38 candidate
 pages now have detailed private records: 35 visible-content passes and three

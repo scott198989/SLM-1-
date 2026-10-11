@@ -12,7 +12,7 @@ The tests cover missing/malformed/nonfinite telemetry, device/driver drift, ther
 
 ## Live execution requirements
 
-Live execution needs a separately reviewed workload, explicit authority for its inputs and purpose, a real idle baseline, verified identity/schema and a fresh healthy preflight. The only live script names currently accepted are `smoke_inference.py` and `runtime_capability.py`; their site-specific private implementations are intentionally absent here. CPU-only live-collector diagnostics accept only `test_worker.py`. This repository does not automatically launch, install, download or train anything.
+Live execution needs a separately reviewed workload, explicit authority for its inputs and purpose, a real idle baseline, verified identity/schema and a fresh healthy preflight. The live script names accepted are `smoke_inference.py`, `runtime_capability.py` and `query_inference.py`. The bounded query workload is in `tools/owned_retrieval`; its private input/model manifest must be pinned before it is copied into a live runtime. CPU-only live-collector diagnostics accept only `test_worker.py`. This repository does not automatically launch, install, download or train anything.
 
 The bounded policy aborts at core >=75 C, remaining thermal margin <=15 C, instant/average power >=350 W, required sensor loss, critical flags, sentry loss, changed power limit, exceeded 8 GiB total VRAM budget, or ten minutes. Available optional sensors becoming unavailable also abort. Unsupported memory/hotspot/physical RPM/connector sensors must be disclosed, not invented. The 85 C optional memory/hotspot thresholds are operational placeholders, not manufacturer-rated limits.
 
