@@ -2,7 +2,7 @@
 
 Source approval happens in the build recipe; search always rechecks the frozen
 manifest, index digest, every cited source and exact source slice. This pilot is
-for the approved engineering calculator reference, not the academic review DB.
+for individually approved references, never the bulk academic review DB.
 """
 
 import hashlib, json, re, sqlite3
@@ -61,12 +61,27 @@ def verify_assets(root, assets):
             raise ValueError("visual_asset_hash_or_scope_drift")
 
 
-def build(root, index, manifest_path, chunks, sealed_families):
+PROSE_PROFILE = "reviewed-static-prose-v1"
+PROSE_POLICY = {
+    "role": "REFERENCE_ONLY",
+    "training": False,
+    "independent_evaluation": False,
+    "public_redistribution": False,
+    "media_included": False,
+    "answer_generation": False,
+}
+
+
+def build(root, index, manifest_path, chunks, sealed_families, *, profile=None):
     index, manifest_path = Path(index), Path(manifest_path)
     if index.exists() or manifest_path.exists():
         raise FileExistsError("immutable_pilot_version_exists")
     if not chunks or not isinstance(sealed_families, set) or not sealed_families:
         raise ValueError("manifest_or_gold_missing")
+    if profile not in {None, PROSE_PROFILE}:
+        raise ValueError("unknown_reference_profile")
+    if profile == PROSE_PROFILE and len(chunks) != 1:
+        raise ValueError("prose_release_requires_exactly_one_chunk")
     seen = set()
     for c in chunks:
         if c["family_id"] in sealed_families:
@@ -87,6 +102,10 @@ def build(root, index, manifest_path, chunks, sealed_families):
         }:
             raise ValueError("visual_dependency_unresolved")
         verify_assets(root, c.get("visual_assets", []))
+        if profile == PROSE_PROFILE:
+            if c.get("use_policy") != PROSE_POLICY or not c.get("evidence_assets"):
+                raise ValueError("prose_policy_or_evidence_missing")
+            verify_assets(root, c["evidence_assets"])
     index.parent.mkdir(parents=True, exist_ok=True)
     db = sqlite3.connect(index)
     try:
@@ -120,6 +139,13 @@ def build(root, index, manifest_path, chunks, sealed_families):
         "academic_review_index_approved": False,
         "training_authorized": False,
     }
+    if profile == PROSE_PROFILE:
+        manifest.update({
+            "version": "forge-private-prose-reference-1",
+            "profile": PROSE_PROFILE,
+            "status": "PRIVATE_REFERENCE_PILOT",
+            "use_policy": PROSE_POLICY,
+        })
     manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     return manifest
 
@@ -137,8 +163,19 @@ def search(index, manifest_path, query, *, expected_manifest_sha256, limit=3):
         raise ValueError("pilot_manifest_anchor_drift")
     manifest = json.loads(encoded_manifest.decode("utf-8"))
     reject_sqlite_sidecars(index)
+    prose = manifest.get("profile") == PROSE_PROFILE
+    if manifest.get("profile") not in {None, PROSE_PROFILE}:
+        raise ValueError("unknown_reference_profile")
+    if prose and (
+        manifest.get("version") != "forge-private-prose-reference-1"
+        or manifest.get("use_policy") != PROSE_POLICY
+        or manifest.get("chunks") != 1
+        or len(manifest.get("chunk_ids", [])) != 1
+        or manifest.get("training_authorized") is not False
+    ):
+        raise ValueError("prose_manifest_scope_drift")
     if (
-        manifest["status"] != "PRIVATE_PRODUCTION_PILOT"
+        manifest["status"] != ("PRIVATE_REFERENCE_PILOT" if prose else "PRIVATE_PRODUCTION_PILOT")
         or sha(Path(index).read_bytes()) != manifest["index_sha256"]
     ):
         raise ValueError("pilot_manifest_or_index_drift")
@@ -165,12 +202,17 @@ def search(index, manifest_path, query, *, expected_manifest_sha256, limit=3):
         if source_slice(manifest["source_root"], cite["source"]) != text:
             raise ValueError("citation_text_drift")
         verify_assets(manifest["source_root"], cite.get("visual_assets", []))
+        if prose:
+            if cite.get("use_policy") != PROSE_POLICY or not cite.get("evidence_assets"):
+                raise ValueError("prose_policy_or_evidence_missing")
+            verify_assets(manifest["source_root"], cite["evidence_assets"])
         results.append(
             {
                 "id": identifier,
                 "text": text,
                 "citation": cite,
-                "scope": "calculator_reference_not_general_academic_or_image_understanding",
+                "scope": ("static_prose_reference_only_no_generated_answers" if prose
+                          else "calculator_reference_not_general_academic_or_image_understanding"),
             }
         )
     reject_sqlite_sidecars(index)

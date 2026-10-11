@@ -1,14 +1,23 @@
 # SLM-1-
 # FORGE — Training Data & Knowledge Repository
 
+Latest bounded release: [one private static prose reference](docs/ACADEMIC_REFERENCE_EXCERPT_20261011.md)
+is available for local search and explicit attributed quotation. The private
+receipt records the user's use basis, exact text/source hashes and page region.
+Known related families are reference-only and excluded from independent
+evaluation; other content, holds and page exclusions are preserved. Eighteen
+private development probes and 23 focused synthetic CPU tests passed. This adds
+zero SFT records and no model-training result. No push or upload occurred.
+
 The [local request wizard and preview CLI](tools/owned_request/README.md) now
 provides explicit operation/output/quantity/unit/assumption selection, a cited
 scope preview, and confirmation before deterministic execution. It echoes the
 confirmed request and explains nullable/approximate outputs. The independent
 recheck confirmed the numerical fixes and found a preview replacement race.
 The [confirmation fix](docs/PREVIEW_CONFIRMATION_FIX_20261011.md) binds hashing and
-parsing to one byte buffer; 48 relevant CPU tests pass. Parent coordination will
-route its independent verification. No free-form understanding is claimed.
+parsing to one byte buffer; 48 relevant owner CPU tests pass. The final independent
+recheck verified checkpoint 9da2349 with 54/54 CPU checks and no open findings in
+that bounded review. No free-form understanding is claimed.
 
 Independent review found and reproduced extreme-range arithmetic failures and
 a unit/near-zero test-oracle gap in the initial gate. The [review corrections](docs/OWNED_NUMERIC_REVIEW_FIXES_20261011.md)
@@ -27,9 +36,10 @@ after GPU idle preparation was refused; original smoke vectors remain.
 Training is authorized in principle subject to the GPU guard and qualified data;
 historical receipt flags are not a statement of current user permission.
 
-October 11 local continuation: the authorized private 38-page reconciliation now
+Earlier October 11 local continuation: the authorized private 38-page reconciliation
 has **35 visible-page fidelity passes and three explicit partial pages**; all nine
-source families remain HOLD and no training/RAG data were released. See the
+source families remained HOLD at that checkpoint and no training/RAG data were
+released then. The exact one-chunk reference exception above is newer. See the
 [review and validation report](docs/VISIBLE_PAGE_FIDELITY_20261011.md) and
 [guarded embedding runtime report](docs/EMBEDDING_RUNTIME_RESULTS_20261011.md).
 The subsequent [readiness audit](docs/READINESS_AUDIT_20261011.md) records exact

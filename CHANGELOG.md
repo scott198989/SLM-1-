@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-10-11 - one private academic prose reference
+
+- Reused the citation index for a separate one-chunk static-prose profile with
+  pinned purpose/family/attribution evidence. Added explicit reference search and
+  exact quotation; unsupported answer, calculation and media tasks abstain.
+- Recorded the private use basis and exact qualification in private v17. Known
+  related families are reference-only and excluded from independent evaluation;
+  other holds, exclusions, uncertain aliases and frozen records are preserved.
+- Actual private development probes passed 18/18; focused synthetic CPU tests
+  passed 23/23. The broader contracts suite needs unavailable SciPy. No model,
+  GPU, SFT release, training, push or publication. The owned-code prototype is
+  unchanged. [Scope and limits](docs/ACADEMIC_REFERENCE_EXCERPT_20261011.md).
+
 ## 2026-10-11 16:11 UTC - preview confirmation byte binding
 
 - Reproduced the independent P2 preview replacement race: 18 N acknowledgment

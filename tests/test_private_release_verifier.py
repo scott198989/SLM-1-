@@ -1,6 +1,6 @@
 """Synthetic real-entry-point regressions; no private release inputs are used."""
 
-from contextlib import redirect_stdout
+from contextlib import closing, redirect_stdout
 import hashlib
 import importlib.util
 import io
@@ -133,7 +133,7 @@ class PrivateReleaseVerifierTests(unittest.TestCase):
         self.assertEqual(self.snapshot(), before)
 
     def test_index_and_manifest_resigned_together_still_rejected(self):
-        with sqlite3.connect(self.index) as db:
+        with closing(sqlite3.connect(self.index)) as db, db:
             db.execute("UPDATE search SET text=text || ' changed'")
         value = json.loads(self.manifest.read_text())
         value["index_sha256"] = digest(self.index)
@@ -155,7 +155,7 @@ class PrivateReleaseVerifierTests(unittest.TestCase):
         self.assertEqual(self.snapshot(), before)
 
     def test_index_only_drift_is_rejected(self):
-        with sqlite3.connect(self.index) as db:
+        with closing(sqlite3.connect(self.index)) as db, db:
             db.execute("UPDATE search SET text=text || ' changed'")
         with self.assertRaisesRegex(ValueError, "pilot_index_anchor_drift"):
             self.run_entrypoint()

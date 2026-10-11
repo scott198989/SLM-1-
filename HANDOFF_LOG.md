@@ -1,5 +1,34 @@
 # FORGE handoff log
 
+## 2026-10-11 - narrow academic reference release
+
+User clarification supports private project use of professor-provided slides;
+it does not establish ownership, a formal license or redistribution permission.
+After exact page-image/text and recorded-terms checks, private v17 releases one
+static prose chunk for local reference search and explicit quotation. Original
+records and historical holds are preserved; the new receipt is an exact-chunk
+exception. Three known related families (five named sources, 23 members) are
+reference-only and excluded from independent evaluation. Other content stays
+unreleased, including all four excluded pages and three partial-page issues.
+
+The shared citation index gained an opt-in reviewed-prose profile. The new small
+request adapter uses that index and always treats lexical matches as candidates.
+It returns a quote only for explicit selection and refuses unsupported task
+types. No alternate calculator/generator implementation was introduced; the
+owned-code prototype from 9da2349425892bb74433772a97f3f7f852b2dc21 is unchanged.
+
+18 private development probes and 23 focused synthetic CPU regressions pass.
+These are same-author development checks, not independent evaluation. Windows
+test temporary storage and two unclosed fixture SQLite connections were corrected;
+the broader phase-three contracts import remains unavailable without SciPy.
+No dependency install, model, GPU, training, new SFT records or remote action.
+
+See [scope](docs/ACADEMIC_REFERENCE_EXCERPT_20261011.md) and private sibling
+`forge-academic-reference-pilot-20261011-v17/HANDOFF.md` for the manifest pin,
+source/region hashes, attribution, family disposition and runnable commands.
+Smallest next use is searching this reference or explicitly requesting its
+attributed quote. Any additional content needs its own exact qualification.
+
 ## 2026-10-11 16:11 UTC - exact preview snapshot confirmation fix
 
 Independent recheck passed 20 prior request probes and six numerical-oracle
