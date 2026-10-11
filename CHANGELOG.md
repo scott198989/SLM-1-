@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-10-11 - separately served reviewed annotations
+
+- Recorded bounded v23 independent acceptance with two precision corrections.
+  New v24 defines AC averaging/zero-S power factor and limits the visible graph
+  credit to the upper graph. V23 and all original excerpts remain unchanged.
+- Added four one-chunk reference packages with complete, separately labeled
+  reviewed annotations, corroboration, exact-use receipts and known-family roles.
+  The accepted runtime is unchanged; real find/quote displays preserve source
+  versus annotation. Nine references total; five earlier references unchanged.
+- Passed 258 serving/artifact checks, three correction regressions and 18 pinned
+  runtime regressions. Preserved all 342 prior inventoried files and six owned-code
+  pins. Copper/loop/protected holds remain; no SFT, training, upload or push.
+  [Display contract, evidence and review scope](docs/REVIEWED_ANNOTATIONS_20261011.md).
+
 ## 2026-10-11 - six scientific-fidelity dispositions
 
 - Inspected six original pages, preserved rasters, native/OCR alternatives and

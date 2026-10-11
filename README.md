@@ -1,16 +1,17 @@
 # SLM-1-
 # FORGE — Training Data & Knowledge Repository
 
-Current checkpoint: [six scientific-fidelity dispositions](docs/SCIENTIFIC_DISPOSITIONS_20261011.md).
-Private v23 supplies four separate qualified explanations, an uncertain image-only
-loop disposition and a blocked copper-row disposition with a reference comparison.
-All six named issues have evidence-backed outcomes; no source quote was corrected
-in place and no new serving/SFT release was made. Five academic references remain.
-V22 was independently accepted: 160/160 checks and 18/18 regressions. V23 passes
-199 artifact checks, eight scientific oracle methods and 18 pinned regressions;
-its new scientific notes await independent review. All 269 earlier inventoried
-files and six owned-code pins are unchanged. Native POSIX and two file-symlink
-cases remain open. The historical vulnerable v17 launcher must not be used.
+Current checkpoint: [four separate reviewed annotations](docs/REVIEWED_ANNOTATIONS_20261011.md).
+Private v24 adds four individually pinned source references with clearly labeled
+annotations, using the accepted runtime unchanged. Original excerpts stay separate
+from the complete explanations and corroborating citations in find/quote output.
+The two v23 review corrections are applied only in this successor version.
+There are nine separate references; the five earlier references and all 342
+inventoried v17-v23 files are unchanged. All 258 serving checks, three correction
+regressions and 18 runtime regressions pass. Revision/serving review is pending.
+Copper numbers and the missing loop mark remain unreleased. No SFT or training.
+Native POSIX and two file-symlink cases remain open. The vulnerable v17 launcher
+must not be used.
 
 First bounded release: [one private static prose reference](docs/ACADEMIC_REFERENCE_EXCERPT_20261011.md)
 is available for local search and explicit attributed quotation. The private

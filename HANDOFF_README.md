@@ -1,16 +1,17 @@
 # Current FORGE handoff — October 11, 2026 local continuation
 
-Latest checkpoint: [six scientific-fidelity dispositions](docs/SCIENTIFIC_DISPOSITIONS_20261011.md).
-V23 records four usable explanations with explicit correction/context, one
-image-only uncertain loop and one copper row blocked for numerical use. Separate
-notes retain derivations and official corroboration; originals and quotations
-are unchanged. The bounded task ends at these six dispositions. No new serving
-reference or SFT record was added; five accepted academic references remain.
-V22 independently passed 160/160 checks and 18/18 regressions. V23 owner validation
-passes 199 artifact checks, eight scientific oracle methods and 18 runtime methods.
-All 269 inventoried v17-v22 files and six owned-code pins remain unchanged.
-Use v23/review-target.json for the next independent review. Native POSIX and two
-Windows file-symlink privilege cases remain open. V17's old launcher is vulnerable.
+Latest checkpoint: [four separately served annotations](docs/REVIEWED_ANNOTATIONS_20261011.md).
+V23 independently passed 677 artifact assertions, 16 scientific methods and 18
+runtime regressions, with two minor text corrections requested. V24 applies them
+in new notes and serves four original excerpts with complete separate reviewed
+annotations/corroboration. The existing safe runtime preserves the distinction
+in actual find and quote JSON output without implementation changes.
+Nine references total; the prior five and all 342 inventoried v17-v23 files are
+unchanged. Owner checks pass 258/258, three correction methods and 18 runtime
+methods. Copper numbers and the missing loop mark remain unreleased; no SFT or
+training is added. Use v24/review-target.json for independent revision/display
+review. Native POSIX and two Windows file-symlink cases remain open. V17's old
+launcher is vulnerable.
 Older pending-review/all-nine-HOLD statements below are historical.
 
 The usable entry point is the [structured request wizard/CLI](tools/owned_request/README.md),

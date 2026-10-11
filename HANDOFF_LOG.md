@@ -1,5 +1,30 @@
 # FORGE handoff log
 
+## 2026-10-11 - corrected notes served as separate reference annotations
+
+Independent v23 review accepted the six bounded dispositions with two precision
+corrections: 677/677 artifact assertions, 16/16 scientific methods and 18/18
+runtime regressions passed. Preserved frozen v23 and applied the requested AC
+averaging/zero-S definition and upper-graph-only credit wording in private v24.
+Only two notes changed; all four source excerpts and two other notes are unchanged.
+
+Four new single-chunk packages pair each source excerpt with its complete separate
+Codex-authored annotation and official corroboration. The existing pinned runtime
+already preserves arbitrary authenticated citation metadata and is unchanged.
+Both actual find and quote stdout retain source/annotation labels, attribution,
+conditions and limits. Nine separately pinned references total; prior five intact.
+
+258/258 serving/artifact/tampering checks, 3/3 targeted correction methods and
+18/18 runtime regressions passed. An initial test-only typo in a historical message
+ID assertion was corrected; no receipt or runtime was changed. All 342 prior
+inventoried files, six owned-code pins and original evidence remain unchanged.
+Known 20-family/118-member/20-named-source exclusions and unknown-alias limits persist.
+
+The new corrections and serving packages await independent review via the pinned
+v24 target. Copper/loop/protected content remains unreleased. No SFT, training,
+GPU, source deletion, publication, upload, push or privilege changes occurred.
+[Scope and display evidence](docs/REVIEWED_ANNOTATIONS_20261011.md).
+
 ## 2026-10-11 - six scientific issues adjudicated within bounded scope
 
 Accepted the independent v22 result at bc60803: 160/160 checks, 18/18 regressions,

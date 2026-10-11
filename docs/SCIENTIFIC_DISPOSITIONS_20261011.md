@@ -1,5 +1,13 @@
 # Six bounded scientific-fidelity dispositions
 
+Update: independent v23 review accepted the bounded dispositions with two minor
+text corrections (AC averaging/zero-power-factor domain and upper-graph credit).
+It passed 677 artifact assertions, 16 scientific methods and 18 runtime methods.
+The private v23 package remains frozen. [V24 applies the corrections and serves
+four separately labeled annotations](REVIEWED_ANNOTATIONS_20261011.md); those new
+packages await independent revision/serving review. The owner handoff below is
+historical and does not describe the later serving count.
+
 Private v23 gives an evidence-backed disposition for the six named holds on
 sources 1, 5 and 6. Four separate explanations are qualified with explicit
 context/correction; one issue remains image-reference-only with uncertainty,
