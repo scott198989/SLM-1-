@@ -1,5 +1,24 @@
 # FORGE handoff log
 
+## 2026-10-11 - family release-readiness and deployment audit
+
+The private v12 audit separates completed fidelity work from rights/attribution,
+alias, split and evaluation decisions. A narrow self-contained prose segment is
+the first academic decision candidate; no release flags changed. Metadata finds
+related lecture/lab/example materials in distinct lexical families, which is not
+proof of semantic independence. Three partial pages and four exclusions remain.
+
+A separate CPU audit passed all 38 records, 97 crops and 343 frozen package files;
+the existing validator passed 566 evidence hashes at 14:45 UTC. Nine direct visual
+samples matched the reviewed representations; the reviewer was the same model,
+so this is not independent semantic certification. Three Drive revision histories
+show one retained revision each, with no cleaner slide variant identified in the
+bounded folder search. No content was downloaded. Eight existing owned-code
+chunks and 16 saved vectors passed CPU checks; no GPU smoke repeated.
+
+See [readiness/deployment results](docs/READINESS_AUDIT_20261011.md). Private
+evidence stays outside Git; local documentation only, no push/upload/training.
+
 ## 2026-10-11 — local visible-page reconciliation complete with three obstacles
 
 Recorded 14:29 UTC. Scott's authorized continuation reviewed all 38 candidate

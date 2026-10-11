@@ -6,6 +6,9 @@ has **35 visible-page fidelity passes and three explicit partial pages**; all ni
 source families remain HOLD and no training/RAG data were released. See the
 [review and validation report](docs/VISIBLE_PAGE_FIDELITY_20261011.md) and
 [guarded embedding runtime report](docs/EMBEDDING_RUNTIME_RESULTS_20261011.md).
+The subsequent [readiness audit](docs/READINESS_AUDIT_20261011.md) records exact
+family-use decisions and deployment work, verifies the frozen evidence again,
+and distinguishes available owned-code reference assets from unreleased sources.
 These local branch results supersede older status statements only for their
 bounded scopes. No Qwen training, remote push or private upload occurred.
 

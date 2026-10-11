@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-10-11 - source-family and deployment readiness audit
+
+- Audited exact per-family rights, attribution, evaluation, split and alias gaps
+  against authenticated metadata; separated actual workflow restrictions from
+  undocumented underlying-use permissions. No flags changed.
+- Rechecked the frozen review package with independent code and a bounded
+  same-model visual sample. Preserved all three partials and four exclusions.
+- Verified existing owned-code pilot chunks/vectors on CPU and documented the
+  remaining serving work. Corrected the old no-embedding-download architecture
+  statement to reflect the separately completed authorized runtime smoke.
+- See [readiness audit](docs/READINESS_AUDIT_20261011.md). No training or publishing.
+
 ## 2026-10-11 — source-bound visible-page reconciliation
 
 - Completed detailed private review records for all 38 candidate pages: 35 visible

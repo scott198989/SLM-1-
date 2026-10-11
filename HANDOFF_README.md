@@ -8,6 +8,13 @@ Qwen training follows from this result. Generic code and docs are local commits;
 private evidence remains outside Git and no remote synchronization was performed.
 The earlier guarded embedding runtime diagnostic is separately documented.
 
+The [subsequent readiness audit](docs/READINESS_AUDIT_20261011.md) enumerates
+rights, attribution, alias, evaluation and split gaps per family in private v12
+evidence, with a concrete first prose-only RAG decision candidate. An independent
+code check passed the frozen 343-file package and all 97 crops; a same-model
+nine-page visual sample is not independent certification. Existing owned-code
+pilot assets are locally available; a serving deployment is not established.
+
 ## Historical October 7 checkpoint
 
 Scott lifted the October 6 pause and assigned this bounded nine-source

@@ -1,6 +1,6 @@
 # Private engineering citation RAG
 
-The current local academic index is a review artifact. Production promotion requires chunk fidelity review, reliable family assignment, rights/privacy review and measured engineering retrieval quality. No embedding model has been downloaded. The tested lexical SQLite retrieval is the baseline.
+The current local academic index is a review artifact. Production promotion requires chunk fidelity review, reliable family assignment, rights/privacy review and measured engineering retrieval quality. The tested lexical SQLite retrieval remains the baseline. On October 11, a separately authorized guarded embedding runtime smoke completed on eight owned-code reference chunks and eight demonstrator queries; it did not qualify the academic index or establish a serving deployment. See the [runtime results](EMBEDDING_RUNTIME_RESULTS_20261011.md) and [current readiness audit](READINESS_AUDIT_20261011.md).
 
 ## Data contracts and flow
 
