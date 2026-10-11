@@ -1,5 +1,14 @@
 # Current FORGE handoff — October 11, 2026 local continuation
 
+The usable entry point is the [structured request wizard/CLI](tools/owned_request/README.md),
+with its trusted local launcher in private v15. It collects explicit fields,
+previews authenticated evidence without calculating, then requires confirmation
+of the exact saved preview. Results echo inputs and assumptions and display
+nullable/approximate statuses. The gate's independent-review findings have owner
+fixes at 281807c; recheck dispatch is blocked pending direct user authorization to
+message the reviewer task. Read the [numerical correction scope](docs/OWNED_NUMERIC_REVIEW_FIXES_20261011.md)
+before treating older 48/48 statements as current qualification.
+
 Start with the [owned-code answerability milestone](docs/OWNED_ANSWERABILITY_RESULTS_20261011.md).
 The local gate requires an explicit capability, requested facts/outputs, units
 and model conditions. Thirty boundary tests and 48 frozen cycle probes pass;

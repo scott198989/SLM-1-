@@ -1,5 +1,34 @@
 # FORGE handoff log
 
+## 2026-10-11 - usable explicit request preview and execution
+
+Added tools/owned_request without further gate edits after 281807c. The wizard
+collects an explicit operation, outputs, values, units and model assertions;
+blank/unknown remains unresolved. It saves an editable request and source-cited
+preview before offering RUN. Noninteractive commands support the same workflow
+with exact preview-hash acknowledgment. Results echo the confirmed request and
+always display nullable/approximate statuses. There is no free-form question
+parameter and no claim that unchecked prose has been answered.
+
+Eight interface tests pass. The retained first test run found an interactive
+decimal-entry issue with .01, fixed without loosening persisted JSON schemas.
+Sixteen actual CLI request-preview-run workflows cover all eight capabilities,
+reference extraction, zero-load explanation, missing units, false assumptions,
+unsupported output and the three independent extreme-range cases. A scripted
+wizard and bad-confirmation/free-text-option checks also passed. These are owner
+tests, not independent user/expert validation.
+
+Private v15 holds the launcher, unresolved template workflow, eight labeled
+examples, actual transcripts, old and corrected review targets, owner fix
+reproductions and preservation evidence. The independent reviewer's files were
+read-only throughout. The attempt to request recheck in that task was rejected
+by automatic approval review for lack of recognized direct user messaging
+authorization; approval was requested and recheck remains pending. No workaround
+dispatch, remote push, held-data use, source changes, GPU or Qwen activity.
+
+See [exact interface usage](tools/owned_request/README.md). Academic source-use /
+attribution and evaluation-role decisions remain pending separately.
+
 ## 2026-10-11 - independent numerical review corrections
 
 The independent 27-probe review of 4122080 identified three extreme-range

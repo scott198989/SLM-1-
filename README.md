@@ -1,6 +1,13 @@
 # SLM-1-
 # FORGE — Training Data & Knowledge Repository
 
+The [local request wizard and preview CLI](tools/owned_request/README.md) now
+provides explicit operation/output/quantity/unit/assumption selection, a cited
+scope preview, and confirmation before deterministic execution. It echoes the
+confirmed request and explains nullable/approximate outputs. Eight interface
+tests and sixteen actual CLI workflows passed on CPU. Independent recheck of
+the numerical corrections is pending; no free-form understanding is claimed.
+
 Independent review found and reproduced extreme-range arithmetic failures and
 a unit/near-zero test-oracle gap in the initial gate. The [review corrections](docs/OWNED_NUMERIC_REVIEW_FIXES_20261011.md)
 add explicit numerical limits, strict quantity oracles and nullable-output

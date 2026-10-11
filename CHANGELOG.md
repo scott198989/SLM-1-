@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-10-11 - usable local structured request preview
+
+- Added an eight-operation wizard and list/describe/template/preview/run commands.
+  No free-form query parameter or intent mapping. Draft conditions stay unknown.
+- Previews retrieve and cite the matching function, show all scope/units/conditions
+  and numerical limits, and run no calculator. Confirmation binds the saved
+  preview; changed source, gate, contract or preview fails closed.
+- Results echo the exact confirmed request and companion nullable/approximate
+  statuses. Eight interface tests and sixteen actual CPU CLI workflows passed,
+  plus a scripted wizard and wrong-confirmation/free-text-option refusals.
+- Gate/source pins remain at the corrected 281807c checkpoint. Independent
+  recheck messaging was blocked by automatic approval review pending direct user
+  authorization. No completed independent recheck is claimed.
+
 ## 2026-10-11 - independent numerical review corrections
 
 - Reproduced three supported-but-wrong extreme-range zeros and the comparator's
