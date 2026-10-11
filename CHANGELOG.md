@@ -1,5 +1,35 @@
 # Changelog
 
+## 2026-10-11 20:15 UTC - public-safe project publication checkpoint
+
+- Updated all eight tracked Markdown READMEs, handoff documentation and status
+  links with corpus phases and scope. Historical 1,947 academic files and 34,463
+  repository candidates are not the 38-page recovery batch. October 2 technical
+  dispositions remain 1,703 PASS / 72 REJECT / 337 QUARANTINE of 2,112; zero main
+  imported/Drive SFT is released. Separate owned-calculator pilot limits remain.
+- Recorded accepted runtime/catalog commit `5b7ece6` and the coverage overlay:
+  nine entries on eight selected pages; 3 full + 7 partial + 149 unserved groups.
+  Added portable entrypoint instructions and private artifact directory names;
+  removed current machine-account absolute paths from published instructions.
+- Fresh unchanged-code native CPU suite: 241 methods, 239 passed, zero failures/
+  errors, two existing privilege skips. Preserved the earlier sandbox handle/path
+  failures privately. No GPU, model execution or dataset processing occurred.
+- Prepared ordinary publication to the existing public feature branch, subject
+  to outgoing-history safety review and remote-SHA verification. No private
+  course artifacts or sensitive runtime records are included. No push is claimed
+  merely by this preparation entry. [Full status](docs/PROJECT_STATUS_20261011.md).
+
+## 2026-10-11 - candidate coverage and next bounded batch
+
+- Recorded v25 independent acceptance and reconciled nine serving entries with
+  all 38 rebuilt pages and 159 original content-group IDs. Entries touch eight
+  pages: 3 full text groups, 7 partial and 149 without serving excerpts.
+- Separated reviewed figure/table evidence, four served annotations and two
+  audit-only dispositions from serving coverage. No whole-page release claimed.
+- Proposed one six-group Coulomb text/equation qualification batch using existing
+  files and private-use basis. Planning only: no runtime/data edits or processing.
+  [Coverage, remaining blockers and next task](docs/CANDIDATE_COVERAGE_20261011.md).
+
 ## 2026-10-11 - unified local reference catalog
 
 - Added one CPU-only catalog/find/quote wrapper for all nine accepted packages.

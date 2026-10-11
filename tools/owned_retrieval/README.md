@@ -1,5 +1,9 @@
 # Local owned-code retrieval harness
 
+Publication checkpoint: **2026-10-11 20:15 UTC**. Current status: owned-code retrieval/calculation remains separate from the nine academic references. Ranker probes are development evidence, not independent model accuracy or SFT release. No inference or training is requested by the publication checkpoint.
+See [whole-project phases, tests, artifacts and next steps](../../docs/PROJECT_STATUS_20261011.md).
+
+
 This CPU-only CLI ranks eight authenticated owned-code function chunks. It uses
 BM25, saved frozen EmbeddingGemma document/query vectors, or equal-weight reciprocal
 rank fusion. It starts no server and generates no answers. Private source/data,

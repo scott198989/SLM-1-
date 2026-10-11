@@ -1,5 +1,9 @@
 # Visible-page evidence checker
 
+Publication checkpoint: **2026-10-11 20:15 UTC**. Current status: all 38 selected recovery pages have records (35 visible passes, three pixel obstacles). Only selected components on eight pages serve as nine references. Structural validation does not release the other corpus material.
+See [whole-project phases, tests, artifacts and next steps](../../docs/PROJECT_STATUS_20261011.md).
+
+
 This read-only checker validates a private package of reviewed page records. It
 does not perform OCR, decide whether a transcription is correct, open original
 PDFs, release data, or run a model. The caller must supply the previously approved

@@ -1,11 +1,15 @@
 # Local structured request preview
 
+Publication checkpoint: **2026-10-11 20:15 UTC**. Current status: the separate eight-function structured calculation interface remains accepted within its bounded scope. It does not consume academic retrieval or provide general Qwen generation. Fresh project CPU run: 239 passed / two existing privilege skips.
+See [whole-project phases, tests, artifacts and next steps](../../docs/PROJECT_STATUS_20261011.md).
+
+
 This CLI is a guided interface to the eight authenticated owned calculator
 functions. It accepts explicit fields only, retrieves the matching function,
 shows the complete scope and citation, and waits for confirmation before running
 the frozen gate. It uses no GPU, model, server or free-form question mapper.
 
-On Scott's desktop, the private v15 `FORGE-Request.ps1` launcher supplies the
+In the authorized private workspace, the private v15 `FORGE-Request.ps1` launcher supplies the
 trusted manifest/contract hashes. Run it with no arguments for the wizard. Choose
 an operation and output, enter values and explicit units, and answer each model
 condition yes/no/unknown. Blank input stays unknown. The displayed preview shows

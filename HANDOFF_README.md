@@ -1,17 +1,36 @@
 # Current FORGE handoff — October 11, 2026 local continuation
 
-Latest checkpoint: [one local catalog for all nine references](docs/REFERENCE_CATALOG_20261011.md).
-V24 independently passed 1,274 artifact assertions, 56 tampering probes, 16
-scientific methods and 18 runtime methods, with bounded acceptance requiring
-complete JSON citation context. V25 supplies one pinned catalog/find/quote entry
-point, preserving full package responses and visibly separate annotations.
-See the [usage guide](tools/academic_references/README.md); no individual launcher
-knowledge is needed. Every operation verifies all nine packages before output.
-Owner validation passed 12 wrapper methods, 222 assertions across 44 CLI calls,
-and 18 unchanged runtime methods. All 472 inventoried v17-v24 files and six
-owned-code pins remain unchanged. V25/review-target.json is the new independent
-review target. No SFT, training, general Qwen generator or calculation coupling
-is added. Copper/loop/protected holds and the prior platform gaps remain.
+Latest checkpoint (**2026-10-11, 20:15 UTC**): [project status and publication handoff](docs/PROJECT_STATUS_20261011.md).
+
+Keep corpus phases distinct: inventoried, extracted, reviewed, qualified RAG,
+qualified SFT, and actual model execution. The historical 1,947 academic files
+and 34,463 repository conversations are separate populations, not additions to
+the 38-page recovery batch. The October 2 technical ledger has 2,112 dispositions:
+1,703 PASS / 72 REJECT / 337 QUARANTINE; main/imported/Drive SFT remains unreleased.
+A separate historical 16-example owned-calculator protocol pilot is not broad
+SFT readiness. No Qwen training/baseline or general generator is established.
+
+All 38 selected pages were rebuilt/reviewed. Nine academic entries touch ten
+groups on eight pages: 3 full text groups, 7 partial and 149 with no serving
+excerpt. None is a whole-page release. The 97 figure occurrences remain evidence;
+there is no multimodal serving release. V26 records every original group ID and
+page blocker. Four protected pages and source-wide holds remain unchanged.
+
+V25 independent bounded acceptance at `5b7ece6` passed 998 assertions, 69 CLI calls,
+17 adversarial methods, 12 wrapper methods and 18 runtime methods. Fresh native
+CPU validation at 20:15 UTC passed 239/241 methods with two existing file-symlink
+privilege skips; zero failures/errors. The failed sandbox run is retained as
+environment evidence. Runtime/catalog code is unchanged by this docs checkpoint.
+
+Read the public-safe entrypoint READMEs, private workspace directory map and
+publication boundary in the status report. Current feature branch is
+`codex/embeddinggemma-gpu-guard-20261011`; do not merge main or force-push.
+The current explicit user request authorizes a fresh ordinary feature-branch
+push of safe project material. It does not authorize publishing private course
+excerpts, source images, evaluation answers, secrets or personal records.
+After publication, the next batch is six remaining Coulomb text/equation groups,
+using existing files and private-use evidence. Further qualification of the
+existing corpus is the engineering bottleneck; do not infer a data shortage.
 
 Older pending-review/all-nine-HOLD statements below are historical.
 
@@ -170,7 +189,7 @@ No broad rediscovery is needed. After repository review, prioritize independent 
 
 ## Private progress preserved on the laptop, absent from Git
 
-Local workspace is `C:\Users\Scott\OneDrive\Documents\ChatGPT\Scotts AI`. This cloud handoff is **not a transfer of every local file**. Originals, Drive extraction database/caches, private release records, sealed questions/answers and reference indexes remain there. The cloud task must not pretend to have verified private files from aggregate receipts. If a next step depends on them, report the exact missing input and continue independent repository work.
+The original laptop workspace locator is retained in the private handoff. This cloud handoff is **not a transfer of every local file**. Originals, Drive extraction database/caches, private release records, sealed questions/answers and reference indexes remain there. The cloud task must not pretend to have verified private files from aggregate receipts. If a next step depends on them, report the exact missing input and continue independent repository work.
 
 The checkpoint manifest records sizes and SHA256 hashes for critical local artifacts without publishing their content. It also lists directories not transferred. In particular:
 

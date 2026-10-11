@@ -1,5 +1,9 @@
 # Bounded Windows GPU workload guard
 
+Publication checkpoint: **2026-10-11 20:15 UTC**. Current status: no GPU workload or training is part of this publication checkpoint. The guard remains a bounded existing component; its process-policy suites were not part of the fresh 241-method CPU import/data/tool regression run.
+See [whole-project phases, tests, artifacts and next steps](../../docs/PROJECT_STATUS_20261011.md).
+
+
 This is the process-containment and telemetry supervisor used for a short frozen embedding smoke. It is restricted to the observed NVIDIA XML schema/driver 591.86 and the conservative RTX 5090 smoke policy in `gpu_telemetry.py`. It is not a general hardware safety certification or a long-running training launcher.
 
 No real device identity, source dataset, credentials, model, private inputs, live baseline or live logs are checked in. `FORGE_GPU_UUID` must name a separately verified device before live reads. The default identity refuses live reads. The synthetic identity also refuses live reads. Tests cannot supply a live baseline.

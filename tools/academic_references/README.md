@@ -1,21 +1,28 @@
 # Local academic reference lookup
 
+Publication checkpoint: **2026-10-11 20:15 UTC**. Current status: nine references accepted through one entry point; selected content on eight of 38 recovery pages. This is a subset of the larger corpus. General Qwen generation remains unavailable.
+See [whole-project phases, tests, artifacts and next steps](../../docs/PROJECT_STATUS_20261011.md).
+
+
 One local CPU-only entry point discovers and searches nine accepted, separately
 pinned reference packages. The private launcher and catalog live outside Git in
 `forge-reference-catalog-20261011-v25`, alongside this repository. This directory
 contains the generic wrapper implementation; private source excerpts, indexes,
 citations, receipts and absolute paths remain in their existing private packages.
 
-In PowerShell on the current desktop:
+From the repository root in the existing private workspace, use its approved
+CPU Python environment and frozen launcher. No private source is supplied by a
+Git clone:
 
 ```powershell
-$py = 'C:\Users\stusc\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe'
-$ref = 'C:\Users\stusc\Documents\Codex\2026-10-10\task\forge-reference-catalog-20261011-v25\forge_reference.py'
-& $py -I -B $ref catalog
-& $py -I -B $ref catalog thermal
-& $py -I -B $ref find isotropic
-& $py -I -B $ref quote ac-power
-& $py -I -B $ref --json quote ac-power
+$WorkspaceRoot = Split-Path (Get-Location) -Parent
+$Python = Join-Path $WorkspaceRoot 'forge-cpu-regression-candidates-20261011-v18\.venv\Scripts\python.exe'
+$Reference = Join-Path $WorkspaceRoot 'forge-reference-catalog-20261011-v25\forge_reference.py'
+& $Python -I -B $Reference catalog
+& $Python -I -B $Reference catalog thermal
+& $Python -I -B $Reference find isotropic
+& $Python -I -B $Reference quote ac-power
+& $Python -I -B $Reference --json quote ac-power
 ```
 
 `--json` goes before the command. With no command, the catalog is shown.

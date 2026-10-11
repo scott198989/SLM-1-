@@ -1,5 +1,8 @@
 # Nine-reference local catalog checkpoint
 
+Later status, October 11 19:52 UTC: independent v25 review accepted commit `5b7ece6cda80b9395a1390836ec3b26d4cee683c` without actionable defects (998 assertions, 69 CLI calls, 17 adversarial methods, 12 wrapper methods, 18 runtime methods). The original frozen bundle retains its historical pending-review fields. See [current project status](PROJECT_STATUS_20261011.md) for publication, coverage and fresh CPU results.
+
+
 The private v25 `forge_reference.py` provides one catalog/find/quote interface
 for all nine accepted academic reference packages. See the
 [usage guide](../tools/academic_references/README.md) for commands and IDs.

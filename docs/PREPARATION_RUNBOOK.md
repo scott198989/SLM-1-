@@ -1,5 +1,8 @@
 # Reproduce preparation checks
 
+Current continuation checkpoint, October 11 20:15 UTC: complete the requested safe feature-branch publication, then qualify existing corpus material using the component ledger. This runbook does not authorize rerunning extraction, GPU workloads or training. See [phase counts, private locations, accepted entrypoints and next steps](PROJECT_STATUS_20261011.md).
+
+
 Use a dedicated Python 3.12+ CPU environment. `pyproject.toml` pins the directly tested preparation libraries; it is not a GPU training lock. Environment setup, when needed and authorized, uses `python -m pip install -e .`. No Torch, training code or weights are required for these checks.
 
 Inspect branch, commit, remote and worktree status first. Preserve existing work;

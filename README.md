@@ -1,18 +1,39 @@
 # SLM-1-
 # FORGE — Training Data & Knowledge Repository
 
-Current checkpoint: [one local catalog for nine accepted references](docs/REFERENCE_CATALOG_20261011.md).
-The private v25 entry point provides catalog/find/quote over the existing separate
-indexes. Readable output labels source and reviewed annotation, and includes the
-complete original JSON citation context. No merged index or calculation is added.
-Independent v24 review accepted the nine references with complete context. V25
-passes 12 wrapper methods, 222 CLI assertions and 18 runtime regressions; its own
-independent review is pending. All 472 prior files and six owned-tool pins remain
-unchanged. See the [command guide](tools/academic_references/README.md).
-Copper numbers and the clipped loop remain unreleased. No new SFT or training.
-General Qwen generation is unavailable; the eight-function calculation prototype
-is a separate tool. Native POSIX and two file-symlink cases remain open.
-The vulnerable v17 launcher must not be used.
+Current checkpoint (**2026-10-11, 20:15 UTC**): [whole-project status, publication and next steps](docs/PROJECT_STATUS_20261011.md).
+
+**There is more existing data to qualify; the 38 pages are one selected recovery
+batch, not the entire corpus or 38 topics.** Historical inventory records 1,947
+academic files and 34,463 repository candidate conversations (different,
+non-additive populations). The October 2 technical review completed 2,112 selected
+records: 1,703 PASS, 72 REJECT and 337 QUARANTINE. Technical PASS is not SFT release.
+Main/imported/Drive SFT released: **zero**; the separate historical 16-example
+owned-calculator protocol pilot is only bounded integration evidence.
+
+All 38 selected academic pages were rebuilt/reviewed; nine accepted references
+serve selected content on **eight pages** in four source families. Coverage is
+**3 full text groups + 7 partial groups + 149 with no excerpt = 159 groups**.
+No whole page/source is fully served, and no multimodal image release is claimed.
+See the [coverage ledger](docs/CANDIDATE_COVERAGE_20261011.md).
+
+Use the [academic catalog](tools/academic_references/README.md) for reference
+lookup and the separate [eight-function request tool](tools/owned_request/README.md)
+for explicit calculations. General Qwen generation is unavailable; no verified
+Qwen training or baseline run occurred in this continuation. CPU software tests
+and frozen embedding smoke work are separate from model training.
+
+Fresh native-Windows CPU validation on October 11: **239 PASS, zero failures or
+errors, two privilege-related skips / 241 methods**. V25 independent bounded
+review accepted the catalog at `5b7ece6` (998 assertions, 69 CLI calls). Exact
+scope, historical results, private artifact directory names and remaining
+scientific/rights/evaluation/platform gaps are in the project status report.
+The public feature-branch publication includes safe code/docs/synthetic tests;
+private source material and runtime evidence stay local. Source-wide holds remain.
+
+Next after publication: qualify one coherent six-group Coulomb text/equation
+batch, then apply the coverage/disposition workflow to prioritized existing
+material. No broad request for more data, new runtime or training is implied.
 
 First bounded release: [one private static prose reference](docs/ACADEMIC_REFERENCE_EXCERPT_20261011.md)
 is available for local search and explicit attributed quotation. The private

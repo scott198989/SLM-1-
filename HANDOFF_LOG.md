@@ -1,5 +1,55 @@
 # FORGE handoff log
 
+## 2026-10-11 20:15 UTC - publication preparation and full-corpus clarification
+
+The user explicitly requested a fresh GitHub push with complete README, handoff
+and changelog updates. The existing repository was verified PUBLIC, with main at
+`83d7645758375fa87c7afcb5fee1b2221ab9f463`, consolidation at `c5c9f54127abf2033d13ea0e8ee23c7dd7ec4fbc`,
+and no remote feature branch at preflight. The intended ordinary push targets
+`codex/embeddinggemma-gpu-guard-20261011`; no main change, merge or force-push.
+There are 16 unpublished implementation/documentation commits through `5b7ece6`
+relative to the fetched origin tips. Outgoing-history review is a publication
+prerequisite; a preparation record does not prove a successful remote update.
+
+The 38 recovered pages are a selected nine-PDF batch, not all academic or GitHub
+material. Historical corpus receipts cover 1,947 academic files and 34,463
+repository conversations. Technical review of 2,112 selected records is complete
+at agent level (1,703 PASS, 72 REJECT, 337 QUARANTINE), without main SFT release.
+The separate 16-example owned protocol pilot is integration evidence only.
+Nine academic references touch ten groups on eight pages; non-overlapping
+coverage is 3 full text groups, 7 partial and 149 with no excerpt. The other 30
+pages have no serving component, and all 38 still contain unserved material.
+
+Fresh native CPU checks ran 20:14:55-20:15:05 UTC: 239 passed, zero failures/errors,
+two privilege skips out of 241 methods. The prior sandbox attempt failed Windows
+handle/path checks; the unchanged suite passed on the same native host. Both
+logs are private in v27. No model/GPU/network/private course fixture was used.
+All README entrypoints now link to the unified status and portable private
+workspace map. Runtime code, old source packages and holds were preserved.
+
+After publication, resume bounded component qualification using existing data:
+start with six Coulomb prose/equation groups, then prioritize further corpus
+batches by capability and evidence gaps. Do not equate technical PASS, OCR or
+retrieval scores with SFT approval, independent evaluation or training execution.
+See [status and remaining gates](docs/PROJECT_STATUS_20261011.md).
+
+## 2026-10-11 - corpus coverage planning after catalog acceptance
+
+V25 independent bounded review accepted the one-entry-point catalog without
+findings. Metadata reconciliation now maps every one of the original 159 groups
+across 38 pages. Nine serving entries touch ten groups on eight pages in four
+source families: 3 full text groups, 7 partial groups and 149 with no excerpt.
+No whole page is served. Figure/table occurrences and four annotations overlap
+those groups; they are not extra released pages. Copper and clipped-loop
+scientific dispositions remain audit-only, and all four protected exclusions stay.
+
+Private v26 has the compact page ledger, 159-row CSV, pinned JSON provenance and
+14 accounting checks. All 539 inventoried v17-v25 files and six owned-tool pins
+remain unchanged. No implementation, source processing, training or hold change.
+The next proposed task is one coherent six-group Coulomb prose/equation review
+across its four already recovered pages, with separate source/context records.
+See [coverage and next batch](docs/CANDIDATE_COVERAGE_20261011.md).
+
 ## 2026-10-11 - one entry point for nine accepted references
 
 Independent v24 review accepted all nine separately pinned references with the
