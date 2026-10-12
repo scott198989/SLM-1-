@@ -1,0 +1,5 @@
+# Reproducible tested Python 3.12 environment. Install torch from its CUDA index first.
+numpy==2.4.3
+tokenizers==0.22.2
+pytest==8.4.2
+ruff==0.16.9

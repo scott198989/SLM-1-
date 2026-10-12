@@ -1,0 +1,15 @@
+{
+  "vocab_size": 288,
+  "d_model": 64,
+  "n_heads": 4,
+  "n_kv_heads": 2,
+  "intermediate_size": 160,
+  "stem_layers": 1,
+  "core_layers": 2,
+  "speaker_layers": 1,
+  "max_seq_len": 128,
+  "default_loops": 2,
+  "max_loops": 4,
+  "ledger_enabled": true,
+  "ledger_rank": 8
+}

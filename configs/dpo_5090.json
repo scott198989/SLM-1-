@@ -1,0 +1,23 @@
+{
+  "model_config": "configs/model_1b.json",
+  "tokenizer": "data/tokenizer.json",
+  "dataset": "data/preference-train",
+  "validation_dataset": "data/preference-validation",
+  "init_checkpoint": "runs/sft-1b-pilot/last.pt",
+  "reference_checkpoint": "runs/sft-1b-pilot/last.pt",
+  "output_dir": "runs/dpo-1b-pilot",
+  "stage": "dpo",
+  "steps": 1000,
+  "batch_size": 1,
+  "gradient_accumulation": 16,
+  "learning_rate": 0.000005,
+  "warmup_steps": 100,
+  "precision": "bf16",
+  "device": "cuda",
+  "dpo_beta": 0.1,
+  "loop_min": 1,
+  "loop_max": 4,
+  "gradient_checkpointing": true,
+  "max_temperature_c": 83.0,
+  "max_run_seconds": 14400
+}

@@ -3,6 +3,19 @@ requires = ["setuptools>=75"]
 build-backend = "setuptools.build_meta"
 
 [project]
+
+name = "forge1"
+version = "0.1.0"
+description = "An original recurrent engineering language model and private-data training system"
+requires-python = ">=3.12"
+dependencies = ["torch>=2.10,<2.11", "numpy>=2.2,<3", "tokenizers>=0.22,<0.23"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.4,<9", "ruff>=0.11"]
+
+[project.scripts]
+forge = "forge1.cli:main"
+=======
 name = "forge-preparation"
 version = "0.1.0"
 requires-python = ">=3.12"
@@ -26,3 +39,16 @@ line-length = 110
 
 [tool.ruff.lint]
 select = ["E4", "E7", "E9", "F"]
+
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "forge-preparation"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["numpy==2.5.3", "scipy==1.18.1", "jinja2==3.1.6", "tokenizers==0.22.2", "jsonschema==4.26.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

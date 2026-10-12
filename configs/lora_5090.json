@@ -1,0 +1,21 @@
+{
+  "model_config": "configs/model_1b.json",
+  "tokenizer": "data/tokenizer.json",
+  "dataset": "data/sft-train",
+  "validation_dataset": "data/sft-validation",
+  "init_checkpoint": "runs/sft-1b-pilot/last.pt",
+  "output_dir": "runs/lora-1b-pilot",
+  "stage": "sft",
+  "steps": 1000,
+  "batch_size": 1,
+  "gradient_accumulation": 16,
+  "learning_rate": 0.0001,
+  "warmup_steps": 100,
+  "precision": "bf16",
+  "device": "cuda",
+  "lora_rank": 16,
+  "lora_alpha": 32,
+  "loop_min": 1,
+  "loop_max": 4,
+  "max_run_seconds": 14400
+}

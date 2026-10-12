@@ -1,0 +1,22 @@
+{
+  "model_config": "configs/model_1b.json",
+  "tokenizer": "data/tokenizer.json",
+  "dataset": "data/sft-train",
+  "validation_dataset": "data/sft-validation",
+  "init_checkpoint": "runs/pretrain-1b-pilot/last.pt",
+  "output_dir": "runs/sft-1b-pilot",
+  "stage": "sft",
+  "steps": 2000,
+  "batch_size": 1,
+  "gradient_accumulation": 16,
+  "learning_rate": 0.00002,
+  "warmup_steps": 100,
+  "precision": "bf16",
+  "device": "cuda",
+  "loop_min": 1,
+  "loop_max": 4,
+  "aux_weight": 0.1,
+  "gradient_checkpointing": true,
+  "max_temperature_c": 83.0,
+  "max_run_seconds": 14400
+}

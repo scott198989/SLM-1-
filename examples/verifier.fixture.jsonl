@@ -1,0 +1,1 @@
+{"id":"fixture-verifier-001","document_family":"fixture-verifier-unit-error","messages":[{"role":"user","content":"TEST FIXTURE: A perpendicular 8 N force acts at 0.5 m. What is the torque?"},{"role":"assistant","content":"The torque is 4 V."}],"constraint_labels":[0,null,null,null],"si_dimensions":[1,2,-2,0,0,0,0],"domain_label":0,"verifier_label":0}
