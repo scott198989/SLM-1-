@@ -1,0 +1,179 @@
+{
+  "version": "FORGE_SFT_v0.1_proposed_review_curriculum",
+  "unique_legacy_candidates": 34463,
+  "stem_origin_candidates": 14254,
+  "selection_policy": "no_current_source_issue_codes; assistant_content_at_least80characters; technical_keyword_hint; deterministic_hash_order_with_domain_caps; manual_holds_omitted; all_unverified",
+  "domain_basis": "source_filename_not_validated_semantic_classification",
+  "manual_hold_records": 4,
+  "requested_review_slots": 2550,
+  "selected_review_candidates": 2112,
+  "approved_train_examples": 0,
+  "ready_drive_sft_examples": 0,
+  "drive_role": "source_reference_and_source_supported_QA_assembly_pending_not_raw_text_as_SFT",
+  "domains": {
+    "generic_conversation_low_priority": {
+      "candidates": 18391,
+      "quarantined": 2557,
+      "needs_review": 15834
+    },
+    "circuits": {
+      "candidates": 1348,
+      "needs_review": 1280,
+      "quarantined": 68,
+      "proposed_review_selection": 211
+    },
+    "engineering_mathematics": {
+      "candidates": 1474,
+      "needs_review": 1397,
+      "quarantined": 77,
+      "proposed_review_selection": 200
+    },
+    "algebra": {
+      "candidates": 1314,
+      "quarantined": 140,
+      "needs_review": 1174,
+      "proposed_review_selection": 216
+    },
+    "thermal_process_engineering": {
+      "candidates": 1069,
+      "needs_review": 1011,
+      "quarantined": 58,
+      "proposed_review_selection": 104
+    },
+    "trigonometry": {
+      "candidates": 1498,
+      "needs_review": 1348,
+      "quarantined": 150,
+      "proposed_review_selection": 200
+    },
+    "calculus": {
+      "candidates": 1535,
+      "needs_review": 1439,
+      "quarantined": 96,
+      "proposed_review_selection": 215
+    },
+    "electrical_components": {
+      "candidates": 1497,
+      "needs_review": 1431,
+      "quarantined": 66,
+      "proposed_review_selection": 300
+    },
+    "electromagnetism": {
+      "candidates": 1318,
+      "needs_review": 1245,
+      "quarantined": 73,
+      "proposed_review_selection": 166
+    },
+    "materials_manufacturing": {
+      "candidates": 1601,
+      "needs_review": 1509,
+      "quarantined": 92,
+      "proposed_review_selection": 250
+    },
+    "physics": {
+      "candidates": 1600,
+      "needs_review": 1485,
+      "quarantined": 115,
+      "proposed_review_selection": 250
+    },
+    "operator_damaged_core": {
+      "candidates": 1620,
+      "quarantined": 1620
+    },
+    "legacy_conversations": {
+      "candidates": 198,
+      "quarantined": 198
+    }
+  },
+  "primary_sources": {
+    "D_AC_Circuits.jsonl": {
+      "unique_primary_candidates": 1348,
+      "needs_review": 1280,
+      "quarantined": 68,
+      "proposed_review_selection": 211
+    },
+    "D_Advanced_Eng_Math.jsonl": {
+      "unique_primary_candidates": 1474,
+      "needs_review": 1397,
+      "quarantined": 77,
+      "proposed_review_selection": 200
+    },
+    "D_Algebra.jsonl": {
+      "unique_primary_candidates": 1314,
+      "quarantined": 140,
+      "needs_review": 1174,
+      "proposed_review_selection": 216
+    },
+    "D_Thermodynamics.jsonl": {
+      "unique_primary_candidates": 1069,
+      "needs_review": 1011,
+      "quarantined": 58,
+      "proposed_review_selection": 104
+    },
+    "D_Trigonometry.jsonl": {
+      "unique_primary_candidates": 1498,
+      "needs_review": 1348,
+      "quarantined": 150,
+      "proposed_review_selection": 200
+    },
+    "D_calculus.jsonl": {
+      "unique_primary_candidates": 1535,
+      "needs_review": 1439,
+      "quarantined": 96,
+      "proposed_review_selection": 215
+    },
+    "D_elect_components.jsonl": {
+      "unique_primary_candidates": 1497,
+      "needs_review": 1431,
+      "quarantined": 66,
+      "proposed_review_selection": 300
+    },
+    "D_electrodynamics.jsonl": {
+      "unique_primary_candidates": 1318,
+      "needs_review": 1245,
+      "quarantined": 73,
+      "proposed_review_selection": 166
+    },
+    "D_material_science.jsonl": {
+      "unique_primary_candidates": 1601,
+      "needs_review": 1509,
+      "quarantined": 92,
+      "proposed_review_selection": 250
+    },
+    "D_physics.jsonl": {
+      "unique_primary_candidates": 1600,
+      "needs_review": 1485,
+      "quarantined": 115,
+      "proposed_review_selection": 250
+    }
+  },
+  "repository_alias_counts_nonadditive": {
+    "scott198989/Completions": 34265,
+    "scott198989/LLM": 26630,
+    "scott198989/SLM": 198
+  },
+  "keyword_capability_hints_nonadditive": {
+    "statics_strength": 913,
+    "motors_drives": 359,
+    "technical_problem_solving": 2185,
+    "controls": 402,
+    "instrumentation_sensors": 315,
+    "siemens_tia": 6,
+    "troubleshooting": 516,
+    "engineering_data_analysis": 12,
+    "plc_ladder": 6
+  },
+  "selected_qwen_tokens": {
+    "formatted": 216599,
+    "assistant": 165623
+  },
+  "zero_current_supervised_sources": [
+    "PLC_ladder",
+    "Siemens_TIA",
+    "worked_motor_drive_troubleshooting",
+    "source_visual_interpretation",
+    "verified_tool_use"
+  ],
+  "zero_claim_basis": "no_verified_complete_examples_assembled; keyword_hints_or_reference_sources_do_not_establish_supervised_coverage",
+  "training_authorized": false
+}

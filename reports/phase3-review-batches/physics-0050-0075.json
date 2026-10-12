@@ -1,0 +1,653 @@
+{
+  "base_commit": "afdc49d2f5f13d33b2b81bcc9d24f87b5a61856e",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "physics",
+  "offset": 50,
+  "limit": 25,
+  "next_offset": 75,
+  "selected_window_end_exclusive": 75,
+  "selected_rows_in_window": 25,
+  "new_substantive_reviews": 25,
+  "skipped_existing": 0,
+  "preserved_structural_quarantines": [],
+  "dispositions_added": {
+    "REJECT": 1,
+    "PASS": 24
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "/root/review_physics_third_batch",
+    "records_checked": 25,
+    "final_counts": {
+      "PASS": 24,
+      "REJECT": 1
+    },
+    "disposition_changes": [],
+    "review_precision_corrections": [
+      "Use batch-specific independent mathematical-check evidence.",
+      "Preserve source answers and existing scope caveats; supporting metadata precision only."
+    ],
+    "full_prompt_and_answer_review": true,
+    "all_source_hashes_ids_ordinals_and_ledger_matches": true,
+    "source_sha256": "080c95bcf16135143d3609bd39c6d8bccd90385405dc49b8673ccb8e7e5cab93",
+    "candidate_preparation_predecessor_commit": "ee57e54defe67531ae011acf2dc27a49c3281a7d",
+    "local_review_head_reported": "c7680ac665dfebb2a3724ae3d63f8bf2c0d0a5dc",
+    "published_base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "independent_human_review": false,
+    "release_approved": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 1665,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 1352,
+    "REJECT": 64,
+    "QUARANTINE": 275,
+    "NEEDS_HUMAN_REVIEW": 421
+  },
+  "agent_substantive_reviews": 1690,
+  "substantively_unreviewed": 419,
+  "records": [
+    {
+      "id": "repo-556a143a25f7dd078c54a624",
+      "ordinal": 50,
+      "messages_sha256": "556a143a25f7dd078c54a624038a0d8488e8af001140795d17dabdc25fd7d1cf",
+      "state": "REJECT",
+      "rationale": "The product derivative and constant-mass reduction are correct, but identifying the v*dm/dt term as rocket thrust and claiming the same remaining-body F=dp/dt law covers mass exchange omits the momentum flux of entering or leaving matter.",
+      "evidence": [
+        {
+          "title": "NASA Glenn, Ideal Rocket Equation",
+          "url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/ideal-rocket-equation/",
+          "finding": "Rocket momentum balance includes the expelled mass and its velocity relative to the vehicle; differentiating the remaining vehicle momentum alone is not the closed-system force law."
+        },
+        {
+          "title": "Momentum in the dynamics of variable-mass systems: classical and relativistic case",
+          "url": "https://arxiv.org/abs/1810.03609",
+          "finding": "Variable-mass-body equations explicitly include relative velocities of transferred mass."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a vehicle exchanging mass at inertial velocity u, d(m*v)/dt=F_external+u*dm/dt, hence m*v_dot=F_external+(u-v)*dm/dt. Thrust depends on relative velocity, not simply the remaining vehicle velocity v."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Reject the open-system/rocket inference without disputing the algebraic product rule or the closed-material-system momentum law."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L473"
+    },
+    {
+      "id": "repo-232da1dfa47fd5ea3b8bb4c2",
+      "ordinal": 51,
+      "messages_sha256": "232da1dfa47fd5ea3b8bb4c247c2df6e0238047a723a3e54492cab2a8e279ee2",
+      "state": "PASS",
+      "rationale": "Correct conceptual explanation of momentum transfer through electromagnetic fields and radiation without mechanical contact.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A vacuum radiation pulse of energy E carries momentum E/c, and electromagnetic momentum density is epsilon0*(E cross B)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Gravity also transports momentum in relativistic field descriptions, but a unique local gravitational momentum density is not defined in the same gauge-independent way as electromagnetic momentum. The answer is introductory field-mediated transfer, not a tensor definition."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L476"
+    },
+    {
+      "id": "repo-0d3ffe6380947ad0dda72b31",
+      "ordinal": 52,
+      "messages_sha256": "0d3ffe6380947ad0dda72b3179b1e7d3ed855c91c1c48fd2216f3de7a48bb030",
+      "state": "PASS",
+      "rationale": "Correct nonrelativistic two-body CM-to-lab angle relation and mass-dependent accessible scattering range.",
+      "evidence": [
+        {
+          "title": "UMass, Elastic Scattering lecture notes",
+          "url": "https://people.umass.edu/~bvs/Elastic_scattering.pdf",
+          "finding": "Relates laboratory and center-of-mass scattering directions by adding the center-of-mass velocity to the outgoing particle velocity."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Particle1 has CM speed m2*v_rel/(m1+m2) and lab boost m1*v_rel/(m1+m2), giving tan(theta_lab)=sin(theta_CM)/(cos(theta_CM)+m1/m2). For m1>m2, the maximum lab angle satisfies sin(theta_max)=m2/m1."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Use atan2 to select the correct quadrant. Equal masses have a limiting 90-degree direction and a zero outgoing projectile speed for exact CM backscatter, where its direction is undefined."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L487"
+    },
+    {
+      "id": "repo-7ab9b08a7fb65b84bf96220b",
+      "ordinal": 53,
+      "messages_sha256": "7ab9b08a7fb65b84bf96220b6827cb59f670359c646d815910760f02f0dadbb7",
+      "state": "PASS",
+      "rationale": "Correct moment-of-momentum and moment-of-force structural analogy.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a particle about a fixed inertial origin, d(r cross p)/dt=v cross(m*v)+r cross F=r cross F."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A moving origin or noninertial frame can add transport terms; the standard fixed-origin law is intended."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L490"
+    },
+    {
+      "id": "repo-4a25ad0cb1a2fb58d6b5ee4c",
+      "ordinal": 54,
+      "messages_sha256": "4a25ad0cb1a2fb58d6b5ee4cc7f56dd2e256641fcf6bfadb4f8c872d4f7347f9",
+      "state": "PASS",
+      "rationale": "Correct massless energy-momentum relation and vacuum radiation momentum density.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "E²=p²*c²+m0²*c^4 gives p=E/c for m0=0; a unidirectional vacuum wave has momentum density S/c²."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Relativistic massive-particle momentum is gamma*m0*v, and total momentum of nonparallel light beams can be smaller than total energy/c. The answer concerns a photon or directed radiation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L493"
+    },
+    {
+      "id": "repo-272809c659ea12345df5cab2",
+      "ordinal": 55,
+      "messages_sha256": "272809c659ea12345df5cab2db61c47e5ea39531032c141a686a62bac63c0d2f",
+      "state": "PASS",
+      "rationale": "Correct time-integrated momentum theorem and distinction between mean and peak force.",
+      "evidence": [
+        {
+          "title": "OpenStax College Physics, Impulse",
+          "url": "https://openstax.org/books/college-physics/pages/8-2-impulse",
+          "finding": "Impulse is the integral of net force and equals average net force times the interval; peak force and stress require more detail."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Integrating dp/dt=F_net over the collision interval gives Delta_p=integral F_net dt irrespective of force shape."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "F must be the net force on the chosen closed material system; open-system mass flux requires additional accounting. Failure can depend on stress distribution and duration, not peak force alone."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L498"
+    },
+    {
+      "id": "repo-af7cce15f1b2713f4836e18c",
+      "ordinal": 56,
+      "messages_sha256": "af7cce15f1b2713f4836e18cc8716d2c4b60f64ca186421862bd10f07b84173f",
+      "state": "PASS",
+      "rationale": "Correct decomposition and lower bound on final kinetic energy at fixed total momentum.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Writing u1=V_CM+(m2/M)*w and u2=V_CM-(m1/M)*w yields K=p²/(2*M)+mu*w²/2, minimized at w=0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The prompt calls this a momentum bound, but the answer explicitly fixes momentum and derives the kinetic-energy floor instead; that is the physically meaningful correction."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L501"
+    },
+    {
+      "id": "repo-a23bdfdcee7d9bc221ab34a6",
+      "ordinal": 57,
+      "messages_sha256": "a23bdfdcee7d9bc221ab34a65ed6f7c98572661079c537b1cd66136421ddc530",
+      "state": "PASS",
+      "rationale": "Correct definition of a force couple with zero resultant force and nonzero moment from separated lines of action.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For forces F and -F at r1 and r2, net force is zero and torque=(r1-r2) cross F, independent of the chosen origin."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The separation must include a perpendicular distance between the force lines; collinear opposite forces do not produce a nonzero couple."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L514"
+    },
+    {
+      "id": "repo-3f1977c943a2e2f9669c79d4",
+      "ordinal": 58,
+      "messages_sha256": "3f1977c943a2e2f9669c79d45cb1a5d65731087c6243fe0cf96394389bc15027",
+      "state": "PASS",
+      "rationale": "Correct sign-convention distinction between negative torque and deceleration.",
+      "evidence": [
+        {
+          "title": "OpenStax University Physics volume1, Work and Power for Rotational Motion",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/10-8-work-and-power-for-rotational-motion",
+          "finding": "Rotational work and power use the torque component about the motion axis, with P=tau*omega for fixed-axis rotation."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Rotational power tau*omega is negative when torque opposes the current fixed-axis angular velocity; a negative torque can speed up negative rotation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The simple speed-change interpretation assumes the relevant rigid fixed-axis dynamics; three-dimensional torque can redirect angular momentum."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L547"
+    },
+    {
+      "id": "repo-12aaaf2fd3e7dd5009f9ea76",
+      "ordinal": 59,
+      "messages_sha256": "12aaaf2fd3e7dd5009f9ea76e57491095d1b150a6b479e379f9268c3575dbe56",
+      "state": "PASS",
+      "rationale": "Correct angular-momentum law and fixed-axis constant-inertia reduction.",
+      "evidence": [
+        {
+          "title": "OpenStax University Physics volume1, Work and Power for Rotational Motion",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/10-8-work-and-power-for-rotational-motion",
+          "finding": "Rotational work and power use the torque component about the motion axis, with P=tau*omega for fixed-axis rotation."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "About a fixed inertial origin, sum tau_external=dL/dt. For the axial component L_axis=I_axis*omega with constant I_axis, tau_axis=I_axis*alpha."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The scalar axial component is meant; a general rigid body need not have vector L parallel to omega, and a moving origin needs its transport terms."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L549"
+    },
+    {
+      "id": "repo-4a91b83ace597150840eb450",
+      "ordinal": 60,
+      "messages_sha256": "4a91b83ace597150840eb450c5ecb3e188361290dfcdfc47acb02005da03345d",
+      "state": "PASS",
+      "rationale": "Correct ordinary fixed-axis rotational analogue of Newton second law.",
+      "evidence": [
+        {
+          "title": "OpenStax University Physics volume1, Work and Power for Rotational Motion",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/10-8-work-and-power-for-rotational-motion",
+          "finding": "Rotational work and power use the torque component about the motion axis, with P=tau*omega for fixed-axis rotation."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a rigid body about a fixed axis, tau_net=I*alpha; the translational counterpart for the center of mass is F_net=M*a_CM."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "If the moment of inertia changes, differentiating angular momentum also gives I_dot*omega; the elementary fixed rigid-axis model is intended."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L551"
+    },
+    {
+      "id": "repo-3ec2d5ca18fbaf5dc82afa8f",
+      "ordinal": 61,
+      "messages_sha256": "3ec2d5ca18fbaf5dc82afa8fa68ffa65065b2393482d45e8f0c3c429e137e4b0",
+      "state": "PASS",
+      "rationale": "Correct fixed-axis rotational power analogy.",
+      "evidence": [
+        {
+          "title": "OpenStax University Physics volume1, Work and Power for Rotational Motion",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/10-8-work-and-power-for-rotational-motion",
+          "finding": "Rotational work and power use the torque component about the motion axis, with P=tau*omega for fixed-axis rotation."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Power=tau dot omega; when torque and rotation share an axis this is the signed product tau*omega, parallel to F dot v."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The full vector dot product is needed for nonaligned three-dimensional motions."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L552"
+    },
+    {
+      "id": "repo-6fb27639525a1674bb19c661",
+      "ordinal": 62,
+      "messages_sha256": "6fb27639525a1674bb19c661d6a9d16221d1ffe071ceea6e7323fd3faee3a08d",
+      "state": "PASS",
+      "rationale": "Correct angular acceleration from net torque and inertia.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "alpha=6 N*m/(2 kg*m²)=3 rad/s²."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is the rigid fixed-axis model with the stated net torque."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L554"
+    },
+    {
+      "id": "repo-0874b8380d5b1db0eb57b061",
+      "ordinal": 63,
+      "messages_sha256": "0874b8380d5b1db0eb57b061ca30a2da2ab9d965b073e9351fd221da57c16368",
+      "state": "PASS",
+      "rationale": "Correct moment-arm guidance for opening an ordinary hinged door.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Torque magnitude is r*F*sin(theta); increasing hinge distance and using a perpendicular push maximize it at fixed force within the geometry."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This concerns an unlatched ordinary hinge model; binding, locks and structural limits are separate issues."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L555"
+    },
+    {
+      "id": "repo-c7a9b74fde5ebc765c17e1b5",
+      "ordinal": 64,
+      "messages_sha256": "c7a9b74fde5ebc765c17e1b58df187d1554e677c215c8ebf8164c09d43320b07",
+      "state": "PASS",
+      "rationale": "Correct standard constant-inertia torque-versus-acceleration interpretation with a constant bias/friction intercept.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For measured drive torque tau_drive=I*alpha+tau_bias, the graph slope is I and intercept tau_bias."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "If the plotted torque is already net torque, the ideal intercept is zero. Speed-dependent friction, changing inertia or correlated calibration error can alter slope; the proposed interpretation requires the stated fixed-axis model and controlled conditions."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L556"
+    },
+    {
+      "id": "repo-9aa66b65be5473f81060010c",
+      "ordinal": 65,
+      "messages_sha256": "9aa66b65be5473f81060010c10395864730b00f14b629269b830b805cc4f7461",
+      "state": "PASS",
+      "rationale": "Correct torque-free skater angular-momentum argument with external-torque caveat.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "L approximately I*omega constant gives omega_final/omega_initial=I_initial/I_final."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The skater supplies internal work as rotational kinetic energy increases; angular-momentum conservation does not imply kinetic-energy conservation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L557"
+    },
+    {
+      "id": "repo-30eeb964eca95f212dc5d388",
+      "ordinal": 66,
+      "messages_sha256": "30eeb964eca95f212dc5d3880375edfcc51534b7cbb55bb06c1d308b0ef6dd29",
+      "state": "PASS",
+      "rationale": "Correct qualitative rotational-inertia explanation without using the prohibited word.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The fixed-axis inertia integral weights material at distance r by r², so moving the same material outward increases resistance to angular acceleration."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Moment of inertia depends on both the quantity of material and its distribution about the specified axis; the outward-spreading example isolates distribution."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L558"
+    },
+    {
+      "id": "repo-d6b0e63fed83a8c0dbc2926a",
+      "ordinal": 67,
+      "messages_sha256": "d6b0e63fed83a8c0dbc2926a13c3e003d0a5164dadcc0dd69438f810013d3527",
+      "state": "PASS",
+      "rationale": "Correct force-couple counterexample to zero force implying zero torque.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Equal opposite separated forces give sum F=0 but tau=(r1-r2) cross F can be nonzero."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Zero net force leaves existing center-of-mass velocity unchanged, and nonzero torque changes angular momentum rather than guaranteeing a particular instantaneous rotation rate."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L559"
+    },
+    {
+      "id": "repo-30413143e7b22382250652b1",
+      "ordinal": 68,
+      "messages_sha256": "30413143e7b22382250652b1390464137be6b1f1794b290fd308164c563c125d",
+      "state": "PASS",
+      "rationale": "Correct upslope static-friction direction for gravity-driven no-slip rolling under the specified conditions.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a cylinder, m*g*sin(alpha)-f=m*a and f*R=I*a/R give f=I*m*g*sin(alpha)/(m*R²+I)>0 upslope."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The original correctly distinguishes externally driven or slipping cases where the direction can change."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L560"
+    },
+    {
+      "id": "repo-5088c4e270992a083f5e3535",
+      "ordinal": 69,
+      "messages_sha256": "5088c4e270992a083f5e35354bdbf7924261a12106f064610712ee24a0211c6d",
+      "state": "PASS",
+      "rationale": "Correct hinge torque for a push at the specified 0.5 m lever arm and 30-degree force angle.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "tau=0.5 m*20 N*sin30 degrees=5 N*m."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The force is assumed applied at the outer edge and the angle measured to the door lever arm; other application points change r."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L561"
+    },
+    {
+      "id": "repo-c9cf574c7f18b55e9867abd3",
+      "ordinal": 70,
+      "messages_sha256": "c9cf574c7f18b55e9867abd3a494832580e4d7a1aa15eebf3d139975b2ce9f23",
+      "state": "PASS",
+      "rationale": "Correct mechanical power at the stated simultaneous torque-speed operating point.",
+      "evidence": [
+        {
+          "title": "OpenStax University Physics volume1, Work and Power for Rotational Motion",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/10-8-work-and-power-for-rotational-motion",
+          "finding": "Rotational work and power use the torque component about the motion axis, with P=tau*omega for fixed-axis rotation."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "50 N*m*100 rad/s=5000 W=5 kW."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is output mechanical power, not electrical input or an assertion that both separate maximum ratings can always be reached together."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L562"
+    },
+    {
+      "id": "repo-6c3f52ae576faf13c606cedb",
+      "ordinal": 71,
+      "messages_sha256": "6c3f52ae576faf13c606cedbb3e6b31e84a7f9924d4f5bd8f5f62694669c1ae2",
+      "state": "PASS",
+      "rationale": "Correct signed net-torque and angular-acceleration calculation.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "tau_net=15-2=13 N*m and alpha=13/5=2.6 rad/s²."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The source explicitly states the sign convention and opposing-friction assumption."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L564"
+    },
+    {
+      "id": "repo-42d96aa16b33606ca0c8462d",
+      "ordinal": 72,
+      "messages_sha256": "42d96aa16b33606ca0c8462d6d8a89f9459a34166966110cadb131df07d6743c",
+      "state": "PASS",
+      "rationale": "Correct torque inventory for an ordinary circular wheel about its center.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a rigid wheel on a flat surface, gravity and the ideal normal reaction pass through the center, while tangential contact friction has lever arm R."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Deformable contacts and rolling-resistance normal shifts can add torque; usually in the answer accommodates these exceptions."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L566"
+    },
+    {
+      "id": "repo-d67c16ed90c23810beb3e10a",
+      "ordinal": 73,
+      "messages_sha256": "d67c16ed90c23810beb3e10a76af614352de45fe5db26f540c029acd93f0909b",
+      "state": "PASS",
+      "rationale": "Correct distinction between a pivot force and its zero torque about that pivot.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Torque=r cross F vanishes when the line of action passes through the origin point, though the same nonzero F enters total-force balance."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Torque about a different reference point need not vanish, and the support force may balance other forces rather than cause net acceleration by itself."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L568"
+    },
+    {
+      "id": "repo-36bd22cf7df31464434ca5ce",
+      "ordinal": 74,
+      "messages_sha256": "36bd22cf7df31464434ca5ce6a6bc3b8ce1b3a510970a32f92cf2f2fb5ae3f9d",
+      "state": "PASS",
+      "rationale": "Correct finite-torque continuity versus ideal angular-impulse distinction.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Individually checked closed/open-system momentum balance, center-of-mass scattering, torque and angular-momentum identities, inertia, rolling dynamics and numerical torque/power calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Delta_L=integral tau dt. A bounded torque over a vanishing interval gives no finite jump, while an ideal impulse can produce a finite change in angular momentum."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "An abrupt clamp can be approximated impulsively, and finite compliance resolves the real short-time transient."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L569"
+    }
+  ]
+}

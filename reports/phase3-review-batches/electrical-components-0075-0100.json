@@ -1,0 +1,506 @@
+{
+  "base_commit": "cde720626691551df2efc87fc111e8fcd7420a72",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "electrical_components",
+  "offset": 75,
+  "limit": 25,
+  "next_offset": 100,
+  "new_substantive_reviews": 25,
+  "skipped_existing": 0,
+  "dispositions_added": {
+    "PASS": 18,
+    "QUARANTINE": 6,
+    "REJECT": 1
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "independent_agent",
+    "base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "records_checked": 25,
+    "canonical_hashes_matched": 25,
+    "whole_published_ledger_records_matched": 25,
+    "source_lines_and_staging_matched": 25,
+    "final_counts": {
+      "PASS": 18,
+      "QUARANTINE": 6,
+      "REJECT": 1
+    },
+    "all_states_upheld": true,
+    "review_only_corrections": [
+      "91 acceleration vector explanation",
+      "90 narrower unsupported safety conclusion",
+      "89 direct motor-contactor evidence",
+      "81 live alternate manufacturer evidence and PDF access caveat",
+      "99 stable TI PDF URL",
+      "87 direct terminology source"
+    ],
+    "source_answers_unchanged": true,
+    "independent_human_review": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 442,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 322,
+    "REJECT": 31,
+    "QUARANTINE": 115,
+    "NEEDS_HUMAN_REVIEW": 1644
+  },
+  "agent_substantive_reviews": 467,
+  "substantively_unreviewed": 1642,
+  "records": [
+    {
+      "id": "repo-6fd597d4095051b2f942a376",
+      "ordinal": 75,
+      "messages_sha256": "6fd597d4095051b2f942a376409d38e08a43192c56c944db1a47cd934024db1d",
+      "state": "PASS",
+      "rationale": "Faithful, clearer troubleshooting note. The rewrite treats output/load mismatch, off-state leakage and insufficient load current as hypotheses to check rather than established causes. It does not repeat the confusing claim that an SSR mechanically clicks.",
+      "evidence": [
+        {
+          "title": "OMRON SSR troubleshooting",
+          "url": "https://www.ia.omron.com/support/faq/answer/18/faq02155/index.html",
+          "finding": "Off-state leakage can prevent an electromagnetic load from releasing; AC triac loads also have minimum-current constraints."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L397"
+    },
+    {
+      "id": "repo-c04e7654dbf8247ad094fc0d",
+      "ordinal": 76,
+      "messages_sha256": "c04e7654dbf8247ad094fc0dfcc1b7c867b612b6a3be73e2196f254b26ff85e9",
+      "state": "QUARANTINE",
+      "rationale": "The bandwidth/sample-rate distinction is sound, but the reliable-capture rule omits input bandlimiting and allows equality at twice the highest retained sinusoid. Sampling only according to frequencies of interest cannot stop stronger unwanted frequencies from aliasing, and exact Nyquist sampling can lose phase/amplitude information. Hold for these material qualifications rather than rewriting the answer.",
+      "evidence": [
+        {
+          "title": "Analog Devices anti-aliasing fundamentals",
+          "url": "https://www.analog.com/en/resources/technical-articles/guide-to-antialiasing-filter-basics.html?gated=1754190838988",
+          "finding": "Out-of-band input frequencies alias into the sampled band; practical capture requires filtering and a sampling rate above twice the retained upper frequency."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At sample times n/fs with fs=2f, sin(2*pi*f*n/fs)=sin(pi*n)=0 for every integer n. A nonzero input can therefore produce the same samples as zero. Out-of-band tones f+k*fs also share sampled phases."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L401"
+    },
+    {
+      "id": "repo-d11bb9f1f348c9759d2f76ad",
+      "ordinal": 77,
+      "messages_sha256": "d11bb9f1f348c9759d2f76ad3aa5a55a7b1c9c8a5437617d9a88ac7e3beb03fb",
+      "state": "PASS",
+      "rationale": "Reasonable conditional selection strategy covering salt/UV/thermal exposure, vibration, galvanic compatibility, sealed locking connectors and maintainability. It explicitly avoids a universal material choice and does not certify a particular crane, enclosure rating or connector installation.",
+      "evidence": [
+        {
+          "title": "Hammond enclosure selection",
+          "url": "https://www.hammfg.com/files/downloads/whitepapers/selection-whitepaper.pdf",
+          "finding": "Material selection depends on chloride corrosion, UV durability, impact, thermal and EMC requirements."
+        },
+        {
+          "title": "TE Connectivity rugged connectors",
+          "url": "https://www.te.com/en/industries/commercial-industrial-vehicles/insights/rugged-connectors-for-harsh-conditions.html",
+          "finding": "Environmental sealing, corrosion-resistant construction and locking that tolerates vibration are important for heavy-use vehicle connections."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L403"
+    },
+    {
+      "id": "repo-631976f132239ffd8b3a1c49",
+      "ordinal": 78,
+      "messages_sha256": "631976f132239ffd8b3a1c49695fb050feeee265cc48869d12fb3364204744df",
+      "state": "PASS",
+      "rationale": "Correctly treats differing early/late failure patterns as possible evidence of different populations or mechanisms and recommends checking them before pooling. It does not infer a unique failure mechanism or fitted lifetime merely from qualitative shapes.",
+      "evidence": [
+        {
+          "title": "NIST accelerated life tests",
+          "url": "https://www.itl.nist.gov/div898/handbook/apr/section3/apr314.htm",
+          "finding": "Plan stress levels, samples and test duration around one failure mechanism; fit life and acceleration models and handle other mechanisms as censored observations."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L409"
+    },
+    {
+      "id": "repo-22b75d06480635563b5ba2e8",
+      "ordinal": 79,
+      "messages_sha256": "22b75d06480635563b5ba2e8c763565acfe4274629099a1af6406467aae48a21",
+      "state": "PASS",
+      "rationale": "Correct conceptual purpose of isolated flyback optocoupler feedback: convey the secondary-side regulation information optically without a galvanic signal connection. It is not a claim that the optocoupler alone certifies the whole converter's safety barrier.",
+      "evidence": [
+        {
+          "title": "TI optocoupler feedback bias",
+          "url": "https://www.ti.com/document-viewer/lit/html/ssztcw5",
+          "finding": "An optocoupler transfers an isolated power supply feedback signal across the isolation boundary using an LED and photodetector."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L410"
+    },
+    {
+      "id": "repo-a8c2bbe86f198bf191e04e9a",
+      "ordinal": 80,
+      "messages_sha256": "a8c2bbe86f198bf191e04e9a5acff0e78fd6a03c65c04f49f874dc57b3a89dd8",
+      "state": "REJECT",
+      "rationale": "The categorical conclusion that a breaker or replaceable fuse is better for frequent faults is unsupported and conflicts with manufacturer guidance positioning suitably rated resettable PPTCs for frequent overcurrent events. Resistance shifts and finite endurance can matter, but neither inevitable progressive degradation nor comparative superiority follows without the actual device, cycling, thermal and fault ratings.",
+      "evidence": [
+        {
+          "title": "Littelfuse resettable PPTCs",
+          "url": "https://www.littelfuse.com/products/fuses-overcurrent-protection/polyswitch-resettable-pptc-devices",
+          "finding": "Manufacturer describes resettable PPTCs as suited to frequent overcurrent applications; choice still depends on part and fault ratings, leakage and resetting requirements."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L421"
+    },
+    {
+      "id": "repo-64757ea8a7374bdcd6ba99dd",
+      "ordinal": 81,
+      "messages_sha256": "64757ea8a7374bdcd6ba99ddaf9c22806583b6fd1ada3e157d276ed0c045c0cf",
+      "state": "PASS",
+      "rationale": "Correctly rejects an unconditional reliability benefit from encapsulation and lists plausible moisture/mechanical benefits alongside repair, heat and expansion-mismatch trade-offs. Its may/can wording does not claim that every compound traps heat or causes damage.",
+      "evidence": [
+        {
+          "title": "Electrolube encapsulation considerations",
+          "url": "https://electrolube.com/app/uploads/2019/11/ELCAT_RESIN_GB4-web_decyc9.pdf",
+          "finding": "Cure heat, air voids, chemistry compatibility and thermal-expansion differences can affect encapsulated electronics.",
+          "access_caveat": "Indexed technical text was available, but independent reviewer found live PDF redirected to the brand landing page."
+        },
+        {
+          "title": "Master Bond potting/encapsulation",
+          "url": "https://www.masterbond.com/articles/thermally-conductive-electrically-insulative-epoxies-excel-potting-and-encapsulation",
+          "finding": "Compound properties affect heat transfer, stresses and environmental protection."
+        },
+        {
+          "title": "Dow PCB module reliability",
+          "url": "https://www.dow.com/documents/11/11-3944-01-boost-your-pcb-module-reliability.pdf?iframe=true",
+          "finding": "Material choice trades protection, thermal/mechanical behavior and repairability."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L422"
+    },
+    {
+      "id": "repo-db2a25c814ac04404f882462",
+      "ordinal": 82,
+      "messages_sha256": "db2a25c814ac04404f8824628af379efdfe47e1370773bb0d102e3809b7da426",
+      "state": "QUARANTINE",
+      "rationale": "Positive electrothermal feedback is described correctly, but common in paralleled MOSFETs without proper balancing lacks the operating-region qualification needed to distinguish positive on-resistance current sharing from linear-mode hot-spot instability. Derating and thermal design also do not alone establish prevention at every bias point. Preserve pending scope qualification.",
+      "evidence": [
+        {
+          "title": "Infineon MOSFET linear-mode SOA",
+          "url": "https://www.infineon.com/assets/row/public/documents/24/42/infineon-applicationnote-linear-mode-operation-safe-operation-diagram-mosfets-applicationnotes-en.pdf?fileId=db3a30433e30e4bf013e3646e9381200",
+          "finding": "MOSFET electrothermal instability depends on operating point, current temperature coefficient and heat removal; fully enhanced positive on-resistance behavior differs from vulnerable linear operation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a fixed voltage across a fully enhanced channel, P=V²/R; a positive dR/dT lowers power as temperature rises. In vulnerable linear operation the current's positive temperature coefficient can instead produce destabilizing feedback."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L424"
+    },
+    {
+      "id": "repo-a97cd3fe0d69523d8c0344db",
+      "ordinal": 83,
+      "messages_sha256": "a97cd3fe0d69523d8c0344db9943a9c698c5fe29589bd266da0a950b0703c82c",
+      "state": "PASS",
+      "rationale": "Correct introductory Hall-effect principle: magnetic flux density creates a transverse Hall voltage and supports position/speed/magnet sensing. The answer is read as explaining the sensing mechanism, not asserting that every packaged Hall switch or latch exposes a continuously proportional analog output.",
+      "evidence": [
+        {
+          "title": "TI Hall-effect sensor fundamentals",
+          "url": "https://www.ti.com/document-viewer/lit/html/sszt164",
+          "finding": "Linear sensors vary output with sensed flux density; switch/latch devices add threshold behavior, so package output format is not universally analog."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L429"
+    },
+    {
+      "id": "repo-4c303ff2b0ccbea4a1b98b2d",
+      "ordinal": 84,
+      "messages_sha256": "4c303ff2b0ccbea4a1b98b2db9619d4a8ac372af53246f64b4ad54cd32e871bc",
+      "state": "PASS",
+      "rationale": "Appropriate next-analysis checklist for vibration-only field failures, including mechanical interconnect, solder, ceramic and mounting mechanisms. Re-examining the mission profile and fixture is sensible; the word usually is treated as a diagnostic priority, not proof of the root cause or exclusion of assembly variation.",
+      "evidence": [
+        {
+          "title": "TE Connectivity rugged connectors",
+          "url": "https://www.te.com/en/industries/commercial-industrial-vehicles/insights/rugged-connectors-for-harsh-conditions.html",
+          "finding": "Environmental sealing, corrosion-resistant construction and locking that tolerates vibration are important for heavy-use vehicle connections."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L446"
+    },
+    {
+      "id": "repo-547784d0e682e9d6f0db66bf",
+      "ordinal": 85,
+      "messages_sha256": "547784d0e682e9d6f0db66bffd3e4041e14588e2eb3818b302e41afd797c0274",
+      "state": "PASS",
+      "rationale": "Correct precision-measurement concern: unequal-temperature dissimilar junctions generate thermoelectric offsets that can reach microvolt scales, and thermal symmetry/stability and distance from heat sources help. The numerical magnitude is possible rather than universal and depends on material pair and temperature difference.",
+      "evidence": [
+        {
+          "title": "Analog Devices thermoelectric error in precision voltage sources",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/20-bit-dac-and-accurate-precision-voltage-source.html",
+          "finding": "Dissimilar junctions and thermal gradients create parasitic EMFs; clean junctions, thermal stabilization and symmetry reduce errors."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A differential Seebeck coefficient of 5 microvolts/K across 4 K produces 20 microvolts; this is an illustrative plausibility calculation, not a measurement of the user's PCB."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L448"
+    },
+    {
+      "id": "repo-4c5144105e53cfa8823b9dd0",
+      "ordinal": 86,
+      "messages_sha256": "4c5144105e53cfa8823b9dd0febfe1535b39cdda3ec3d94f014ac71e0c57bbe3",
+      "state": "PASS",
+      "rationale": "Correct core distinction between absolute stress limits and recommended continuous operation. The brief-tolerance wording is an introductory description of a stress boundary and is not taken to supply an allowable pulse duration, simultaneous-maximum guarantee or permission to design operation at that limit.",
+      "evidence": [
+        {
+          "title": "Analog Devices absolute maximum ratings",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/raqs/raq-issue-50.html",
+          "finding": "Absolute maxima are stress boundaries rather than recommended functional conditions; prolonged exposure can reduce reliability."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L469"
+    },
+    {
+      "id": "repo-6e0d81da5bcf6b7e911954d2",
+      "ordinal": 87,
+      "messages_sha256": "6e0d81da5bcf6b7e911954d275861d740adedc15609f1b1c6ff904bec1859603",
+      "state": "PASS",
+      "rationale": "Correct concise regulator definitions: internal operating current, input/output headroom for regulation, and frequency-dependent input-noise attenuation. No fixed dropout or PSRR guarantee is inferred without the device and operating point.",
+      "evidence": [
+        {
+          "title": "TI LDO basics",
+          "url": "https://www.ti.com/product-category/power-management/ldo-basics-ebook.html",
+          "finding": "Defines dropout, internal/quiescent current and frequency-dependent power-supply rejection as separate regulator properties."
+        },
+        {
+          "title": "Toshiba LDO terminology",
+          "url": "https://toshiba.semicon-storage.com/eu/semiconductor/knowledge/e-learning/basics-of-low-dropout-ldo-regulators/chap3/chap3-1.html",
+          "finding": "Direct definitions of dropout, quiescent current and power-supply rejection."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L475"
+    },
+    {
+      "id": "repo-62280f5a590fd7c47913ee6c",
+      "ordinal": 88,
+      "messages_sha256": "62280f5a590fd7c47913ee6c20a4667a94f8d1ca8d0a5844e983221cdb9d8637",
+      "state": "PASS",
+      "rationale": "Sound accelerated-life-test plan checklist including mechanism, stress schedule, sampling, censoring, monitoring, failure criteria and a justified acceleration model back to use conditions. It does not pretend that accelerated hours directly equal field life without a model.",
+      "evidence": [
+        {
+          "title": "NIST accelerated life tests",
+          "url": "https://www.itl.nist.gov/div898/handbook/apr/section3/apr314.htm",
+          "finding": "Plan stress levels, samples and test duration around one failure mechanism; fit life and acceleration models and handle other mechanisms as censored observations."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L486"
+    },
+    {
+      "id": "repo-2c8275836f037c2323b0f536",
+      "ordinal": 89,
+      "messages_sha256": "2c8275836f037c2323b0f536278e981e50fcf361f052b6ef801ecfdf1808af58",
+      "state": "PASS",
+      "rationale": "Accurate comparison with an ordinary panel/control switch: properly rated motor contactors address inductive/inrush duty and remote cycling and can integrate with overload relays. Often and motor applications appropriately avoid claiming that every contactor rating suits every motor or that the contactor alone supplies overload protection.",
+      "evidence": [
+        {
+          "title": "OMRON relay troubleshooting",
+          "url": "https://www.ia.omron.com/support/guide/36/troubleshooting.html",
+          "finding": "Mechanical relays have multiple failure mechanisms, including contact welding, wear, intermittent contact and coil deterioration."
+        },
+        {
+          "title": "Eaton electrical starters",
+          "url": "https://www.eaton.com/us/en-us/products/controls-drives-automation-sensors/contactors-and-starters/understanding-electrical-starters-.html",
+          "finding": "Motor contactors support repeated remote switching and inrush duty, with overload protection handled separately."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The response explicitly says integration with overload relays, retaining the distinction between switching the load and protecting it."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L500"
+    },
+    {
+      "id": "repo-dac7e100d2370e4d14499419",
+      "ordinal": 90,
+      "messages_sha256": "dac7e100d2370e4d14499419507c3505877158f67dfcc08bfb3618160b4b579d",
+      "state": "QUARANTINE",
+      "rationale": "The dim-or-unlit prediction is plausible for many red LEDs on one AA cell, and the answer does allow subnominal-voltage glow. However, nominal forward voltage alone does not establish a safe upper current for the unspecified LED and fresh cell. Hold the generally-safe conclusion pending the actual I–V curve, current limits and battery characteristics.",
+      "evidence": [
+        {
+          "title": "Kingbright LED circuit design notes",
+          "url": "https://www.kingbrightusa.com/applicationnotes/ApplicationNotesFor_SMD_LEDs.pdf",
+          "finding": "LED current is sensitive to applied voltage; current limiting and the actual part operating range matter rather than treating nominal forward voltage as a hard threshold."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The operating current is the intersection of battery V=Voc-I*Rinternal with the LED I-V curve. A single nominal Vf number does not determine that intersection."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L501"
+    },
+    {
+      "id": "repo-c047b78ffa6b37e1427b7abf",
+      "ordinal": 91,
+      "messages_sha256": "c047b78ffa6b37e1427b7abfa9a77029f051f9f97760af2170d4e113cd0cc770",
+      "state": "QUARANTINE",
+      "rationale": "The sensor-fusion definition is sound, but accelerometer slow but absolute overgeneralizes its role. Gravity can provide a long-term tilt reference under suitable motion assumptions, while sustained acceleration corrupts that reference and gravity alone does not determine heading. The unqualified stable-orientation example lacks those essential limits.",
+      "evidence": [
+        {
+          "title": "Analog Devices AN-1057 inclination sensing",
+          "url": "https://www.analog.com/en/resources/app-notes/2020/07/22/16/49/an-1057.html",
+          "finding": "An accelerometer gives a gravity-based tilt reference only under appropriate acceleration assumptions; sustained non-gravity acceleration biases tilt, while gyro integration accumulates drift."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Non-gravitational acceleration contaminates the inferred gravity vector; a suitable general translational acceleration can reproduce a rotated gravity vector. Rotation about gravity leaves its observation unchanged."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L507"
+    },
+    {
+      "id": "repo-6a230f7dd7682bf40d8c5319",
+      "ordinal": 92,
+      "messages_sha256": "6a230f7dd7682bf40d8c5319b1d36d554883b3c23e26a5b8e207d60a7555032a",
+      "state": "QUARANTINE",
+      "rationale": "Most selection factors are useful, but mechanical relays fail more predictably is an unsupported general safety comparison: both welded-closed and open/intermittent mechanical failures occur. The safety-critical force-guided choice also depends on required diagnostic architecture and applicable requirements, not simply mechanical versus SSR. Hold rather than turning the heuristic into a safety-selection rule.",
+      "evidence": [
+        {
+          "title": "OMRON relay troubleshooting",
+          "url": "https://www.ia.omron.com/support/guide/36/troubleshooting.html",
+          "finding": "Mechanical relays have multiple failure mechanisms, including contact welding, wear, intermittent contact and coil deterioration."
+        },
+        {
+          "title": "OMRON safety components technical explanation",
+          "url": "https://www.ia.omron.com/data_pdf/guide/4/safetycompo_tg_e_1_1.pdf",
+          "finding": "Forcibly guided contacts enable monitoring of welded-contact faults; the mechanism does not pull a weld apart."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L512"
+    },
+    {
+      "id": "repo-bbf6e2a8ee1c7e3ea7dafc13",
+      "ordinal": 93,
+      "messages_sha256": "bbf6e2a8ee1c7e3ea7dafc13993a951bb1da822fde01fb006760464455dc95d7",
+      "state": "PASS",
+      "rationale": "Reasonable high-level lifecycle/BOM strategy for regulated equipment: account for documentation, validation and potential regulatory review costs when qualifying alternatives. May/sometimes/can preserve uncertainty; it makes no device-specific approval determination or claim that every alternate requires a new submission.",
+      "evidence": [
+        {
+          "title": "FDA guidance on changes to existing devices",
+          "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/deciding-when-submit-510k-change-existing-device?trk=public_post_comment-text",
+          "finding": "Device changes require assessment against the regulatory framework; some changes trigger new submissions and others can be documented without one."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L513"
+    },
+    {
+      "id": "repo-bf6a21548fe4702d1ae83ba9",
+      "ordinal": 94,
+      "messages_sha256": "bf6a21548fe4702d1ae83ba97ea655435d124165f1268ce51bb1fefb9f00ab91",
+      "state": "PASS",
+      "rationale": "Correctly identifies welded contacts as a possible failure-to-open condition after coil deenergization. The mention of force-guided relays is appropriate safety-system context; it does not claim that force guidance prevents welding or physically breaks the weld.",
+      "evidence": [
+        {
+          "title": "OMRON safety components technical explanation",
+          "url": "https://www.ia.omron.com/data_pdf/guide/4/safetycompo_tg_e_1_1.pdf",
+          "finding": "Forcibly guided contacts enable monitoring of welded-contact faults; the mechanism does not pull a weld apart."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L514"
+    },
+    {
+      "id": "repo-71d5dc03077ebb16f74c9f3d",
+      "ordinal": 95,
+      "messages_sha256": "71d5dc03077ebb16f74c9f3daa61ea7de18b304d458349c3826cbbd3003735b6",
+      "state": "PASS",
+      "rationale": "Plausible conditional diagnostic set for a low-side motor driver: startup supply sag, inductive switching noise, shared return impedance and inadequate decoupling. It explicitly leaves the exact cause dependent on the layout and supply. Proposed remedies require correct sizing/layout and are not a verified fix for the unspecified board.",
+      "evidence": [
+        {
+          "title": "TI brushed DC motor startup",
+          "url": "https://www.ti.com/document-viewer/lit/html/SLVAFQ3/GUID-8EE6B044-DE93-4F14-93B1-F0C5F83980A6",
+          "finding": "Brushed DC motors can draw high startup/inrush currents; an inadequate shared supply can disturb other circuitry."
+        },
+        {
+          "title": "Analog Devices grounding guidance",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/grounding-again.html",
+          "finding": "Local bypassing and controlled low-impedance current paths help keep switching currents from contaminating ADC circuitry; topology and frequency matter."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A startup current step through shared impedance produces voltage error DeltaV=DeltaI*Z; a local rail can cross a brownout threshold. At switch-off, a defined recirculation path limits inductive voltage."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L517"
+    },
+    {
+      "id": "repo-b5b337a155fd6a3aa7abbc2c",
+      "ordinal": 96,
+      "messages_sha256": "b5b337a155fd6a3aa7abbc2c97cc24bd7ed09d10ada2b51fcdcfe8009cb9c0d8",
+      "state": "PASS",
+      "rationale": "Correctly rejects hot MOSFET implies linear mode and distinguishes conduction, switching, thermal-path and inductive-event losses. The requested gate/drain/current waveforms and temperature measurements are relevant discriminators; no single fault is asserted from temperature alone.",
+      "evidence": [
+        {
+          "title": "Infineon MOSFET linear-mode SOA",
+          "url": "https://www.infineon.com/assets/row/public/documents/24/42/infineon-applicationnote-linear-mode-operation-safe-operation-diagram-mosfets-applicationnotes-en.pdf?fileId=db3a30433e30e4bf013e3646e9381200",
+          "finding": "MOSFET electrothermal instability depends on operating point, current temperature coefficient and heat removal; fully enhanced positive on-resistance behavior differs from vulnerable linear operation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Conduction dissipation I²*Rds(on) and switching loss f*integral(Vds*Id dt) can each heat a device without continuous linear-region operation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L520"
+    },
+    {
+      "id": "repo-bca40f89049e27fdaa5edc5b",
+      "ordinal": 97,
+      "messages_sha256": "bca40f89049e27fdaa5edc5b2c9aac077aa5c756ec622241221f09060a120523",
+      "state": "PASS",
+      "rationale": "Reasonable first diagnosis of motor-correlated ADC noise, identifying conducted/radiated coupling, shared supply/reference and switching-node routing. It recommends checks rather than asserting a measured cause. Shielding/regulation/current-return improvements remain topology-dependent rather than guaranteed remedies.",
+      "evidence": [
+        {
+          "title": "Analog Devices grounding guidance",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/grounding-again.html",
+          "finding": "Local bypassing and controlled low-impedance current paths help keep switching currents from contaminating ADC circuitry; topology and frequency matter."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L528"
+    },
+    {
+      "id": "repo-3936a00fd7469def1d539ea3",
+      "ordinal": 98,
+      "messages_sha256": "3936a00fd7469def1d539ea3580df869851a01273cc07fb54cfa338a3e5c88cf",
+      "state": "PASS",
+      "rationale": "Correct introductory definition of residual/let-through surge voltage tied explicitly to a defined test. Lower comparable let-through means less stress on the protected equipment; this does not rank otherwise dissimilar surge ratings or guarantee the voltage at every remote load/installation.",
+      "evidence": [
+        {
+          "title": "Eaton surge protection explained",
+          "url": "https://www.eaton.com/us/en-us/products/backup-power-ups-surge-it-power-distribution/surge-protection/surge-protection-explained.html",
+          "finding": "Let-through rating describes voltage remaining after surge suppression under a specified test; lower comparable ratings mean less residual voltage."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L530"
+    },
+    {
+      "id": "repo-dcbff8772e711eed30fef94d",
+      "ordinal": 99,
+      "messages_sha256": "dcbff8772e711eed30fef94dab26a7b83801c75dd84cc237cb1c18fb81dd94cf",
+      "state": "QUARANTINE",
+      "rationale": "The positive-feedback mechanism is sound, but common risk in semiconductor-based sensors and thermistor arrays is too broad without bias circuit, coefficient and thermal conditions. NTC and PTC devices do not all increase dissipation with temperature under the same excitation. The generic sensor category does not establish the claimed runaway susceptibility.",
+      "evidence": [
+        {
+          "title": "TI thermistor self-heating error",
+          "url": "https://www.ti.com/lit/an/slyt774/slyt774.pdf",
+          "finding": "Self-heating depends on sensor bias, resistance and heat dissipation; temperature coefficient and circuit determine whether power rises or falls with temperature."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For an NTC, constant-voltage P=V²/R(T) rises as R falls, while constant-current P=I²R(T) falls. Runaway further requires heating feedback to exceed the heat-removal response."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L547"
+    }
+  ]
+}

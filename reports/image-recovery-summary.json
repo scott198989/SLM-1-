@@ -1,0 +1,10 @@
+{
+  "source_scope": "existing_academic_only",
+  "candidates_processed": 37,
+  "extracted_needs_review": 19,
+  "duplicates": 8,
+  "still_blocked": 10,
+  "overlapping_pools": false,
+  "approved_records": 0,
+  "receipt_location": "private_local_job/reports/image-recovery"
+}

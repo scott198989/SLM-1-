@@ -1,0 +1,566 @@
+{
+  "base_commit": "7fab175a4f0ef997810ef768621855a3d16c51be",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; no publication retry",
+  "scope": "Five explicitly scoped residual technical decisions after full-pair and primary-evidence review",
+  "new_substantive_reviews": 3,
+  "superseded_substantive_holds": 2,
+  "technical_decisions_changed": 5,
+  "dispositions_added": {
+    "PASS": 5
+  },
+  "agent_substantive_reviews": 2112,
+  "current_dispositions": {
+    "PASS": 1703,
+    "REJECT": 72,
+    "QUARANTINE": 337,
+    "NEEDS_HUMAN_REVIEW": 0
+  },
+  "unchanged_non_target_ledger_rows": 2107,
+  "unchanged_prior_substantive_records": 2107,
+  "original_messages_hashes_tokens_rights_unchanged": true,
+  "independent_agent_qa": {
+    "first_review": "Full original pair and primary-source assessment",
+    "second_review": "Independent full-pair QA at clean base 7fab175, all five canonical hashes matched",
+    "final_recommendation": "5 PASS",
+    "human_review": false
+  },
+  "records": [
+    {
+      "id": "repo-ba110a948fcfd763580a0637",
+      "domain": "algebra",
+      "ordinal": 170,
+      "messages_sha256": "ba110a948fcfd763580a063773a2f5d84a0ecdad2738b74b396544410c1adfa0",
+      "source_origin": {
+        "repository": "scott198989/Completions",
+        "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+        "path": "D_Algebra.jsonl",
+        "blob_sha1": "49abd5e2c6c9d1e5a9954c61c993a9d2dbb53f16",
+        "bytes": 547194,
+        "sha256": "87dea8584252719990f16589465740a1fa9bfb4f2c161912e7c5e3bd2af2de07",
+        "line": 1030,
+        "legacy_split": "unspecified",
+        "url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1030"
+      },
+      "source_line_fetched_at_pinned_commit": true,
+      "whole_source_file_hash_recomputed_in_this_step": false,
+      "prior_ledger_record": {
+        "id": "repo-ba110a948fcfd763580a0637",
+        "messages_sha256": "ba110a948fcfd763580a063773a2f5d84a0ecdad2738b74b396544410c1adfa0",
+        "state": "QUARANTINE",
+        "rationale": "STANDALONE_CONTEXT_DEPENDENCY_UNRESOLVED",
+        "reviewer": "phase3_structural_screen_only",
+        "independent_human_review": false,
+        "review_scope": "structural/context/privacy_screen; substantive_review_not_complete",
+        "tool_evidence": [],
+        "domain": "algebra",
+        "primary_source": "D_Algebra.jsonl",
+        "risk_flags": [
+          "EQUATIONS_CALCULATIONS_OR_PROOF"
+        ],
+        "qwen_tokens": 92,
+        "assistant_tokens": 70,
+        "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+        "training_authorized": false
+      },
+      "prior_substantive_record": null,
+      "new_ledger_record": {
+        "id": "repo-ba110a948fcfd763580a0637",
+        "messages_sha256": "ba110a948fcfd763580a063773a2f5d84a0ecdad2738b74b396544410c1adfa0",
+        "state": "PASS",
+        "rationale": "Correctly distinguishes rewriting an expression in an equivalent simpler form from finding values satisfying an equation. The complete conceptual prompt supplies enough context; a teacher-specific exercise is not needed.",
+        "reviewer": "Codex_cloud_agent_technical_review_20261002",
+        "independent_human_review": false,
+        "review_scope": "complete_visible_prompt_and_answer_read; primary_sources_and_assumptions_checked; independent_agent_QA; no_rewrite",
+        "tool_evidence": [
+          {
+            "method": "primary_source_review",
+            "url": "https://openstax.org/books/prealgebra-2e/pages/2-2-evaluate-simplify-and-translate-expressions",
+            "title": "OpenStax, Prealgebra 2e, section 2.2",
+            "finding": "Defines simplification and illustrates combining like terms while distinguishing expressions from equations."
+          },
+          {
+            "method": "independent_analytical_check",
+            "finding": "3x+2x=(3+2)x=5x for every x; 5x=20 has solution x=4. Simplification preserves an expression, while solving identifies a satisfying value."
+          },
+          {
+            "method": "scope_caveat",
+            "finding": "This is a general explanation of the quoted instruction, not a claim about an unseen exercise."
+          }
+        ],
+        "domain": "algebra",
+        "primary_source": "D_Algebra.jsonl",
+        "risk_flags": [
+          "EQUATIONS_CALCULATIONS_OR_PROOF"
+        ],
+        "qwen_tokens": 92,
+        "assistant_tokens": 70,
+        "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+        "training_authorized": false,
+        "independent_agent_review": true,
+        "review_batch": "reports/phase3-review-batches/residual-five-20261002.json",
+        "original_domain_ordinal": 170
+      },
+      "independent_agent_qa": "Accepted by two independent reviews of the complete original pair and primary evidence; parent accepted all five",
+      "original_messages_unchanged": true
+    },
+    {
+      "id": "repo-a29c2810f6df5627c04ccab8",
+      "domain": "trigonometry",
+      "ordinal": 24,
+      "messages_sha256": "a29c2810f6df5627c04ccab84726d0d4fbfb7d6428415a5cfde07f1e4dae0fe3",
+      "source_origin": {
+        "repository": "scott198989/Completions",
+        "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+        "path": "D_Trigonometry.jsonl",
+        "blob_sha1": "35eab5dc944386455bc385e1e3067dfeefbcd8c1",
+        "bytes": 600685,
+        "sha256": "16978f85007b8e9742c1b55f0cc288a505833c654042b0fe79a8cfe96ff19173",
+        "line": 181,
+        "legacy_split": "unspecified",
+        "url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L181"
+      },
+      "source_line_fetched_at_pinned_commit": true,
+      "whole_source_file_hash_recomputed_in_this_step": false,
+      "prior_ledger_record": {
+        "id": "repo-a29c2810f6df5627c04ccab8",
+        "messages_sha256": "a29c2810f6df5627c04ccab84726d0d4fbfb7d6428415a5cfde07f1e4dae0fe3",
+        "state": "QUARANTINE",
+        "rationale": "STANDALONE_CONTEXT_DEPENDENCY_UNRESOLVED",
+        "reviewer": "phase3_structural_screen_only",
+        "independent_human_review": false,
+        "review_scope": "structural/context/privacy_screen; substantive_review_not_complete",
+        "tool_evidence": [],
+        "domain": "trigonometry",
+        "primary_source": "D_Trigonometry.jsonl",
+        "risk_flags": [
+          "EQUATIONS_CALCULATIONS_OR_PROOF"
+        ],
+        "qwen_tokens": 49,
+        "assistant_tokens": 24,
+        "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+        "training_authorized": false
+      },
+      "prior_substantive_record": null,
+      "new_ledger_record": {
+        "id": "repo-a29c2810f6df5627c04ccab8",
+        "messages_sha256": "a29c2810f6df5627c04ccab84726d0d4fbfb7d6428415a5cfde07f1e4dae0fe3",
+        "state": "PASS",
+        "rationale": "Correctly explains ordinary circular reasoning as assuming the intended conclusion within its proof. The explicit Usually qualification avoids claiming certainty about the teacher's particular intended proof; the general question is self-contained.",
+        "reviewer": "Codex_cloud_agent_technical_review_20261002",
+        "independent_human_review": false,
+        "review_scope": "complete_visible_prompt_and_answer_read; primary_sources_and_assumptions_checked; independent_agent_QA; no_rewrite",
+        "tool_evidence": [
+          {
+            "method": "primary_source_review",
+            "url": "https://www.cs.purdue.edu/homes/spa/courses/sa12/mod3.pdf",
+            "title": "Purdue, proof-techniques course notes, page 6",
+            "finding": "Independent QA verified the mathematical definition of circular reasoning. The writer's later direct fetch returned an internal tool error; no separate successful writer fetch is claimed."
+          },
+          {
+            "method": "independent_analytical_check",
+            "finding": "An argument that takes P as a premise to establish P provides no independent justification of P. The answer correctly warns against this circular structure."
+          },
+          {
+            "method": "scope_caveat",
+            "finding": "Independent chains establishing A=C and B=C are valid; the original does not prohibit them or claim to inspect a missing proof."
+          }
+        ],
+        "domain": "trigonometry",
+        "primary_source": "D_Trigonometry.jsonl",
+        "risk_flags": [
+          "EQUATIONS_CALCULATIONS_OR_PROOF"
+        ],
+        "qwen_tokens": 49,
+        "assistant_tokens": 24,
+        "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+        "training_authorized": false,
+        "independent_agent_review": true,
+        "review_batch": "reports/phase3-review-batches/residual-five-20261002.json",
+        "original_domain_ordinal": 24
+      },
+      "independent_agent_qa": "Accepted by two independent reviews of the complete original pair and primary evidence; parent accepted all five",
+      "original_messages_unchanged": true
+    },
+    {
+      "id": "repo-2308b4e2dc495dfb6b2f12f3",
+      "domain": "algebra",
+      "ordinal": 211,
+      "messages_sha256": "2308b4e2dc495dfb6b2f12f3f7902222528d4e723e795b250607f235837c4600",
+      "source_origin": {
+        "repository": "scott198989/Completions",
+        "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+        "path": "D_Algebra.jsonl",
+        "blob_sha1": "49abd5e2c6c9d1e5a9954c61c993a9d2dbb53f16",
+        "bytes": 547194,
+        "sha256": "87dea8584252719990f16589465740a1fa9bfb4f2c161912e7c5e3bd2af2de07",
+        "line": 1295,
+        "legacy_split": "unspecified",
+        "url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L1295"
+      },
+      "source_line_fetched_at_pinned_commit": true,
+      "whole_source_file_hash_recomputed_in_this_step": false,
+      "prior_ledger_record": {
+        "id": "repo-2308b4e2dc495dfb6b2f12f3",
+        "messages_sha256": "2308b4e2dc495dfb6b2f12f3f7902222528d4e723e795b250607f235837c4600",
+        "state": "QUARANTINE",
+        "rationale": "STANDALONE_CONTEXT_DEPENDENCY_UNRESOLVED",
+        "reviewer": "phase3_structural_screen_only",
+        "independent_human_review": false,
+        "review_scope": "structural/context/privacy_screen; substantive_review_not_complete",
+        "tool_evidence": [],
+        "domain": "algebra",
+        "primary_source": "D_Algebra.jsonl",
+        "risk_flags": [
+          "EQUATIONS_CALCULATIONS_OR_PROOF"
+        ],
+        "qwen_tokens": 118,
+        "assistant_tokens": 89,
+        "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+        "training_authorized": false
+      },
+      "prior_substantive_record": null,
+      "new_ledger_record": {
+        "id": "repo-2308b4e2dc495dfb6b2f12f3",
+        "messages_sha256": "2308b4e2dc495dfb6b2f12f3f7902222528d4e723e795b250607f235837c4600",
+        "state": "PASS",
+        "rationale": "Correct module interpretation of the eigenvalue equation: with x acting as T, multiplication by x-lambda is T-lambda I, and its kernel is the lambda-eigenspace. Its elements are annihilated by a nonzero polynomial, providing the stated connection to torsion and the structure theorem in the standard finite-dimensional setting.",
+        "reviewer": "Codex_cloud_agent_technical_review_20261002",
+        "independent_human_review": false,
+        "review_scope": "complete_visible_prompt_and_answer_read; primary_sources_and_assumptions_checked; independent_agent_QA; no_rewrite",
+        "tool_evidence": [
+          {
+            "method": "primary_source_review",
+            "url": "https://sites.math.northwestern.edu/scg479/courses/notes/lecture-notes-331-2.pdf",
+            "title": "Northwestern, algebra course notes, pages 102-103",
+            "finding": "Connects annihilation by x-lambda, the eigenvector equation, elementary divisors and the F[x]-module viewpoint."
+          },
+          {
+            "method": "independent_analytical_check",
+            "finding": "For every polynomial p, (T-lambda I)p(T)=p(T)(T-lambda I), so multiplication by x-lambda is an F[x]-module homomorphism. Its kernel is exactly {v:Tv=lambda v} and is closed under p(T)."
+          },
+          {
+            "method": "scope_caveat",
+            "finding": "Lambda belongs to F. The usual structure theorem requires finite generation, as in the standard finite-dimensional linear-algebra setting; the concise answer does not assert it for arbitrary infinite-dimensional modules."
+          }
+        ],
+        "domain": "algebra",
+        "primary_source": "D_Algebra.jsonl",
+        "risk_flags": [
+          "EQUATIONS_CALCULATIONS_OR_PROOF"
+        ],
+        "qwen_tokens": 118,
+        "assistant_tokens": 89,
+        "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+        "training_authorized": false,
+        "independent_agent_review": true,
+        "review_batch": "reports/phase3-review-batches/residual-five-20261002.json",
+        "original_domain_ordinal": 211
+      },
+      "independent_agent_qa": "Accepted by two independent reviews of the complete original pair and primary evidence; parent accepted all five",
+      "original_messages_unchanged": true
+    },
+    {
+      "id": "repo-7886618e589bccad28f0bd96",
+      "domain": "thermal_process_engineering",
+      "ordinal": 66,
+      "messages_sha256": "7886618e589bccad28f0bd961f890290c41e2391f2bc39410310e8ecc2d4fd0e",
+      "source_origin": {
+        "repository": "scott198989/Completions",
+        "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+        "path": "D_Thermodynamics.jsonl",
+        "blob_sha1": "f00cf03819a2f63462e2ddf7597f69f86d586486",
+        "bytes": 480758,
+        "sha256": "6ee9f061dc134989c25d768db2f3def9c20726e8b56501c8765f158f03cfb12a",
+        "line": 763,
+        "legacy_split": "unspecified",
+        "url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Thermodynamics.jsonl#L763"
+      },
+      "source_line_fetched_at_pinned_commit": true,
+      "whole_source_file_hash_recomputed_in_this_step": false,
+      "prior_ledger_record": {
+        "id": "repo-7886618e589bccad28f0bd96",
+        "messages_sha256": "7886618e589bccad28f0bd961f890290c41e2391f2bc39410310e8ecc2d4fd0e",
+        "state": "NEEDS_HUMAN_REVIEW",
+        "rationale": "Read complete response; mixture retrograde phase-envelope temperature-versus-pressure conditions need specialist/property-source confirmation before correctness approval.",
+        "reviewer": "Codex_agent_technical_review_20261001",
+        "independent_human_review": false,
+        "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; no_rewrite",
+        "tool_evidence": [],
+        "domain": "thermal_process_engineering",
+        "primary_source": "D_Thermodynamics.jsonl",
+        "risk_flags": [
+          "UNITS_AND_MODEL_ASSUMPTIONS"
+        ],
+        "qwen_tokens": 166,
+        "assistant_tokens": 140,
+        "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+        "training_authorized": false
+      },
+      "prior_substantive_record": {
+        "id": "repo-7886618e589bccad28f0bd96",
+        "messages_sha256": "7886618e589bccad28f0bd961f890290c41e2391f2bc39410310e8ecc2d4fd0e",
+        "state": "NEEDS_HUMAN_REVIEW",
+        "rationale": "Read complete response; mixture retrograde phase-envelope temperature-versus-pressure conditions need specialist/property-source confirmation before correctness approval.",
+        "reviewer": "Codex_agent_technical_review_20261001",
+        "independent_human_review": false,
+        "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; no_rewrite",
+        "tool_evidence": [],
+        "domain": "thermal_process_engineering",
+        "primary_source": "D_Thermodynamics.jsonl",
+        "risk_flags": [
+          "UNITS_AND_MODEL_ASSUMPTIONS"
+        ],
+        "qwen_tokens": 166,
+        "assistant_tokens": 140,
+        "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+        "training_authorized": false
+      },
+      "new_ledger_record": {
+        "id": "repo-7886618e589bccad28f0bd96",
+        "messages_sha256": "7886618e589bccad28f0bd961f890290c41e2391f2bc39410310e8ecc2d4fd0e",
+        "state": "PASS",
+        "rationale": "Correct conceptual explanation of multicomponent retrograde condensation. Isothermal depressurization across a dew boundary between the mixture critical temperature and cricondentherm can form liquid; isobaric heating can also do so under appropriate conditions. The original qualifies its conditions and explicitly identifies the subsequent example as isothermal, with real-fluid phase modeling required.",
+        "reviewer": "Codex_cloud_agent_technical_review_20261002",
+        "independent_human_review": false,
+        "review_scope": "complete_visible_prompt_and_answer_read; primary_sources_and_assumptions_checked; independent_agent_QA; no_rewrite",
+        "tool_evidence": [
+          {
+            "method": "primary_source_review",
+            "url": "https://www.sciencedirect.com/science/article/abs/pii/S0021961418304944",
+            "title": "Abdulagatov et al., PVTx and thermal-pressure coefficient measurements of the binary CO2 + n-decane mixtures in the critical and retrograde regions",
+            "finding": "Original experimental introduction supports retrograde condensation during isothermal pressure decrease or isobaric temperature increase, conditioned on mixture composition and phase-envelope region."
+          },
+          {
+            "method": "independent_analytical_check",
+            "finding": "Pressure-reduction and temperature-increase paths are distinct conditional traversals of a mixture phase envelope. The original does not infer a heating path from its expressly isothermal example or claim every pressure/temperature change condenses a mixture."
+          },
+          {
+            "method": "scope_caveat",
+            "finding": "Phase topology, overall composition and path endpoints matter. Activity or fugacity models are alternatives, not a requirement to combine every listed method; detailed flash calculations are outside the concise concept prompt."
+          }
+        ],
+        "domain": "thermal_process_engineering",
+        "primary_source": "D_Thermodynamics.jsonl",
+        "risk_flags": [
+          "UNITS_AND_MODEL_ASSUMPTIONS"
+        ],
+        "qwen_tokens": 166,
+        "assistant_tokens": 140,
+        "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+        "training_authorized": false,
+        "independent_agent_review": true,
+        "review_batch": "reports/phase3-review-batches/residual-five-20261002.json",
+        "original_domain_ordinal": 66
+      },
+      "independent_agent_qa": "Accepted by two independent reviews of the complete original pair and primary evidence; parent accepted all five",
+      "original_messages_unchanged": true
+    },
+    {
+      "id": "repo-7e650062f278ca4669500987",
+      "domain": "thermal_process_engineering",
+      "ordinal": 102,
+      "messages_sha256": "7e650062f278ca4669500987a988e32d6f9efbda7702df2698056357eee18c6c",
+      "source_origin": {
+        "repository": "scott198989/Completions",
+        "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+        "path": "D_Thermodynamics.jsonl",
+        "blob_sha1": "f00cf03819a2f63462e2ddf7597f69f86d586486",
+        "bytes": 480758,
+        "sha256": "6ee9f061dc134989c25d768db2f3def9c20726e8b56501c8765f158f03cfb12a",
+        "line": 1053,
+        "legacy_split": "unspecified",
+        "url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Thermodynamics.jsonl#L1053"
+      },
+      "source_line_fetched_at_pinned_commit": true,
+      "whole_source_file_hash_recomputed_in_this_step": false,
+      "prior_ledger_record": {
+        "id": "repo-7e650062f278ca4669500987",
+        "messages_sha256": "7e650062f278ca4669500987a988e32d6f9efbda7702df2698056357eee18c6c",
+        "state": "NEEDS_HUMAN_REVIEW",
+        "rationale": "Read complete response; fundamental Helmholtz approach plausible but provider-wide all-properties/all-table claims and fitting count require source-qualified specialist confirmation.",
+        "reviewer": "Codex_agent_technical_review_20261001",
+        "independent_human_review": false,
+        "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; no_rewrite",
+        "tool_evidence": [],
+        "domain": "thermal_process_engineering",
+        "primary_source": "D_Thermodynamics.jsonl",
+        "risk_flags": [
+          "EQUATIONS_CALCULATIONS_OR_PROOF",
+          "UNITS_AND_MODEL_ASSUMPTIONS"
+        ],
+        "qwen_tokens": 153,
+        "assistant_tokens": 124,
+        "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+        "training_authorized": false
+      },
+      "prior_substantive_record": {
+        "id": "repo-7e650062f278ca4669500987",
+        "messages_sha256": "7e650062f278ca4669500987a988e32d6f9efbda7702df2698056357eee18c6c",
+        "state": "NEEDS_HUMAN_REVIEW",
+        "rationale": "Read complete response; fundamental Helmholtz approach plausible but provider-wide all-properties/all-table claims and fitting count require source-qualified specialist confirmation.",
+        "reviewer": "Codex_agent_technical_review_20261001",
+        "independent_human_review": false,
+        "review_scope": "complete_visible_prompt_and_answer_read; claims_and_assumptions_checked; no_rewrite",
+        "tool_evidence": [],
+        "domain": "thermal_process_engineering",
+        "primary_source": "D_Thermodynamics.jsonl",
+        "risk_flags": [
+          "EQUATIONS_CALCULATIONS_OR_PROOF",
+          "UNITS_AND_MODEL_ASSUMPTIONS"
+        ],
+        "qwen_tokens": 153,
+        "assistant_tokens": 124,
+        "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+        "training_authorized": false
+      },
+      "new_ledger_record": {
+        "id": "repo-7e650062f278ca4669500987",
+        "messages_sha256": "7e650062f278ca4669500987a988e32d6f9efbda7702df2698056357eee18c6c",
+        "state": "PASS",
+        "rationale": "Accurately describes the standard high-accuracy Helmholtz-explicit reference-EOS approach: ideal-plus-residual specific or molar Helmholtz energy generates the listed equilibrium thermodynamic properties through derivative relations and is widely used by NIST/REFPROP. Original reference-EOS literature substantiates representative fits using thousands of measurements. The answer does not assert universal use by every model or derivation of transport properties.",
+        "reviewer": "Codex_cloud_agent_technical_review_20261002",
+        "independent_human_review": false,
+        "review_scope": "complete_visible_prompt_and_answer_read; primary_sources_and_assumptions_checked; independent_agent_QA; no_rewrite",
+        "tool_evidence": [
+          {
+            "method": "primary_source_review",
+            "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=934606",
+            "title": "NIST, The NIST REFPROP Database for Highly Accurate Properties of Industrially Important Fluids, section 2.2",
+            "finding": "Describes fundamental derivative-based equations of state and Helmholtz formulations as the prevailing high-accuracy REFPROP approach."
+          },
+          {
+            "method": "primary_source_review",
+            "url": "https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=907386",
+            "title": "Span et al., nitrogen reference equation of state, sections 4.2.1 and 4.3",
+            "finding": "The primary reference EOS supplies the ideal/residual split and derivative property relations. Its fitting set includes 3649 pressure-density-temperature and 1175 sound-speed observations, supporting the representative thousands-of-measurements statement."
+          },
+          {
+            "method": "primary_source_review",
+            "url": "https://pages.nist.gov/teqp-docs/en/latest/derivs/derivs.html",
+            "title": "NIST teqp derivative documentation",
+            "finding": "Independent QA corroborated pressure, entropy, enthalpy and heat-capacity derivative relations."
+          },
+          {
+            "method": "independent_analytical_check",
+            "finding": "For specific a(T,rho), p=rho^2*a_rho, s=-a_T, u=a+Ts, h=u+p/rho and cv=-T*a_TT; heat-capacity and sound-speed relations combine thermodynamic derivatives. Thus derived as partial derivatives is conventional shorthand for derivative relations and algebraic combinations."
+          },
+          {
+            "method": "scope_caveat",
+            "finding": "Use specific or molar a with consistent density units. Mixture composition and two-phase equilibrium calculations require further inputs. Thousands is a representative reference-EOS fitting scale, not a verified count for every fluid or provider."
+          }
+        ],
+        "domain": "thermal_process_engineering",
+        "primary_source": "D_Thermodynamics.jsonl",
+        "risk_flags": [
+          "EQUATIONS_CALCULATIONS_OR_PROOF",
+          "UNITS_AND_MODEL_ASSUMPTIONS"
+        ],
+        "qwen_tokens": 153,
+        "assistant_tokens": 124,
+        "rights_disposition": "HOLD_PRIVATE_EXPERIMENTAL_TRAINING_PENDING_APPLICABLE_TERMS",
+        "training_authorized": false,
+        "independent_agent_review": true,
+        "review_batch": "reports/phase3-review-batches/residual-five-20261002.json",
+        "original_domain_ordinal": 102
+      },
+      "independent_agent_qa": "Accepted by two independent reviews of the complete original pair and primary evidence; parent accepted all five",
+      "original_messages_unchanged": true
+    }
+  ],
+  "technical_PASS_not_release_approval": true,
+  "independent_human_review": false,
+  "release_approved": false,
+  "training_authorized": false,
+  "validation": {
+    "tests": 69,
+    "test_result": "PASS",
+    "test_log_sha256": "a7ad84cc71535224e91d49f12c527baaf7462d1ab8ae5c4b641acd14d95145d0",
+    "format": "3 files already formatted",
+    "undefined_name_lint": "F821,F822,F823: all checks passed",
+    "integrity": {
+      "base": "7fab175a4f0ef997810ef768621855a3d16c51be",
+      "rows": 2112,
+      "changed_rows": 5,
+      "unchanged_ledger_rows": 2107,
+      "substantive_records": 2112,
+      "unchanged_prior_substantive_records": 2107,
+      "superseded_prior_substantive_holds": 2,
+      "new_substantive_records": 3,
+      "all_original_hashes_verified": 2112,
+      "all_tokens_rights_and_authorization_flags_unchanged": true,
+      "frozen_files_verified": 12,
+      "historical_batch_receipts_byte_preserved": 145,
+      "reader_checks": {
+        "circuits": {
+          "selected_records": 211,
+          "windows_checked": 10,
+          "all_windows_empty": true
+        },
+        "engineering_mathematics": {
+          "selected_records": 200,
+          "windows_checked": 9,
+          "all_windows_empty": true
+        },
+        "algebra": {
+          "selected_records": 216,
+          "windows_checked": 10,
+          "all_windows_empty": true
+        },
+        "thermal_process_engineering": {
+          "selected_records": 104,
+          "windows_checked": 6,
+          "all_windows_empty": true
+        },
+        "trigonometry": {
+          "selected_records": 200,
+          "windows_checked": 9,
+          "all_windows_empty": true
+        },
+        "calculus": {
+          "selected_records": 215,
+          "windows_checked": 10,
+          "all_windows_empty": true
+        },
+        "electrical_components": {
+          "selected_records": 300,
+          "windows_checked": 13,
+          "all_windows_empty": true
+        },
+        "electromagnetism": {
+          "selected_records": 166,
+          "windows_checked": 8,
+          "all_windows_empty": true
+        },
+        "materials_manufacturing": {
+          "selected_records": 250,
+          "windows_checked": 11,
+          "all_windows_empty": true
+        },
+        "physics": {
+          "selected_records": 250,
+          "windows_checked": 11,
+          "all_windows_empty": true
+        }
+      },
+      "dispositions": {
+        "PASS": 1703,
+        "REJECT": 72,
+        "QUARANTINE": 337,
+        "NEEDS_HUMAN_REVIEW": 0
+      }
+    }
+  },
+  "independent_integration_qa": {
+    "result": "PASS",
+    "base_commit": "7fab175a4f0ef997810ef768621855a3d16c51be",
+    "five_target_changes_verified": true,
+    "non_target_ledger_records_unchanged": 2107,
+    "all_2112_canonical_hashes_verified": true,
+    "pilot_section_byte_equivalent_to_base": true,
+    "historical_receipts_unchanged": true,
+    "all_eight_handoff_input_pins_match": true,
+    "all_protected_fields_unchanged": true,
+    "tests_rerun_by_independent_integration_reviewer": false
+  }
+}

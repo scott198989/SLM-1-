@@ -1,0 +1,69 @@
+{
+  "files": [
+    {
+      "snapshot": "LLM",
+      "path": "README.md",
+      "sha256": "3ea8cefb35e0a576877c24a99b41cfeed4832133ae723b33027250a5f8653889",
+      "bytes": 9274,
+      "status": "read_in_full_or_identical_to_read_primary_snapshot"
+    },
+    {
+      "snapshot": "SLM",
+      "path": "frontend/README.md",
+      "sha256": "a8f79804c642b7ea6f28d6e214dd62b9eb7eeb654af344b04d204da2b07c9c0c",
+      "bytes": 7098,
+      "status": "read_in_full_or_identical_to_read_primary_snapshot"
+    },
+    {
+      "snapshot": "SLM",
+      "path": "HAVOC_PRIME_README.md",
+      "sha256": "8b1f337e5f01ebb997afc11d50b1a373e2109286707594445c99ff3e42382a2c",
+      "bytes": 11560,
+      "status": "read_in_full_or_identical_to_read_primary_snapshot"
+    },
+    {
+      "snapshot": "SLM",
+      "path": "README.md",
+      "sha256": "be9fd81e5de2ad554f2c90076593ec6d320a6f413666bcbbd1bad9c966f5ab71",
+      "bytes": 4331,
+      "status": "read_in_full_or_identical_to_read_primary_snapshot"
+    },
+    {
+      "snapshot": "Completions",
+      "path": "README.md",
+      "sha256": "458d575416e1c9d00583d2df0364df33f247214e941c744fb7a9e8f317247360",
+      "bytes": 13382,
+      "status": "read_in_full_or_identical_to_read_primary_snapshot"
+    },
+    {
+      "snapshot": "SLM-1-",
+      "path": "README.md",
+      "sha256": "dd4fca73c4b6a9f9fe7cc7a820ef894fe6046c62c43e20b334c67ba236c9d995",
+      "bytes": 17136,
+      "status": "read_in_full_or_identical_to_read_primary_snapshot"
+    },
+    {
+      "snapshot": "SLM-other",
+      "path": "frontend/README.md",
+      "sha256": "9874176ef7cc2f0608a66afdff08df34222687d201c76814f5bb632ee1799939",
+      "bytes": 6822,
+      "status": "read_in_full_or_identical_to_read_primary_snapshot"
+    },
+    {
+      "snapshot": "SLM-other",
+      "path": "README.md",
+      "sha256": "be9fd81e5de2ad554f2c90076593ec6d320a6f413666bcbbd1bad9c966f5ab71",
+      "bytes": 4331,
+      "status": "read_in_full_or_identical_to_read_primary_snapshot"
+    },
+    {
+      "snapshot": "SLM-1-other",
+      "path": "README.md",
+      "sha256": "b8fc3f695124e2b9afb6e5f926fb5498b62f6eee0d7363c8c81ac5d29750a88f",
+      "bytes": 7934,
+      "status": "read_in_full_or_identical_to_read_primary_snapshot"
+    }
+  ],
+  "file_count": 9,
+  "distinct_contents": 8
+}

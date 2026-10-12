@@ -1,0 +1,615 @@
+{
+  "base_commit": "dd2eda8c98819430cd23372b27e442945ed58c06",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "materials_manufacturing",
+  "offset": 75,
+  "limit": 25,
+  "next_offset": 100,
+  "selected_window_end_exclusive": 100,
+  "selected_rows_in_window": 25,
+  "new_substantive_reviews": 25,
+  "skipped_existing": 0,
+  "preserved_structural_quarantines": [],
+  "dispositions_added": {
+    "PASS": 23,
+    "QUARANTINE": 2
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "/root/review_materials_fourth_batch",
+    "records_checked": 25,
+    "final_counts": {
+      "PASS": 23,
+      "QUARANTINE": 2
+    },
+    "disposition_changes": [],
+    "review_precision_corrections": [
+      "Scientific Reports tempering paper publication year is 2018.",
+      "Use directly relevant hydrogen, passive-film/pitting/PREN, electrochemical and fatigue primary evidence.",
+      "83 distinguishes transformation expansion from subsequent thermal contraction; 88 remains a temperature-only prescription hold."
+    ],
+    "full_prompt_and_answer_review": true,
+    "all_source_hashes_ids_ordinals_and_ledger_matches": true,
+    "source_sha256": "028348459f744df65879a12bf9df655c32fc25597c3202a13c3c780667554cc4",
+    "candidate_preparation_predecessor_commit": "af1f8a7ba5e2c41eee51dbd612cd70d6ebb70107",
+    "local_review_head_reported": null,
+    "published_base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "independent_human_review": false,
+    "release_approved": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 1934,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 1580,
+    "REJECT": 68,
+    "QUARANTINE": 312,
+    "NEEDS_HUMAN_REVIEW": 152
+  },
+  "agent_substantive_reviews": 1959,
+  "substantively_unreviewed": 150,
+  "records": [
+    {
+      "id": "repo-c7dde00ea0c84f043f3658b3",
+      "ordinal": 75,
+      "messages_sha256": "c7dde00ea0c84f043f3658b3f661c040ac2b9d273d78045aec073694533c5137",
+      "state": "PASS",
+      "rationale": "Correct conventional surface-hydrogen entry, diffusion/trapping and stressed-fracture overview.",
+      "evidence": [
+        {
+          "title": "AMPP, Hydrogen Embrittlement",
+          "url": "https://www.ampp.org/technical-research/impact/corrosion-basics/group-3/hydrogen-embrittlement",
+          "finding": "Atomic hydrogen can enter rather than evolve as gas, diffuse through metal and contribute to embrittlement under stress."
+        },
+        {
+          "method": "independent_transport_heat_treatment_and_fracture_checks",
+          "finding": "Checked charge/current balance, thermal versus transformation strain, lever-rule balance, time-temperature equivalence, crack-driving stress range and the distinct meanings of yielding, brittle fracture and fatigue."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hydrogen embrittlement has multiple mechanisms, including localized plasticity and decohesion; the concise cohesion/ductility description is not an exclusive mechanism theory."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L599"
+    },
+    {
+      "id": "repo-a982b5d6a989bf9021139179",
+      "ordinal": 76,
+      "messages_sha256": "a982b5d6a989bf902113917912556b7b4e2092628a5b3b5d70fc31cf7073c72e",
+      "state": "PASS",
+      "rationale": "Correct qualitative localized passive-film breakdown and pitting feedback mechanism in a susceptible chloride electrolyte.",
+      "evidence": [
+        {
+          "title": "Outokumpu, Corrosion Resistance",
+          "url": "https://www.outokumpu.com/en/expertise/stainless-basics/corrosion-resistance",
+          "finding": "Describes localized passive-film damage, pit chemistry and PREN as a composition-based resistance index with service limitations."
+        },
+        {
+          "method": "independent_transport_heat_treatment_and_fracture_checks",
+          "finding": "Checked charge/current balance, thermal versus transformation strain, lever-rule balance, time-temperature equivalence, crack-driving stress range and the distinct meanings of yielding, brittle fracture and fatigue."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Acidification and chloride enrichment describe the stated pitting-type environment rather than every film defect; successful repassivation can arrest it."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L602"
+    },
+    {
+      "id": "repo-61b02ec637d1d3754d103d0c",
+      "ordinal": 77,
+      "messages_sha256": "61b02ec637d1d3754d103d0c700ded27e83b471310e77103570dede9d2c64e18",
+      "state": "PASS",
+      "rationale": "Correct electrochemical coupling of metal oxidation with a cathodic reduction reaction.",
+      "evidence": [
+        {
+          "title": "AMPP, What is Corrosion?",
+          "url": "https://www.ampp.org/technical-research/what-is-corrosion",
+          "finding": "Corrosion involves reaction with the environment and coupled electrochemical processes in ordinary aqueous metal corrosion."
+        },
+        {
+          "method": "independent_transport_heat_treatment_and_fracture_checks",
+          "finding": "Checked charge/current balance, thermal versus transformation strain, lever-rule balance, time-temperature equivalence, crack-driving stress range and the distinct meanings of yielding, brittle fracture and fatigue."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At steady open-circuit corrosion, total anodic and cathodic currents balance even though local reaction currents remain nonzero."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The answer is explicitly about ordinary metal corrosion; the spatial separation and cathodic reaction vary with the environment."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L607"
+    },
+    {
+      "id": "repo-dc62ee2372ef861f12b975d3",
+      "ordinal": 78,
+      "messages_sha256": "dc62ee2372ef861f12b975d3920e47e23b481a6de6e07a98af7fd3ca049ca619",
+      "state": "PASS",
+      "rationale": "Correct kinetic-barrier paraphrase distinguishing passivity from thermodynamic immunity.",
+      "evidence": [
+        {
+          "title": "Outokumpu, The Power of Corrosion Resistance",
+          "url": "https://www.outokumpu.com/expertise/2020/the-power-of-corrosion-resistance",
+          "finding": "Distinguishes thermodynamic reaction tendency from passive-film suppression of reaction rate."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Film breakdown depends on alloy, electrolyte, potential and temperature; the listed conditions can promote breakdown rather than invariably doing so."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L613"
+    },
+    {
+      "id": "repo-6acc7d0a2f41ca946ca20c3d",
+      "ordinal": 79,
+      "messages_sha256": "6acc7d0a2f41ca946ca20c3d0f226a644697a0d46e0791c4aee144d7cc5d0a82",
+      "state": "PASS",
+      "rationale": "Correct screening-index purpose and explicit service-condition limitations of PREN.",
+      "evidence": [
+        {
+          "title": "Outokumpu, Corrosion Resistance",
+          "url": "https://www.outokumpu.com/en/expertise/stainless-basics/corrosion-resistance",
+          "finding": "Describes localized passive-film damage, pit chemistry and PREN as a composition-based resistance index with service limitations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Several PREN formulas and alloy-family conventions exist; the answer does not assert a universal formula or lifetime bound."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L614"
+    },
+    {
+      "id": "repo-986720f833237bb4ed0689cd",
+      "ordinal": 80,
+      "messages_sha256": "986720f833237bb4ed0689cd87af383272103f0b3a2533efc94b849dcc90aec5",
+      "state": "PASS",
+      "rationale": "Reasonable conditional exploration of a hypothetical mixed electronic/ionic electrolyte without discarding redox balance.",
+      "evidence": [
+        {
+          "title": "AMPP, What is Corrosion?",
+          "url": "https://www.ampp.org/technical-research/what-is-corrosion",
+          "finding": "Corrosion involves reaction with the environment and coupled electrochemical processes in ordinary aqueous metal corrosion."
+        },
+        {
+          "method": "independent_transport_heat_treatment_and_fracture_checks",
+          "finding": "Checked charge/current balance, thermal versus transformation strain, lever-rule balance, time-temperature equivalence, crack-driving stress range and the distinct meanings of yielding, brittle fracture and fatigue."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The hypothetical change would also affect detailed electrochemical potentials and kinetics; the answer is qualitative, not a quantitative prediction for a real electrolyte."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L625"
+    },
+    {
+      "id": "repo-34617044145e4cc4ca4e7209",
+      "ordinal": 81,
+      "messages_sha256": "34617044145e4cc4ca4e72096c752b6e49e490600e2b67ba882cf3ba4c49afa2",
+      "state": "PASS",
+      "rationale": "Correct introductory tempering purpose and carbon-steel carbide/stress-relief mechanism.",
+      "evidence": [
+        {
+          "title": "Uddeholm, Heat Treatment of Tool Steel",
+          "url": "https://www.uddeholm.com/app/uploads/sites/216/2024/05/Tech-Uddeholm-Heat-treatment-EN.pdf",
+          "finding": "Separates thermal and transformation stresses, states that martensite formation increases volume, and discusses retained austenite, tempering and dimensional stability."
+        },
+        {
+          "title": "Bhadeshia, Cambridge, Martensite and Martensitic Phase Transformations",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2002/martensite.html",
+          "finding": "Explains diffusionless martensitic transformation, carbon supersaturation, shape change and crystallographic structure."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The temperature interval is a representative range, not a grade-specific process specification; secondary hardening and temper-embrittlement windows require the actual alloy."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L631"
+    },
+    {
+      "id": "repo-a77641adea4127861682822c",
+      "ordinal": 82,
+      "messages_sha256": "a77641adea4127861682822c71ee277bcb5bf8092a9a32f178097eda2d022c57",
+      "state": "PASS",
+      "rationale": "Reasonable conventional quenched carbon-steel explanation of increasing martensite hardness and retained-austenite limitation.",
+      "evidence": [
+        {
+          "title": "Bhadeshia, Cambridge, Martensite and Martensitic Phase Transformations",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2002/martensite.html",
+          "finding": "Explains diffusionless martensitic transformation, carbon supersaturation, shape change and crystallographic structure."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The approximate carbon levels are typical trends, not universal thresholds; austenitizing, quench completion, alloy content and subsequent tempering affect the measured hardness."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L646"
+    },
+    {
+      "id": "repo-eec77ca4de944fea5b2808a9",
+      "ordinal": 83,
+      "messages_sha256": "eec77ca4de944fea5b2808a9b38654395ed31ebc3dcc74aa57a426095baf27d6",
+      "state": "QUARANTINE",
+      "rationale": "The likely causes are sensible, but the surface-martensite/contraction sequence blurs thermal shrinkage with transformation strain. Martensite formation itself increases volume, so the proposed stress history needs clarification.",
+      "evidence": [
+        {
+          "title": "Uddeholm, Heat Treatment of Tool Steel",
+          "url": "https://www.uddeholm.com/app/uploads/sites/216/2024/05/Tech-Uddeholm-Heat-treatment-EN.pdf",
+          "finding": "Separates thermal and transformation stresses, states that martensite formation increases volume, and discusses retained austenite, tempering and dimensional stability."
+        },
+        {
+          "method": "independent_transport_heat_treatment_and_fracture_checks",
+          "finding": "Checked charge/current balance, thermal versus transformation strain, lever-rule balance, time-temperature equivalence, crack-driving stress range and the distinct meanings of yielding, brittle fracture and fatigue."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Total free strain combines thermal contraction with a positive martensitic transformation volume strain; the net surface/core mismatch depends on both time histories."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the ambiguous mechanism, not the real possibility of quench cracking or the value of suitable fillets. Slower cooling must still meet the alloy's transformation requirements."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L659"
+    },
+    {
+      "id": "repo-52e6593fb0eee914f1d5740b",
+      "ordinal": 84,
+      "messages_sha256": "52e6593fb0eee914f1d5740b9a79510e696fc980b81c3d5c0ee3fb0c9413ae94",
+      "state": "PASS",
+      "rationale": "Correct stored-deformation-energy explanation of lower recrystallization temperatures after greater cold work.",
+      "evidence": [
+        {
+          "title": "MIT 3.40 Physical Metallurgy Lectures 10 and 11",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/c9dc86331e13d11e8dd5d5a32b44894d_MIT3_40JF09_lec1011.pdf",
+          "finding": "Recovery, recrystallization and defect-energy changes after prior deformation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The quoted homologous temperature uses absolute temperature and is illustrative; purity, time, initial grain size and particles also affect onset."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L679"
+    },
+    {
+      "id": "repo-e21e8998e285e28238a37ede",
+      "ordinal": 85,
+      "messages_sha256": "e21e8998e285e28238a37ede931e1d604e5c00420a588a3fab0c30d0fac35314",
+      "state": "PASS",
+      "rationale": "Correct equilibrium two-phase fraction use of the lever rule.",
+      "evidence": [
+        {
+          "method": "independent_transport_heat_treatment_and_fracture_checks",
+          "finding": "Checked charge/current balance, thermal versus transformation strain, lever-rule balance, time-temperature equivalence, crack-driving stress range and the distinct meanings of yielding, brittle fracture and fatigue."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For C0=f_alpha*C_alpha+(1-f_alpha)*C_beta, f_alpha=(C_beta-C0)/(C_beta-C_alpha)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A kinetic heat-treatment product fraction need not equal equilibrium fractions during a finite cooling/heating cycle."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L680"
+    },
+    {
+      "id": "repo-0fb1b0123186dd6bd284776c",
+      "ordinal": 86,
+      "messages_sha256": "0fb1b0123186dd6bd284776c52f6734be932d548165881997cf9e37d9c03100b",
+      "state": "PASS",
+      "rationale": "Correct dimensional-stability meaning and conventional retained-austenite/tempering control strategy.",
+      "evidence": [
+        {
+          "title": "Uddeholm, Heat Treatment of Tool Steel",
+          "url": "https://www.uddeholm.com/app/uploads/sites/216/2024/05/Tech-Uddeholm-Heat-treatment-EN.pdf",
+          "finding": "Separates thermal and transformation stresses, states that martensite formation increases volume, and discusses retained austenite, tempering and dimensional stability."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Proper treatment is grade-specific; subzero treatment is not mandatory for every tool steel, and exact cycles depend on geometry and intended service."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L699"
+    },
+    {
+      "id": "repo-53d93ba1dad41791a834fcd7",
+      "ordinal": 87,
+      "messages_sha256": "53d93ba1dad41791a834fcd7645f09877a971fffc77e02478255003ce30dab4c",
+      "state": "PASS",
+      "rationale": "Correct practical hardness-target use of a steel-specific Hollomon-Jaffe calibration.",
+      "evidence": [
+        {
+          "title": "Virtanen et al., The tempering parameter for evaluating softening of hot and warm forging die steels (2013)",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0924013613000794",
+          "finding": "Measured softening depends jointly on tempering temperature and duration, with alloy-specific hardness-versus-parameter regressions."
+        },
+        {
+          "title": "Rapid Thermal Processing to Enhance Steel Toughness, Scientific Reports (2018)",
+          "url": "https://www.nature.com/articles/s41598-017-18917-3",
+          "finding": "Matched tempering parameters produced similar hardness in the studied steel but different toughness and microstructure; hardness equivalence is not full property equivalence."
+        },
+        {
+          "method": "independent_transport_heat_treatment_and_fracture_checks",
+          "finding": "Checked charge/current balance, thermal versus transformation strain, lever-rule balance, time-temperature equivalence, crack-driving stress range and the distinct meanings of yielding, brittle fracture and fatigue."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For the convention P=T*(C+log10(t)), equal P defines alternative time-temperature pairs on the fitted hardness correlation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Use the calibrated time/temperature regime, temperature units and alloy constant; equivalent hardness does not guarantee equivalent toughness or microstructure."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L704"
+    },
+    {
+      "id": "repo-d61d7d98c6cd92b34623cf28",
+      "ordinal": 88,
+      "messages_sha256": "d61d7d98c6cd92b34623cf28736ffad2dc8e53afb913bf86274d984cf1e6f44a",
+      "state": "QUARANTINE",
+      "rationale": "The general over-tempering concern is valid, but a universal 30–50-degree offset and a temperature-only small-hardness-loss assurance omit soak time and alloy-specific tempering behavior.",
+      "evidence": [
+        {
+          "title": "Virtanen et al., The tempering parameter for evaluating softening of hot and warm forging die steels (2013)",
+          "url": "https://www.sciencedirect.com/science/article/abs/pii/S0924013613000794",
+          "finding": "Measured softening depends jointly on tempering temperature and duration, with alloy-specific hardness-versus-parameter regressions."
+        },
+        {
+          "method": "independent_transport_heat_treatment_and_fracture_checks",
+          "finding": "Checked charge/current balance, thermal versus transformation strain, lever-rule balance, time-temperature equivalence, crack-driving stress range and the distinct meanings of yielding, brittle fracture and fatigue."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With C=20 and T in K, 873 K for 1 hour gives P=17460, while 833 K for 100 hours gives P=18326 despite being 40 K cooler; time can outweigh a fixed temperature margin."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the categorical always prescription; using a stress-relief temperature below prior tempering can be a useful grade-specific guideline."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L725"
+    },
+    {
+      "id": "repo-a08b5585ff3471ea0f2cb535",
+      "ordinal": 89,
+      "messages_sha256": "a08b5585ff3471ea0f2cb535f45182453936e28a58303c26d50b534ecbb4773a",
+      "state": "PASS",
+      "rationale": "Correct concise fracture definition in terms of new surfaces and crack growth.",
+      "evidence": [
+        {
+          "title": "David Roylance, MIT, Introduction to Fracture Mechanics",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/e5bca953e1dbd0cd0376f0f77033dc0d_MIT3_11F99_frac.pdf",
+          "finding": "Provides crack-driving force, flaw sensitivity, toughness and cyclic crack-growth foundations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The definition includes initiation and extension of pre-existing flaws; it does not require a macroscopically visible crack before loading."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L730"
+    },
+    {
+      "id": "repo-9b37016c4cd864e7df5c83aa",
+      "ordinal": 90,
+      "messages_sha256": "9b37016c4cd864e7df5c83aaeecc900692621ed1e8c1e49ba9aad228f89e6ab8",
+      "state": "PASS",
+      "rationale": "Correct immediate notch-to-local-driving-force causal explanation.",
+      "evidence": [
+        {
+          "title": "David Roylance, MIT, Introduction to Fracture Mechanics",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/e5bca953e1dbd0cd0376f0f77033dc0d_MIT3_11F99_frac.pdf",
+          "finding": "Provides crack-driving force, flaw sensitivity, toughness and cyclic crack-growth foundations."
+        },
+        {
+          "method": "independent_transport_heat_treatment_and_fracture_checks",
+          "finding": "Checked charge/current balance, thermal versus transformation strain, lever-rule balance, time-temperature equivalence, crack-driving stress range and the distinct meanings of yielding, brittle fracture and fatigue."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Nominally safe load does not establish component safety without notch geometry, flaw size, toughness and residual-stress information."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L733"
+    },
+    {
+      "id": "repo-c9f8f2624a2119ef793a1154",
+      "ordinal": 91,
+      "messages_sha256": "c9f8f2624a2119ef793a11541a554ef3997862f804c1c083a42ddd3cd8ec0e67",
+      "state": "PASS",
+      "rationale": "Correct counterexample showing creep cannot be reduced to recoverable elasticity.",
+      "evidence": [
+        {
+          "title": "David Roylance, MIT, Dislocation Basis of Yield and Creep",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/339d0d74796cc35538c78bbed818b629_MIT3_11F99_dn.pdf",
+          "finding": "Explains time-dependent permanent creep and classical deformation regimes."
+        },
+        {
+          "method": "independent_transport_heat_treatment_and_fracture_checks",
+          "finding": "Checked charge/current balance, thermal versus transformation strain, lever-rule balance, time-temperature equivalence, crack-driving stress range and the distinct meanings of yielding, brittle fracture and fatigue."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Creep may include recoverable viscoelastic parts as well; the answer says includes permanent strain and uses an irreversible high-temperature example."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L737"
+    },
+    {
+      "id": "repo-95fcea4ccc57a2ae3b40adea",
+      "ordinal": 92,
+      "messages_sha256": "95fcea4ccc57a2ae3b40adea7cd30425aab4d0c9a21f94afc8c3a2361c131a25",
+      "state": "PASS",
+      "rationale": "Correct low-cycle fatigue mechanism for repeatedly plastically bent paperclip material.",
+      "evidence": [
+        {
+          "title": "David Roylance, MIT, Fatigue",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/f678e01017186c53d45845ad93c07938_MIT3_11F99_fatigue.pdf",
+          "finding": "Direct treatment of cyclic slip and initiation, below-yield fatigue, life scatter, mean-stress effects and Paris crack growth."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The number of cycles and initiation location depend on local strain, defects, hardening and bending history."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L742"
+    },
+    {
+      "id": "repo-1069b08423dc8169808ef362",
+      "ordinal": 93,
+      "messages_sha256": "1069b08423dc8169808ef3620a70f220934f8ff26ae1eeac29ea6b728e62f0d2",
+      "state": "PASS",
+      "rationale": "Correct distinction between consequence/severity and the fracture deformation mode.",
+      "evidence": [
+        {
+          "title": "David Roylance, MIT, Introduction to Fracture Mechanics",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/e5bca953e1dbd0cd0376f0f77033dc0d_MIT3_11F99_frac.pdf",
+          "finding": "Provides crack-driving force, flaw sensitivity, toughness and cyclic crack-growth foundations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A ductile event can be catastrophic and a brittle crack can be small or stable; the two labels are not synonyms."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L753"
+    },
+    {
+      "id": "repo-8d45b1093984659138f99338",
+      "ordinal": 94,
+      "messages_sha256": "8d45b1093984659138f993382486a1628dc11bc82ca0f6fbfd3cfbe5a8caab44",
+      "state": "PASS",
+      "rationale": "Correct explicitly conditional long-duration polymer creep scenario below short-time strength.",
+      "evidence": [
+        {
+          "title": "David Roylance, MIT, Engineering Viscoelasticity",
+          "url": "https://ocw.mit.edu/courses/3-91-mechanical-behavior-of-plastics-spring-2007/3828997b92ebb6cb70e640826be1c5f2_19_visco.pdf",
+          "finding": "Polymer deformation depends on time, temperature and loading history."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The answer gives the relevant temperature/material/load dependencies rather than a rupture prediction."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L760"
+    },
+    {
+      "id": "repo-994296898fdfd36a460c1eaf",
+      "ordinal": 95,
+      "messages_sha256": "994296898fdfd36a460c1eafbfb305437d4e5ede1abd24f5a4fbae0c22041d99",
+      "state": "PASS",
+      "rationale": "Correct distinction between high strength and low fracture ductility, with flaw-size-controlled glass-fiber example.",
+      "evidence": [
+        {
+          "title": "David Roylance, MIT, Introduction to Fracture Mechanics",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/e5bca953e1dbd0cd0376f0f77033dc0d_MIT3_11F99_frac.pdf",
+          "finding": "Provides crack-driving force, flaw sensitivity, toughness and cyclic crack-growth foundations."
+        },
+        {
+          "method": "independent_transport_heat_treatment_and_fracture_checks",
+          "finding": "Checked charge/current balance, thermal versus transformation strain, lever-rule balance, time-temperature equivalence, crack-driving stress range and the distinct meanings of yielding, brittle fracture and fatigue."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Strength is stress capacity rather than an unnormalized load; the surrounding tensile-stress wording makes that intended sense clear."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L762"
+    },
+    {
+      "id": "repo-f9ba9f7c12348e5b566fe948",
+      "ordinal": 96,
+      "messages_sha256": "f9ba9f7c12348e5b566fe948b6453eccf32dd482fbf6de7235a924719fd9f794",
+      "state": "PASS",
+      "rationale": "Correct conditional fatigue-life explanation via larger cyclic crack-driving range.",
+      "evidence": [
+        {
+          "title": "David Roylance, MIT, Fatigue",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/f678e01017186c53d45845ad93c07938_MIT3_11F99_fatigue.pdf",
+          "finding": "Direct treatment of cyclic slip and initiation, below-yield fatigue, life scatter, mean-stress effects and Paris crack growth."
+        },
+        {
+          "method": "independent_transport_heat_treatment_and_fracture_checks",
+          "finding": "Checked charge/current balance, thermal versus transformation strain, lever-rule balance, time-temperature equivalence, crack-driving stress range and the distinct meanings of yielding, brittle fracture and fatigue."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For fixed geometry and crack length in linear elasticity, DeltaK=Y*DeltaSigma*sqrt(pi*a); Paris-regime rate increases with DeltaK when C>0,m>0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Crack closure, stress ratio and compressive portions can change effective DeltaK; can and the scope of the simple trend avoid a universal growth-rate claim."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L764"
+    },
+    {
+      "id": "repo-5f35818f56becd5e8d71be09",
+      "ordinal": 97,
+      "messages_sha256": "5f35818f56becd5e8d71be09e44dc6185e1e56d689f0ff1a829d6c6017e70ab8",
+      "state": "PASS",
+      "rationale": "Correct classical three-stage creep-rate and damage-mechanism description.",
+      "evidence": [
+        {
+          "title": "David Roylance, MIT, Dislocation Basis of Yield and Creep",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/339d0d74796cc35538c78bbed818b629_MIT3_11F99_dn.pdf",
+          "finding": "Explains time-dependent permanent creep and classical deformation regimes."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Not every material/test resolves all three stages; secondary-rate life estimates need calibrated stress-temperature-rupture data."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L770"
+    },
+    {
+      "id": "repo-35ebbda2e6efae7bef158e15",
+      "ordinal": 98,
+      "messages_sha256": "35ebbda2e6efae7bef158e15ba9e07801367c7d9defa460a8d655e56355a6106",
+      "state": "PASS",
+      "rationale": "Correct rejection of a below-yield static check as proof against fatigue.",
+      "evidence": [
+        {
+          "title": "David Roylance, MIT, Fatigue",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/f678e01017186c53d45845ad93c07938_MIT3_11F99_fatigue.pdf",
+          "finding": "Direct treatment of cyclic slip and initiation, below-yield fatigue, life scatter, mean-stress effects and Paris crack growth."
+        },
+        {
+          "method": "independent_transport_heat_treatment_and_fracture_checks",
+          "finding": "Checked charge/current balance, thermal versus transformation strain, lever-rule balance, time-temperature equivalence, crack-driving stress range and the distinct meanings of yielding, brittle fracture and fatigue."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A local yield check alone is also not a full monotonic-collapse assessment; the answer's central static-versus-cyclic distinction is sound."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L772"
+    },
+    {
+      "id": "repo-41711ed315e23a042c81a774",
+      "ordinal": 99,
+      "messages_sha256": "41711ed315e23a042c81a774d4bb40499f7370182c783a67056fda311c1a2fe3",
+      "state": "PASS",
+      "rationale": "Correct explanation of fatigue-life scatter from local defects, finish and residual stress.",
+      "evidence": [
+        {
+          "title": "David Roylance, MIT, Fatigue",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/f678e01017186c53d45845ad93c07938_MIT3_11F99_fatigue.pdf",
+          "finding": "Direct treatment of cyclic slip and initiation, below-yield fatigue, life scatter, mean-stress effects and Paris crack growth."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Scatter can include crack propagation as well as initiation; the answer emphasizes initiation without excluding propagation variability."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L775"
+    }
+  ]
+}

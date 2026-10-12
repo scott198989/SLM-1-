@@ -1,0 +1,86 @@
+{
+  "Drive_counts_are_inventory_not_content_correctness": true,
+  "all_trusted_Drive_SFT_pairs": 0,
+  "capabilities": [
+    {
+      "SFT_examples": 0,
+      "capability": "PLC / ladder logic",
+      "possessed_Drive_material": "PLC:2 extracted,159 blocked,1 excluded; counts are inventory categories only.",
+      "remaining": "Project/format recovery and source-level ladder/scan/timer/interlock verification; no quota fabrication.",
+      "trusted_current_material": "No source-qualified PLC task/program or scan-behavior answer released."
+    },
+    {
+      "SFT_examples": 0,
+      "capability": "Siemens / TIA Portal",
+      "possessed_Drive_material": "Siemens:3 extracted,3 text-bearing sources; unverified extracted content.",
+      "remaining": "User is handling Siemens material; require explicit version/device/context and verified task outputs when supplied.",
+      "trusted_current_material": "No qualified Siemens/TIA instruction pair released."
+    },
+    {
+      "SFT_examples": 2,
+      "capability": "Motors / drives",
+      "possessed_Drive_material": "Electric Motors:16 extracted; Electromechanical Power:3; Hydraulics/Pneumatics/Motors:27.",
+      "remaining": "No induction/synchronous motor, VFD sizing/control, thermal limits or verified fault-diagnosis training.",
+      "trusted_current_material": "Checked ideal PM DC power/torque and stall calculator contracts; original motor-power RAG graph."
+    },
+    {
+      "SFT_examples": 3,
+      "capability": "Controls",
+      "possessed_Drive_material": "Process Control Technologies:28 extracted; Robotics:11; Industrial Totally Automation:14.",
+      "remaining": "No released PID tuning, closed-loop design, discrete control, state-space or stability analysis explanations.",
+      "trusted_current_material": "Underdamped zero-IC unit-step nominal/peak/invalid-frequency contracts."
+    },
+    {
+      "SFT_examples": 0,
+      "capability": "Troubleshooting",
+      "possessed_Drive_material": "Potential motor/circuit/control references; no verified incident/measurement/solution family.",
+      "remaining": "Evidence-grounded decision paths and explicit uncertainty; no manufacturer- or safety-acceptance claims.",
+      "trusted_current_material": "Some repo conceptual diagnosis answers technically PASS, still withheld for applicable-terms/family review."
+    },
+    {
+      "SFT_examples": 1,
+      "capability": "Instrumentation / sensors",
+      "possessed_Drive_material": "Electrical Components:3 extracted sources; PLC/control folders may contain references, not certified coverage.",
+      "remaining": "No calibration, 4-20mA, loop wiring, error budget or actual sensor-selection training.",
+      "trusted_current_material": "Absolute temperature affine conversion only."
+    },
+    {
+      "SFT_examples": 2,
+      "capability": "Statics / strength",
+      "possessed_Drive_material": "Statics and Strengths of Materials:1 extracted; Engineering:508 heterogeneous sources.",
+      "remaining": "No bending/buckling/fatigue/joint/load-path/code-acceptance or FEA capability established.",
+      "trusted_current_material": "Uniform static axial-tension stress and zero-load boundary contracts."
+    },
+    {
+      "SFT_examples": 2,
+      "capability": "Manufacturing / process",
+      "possessed_Drive_material": "Manufacturing Process1:13 extracted; Materials Science2:10; SixSigma:9 plus GreenBelt23.",
+      "remaining": "No verified machining/process selection, tolerancing, routing or production optimization curriculum.",
+      "trusted_current_material": "Free linear thermal expansion/contraction contracts. Full104-record thermal review is complete as dispositions, not released legacy training."
+    },
+    {
+      "SFT_examples": 6,
+      "capability": "Technical tool use / engineering mathematics",
+      "possessed_Drive_material": "Existing math/calculus/problem-solving corpus, still unqualified.",
+      "remaining": "Protocol output is not native tool-role training or a proven learned controller; broad engineering reasoning not established.",
+      "trusted_current_material": "Circuit RLC(3), distinct real quadratic/dimensions(3); all16 pilot records teach bounded JSON request/results/refusals.13 tools available separately."
+    },
+    {
+      "SFT_examples": 0,
+      "capability": "Visual engineering interpretation",
+      "possessed_Drive_material": "Numerous visual dependencies in extracted academic units; none source-fidelity-qualified into this pilot.",
+      "remaining": "No general pixel/diagram understanding; Qwen Base text-only. Needs reviewed structured descriptions or separately authorized vision component.",
+      "trusted_current_material": "One original graph with reviewed caption, exact data and image hashes in private RAG."
+    },
+    {
+      "SFT_examples": 0,
+      "capability": "Data analysis / DOE / SPC",
+      "possessed_Drive_material": "Statistics:41 extracted plus Stats3; SixSigma references unqualified.",
+      "remaining": "No statistical SFT examples; build independent train/development source/problem families before expanding without gold leakage.",
+      "trusted_current_material": "Five tested statistical tools and12 private sealed gold tasks. Complete statistics source family reserved."
+    }
+  ],
+  "model_development_examples": 0,
+  "released_scope": "small calculator JSON protocol pilot",
+  "user_handles_Siemens": true
+}

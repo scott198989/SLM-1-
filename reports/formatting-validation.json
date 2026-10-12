@@ -1,0 +1,8 @@
+{
+  "formatter": "ruff0.14.3",
+  "files_checked": 14,
+  "AST_identical": true,
+  "byte_identical_engineering_transplant_preserved": true,
+  "semantics_changed": false,
+  "undefined_name_and_import_check": "ruff_check_select_F_passed"
+}

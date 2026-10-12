@@ -1,0 +1,23 @@
+{
+  "at": "2026-10-01",
+  "evidence_type": "direct_user_attestation_in_task",
+  "scope": [
+    "all_Completions_datasets_including_core_world_model_and_conversation_variants",
+    "198_distinct_SLM_conversations",
+    "LLM_exact_duplicate_exports_of_Completions"
+  ],
+  "source_state": "VERIFIED",
+  "verification_basis": "user_attestation_not_provider_log_audit",
+  "synthetic": true,
+  "providers": [
+    "OpenAI_API",
+    "Anthropic_API"
+  ],
+  "exact_models": "UNKNOWN",
+  "row_provider_attribution": "UNKNOWN",
+  "generation_dates": "UNKNOWN",
+  "prompt_upstream_sources": "UNKNOWN",
+  "user_asserted_rights": "user_says_no_copyright_concern_and_authorizes_FORGE_use",
+  "release_approval": false,
+  "quality_fidelity_split_gates_unchanged": true
+}

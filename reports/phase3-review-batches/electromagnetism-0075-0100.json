@@ -1,0 +1,658 @@
+{
+  "base_commit": "a8c33b22cd826bdcf756b9a5c0b5959f805e5711",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "electromagnetism",
+  "offset": 75,
+  "limit": 25,
+  "next_offset": 100,
+  "selected_window_end_exclusive": 100,
+  "selected_rows_in_window": 25,
+  "new_substantive_reviews": 25,
+  "skipped_existing": 0,
+  "preserved_structural_quarantines": [],
+  "dispositions_added": {
+    "PASS": 18,
+    "QUARANTINE": 6,
+    "REJECT": 1
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "/root/review_electromagnetism_fourth_batch",
+    "records_checked": 25,
+    "final_counts": {
+      "PASS": 18,
+      "REJECT": 1,
+      "QUARANTINE": 6
+    },
+    "disposition_changes": [
+      {
+        "ordinal": 87,
+        "from": "QUARANTINE",
+        "to": "PASS",
+        "basis": "The answer defines a bulk gap with no eigenmodes; partial gaps or an altered defect system do not refute that scoped statement."
+      }
+    ],
+    "review_precision_corrections": [
+      "96 distinguishes potential-reference ambiguity from E/J uniqueness and tangential derivative from Dirichlet value.",
+      "95 supported by independent oscillator differentiation."
+    ],
+    "full_prompt_and_answer_review": true,
+    "all_source_hashes_ids_ordinals_and_ledger_matches": true,
+    "source_sha256": "6ed8a1ef96bb7edc3d8286b66092ca699840ee54895c32cab0a87f963cb812cd",
+    "candidate_preparation_predecessor_commit": "bd8ba0aba0febd62be2f68b4ba0ab2cab5f4e827",
+    "local_review_head_reported": null,
+    "published_base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "independent_human_review": false,
+    "release_approved": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 1532,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 1234,
+    "REJECT": 61,
+    "QUARANTINE": 263,
+    "NEEDS_HUMAN_REVIEW": 554
+  },
+  "agent_substantive_reviews": 1557,
+  "substantively_unreviewed": 552,
+  "records": [
+    {
+      "id": "repo-f2e7715505904d5ef67674b1",
+      "ordinal": 75,
+      "messages_sha256": "f2e7715505904d5ef67674b165b99736dd468096f9fc15025b987c20ca095b60",
+      "state": "PASS",
+      "rationale": "Correct ordinary potential-field relations, divergence identity and gauge invariance.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "title": "MIT 6.013, Electromagnetics and Applications",
+          "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf",
+          "finding": "Maxwell equations, modal and boundary formulations connect electric/magnetic field circulation, flux, currents and wave behavior."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "div(curl A)=0 and curl(-grad phi-partial_t A)=-partial_t B; a gauge shift cancels from both E and B."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The two potential contributions to E are gauge-dependent terms, not independently physical sources. Global topology can require additional information beyond local fields."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L573"
+    },
+    {
+      "id": "repo-74c3b12cc06b9e471c94816b",
+      "ordinal": 76,
+      "messages_sha256": "74c3b12cc06b9e471c94816b7b80314266dee18c81b49b5e24d6789a456ba36b",
+      "state": "QUARANTINE",
+      "rationale": "The strategy correctly uses symmetry, but its final E times area rule ignores that a field perpendicular to the area vector contributes zero and an antiparallel field changes sign. The chosen surface often needs separate face contributions.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A uniform field tangent to a planar surface has constant nonzero magnitude and E perpendicular to dA at every point, yet its flux is zero rather than E*A."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for the missing dot-product/signed-face distinction; the parallel outward constant-field case does reduce to E*A."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L577"
+    },
+    {
+      "id": "repo-52bb8bd80db4ee3e9474a1e8",
+      "ordinal": 77,
+      "messages_sha256": "52bb8bd80db4ee3e9474a1e87008902df70cf69c9d46316b62d5cd24891ad75a",
+      "state": "PASS",
+      "rationale": "Correct intuitive paraphrase of nonconservative electric circulation caused by changing flux.",
+      "evidence": [
+        {
+          "title": "MIT 6.013, Electromagnetics and Applications",
+          "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf",
+          "finding": "Maxwell equations, modal and boundary formulations connect electric/magnetic field circulation, flux, currents and wave behavior."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Faraday gives integral_closed E dot dl=-dPhi_B/dt for a fixed loop."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Induced field lines need not be geometrically perfect closed loops, and current flow requires the circuit/material response; the analogy conveys circulation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L588"
+    },
+    {
+      "id": "repo-a88bfe14af3fea64670f4a21",
+      "ordinal": 78,
+      "messages_sha256": "a88bfe14af3fea64670f4a210df3304069fa549ea6895df2f525b3db2455ad65",
+      "state": "QUARANTINE",
+      "rationale": "The diagnostic warning is useful, but convergence is not the definition of numerical stability. Stability concerns error amplification; an iterative stopping test or apparent mesh convergence is a distinct property.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "An algebraic residual can converge to zero for a wrongly posed discrete problem, while an underlying time discretization may still amplify perturbations. Consistency, stability and convergence have different definitions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Keep the suggested checks on boundary conditions, excitation, domain and benchmarks; hold only the equation of convergence with stability."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L591"
+    },
+    {
+      "id": "repo-4aa9327d346a08f90f153e36",
+      "ordinal": 79,
+      "messages_sha256": "4aa9327d346a08f90f153e36901c7a5a8f26da02e4a8fbbcfd4018dededda9c2",
+      "state": "PASS",
+      "rationale": "Correct spherical-Gauss derivation for the exterior of a uniformly charged shell.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Spherical symmetry gives E_r*4*pi*r²=Q/epsilon0 and E_r=Q/(4*pi*epsilon0*r²)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The radial sign follows Q; k is the Coulomb constant and the usual homogeneous vacuum setting is intended."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L593"
+    },
+    {
+      "id": "repo-47e96aa1c630d378a95d9481",
+      "ordinal": 80,
+      "messages_sha256": "47e96aa1c630d378a95d94816dcaaf9ef57a5141fc1883164b90ade8b9186e41",
+      "state": "PASS",
+      "rationale": "Reasonable concise heuristic for selecting analytic, numerical or hybrid modeling.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Symmetry makes analysis promising rather than guaranteeing a closed form, and complex models can still have analytic subproblems. Treat the if statements as practical route suggestions, not mathematical iff conditions."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L594"
+    },
+    {
+      "id": "repo-9fd6b28c2ed1aee80d94bdec",
+      "ordinal": 81,
+      "messages_sha256": "9fd6b28c2ed1aee80d94bdeca913668edf9209d1c58727d4d28dd7bb680b38c9",
+      "state": "PASS",
+      "rationale": "Correct explanation of choosing a gauge that makes the potential representation convenient for geometry and boundary constraints.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "title": "MIT 6.013, Electromagnetics and Applications",
+          "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf",
+          "finding": "Maxwell equations, modal and boundary formulations connect electric/magnetic field circulation, flux, currents and wave behavior."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Gauge selection cannot change physical boundary data; residual gauge freedom and global consistency still require attention."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L610"
+    },
+    {
+      "id": "repo-cc35b6eb13ae1061277368f2",
+      "ordinal": 82,
+      "messages_sha256": "cc35b6eb13ae1061277368f2c68ef5fd9fc5fceb74a790e0c3de4b1f282e1bb8",
+      "state": "PASS",
+      "rationale": "Correct introductory diffraction description and wavelength-scale observation.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For an aperture width a, characteristic angular spreading scales like lambda/a in the appropriate far-field regime."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Diffraction occurs for larger apertures too, with smaller angles; most noticeable is a qualitative scale statement."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L614"
+    },
+    {
+      "id": "repo-49622af43b7e69b27c840681",
+      "ordinal": 83,
+      "messages_sha256": "49622af43b7e69b27c84068139adaba6b9950af79f4683c4add7176c0c99f5f8",
+      "state": "PASS",
+      "rationale": "Sound practical description of controlled approximation and physical insight rather than demanding a full closed-form solution.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Approximations must be justified in their regime and checked against required accuracy; no universal tractability guarantee is asserted."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L620"
+    },
+    {
+      "id": "repo-8c053358b70aacb24a5ad070",
+      "ordinal": 84,
+      "messages_sha256": "8c053358b70aacb24a5ad070d1e7b196a13a2c6607c3c0ed3768d833a32e9dc3",
+      "state": "PASS",
+      "rationale": "Correct description of the spatial boundary-value structure associated with a wave equation.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A separated ansatz yields a spatial eigenproblem constrained at the boundary, with a temporal equation for modal amplitudes."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A time-dependent solution additionally needs initial data; it is ordinarily an initial-boundary-value problem. Separation requires suitable geometry and coefficients, and the source says often."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L628"
+    },
+    {
+      "id": "repo-ce6d51745083114963a86c7e",
+      "ordinal": 85,
+      "messages_sha256": "ce6d51745083114963a86c7eb57a5727398dd22757a173104fb8adc2e14b9850",
+      "state": "PASS",
+      "rationale": "Correct linear impulse-response and superposition analogy for a Green function.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a linear operator L, source superposition gives u(x,t)=integral G(x,t;x_prime,t_prime)*f(x_prime,t_prime) dx_prime dt_prime with the chosen initial/boundary prescription."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Literal shifting of a single kernel requires translation invariance; a still uniform pond is the intended analogy, and finite-amplitude nonlinear waves would not simply superpose."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L630"
+    },
+    {
+      "id": "repo-f08208e3dc9934eade2d0db3",
+      "ordinal": 86,
+      "messages_sha256": "f08208e3dc9934eade2d0db3727554ade3642e5b4aeef5efdd1164b51697b699",
+      "state": "QUARANTINE",
+      "rationale": "The two potential definitions correctly enforce the homogeneous Maxwell equations, but the final fully determined potentials claim omits gauge freedom and necessary conditions.",
+      "evidence": [
+        {
+          "title": "MIT 6.013, Electromagnetics and Applications",
+          "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf",
+          "finding": "Maxwell equations, modal and boundary formulations connect electric/magnetic field circulation, flux, currents and wave behavior."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If (phi,A) satisfies the source equations, then (phi-partial_t chi,A+grad chi) gives the same fields and also satisfies them. Source equations alone therefore do not fix the potentials uniquely."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for fully determining the potentials, preserving the correct curl/divergence identities."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L678"
+    },
+    {
+      "id": "repo-2ec8f1dbf85aa11d5419bd9f",
+      "ordinal": 87,
+      "messages_sha256": "2ec8f1dbf85aa11d5419bd9f606d4e976baeb4b8882088ac86725e152c07adcb",
+      "state": "PASS",
+      "rationale": "Correct conceptual bulk spectral-gap explanation in the scope defined by its first sentence: the frequency interval has no modes of the specified system, so there are no propagating bulk modes there.",
+      "evidence": [
+        {
+          "title": "MIT, Design of photonic crystals with multiple and combined band gaps",
+          "url": "https://www.mit.edu/~cuongng/publication/pub39/pub39.pdf",
+          "finding": "Distinguishes complete photonic band gaps across the relevant wavevectors/polarizations from restricted gaps."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Standing-wave propagation is imprecise wording. The claim concerns the defined bulk gap; partial directional gaps, finite tunneling, surface spectra and a changed defect system require their own scope and do not directly refute that definition."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L707"
+    },
+    {
+      "id": "repo-153cbb6a1158095a332d8777",
+      "ordinal": 88,
+      "messages_sha256": "153cbb6a1158095a332d8777a6a0f0b7c814fafd3d07f41812015988f9b341f5",
+      "state": "QUARANTINE",
+      "rationale": "The no-power-creation correction is right, but a gain increase at fixed accepted power need not come only from taking power away from other angles. Increased radiation efficiency can raise gain without narrowing the same normalized pattern.",
+      "evidence": [
+        {
+          "title": "MIT6.013, Electromagnetics and Applications, section10.3 equations10.3.4–10.3.5",
+          "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf",
+          "finding": "Gain is directivity multiplied by radiation efficiency, so improving efficiency can increase gain without redistributing a fixed total radiated power."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "G(theta,phi)=eta_rad*D(theta,phi). Keeping D fixed and increasing eta_rad from0.5 to1 doubles radiated intensity in every direction at fixed accepted power by reducing loss."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the exclusive redistribution claim, not energy conservation or the common high-directivity/narrow-beam explanation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L709"
+    },
+    {
+      "id": "repo-e7e55fde36c7b3b30f825687",
+      "ordinal": 89,
+      "messages_sha256": "e7e55fde36c7b3b30f825687546d3ae276a5a37532d3df08ff419277a2ae714c",
+      "state": "PASS",
+      "rationale": "Correct energy-accounting explanation of a current-driven motor despite the magnetic Lorentz force doing no work on an individual point charge.",
+      "evidence": [
+        {
+          "title": "MIT 6.013, Electromagnetics and Applications",
+          "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf",
+          "finding": "Maxwell equations, modal and boundary formulations connect electric/magnetic field circulation, flux, currents and wave behavior."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For each carrier, v dot(q*v cross B)=0; source electrical power balances mechanical output, resistive losses and field-energy change, with back emf linking the conversion."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The macroscopic wire force and constrained charge motion require full electromechanical accounting; the source of energy is not the static magnetic field alone."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L712"
+    },
+    {
+      "id": "repo-4d35d7be6c36fdaad3625751",
+      "ordinal": 90,
+      "messages_sha256": "4d35d7be6c36fdaad3625751361968d4ba4dac95a49a668245ff007da603b4b5",
+      "state": "PASS",
+      "rationale": "Correct short workflow for a symmetric magnetostatic Ampere-law calculation.",
+      "evidence": [
+        {
+          "title": "MIT 6.013, Electromagnetics and Applications",
+          "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf",
+          "finding": "Maxwell equations, modal and boundary formulations connect electric/magnetic field circulation, flux, currents and wave behavior."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a circular loop about a long straight steady current, B*2*pi*r=mu0*I_enclosed."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Only sufficiently symmetric cases allow B to be extracted from the integral. Time-varying displacement current requires the Ampere-Maxwell extension."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L714"
+    },
+    {
+      "id": "repo-a4ab699ad40856dc034d81af",
+      "ordinal": 91,
+      "messages_sha256": "a4ab699ad40856dc034d81afd2283d18908221d775490398dd837952e3993a3d",
+      "state": "QUARANTINE",
+      "rationale": "The force-balance idea is correct, but the same k symbol is used for the spring stiffness and Coulomb constant without distinguishing their incompatible units. The stated equation cannot be interpreted literally with one constant.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Spring stiffness has units N/m, while the Coulomb constant has units N*m²/C². The balance requires k_s*x=k_e*q²/r², with geometry relating r and extension."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for the ambiguous notation; no repaired equation is substituted into the unchanged source answer."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L718"
+    },
+    {
+      "id": "repo-ce898c6159e58c774a8d0eec",
+      "ordinal": 92,
+      "messages_sha256": "ce898c6159e58c774a8d0eec5218e5da98b4c15fe0d5a57d2afbfa0a62e1a5a4",
+      "state": "PASS",
+      "rationale": "Correct introductory dielectric-polarization explanation for a charged balloon adhering to a wall.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "title": "MIT 6.013, Electromagnetics and Applications",
+          "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf",
+          "finding": "Maxwell equations, modal and boundary formulations connect electric/magnetic field circulation, flux, currents and wave behavior."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The opposite surface-bound charge is accompanied by polarization of the rest of the wall; induced attraction and surface conditions must suffice against gravity for actual adhesion."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L731"
+    },
+    {
+      "id": "repo-9a7a67918d2fefc157b89939",
+      "ordinal": 93,
+      "messages_sha256": "9a7a67918d2fefc157b899393132551312ab7e8f1777a11db9b03c05dd505d0a",
+      "state": "PASS",
+      "rationale": "Correct qualitative Cherenkov phase-speed threshold and coherent-cone analogy.",
+      "evidence": [
+        {
+          "title": "MIT 6.013, Electromagnetics and Applications",
+          "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf",
+          "finding": "Maxwell equations, modal and boundary formulations connect electric/magnetic field circulation, flux, currents and wave behavior."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a transparent medium and an allowed emitted frequency, constructive phase matching gives cos(theta)=c/(n(omega)*v), requiring v>c/n(omega)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This exceeds phase speed in the medium, not vacuum c; dispersion, absorption and finite path length modify the radiation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L736"
+    },
+    {
+      "id": "repo-9e81508091c94bc4a97915e1",
+      "ordinal": 94,
+      "messages_sha256": "9e81508091c94bc4a97915e1cfee3dec3d1b7f9f41f054d4c951b0496a5ee61d",
+      "state": "PASS",
+      "rationale": "Acceptable standard classical/quantum explanation of electromagnetic vacuum properties and fluctuation-related phenomena.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Vacuum is not a literal material ether, and Casimir or emission calculations admit equivalent field/matter formulations; the statement does not uniquely distinguish a microscopic interpretation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L741"
+    },
+    {
+      "id": "repo-d9ea779b0f6711d6fd77ce1c",
+      "ordinal": 95,
+      "messages_sha256": "d9ea779b0f6711d6fd77ce1c8869b2dfafbf6d76bbb7fad4c3257650106551ae",
+      "state": "REJECT",
+      "rationale": "The stated peak formula confuses the free damped-oscillation frequency with the driven displacement-amplitude resonance peak under the usual amplitude-decay-rate convention. Damping shifts are not universally small and can remove the peak.",
+      "evidence": [
+        {
+          "title": "MIT RES8.009, Driven Oscillators, Lecture5",
+          "url": "https://live.ocw.mit.edu/courses/res-8-009-introduction-to-oscillations-and-waves-summer-2017/mitres_8_009su17_lec5.pdf",
+          "finding": "Driven amplitude depends on forcing coupling and damping; sufficient damping can eliminate a nonzero-frequency amplitude peak."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For x_doubleprime+2*gamma*x_prime+omega_n²*x=F*cos(omega*t), free oscillation frequency is sqrt(omega_n²-gamma²), whereas minimizing (omega_n²-omega²)²+4*gamma²*omega² gives omega_peak=sqrt(omega_n²-2*gamma²) when that is real."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Different response observables have different peak locations; the source does not specify a convention or observable that makes its general peak claim valid."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L751"
+    },
+    {
+      "id": "repo-1ed7bccfd575c317d6806b36",
+      "ordinal": 96,
+      "messages_sha256": "1ed7bccfd575c317d6806b36de87652e84ee309df73c6c6e2d1bcf18ac33acab",
+      "state": "QUARANTINE",
+      "rationale": "The interface continuity rules are central, but they do not by themselves guarantee a unique potential for arbitrary external boundary conditions. Pure Neumann data retain an additive-constant freedom and require compatibility.",
+      "evidence": [
+        {
+          "method": "independent_elliptic_uniqueness_counterexample",
+          "finding": "With only homogeneous Neumann external conditions and compatible interface conditions, every constant potential is a solution, so potential uniqueness requires a reference or a Dirichlet component."
+        },
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "In a piecewise positive-conductivity domain with zero external normal current, V=C for any constant C satisfies both normal-current and tangential-field interface conditions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The Neumann ambiguity is an additive constant in V, so physical E and J can still be unique. Tangential-E continuity is a derivative condition, not literally a prescribed Dirichlet potential value. Positive ellipticity, ideal-contact potential continuity, compatible external data and a potential reference supply the standard potential-uniqueness result."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L757"
+    },
+    {
+      "id": "repo-897632ca191fad79be6d3dc5",
+      "ordinal": 97,
+      "messages_sha256": "897632ca191fad79be6d3dc555777a2e18af16dace2ff63f4b9afad9d25296e6",
+      "state": "PASS",
+      "rationale": "Correct Ohmic resistance derivation for a uniform rod with a uniform longitudinal field.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "I=sigma*E*A and DeltaV=E*L imply R=L/(sigma*A)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Neglect end/contact effects and assume a homogeneous linear conductor; units reduce to ohms."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L769"
+    },
+    {
+      "id": "repo-691ed6da645339b0a9aa9227",
+      "ordinal": 98,
+      "messages_sha256": "691ed6da645339b0a9aa9227a772a3694f9affe0a51b5e067087d4f9ff7a04c7",
+      "state": "PASS",
+      "rationale": "Correct gauge-fixing purpose and physical-invariance explanation.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "title": "MIT 6.013, Electromagnetics and Applications",
+          "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf",
+          "finding": "Maxwell equations, modal and boundary formulations connect electric/magnetic field circulation, flux, currents and wave behavior."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A gauge condition can leave residual transformations that need boundary/initial restrictions; it removes representational redundancy, not measurable field degrees of freedom."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L770"
+    },
+    {
+      "id": "repo-e595be86f0c1a16046d3458e",
+      "ordinal": 99,
+      "messages_sha256": "e595be86f0c1a16046d3458e7f1d47fc0fd6ecdad2f8376fd2f20e4f8dbf937a",
+      "state": "PASS",
+      "rationale": "Correct source-free vacuum plane-wave transversality derivation.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_physical_derivation",
+          "finding": "Individual Maxwell-law, wave-junction, force, boundary, perturbation-order and line-integral claims were checked from their equations."
+        },
+        {
+          "title": "MIT 6.013, Electromagnetics and Applications",
+          "url": "https://ocw.mit.edu/courses/6-013-electromagnetics-and-applications-spring-2009/d3be4ea78b036a6362230fb41780cf54_MIT6_013S09_notes.pdf",
+          "finding": "Maxwell equations, modal and boundary formulations connect electric/magnetic field circulation, flux, currents and wave behavior."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "div E=i*k dot E0*exp(i*(k dot r-omega*t))=0 implies k dot E0=0; the identical B argument follows from div B=0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The answer explicitly uses a propagating plane-wave ansatz. General structured or evanescent fields can have components along a chosen beam axis without violating Gauss law."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_electrodynamics.jsonl#L776"
+    }
+  ]
+}

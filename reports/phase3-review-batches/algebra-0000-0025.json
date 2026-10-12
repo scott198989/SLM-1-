@@ -1,0 +1,377 @@
+{
+  "base_commit": "59964150f76c34539bf770b939a039cf1054da05",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "algebra",
+  "offset": 0,
+  "limit": 25,
+  "next_offset": 25,
+  "new_substantive_reviews": 16,
+  "skipped_existing": 9,
+  "dispositions_added": {
+    "PASS": 12,
+    "QUARANTINE": 4
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "independent_algebra_first_batch_agent",
+    "records_checked": 16,
+    "final_counts": {
+      "PASS": 12,
+      "QUARANTINE": 4
+    },
+    "disposition_changes": [],
+    "review_precision_corrections": [
+      "Ordinal 13: state standard IFT hypotheses, not necessity for every implicit representation."
+    ],
+    "full_prompt_and_answer_review": true,
+    "all_source_hashes_ids_ordinals_and_ledger_matches": true,
+    "source_sha256": "87dea8584252719990f16589465740a1fa9bfb4f2c161912e7c5e3bd2af2de07",
+    "reviewed_against_local_commit": "59964150f76c34539bf770b939a039cf1054da05",
+    "published_base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "all_2112_message_hashes_verified": true,
+    "earlier_667_decisions_preserved": true,
+    "independent_human_review": false,
+    "release_approved": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 667,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 491,
+    "REJECT": 41,
+    "QUARANTINE": 152,
+    "NEEDS_HUMAN_REVIEW": 1428
+  },
+  "agent_substantive_reviews": 683,
+  "substantively_unreviewed": 1426,
+  "records": [
+    {
+      "id": "repo-8e9a79a3ec0b2980b63e06fa",
+      "ordinal": 1,
+      "messages_sha256": "8e9a79a3ec0b2980b63e06fafe18bb273a599f91a5bde62c6e6dcd1861c6174a",
+      "state": "PASS",
+      "rationale": "Correct qualitative connection between positive transition Jacobian determinants and a consistent manifold orientation. The answer says negative transitions may indicate nonorientability, rather than claiming one negative transition proves it.",
+      "evidence": [
+        {
+          "title": "University of Toronto, oriented manifolds",
+          "url": "https://www.math.utoronto.ca/mgualt/courses/18-367/docs/DiffGeomNotes-3.pdf",
+          "finding": "Section 2.4 defines orientability by existence of an atlas whose transition Jacobians have positive determinant; an initially negative transition may be corrected by changing a chart."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Orientation refers to a consistent orientation of tangent bases, not a preferred vector direction. An arbitrary atlas can contain negative transitions on an orientable manifold."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L12"
+    },
+    {
+      "id": "repo-95d892888fe655e4bec282e1",
+      "ordinal": 2,
+      "messages_sha256": "95d892888fe655e4bec282e1637808b686ddd0e10659c5f0b9a1e16d199c062a",
+      "state": "PASS",
+      "rationale": "Correctly accepts exhaustive proof when all cases in a finite complete case split are verified. The practicality warning concerns literal enumeration and does not deny a finite symbolic case split covering an infinite domain.",
+      "evidence": [
+        {
+          "method": "direct_logical_check",
+          "finding": "If a finite collection of cases covers the domain and the proposition is proved in every case, any putative counterexample belongs to a proved case and is impossible."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For every x in a domain partitioned into finitely many cases C_i, coverage gives some i and the proved implication x in C_i => P(x) gives P(x)."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L21"
+    },
+    {
+      "id": "repo-9ba2685a9d7e97dae5706a3e",
+      "ordinal": 3,
+      "messages_sha256": "9ba2685a9d7e97dae5706a3e5b03680f4b0b6b1157ea8949359853ef17ea3673",
+      "state": "QUARANTINE",
+      "rationale": "The spectral-radius definition is correct, but the unrestricted claim that it determines stability in dynamical systems needs a discrete-time or iteration-matrix qualification. Continuous-time systems with equal spectral radius can have opposite stability.",
+      "evidence": [
+        {
+          "title": "Gilbert Strang, Iterative Methods and Preconditioners",
+          "url": "https://math.mit.edu/~gs/linearalgebra/ila5/linearalgebra5_11-3.pdf",
+          "finding": "The spectral radius is the maximum eigenvalue modulus and controls powers of the iteration matrix; convergence for every initial error requires radius less than one."
+        },
+        {
+          "title": "MIT OpenCourseWare, Eigenvalues and Stability",
+          "url": "https://ocw.mit.edu/courses/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/94c0f5570a5430022f7a472a0b5d3005_GAOjfd5QJZE.pdf",
+          "finding": "For a continuous-time constant-coefficient linear differential equation, asymptotic stability is governed by negative real parts of eigenvalues, rather than their maximum modulus."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A=[1] and B=[-1] both have spectral radius 1. x'=Ax grows as exp(t), whereas x'=Bx decays as exp(-t). This does not dispute the radius criterion for powers of a discrete-time transition matrix."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L23"
+    },
+    {
+      "id": "repo-16163ff76cb79bd35303eaaf",
+      "ordinal": 5,
+      "messages_sha256": "16163ff76cb79bd35303eaafc729d72957e21996bc2e519478bf7e8153c29c64",
+      "state": "PASS",
+      "rationale": "Correct determinant-transpose identity, with the Leibniz formula providing the stated general justification. The row/column expansion explanation is appropriate intuition.",
+      "evidence": [
+        {
+          "method": "independent_symbolic_derivation",
+          "finding": "In the Leibniz sum for det(A^T), substitute inverse permutations. The inverse has the same sign and reindexes the product to the corresponding term of det(A)."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "det(A^T)=sum_sigma sign(sigma) product_i a_(sigma(i),i). Set tau=sigma^-1, whose sign is unchanged, and reindex to get det(A)."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L27"
+    },
+    {
+      "id": "repo-5db9f651c72fa38fd761b462",
+      "ordinal": 9,
+      "messages_sha256": "5db9f651c72fa38fd761b462b44e9c5f72b09a77e3b54e9427495c007358dcb3",
+      "state": "PASS",
+      "rationale": "Correctly distinguishes eigenvalue preservation under similarity from the insufficiency of eigenvalues to establish similarity. Jordan block sizes supply the missing structure over a field where the characteristic polynomial splits.",
+      "evidence": [
+        {
+          "title": "James Demmel, Berkeley MA221 Lecture 15",
+          "url": "https://people.eecs.berkeley.edu/~demmel/ma221_Fall09/Lectures/Lecture_15.html",
+          "finding": "Defines eigenvalues through the characteristic determinant and nonzero null vectors; shows similarity preserves eigenvalues and presents unique Jordan blocks up to ordering."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "I_2 and [[1,1],[0,1]] both have eigenvalues 1,1. Their eigenspace dimensions are 2 and 1, so they are not similar."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Jordan-form wording is understood over the usual real/complex linear-algebra setting with eigenvalues considered over a splitting field."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L43"
+    },
+    {
+      "id": "repo-4080b78799a4e87eabaf6107",
+      "ordinal": 10,
+      "messages_sha256": "4080b78799a4e87eabaf6107833a309338f7fdda274a8142b03c92a8e68f6c79",
+      "state": "PASS",
+      "rationale": "Sound simple-language description of dependent complete equations as redundant constraints. Removing an equation implied by the others leaves the solution set unchanged.",
+      "evidence": [
+        {
+          "method": "independent_linear_combination_check",
+          "finding": "If the complete equation a_k x=b_k is a linear combination of remaining equations with the same coefficients on both sides, every solution of the remaining equations satisfies it. Deleting it preserves the solution set."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "x+y=1 and 2x+2y=2 have the same solution set after deleting the second equation. Dependence must include the right-hand side; proportional left sides with inconsistent constants are a different case."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L45"
+    },
+    {
+      "id": "repo-ee4585a8f596ecd0a8ced586",
+      "ordinal": 11,
+      "messages_sha256": "ee4585a8f596ecd0a8ced5863229c6e8288ca843c214f276f22d01be5a1a6a79",
+      "state": "PASS",
+      "rationale": "Correct symbolic eigenvalue workflow using the characteristic determinant, followed by null-space computation of eigenvectors. The extra eigenvector step is useful and does not alter the eigenvalue procedure.",
+      "evidence": [
+        {
+          "title": "James Demmel, Berkeley MA221 Lecture 15",
+          "url": "https://people.eecs.berkeley.edu/~demmel/ma221_Fall09/Lectures/Lecture_15.html",
+          "finding": "Defines eigenvalues through the characteristic determinant and nonzero null vectors; shows similarity preserves eigenvalues and presents unique Jordan blocks up to ordering."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For diag(2,3), det(A-lambda I)=(2-lambda)(3-lambda), giving 2,3 and null spaces spanned by e1,e2."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Eigenvectors are nonzero null vectors; the null space also contains zero. This is a conceptual recipe, not a recommended numerically stable large-matrix algorithm."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L52"
+    },
+    {
+      "id": "repo-f04457e56c61af9c116c0296",
+      "ordinal": 12,
+      "messages_sha256": "f04457e56c61af9c116c0296481d9ce7ba1c1875faf2b844450ff1d1c8eac456",
+      "state": "PASS",
+      "rationale": "Correctly identifies the monic characteristic polynomial, the identity as the only diagonalizable matrix with every eigenvalue 1, and possible nontrivial unipotent Jordan structure. The nonuniqueness conclusion is correct.",
+      "evidence": [
+        {
+          "title": "James Demmel, Berkeley MA221 Lecture 15",
+          "url": "https://people.eecs.berkeley.edu/~demmel/ma221_Fall09/Lectures/Lecture_15.html",
+          "finding": "Defines eigenvalues through the characteristic determinant and nonzero null vectors; shows similarity preserves eigenvalues and presents unique Jordan blocks up to ordering."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If A=S diag(1,...,1) S^-1 then A=I. Otherwise Cayley-Hamilton gives (A-I)^n=0, and the Jordan form has eigenvalue 1 in every block."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The reference to Jordan blocks describes a similar canonical form, not a restriction on the matrix's original coordinate entries. Identity is also unipotent."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L70"
+    },
+    {
+      "id": "repo-ae54c2a385da2725f4797e80",
+      "ordinal": 13,
+      "messages_sha256": "ae54c2a385da2725f4797e801fa3451799c4a755ec5dd5e6ae55e2eb1a7dd22a",
+      "state": "QUARANTINE",
+      "rationale": "The list names useful approaches, but the proposed implicit-function elimination omits the regularity and nonsingular constraint-Jacobian hypotheses required to invoke the standard implicit-function theorem. The visible prompt gives only a nonlinear system, and does not establish an optimization or variational setting for the multiplier suggestion. Hold for those scope conditions rather than rejecting the methods themselves.",
+      "evidence": [
+        {
+          "title": "MIT nonlinear programming, constrained optimality",
+          "url": "https://ocw.mit.edu/courses/15-084j-nonlinear-programming-spring-2004/21073fc1bb9e5f68b3319bec0895683f_lec6_constr_opt.pdf",
+          "finding": "Theorem 22 requires a feasible base point, continuously differentiable constraints and a nonsingular Jacobian block for local elimination; multipliers are introduced for constrained optimization with relevant regularity conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At (0,0), the real constraint x^2+y^2=0 has a singular Jacobian and only an isolated solution; no real-valued y(x) satisfying it exists on a neighborhood of x=0. Nonlinearity alone does not establish local elimination."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L72"
+    },
+    {
+      "id": "repo-89e1105337ed14f7f8154483",
+      "ordinal": 16,
+      "messages_sha256": "89e1105337ed14f7f8154483d969d11c83f45a1999247fca786fe29f501e38d9",
+      "state": "PASS",
+      "rationale": "Faithful introductory restatement: an algebraic proof uses valid symbolic and logical deductions to establish a statement, rather than relying on a diagram or a few numerical checks.",
+      "evidence": [
+        {
+          "method": "direct_mathematical_review",
+          "finding": "A symbolic identity or implication derived from stated algebraic axioms proves all covered instances; a finite list of numerical tests does not establish an unrestricted universal statement."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is a paraphrase, not a claim that every proof in the broad subject of algebra must exclude all other proof techniques."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L85"
+    },
+    {
+      "id": "repo-186a93df7ed9792660ff3f58",
+      "ordinal": 17,
+      "messages_sha256": "186a93df7ed9792660ff3f5806f96c15c701ad66a4fe39468b15ea4c5ad9bac1",
+      "state": "PASS",
+      "rationale": "The explicitly conditional answer correctly explains that coupling can encode exploitable structure, stabilize a system, or constrain an optimization problem. It does not claim all coupling improves solvability.",
+      "evidence": [
+        {
+          "title": "MIT OpenCourseWare, Eigenvalues and Stability",
+          "url": "https://ocw.mit.edu/courses/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/94c0f5570a5430022f7a472a0b5d3005_GAOjfd5QJZE.pdf",
+          "finding": "For a continuous-time constant-coefficient linear differential equation, asymptotic stability is governed by negative real parts of eigenvalues, rather than their maximum modulus."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For x'=Ax with A=[[1,2],[-2,-3]], the characteristic polynomial is (lambda+1)^2, so solutions decay despite a possible polynomial transient. Deleting the off-diagonal coupling leaves diag(1,-3), with an unstable mode. Symmetric equations x+y=a, x-y=b are directly solved using their coupled structure."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A smaller feasible set does not generally imply lower computational complexity; the answer only claims this can help in some cases."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L87"
+    },
+    {
+      "id": "repo-bbbf71bd5e3e7da114b86b1a",
+      "ordinal": 18,
+      "messages_sha256": "bbbf71bd5e3e7da114b86b1a1ae474a103865d55f792075721618f05000b9a5c",
+      "state": "PASS",
+      "rationale": "Complete standard proof that integers under addition form a group: closure, associativity, additive identity and additive inverse all hold.",
+      "evidence": [
+        {
+          "method": "independent_axiom_and_subgroup_check",
+          "finding": "Group claims are checked directly against closure, inherited associativity, identity and inverses. No numerical example substitutes for the general proof."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For arbitrary integers a,b,c, a+b is an integer, integer addition is associative, 0 is a two-sided identity, and -a is an integer satisfying both inverse equations."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L91"
+    },
+    {
+      "id": "repo-341767ffa308ba11a4d5a3dd",
+      "ordinal": 19,
+      "messages_sha256": "341767ffa308ba11a4d5a3dd4ba310d5e55a655c33e76cc580ad0ceba399b7cb",
+      "state": "QUARANTINE",
+      "rationale": "The polynomial degree and long-division rule is correct for rational functions, but the unrestricted prompt asks for an oblique asymptote generally. The answer never states the rational-function assumption or a general limiting definition, so it is incomplete as a standalone definition.",
+      "evidence": [
+        {
+          "title": "OpenStax, Precalculus 2e: Rational Functions",
+          "url": "https://openstax.org/books/precalculus-2e/pages/3-7-rational-functions",
+          "finding": "The degree-difference-one and polynomial-division method is stated specifically for rational functions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "f(x)=x+exp(-x) has f(x)-x -> 0 as x -> +infinity, so y=x is an oblique asymptote even though f is not a rational function to which polynomial degree comparison applies."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L101"
+    },
+    {
+      "id": "repo-44d59193b4e51e51d781f390",
+      "ordinal": 20,
+      "messages_sha256": "44d59193b4e51e51d781f390f726a25005bd83f45f049711ae2cd1e57382c9c7",
+      "state": "PASS",
+      "rationale": "Valid exhaustive argument for a group of order two. The inverse of the nonidentity element cannot be the identity, so it is itself; the resulting multiplication table is symmetric.",
+      "evidence": [
+        {
+          "method": "independent_axiom_and_subgroup_check",
+          "finding": "Group claims are checked directly against closure, inherited associativity, identity and inverses. No numerical example substitutes for the general proof."
+        },
+        {
+          "method": "direct_logical_check",
+          "finding": "If a finite collection of cases covers the domain and the proposition is proved in every case, any putative counterexample belongs to a proved case and is impossible."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The only table satisfying identity and a^2=e is [[e,a],[a,e]], which is symmetric. If a^-1=e, then a=e, contradicting distinctness."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L102"
+    },
+    {
+      "id": "repo-0889a3e1740aea16a72e751e",
+      "ordinal": 21,
+      "messages_sha256": "0889a3e1740aea16a72e751e2535e5377850a0cb5e95a8f315fd4c036bf37413",
+      "state": "QUARANTINE",
+      "rationale": "The alternating and monolithic architectures are described correctly, but the unqualified statement that simultaneous solution gives better convergence properties is not generally justified. Robustness and convergence depend on the coupled equations, linearization, solver and preconditioner.",
+      "evidence": [
+        {
+          "title": "Tojaga et al., Hybrid of monolithic and staggered solution techniques",
+          "url": "https://arxiv.org/abs/2203.15924",
+          "finding": "This coupled fracture model has reduced monolithic robustness from non-positive-definite tangent stiffness; alternating solution avoids that difficulty but has suboptimal convergence, motivating a hybrid. The comparison is problem-dependent."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This does not deny the well-known strong-coupling advantages of a well-designed monolithic solver or the ease of reusing subsystem codes."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L104"
+    },
+    {
+      "id": "repo-3bfcfc04831df50521609613",
+      "ordinal": 24,
+      "messages_sha256": "3bfcfc04831df505216096130046cea42af9e1a0fb384fe2e263dc2c889da1df",
+      "state": "PASS",
+      "rationale": "Correct subgroup proof: the kernel contains the identity, is closed under products and contains inverses. Associativity is inherited from the ambient group.",
+      "evidence": [
+        {
+          "method": "independent_axiom_and_subgroup_check",
+          "finding": "Group claims are checked directly against closure, inherited associativity, identity and inverses. No numerical example substitutes for the general proof."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a,b in ker(phi), phi(ab)=e_H and phi(a^-1)=phi(a)^-1=e_H. The identity mapping property gives nonemptiness, satisfying the subgroup criterion."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L116"
+    }
+  ]
+}

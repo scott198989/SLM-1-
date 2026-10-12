@@ -1,0 +1,18 @@
+{
+  "version":"FORGE_validation_v0.1",
+  "parser_success_is_fidelity_proof":false,
+  "raw_extraction_immutable":true,
+  "invent_missing_math_or_answers":false,
+  "tiers":{
+    "native_prose":{"checks":["source_hash_and_location","reading_order","completeness","encoding","privacy","paragraph_boundaries"],"review":"stratified_source comparison; reject suspicious units; no independent proof of every textbook claim required for RAG"},
+    "native_pdf":{"checks":["all_pages_accounted_for","reading_order","headers_footers","hyphenation","glyph_fidelity","page_links"],"review":"compare sampled ordinary pages and every flagged page with rendered originals"},
+    "math":{"checks":["operators","superscripts_subscripts","fractions","greek_glyphs","units","definitions","equation_context"],"review":"every equation used in a released SFT answer or relied-on RAG chunk compared to source; independently verify SFT reasoning"},
+    "ocr":{"checks":["source_image_link","confidence_when_available","broken_words","missing_lines","column_order","character_confusions"],"review":"visual comparison required; confidence score alone is insufficient"},
+    "table_multicolumn":{"checks":["row_column_associations","headers","merged_cells","reading_order","units","captions"],"review":"retain structured cells or quarantine; flattened text is not accepted as a faithful table"},
+    "visual_dependency":{"checks":["exact_page_or_slide","figure_bbox_or_asset","asset_hash","caption_or_reviewed_description","legend_axes_units","question_dependency"],"review":"visual-dependent answers stay withheld until required visual evidence is reviewed; image links alone do not establish interpretation"}
+  },
+  "sft_review":"complete question, independently verified answer, explicit assumptions/units, all dependencies, family isolation, rights and mask proof",
+  "rag_review":"faithful extraction with reliable citations and dependencies, privacy/rights/family isolation; not an SFT answer-key certification",
+  "evaluation_review":"verified task/reference/grader, independent family, private destination, no SFT or retrieval leakage",
+  "sampling_accuracy_claim":"only after prespecified random stratified review with item-weighted estimates and uncertainty; targeted examples cannot estimate corpus accuracy"
+}

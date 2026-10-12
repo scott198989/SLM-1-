@@ -1,0 +1,619 @@
+{
+  "base_commit": "f898612ad7a7d6b69a531d3ec5796cbfd23cec13",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "physics",
+  "offset": 225,
+  "limit": 25,
+  "next_offset": 250,
+  "selected_window_end_exclusive": 250,
+  "selected_rows_in_window": 25,
+  "new_substantive_reviews": 25,
+  "skipped_existing": 0,
+  "preserved_structural_quarantines": [],
+  "dispositions_added": {
+    "PASS": 21,
+    "QUARANTINE": 3,
+    "REJECT": 1
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "/root/review_physics_final_batch",
+    "records_checked": 25,
+    "final_counts": {
+      "PASS": 21,
+      "QUARANTINE": 3,
+      "REJECT": 1
+    },
+    "disposition_changes": [],
+    "review_precision_corrections": [
+      "245 vacuum convention is standard interpretation rather than an expressly stated assumption.",
+      "248 records the missing scalar-potential transform as an accompanying condition, not source text.",
+      "Add author-hosted Litz evidence."
+    ],
+    "full_prompt_and_answer_review": true,
+    "all_source_hashes_ids_ordinals_and_ledger_matches": true,
+    "source_sha256": "080c95bcf16135143d3609bd39c6d8bccd90385405dc49b8673ccb8e7e5cab93",
+    "candidate_preparation_predecessor_commit": "e2f69ab3d117456c12d594925edc20f4e913e09a",
+    "local_review_head_reported": null,
+    "published_base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "independent_human_review": false,
+    "release_approved": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 1840,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 1498,
+    "REJECT": 68,
+    "QUARANTINE": 300,
+    "NEEDS_HUMAN_REVIEW": 246
+  },
+  "agent_substantive_reviews": 1865,
+  "substantively_unreviewed": 244,
+  "records": [
+    {
+      "id": "repo-3a699aefe801d93d6e71e118",
+      "ordinal": 225,
+      "messages_sha256": "3a699aefe801d93d6e71e118f8ac2f58d1cd874fea13a21c5014b80e05f8c086",
+      "state": "PASS",
+      "rationale": "Correct concise statement that momentum balance needs a constitutive stress closure to become Navier-Stokes.",
+      "evidence": [
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "rho*Dv/Dt=div(sigma)+rho*b becomes the Newtonian-fluid momentum equation after inserting pressure plus the viscous strain-rate stress."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Compressibility, continuity, equation of state and energy closure may also be required; the answer identifies the key momentum constitutive step, not a complete solver specification."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1411"
+    },
+    {
+      "id": "repo-ff81cfa74e47f515029ccd58",
+      "ordinal": 226,
+      "messages_sha256": "ff81cfa74e47f515029ccd586ada5ebc32077606cf5b3bbbcd37d7eea9f83502",
+      "state": "PASS",
+      "rationale": "Correct distinction between free thermal strain and stress from uniaxial restraint.",
+      "evidence": [
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a fully restrained linear isotropic bar, total axial strain=sigma/E+alpha*DeltaT=0, so sigma=-E*alpha*DeltaT under tensile-positive convention."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The source says stress scale and simple bar; multidirectional constraint, thermal gradients, plasticity and temperature-dependent properties require more detail."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1452"
+    },
+    {
+      "id": "repo-1c5db11f83c7191375fd0d25",
+      "ordinal": 227,
+      "messages_sha256": "1c5db11f83c7191375fd0d253004cec85951e99073f05b66bc2bcf0badc9826d",
+      "state": "QUARANTINE",
+      "rationale": "The singular-corner warning is valid, but a huge stress peak alone does not justify the categorical No. The actual corner geometry, boundary/loading conditions and convergence behavior must establish whether this is a singular point value or a finite concentration.",
+      "evidence": [
+        {
+          "title": "COMSOL, How to Identify and Resolve Singularities in the Model when Meshing",
+          "url": "https://www.comsol.com/blogs/how-identify-resolve-singularities-model-meshing",
+          "finding": "A singular ideal corner has a nonconverging point stress, while values away from it can converge; mesh refinement and the actual modeled feature distinguish this from an ordinary stress concentration."
+        },
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the certainty of the diagnosis, not the advice to use physical radii, averaged measures and convergence checks. A real high-stress region must not be dismissed solely because a sharp-feature result is large."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1454"
+    },
+    {
+      "id": "repo-d18462d23c1c70e441ec3f62",
+      "ordinal": 228,
+      "messages_sha256": "d18462d23c1c70e441ec3f6294c98a965bd5e088dfb1039641bbc0c32677ef1c",
+      "state": "PASS",
+      "rationale": "Correct intuitive explanation of strong two-way multiphysics feedback through temperature-dependent resistance and heating.",
+      "evidence": [
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Joule heating depends on electrical response, while resistance R(T) changes that response, producing a coupled temperature/electrical model."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Separately means ignoring feedback here, not forbidding converged partitioned/staggered numerical algorithms; properly coupled iterative solutions can agree with monolithic solutions."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1458"
+    },
+    {
+      "id": "repo-09be3fe9febb7f2f09ed7491",
+      "ordinal": 229,
+      "messages_sha256": "09be3fe9febb7f2f09ed749102e73c8719a4ddd458274227b3b7e471a645425b",
+      "state": "PASS",
+      "rationale": "Correct stress contribution to chemical-potential-driven diffusion.",
+      "evidence": [
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A stress-dependent chemical potential mu(c,sigma,...) enters a flux law proportional to-grad(mu), so a stress gradient can bias transport even at a given concentration gradient."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The stress component, partial molar volume, mobility and sign convention depend on material and species; the examples do not prescribe a universal migration direction."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1465"
+    },
+    {
+      "id": "repo-37018fc1c493657b8cf73403",
+      "ordinal": 230,
+      "messages_sha256": "37018fc1c493657b8cf73403d76a1cb717d97c6603edbb0df445a6cb932200fb",
+      "state": "PASS",
+      "rationale": "Correct cautious treatment of heated-gas incompressibility and the Boussinesq compromise.",
+      "evidence": [
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Boussinesq retains density variation in buoyancy while using an approximately constant density in inertial/mass terms, valid for small relative density changes in its regime."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Low Mach alone does not guarantee negligible thermal density change, and Boussinesq does not capture arbitrary expansion or pressure work; the source lists these checks."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1476"
+    },
+    {
+      "id": "repo-0e3e5832b6b0cb6b87be71d4",
+      "ordinal": 231,
+      "messages_sha256": "0e3e5832b6b0cb6b87be71d4569bcaab2ef4165b3a6aa478261983771781ee32",
+      "state": "PASS",
+      "rationale": "Sound error-source decomposition and warning that calibration can conceal model deficiencies.",
+      "evidence": [
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The categories can interact and are not always independently identifiable; the answer presents a diagnostic framework rather than a unique statistical decomposition."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1477"
+    },
+    {
+      "id": "repo-d48b1324abd90a6914d3c94f",
+      "ordinal": 232,
+      "messages_sha256": "d48b1324abd90a6914d3c94fd2fae2a3e42ca08303d55f5dd8ac8705dce71c87",
+      "state": "PASS",
+      "rationale": "Correct passive-sign sanity checks and distinction between equation solving and physical validity.",
+      "evidence": [
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For positive damping b, dissipated power is b*v²>=0; reversing its sign injects energy. Passive Fourier conduction gives nonnegative entropy production k*|grad T|²/T² for k>0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Coupled active processes can move heat uphill using work; the source examples target a wrongly signed passive constitutive term, not all possible transport."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1479"
+    },
+    {
+      "id": "repo-28e1526bc50a828b0b90d055",
+      "ordinal": 233,
+      "messages_sha256": "28e1526bc50a828b0b90d05559f5e329e62e03885b36d2aa9c69ab994d93c068",
+      "state": "PASS",
+      "rationale": "Correct series thermal resistance per area with the necessary steady1D/no-generation/constant-property conditions explicitly stated.",
+      "evidence": [
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "R_area=1/h_i+L/k+1/h_o has units m²*K/W, so q_doubleprime=DeltaT/R_area has W/m²."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Radiation linearization and multidimensional geometry require the extensions the answer itself notes."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1484"
+    },
+    {
+      "id": "repo-c82c5c1c76699fce6eeb9e13",
+      "ordinal": 234,
+      "messages_sha256": "c82c5c1c76699fce6eeb9e137b84d4ce66f372ecd576d56be834b96949233647",
+      "state": "PASS",
+      "rationale": "Reasonable conceptual plasma-etch multiphysics inventory and emphasis on uncertain closures.",
+      "evidence": [
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The level of electromagnetic, kinetic, sheath and chemistry detail depends on regime. This is a modeling overview, not validated process parameters, chemical handling instructions or a calibrated reactor prediction."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1488"
+    },
+    {
+      "id": "repo-5b6df1a606a5145b0e119e88",
+      "ordinal": 235,
+      "messages_sha256": "5b6df1a606a5145b0e119e888555a987f243c633215b9d5dc3f0584a5c87b231",
+      "state": "PASS",
+      "rationale": "Correct engineering explanation of passive thermodynamic consistency, admissible cross-coupling and dissipation constraints.",
+      "evidence": [
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Entropy production combines conjugate flux-force products; a passive linear response requires a positive-semidefinite dissipative part, with Onsager-type reciprocity only under its applicable conditions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Internal entropy means internal entropy production in this wording. Isolated systems can have finite transient growth by releasing stored free energy; the answer rules out indefinite energy creation, not every transient."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1490"
+    },
+    {
+      "id": "repo-6c0ffbcd6dcf93ea5ac9aefc",
+      "ordinal": 236,
+      "messages_sha256": "6c0ffbcd6dcf93ea5ac9aefcf3f77227f77edd1e91fc5ba7848811a9d46d39d3",
+      "state": "PASS",
+      "rationale": "Correct original magnetostatic Ampere law and symmetry-based use.",
+      "evidence": [
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For steady current with div J=0, closed-loop B circulation is mu0 times conduction current through any spanning surface."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The original law requires the magnetostatic/current-continuity regime; charging transients need displacement current. The prompt explicitly requests the original, uncorrected form."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1516"
+    },
+    {
+      "id": "repo-ca5106c647975e8672ff6b26",
+      "ordinal": 237,
+      "messages_sha256": "ca5106c647975e8672ff6b26eb90c753e447be6d2034d5e7b9cef9f942c885e7",
+      "state": "PASS",
+      "rationale": "Correct filamentary circular-loop center field and direction.",
+      "evidence": [
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Biot-Savart gives axial contributions whose integral is mu0*I*(2*pi*R)/(4*pi*R²)=mu0*I/(2*R)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Assumes a single loop in vacuum; multi-turn or material-core factors are separate."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1524"
+    },
+    {
+      "id": "repo-53a037e2c265c5a4af5c1788",
+      "ordinal": 238,
+      "messages_sha256": "53a037e2c265c5a4af5c178854891bb2477cefe6a5efbe93a90ff6df2fd1e3ad",
+      "state": "PASS",
+      "rationale": "Correct beginner self-induction and opposing-current-change explanation.",
+      "evidence": [
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For constant L and flux linkage lambda=L*I, induced emf=-d(lambda)/dt=-L*dI/dt."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Passive terminal voltage uses the corresponding opposite sign convention, and nonlinear flux-current laws require differential inductance rather than a fixed L."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1528"
+    },
+    {
+      "id": "repo-6fe6f8aea7c2bfc3524854f4",
+      "ordinal": 239,
+      "messages_sha256": "6fe6f8aea7c2bfc3524854f402c607181b1af345fffb487f710e9975fa0b2b40",
+      "state": "PASS",
+      "rationale": "Correct single-loop rotating-coil generator example and electromechanical energy conversion.",
+      "evidence": [
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Phi=B*A*cos(omega*t) gives induced emf=B*A*omega*sin(omega*t); an N-turn coil multiplies flux linkage and emf by N."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The single-turn formula assumes uniform B and rigid rotation. Magnetic loading torque and electrical output depend on the connected circuit; with an open circuit there can be voltage with negligible load torque."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1541"
+    },
+    {
+      "id": "repo-66234952290527b3dbf9338b",
+      "ordinal": 240,
+      "messages_sha256": "66234952290527b3dbf9338b1028ceda3223e3c26456d824c9d93a207c08cf00",
+      "state": "PASS",
+      "rationale": "Correct ideal uniform infinite-plane field derivation from explicitly invoked two-sided planar symmetry.",
+      "evidence": [
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Both pillbox caps contribute E*A and the side contribution vanishes, yielding2*E*A=sigma*A/epsilon0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is the ordinary isolated infinite uniformly charged plane model; finite or nonuniform planar sheets and other imposed fields do not share the required symmetry."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1545"
+    },
+    {
+      "id": "repo-93680131737691704e7ca287",
+      "ordinal": 241,
+      "messages_sha256": "93680131737691704e7ca287e6bccad0902b45c216fa37a250530da94c8c2f41",
+      "state": "REJECT",
+      "rationale": "The answer derives magnetic B, while the prompt explicitly asks for electric E. The B formulas are correct for the current distribution but do not answer the requested quantity.",
+      "evidence": [
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Uniform Ohmic axial current would give internal E=J/sigma only with conductivity supplied; the external electric field additionally depends on the circuit/surface-charge boundary problem. Ampere law supplies the different magnetic field stated in the answer."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Reject the prompt-answer mismatch without silently changing E to B or synthesizing missing conductivity/boundary data."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1548"
+    },
+    {
+      "id": "repo-331b5100848bc2c7cbe3e6da",
+      "ordinal": 242,
+      "messages_sha256": "331b5100848bc2c7cbe3e6dae205043275b032e24b2327aeccd9ec5faef4a4a2",
+      "state": "QUARANTINE",
+      "rationale": "The skin-depth formula and surface-concentration idea are sound, but ordinary stranded wire does not automatically mitigate skin/proximity losses. The relevant special construction is appropriately sized, individually insulated and arranged Litz strands.",
+      "evidence": [
+        {
+          "title": "Texas Instruments Unitrode, Magnetics Design Handbook",
+          "url": "https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/196/Magnetic-Design-Handboob_2D00_slup132.pdf",
+          "finding": "Litz-wire loss reduction uses individually insulated strands with a suitable arrangement and flux linkage; generic uninsulated stranding is not the same construction."
+        },
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "title": "Author-hosted COMPEL2014 Litz wire study",
+          "url": "https://ryz.ece.illinois.edu/pdf/compel2014.pdf",
+          "finding": "Analyzes Litz conductor construction and AC loss rather than treating arbitrary uninsulated stranding as equivalent."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Skin depth scales as sqrt(2/(mu*sigma*omega)) in the good-conductor regime. Electrically contacting strands can still behave like a larger conductor; insulation and suitable transposition control current sharing."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the unqualified stranded-wire conclusion, not the skin-effect mechanism or usefulness of hollow conductors in suitable frequency regimes."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1551"
+    },
+    {
+      "id": "repo-40897a2e2f8ab0e8a4441ea4",
+      "ordinal": 243,
+      "messages_sha256": "40897a2e2f8ab0e8a4441ea42fb67fb90173e90c762f2770e7ba74660eedfea8",
+      "state": "PASS",
+      "rationale": "Correct electromagnetic energy-flux interpretation and Poynting balance.",
+      "evidence": [
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The Maxwell identity partial_t u+div(E cross B/mu0)=-J dot E associates the cross product with energy crossing unit area per unit time in the microscopic/vacuum formulation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Macroscopic material energy partitions may use E cross H with corresponding stored/material terms. Time-averaged intensity and reactive local flux should be distinguished in non-plane-wave fields."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1559"
+    },
+    {
+      "id": "repo-84882d96cfc77d336b6fd611",
+      "ordinal": 244,
+      "messages_sha256": "84882d96cfc77d336b6fd6114964060a927d297f32a8b3d5329200c4b2de072a",
+      "state": "PASS",
+      "rationale": "Correct permanent-dipole energy and stable alignment result with the work interpreted as quasistatic work against the field.",
+      "evidence": [
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With signed angular torque tau_theta=-m*B*sin(theta), DeltaU=-integral tau_theta dtheta=-m*B*(cos(theta)-cos(theta0)), giving U=-m dot B plus a constant."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Work done by the field is the negative of DeltaU. Induced moments and field-source energy accounting can require a different constitutive energy expression."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1579"
+    },
+    {
+      "id": "repo-b77edb204e508a82aa73e058",
+      "ordinal": 245,
+      "messages_sha256": "b77edb204e508a82aa73e058df269ed9d6287b2b8c7d047bdbf1a0a9b8f0b1c7",
+      "state": "PASS",
+      "rationale": "Correct vacuum/microscopic magnetic field-energy derivation from an ideal long solenoid.",
+      "evidence": [
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "L=mu0*n²*A*ell and B=mu0*n*I give U=B²*A*ell/(2*mu0), hence field energy density B²/(2*mu0)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The vacuum/microscopic field-energy convention is a standard interpretation of the derivation, not an explicitly stated universal material assumption. Total macroscopic magnetic stored energy in material media includes material response and is not generally B²/(2*mu0) alone."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1581"
+    },
+    {
+      "id": "repo-46c9960930865f73be129b64",
+      "ordinal": 246,
+      "messages_sha256": "46c9960930865f73be129b64d3a1c6c1d3ac7dca4782d6f7f824af2d2afb50d2",
+      "state": "QUARANTINE",
+      "rationale": "The final distinction between flux conservation and the Meissner effect is useful, but the zero-resistance infinite-response claim and wording tying frozen flux to superconducting onset conflate ideal perfect conduction with superconducting expulsion.",
+      "evidence": [
+        {
+          "title": "MIT Junior Lab, Superconductivity: Meissner Effect, Persistent Currents and Josephson Effect",
+          "url": "https://ocw.mit.edu/courses/8-13-14-experimental-physics-i-ii-junior-lab-fall-2016-spring-2017/ec45c3030c7ec2ba0f0537ab84d09c17_MIT8_13-14F16-S17exp39.pdf",
+          "finding": "Distinguishes superconducting Meissner behavior and persistent currents; flux expulsion is more than ordinary zero-resistance inductive flux conservation."
+        },
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For an ideal loop with finite L and R=0, L*dI/dt=-dPhi_external/dt gives finite current change DeltaI=-DeltaPhi_external/L and conserved total linked flux. Zero resistance alone does not make I infinite or expel initially present flux."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold those claims narrowly; the source correctly identifies Meissner expulsion as an additional superconducting phenomenon, which should be preserved."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1584"
+    },
+    {
+      "id": "repo-4fa2ad1dcae5dbab119482a2",
+      "ordinal": 247,
+      "messages_sha256": "4fa2ad1dcae5dbab119482a29c2831df102071cab2b1e853033982bce7c95955",
+      "state": "PASS",
+      "rationale": "Correct nonrelativistic cyclotron frequency derivation and independence from speed/radius.",
+      "evidence": [
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "r=m*v_perp/(|q|*B) gives period2*pi*m/(|q|*B) and angular frequency |q|*B/m."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The frequency remains mass dependent despite the prompt wording. Charge sign selects rotation sense; relativistic inertia changes the frequency, as the answer nonrelativistic qualifier recognizes."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1588"
+    },
+    {
+      "id": "repo-86fb5c49f4992cf3a10129b3",
+      "ordinal": 248,
+      "messages_sha256": "86fb5c49f4992cf3a10129b35db0ffd8480d0404a1032db07587cf955235caac",
+      "state": "PASS",
+      "rationale": "Correct gauge freedom, common gauge choices and quantum observable invariance overview.",
+      "evidence": [
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Adding grad chi to A leaves B unchanged; the accompanying phi->phi-partial_t chi leaves E unchanged, and a corresponding quantum phase transformation preserves observables."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "For time-dependent chi, gauge invariance of E also requires phi->phi-partial_t chi. That scalar-potential condition is not explicitly written in the source and must accompany its stated A transformation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1590"
+    },
+    {
+      "id": "repo-806cf9585f8c49b354e42799",
+      "ordinal": 249,
+      "messages_sha256": "806cf9585f8c49b354e42799a12b9e48f9ff3c8a30e7aa335988a1628d35c4b4",
+      "state": "PASS",
+      "rationale": "Correct ordinary high-permeability iron-core magnetization and low-reluctance flux-path explanation.",
+      "evidence": [
+        {
+          "method": "independent_continuum_transport_and_electromagnetic_derivation",
+          "finding": "Individually checked constitutive closure, constrained thermal strain, coupled energy/sign balances, thermal resistance, Maxwell/Biot-Savart identities, magnetic energy and current-response limits."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "B=mu0*(H+M); a large positive differential material response can greatly increase flux density at a given H in an appropriate magnetic circuit."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Permeability is field-, frequency-, history- and alloy-dependent and decreases near saturation. Flux preference is a magnetic-circuit analogy, not a claim that flux behaves exactly like conduction current."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1592"
+    }
+  ]
+}

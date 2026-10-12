@@ -1,0 +1,104 @@
+{
+  "scope": "pinned_default_branch_candidate_rows; supplemental_branches_audited_separately_no_history_or_external_volumes",
+  "all_nonempty_fetched_candidate_rows_scanned": true,
+  "technical_answers_independently_verified": 0,
+  "ready_sft_records": 0,
+  "ready_rag_chunks": 0,
+  "unique_candidate_records": 34463,
+  "statuses": {
+    "quarantined": 5310,
+    "needs_review": 29153
+  },
+  "issue_counts": {
+    "PROMPT_COLLISION_REVIEW": 1964,
+    "GARBLED_WORDS": 2,
+    "TRUNCATED_SENTENCE_HINT": 10,
+    "AMBIGUOUS_HYPHENATION": 1,
+    "MOJIBAKE": 1,
+    "UNBALANCED_MATH_DELIMITERS": 8,
+    "LEGACY_VALIDATION_OVERLAP_REVIEW": 1332,
+    "NUMERIC_EQUALITY_MISMATCH": 230,
+    "UNBALANCED_MATH_BRACKETS": 56,
+    "OCR_NUMERIC_CONFUSION": 4,
+    "EMBEDDED_TRAINING_CONTROL_TOKENS": 1,
+    "SOURCE_COHORT_OPERATOR_LOSS_REVIEW": 1620,
+    "LEGACY_LABEL_BOUNDARIES_REQUIRE_REVIEW": 198,
+    "LEGACY_HAVOC_PERSONA_REQUIRE_REVIEW": 198
+  },
+  "repositories": {
+    "Completions": {
+      "files": 70,
+      "local_configuration_or_binary": 2,
+      "candidate_dataset": 62,
+      "empty_files": 48,
+      "screened_files": 20,
+      "rows": 40665,
+      "unique_records_added": 34265,
+      "exact_duplicate_rows": 6373,
+      "invalid_rows": 27,
+      "documentation_config_or_code": 6
+    },
+    "SLM": {
+      "files": 177,
+      "local_configuration_or_binary": 1,
+      "documentation_config_or_code": 166,
+      "screened_files": 173,
+      "unsupported_or_generated_artifact": 2,
+      "training_log_or_evaluation_artifact": 2,
+      "candidate_dataset": 5,
+      "rows": 396,
+      "tokenizer_corpus_not_sft": 1,
+      "initial_strict_import_unsupported_rows": 396,
+      "valid_recovered_rows": 396,
+      "unique_records_added": 198,
+      "exact_duplicate_rows": 198,
+      "invalid_json_rows": 0
+    },
+    "LLM": {
+      "files": 64,
+      "documentation_config_or_code": 58,
+      "screened_files": 60,
+      "local_configuration_or_binary": 2,
+      "candidate_dataset": 4,
+      "rows": 61222,
+      "exact_duplicate_rows": 61196,
+      "invalid_rows": 26,
+      "empty_files": 2
+    },
+    "SLM-1-": {
+      "files": 1,
+      "documentation_config_or_code": 1,
+      "screened_files": 1
+    }
+  },
+  "prompt_collision_groups": 671,
+  "normalized_near_twin_groups": 66,
+  "license_status": "No LICENSE files in these pinned trees; upstream rights/provenance need review",
+  "legacy_role_recovery": {
+    "rows": 396,
+    "unique_records_added": 198,
+    "exact_duplicate_rows": 198
+  },
+  "valid_row_occurrences": 102230,
+  "invalid_json_row_occurrences": 53,
+  "exact_duplicate_row_occurrences": 67767,
+  "total_dataset_row_occurrences": 102283,
+  "canonical_staging_path": "data/sft/staging/consolidated-20261001-v2",
+  "manual_cohort_review_records": 1620,
+  "complete_technical_usable_percentage": null,
+  "parseable_row_percentage": {
+    "numerator": 102230,
+    "denominator": 102283,
+    "percentage": 99.94818298250931
+  },
+  "unique_retained_row_percentage": {
+    "numerator": 34463,
+    "denominator": 102283,
+    "percentage": 33.69377120342579
+  },
+  "unflagged_unique_candidate_percentage": {
+    "numerator": 29153,
+    "denominator": 34463,
+    "percentage": 84.59217131416301
+  }
+}

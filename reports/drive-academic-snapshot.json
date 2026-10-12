@@ -1,0 +1,713 @@
+{
+  "checked_at": "2026-10-01T17:44:26.724116+00:00",
+  "files": {
+    "excluded": 92,
+    "extracted_needs_review": 1321,
+    "blocked": 362,
+    "duplicate": 172
+  },
+  "total_inventory_entries": 1947,
+  "root_nonexcluded_statuses": {
+    "New School Notes": {
+      "extracted_needs_review": 71,
+      "duplicate": 8,
+      "blocked": 2
+    },
+    "Old School Notes": {
+      "blocked": 334,
+      "extracted_needs_review": 696,
+      "duplicate": 141
+    },
+    "Academics": {
+      "extracted_needs_review": 554,
+      "blocked": 26,
+      "duplicate": 23
+    }
+  },
+  "active_units": [
+    {
+      "status": "excluded_pending_review",
+      "count": 26006,
+      "chars": 36526221
+    },
+    {
+      "status": "needs_review",
+      "count": 95819,
+      "chars": 72255203
+    }
+  ],
+  "file_mimes": [
+    {
+      "mime": "application/cap",
+      "status": "blocked",
+      "count": 2
+    },
+    {
+      "mime": "application/epub+zip",
+      "status": "duplicate",
+      "count": 1
+    },
+    {
+      "mime": "application/epub+zip",
+      "status": "excluded",
+      "count": 6
+    },
+    {
+      "mime": "application/epub+zip",
+      "status": "extracted_needs_review",
+      "count": 24
+    },
+    {
+      "mime": "application/msword",
+      "status": "blocked",
+      "count": 4
+    },
+    {
+      "mime": "application/octet-stream",
+      "status": "blocked",
+      "count": 169
+    },
+    {
+      "mime": "application/octet-stream",
+      "status": "excluded",
+      "count": 23
+    },
+    {
+      "mime": "application/pdf",
+      "status": "blocked",
+      "count": 24
+    },
+    {
+      "mime": "application/pdf",
+      "status": "duplicate",
+      "count": 41
+    },
+    {
+      "mime": "application/pdf",
+      "status": "excluded",
+      "count": 9
+    },
+    {
+      "mime": "application/pdf",
+      "status": "extracted_needs_review",
+      "count": 307
+    },
+    {
+      "mime": "application/vnd.google-apps.document",
+      "status": "extracted_needs_review",
+      "count": 2
+    },
+    {
+      "mime": "application/vnd.ms-powerpoint",
+      "status": "blocked",
+      "count": 6
+    },
+    {
+      "mime": "application/vnd.ms-powerpoint.presentation.macroenabled.12",
+      "status": "extracted_needs_review",
+      "count": 1
+    },
+    {
+      "mime": "application/vnd.oasis.opendocument.presentation",
+      "status": "blocked",
+      "count": 1
+    },
+    {
+      "mime": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "status": "duplicate",
+      "count": 2
+    },
+    {
+      "mime": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "status": "extracted_needs_review",
+      "count": 54
+    },
+    {
+      "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "status": "extracted_needs_review",
+      "count": 15
+    },
+    {
+      "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "status": "blocked",
+      "count": 2
+    },
+    {
+      "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "status": "duplicate",
+      "count": 26
+    },
+    {
+      "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "status": "excluded",
+      "count": 2
+    },
+    {
+      "mime": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "status": "extracted_needs_review",
+      "count": 174
+    },
+    {
+      "mime": "application/x-cab",
+      "status": "excluded",
+      "count": 1
+    },
+    {
+      "mime": "application/x-iwork-numbers-sffnumbers",
+      "status": "blocked",
+      "count": 2
+    },
+    {
+      "mime": "application/x-iwork-pages-sffpages",
+      "status": "blocked",
+      "count": 18
+    },
+    {
+      "mime": "application/x-ms-shortcut",
+      "status": "excluded",
+      "count": 47
+    },
+    {
+      "mime": "application/x-msdos-program",
+      "status": "excluded",
+      "count": 2
+    },
+    {
+      "mime": "application/x-tar",
+      "status": "blocked",
+      "count": 1
+    },
+    {
+      "mime": "application/zip",
+      "status": "blocked",
+      "count": 3
+    },
+    {
+      "mime": "audio/mpeg",
+      "status": "blocked",
+      "count": 2
+    },
+    {
+      "mime": "image/heif",
+      "status": "duplicate",
+      "count": 8
+    },
+    {
+      "mime": "image/heif",
+      "status": "extracted_needs_review",
+      "count": 19
+    },
+    {
+      "mime": "image/jpeg",
+      "status": "blocked",
+      "count": 10
+    },
+    {
+      "mime": "image/jpeg",
+      "status": "duplicate",
+      "count": 4
+    },
+    {
+      "mime": "image/jpeg",
+      "status": "extracted_needs_review",
+      "count": 35
+    },
+    {
+      "mime": "image/png",
+      "status": "duplicate",
+      "count": 70
+    },
+    {
+      "mime": "image/png",
+      "status": "extracted_needs_review",
+      "count": 210
+    },
+    {
+      "mime": "text/html",
+      "status": "duplicate",
+      "count": 1
+    },
+    {
+      "mime": "text/html",
+      "status": "extracted_needs_review",
+      "count": 9
+    },
+    {
+      "mime": "text/plain",
+      "status": "duplicate",
+      "count": 19
+    },
+    {
+      "mime": "text/plain",
+      "status": "excluded",
+      "count": 2
+    },
+    {
+      "mime": "text/plain",
+      "status": "extracted_needs_review",
+      "count": 471
+    },
+    {
+      "mime": "video/mp4",
+      "status": "blocked",
+      "count": 110
+    },
+    {
+      "mime": "video/quicktime",
+      "status": "blocked",
+      "count": 8
+    }
+  ],
+  "blockers": [
+    {
+      "reason": "drive_connector_file_size_limit_268435456",
+      "count": 2
+    },
+    {
+      "reason": "extraction_MemoryError",
+      "count": 1
+    },
+    {
+      "reason": "extraction_failed",
+      "count": 30
+    },
+    {
+      "reason": "format_adapter_unavailable",
+      "count": 206
+    },
+    {
+      "reason": "local_transcription_and_visual_alignment_unavailable",
+      "count": 120
+    },
+    {
+      "reason": "page_progress_timeout_requires_targeted_recovery",
+      "count": 1
+    },
+    {
+      "reason": "source_empty_no_recoverable_text",
+      "count": 2
+    }
+  ],
+  "subjects": [
+    {
+      "subject": "AC Circuits",
+      "status": "blocked",
+      "count": 10
+    },
+    {
+      "subject": "AC Circuits",
+      "status": "duplicate",
+      "count": 2
+    },
+    {
+      "subject": "AC Circuits",
+      "status": "extracted_needs_review",
+      "count": 93
+    },
+    {
+      "subject": "ANSYS",
+      "status": "extracted_needs_review",
+      "count": 1
+    },
+    {
+      "subject": "Accounting",
+      "status": "extracted_needs_review",
+      "count": 3
+    },
+    {
+      "subject": "AutoDesk",
+      "status": "blocked",
+      "count": 1
+    },
+    {
+      "subject": "AutoDesk",
+      "status": "extracted_needs_review",
+      "count": 2
+    },
+    {
+      "subject": "Business",
+      "status": "blocked",
+      "count": 3
+    },
+    {
+      "subject": "Business",
+      "status": "extracted_needs_review",
+      "count": 2
+    },
+    {
+      "subject": "Business Ethics",
+      "status": "extracted_needs_review",
+      "count": 1
+    },
+    {
+      "subject": "Business Law",
+      "status": "extracted_needs_review",
+      "count": 1
+    },
+    {
+      "subject": "CAD",
+      "status": "blocked",
+      "count": 1
+    },
+    {
+      "subject": "CAD",
+      "status": "extracted_needs_review",
+      "count": 5
+    },
+    {
+      "subject": "Calculus",
+      "status": "blocked",
+      "count": 42
+    },
+    {
+      "subject": "Calculus",
+      "status": "duplicate",
+      "count": 4
+    },
+    {
+      "subject": "Calculus",
+      "status": "extracted_needs_review",
+      "count": 33
+    },
+    {
+      "subject": "Code Cheat Sheets",
+      "status": "blocked",
+      "count": 9
+    },
+    {
+      "subject": "Code Cheat Sheets",
+      "status": "extracted_needs_review",
+      "count": 4
+    },
+    {
+      "subject": "College Algebra",
+      "status": "extracted_needs_review",
+      "count": 14
+    },
+    {
+      "subject": "Creo",
+      "status": "extracted_needs_review",
+      "count": 1
+    },
+    {
+      "subject": "Economics",
+      "status": "extracted_needs_review",
+      "count": 3
+    },
+    {
+      "subject": "Electric Motors",
+      "status": "duplicate",
+      "count": 3
+    },
+    {
+      "subject": "Electric Motors",
+      "status": "extracted_needs_review",
+      "count": 16
+    },
+    {
+      "subject": "Electrical Components",
+      "status": "blocked",
+      "count": 2
+    },
+    {
+      "subject": "Electrical Components",
+      "status": "duplicate",
+      "count": 4
+    },
+    {
+      "subject": "Electrical Components",
+      "status": "extracted_needs_review",
+      "count": 3
+    },
+    {
+      "subject": "Electromechanical Power",
+      "status": "extracted_needs_review",
+      "count": 3
+    },
+    {
+      "subject": "Engineering",
+      "status": "blocked",
+      "count": 9
+    },
+    {
+      "subject": "Engineering",
+      "status": "duplicate",
+      "count": 23
+    },
+    {
+      "subject": "Engineering",
+      "status": "extracted_needs_review",
+      "count": 502
+    },
+    {
+      "subject": "Hydraulics Pneumatics and Electric Motors",
+      "status": "duplicate",
+      "count": 6
+    },
+    {
+      "subject": "Hydraulics Pneumatics and Electric Motors",
+      "status": "extracted_needs_review",
+      "count": 27
+    },
+    {
+      "subject": "Industrial Totally Automation",
+      "status": "blocked",
+      "count": 2
+    },
+    {
+      "subject": "Industrial Totally Automation",
+      "status": "extracted_needs_review",
+      "count": 13
+    },
+    {
+      "subject": "Intellectual Property",
+      "status": "extracted_needs_review",
+      "count": 1
+    },
+    {
+      "subject": "Intro to Engineering",
+      "status": "blocked",
+      "count": 5
+    },
+    {
+      "subject": "Intro to Engineering",
+      "status": "duplicate",
+      "count": 4
+    },
+    {
+      "subject": "Intro to Engineering",
+      "status": "extracted_needs_review",
+      "count": 27
+    },
+    {
+      "subject": "Introductory Transport Phenomena",
+      "status": "blocked",
+      "count": 2
+    },
+    {
+      "subject": "Manufacturing Process 1",
+      "status": "duplicate",
+      "count": 1
+    },
+    {
+      "subject": "Manufacturing Process 1",
+      "status": "extracted_needs_review",
+      "count": 13
+    },
+    {
+      "subject": "Materials Science 2",
+      "status": "blocked",
+      "count": 7
+    },
+    {
+      "subject": "Materials Science 2",
+      "status": "duplicate",
+      "count": 3
+    },
+    {
+      "subject": "Materials Science 2",
+      "status": "extracted_needs_review",
+      "count": 10
+    },
+    {
+      "subject": "Mathematics",
+      "status": "blocked",
+      "count": 1
+    },
+    {
+      "subject": "Microsoft products",
+      "status": "blocked",
+      "count": 1
+    },
+    {
+      "subject": "Microsoft products",
+      "status": "extracted_needs_review",
+      "count": 4
+    },
+    {
+      "subject": "PLC",
+      "status": "blocked",
+      "count": 159
+    },
+    {
+      "subject": "PLC",
+      "status": "extracted_needs_review",
+      "count": 2
+    },
+    {
+      "subject": "Physics 1",
+      "status": "blocked",
+      "count": 48
+    },
+    {
+      "subject": "Physics 1",
+      "status": "duplicate",
+      "count": 76
+    },
+    {
+      "subject": "Physics 1",
+      "status": "extracted_needs_review",
+      "count": 134
+    },
+    {
+      "subject": "Physics 2",
+      "status": "blocked",
+      "count": 23
+    },
+    {
+      "subject": "Physics 2",
+      "status": "duplicate",
+      "count": 14
+    },
+    {
+      "subject": "Physics 2",
+      "status": "extracted_needs_review",
+      "count": 204
+    },
+    {
+      "subject": "Problem Solving in ET",
+      "status": "duplicate",
+      "count": 5
+    },
+    {
+      "subject": "Problem Solving in ET",
+      "status": "extracted_needs_review",
+      "count": 30
+    },
+    {
+      "subject": "Process Control Technologies",
+      "status": "blocked",
+      "count": 3
+    },
+    {
+      "subject": "Process Control Technologies",
+      "status": "duplicate",
+      "count": 11
+    },
+    {
+      "subject": "Process Control Technologies",
+      "status": "extracted_needs_review",
+      "count": 28
+    },
+    {
+      "subject": "Programming",
+      "status": "extracted_needs_review",
+      "count": 15
+    },
+    {
+      "subject": "Random School Stuff",
+      "status": "blocked",
+      "count": 5
+    },
+    {
+      "subject": "Random School Stuff",
+      "status": "duplicate",
+      "count": 1
+    },
+    {
+      "subject": "Random School Stuff",
+      "status": "extracted_needs_review",
+      "count": 13
+    },
+    {
+      "subject": "Robotics",
+      "status": "extracted_needs_review",
+      "count": 11
+    },
+    {
+      "subject": "Siemens",
+      "status": "extracted_needs_review",
+      "count": 3
+    },
+    {
+      "subject": "Six Sigma",
+      "status": "blocked",
+      "count": 6
+    },
+    {
+      "subject": "Six Sigma",
+      "status": "extracted_needs_review",
+      "count": 3
+    },
+    {
+      "subject": "Six Sigma Green Belt",
+      "status": "duplicate",
+      "count": 3
+    },
+    {
+      "subject": "Six Sigma Green Belt",
+      "status": "extracted_needs_review",
+      "count": 23
+    },
+    {
+      "subject": "Software and Skills",
+      "status": "blocked",
+      "count": 1
+    },
+    {
+      "subject": "SolidWorks",
+      "status": "blocked",
+      "count": 1
+    },
+    {
+      "subject": "SolidWorks",
+      "status": "extracted_needs_review",
+      "count": 4
+    },
+    {
+      "subject": "Statics and Strengths of Materials",
+      "status": "extracted_needs_review",
+      "count": 1
+    },
+    {
+      "subject": "Statistics",
+      "status": "blocked",
+      "count": 20
+    },
+    {
+      "subject": "Statistics",
+      "status": "duplicate",
+      "count": 9
+    },
+    {
+      "subject": "Statistics",
+      "status": "extracted_needs_review",
+      "count": 41
+    },
+    {
+      "subject": "Stats",
+      "status": "extracted_needs_review",
+      "count": 3
+    },
+    {
+      "subject": "Trig",
+      "status": "blocked",
+      "count": 1
+    },
+    {
+      "subject": "Trig",
+      "status": "duplicate",
+      "count": 3
+    },
+    {
+      "subject": "Trig",
+      "status": "extracted_needs_review",
+      "count": 22
+    },
+    {
+      "subject": "WIP",
+      "status": "extracted_needs_review",
+      "count": 1
+    },
+    {
+      "subject": "unclassified",
+      "status": "extracted_needs_review",
+      "count": 1
+    }
+  ],
+  "ready_sft_records": 0,
+  "ready_rag_chunks": 0,
+  "academic_folders": 280,
+  "attempts": 2918,
+  "readiness_basis": "No approved outputs exist in the recorded job; review RAG pilot is not production approved."
+}

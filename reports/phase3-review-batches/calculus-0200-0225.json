@@ -1,0 +1,378 @@
+{
+  "base_commit": "628742ca03e044a1b876c596d4c6d835f9269346",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "calculus",
+  "offset": 200,
+  "limit": 25,
+  "next_offset": 225,
+  "selected_window_end_exclusive": 215,
+  "selected_rows_in_window": 15,
+  "new_substantive_reviews": 15,
+  "skipped_existing": 0,
+  "preserved_structural_quarantines": [],
+  "dispositions_added": {
+    "PASS": 14,
+    "QUARANTINE": 1
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "independent_calculus_final_batch_agent",
+    "records_checked": 15,
+    "final_counts": {
+      "PASS": 14,
+      "QUARANTINE": 1
+    },
+    "disposition_changes": [],
+    "review_precision_corrections": [
+      "209 analytical remainder is o(deltaI) under differentiability; no unwarranted O(deltaI²) assumption."
+    ],
+    "full_prompt_and_answer_review": true,
+    "all_source_hashes_ids_ordinals_and_ledger_matches": true,
+    "source_sha256": "b0d723661de91b79a32a417e4cd52c1f9fb36dac64053d86ad5fc18a63f85e21",
+    "local_review_head_reported": null,
+    "local_review_scope": "Source/staging/published ledger checks reported; immediate integration predecessor independently reverified by writer.",
+    "candidate_preparation_predecessor_commit": "5a93ecd7514fd175b61b34792d77343d2fc61dff",
+    "published_base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "selected_domain_end_exclusive": 215,
+    "next_offset": 225,
+    "independent_human_review": false,
+    "release_approved": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 1252,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 986,
+    "REJECT": 56,
+    "QUARANTINE": 226,
+    "NEEDS_HUMAN_REVIEW": 844
+  },
+  "agent_substantive_reviews": 1267,
+  "substantively_unreviewed": 842,
+  "records": [
+    {
+      "id": "repo-248c4a253bccdf0f79413380",
+      "ordinal": 200,
+      "messages_sha256": "248c4a253bccdf0f79413380dea205774364f42a8ac6c1fb318efa71b9973f5c",
+      "state": "PASS",
+      "rationale": "Correct conceptual contrast between almost-everywhere derivative information and rates at particular points, without claiming the exceptional set is unimportant.",
+      "evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Every numerical integral, limit, derivative inequality and series counterexample is checked directly."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Almost everywhere means the failure set has measure zero, not merely a small positive measure. Additional hypotheses such as absolute continuity are needed for particular integration/reconstruction theorems; the answer says can be enough rather than asserting sufficiency for every theorem."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L1434"
+    },
+    {
+      "id": "repo-7c57f8b73896a152cf73a36e",
+      "ordinal": 201,
+      "messages_sha256": "7c57f8b73896a152cf73a36ebc53b4900b9b4471479a04c88a8caf0cf4eaa1c9",
+      "state": "PASS",
+      "rationale": "Correct integral-comparison lower bound proving harmonic-series divergence.",
+      "evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Every numerical integral, limit, derivative inequality and series counterexample is checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For n<=x<=n+1, 1/x<=1/n; hence sum_{n=1}^N1/n>=integral_1^(N+1)dx/x=ln(N+1), which diverges."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L1437"
+    },
+    {
+      "id": "repo-235528e5c65e7af49ed628a7",
+      "ordinal": 202,
+      "messages_sha256": "235528e5c65e7af49ed628a7da84d2dd2ed172b9ebd028aec23b6ff7c5c7f92e",
+      "state": "PASS",
+      "rationale": "Correct convolution theorem and standard equal-length dense direct-versus-FFT complexity comparison.",
+      "evidence": [
+        {
+          "method": "independent_convolution_transform_identity",
+          "finding": "Under integrability assumptions, changing integration order in the Fourier transform of convolution factors it into the product of transforms. Finite FFT convolution needs padding to obtain linear rather than circular convolution."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For two length-N sequences, direct linear convolution takes O(N²) arithmetic; padding to at least2N-1 and FFT multiplication takes O(N log N)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Short/sparse kernels can have different cost comparisons, and zero padding is necessary to avoid circular aliasing. The stated equation uses the standard transform normalization."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L1453"
+    },
+    {
+      "id": "repo-0b0dde60f7dc7bd0447e5972",
+      "ordinal": 203,
+      "messages_sha256": "0b0dde60f7dc7bd0447e5972a7d0d51469e2e640d7dda8b9d50f1d90c4d0aff5",
+      "state": "PASS",
+      "rationale": "Exact divergence-theorem verification with outward face orientations.",
+      "evidence": [
+        {
+          "method": "independent_vector_calculus",
+          "finding": "Closed-surface flux, velocity flux and polar-region definitions are checked with outward/relative orientation and geometry."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "div(x,y,z)=3; the unit cube volume is1. The x=1,y=1,z=1 faces each contribute1; the three zero-coordinate faces contribute0."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L1464"
+    },
+    {
+      "id": "repo-a2820bae27f019cb7f11031e",
+      "ordinal": 204,
+      "messages_sha256": "a2820bae27f019cb7f11031e2b31f2d77dd17b433ac572693c4e31169732b4b5",
+      "state": "PASS",
+      "rationale": "Correct polar Gaussian integral over the whole plane.",
+      "evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Every numerical integral, limit, derivative inequality and series counterexample is checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "2pi*integral_0^infinity exp(-r²)*r dr=2pi*(1/2)=pi; the nonnegative integrand justifies the improper-coordinate evaluation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L1471"
+    },
+    {
+      "id": "repo-91f22f86d4bd98bb0c698073",
+      "ordinal": 205,
+      "messages_sha256": "91f22f86d4bd98bb0c698073c84c4219a26a7256419acabff9e693f5c90f48e1",
+      "state": "PASS",
+      "rationale": "Sound velocity-flux analogy that explains area orientation and flow speed.",
+      "evidence": [
+        {
+          "method": "independent_vector_calculus",
+          "finding": "Closed-surface flux, velocity flux and polar-region definitions are checked with outward/relative orientation and geometry."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For uniform velocity v and a planar net of areaA, signed volumetric flux is(v dot n)*A."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Tilting away from an initially perpendicular-to-flow net decreases flux magnitude; tilting an arbitrary initial orientation need not always decrease it. The analogy does not specify a universal direction of tilt."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L1474"
+    },
+    {
+      "id": "repo-4dae3384a221a7cadebd98e2",
+      "ordinal": 206,
+      "messages_sha256": "4dae3384a221a7cadebd98e2c59fea77474961b8a3600c8ca39c869f2def8555",
+      "state": "PASS",
+      "rationale": "Correct pointwise continuity checklist after the informal pencil analogy.",
+      "evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Every numerical integral, limit, derivative inequality and series counterexample is checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Continuity at a domain point requires f(a) defined and the relative-domain limit equal to f(a)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The pencil picture is only introductory intuition and is not a definition of continuity for arbitrary domains or all possible graphs; the answer immediately gives the precise elementary conditions."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L1488"
+    },
+    {
+      "id": "repo-fb1ee4434a1c28e6f0fca16b",
+      "ordinal": 207,
+      "messages_sha256": "fb1ee4434a1c28e6f0fca16bcde1816811b5611a00ed3afaf6325fb97716f1f5",
+      "state": "PASS",
+      "rationale": "Correct fundamental Fourier k-space encoding and inverse-transform reconstruction description for conventional MRI.",
+      "evidence": [
+        {
+          "title": "Harvard-MIT HST584J, Image Encoding lecture notes",
+          "url": "https://ocw.mit.edu/courses/hst-584j-magnetic-resonance-analytic-biochemical-and-imaging-techniques-spring-2006/48c03af16122e89ee22fa7a4a8820056_imageencoding.pdf",
+          "finding": "Gradient encoding gives spatial Fourier-conjugate k-space variables, and conventional MRI reconstructs spatial information from acquired k-space."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "In the idealized model, S(k)=integral M(r)*exp(-i2pi*k dot r)dr and inverse transformation recovers the encoded magnetization image."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Real signals include coil sensitivity, contrast preparation, relaxation and off-resonance effects; non-Cartesian/accelerated methods may need gridding or model-based inversion. This is imaging physics, not clinical diagnosis or scanning guidance."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L1498"
+    },
+    {
+      "id": "repo-519bcc568837043d9b3e6da5",
+      "ordinal": 208,
+      "messages_sha256": "519bcc568837043d9b3e6da5f6240e6f9952540c3c9ebc08f47c5de827a03a13",
+      "state": "PASS",
+      "rationale": "Correct concise moving parts of a typical sequential convex programming step.",
+      "evidence": [
+        {
+          "title": "Boyd and Vandenberghe, Convex Optimization",
+          "url": "https://www.seas.ucla.edu/~vandenbe/cvxbook/bv_cvxbook.pdf",
+          "finding": "Local convex approximations and controlled steps underlie sequential convex methods; Lipschitz gradient gives a quadratic upper estimate used in descent analysis."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A convex subproblem yields a candidate, not automatic global optimality of the original nonconvex problem; the source says candidate and typically."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L1499"
+    },
+    {
+      "id": "repo-1ace3d5aa654b472407ce427",
+      "ordinal": 209,
+      "messages_sha256": "1ace3d5aa654b472407ce427e34ff48cc5fe7c80a56ad7446f25ccbc9fb55e4c",
+      "state": "PASS",
+      "rationale": "Correct local Taylor-linearization explanation for a differentiable V-versus-I device curve.",
+      "evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Every numerical integral, limit, derivative inequality and series counterexample is checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For differentiable V as a function of I, V(I0+deltaI)=V(I0)+(dV/dI at I0)*deltaI+o(deltaI). The incremental resistance is dV/dI; an O(deltaI²) bound needs additional second-derivative regularity."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "For an I-versus-V plot the derivative is conductance and resistance is its reciprocal where defined. Dynamic/hysteretic devices may require more than a static small-signal curve."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L1502"
+    },
+    {
+      "id": "repo-0588e5e31a272f7171ab1bc8",
+      "ordinal": 210,
+      "messages_sha256": "0588e5e31a272f7171ab1bc8c242e46f827f299887e6926d4bb3914ec390de30",
+      "state": "PASS",
+      "rationale": "Correct origin-centered upper/right semidisk polar limits.",
+      "evidence": [
+        {
+          "method": "independent_vector_calculus",
+          "finding": "Closed-surface flux, velocity flux and polar-region definitions are checked with outward/relative orientation and geometry."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Upper half:0<=theta<=pi; right half:-pi/2<=theta<=pi/2; both use0<=r<=a."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The answer assumes the usual disk centered at the origin; translated or rotated geometry requires adjusted bounds or coordinates."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L1506"
+    },
+    {
+      "id": "repo-3318782354f566577582aed6",
+      "ordinal": 211,
+      "messages_sha256": "3318782354f566577582aed6311ab719f8f5285ab9a787307baee3af73ee777f",
+      "state": "PASS",
+      "rationale": "Correct descent-lemma role of an L-Lipschitz gradient.",
+      "evidence": [
+        {
+          "title": "Boyd and Vandenberghe, Convex Optimization",
+          "url": "https://www.seas.ucla.edu/~vandenbe/cvxbook/bv_cvxbook.pdf",
+          "finding": "Local convex approximations and controlled steps underlie sequential convex methods; Lipschitz gradient gives a quadratic upper estimate used in descent analysis."
+        },
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Every numerical integral, limit, derivative inequality and series counterexample is checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Along a segment in the domain, f(y)<=f(x)+grad f(x) dot(y-x)+(L/2)||y-x||²; gradient descent with a suitable step uses this to bound decrease."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Use a convex domain or a segment contained in the smoothness region; global convergence still needs additional objective/step assumptions."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L1511"
+    },
+    {
+      "id": "repo-85e275b62d55efeb382ec148",
+      "ordinal": 212,
+      "messages_sha256": "85e275b62d55efeb382ec1484175e8ceefb5a34547b2372b1dce04aac18c8ef0",
+      "state": "QUARANTINE",
+      "rationale": "The distinction between variable-limit asymptotics and summing an infinite series is useful, but the categorical truncation behavior is overgeneralized. An asymptotic expansion can converge, and a convergent series need not improve its error monotonically with every extra term.",
+      "evidence": [
+        {
+          "title": "NIST DLMF2.1(iii), Asymptotic Expansions",
+          "url": "https://dlmf.nist.gov/2.1#iii",
+          "finding": "A Poincare asymptotic expansion is defined by its fixed-order remainder as the variable approaches a limit. The formal series may be convergent or divergent."
+        },
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Every numerical integral, limit, derivative inequality and series counterexample is checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "1/(1-x)=sum_{n>=0}x^n is both convergent for|x|<1 and asymptotic asx->0; for0<x<1 its error keeps decreasing with every term. Separately, the convergent series1,-1,1/2,-1/2,1/4,-1/4,... has sum0 and repeatedly goes from exact even partial sums to nonzero odd errors."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Optimal truncation is important for many divergent asymptotic expansions. Hold the universal contrast, not that valid practical phenomenon or the fact that asymptotic series may diverge."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L1514"
+    },
+    {
+      "id": "repo-427f0b79f1194b4c89e906b1",
+      "ordinal": 213,
+      "messages_sha256": "427f0b79f1194b4c89e906b11fd491a6ae44c9cbe18c210ba777b12727c5e7ec",
+      "state": "PASS",
+      "rationale": "Correct continuity-on-domain argument for rational functions.",
+      "evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Every numerical integral, limit, derivative inequality and series counterexample is checked directly."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The quotient continuity theorem applies wherever the polynomial denominator is nonzero."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Canceling common factors can define an extension at a removable hole; it does not retroactively add that point to the originally stated quotient domain."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L1526"
+    },
+    {
+      "id": "repo-66b58b5c0a016a519b8ad6ef",
+      "ordinal": 214,
+      "messages_sha256": "66b58b5c0a016a519b8ad6efd03d6751c955b3d3125ae5423b881f3a8b561932",
+      "state": "PASS",
+      "rationale": "Correct explanation of why ordinary numerical related-rates exercises give instantaneous values.",
+      "evidence": [
+        {
+          "method": "independent_calculus_derivation",
+          "finding": "Every numerical integral, limit, derivative inequality and series counterexample is checked directly."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Not every related-rates problem must specify a numerical instant; symbolic rate functions and constant-rate cases exist. The answer uses typically and explains the snapshot purpose rather than proving the prompt word always."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_calculus.jsonl#L1532"
+    }
+  ]
+}

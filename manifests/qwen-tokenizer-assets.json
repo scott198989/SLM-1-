@@ -1,0 +1,22 @@
+{
+  "model": "Qwen/Qwen3-30B-A3B-Base",
+  "revision": "1b75feb79f60b8dc6c5bc769a898c206a1c6a4f9",
+  "weights_downloaded": false,
+  "assets": [
+    {
+      "path": "tokenizer.json",
+      "bytes": 7031645,
+      "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+    },
+    {
+      "path": "tokenizer_config.json",
+      "bytes": 9678,
+      "sha256": "3c04ed3ca964ea2f6b2b5faf0dc4d31aec1cb1e8b4bcf63f402d295046b422b5"
+    },
+    {
+      "path": "config.json",
+      "bytes": 964,
+      "sha256": "7e4142150e976c6b4796adf88fce0a2a23e581ed63bcede7e1d69a645e73b362"
+    }
+  ]
+}

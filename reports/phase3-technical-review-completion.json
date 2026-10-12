@@ -1,0 +1,219 @@
+{
+  "repository": "scott198989/SLM-1-",
+  "local_predecessor_commit": "7fab175a4f0ef997810ef768621855a3d16c51be",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; no remote mutation",
+  "historical_ordinary_completion": "reports/phase3-ordinary-review-completion.json",
+  "residual_review_receipt": "reports/phase3-review-batches/residual-five-20261002.json",
+  "selected_records": 2112,
+  "substantive_reviews": 2112,
+  "current_dispositions": {
+    "PASS": 1703,
+    "REJECT": 72,
+    "QUARANTINE": 337,
+    "NEEDS_HUMAN_REVIEW": 0
+  },
+  "by_domain": {
+    "circuits": {
+      "PASS": 139,
+      "REJECT": 12,
+      "QUARANTINE": 60,
+      "NEEDS_HUMAN_REVIEW": 0
+    },
+    "engineering_mathematics": {
+      "PASS": 179,
+      "REJECT": 3,
+      "QUARANTINE": 18,
+      "NEEDS_HUMAN_REVIEW": 0
+    },
+    "algebra": {
+      "PASS": 178,
+      "REJECT": 8,
+      "QUARANTINE": 30,
+      "NEEDS_HUMAN_REVIEW": 0
+    },
+    "thermal_process_engineering": {
+      "PASS": 75,
+      "REJECT": 5,
+      "QUARANTINE": 24,
+      "NEEDS_HUMAN_REVIEW": 0
+    },
+    "trigonometry": {
+      "PASS": 169,
+      "REJECT": 7,
+      "QUARANTINE": 24,
+      "NEEDS_HUMAN_REVIEW": 0
+    },
+    "calculus": {
+      "PASS": 185,
+      "REJECT": 4,
+      "QUARANTINE": 26,
+      "NEEDS_HUMAN_REVIEW": 0
+    },
+    "electrical_components": {
+      "PASS": 232,
+      "REJECT": 14,
+      "QUARANTINE": 54,
+      "NEEDS_HUMAN_REVIEW": 0
+    },
+    "electromagnetism": {
+      "PASS": 131,
+      "REJECT": 6,
+      "QUARANTINE": 29,
+      "NEEDS_HUMAN_REVIEW": 0
+    },
+    "materials_manufacturing": {
+      "PASS": 203,
+      "REJECT": 6,
+      "QUARANTINE": 41,
+      "NEEDS_HUMAN_REVIEW": 0
+    },
+    "physics": {
+      "PASS": 212,
+      "REJECT": 7,
+      "QUARANTINE": 31,
+      "NEEDS_HUMAN_REVIEW": 0
+    }
+  },
+  "complete_source_domains": [
+    "circuits",
+    "engineering_mathematics",
+    "algebra",
+    "thermal_process_engineering",
+    "trigonometry",
+    "calculus",
+    "electrical_components",
+    "electromagnetism",
+    "materials_manufacturing",
+    "physics"
+  ],
+  "substantively_unreviewed": 0,
+  "reviewed_specialist_holds": 0,
+  "structural_only_quarantines": 0,
+  "remaining_technical_quarantines": 337,
+  "original_answers_unchanged": true,
+  "all_2112_canonical_hashes_verified": true,
+  "all_non_target_prior_decisions_preserved": 2107,
+  "all_prior_substantive_records_preserved_except_two_explicitly_superseded_holds": true,
+  "frozen_file_sha256": {
+    "src/forge_tools/engineering.py": "ce6ab03daa581ba0dc179facd89dec2e41b2e3890c3215af5a5c75454199fd9e",
+    "src/forge_tools/statistics.py": "d72162556c53bdc63151f87a89ecedb231933800b928f86935d7c0882bbfd43d",
+    "reports/phase3-pilot-release.json": "555c9746295b83049fe05e4de6041ae0d6cff337f6fb9f6bb5b7c656d5962111",
+    "reports/phase3-rag-pilot.json": "b2f380c816869998ea50e9dc1d3ba25937e338b7887e95ef646d391fb88f74e6",
+    "reports/phase3-sealed-gold.json": "5ddd0bd9f46c0fe6134f885f7f9c8461467544bcc8d352e859620e3ac57c5149",
+    "manifests/phase3-release-families.json": "861b3ccf2ac3ae9988c4e6ffa59e8043c31623e88f5136b70c0ddfeba51a9510",
+    "manifests/phase3-rights-dispositions.json": "87d8247546810f388c741faf4710bcf220f6d029a3978fb8cc85d6191c00c549",
+    "data/sft/staging/forge-v01-review-curriculum.jsonl.gz": "81ed89390722b15e255719fbcbe929e3b1d78259078960e15ef6e633e297e0eb",
+    "data/sft/staging/consolidated-20261001-v2/candidates.jsonl.gz": "5696cb8188a1a9aa44ffc2544cdefa7f10ce3870862c1edd01922effeff95dcd",
+    "reports/qwen-token-audit.json": "77724a540cf3c712ef8a7e4508fb020156a48332d61389cb16817377826745b2",
+    "reports/preparation-validation.json": "7da2dc121480658173e682abac3c66af4b0996c8a725f0a27652ede7a4c216fb",
+    "manifests/repository-datasets-final.json": "a6eee4eb268398eeebdf8ac5b6c4c2f310f3d0137f6fccbbec205b16d953d4d5"
+  },
+  "historical_receipts_unchanged": true,
+  "next_domain": null,
+  "next_batch": null,
+  "remaining_gates": [
+    "Purpose-specific applicable terms and rights remain unresolved.",
+    "Source/problem family split and broader semantic independence remain unresolved.",
+    "Independent human review and legacy release approval remain absent.",
+    "Private pilot, sealed gold and RAG qualification require original inputs; no reconstruction or requalification occurred.",
+    "Independent development/evaluation coverage, model baseline and GPU/runtime evidence remain incomplete.",
+    "Publication remains blocked; no retry or alternate route.",
+    "Model download/loading/training/paid compute remain unauthorized."
+  ],
+  "independent_human_review": false,
+  "release_approved": false,
+  "training_authorized": false,
+  "private_artifacts_requalified": false,
+  "validation": {
+    "tests": 69,
+    "test_result": "PASS",
+    "test_log_sha256": "a7ad84cc71535224e91d49f12c527baaf7462d1ab8ae5c4b641acd14d95145d0",
+    "format": "3 files already formatted",
+    "undefined_name_lint": "F821,F822,F823: all checks passed",
+    "integrity": {
+      "base": "7fab175a4f0ef997810ef768621855a3d16c51be",
+      "rows": 2112,
+      "changed_rows": 5,
+      "unchanged_ledger_rows": 2107,
+      "substantive_records": 2112,
+      "unchanged_prior_substantive_records": 2107,
+      "superseded_prior_substantive_holds": 2,
+      "new_substantive_records": 3,
+      "all_original_hashes_verified": 2112,
+      "all_tokens_rights_and_authorization_flags_unchanged": true,
+      "frozen_files_verified": 12,
+      "historical_batch_receipts_byte_preserved": 145,
+      "reader_checks": {
+        "circuits": {
+          "selected_records": 211,
+          "windows_checked": 10,
+          "all_windows_empty": true
+        },
+        "engineering_mathematics": {
+          "selected_records": 200,
+          "windows_checked": 9,
+          "all_windows_empty": true
+        },
+        "algebra": {
+          "selected_records": 216,
+          "windows_checked": 10,
+          "all_windows_empty": true
+        },
+        "thermal_process_engineering": {
+          "selected_records": 104,
+          "windows_checked": 6,
+          "all_windows_empty": true
+        },
+        "trigonometry": {
+          "selected_records": 200,
+          "windows_checked": 9,
+          "all_windows_empty": true
+        },
+        "calculus": {
+          "selected_records": 215,
+          "windows_checked": 10,
+          "all_windows_empty": true
+        },
+        "electrical_components": {
+          "selected_records": 300,
+          "windows_checked": 13,
+          "all_windows_empty": true
+        },
+        "electromagnetism": {
+          "selected_records": 166,
+          "windows_checked": 8,
+          "all_windows_empty": true
+        },
+        "materials_manufacturing": {
+          "selected_records": 250,
+          "windows_checked": 11,
+          "all_windows_empty": true
+        },
+        "physics": {
+          "selected_records": 250,
+          "windows_checked": 11,
+          "all_windows_empty": true
+        }
+      },
+      "dispositions": {
+        "PASS": 1703,
+        "REJECT": 72,
+        "QUARANTINE": 337,
+        "NEEDS_HUMAN_REVIEW": 0
+      }
+    }
+  },
+  "independent_integration_qa": {
+    "result": "PASS",
+    "base_commit": "7fab175a4f0ef997810ef768621855a3d16c51be",
+    "five_target_changes_verified": true,
+    "non_target_ledger_records_unchanged": 2107,
+    "all_2112_canonical_hashes_verified": true,
+    "pilot_section_byte_equivalent_to_base": true,
+    "historical_receipts_unchanged": true,
+    "all_eight_handoff_input_pins_match": true,
+    "all_protected_fields_unchanged": true,
+    "tests_rerun_by_independent_integration_reviewer": false
+  }
+}

@@ -1,0 +1,974 @@
+{
+  "families": [
+    {
+      "repository": "scott198989/Completions",
+      "path": "Conversations_SFT.jsonl.bak",
+      "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+      "sha256": "cde6112ffccfee6d992cc4b570bd7b08f5de5b8defc24698aedbdfb66b719856",
+      "row_occurrences": 6459,
+      "recoverable_rows": 6446,
+      "immediate_source_state": "VERIFIED",
+      "original_generation_state": "VERIFIED",
+      "verification_basis": "direct_user_attestation_20261001_all_Completions_and198SLM;LLM_exact_duplicate_lineage",
+      "synthetic": true,
+      "providers": [
+        "OpenAI_API",
+        "Anthropic_API"
+      ],
+      "row_provider_attribution": "UNKNOWN",
+      "generator_models": "UNKNOWN",
+      "generation_dates": "UNKNOWN",
+      "prompt_upstream_source": "UNKNOWN",
+      "generation_script": "UNKNOWN",
+      "known_transform_script": "Completions/build_sft.py",
+      "repository_code_license": "Apache2_README_claim_SLM_only;no_LICENSE_file_at_pinned_source",
+      "dataset_license": "UNKNOWN_no_explicit_dataset_license",
+      "copyright_ownership_basis": "VERIFIED_USER_ATTESTATION_plus_API_output_assignment_terms",
+      "training_usage_terms": "PARTIAL_generation_contract_and_intended_use_applicability_unverified",
+      "rights_state": "PARTIAL",
+      "release_state": "QUARANTINED",
+      "confidence": {
+        "user_authored_synthetic_origin": "HIGH_user_attestation",
+        "exact_provider_model": "UNKNOWN",
+        "training_terms_compatibility": "UNKNOWN"
+      },
+      "evidence": [
+        "manifests/user-provenance-attestation-20261001.json",
+        "manifests/legacy-history-evidence.json",
+        "pinned_repository_READMEs_and_scripts"
+      ],
+      "terms_sources": [
+        "https://openai.com/policies/services-agreement/",
+        "https://www.anthropic.com/legal/commercial-terms"
+      ]
+    },
+    {
+      "repository": "scott198989/Completions",
+      "path": "D_AC_Circuits.jsonl",
+      "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+      "sha256": "b0ab0bc29f2a47c4d3604659c72fbdb9c0da97593d51a827db4da95028248eb8",
+      "row_occurrences": 1348,
+      "recoverable_rows": 1348,
+      "immediate_source_state": "VERIFIED",
+      "original_generation_state": "VERIFIED",
+      "verification_basis": "direct_user_attestation_20261001_all_Completions_and198SLM;LLM_exact_duplicate_lineage",
+      "synthetic": true,
+      "providers": [
+        "OpenAI_API",
+        "Anthropic_API"
+      ],
+      "row_provider_attribution": "UNKNOWN",
+      "generator_models": "UNKNOWN",
+      "generation_dates": "UNKNOWN",
+      "prompt_upstream_source": "UNKNOWN",
+      "generation_script": "UNKNOWN",
+      "known_transform_script": "Completions/build_sft.py",
+      "repository_code_license": "Apache2_README_claim_SLM_only;no_LICENSE_file_at_pinned_source",
+      "dataset_license": "UNKNOWN_no_explicit_dataset_license",
+      "copyright_ownership_basis": "VERIFIED_USER_ATTESTATION_plus_API_output_assignment_terms",
+      "training_usage_terms": "PARTIAL_generation_contract_and_intended_use_applicability_unverified",
+      "rights_state": "PARTIAL",
+      "release_state": "QUARANTINED",
+      "confidence": {
+        "user_authored_synthetic_origin": "HIGH_user_attestation",
+        "exact_provider_model": "UNKNOWN",
+        "training_terms_compatibility": "UNKNOWN"
+      },
+      "evidence": [
+        "manifests/user-provenance-attestation-20261001.json",
+        "manifests/legacy-history-evidence.json",
+        "pinned_repository_READMEs_and_scripts"
+      ],
+      "terms_sources": [
+        "https://openai.com/policies/services-agreement/",
+        "https://www.anthropic.com/legal/commercial-terms"
+      ]
+    },
+    {
+      "repository": "scott198989/Completions",
+      "path": "D_Advanced_Eng_Math.jsonl",
+      "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+      "sha256": "91e1adbb4db662e463ecf96f3c21455639802c9be71e42a23f51e464a06f6cc9",
+      "row_occurrences": 1474,
+      "recoverable_rows": 1474,
+      "immediate_source_state": "VERIFIED",
+      "original_generation_state": "VERIFIED",
+      "verification_basis": "direct_user_attestation_20261001_all_Completions_and198SLM;LLM_exact_duplicate_lineage",
+      "synthetic": true,
+      "providers": [
+        "OpenAI_API",
+        "Anthropic_API"
+      ],
+      "row_provider_attribution": "UNKNOWN",
+      "generator_models": "UNKNOWN",
+      "generation_dates": "UNKNOWN",
+      "prompt_upstream_source": "UNKNOWN",
+      "generation_script": "UNKNOWN",
+      "known_transform_script": "Completions/build_sft.py",
+      "repository_code_license": "Apache2_README_claim_SLM_only;no_LICENSE_file_at_pinned_source",
+      "dataset_license": "UNKNOWN_no_explicit_dataset_license",
+      "copyright_ownership_basis": "VERIFIED_USER_ATTESTATION_plus_API_output_assignment_terms",
+      "training_usage_terms": "PARTIAL_generation_contract_and_intended_use_applicability_unverified",
+      "rights_state": "PARTIAL",
+      "release_state": "QUARANTINED",
+      "confidence": {
+        "user_authored_synthetic_origin": "HIGH_user_attestation",
+        "exact_provider_model": "UNKNOWN",
+        "training_terms_compatibility": "UNKNOWN"
+      },
+      "evidence": [
+        "manifests/user-provenance-attestation-20261001.json",
+        "manifests/legacy-history-evidence.json",
+        "pinned_repository_READMEs_and_scripts"
+      ],
+      "terms_sources": [
+        "https://openai.com/policies/services-agreement/",
+        "https://www.anthropic.com/legal/commercial-terms"
+      ]
+    },
+    {
+      "repository": "scott198989/Completions",
+      "path": "D_Algebra.jsonl",
+      "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+      "sha256": "87dea8584252719990f16589465740a1fa9bfb4f2c161912e7c5e3bd2af2de07",
+      "row_occurrences": 1314,
+      "recoverable_rows": 1314,
+      "immediate_source_state": "VERIFIED",
+      "original_generation_state": "VERIFIED",
+      "verification_basis": "direct_user_attestation_20261001_all_Completions_and198SLM;LLM_exact_duplicate_lineage",
+      "synthetic": true,
+      "providers": [
+        "OpenAI_API",
+        "Anthropic_API"
+      ],
+      "row_provider_attribution": "UNKNOWN",
+      "generator_models": "UNKNOWN",
+      "generation_dates": "UNKNOWN",
+      "prompt_upstream_source": "UNKNOWN",
+      "generation_script": "UNKNOWN",
+      "known_transform_script": "Completions/build_sft.py",
+      "repository_code_license": "Apache2_README_claim_SLM_only;no_LICENSE_file_at_pinned_source",
+      "dataset_license": "UNKNOWN_no_explicit_dataset_license",
+      "copyright_ownership_basis": "VERIFIED_USER_ATTESTATION_plus_API_output_assignment_terms",
+      "training_usage_terms": "PARTIAL_generation_contract_and_intended_use_applicability_unverified",
+      "rights_state": "PARTIAL",
+      "release_state": "QUARANTINED",
+      "confidence": {
+        "user_authored_synthetic_origin": "HIGH_user_attestation",
+        "exact_provider_model": "UNKNOWN",
+        "training_terms_compatibility": "UNKNOWN"
+      },
+      "evidence": [
+        "manifests/user-provenance-attestation-20261001.json",
+        "manifests/legacy-history-evidence.json",
+        "pinned_repository_READMEs_and_scripts"
+      ],
+      "terms_sources": [
+        "https://openai.com/policies/services-agreement/",
+        "https://www.anthropic.com/legal/commercial-terms"
+      ]
+    },
+    {
+      "repository": "scott198989/Completions",
+      "path": "D_Conversations.jsonl",
+      "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+      "sha256": "c42ae8c60c9c6ec3ff8431435a92925a44b5ccb01f498014386c3b40bdb969b0",
+      "row_occurrences": 12376,
+      "recoverable_rows": 12376,
+      "immediate_source_state": "VERIFIED",
+      "original_generation_state": "VERIFIED",
+      "verification_basis": "direct_user_attestation_20261001_all_Completions_and198SLM;LLM_exact_duplicate_lineage",
+      "synthetic": true,
+      "providers": [
+        "OpenAI_API",
+        "Anthropic_API"
+      ],
+      "row_provider_attribution": "UNKNOWN",
+      "generator_models": "UNKNOWN",
+      "generation_dates": "UNKNOWN",
+      "prompt_upstream_source": "UNKNOWN",
+      "generation_script": "UNKNOWN",
+      "known_transform_script": "Completions/build_sft.py",
+      "repository_code_license": "Apache2_README_claim_SLM_only;no_LICENSE_file_at_pinned_source",
+      "dataset_license": "UNKNOWN_no_explicit_dataset_license",
+      "copyright_ownership_basis": "VERIFIED_USER_ATTESTATION_plus_API_output_assignment_terms",
+      "training_usage_terms": "PARTIAL_generation_contract_and_intended_use_applicability_unverified",
+      "rights_state": "PARTIAL",
+      "release_state": "QUARANTINED",
+      "confidence": {
+        "user_authored_synthetic_origin": "HIGH_user_attestation",
+        "exact_provider_model": "UNKNOWN",
+        "training_terms_compatibility": "UNKNOWN"
+      },
+      "evidence": [
+        "manifests/user-provenance-attestation-20261001.json",
+        "manifests/legacy-history-evidence.json",
+        "pinned_repository_READMEs_and_scripts"
+      ],
+      "terms_sources": [
+        "https://openai.com/policies/services-agreement/",
+        "https://www.anthropic.com/legal/commercial-terms"
+      ]
+    },
+    {
+      "repository": "scott198989/Completions",
+      "path": "D_Conversations_SFT.jsonl",
+      "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+      "sha256": "86f026a9d959793feed36a8dfba9cc5f9a86f1b88ccd5ec4a8939906d90e3e16",
+      "row_occurrences": 5805,
+      "recoverable_rows": 5805,
+      "immediate_source_state": "VERIFIED",
+      "original_generation_state": "VERIFIED",
+      "verification_basis": "direct_user_attestation_20261001_all_Completions_and198SLM;LLM_exact_duplicate_lineage",
+      "synthetic": true,
+      "providers": [
+        "OpenAI_API",
+        "Anthropic_API"
+      ],
+      "row_provider_attribution": "UNKNOWN",
+      "generator_models": "UNKNOWN",
+      "generation_dates": "UNKNOWN",
+      "prompt_upstream_source": "UNKNOWN",
+      "generation_script": "UNKNOWN",
+      "known_transform_script": "Completions/build_sft.py",
+      "repository_code_license": "Apache2_README_claim_SLM_only;no_LICENSE_file_at_pinned_source",
+      "dataset_license": "UNKNOWN_no_explicit_dataset_license",
+      "copyright_ownership_basis": "VERIFIED_USER_ATTESTATION_plus_API_output_assignment_terms",
+      "training_usage_terms": "PARTIAL_generation_contract_and_intended_use_applicability_unverified",
+      "rights_state": "PARTIAL",
+      "release_state": "QUARANTINED",
+      "confidence": {
+        "user_authored_synthetic_origin": "HIGH_user_attestation",
+        "exact_provider_model": "UNKNOWN",
+        "training_terms_compatibility": "UNKNOWN"
+      },
+      "evidence": [
+        "manifests/user-provenance-attestation-20261001.json",
+        "manifests/legacy-history-evidence.json",
+        "pinned_repository_READMEs_and_scripts"
+      ],
+      "terms_sources": [
+        "https://openai.com/policies/services-agreement/",
+        "https://www.anthropic.com/legal/commercial-terms"
+      ]
+    },
+    {
+      "repository": "scott198989/Completions",
+      "path": "D_Thermodynamics.jsonl",
+      "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+      "sha256": "6ee9f061dc134989c25d768db2f3def9c20726e8b56501c8765f158f03cfb12a",
+      "row_occurrences": 1069,
+      "recoverable_rows": 1069,
+      "immediate_source_state": "VERIFIED",
+      "original_generation_state": "VERIFIED",
+      "verification_basis": "direct_user_attestation_20261001_all_Completions_and198SLM;LLM_exact_duplicate_lineage",
+      "synthetic": true,
+      "providers": [
+        "OpenAI_API",
+        "Anthropic_API"
+      ],
+      "row_provider_attribution": "UNKNOWN",
+      "generator_models": "UNKNOWN",
+      "generation_dates": "UNKNOWN",
+      "prompt_upstream_source": "UNKNOWN",
+      "generation_script": "UNKNOWN",
+      "known_transform_script": "Completions/build_sft.py",
+      "repository_code_license": "Apache2_README_claim_SLM_only;no_LICENSE_file_at_pinned_source",
+      "dataset_license": "UNKNOWN_no_explicit_dataset_license",
+      "copyright_ownership_basis": "VERIFIED_USER_ATTESTATION_plus_API_output_assignment_terms",
+      "training_usage_terms": "PARTIAL_generation_contract_and_intended_use_applicability_unverified",
+      "rights_state": "PARTIAL",
+      "release_state": "QUARANTINED",
+      "confidence": {
+        "user_authored_synthetic_origin": "HIGH_user_attestation",
+        "exact_provider_model": "UNKNOWN",
+        "training_terms_compatibility": "UNKNOWN"
+      },
+      "evidence": [
+        "manifests/user-provenance-attestation-20261001.json",
+        "manifests/legacy-history-evidence.json",
+        "pinned_repository_READMEs_and_scripts"
+      ],
+      "terms_sources": [
+        "https://openai.com/policies/services-agreement/",
+        "https://www.anthropic.com/legal/commercial-terms"
+      ]
+    },
+    {
+      "repository": "scott198989/Completions",
+      "path": "D_Trigonometry.jsonl",
+      "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+      "sha256": "16978f85007b8e9742c1b55f0cc288a505833c654042b0fe79a8cfe96ff19173",
+      "row_occurrences": 1498,
+      "recoverable_rows": 1498,
+      "immediate_source_state": "VERIFIED",
+      "original_generation_state": "VERIFIED",
+      "verification_basis": "direct_user_attestation_20261001_all_Completions_and198SLM;LLM_exact_duplicate_lineage",
+      "synthetic": true,
+      "providers": [
+        "OpenAI_API",
+        "Anthropic_API"
+      ],
+      "row_provider_attribution": "UNKNOWN",
+      "generator_models": "UNKNOWN",
+      "generation_dates": "UNKNOWN",
+      "prompt_upstream_source": "UNKNOWN",
+      "generation_script": "UNKNOWN",
+      "known_transform_script": "Completions/build_sft.py",
+      "repository_code_license": "Apache2_README_claim_SLM_only;no_LICENSE_file_at_pinned_source",
+      "dataset_license": "UNKNOWN_no_explicit_dataset_license",
+      "copyright_ownership_basis": "VERIFIED_USER_ATTESTATION_plus_API_output_assignment_terms",
+      "training_usage_terms": "PARTIAL_generation_contract_and_intended_use_applicability_unverified",
+      "rights_state": "PARTIAL",
+      "release_state": "QUARANTINED",
+      "confidence": {
+        "user_authored_synthetic_origin": "HIGH_user_attestation",
+        "exact_provider_model": "UNKNOWN",
+        "training_terms_compatibility": "UNKNOWN"
+      },
+      "evidence": [
+        "manifests/user-provenance-attestation-20261001.json",
+        "manifests/legacy-history-evidence.json",
+        "pinned_repository_READMEs_and_scripts"
+      ],
+      "terms_sources": [
+        "https://openai.com/policies/services-agreement/",
+        "https://www.anthropic.com/legal/commercial-terms"
+      ]
+    },
+    {
+      "repository": "scott198989/Completions",
+      "path": "D_calculus.jsonl",
+      "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+      "sha256": "b0d723661de91b79a32a417e4cd52c1f9fb36dac64053d86ad5fc18a63f85e21",
+      "row_occurrences": 1535,
+      "recoverable_rows": 1535,
+      "immediate_source_state": "VERIFIED",
+      "original_generation_state": "VERIFIED",
+      "verification_basis": "direct_user_attestation_20261001_all_Completions_and198SLM;LLM_exact_duplicate_lineage",
+      "synthetic": true,
+      "providers": [
+        "OpenAI_API",
+        "Anthropic_API"
+      ],
+      "row_provider_attribution": "UNKNOWN",
+      "generator_models": "UNKNOWN",
+      "generation_dates": "UNKNOWN",
+      "prompt_upstream_source": "UNKNOWN",
+      "generation_script": "UNKNOWN",
+      "known_transform_script": "Completions/build_sft.py",
+      "repository_code_license": "Apache2_README_claim_SLM_only;no_LICENSE_file_at_pinned_source",
+      "dataset_license": "UNKNOWN_no_explicit_dataset_license",
+      "copyright_ownership_basis": "VERIFIED_USER_ATTESTATION_plus_API_output_assignment_terms",
+      "training_usage_terms": "PARTIAL_generation_contract_and_intended_use_applicability_unverified",
+      "rights_state": "PARTIAL",
+      "release_state": "QUARANTINED",
+      "confidence": {
+        "user_authored_synthetic_origin": "HIGH_user_attestation",
+        "exact_provider_model": "UNKNOWN",
+        "training_terms_compatibility": "UNKNOWN"
+      },
+      "evidence": [
+        "manifests/user-provenance-attestation-20261001.json",
+        "manifests/legacy-history-evidence.json",
+        "pinned_repository_READMEs_and_scripts"
+      ],
+      "terms_sources": [
+        "https://openai.com/policies/services-agreement/",
+        "https://www.anthropic.com/legal/commercial-terms"
+      ]
+    },
+    {
+      "repository": "scott198989/Completions",
+      "path": "D_elect_components.jsonl",
+      "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+      "sha256": "222eacc539118a515f60f35f661a8d70f8c1d3f8448fb2b4fe12ea8a8fce75d8",
+      "row_occurrences": 1497,
+      "recoverable_rows": 1497,
+      "immediate_source_state": "VERIFIED",
+      "original_generation_state": "VERIFIED",
+      "verification_basis": "direct_user_attestation_20261001_all_Completions_and198SLM;LLM_exact_duplicate_lineage",
+      "synthetic": true,
+      "providers": [
+        "OpenAI_API",
+        "Anthropic_API"
+      ],
+      "row_provider_attribution": "UNKNOWN",
+      "generator_models": "UNKNOWN",
+      "generation_dates": "UNKNOWN",
+      "prompt_upstream_source": "UNKNOWN",
+      "generation_script": "UNKNOWN",
+      "known_transform_script": "Completions/build_sft.py",
+      "repository_code_license": "Apache2_README_claim_SLM_only;no_LICENSE_file_at_pinned_source",
+      "dataset_license": "UNKNOWN_no_explicit_dataset_license",
+      "copyright_ownership_basis": "VERIFIED_USER_ATTESTATION_plus_API_output_assignment_terms",
+      "training_usage_terms": "PARTIAL_generation_contract_and_intended_use_applicability_unverified",
+      "rights_state": "PARTIAL",
+      "release_state": "QUARANTINED",
+      "confidence": {
+        "user_authored_synthetic_origin": "HIGH_user_attestation",
+        "exact_provider_model": "UNKNOWN",
+        "training_terms_compatibility": "UNKNOWN"
+      },
+      "evidence": [
+        "manifests/user-provenance-attestation-20261001.json",
+        "manifests/legacy-history-evidence.json",
+        "pinned_repository_READMEs_and_scripts"
+      ],
+      "terms_sources": [
+        "https://openai.com/policies/services-agreement/",
+        "https://www.anthropic.com/legal/commercial-terms"
+      ]
+    },
+    {
+      "repository": "scott198989/Completions",
+      "path": "D_electrodynamics.jsonl",
+      "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+      "sha256": "6ed8a1ef96bb7edc3d8286b66092ca699840ee54895c32cab0a87f963cb812cd",
+      "row_occurrences": 1318,
+      "recoverable_rows": 1318,
+      "immediate_source_state": "VERIFIED",
+      "original_generation_state": "VERIFIED",
+      "verification_basis": "direct_user_attestation_20261001_all_Completions_and198SLM;LLM_exact_duplicate_lineage",
+      "synthetic": true,
+      "providers": [
+        "OpenAI_API",
+        "Anthropic_API"
+      ],
+      "row_provider_attribution": "UNKNOWN",
+      "generator_models": "UNKNOWN",
+      "generation_dates": "UNKNOWN",
+      "prompt_upstream_source": "UNKNOWN",
+      "generation_script": "UNKNOWN",
+      "known_transform_script": "Completions/build_sft.py",
+      "repository_code_license": "Apache2_README_claim_SLM_only;no_LICENSE_file_at_pinned_source",
+      "dataset_license": "UNKNOWN_no_explicit_dataset_license",
+      "copyright_ownership_basis": "VERIFIED_USER_ATTESTATION_plus_API_output_assignment_terms",
+      "training_usage_terms": "PARTIAL_generation_contract_and_intended_use_applicability_unverified",
+      "rights_state": "PARTIAL",
+      "release_state": "QUARANTINED",
+      "confidence": {
+        "user_authored_synthetic_origin": "HIGH_user_attestation",
+        "exact_provider_model": "UNKNOWN",
+        "training_terms_compatibility": "UNKNOWN"
+      },
+      "evidence": [
+        "manifests/user-provenance-attestation-20261001.json",
+        "manifests/legacy-history-evidence.json",
+        "pinned_repository_READMEs_and_scripts"
+      ],
+      "terms_sources": [
+        "https://openai.com/policies/services-agreement/",
+        "https://www.anthropic.com/legal/commercial-terms"
+      ]
+    },
+    {
+      "repository": "scott198989/Completions",
+      "path": "D_material_science.jsonl",
+      "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+      "sha256": "028348459f744df65879a12bf9df655c32fc25597c3202a13c3c780667554cc4",
+      "row_occurrences": 1601,
+      "recoverable_rows": 1601,
+      "immediate_source_state": "VERIFIED",
+      "original_generation_state": "VERIFIED",
+      "verification_basis": "direct_user_attestation_20261001_all_Completions_and198SLM;LLM_exact_duplicate_lineage",
+      "synthetic": true,
+      "providers": [
+        "OpenAI_API",
+        "Anthropic_API"
+      ],
+      "row_provider_attribution": "UNKNOWN",
+      "generator_models": "UNKNOWN",
+      "generation_dates": "UNKNOWN",
+      "prompt_upstream_source": "UNKNOWN",
+      "generation_script": "UNKNOWN",
+      "known_transform_script": "Completions/build_sft.py",
+      "repository_code_license": "Apache2_README_claim_SLM_only;no_LICENSE_file_at_pinned_source",
+      "dataset_license": "UNKNOWN_no_explicit_dataset_license",
+      "copyright_ownership_basis": "VERIFIED_USER_ATTESTATION_plus_API_output_assignment_terms",
+      "training_usage_terms": "PARTIAL_generation_contract_and_intended_use_applicability_unverified",
+      "rights_state": "PARTIAL",
+      "release_state": "QUARANTINED",
+      "confidence": {
+        "user_authored_synthetic_origin": "HIGH_user_attestation",
+        "exact_provider_model": "UNKNOWN",
+        "training_terms_compatibility": "UNKNOWN"
+      },
+      "evidence": [
+        "manifests/user-provenance-attestation-20261001.json",
+        "manifests/legacy-history-evidence.json",
+        "pinned_repository_READMEs_and_scripts"
+      ],
+      "terms_sources": [
+        "https://openai.com/policies/services-agreement/",
+        "https://www.anthropic.com/legal/commercial-terms"
+      ]
+    },
+    {
+      "repository": "scott198989/Completions",
+      "path": "D_physics.jsonl",
+      "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+      "sha256": "080c95bcf16135143d3609bd39c6d8bccd90385405dc49b8673ccb8e7e5cab93",
+      "row_occurrences": 1600,
+      "recoverable_rows": 1600,
+      "immediate_source_state": "VERIFIED",
+      "original_generation_state": "VERIFIED",
+      "verification_basis": "direct_user_attestation_20261001_all_Completions_and198SLM;LLM_exact_duplicate_lineage",
+      "synthetic": true,
+      "providers": [
+        "OpenAI_API",
+        "Anthropic_API"
+      ],
+      "row_provider_attribution": "UNKNOWN",
+      "generator_models": "UNKNOWN",
+      "generation_dates": "UNKNOWN",
+      "prompt_upstream_source": "UNKNOWN",
+      "generation_script": "UNKNOWN",
+      "known_transform_script": "Completions/build_sft.py",
+      "repository_code_license": "Apache2_README_claim_SLM_only;no_LICENSE_file_at_pinned_source",
+      "dataset_license": "UNKNOWN_no_explicit_dataset_license",
+      "copyright_ownership_basis": "VERIFIED_USER_ATTESTATION_plus_API_output_assignment_terms",
+      "training_usage_terms": "PARTIAL_generation_contract_and_intended_use_applicability_unverified",
+      "rights_state": "PARTIAL",
+      "release_state": "QUARANTINED",
+      "confidence": {
+        "user_authored_synthetic_origin": "HIGH_user_attestation",
+        "exact_provider_model": "UNKNOWN",
+        "training_terms_compatibility": "UNKNOWN"
+      },
+      "evidence": [
+        "manifests/user-provenance-attestation-20261001.json",
+        "manifests/legacy-history-evidence.json",
+        "pinned_repository_READMEs_and_scripts"
+      ],
+      "terms_sources": [
+        "https://openai.com/policies/services-agreement/",
+        "https://www.anthropic.com/legal/commercial-terms"
+      ]
+    },
+    {
+      "repository": "scott198989/Completions",
+      "path": "core_world_model.jsonl",
+      "commit": "c290b73ed960531ebb32028fd47daa5bebbefe9b",
+      "sha256": "269d13d04d65a7fae68e4cf833e7c43cc5fc7903e2ce32e3570e9e4580fec369",
+      "row_occurrences": 1771,
+      "recoverable_rows": 1757,
+      "immediate_source_state": "VERIFIED",
+      "original_generation_state": "VERIFIED",
+      "verification_basis": "direct_user_attestation_20261001_all_Completions_and198SLM;LLM_exact_duplicate_lineage",
+      "synthetic": true,
+      "providers": [
+        "OpenAI_API",
+        "Anthropic_API"
+      ],
+      "row_provider_attribution": "UNKNOWN",
+      "generator_models": "UNKNOWN",
+      "generation_dates": "UNKNOWN",
+      "prompt_upstream_source": "UNKNOWN",
+      "generation_script": "UNKNOWN",
+      "known_transform_script": "Completions/build_sft.py",
+      "repository_code_license": "Apache2_README_claim_SLM_only;no_LICENSE_file_at_pinned_source",
+      "dataset_license": "UNKNOWN_no_explicit_dataset_license",
+      "copyright_ownership_basis": "VERIFIED_USER_ATTESTATION_plus_API_output_assignment_terms",
+      "training_usage_terms": "PARTIAL_generation_contract_and_intended_use_applicability_unverified",
+      "rights_state": "PARTIAL",
+      "release_state": "QUARANTINED",
+      "confidence": {
+        "user_authored_synthetic_origin": "HIGH_user_attestation",
+        "exact_provider_model": "UNKNOWN",
+        "training_terms_compatibility": "UNKNOWN"
+      },
+      "evidence": [
+        "manifests/user-provenance-attestation-20261001.json",
+        "manifests/legacy-history-evidence.json",
+        "pinned_repository_READMEs_and_scripts"
+      ],
+      "terms_sources": [
+        "https://openai.com/policies/services-agreement/",
+        "https://www.anthropic.com/legal/commercial-terms"
+      ]
+    },
+    {
+      "repository": "scott198989/SLM",
+      "path": "sft_data/havoc_sft_phase1_chunk1.jsonl",
+      "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+      "sha256": "10fcd013171449ba215930ac29cf8a609123ce5fecb0297d4519412e615a20e8",
+      "row_occurrences": 48,
+      "recoverable_rows": 48,
+      "immediate_source_state": "VERIFIED",
+      "original_generation_state": "VERIFIED",
+      "verification_basis": "direct_user_attestation_20261001_all_Completions_and198SLM;LLM_exact_duplicate_lineage",
+      "synthetic": true,
+      "providers": [
+        "OpenAI_API",
+        "Anthropic_API"
+      ],
+      "row_provider_attribution": "UNKNOWN",
+      "generator_models": "UNKNOWN",
+      "generation_dates": "UNKNOWN",
+      "prompt_upstream_source": "UNKNOWN",
+      "generation_script": "UNKNOWN",
+      "known_transform_script": "explicit_role_label_import",
+      "repository_code_license": "Apache2_README_claim_SLM_only;no_LICENSE_file_at_pinned_source",
+      "dataset_license": "UNKNOWN_no_explicit_dataset_license",
+      "copyright_ownership_basis": "VERIFIED_USER_ATTESTATION_plus_API_output_assignment_terms",
+      "training_usage_terms": "PARTIAL_generation_contract_and_intended_use_applicability_unverified",
+      "rights_state": "PARTIAL",
+      "release_state": "QUARANTINED",
+      "confidence": {
+        "user_authored_synthetic_origin": "HIGH_user_attestation",
+        "exact_provider_model": "UNKNOWN",
+        "training_terms_compatibility": "UNKNOWN"
+      },
+      "evidence": [
+        "manifests/user-provenance-attestation-20261001.json",
+        "manifests/legacy-history-evidence.json",
+        "pinned_repository_READMEs_and_scripts"
+      ],
+      "terms_sources": [
+        "https://openai.com/policies/services-agreement/",
+        "https://www.anthropic.com/legal/commercial-terms"
+      ]
+    },
+    {
+      "repository": "scott198989/SLM",
+      "path": "sft_data/havoc_sft_phase1_chunk2.jsonl",
+      "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+      "sha256": "31dab3fc71813d9397130109340172c9974475c2cee7da3afb86815bdcb15de1",
+      "row_occurrences": 49,
+      "recoverable_rows": 49,
+      "immediate_source_state": "VERIFIED",
+      "original_generation_state": "VERIFIED",
+      "verification_basis": "direct_user_attestation_20261001_all_Completions_and198SLM;LLM_exact_duplicate_lineage",
+      "synthetic": true,
+      "providers": [
+        "OpenAI_API",
+        "Anthropic_API"
+      ],
+      "row_provider_attribution": "UNKNOWN",
+      "generator_models": "UNKNOWN",
+      "generation_dates": "UNKNOWN",
+      "prompt_upstream_source": "UNKNOWN",
+      "generation_script": "UNKNOWN",
+      "known_transform_script": "explicit_role_label_import",
+      "repository_code_license": "Apache2_README_claim_SLM_only;no_LICENSE_file_at_pinned_source",
+      "dataset_license": "UNKNOWN_no_explicit_dataset_license",
+      "copyright_ownership_basis": "VERIFIED_USER_ATTESTATION_plus_API_output_assignment_terms",
+      "training_usage_terms": "PARTIAL_generation_contract_and_intended_use_applicability_unverified",
+      "rights_state": "PARTIAL",
+      "release_state": "QUARANTINED",
+      "confidence": {
+        "user_authored_synthetic_origin": "HIGH_user_attestation",
+        "exact_provider_model": "UNKNOWN",
+        "training_terms_compatibility": "UNKNOWN"
+      },
+      "evidence": [
+        "manifests/user-provenance-attestation-20261001.json",
+        "manifests/legacy-history-evidence.json",
+        "pinned_repository_READMEs_and_scripts"
+      ],
+      "terms_sources": [
+        "https://openai.com/policies/services-agreement/",
+        "https://www.anthropic.com/legal/commercial-terms"
+      ]
+    },
+    {
+      "repository": "scott198989/SLM",
+      "path": "sft_data/havoc_sft_phase1_chunk3.jsonl",
+      "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+      "sha256": "4ba2a96788a5efcaef751e3a0ced5fabafdc8382e866cfa22a6a585c21b036e1",
+      "row_occurrences": 52,
+      "recoverable_rows": 52,
+      "immediate_source_state": "VERIFIED",
+      "original_generation_state": "VERIFIED",
+      "verification_basis": "direct_user_attestation_20261001_all_Completions_and198SLM;LLM_exact_duplicate_lineage",
+      "synthetic": true,
+      "providers": [
+        "OpenAI_API",
+        "Anthropic_API"
+      ],
+      "row_provider_attribution": "UNKNOWN",
+      "generator_models": "UNKNOWN",
+      "generation_dates": "UNKNOWN",
+      "prompt_upstream_source": "UNKNOWN",
+      "generation_script": "UNKNOWN",
+      "known_transform_script": "explicit_role_label_import",
+      "repository_code_license": "Apache2_README_claim_SLM_only;no_LICENSE_file_at_pinned_source",
+      "dataset_license": "UNKNOWN_no_explicit_dataset_license",
+      "copyright_ownership_basis": "VERIFIED_USER_ATTESTATION_plus_API_output_assignment_terms",
+      "training_usage_terms": "PARTIAL_generation_contract_and_intended_use_applicability_unverified",
+      "rights_state": "PARTIAL",
+      "release_state": "QUARANTINED",
+      "confidence": {
+        "user_authored_synthetic_origin": "HIGH_user_attestation",
+        "exact_provider_model": "UNKNOWN",
+        "training_terms_compatibility": "UNKNOWN"
+      },
+      "evidence": [
+        "manifests/user-provenance-attestation-20261001.json",
+        "manifests/legacy-history-evidence.json",
+        "pinned_repository_READMEs_and_scripts"
+      ],
+      "terms_sources": [
+        "https://openai.com/policies/services-agreement/",
+        "https://www.anthropic.com/legal/commercial-terms"
+      ]
+    },
+    {
+      "repository": "scott198989/SLM",
+      "path": "sft_data/havoc_sft_phase1_chunk4.jsonl",
+      "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+      "sha256": "cf6687a940a14597d1f3633795bef12669b3cff7118fc481b3b0721c2624f83e",
+      "row_occurrences": 49,
+      "recoverable_rows": 49,
+      "immediate_source_state": "VERIFIED",
+      "original_generation_state": "VERIFIED",
+      "verification_basis": "direct_user_attestation_20261001_all_Completions_and198SLM;LLM_exact_duplicate_lineage",
+      "synthetic": true,
+      "providers": [
+        "OpenAI_API",
+        "Anthropic_API"
+      ],
+      "row_provider_attribution": "UNKNOWN",
+      "generator_models": "UNKNOWN",
+      "generation_dates": "UNKNOWN",
+      "prompt_upstream_source": "UNKNOWN",
+      "generation_script": "UNKNOWN",
+      "known_transform_script": "explicit_role_label_import",
+      "repository_code_license": "Apache2_README_claim_SLM_only;no_LICENSE_file_at_pinned_source",
+      "dataset_license": "UNKNOWN_no_explicit_dataset_license",
+      "copyright_ownership_basis": "VERIFIED_USER_ATTESTATION_plus_API_output_assignment_terms",
+      "training_usage_terms": "PARTIAL_generation_contract_and_intended_use_applicability_unverified",
+      "rights_state": "PARTIAL",
+      "release_state": "QUARANTINED",
+      "confidence": {
+        "user_authored_synthetic_origin": "HIGH_user_attestation",
+        "exact_provider_model": "UNKNOWN",
+        "training_terms_compatibility": "UNKNOWN"
+      },
+      "evidence": [
+        "manifests/user-provenance-attestation-20261001.json",
+        "manifests/legacy-history-evidence.json",
+        "pinned_repository_READMEs_and_scripts"
+      ],
+      "terms_sources": [
+        "https://openai.com/policies/services-agreement/",
+        "https://www.anthropic.com/legal/commercial-terms"
+      ]
+    },
+    {
+      "repository": "scott198989/SLM",
+      "path": "sft_data/havoc_sft_phase1_full.jsonl",
+      "commit": "dabb82f51277ebf53a4f0a37422e7d87b9d36272",
+      "sha256": "5ff4115a1cb3046b4968a4fb1802bb43bab297aa6b0f83d4fdc687e8041c1e92",
+      "row_occurrences": 198,
+      "recoverable_rows": 198,
+      "immediate_source_state": "VERIFIED",
+      "original_generation_state": "VERIFIED",
+      "verification_basis": "direct_user_attestation_20261001_all_Completions_and198SLM;LLM_exact_duplicate_lineage",
+      "synthetic": true,
+      "providers": [
+        "OpenAI_API",
+        "Anthropic_API"
+      ],
+      "row_provider_attribution": "UNKNOWN",
+      "generator_models": "UNKNOWN",
+      "generation_dates": "UNKNOWN",
+      "prompt_upstream_source": "UNKNOWN",
+      "generation_script": "UNKNOWN",
+      "known_transform_script": "explicit_role_label_import",
+      "repository_code_license": "Apache2_README_claim_SLM_only;no_LICENSE_file_at_pinned_source",
+      "dataset_license": "UNKNOWN_no_explicit_dataset_license",
+      "copyright_ownership_basis": "VERIFIED_USER_ATTESTATION_plus_API_output_assignment_terms",
+      "training_usage_terms": "PARTIAL_generation_contract_and_intended_use_applicability_unverified",
+      "rights_state": "PARTIAL",
+      "release_state": "QUARANTINED",
+      "confidence": {
+        "user_authored_synthetic_origin": "HIGH_user_attestation",
+        "exact_provider_model": "UNKNOWN",
+        "training_terms_compatibility": "UNKNOWN"
+      },
+      "evidence": [
+        "manifests/user-provenance-attestation-20261001.json",
+        "manifests/legacy-history-evidence.json",
+        "pinned_repository_READMEs_and_scripts"
+      ],
+      "terms_sources": [
+        "https://openai.com/policies/services-agreement/",
+        "https://www.anthropic.com/legal/commercial-terms"
+      ]
+    },
+    {
+      "repository": "scott198989/LLM",
+      "path": "data/sft_v0/all.jsonl",
+      "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+      "sha256": "3ab944cec5d522d926bacb9b9d777cbd8d63914b66a360fb0230d87aee194e07",
+      "row_occurrences": 26630,
+      "recoverable_rows": 26630,
+      "immediate_source_state": "VERIFIED",
+      "original_generation_state": "VERIFIED",
+      "verification_basis": "direct_user_attestation_20261001_all_Completions_and198SLM;LLM_exact_duplicate_lineage",
+      "synthetic": true,
+      "providers": [
+        "OpenAI_API",
+        "Anthropic_API"
+      ],
+      "row_provider_attribution": "UNKNOWN",
+      "generator_models": "UNKNOWN",
+      "generation_dates": "UNKNOWN",
+      "prompt_upstream_source": "UNKNOWN",
+      "generation_script": "UNKNOWN",
+      "known_transform_script": "LLM_export_relationship_by_exact_message_hash",
+      "repository_code_license": "Apache2_README_claim_SLM_only;no_LICENSE_file_at_pinned_source",
+      "dataset_license": "UNKNOWN_no_explicit_dataset_license",
+      "copyright_ownership_basis": "VERIFIED_USER_ATTESTATION_plus_API_output_assignment_terms",
+      "training_usage_terms": "PARTIAL_generation_contract_and_intended_use_applicability_unverified",
+      "rights_state": "PARTIAL",
+      "release_state": "QUARANTINED",
+      "confidence": {
+        "user_authored_synthetic_origin": "HIGH_user_attestation",
+        "exact_provider_model": "UNKNOWN",
+        "training_terms_compatibility": "UNKNOWN"
+      },
+      "evidence": [
+        "manifests/user-provenance-attestation-20261001.json",
+        "manifests/legacy-history-evidence.json",
+        "pinned_repository_READMEs_and_scripts"
+      ],
+      "terms_sources": [
+        "https://openai.com/policies/services-agreement/",
+        "https://www.anthropic.com/legal/commercial-terms"
+      ]
+    },
+    {
+      "repository": "scott198989/LLM",
+      "path": "data/sft_v0/train.jsonl",
+      "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+      "sha256": "9b91579242c80c26f98a7efc5724f7334d02b58eb6cab0ce6304a30a378711d0",
+      "row_occurrences": 25298,
+      "recoverable_rows": 25298,
+      "immediate_source_state": "VERIFIED",
+      "original_generation_state": "VERIFIED",
+      "verification_basis": "direct_user_attestation_20261001_all_Completions_and198SLM;LLM_exact_duplicate_lineage",
+      "synthetic": true,
+      "providers": [
+        "OpenAI_API",
+        "Anthropic_API"
+      ],
+      "row_provider_attribution": "UNKNOWN",
+      "generator_models": "UNKNOWN",
+      "generation_dates": "UNKNOWN",
+      "prompt_upstream_source": "UNKNOWN",
+      "generation_script": "UNKNOWN",
+      "known_transform_script": "LLM_export_relationship_by_exact_message_hash",
+      "repository_code_license": "Apache2_README_claim_SLM_only;no_LICENSE_file_at_pinned_source",
+      "dataset_license": "UNKNOWN_no_explicit_dataset_license",
+      "copyright_ownership_basis": "VERIFIED_USER_ATTESTATION_plus_API_output_assignment_terms",
+      "training_usage_terms": "PARTIAL_generation_contract_and_intended_use_applicability_unverified",
+      "rights_state": "PARTIAL",
+      "release_state": "QUARANTINED",
+      "confidence": {
+        "user_authored_synthetic_origin": "HIGH_user_attestation",
+        "exact_provider_model": "UNKNOWN",
+        "training_terms_compatibility": "UNKNOWN"
+      },
+      "evidence": [
+        "manifests/user-provenance-attestation-20261001.json",
+        "manifests/legacy-history-evidence.json",
+        "pinned_repository_READMEs_and_scripts"
+      ],
+      "terms_sources": [
+        "https://openai.com/policies/services-agreement/",
+        "https://www.anthropic.com/legal/commercial-terms"
+      ]
+    },
+    {
+      "repository": "scott198989/LLM",
+      "path": "data/sft_v0/val.jsonl",
+      "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+      "sha256": "87b23f3e79335ece55d27368b1357993e355522dc490042d8273978f8df91096",
+      "row_occurrences": 1332,
+      "recoverable_rows": 1332,
+      "immediate_source_state": "VERIFIED",
+      "original_generation_state": "VERIFIED",
+      "verification_basis": "direct_user_attestation_20261001_all_Completions_and198SLM;LLM_exact_duplicate_lineage",
+      "synthetic": true,
+      "providers": [
+        "OpenAI_API",
+        "Anthropic_API"
+      ],
+      "row_provider_attribution": "UNKNOWN",
+      "generator_models": "UNKNOWN",
+      "generation_dates": "UNKNOWN",
+      "prompt_upstream_source": "UNKNOWN",
+      "generation_script": "UNKNOWN",
+      "known_transform_script": "LLM_export_relationship_by_exact_message_hash",
+      "repository_code_license": "Apache2_README_claim_SLM_only;no_LICENSE_file_at_pinned_source",
+      "dataset_license": "UNKNOWN_no_explicit_dataset_license",
+      "copyright_ownership_basis": "VERIFIED_USER_ATTESTATION_plus_API_output_assignment_terms",
+      "training_usage_terms": "PARTIAL_generation_contract_and_intended_use_applicability_unverified",
+      "rights_state": "PARTIAL",
+      "release_state": "QUARANTINED",
+      "confidence": {
+        "user_authored_synthetic_origin": "HIGH_user_attestation",
+        "exact_provider_model": "UNKNOWN",
+        "training_terms_compatibility": "UNKNOWN"
+      },
+      "evidence": [
+        "manifests/user-provenance-attestation-20261001.json",
+        "manifests/legacy-history-evidence.json",
+        "pinned_repository_READMEs_and_scripts"
+      ],
+      "terms_sources": [
+        "https://openai.com/policies/services-agreement/",
+        "https://www.anthropic.com/legal/commercial-terms"
+      ]
+    },
+    {
+      "repository": "scott198989/LLM",
+      "path": "data/smoke_raw/conversations.jsonl",
+      "commit": "c937431f4980ac8e12cc7624d3e0b9d579e422da",
+      "sha256": "e7c94728ae09eb2f962a042050b21e072f9f16389b4e95197e21d53613213a94",
+      "row_occurrences": 7962,
+      "recoverable_rows": 7936,
+      "immediate_source_state": "VERIFIED",
+      "original_generation_state": "VERIFIED",
+      "verification_basis": "direct_user_attestation_20261001_all_Completions_and198SLM;LLM_exact_duplicate_lineage",
+      "synthetic": true,
+      "providers": [
+        "OpenAI_API",
+        "Anthropic_API"
+      ],
+      "row_provider_attribution": "UNKNOWN",
+      "generator_models": "UNKNOWN",
+      "generation_dates": "UNKNOWN",
+      "prompt_upstream_source": "UNKNOWN",
+      "generation_script": "UNKNOWN",
+      "known_transform_script": "LLM_export_relationship_by_exact_message_hash",
+      "repository_code_license": "Apache2_README_claim_SLM_only;no_LICENSE_file_at_pinned_source",
+      "dataset_license": "UNKNOWN_no_explicit_dataset_license",
+      "copyright_ownership_basis": "VERIFIED_USER_ATTESTATION_plus_API_output_assignment_terms",
+      "training_usage_terms": "PARTIAL_generation_contract_and_intended_use_applicability_unverified",
+      "rights_state": "PARTIAL",
+      "release_state": "QUARANTINED",
+      "confidence": {
+        "user_authored_synthetic_origin": "HIGH_user_attestation",
+        "exact_provider_model": "UNKNOWN",
+        "training_terms_compatibility": "UNKNOWN"
+      },
+      "evidence": [
+        "manifests/user-provenance-attestation-20261001.json",
+        "manifests/legacy-history-evidence.json",
+        "pinned_repository_READMEs_and_scripts"
+      ],
+      "terms_sources": [
+        "https://openai.com/policies/services-agreement/",
+        "https://www.anthropic.com/legal/commercial-terms"
+      ]
+    }
+  ],
+  "user_attestation_applies_to_all_legacy_candidates": true,
+  "original_staging_provenance_preserved": true,
+  "current_terms_are_not_proof_of_historical_contract": true,
+  "unknown_provider_models_do_not_imply_unknown_synthetic_origin": true
+}

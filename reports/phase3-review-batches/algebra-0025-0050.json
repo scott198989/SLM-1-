@@ -1,0 +1,516 @@
+{
+  "base_commit": "4ce5df450e269399188ef00d6d8952705900df38",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "algebra",
+  "offset": 25,
+  "limit": 25,
+  "next_offset": 50,
+  "new_substantive_reviews": 23,
+  "skipped_existing": 2,
+  "dispositions_added": {
+    "PASS": 18,
+    "REJECT": 1,
+    "QUARANTINE": 4
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "independent_algebra_second_batch_agent",
+    "records_checked": 23,
+    "final_counts": {
+      "PASS": 18,
+      "REJECT": 1,
+      "QUARANTINE": 4
+    },
+    "disposition_changes": [],
+    "review_precision_corrections": [
+      "32: eigenvalues alone do not settle imaginary-axis stability; no invented boundedness promise.",
+      "34: remove higher-dimensional zero sets for a nonzero bivariate denominator; add coprime bounded example."
+    ],
+    "full_prompt_and_answer_review": true,
+    "all_source_hashes_ids_ordinals_and_ledger_matches": true,
+    "source_sha256": "87dea8584252719990f16589465740a1fa9bfb4f2c161912e7c5e3bd2af2de07",
+    "reviewed_against_local_commit": "59964150f76c34539bf770b939a039cf1054da05",
+    "published_base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "independent_human_review": false,
+    "release_approved": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 683,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 509,
+    "REJECT": 42,
+    "QUARANTINE": 156,
+    "NEEDS_HUMAN_REVIEW": 1405
+  },
+  "agent_substantive_reviews": 706,
+  "substantively_unreviewed": 1403,
+  "records": [
+    {
+      "id": "repo-cdc4badb315959acd9ec6053",
+      "ordinal": 26,
+      "messages_sha256": "cdc4badb315959acd9ec60535a6625c25d38e28a70c9fd52d8432c952f5e1009",
+      "state": "PASS",
+      "rationale": "Reasonable adaptive-solver strategy at conceptual scope: weak coupling can suit partitioning, strong coupling can impair it, and monitored switching can balance cost and robustness. The answer frames adaptation as an option that can help.",
+      "evidence": [
+        {
+          "title": "Tojaga et al., Hybrid of monolithic and staggered solution techniques",
+          "url": "https://arxiv.org/abs/2203.15924",
+          "finding": "This coupled fracture model has reduced monolithic robustness from non-positive-definite tangent stiffness; alternating solution avoids that difficulty but has suboptimal convergence, motivating a hybrid. The comparison is problem-dependent."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A switching rule is not itself a convergence guarantee; tolerances, coupling strength and robustness need validation for the actual model."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L141"
+    },
+    {
+      "id": "repo-b69946f07cd3457c3666baf4",
+      "ordinal": 27,
+      "messages_sha256": "b69946f07cd3457c3666baf4d7e13c7d2d3d530a04b6361d17045e7a03aa20c9",
+      "state": "REJECT",
+      "rationale": "The requested exhaustive explanation is not valid. The prompt does not restrict the equations to nondegenerate linear lines, and even within linear systems the explanation ignores inconsistent zero rows. Different raw constants alone do not establish distinct parallel lines when coefficients have been rescaled.",
+      "evidence": [
+        {
+          "method": "independent_linear_combination_check",
+          "finding": "If the complete equation a_k x=b_k is a linear combination of remaining equations with the same coefficients on both sides, every solution of the remaining equations satisfies it. Deleting it preserves the solution set."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The system 0x+0y=1, x+y=0 has no solution but its first equation is not a line. Also x+y=1 and 2x+2y=2 have proportional coefficients and different constants yet coincide. Nonlinear x^2+y^2=-1 with x=0 is another unsupported case of the unrestricted prompt."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L155"
+    },
+    {
+      "id": "repo-a1ea440240b21026bfc3769f",
+      "ordinal": 28,
+      "messages_sha256": "a1ea440240b21026bfc3769f5dfa743e5ca7a93c9e00c8e5773256c2b2b50a0d",
+      "state": "PASS",
+      "rationale": "Correctly explains the role of introducing variables and assumptions, and of reasoning with an arbitrary element to establish generality.",
+      "evidence": [
+        {
+          "method": "direct_quantifier_scope_review",
+          "finding": "Introducing an arbitrary element satisfying the hypotheses permits universal generalization when the ensuing argument uses no extra restrictions; 'let' can also introduce a defined or chosen object."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Not every use of 'let' means an arbitrary element; the first sentence also recognizes definitions and assumptions."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L161"
+    },
+    {
+      "id": "repo-b5675890fa69093da744aec4",
+      "ordinal": 29,
+      "messages_sha256": "b5675890fa69093da744aec44eb096e194b25b6ac5437d3dc769c141e8d3bd37",
+      "state": "PASS",
+      "rationale": "Accurate short description of Baumgarte stabilization: position-constraint error and its derivative enter a damped error-dynamics correction that counters numerical drift.",
+      "evidence": [
+        {
+          "title": "Rigid Body Dynamics Library, constraint stabilization",
+          "url": "https://rbdl.github.io/d5/d92/class_rigid_body_dynamics_1_1_constraint.html",
+          "finding": "The library uses Baumgarte coefficients for position- and velocity-level constraint errors and provides an approximate stabilization time constant."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The usual corrected error equation g_ddot + 2 alpha g_dot + beta^2 g = 0 has decaying homogeneous error for positive alpha and beta."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Practical integration does not enforce exactly zero constraint error; parameter choice and stiffness remain relevant."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L164"
+    },
+    {
+      "id": "repo-7fb3864123e54a0dbef819cb",
+      "ordinal": 31,
+      "messages_sha256": "7fb3864123e54a0dbef819cb1a9f8ef74af5dccd6647362ba9a46da2c79a715f",
+      "state": "PASS",
+      "rationale": "Correct extension of the determinant of a square matrix to commutative rings, including polynomial entries. The algebraic formula uses addition, additive inverses and multiplication, with no division requirement.",
+      "evidence": [
+        {
+          "method": "independent_Leibniz_formula_check",
+          "finding": "The determinant is a finite signed sum of products of square-matrix entries, so it is defined in a commutative ring without requiring division."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For [[t,1],[2,t]] over Z[t], the determinant is t^2-2. Commutativity is explicitly required by the first sentence."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L172"
+    },
+    {
+      "id": "repo-22bdbd08c1404a89add6d3a3",
+      "ordinal": 32,
+      "messages_sha256": "22bdbd08c1404a89add6d3a3ba75a7773f543fa0d0687f878553fbaa8040beaa",
+      "state": "QUARANTINE",
+      "rationale": "The negative- and positive-real-part criteria are correct for the stated constant-coefficient linear ODE. However, the blanket claim that eigenvalues determine stability needs qualification on the imaginary axis: Jordan block sizes also matter. The answer does not distinguish that case from a simple oscillatory mode.",
+      "evidence": [
+        {
+          "title": "MIT OpenCourseWare, Eigenvalues and Stability",
+          "url": "https://ocw.mit.edu/courses/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/94c0f5570a5430022f7a472a0b5d3005_GAOjfd5QJZE.pdf",
+          "finding": "For a continuous-time constant-coefficient linear differential equation, asymptotic stability is governed by negative real parts of eigenvalues, rather than their maximum modulus."
+        },
+        {
+          "title": "James Demmel, Berkeley MA221 Lecture 15",
+          "url": "https://people.eecs.berkeley.edu/~demmel/ma221_Fall09/Lectures/Lecture_15.html",
+          "finding": "Defines eigenvalues through the characteristic determinant and nonzero null vectors; shows similarity preserves eigenvalues and presents unique Jordan blocks up to ordering."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The real matrix [[0,-1,1,0],[1,0,0,1],[0,0,0,-1],[0,0,1,0]] has characteristic polynomial (lambda^2+1)^2 and solution (t*cos(t),t*sin(t),cos(t),sin(t)), whose squared norm is t^2+1. The same eigenvalue multiset with diagonalizable rotation blocks has bounded solutions; eigenvalues alone do not settle marginal stability."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L173"
+    },
+    {
+      "id": "repo-1d7486e66e6554a609893b5e",
+      "ordinal": 33,
+      "messages_sha256": "1d7486e66e6554a609893b5ecded438a61a223dfd13c3a982d606318ea2f1363",
+      "state": "PASS",
+      "rationale": "Correct answer to the logical question: a proof over positive integers does not automatically cover zero, and a separate check is needed when domain-specific operations or assumptions fail there.",
+      "evidence": [
+        {
+          "method": "direct_quantifier_check",
+          "finding": "A statement established for n>0 does not logically entail its n=0 instance; for example, 1/n is defined for positive integers but undefined at zero."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The claim that 1/n is defined holds for every positive integer n but fails at n=0."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The predecessor example is only meaningful relative to an ambient domain such as the nonnegative integers; all integers have integer predecessors. The explicit division-by-zero example supplies the clear domain distinction."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L174"
+    },
+    {
+      "id": "repo-13651b99656770a58b562ba4",
+      "ordinal": 34,
+      "messages_sha256": "13651b99656770a58b562ba4c09249cc0b900a6709885088f583a65c29366a7b",
+      "state": "QUARANTINE",
+      "rationale": "The direction-dependent limiting behavior is useful, but denominator zeros are described too uniformly as curves analogous to vertical asymptotes. A nonzero real bivariate polynomial can have isolated real zeros, and bounded rational behavior or cancellation can occur instead of divergence.",
+      "evidence": [
+        {
+          "method": "independent_factor_and_limit_proof",
+          "finding": "For coprime real polynomials, a real denominator root a has P(a) nonzero by the factor theorem. Writing Q(x)=(x-a)^k R(x) with R(a) nonzero gives a pole."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Q=x^2+y^2 has a real zero set consisting only of (0,0). The coprime rational function x^2/(x^2+y^2) stays between 0 and 1 near its excluded origin. The unreduced expression (x+y)/(x+y) also equals 1 off its excluded line, so the zero locus alone does not establish asymptotic blow-up."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L187"
+    },
+    {
+      "id": "repo-8a4fcf043f4866e5edd39262",
+      "ordinal": 35,
+      "messages_sha256": "8a4fcf043f4866e5edd392624acf0a25f7aa1721f3462b7a92011165adbc7b5c",
+      "state": "PASS",
+      "rationale": "Valid proof that the center contains the identity, is closed under products and inverses, and therefore is a subgroup. The inverse manipulation follows by multiplying the commuting relation on the appropriate sides.",
+      "evidence": [
+        {
+          "method": "independent_axiom_and_subgroup_check",
+          "finding": "Group claims are checked directly against closure, inherited associativity, identity and inverses. No numerical example substitutes for the general proof."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If ag=ga, multiply left by a^-1 and right by a^-1 to get ga^-1=a^-1g. The product computation preserves the ordering of noncommuting factors."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L199"
+    },
+    {
+      "id": "repo-8d965d70ba11f0997c93986b",
+      "ordinal": 36,
+      "messages_sha256": "8d965d70ba11f0997c93986b4d632da6494bb2ee4c1943683fa47ae36c1f57e7",
+      "state": "QUARANTINE",
+      "rationale": "The intermediate-value proof is correct for a real-coefficient cubic. That essential coefficient restriction is absent from the standalone claim and is not stated in the answer; the sign and real-continuity argument does not apply to a general complex-coefficient cubic.",
+      "evidence": [
+        {
+          "method": "independent_real_analysis_proof",
+          "finding": "For a real-coefficient odd-degree polynomial, opposite limits at positive and negative infinity plus continuity give a real zero by the intermediate value theorem. Complex coefficients invalidate the sign argument."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "p(x)=x^3+i has degree 3 and no real zero: for real x its imaginary part is always 1. With real coefficients the supplied opposite-sign limit proof is valid."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L203"
+    },
+    {
+      "id": "repo-80f1a49af7fe3d0e632dd5e2",
+      "ordinal": 37,
+      "messages_sha256": "80f1a49af7fe3d0e632dd5e21b596d12026badc785d37ff6079a5440434b62cf",
+      "state": "PASS",
+      "rationale": "Sound conceptual motivation: elimination explains rank, consistency and nonuniqueness and underlies common computer solvers. This is educational guidance rather than a claim that knowing elimination alone certifies every numerical result.",
+      "evidence": [
+        {
+          "method": "invertible_elementary_operation_proof",
+          "finding": "Nonzero row scaling is undone by reciprocal scaling, and adding a multiple of another row is undone by subtracting that multiple. These operations preserve the complete solution set."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Numerical conditioning, pivoting and error assessment also affect trust in computed answers."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L209"
+    },
+    {
+      "id": "repo-ea27c4221faae8d7c1b4e634",
+      "ordinal": 38,
+      "messages_sha256": "ea27c4221faae8d7c1b4e634428b15b3765ad00276c28ca80bcf33071b577b25",
+      "state": "PASS",
+      "rationale": "Both substitution and elimination steps are correct, and the reported pair satisfies both original equations.",
+      "evidence": [
+        {
+          "method": "exact_symbolic_and_rational_arithmetic",
+          "finding": "Substitutions and polynomial expansions are checked with exact rational arithmetic, including all original equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "p=2,q=-1 gives 3p-q=6+1=7 and p+2q=2-2=0. Subtracting equation 1 from three times equation 2 gives 7q=-7."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L210"
+    },
+    {
+      "id": "repo-baab57536112277998bf5cbf",
+      "ordinal": 39,
+      "messages_sha256": "baab57536112277998bf5cbfaa3b7c6d19078f5e3c43a253a1233a0814da2fb3",
+      "state": "PASS",
+      "rationale": "Correct exhaustive argument for coprime real polynomials: a real denominator root cannot also be a numerator root, hence gives a pole; absence of real denominator roots means no real vertical asymptote.",
+      "evidence": [
+        {
+          "method": "independent_factor_and_limit_proof",
+          "finding": "For coprime real polynomials, a real denominator root a has P(a) nonzero by the factor theorem. Writing Q(x)=(x-a)^k R(x) with R(a) nonzero gives a pole."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If Q=(x-a)^k R with k>=1 and R(a) nonzero, P/Q behaves like [P(a)/R(a)](x-a)^(-k), unbounded on each sufficiently close side."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The phrase 'all its roots are complex' is used in the common sense of nonreal roots; real numbers are mathematically also complex. The real-coefficient setting is explicitly stated in the answer."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L211"
+    },
+    {
+      "id": "repo-21f2ea120e3e8ed35b7e1142",
+      "ordinal": 40,
+      "messages_sha256": "21f2ea120e3e8ed35b7e11429bef3539dea3576f17532eeee3aaccb227a5ae00",
+      "state": "QUARANTINE",
+      "rationale": "The active/inactive distinction is broadly correct, but arbitrary equality sets need not be manifolds without regularity, and inequalities do not inherently make every problem combinatorial or significantly harder. The answer overstates these generalizations for the unspecified coupled system.",
+      "evidence": [
+        {
+          "title": "MIT nonlinear programming, constrained optimality",
+          "url": "https://ocw.mit.edu/courses/15-084j-nonlinear-programming-spring-2004/21073fc1bb9e5f68b3319bec0895683f_lec6_constr_opt.pdf",
+          "finding": "Theorem 22 requires a feasible base point, continuously differentiable constraints and a nonsingular Jacobian block for local elimination; multipliers are introduced for constrained optimization with relevant regularity conditions."
+        },
+        {
+          "title": "Boyd and Vandenberghe, Convex Optimization",
+          "url": "https://www.seas.ucla.edu/~vandenbe/cvxbook/bv_cvxbook.pdf",
+          "finding": "Convex optimization includes inequality constraints; efficient interior-point methods show inequalities do not generally make a problem inherently combinatorial. Equality-constrained and inequality-constrained algorithms both require problem-specific assumptions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The equality xy=0 gives two crossing axes, not a one-dimensional manifold at the origin. Minimizing x^2 subject to x>=0 has the immediate solution x=0; inequality constraints do not by themselves force a combinatorial search."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L212"
+    },
+    {
+      "id": "repo-905341ddee644616a1395aa2",
+      "ordinal": 41,
+      "messages_sha256": "905341ddee644616a1395aa207c8c294eeb386709d5ab67a7f36ce46961f0015",
+      "state": "PASS",
+      "rationale": "Correct plain-language definition and factorization of a difference of squares, with the cancellation mechanism accurately described.",
+      "evidence": [
+        {
+          "method": "exact_symbolic_and_rational_arithmetic",
+          "finding": "Substitutions and polynomial expansions are checked with exact rational arithmetic, including all original equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "(a-b)(a+b)=a^2+ab-ab-b^2=a^2-b^2 for scalar commutative algebra."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L224"
+    },
+    {
+      "id": "repo-5f78ff84160180283a3ed407",
+      "ordinal": 42,
+      "messages_sha256": "5f78ff84160180283a3ed4075c6ab67ad2d74f0e89d3a3077217127c4dd9185a",
+      "state": "PASS",
+      "rationale": "Correct standard group-homomorphism proof using the image of the identity and cancellation by its inverse.",
+      "evidence": [
+        {
+          "method": "independent_axiom_and_subgroup_check",
+          "finding": "Group claims are checked directly against closure, inherited associativity, identity and inverses. No numerical example substitutes for the general proof."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Let h=phi(e_G). Then h=h*h. Left multiplication by h^-1 gives e_H=h. All steps take place in the codomain group."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L225"
+    },
+    {
+      "id": "repo-40005ac675eb45110167d27b",
+      "ordinal": 43,
+      "messages_sha256": "40005ac675eb45110167d27be6e75710d186fa3c83ce7b4f6e684d49dd046f47",
+      "state": "PASS",
+      "rationale": "Correct trace definition and 2 by 2 characteristic polynomial. Trace and determinant are respectively the eigenvalue sum and product, so they contain different spectral information.",
+      "evidence": [
+        {
+          "title": "MIT OpenCourseWare, Eigenvalues and Stability",
+          "url": "https://ocw.mit.edu/courses/res-18-009-learn-differential-equations-up-close-with-gilbert-strang-and-cleve-moler-fall-2015/94c0f5570a5430022f7a472a0b5d3005_GAOjfd5QJZE.pdf",
+          "finding": "For a continuous-time constant-coefficient linear differential equation, asymptotic stability is governed by negative real parts of eigenvalues, rather than their maximum modulus."
+        },
+        {
+          "title": "James Demmel, Berkeley MA221 Lecture 15",
+          "url": "https://people.eecs.berkeley.edu/~demmel/ma221_Fall09/Lectures/Lecture_15.html",
+          "finding": "Defines eigenvalues through the characteristic determinant and nonzero null vectors; shows similarity preserves eigenvalues and presents unique Jordan blocks up to ordering."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For A=[[a,b],[c,d]], det(lambda I-A)=lambda^2-(a+d)lambda+(ad-bc)."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L230"
+    },
+    {
+      "id": "repo-226cfd1a01dc1a4992ed45e9",
+      "ordinal": 44,
+      "messages_sha256": "226cfd1a01dc1a4992ed45e982b4ae8acbd566f2d96c1068f37042403256cb8b",
+      "state": "PASS",
+      "rationale": "Correct introductory distinction between determinant-ratio solution and elimination, with the conventional practical preference for Gaussian elimination on large systems.",
+      "evidence": [
+        {
+          "title": "Habgood and Arel, A condensation-based application of Cramer's rule",
+          "url": "https://www.sciencedirect.com/science/article/pii/S1570866711000736",
+          "finding": "Standard large-scale solvers predominantly use Gaussian elimination. Specialized condensed Cramer algorithms exist with efficient complexity, so the usual textbook comparison is not a statement about all implementations."
+        },
+        {
+          "method": "invertible_elementary_operation_proof",
+          "finding": "Nonzero row scaling is undone by reciprocal scaling, and adding a multiple of another row is undone by subtracting that multiple. These operations preserve the complete solution set."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Classical Cramer ratios require a nonsingular square coefficient matrix. The efficiency comparison concerns conventional separate determinant evaluation; specialized condensed Cramer algorithms can share elimination-like complexity, so this is not a universal lower-bound claim."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L239"
+    },
+    {
+      "id": "repo-b00651bcd41404451c4a8ea1",
+      "ordinal": 45,
+      "messages_sha256": "b00651bcd41404451c4a8ea19fa88944286c847adba8a43910206cd9a1d16ecf",
+      "state": "PASS",
+      "rationale": "Correct relationship between elementary elimination and equivalent systems: reversible row operations preserve the solution set.",
+      "evidence": [
+        {
+          "method": "invertible_elementary_operation_proof",
+          "finding": "Nonzero row scaling is undone by reciprocal scaling, and adding a multiple of another row is undone by subtracting that multiple. These operations preserve the complete solution set."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A nonzero scaling c is inverted by 1/c; row_i <- row_i+c row_j is inverted by row_i <- row_i-c row_j. These give both directions of solution-set inclusion."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Scaling in an elementary elimination step means multiplying by a nonzero scalar; multiplying an equation by zero would not preserve equivalence."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L243"
+    },
+    {
+      "id": "repo-167000e19c075af87920b890",
+      "ordinal": 46,
+      "messages_sha256": "167000e19c075af87920b890d06b6368b62ee705d437be85e367286c486369ea",
+      "state": "PASS",
+      "rationale": "The elimination and substitution are correct, and the final solution satisfies both equations.",
+      "evidence": [
+        {
+          "method": "exact_symbolic_and_rational_arithmetic",
+          "finding": "Substitutions and polynomial expansions are checked with exact rational arithmetic, including all original equations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "x=2,y=5/2 yields 3x-2y=6-5=1 and 5x+2y=10+5=15."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L246"
+    },
+    {
+      "id": "repo-bc1b3f8faa842caae76c2344",
+      "ordinal": 47,
+      "messages_sha256": "bc1b3f8faa842caae76c23449342647bc7305fa1ee76a6ab5ec4b218b8e3fa9d",
+      "state": "PASS",
+      "rationale": "Accurate introductory explanation of the differentiation index and why index reduction matters to numerical constraint handling.",
+      "evidence": [
+        {
+          "title": "LLNL SUNDIALS, DAE background",
+          "url": "https://computing.llnl.gov/sites/default/files/sundials_acts_05.pdf",
+          "finding": "The differentiation index is the minimal number of analytical differentiations needed to extract the underlying explicit ODE by algebraic manipulation; high index measures numerical difficulty."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "There are several DAE index notions, and index alone is not a complete numerical difficulty metric. This answer describes the differentiation index."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L251"
+    },
+    {
+      "id": "repo-206ed63ce3ba01a56c2c0dd8",
+      "ordinal": 48,
+      "messages_sha256": "206ed63ce3ba01a56c2c0dd8415564e819858c10fa3ab9ee325b7d4068147e98",
+      "state": "PASS",
+      "rationale": "Valid group-theoretic proof of Euler's theorem using the unit group modulo n, its totient order and Lagrange's theorem.",
+      "evidence": [
+        {
+          "method": "independent_group_theory_proof",
+          "finding": "For positive modulus n, invertible residue classes form a group of size phi(n). Lagrange gives ord([a]) dividing phi(n), so [a]^phi(n)=[1]."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a residue class a with gcd(a,n)=1, its finite order d divides phi(n); writing phi(n)=kd gives [a]^phi(n)=([a]^d)^k=[1]."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The standard theorem assumes an integer a and positive integer modulus n; the proof uses those conventional modular-arithmetic domains."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L281"
+    },
+    {
+      "id": "repo-1236904455f05cbc9bceb0e8",
+      "ordinal": 49,
+      "messages_sha256": "1236904455f05cbc9bceb0e897217772fc044f47e6ecc7eaae83c148cef5971e",
+      "state": "PASS",
+      "rationale": "Correct uniqueness proof: if two elements are identities, evaluating their sum in the two ways forces equality.",
+      "evidence": [
+        {
+          "method": "independent_axiom_and_subgroup_check",
+          "finding": "Group claims are checked directly against closure, inherited associativity, identity and inverses. No numerical example substitutes for the general proof."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Using e' as right identity gives e+e'=e; using e as left identity gives e+e'=e'. Hence e=e', with no commutativity assumption required."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L286"
+    }
+  ]
+}

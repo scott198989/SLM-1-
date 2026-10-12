@@ -1,0 +1,17 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Production citation contract; review-index migration pending",
+  "type":"object","additionalProperties":false,
+  "required":["citation_id","document_sha256","unit_sha256","family_id","processor_revision","source_location","normalized_offsets","source_uri","visual_dependencies"],
+  "properties":{
+    "citation_id":{"type":"string","minLength":1},
+    "document_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "unit_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "family_id":{"type":"string","minLength":1},
+    "processor_revision":{"type":"string","minLength":1},
+    "source_uri":{"type":"string","minLength":1},
+    "source_location":{"type":"object","additionalProperties":false,"required":["kind","index"],"properties":{"kind":{"enum":["page","slide","sheet_cell","paragraph","image","timestamp"]},"index":{"type":"string","minLength":1}}},
+    "normalized_offsets":{"type":"object","additionalProperties":false,"required":["start","end"],"properties":{"start":{"type":"integer","minimum":0},"end":{"type":"integer","minimum":1}}},
+    "visual_dependencies":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["asset_sha256","asset_uri","description_state"],"properties":{"asset_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},"asset_uri":{"type":"string","minLength":1},"description_state":{"enum":["VERIFIED","PARTIAL","UNKNOWN","NOT_APPLICABLE"]},"bbox":{"type":"array","minItems":4,"maxItems":4,"items":{"type":"number"}}}}}
+  }
+}

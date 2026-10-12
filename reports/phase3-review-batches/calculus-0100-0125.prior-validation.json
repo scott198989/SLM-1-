@@ -1,0 +1,107 @@
+{
+  "environment": "dot cloud CPU checkout; no user laptop access",
+  "python": "3.12.14",
+  "dependencies": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "jinja2": "3.1.6",
+    "tokenizers": "0.22.2",
+    "jsonschema": "4.26.0"
+  },
+  "tokenizer_assets_revision": "1b75feb79f60b8dc6c5bc769a898c206a1c6a4f9",
+  "tokenizer_assets_all_hashes_verified": true,
+  "test_command": "PYTHONPATH=src FORGE_TOKENIZER_ASSETS=/actual/pinned/assets python -m unittest discover -s tests -v",
+  "tests": 69,
+  "test_result": "PASS",
+  "new_real_entrypoint_synthetic_verifier_tests": 13,
+  "private_release_requalified": false,
+  "private_verifier_full_replay_run": false,
+  "private_gold_source_data_accessed": false,
+  "model_weights_downloaded_or_loaded": false,
+  "training_or_paid_compute": false,
+  "automatic_checks_recreated": false,
+  "test_log_sha256": "19790c90ca7641f1ecf81f55e83d21c7e23657a653913833f5e271c73a57858d",
+  "tested_code_sha256": {
+    "scripts/phase3-verify-private-release.py": "64d76484b0852d041083301ce113ddc255b7906512def3dc12d0f92dc96910e1",
+    "src/forge_data/citation_pilot.py": "9e17e50194ba8cb22eca0b431359d7aec1d870f8417e87b4938e3c1ff4c968d4",
+    "tests/test_private_release_verifier.py": "e2a5854473e449455e9bc2ffcc207346f018a3bb49206a81546cd1cea2ace817"
+  },
+  "base_commit": "994a4b16a3b6c4826a3ab34566e5aa9b6aeb90a1",
+  "all_public_input_hashes_verified": 8,
+  "candidate_message_hashes_verified": 2112,
+  "substantive_decisions_verified": 1152,
+  "earlier_374_decisions_unchanged": true,
+  "unchanged_frozen_files": [
+    "src/forge_tools/engineering.py",
+    "src/forge_tools/statistics.py",
+    "reports/phase3-pilot-release.json",
+    "reports/phase3-rag-pilot.json",
+    "reports/phase3-sealed-gold.json",
+    "manifests/phase3-release-families.json",
+    "manifests/phase3-rights-dispositions.json"
+  ],
+  "first_batch_new_reviews": 18,
+  "first_batch_dispositions": {
+    "PASS": 11,
+    "QUARANTINE": 7
+  },
+  "current_dispositions": {
+    "PASS": 889,
+    "REJECT": 55,
+    "QUARANTINE": 209,
+    "NEEDS_HUMAN_REVIEW": 959
+  },
+  "substantively_unreviewed": 957,
+  "next_batch": {
+    "domain": "calculus",
+    "offset": 100,
+    "limit": 25
+  },
+  "official_reader_executed": true,
+  "gzip_exact_roundtrip_verified": true,
+  "training_authorized": false,
+  "sqlite_sidecars_rejected": true,
+  "sqlite_reads_immutable_read_only": true,
+  "earlier_392_decisions_unchanged": true,
+  "latest_batch": {
+    "domain": "calculus",
+    "offset": 75,
+    "limit": 25,
+    "selected_window_end_exclusive": 100,
+    "new_reviews": 25,
+    "skipped_existing": 0,
+    "preserved_structural_quarantines": [],
+    "dispositions": {
+      "PASS": 22,
+      "QUARANTINE": 3
+    }
+  },
+  "independent_agent_qa_complete": true,
+  "latest_batch_original_hashes_verified": 25,
+  "latest_batch_only_expected_ledger_rows_changed": true,
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY",
+  "earlier_decisions_unchanged": 1127,
+  "electrical_domain_complete": true,
+  "electrical_records_verified": 300,
+  "all_392_published_decisions_unchanged": true,
+  "all_token_and_rights_fields_unchanged": true,
+  "completion_receipt": "reports/phase3-electrical-domain-completion.json",
+  "final_code_format_check": "PASS",
+  "final_code_undefined_name_lint": "PASS",
+  "algebra_pending_review_queue_complete": true,
+  "algebra_source_records_checked": 216,
+  "algebra_substantive_reviews": 214,
+  "algebra_structural_holds_preserved": [
+    170,
+    211
+  ],
+  "algebra_checkpoint": "reports/phase3-algebra-domain-checkpoint.json",
+  "trigonometry_pending_review_queue_complete": true,
+  "trigonometry_source_records_checked": 200,
+  "trigonometry_substantive_reviews": 199,
+  "trigonometry_structural_holds_preserved": [
+    24
+  ],
+  "trigonometry_checkpoint": "reports/phase3-trigonometry-domain-checkpoint.json"
+}

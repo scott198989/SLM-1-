@@ -1,0 +1,541 @@
+{
+  "base_commit": "65bc8a632af0e5683cf7c51e1f0e5be82ae81541",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "trigonometry",
+  "offset": 50,
+  "limit": 25,
+  "next_offset": 75,
+  "selected_window_end_exclusive": 75,
+  "selected_rows_in_window": 25,
+  "new_substantive_reviews": 25,
+  "skipped_existing": 0,
+  "preserved_structural_quarantines": [],
+  "dispositions_added": {
+    "PASS": 24,
+    "QUARANTINE": 1
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "independent_trigonometry_third_batch_agent",
+    "records_checked": 25,
+    "final_counts": {
+      "PASS": 24,
+      "QUARANTINE": 1
+    },
+    "disposition_changes": [],
+    "review_precision_corrections": [],
+    "full_prompt_and_answer_review": true,
+    "all_source_hashes_ids_ordinals_and_ledger_matches": true,
+    "source_sha256": "16978f85007b8e9742c1b55f0cc288a505833c654042b0fe79a8cfe96ff19173",
+    "reviewed_against_local_commit": "65bc8a632af0e5683cf7c51e1f0e5be82ae81541",
+    "candidate_preparation_predecessor_commit": "f87adb76840c8eaeaa57e3713019400f720632fc",
+    "published_base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "independent_human_review": false,
+    "release_approved": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 909,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 700,
+    "REJECT": 49,
+    "QUARANTINE": 186,
+    "NEEDS_HUMAN_REVIEW": 1177
+  },
+  "agent_substantive_reviews": 934,
+  "substantively_unreviewed": 1175,
+  "records": [
+    {
+      "id": "repo-e9b03039d4e7f2b683e8059f",
+      "ordinal": 50,
+      "messages_sha256": "e9b03039d4e7f2b683e8059f6ee64f90ecee754ee637f30881d12cb3f3814b36",
+      "state": "PASS",
+      "rationale": "Correct warning that squaring can introduce extraneous sign branches, illustrated by a valid trig example.",
+      "evidence": [
+        {
+          "method": "independent_proof_logic_check",
+          "finding": "Squaring can weaken an equation by discarding sign information. Independent transformations on a common domain establish identities without using the target equality as a premise."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At x=3pi/4, sin²x=cos²x but sin x=-cos x rather than sin x=cos x."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L398"
+    },
+    {
+      "id": "repo-1b56a84150bce31f384c7aee",
+      "ordinal": 51,
+      "messages_sha256": "1b56a84150bce31f384c7aee2e0417c4046b14a4eaf467e7963ce85b170a0e64",
+      "state": "QUARANTINE",
+      "rationale": "Four unknown parameters do not provide a sufficient point-count criterion for unique sinusoid identification with unrestricted frequency. The ambiguity can involve genuinely different graphs, not merely equivalent phase parameters, and vertical shifts may remove the proposed zeros.",
+      "evidence": [
+        {
+          "method": "independent_sinusoidal_identifiability_counterexample",
+          "finding": "A parameter count alone does not guarantee uniqueness for a nonlinear sinusoidal fit with unknown unbounded frequency. Aliasing and absent features require sampling and parameter constraints."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At x=0,1,2,3, sin(2pi*x) and sin(4pi*x) both give zero yet differ between samples. Also 2+sin(x) has no real zero, so two zero crossings cannot always be selected."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The lower-bound intuition is useful for generic independent data, but a uniqueness answer needs frequency/sampling restrictions and a precise meaning of known extrema."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L412"
+    },
+    {
+      "id": "repo-f63c4e0beace7cea2dfd7bed",
+      "ordinal": 52,
+      "messages_sha256": "f63c4e0beace7cea2dfd7bed56020dcb56d0a22f3ec99998a30bf0f5e17eff56",
+      "state": "PASS",
+      "rationale": "Plausible engineering decision example connecting nonlinear-load harmonics with heating, control interference and site-specific mitigation choices.",
+      "evidence": [
+        {
+          "title": "ABB, Harmonics in HVAC applications",
+          "url": "https://library.e.abb.com/public/0ef4e62fd124463eafcf33d55b741b15/Harmonics_in_HVAC_applications_EN_REV%20A.pdf",
+          "finding": "Nonlinear drive loads generate harmonics; distortion can increase losses and heating, with reactors and harmonic filters among mitigation options. Selection is installation-specific."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is a diagnostic planning example, not a filter sizing, safe-loading or installation approval."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L419"
+    },
+    {
+      "id": "repo-81b74abaeb889eca105c3149",
+      "ordinal": 53,
+      "messages_sha256": "81b74abaeb889eca105c314951d194c1efbc79e41946e81bdf41ab25f548de82",
+      "state": "PASS",
+      "rationale": "Correct circumference-to-angle derivation for any positive circle radius.",
+      "evidence": [
+        {
+          "title": "BIPM, SI Brochure 9th edition, version 4.01",
+          "url": "https://www.bipm.org/utils/common/pdf/si-brochure/SI-Brochure-9.pdf",
+          "finding": "Radian measure is determined from a circular arc relative to its radius; the full circle has measure 2pi rad."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "C/r=(2pi*r)/r=2pi for r>0."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L433"
+    },
+    {
+      "id": "repo-5ac292c8ea05eab188d4b0ad",
+      "ordinal": 54,
+      "messages_sha256": "5ac292c8ea05eab188d4b0adf4a47f473f9d887e2a19111c72528563214d9cb3",
+      "state": "PASS",
+      "rationale": "Correct inverse-sine reduction, algebraic solution and input-domain check.",
+      "evidence": [
+        {
+          "method": "independent_exact_trigonometric_review",
+          "finding": "Each solution and identity is checked with exact trig formulas, periodic families and the common domain; numerical checks supplement rather than replace the analytical argument."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For x=3/4, 2x-1=1/2 and arcsin(1/2)=pi/6; the principal target angle is in range."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L436"
+    },
+    {
+      "id": "repo-876c2a37cfb45cbaf5220a59",
+      "ordinal": 55,
+      "messages_sha256": "876c2a37cfb45cbaf5220a59c41469734496ca8835a36899ee839900d63ce53e",
+      "state": "PASS",
+      "rationale": "Correct introductory description of persistent Gibbs overshoot for ordinary Fourier partial sums near a jump.",
+      "evidence": [
+        {
+          "title": "MIT ES.1803 topic notes, section 22.6",
+          "url": "https://ocw.mit.edu/courses/es-1803-differential-equations-spring-2024/mites_1803_s24_topic_full.pdf",
+          "finding": "The Gibbs discussion describes persistent Fourier-partial-sum overshoot near a jump, approximately nine percent of the jump height."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The asymptotic relative overshoot is Si(pi)/pi-1/2, approximately 0.08949 of the jump height."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Nine percent refers to jump height and the limiting large-order overshoot, not exactly the same number for every small partial sum. Filtered or averaged trig approximations are a different procedure."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L440"
+    },
+    {
+      "id": "repo-0a3ad9b25e6becf700a91338",
+      "ordinal": 56,
+      "messages_sha256": "0a3ad9b25e6becf700a9133843d494634abec218ff36ada11e9f661842169314",
+      "state": "PASS",
+      "rationale": "Correct reference-angle and quadrant-sign derivation.",
+      "evidence": [
+        {
+          "method": "independent_unit_circle_and_vector_geometry",
+          "finding": "Unit-circle coordinates are (cos(theta),sin(theta)); a position vector is the vector from the chosen origin to its point."
+        },
+        {
+          "method": "independent_exact_trigonometric_review",
+          "finding": "Each solution and identity is checked with exact trig formulas, periodic families and the common domain; numerical checks supplement rather than replace the analytical argument."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "sin(5pi/3)=sin(2pi-pi/3)=-sqrt(3)/2."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L446"
+    },
+    {
+      "id": "repo-01af281bf7583e0cc7d4c612",
+      "ordinal": 57,
+      "messages_sha256": "01af281bf7583e0cc7d4c6127ac03f60f5514a68dcdcee0a6a77d60c07eb46a7",
+      "state": "PASS",
+      "rationale": "Correct factorization and redundant-family removal.",
+      "evidence": [
+        {
+          "method": "independent_exact_trigonometric_review",
+          "finding": "Each solution and identity is checked with exact trig formulas, periodic families and the common domain; numerical checks supplement rather than replace the analytical argument."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "2sin(2x)cos x=0 yields x=k*pi/2; the cos-zero family is the odd k subset."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L451"
+    },
+    {
+      "id": "repo-9b988ac6cfb9ac343f1f10d6",
+      "ordinal": 58,
+      "messages_sha256": "9b988ac6cfb9ac343f1f10d6969340b8ff86c40d39f017c0b4ad8df617b4bb95",
+      "state": "PASS",
+      "rationale": "Accurate accessible unit-circle interpretation of Euler's formula, with real and imaginary components representing the two coordinates.",
+      "evidence": [
+        {
+          "method": "independent_unit_circle_and_vector_geometry",
+          "finding": "Unit-circle coordinates are (cos(theta),sin(theta)); a position vector is the vector from the chosen origin to its point."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "exp(i theta)=cos(theta)+i*sin(theta) packages the ordered pair into one complex number."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L459"
+    },
+    {
+      "id": "repo-a90f492d6fa9c858c2d60a42",
+      "ordinal": 59,
+      "messages_sha256": "a90f492d6fa9c858c2d60a42ee8959490b870afc2f418dc922029989d3cd8470",
+      "state": "PASS",
+      "rationale": "Correct cosine-equality branches and union simplification.",
+      "evidence": [
+        {
+          "method": "independent_exact_trigonometric_review",
+          "finding": "Each solution and identity is checked with exact trig formulas, periodic families and the common domain; numerical checks supplement rather than replace the analytical argument."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The branches x=-k*pi and x=k*pi/2 combine to x=k*pi/2."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L469"
+    },
+    {
+      "id": "repo-147097ec53ae6ce85b947795",
+      "ordinal": 60,
+      "messages_sha256": "147097ec53ae6ce85b947795b7f89114d7139fc035aa4c584b688814b18258ef",
+      "state": "PASS",
+      "rationale": "Correct factorization and cancellation on the original expression's domain.",
+      "evidence": [
+        {
+          "method": "independent_exact_trigonometric_review",
+          "finding": "Each solution and identity is checked with exact trig formulas, periodic families and the common domain; numerical checks supplement rather than replace the analytical argument."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "cos(2x)=(cos x-sin x)(cos x+sin x) and 1+sin(2x)=(sin x+cos x)^2. cos(2x)!=0 guarantees the canceled factor is nonzero."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Keep the original domain cos(2x)!=0; the simplified right side alone is defined at some additional points."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L474"
+    },
+    {
+      "id": "repo-4956a78adcaa79968b19e33a",
+      "ordinal": 61,
+      "messages_sha256": "4956a78adcaa79968b19e33a6bb9dc36455d6b72875c76d0dfb4627e0f5efb1a",
+      "state": "PASS",
+      "rationale": "Correct unit-circle coordinate interpretation of sine and cosine equations, suitable for finding base angles and checking periodic solutions.",
+      "evidence": [
+        {
+          "method": "independent_unit_circle_and_vector_geometry",
+          "finding": "Unit-circle coordinates are (cos(theta),sin(theta)); a position vector is the vector from the chosen origin to its point."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The full real solution set also includes appropriate full-turn shifts."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L475"
+    },
+    {
+      "id": "repo-fb640b53f89631ef3146b219",
+      "ordinal": 62,
+      "messages_sha256": "fb640b53f89631ef3146b21941b231b4786d736778ca0107855be778c5e82db0",
+      "state": "PASS",
+      "rationale": "Correct triple-angle identity and conclusion that every real angle satisfies the equation.",
+      "evidence": [
+        {
+          "method": "independent_exact_trigonometric_review",
+          "finding": "Each solution and identity is checked with exact trig formulas, periodic families and the common domain; numerical checks supplement rather than replace the analytical argument."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "sin(60°-x)sin(60°+x)=3/4-sin²x; multiplication by sin x yields sin(3x)/4."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "An identity is technically an equation true throughout its domain; 'not an equation' informally contrasts an identity with a conditional equation to solve."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L476"
+    },
+    {
+      "id": "repo-67f2cc8db3fe922cfb135bf3",
+      "ordinal": 63,
+      "messages_sha256": "67f2cc8db3fe922cfb135bf3e1db36dbad88c76ddbb3f5a3b1208c6fb3a3dd77",
+      "state": "PASS",
+      "rationale": "Correct proof with explicit shared-domain handling and valid denominator restrictions.",
+      "evidence": [
+        {
+          "method": "independent_exact_trigonometric_review",
+          "finding": "Each solution and identity is checked with exact trig formulas, periodic families and the common domain; numerical checks supplement rather than replace the analytical argument."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "sin x!=0 implies 1+cos x!=0; multiplying (1-cos x)/sin x by (1+cos x)/(1+cos x) is valid there."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L483"
+    },
+    {
+      "id": "repo-74664505695b48d42c6d9a3c",
+      "ordinal": 64,
+      "messages_sha256": "74664505695b48d42c6d9a3c8ed8fc538605745397495f9993cdef8d4c00950d",
+      "state": "PASS",
+      "rationale": "Correct ideal linear-array explanation of steering through controlled relative phases and far-field superposition.",
+      "evidence": [
+        {
+          "title": "Analog Devices, Phased Array Antenna Patterns, Part 1",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/phased-array-antenna-patterns-part1.html",
+          "finding": "Controlled relative phase between array elements steers constructive interference, and the array factor comes from summing element phasors with geometry-dependent phase."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The displayed scalar array model assumes compatible polarization and a stated angular/position convention. Element patterns, mutual coupling, grating lobes and bandwidth matter in implementation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L488"
+    },
+    {
+      "id": "repo-791878290efd5a547ed1ccb0",
+      "ordinal": 65,
+      "messages_sha256": "791878290efd5a547ed1ccb0ea21bd6dd07dcc75a51ba1803a19584a6d758bdd",
+      "state": "PASS",
+      "rationale": "Correct midline definition and y=D formula for the stated sinusoidal example.",
+      "evidence": [
+        {
+          "method": "independent_exact_trigonometric_review",
+          "finding": "Each solution and identity is checked with exact trig formulas, periodic families and the common domain; numerical checks supplement rather than replace the analytical argument."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The extrema are D±|A|, whose midpoint is D."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This bounded-wave description does not assign finite maxima/minima to tangent or other unbounded trig functions."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L506"
+    },
+    {
+      "id": "repo-1cfe72881ea833d42b4c14f8",
+      "ordinal": 66,
+      "messages_sha256": "1cfe72881ea833d42b4c14f8393cdca5a4140e68681bab327f5a2dc39f93052d",
+      "state": "PASS",
+      "rationale": "Correct repeated sine/cosine addition expansion with all four terms and signs.",
+      "evidence": [
+        {
+          "method": "independent_exact_trigonometric_review",
+          "finding": "Each solution and identity is checked with exact trig formulas, periodic families and the common domain; numerical checks supplement rather than replace the analytical argument."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Expanding sin((A+B)+C) and substituting both two-angle formulas produces exactly the stated expression."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L515"
+    },
+    {
+      "id": "repo-b8194dd3922481fa09602cc8",
+      "ordinal": 67,
+      "messages_sha256": "b8194dd3922481fa09602cc86f7f49c2c65aee62fe4b32b47c808ca89d917075",
+      "state": "PASS",
+      "rationale": "Correct difference-of-squares proof using the secant-tangent Pythagorean identity.",
+      "evidence": [
+        {
+          "method": "independent_exact_trigonometric_review",
+          "finding": "Each solution and identity is checked with exact trig formulas, periodic families and the common domain; numerical checks supplement rather than replace the analytical argument."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "(sec x-tan x)(sec x+tan x)=sec²x-tan²x=1 where cos x!=0."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L526"
+    },
+    {
+      "id": "repo-c598652e1cd297a737ca173f",
+      "ordinal": 68,
+      "messages_sha256": "c598652e1cd297a737ca173fe8b063187d460de4a8ffb9d55ab5b8ba194c2992",
+      "state": "PASS",
+      "rationale": "Accurate graphical description of the tangent's repeat over consecutive asymptotes separated by pi.",
+      "evidence": [
+        {
+          "method": "independent_exact_trigonometric_review",
+          "finding": "Each solution and identity is checked with exact trig formulas, periodic families and the common domain; numerical checks supplement rather than replace the analytical argument."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "tan(x+pi)=tan x; on (-pi/2,pi/2) it increases from -infinity through zero to +infinity."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L527"
+    },
+    {
+      "id": "repo-d5d1835f22930a49076f4a4f",
+      "ordinal": 69,
+      "messages_sha256": "d5d1835f22930a49076f4a4fd17d8b4004a692f05fc2412fe84409fa5a201c2e",
+      "state": "PASS",
+      "rationale": "Correct factorization and double-angle identity.",
+      "evidence": [
+        {
+          "method": "independent_exact_trigonometric_review",
+          "finding": "Each solution and identity is checked with exact trig formulas, periodic families and the common domain; numerical checks supplement rather than replace the analytical argument."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "sin^4x-cos^4x=(sin²x-cos²x)(sin²x+cos²x)=-cos(2x)."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L530"
+    },
+    {
+      "id": "repo-c83f1a4548092ccd0683ccc8",
+      "ordinal": 70,
+      "messages_sha256": "c83f1a4548092ccd0683ccc80fc034cbccc833a01b8638e92e1a7a4be0ce34e2",
+      "state": "PASS",
+      "rationale": "Correct definition of noncircular identity proof, explicitly allowing both sides to be transformed independently to a common form.",
+      "evidence": [
+        {
+          "method": "independent_proof_logic_check",
+          "finding": "Squaring can weaken an equation by discarding sign information. Independent transformations on a common domain establish identities without using the target equality as a premise."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L558"
+    },
+    {
+      "id": "repo-7e9fec883e620b94a459e2c3",
+      "ordinal": 71,
+      "messages_sha256": "7e9fec883e620b94a459e2c34c436537a95057342b3cf08ff6e21ccd9015caa7",
+      "state": "PASS",
+      "rationale": "Correct origin-relative position-vector definition and coordinate example.",
+      "evidence": [
+        {
+          "method": "independent_unit_circle_and_vector_geometry",
+          "finding": "Unit-circle coordinates are (cos(theta),sin(theta)); a position vector is the vector from the chosen origin to its point."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The displacement P-O=(3,5)-(0,0)=(3,5)=3i+5j."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L560"
+    },
+    {
+      "id": "repo-e2ab1795b8472cdd5724341c",
+      "ordinal": 72,
+      "messages_sha256": "e2ab1795b8472cdd5724341c88cdc5184b28006ebc903e9b69b7141115ffccb9",
+      "state": "PASS",
+      "rationale": "Correct two-angle cosine explanation and periodic solution families.",
+      "evidence": [
+        {
+          "method": "independent_unit_circle_and_vector_geometry",
+          "finding": "Unit-circle coordinates are (cos(theta),sin(theta)); a position vector is the vector from the chosen origin to its point."
+        },
+        {
+          "method": "independent_exact_trigonometric_review",
+          "finding": "Each solution and identity is checked with exact trig formulas, periodic families and the common domain; numerical checks supplement rather than replace the analytical argument."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "cos(2pi/3)=cos(4pi/3)=-1/2, producing both families with 2n*pi."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The final generalization is introductory; tangent has one solution per fundamental pi-period for each real value, unlike the two cosine branches discussed."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L577"
+    },
+    {
+      "id": "repo-b4b1e0fa4021b1b5977d8cf9",
+      "ordinal": 73,
+      "messages_sha256": "b4b1e0fa4021b1b5977d8cf9be01e0c74336bd7238f5f59a3bc573e9632af528",
+      "state": "PASS",
+      "rationale": "Correct rational half-angle forms and their relationship to sine/cosine double-angle formulas.",
+      "evidence": [
+        {
+          "method": "independent_exact_trigonometric_review",
+          "finding": "Each solution and identity is checked with exact trig formulas, periodic families and the common domain; numerical checks supplement rather than replace the analytical argument."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "sin x/(1+cos x)=2sin(x/2)cos(x/2)/(2cos²(x/2))=tan(x/2), where valid."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Each ratio has its own denominator exclusions; the second form is undefined at sin x=0 even where another form is meaningful."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L578"
+    },
+    {
+      "id": "repo-99223f8482b1a3c9d996fa5a",
+      "ordinal": 74,
+      "messages_sha256": "99223f8482b1a3c9d996fa5aa644470b09b194e50ad1de7ed4bf826128b4659a",
+      "state": "PASS",
+      "rationale": "Correct sum-to-product factorization and complete solution families.",
+      "evidence": [
+        {
+          "method": "independent_exact_trigonometric_review",
+          "finding": "Each solution and identity is checked with exact trig formulas, periodic families and the common domain; numerical checks supplement rather than replace the analytical argument."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "sin(2x)(2cos x+1)=0 gives x=k*pi/2 or x=2pi/3+2k*pi or 4pi/3+2k*pi."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L579"
+    }
+  ]
+}
