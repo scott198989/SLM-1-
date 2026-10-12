@@ -1,0 +1,35 @@
+{
+  "all_gold_source_families_excluded_from_training": true,
+  "batch_size": 400,
+  "checkpoint_progress": {
+    "drive": 136879,
+    "repositories": 34463
+  },
+  "complete_semantic_independence_proven": false,
+  "contract": {
+    "active_drive_units": 136879,
+    "candidates_sha256": "5696cb8188a1a9aa44ffc2544cdefa7f10ce3870862c1edd01922effeff95dcd",
+    "overlay_sha256": "81ed89390722b15e255719fbcbe929e3b1d78259078960e15ef6e633e297e0eb",
+    "selected": 2112,
+    "version": "forge-family-selected-anchors-1"
+  },
+  "edge_counts": {},
+  "exact_Drive_minimum_tokens": 40,
+  "exact_global_canonical_text_edges_bound": 2891,
+  "exact_global_canonical_text_groups_bound": 2175,
+  "failures_by_reason": {
+    "WITHHELD_UNIT_STATUS": 29721
+  },
+  "families": 1692,
+  "final_families": 1625,
+  "final_private_membership_sha256": "d56d37edd6434c0253407be1986f22a1bd0330b41bf18c7cde7e90bd5f28625c",
+  "global_exact_finalization_algorithm": "one ordered streaming metadata pass; no repeated full-table group queries",
+  "gold_exclusion_scope": "released owned-source pilot only; legacy sources withheld, semantic links unknown",
+  "no_candidate_pair_or_shingle_cap": true,
+  "observations": 141621,
+  "policy": "original generation files and complete Drive sources bound; exports remain aliases; uncertain sources withheld from independent gold and training RAG",
+  "private_snapshot_sha256": "dfd6dcfc049a9c362434845058329d29b4f16c3adae049ab332c622633c643dd",
+  "semantic_relationships": "UNKNOWN; no embedding/model inference; unobserved links not disproved",
+  "status": "LEXICAL_SCAN_COMPLETE_SEMANTIC_INDEPENDENCE_NOT_PROVEN",
+  "uncertain_title_groups": 115
+}

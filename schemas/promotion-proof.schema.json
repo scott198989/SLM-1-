@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "lineage",
+    "immutable_source_hash",
+    "exact_location",
+    "privacy_pass",
+    "source_complete",
+    "provenance",
+    "rights",
+    "rights_evidence_ref",
+    "source_evidence_ref",
+    "fidelity_pass",
+    "fidelity_review_ref",
+    "visual_dependencies_resolved",
+    "family_isolation_pass",
+    "family_manifest_ref",
+    "question_complete",
+    "answer_verified",
+    "answer_review_ref",
+    "units_assumptions_checked",
+    "assistant_mask_verified",
+    "citation_hash_offsets_verified",
+    "independent_heldout",
+    "grader_verified",
+    "private_test_destination",
+    "release_manifest_verified",
+    "release_artifact_hash_verified"
+  ],
+  "properties": {
+    "lineage": {
+      "type": "boolean"
+    },
+    "immutable_source_hash": {
+      "type": "boolean"
+    },
+    "exact_location": {
+      "type": "boolean"
+    },
+    "privacy_pass": {
+      "type": "boolean"
+    },
+    "source_complete": {
+      "type": "boolean"
+    },
+    "provenance": {
+      "type": "string",
+      "enum": [
+        "VERIFIED",
+        "PARTIAL",
+        "UNKNOWN",
+        "CONFLICTING",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "rights": {
+      "type": "string",
+      "enum": [
+        "VERIFIED",
+        "PARTIAL",
+        "UNKNOWN",
+        "CONFLICTING",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "rights_evidence_ref": {
+      "type": "string"
+    },
+    "source_evidence_ref": {
+      "type": "string"
+    },
+    "fidelity_pass": {
+      "type": "boolean"
+    },
+    "fidelity_review_ref": {
+      "type": "string"
+    },
+    "visual_dependencies_resolved": {
+      "type": "boolean"
+    },
+    "family_isolation_pass": {
+      "type": "boolean"
+    },
+    "family_manifest_ref": {
+      "type": "string"
+    },
+    "question_complete": {
+      "type": "boolean"
+    },
+    "answer_verified": {
+      "type": "boolean"
+    },
+    "answer_review_ref": {
+      "type": "string"
+    },
+    "units_assumptions_checked": {
+      "type": "boolean"
+    },
+    "assistant_mask_verified": {
+      "type": "boolean"
+    },
+    "citation_hash_offsets_verified": {
+      "type": "boolean"
+    },
+    "independent_heldout": {
+      "type": "boolean"
+    },
+    "grader_verified": {
+      "type": "boolean"
+    },
+    "private_test_destination": {
+      "type": "boolean"
+    },
+    "release_manifest_verified": {
+      "type": "boolean"
+    },
+    "release_artifact_hash_verified": {
+      "type": "boolean"
+    }
+  }
+}

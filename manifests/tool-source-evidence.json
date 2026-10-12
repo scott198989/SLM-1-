@@ -1,0 +1,30 @@
+{
+  "engineering": {
+    "repository": "scott198989/SLM-1-",
+    "commit": "6ecf683b7d993f47730d34d07cb2e9c8dd9397d0",
+    "path": "src/forge1/engineering.py",
+    "sha256": "ce6ab03daa581ba0dc179facd89dec2e41b2e3890c3215af5a5c75454199fd9e",
+    "transplant": "byte_identical",
+    "tested": "independent_dimensional_numeric_and_refusal_cases",
+    "code_rights": "user_owned_repository_use_authorized_in_task; no upstream license inferred"
+  },
+  "statistics": {
+    "implementation": "new explicit contracts inspired by legacy audit",
+    "repairs": [
+      "Welch_Satterthwaite_df_and_CI",
+      "oneway_ANOVA_groups_contract",
+      "multicolumn_OLS_not_X0_placeholder",
+      "nonfinite_output_rejection"
+    ],
+    "limits": [
+      "no_causal_proof",
+      "SPC_known_baseline_sigma_only",
+      "no_estimated_XbarR_or_WECO_claim"
+    ]
+  },
+  "router": {
+    "numeric_claim_absent": "NOT_APPLICABLE",
+    "arbitrary_code_execution": false,
+    "result_status": "COMPUTED_not_answer_certification"
+  }
+}

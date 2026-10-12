@@ -1,0 +1,56 @@
+{
+  "stages": [
+    "RAW",
+    "EXTRACTED",
+    "QUARANTINED",
+    "REVIEW",
+    "VALIDATED",
+    "SFT_READY",
+    "RAG_READY",
+    "EVAL_READY",
+    "RELEASED"
+  ],
+  "allowed": {
+    "RAW": [
+      "EXTRACTED",
+      "QUARANTINED"
+    ],
+    "EXTRACTED": [
+      "QUARANTINED",
+      "REVIEW"
+    ],
+    "QUARANTINED": [
+      "REVIEW"
+    ],
+    "REVIEW": [
+      "QUARANTINED",
+      "VALIDATED"
+    ],
+    "VALIDATED": [
+      "EVAL_READY",
+      "QUARANTINED",
+      "RAG_READY",
+      "SFT_READY"
+    ],
+    "SFT_READY": [
+      "QUARANTINED",
+      "RELEASED"
+    ],
+    "RAG_READY": [
+      "QUARANTINED",
+      "RELEASED"
+    ],
+    "EVAL_READY": [
+      "QUARANTINED",
+      "RELEASED"
+    ]
+  },
+  "evidence_states": [
+    "VERIFIED",
+    "PARTIAL",
+    "UNKNOWN",
+    "CONFLICTING",
+    "NOT_APPLICABLE"
+  ],
+  "executable_policy": "src/forge_data/promotion.py"
+}

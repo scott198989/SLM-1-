@@ -1,0 +1,485 @@
+{
+  "base_commit": "ee57e54defe67531ae011acf2dc27a49c3281a7d",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "physics",
+  "offset": 0,
+  "limit": 25,
+  "next_offset": 25,
+  "selected_window_end_exclusive": 25,
+  "selected_rows_in_window": 25,
+  "new_substantive_reviews": 17,
+  "skipped_existing": 8,
+  "preserved_structural_quarantines": [],
+  "dispositions_added": {
+    "PASS": 16,
+    "QUARANTINE": 1
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "/root/review_physics_first_batch",
+    "records_checked": 17,
+    "final_counts": {
+      "PASS": 16,
+      "QUARANTINE": 1
+    },
+    "disposition_changes": [],
+    "review_precision_corrections": [
+      "11 includes a feasible repeated-root example.",
+      "16 retained as a complete parametric trajectory at requested scope.",
+      "MIT polar-formula link independently corroborated."
+    ],
+    "full_prompt_and_answer_review": true,
+    "all_source_hashes_ids_ordinals_and_ledger_matches": true,
+    "source_sha256": "080c95bcf16135143d3609bd39c6d8bccd90385405dc49b8673ccb8e7e5cab93",
+    "candidate_preparation_predecessor_commit": "ee57e54defe67531ae011acf2dc27a49c3281a7d",
+    "reviewed_against_local_commit": "ee57e54defe67531ae011acf2dc27a49c3281a7d",
+    "published_base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "independent_human_review": false,
+    "release_approved": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 1623,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 1306,
+    "REJECT": 63,
+    "QUARANTINE": 272,
+    "NEEDS_HUMAN_REVIEW": 471
+  },
+  "agent_substantive_reviews": 1640,
+  "substantively_unreviewed": 469,
+  "records": [
+    {
+      "id": "repo-747a2a9b42046a899f1b007d",
+      "ordinal": 1,
+      "messages_sha256": "747a2a9b42046a899f1b007d8ad8352c8637d932977722b250b1fa9e95344551",
+      "state": "PASS",
+      "rationale": "Correct reason that velocity-dependent drag invalidates constant-acceleration kinematics during changing-speed descent.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Every kinematic formula, projection, discriminant, polar-basis derivative and unit relation was independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With downward speed v>=0 and quadratic drag kv², m*v_dot=m*g-k*v²; terminal speed sqrt(m*g/k) makes acceleration zero."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Quadratic drag with fixed k is a model, not a universal description of parachute opening, changing area or every Reynolds regime. At exact terminal speed acceleration is constant zero; the answer concerns the speed-up transient."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L55"
+    },
+    {
+      "id": "repo-e7ca23e576005e007d101eed",
+      "ordinal": 3,
+      "messages_sha256": "e7ca23e576005e007d101eed6b69bf0b2e7ddcb24079200c036ec994c5ff9e25",
+      "state": "PASS",
+      "rationale": "Correct explanation of the equal-height restriction and the general vertical-flight-time procedure.",
+      "evidence": [
+        {
+          "title": "OpenStax University Physics volume1, Projectile Motion",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/4-3-projectile-motion",
+          "finding": "Ordinary projectile formulas assume negligible drag and uniform downward gravity, with independent horizontal and vertical motions and height-dependent flight time."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Every kinematic formula, projection, discriminant, polar-basis derivative and unit relation was independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For landing height delta_y, solve delta_y=v0*sin(theta)*t-g*t²/2 and use R=v0*cos(theta)*t at the physically selected positive root."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is the ideal no-drag uniform-gravity model; a landing surface can intercept before the apex, so no full symmetric up/down segment is required in the general case."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L58"
+    },
+    {
+      "id": "repo-760219bb5eff6b9bfdd82bd5",
+      "ordinal": 4,
+      "messages_sha256": "760219bb5eff6b9bfdd82bd57a67832ce7fa64d48d9c9a3099d4e22889ae1d29",
+      "state": "PASS",
+      "rationale": "Correct rotated-coordinate method for a projectile returning to an incline.",
+      "evidence": [
+        {
+          "title": "OpenStax University Physics volume1, Projectile Motion",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/4-3-projectile-motion",
+          "finding": "Ordinary projectile formulas assume negligible drag and uniform downward gravity, with independent horizontal and vertical motions and height-dependent flight time."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Every kinematic formula, projection, discriminant, polar-basis derivative and unit relation was independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With x_prime upslope and y_prime normal outward, acceleration components are -g*sin(alpha) and -g*cos(alpha); return occurs when the rotated normal coordinate y_prime(t)=0 after launch."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The prime denotes the rotated coordinate, not a time derivative. Choose the nonzero physical root and consistent initial components."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L59"
+    },
+    {
+      "id": "repo-cedfee9df575dd85ae004d8c",
+      "ordinal": 5,
+      "messages_sha256": "cedfee9df575dd85ae004d8c164de511872d3e963a2218baebf5615d813537c5",
+      "state": "PASS",
+      "rationale": "Correct chain-rule conversion for one-dimensional position-dependent acceleration and its energy-like first integral.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Every kinematic formula, projection, discriminant, polar-basis derivative and unit relation was independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "a=v*dv/dx implies v²(x)-v²(x0)=2*integral from x0 to x of a(s) ds."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Use monotone trajectory branches for v(x) and handle turning points carefully. A conservative one-dimensional force m*a(x) admits the corresponding potential energy."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L61"
+    },
+    {
+      "id": "repo-6dd5ca9deb53fc5776bf4b88",
+      "ordinal": 6,
+      "messages_sha256": "6dd5ca9deb53fc5776bf4b885e9adac51027581f0589e2ac3128fbc953d1e2a2",
+      "state": "PASS",
+      "rationale": "Correct classic idealized equality of fall times for simultaneous objects from the same height with equal zero initial vertical velocity.",
+      "evidence": [
+        {
+          "title": "OpenStax University Physics volume1, Projectile Motion",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/4-3-projectile-motion",
+          "finding": "Ordinary projectile formulas assume negligible drag and uniform downward gravity, with independent horizontal and vertical motions and height-dependent flight time."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Every kinematic formula, projection, discriminant, polar-basis derivative and unit relation was independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Both have y(t)=h-g*t²/2 and therefore hit a level ground at sqrt(2*h/g), regardless of their horizontal speed."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Neglect air drag, Earth curvature and unequal release heights/times; velocity-dependent drag can couple horizontal and vertical motion."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L66"
+    },
+    {
+      "id": "repo-65d4a42b790ddfc182f4c0b7",
+      "ordinal": 7,
+      "messages_sha256": "65d4a42b790ddfc182f4c0b793ea3d4a4eef23ffba3f4e77272233ed7de89e1f",
+      "state": "PASS",
+      "rationale": "Correct maximum-height time for an upward vertical launch under constant gravity.",
+      "evidence": [
+        {
+          "title": "OpenStax University Physics volume1, Projectile Motion",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/4-3-projectile-motion",
+          "finding": "Ordinary projectile formulas assume negligible drag and uniform downward gravity, with independent horizontal and vertical motions and height-dependent flight time."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Every kinematic formula, projection, discriminant, polar-basis derivative and unit relation was independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "v(t)=v0-g*t vanishes at t=v0/g; y_doubleprime=-g<0 confirms a height maximum."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "v0 is positive upward and drag is neglected; an initially downward object does not have a future upward-flight apex."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L68"
+    },
+    {
+      "id": "repo-983feaf908bfdc48d87cb20d",
+      "ordinal": 8,
+      "messages_sha256": "983feaf908bfdc48d87cb20d917064189e2181760c48aadeb4dd3f2db38fe48c",
+      "state": "PASS",
+      "rationale": "Correct collision-time method requiring simultaneous equality of every position component.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Every kinematic formula, projection, discriminant, polar-basis derivative and unit relation was independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Relative position delta_r(t)=r1(t)-r2(t) must be the zero vector at one admissible common time."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "In three dimensions include the third equation; finite object sizes, launch delays and ground interception can impose additional admissibility checks."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L78"
+    },
+    {
+      "id": "repo-11a83b6c36ce388cdef08d26",
+      "ordinal": 9,
+      "messages_sha256": "11a83b6c36ce388cdef08d26c7d01258e2dd6fa1e0fb3a102dae7a4cb4b08aa9",
+      "state": "PASS",
+      "rationale": "Correct level-ground projectile range derivation and the ideal45-degree maximum.",
+      "evidence": [
+        {
+          "title": "OpenStax University Physics volume1, Projectile Motion",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/4-3-projectile-motion",
+          "finding": "Ordinary projectile formulas assume negligible drag and uniform downward gravity, with independent horizontal and vertical motions and height-dependent flight time."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Every kinematic formula, projection, discriminant, polar-basis derivative and unit relation was independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The nonzero flight time is2*v0*sin(theta)/g; multiplying by horizontal speed gives v0²*sin(2*theta)/g, maximized at theta=pi/4 in the usual upward-angle range."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Equal launch/landing height, fixed speed, no drag and constant gravity are essential; the stated problem supplies the level-ground setup."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L83"
+    },
+    {
+      "id": "repo-feb9bd6d8c1a410958d4439c",
+      "ordinal": 11,
+      "messages_sha256": "feb9bd6d8c1a410958d4439c15adc9539c6411283b0ff5e177aa90f5667668ce",
+      "state": "QUARANTINE",
+      "rationale": "The trajectory equation and quadratic in tan(theta) are correct, but the answer stops at solve the quadratic and states two distinct trajectories without the discriminant qualification. The requested angle is not fully resolved.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Every kinematic formula, projection, discriminant, polar-basis derivative and unit relation was independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For d>0, tan(theta)=[v0² +/- sqrt(v0^4-g*(2*v0²*h+g*d²))]/(g*d). A zero radicand gives one repeated angle; a negative radicand is unreachable. For positive h=v0²/(2*g)-g*d²/(2*v0²), the repeated-angle case can occur. Explicit feasible repeated-root example: v0=10,g=10,d=5,h=3.75 gives tan(theta)=2, a single angle."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold for incomplete requested solve and unqualified two-solution count, not the correct derivation. The prompt asserting grazing supplies feasibility, but does not exclude the single-envelope case."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L87"
+    },
+    {
+      "id": "repo-f9a9f30297630129792305e5",
+      "ordinal": 13,
+      "messages_sha256": "f9a9f30297630129792305e550318d77f22704ec16635b83a562c15442ccd6de",
+      "state": "PASS",
+      "rationale": "Correct Galilean moving-frame simplification of ideal projectile motion.",
+      "evidence": [
+        {
+          "title": "OpenStax University Physics volume1, Projectile Motion",
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/4-3-projectile-motion",
+          "finding": "Ordinary projectile formulas assume negligible drag and uniform downward gravity, with independent horizontal and vertical motions and height-dependent flight time."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Every kinematic formula, projection, discriminant, polar-basis derivative and unit relation was independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For constant horizontal frame speed U=v0x, x_prime=x-U*t=0 and y_prime=y; acceleration is unchanged because the second derivative of U*t is zero."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The statement uses an inertial frame translating without rotation and neglects drag, whose relative airflow would transform too."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L93"
+    },
+    {
+      "id": "repo-4fdc3203a3642c0d8096fddb",
+      "ordinal": 15,
+      "messages_sha256": "4fdc3203a3642c0d8096fddb99b55a08381604ab53e01ecfbf5fd8b8f52719b1",
+      "state": "PASS",
+      "rationale": "Correct rotating-polar-basis differentiation and radial/transverse acceleration decomposition.",
+      "evidence": [
+        {
+          "title": "MIT8.012 Classical Mechanics, Exam1 Useful Relations, PDF page3",
+          "url": "https://ocw.mit.edu/courses/8-012-physics-i-classical-mechanics-fall-2008/15feeea6471bc3ff11ca74e33fde4bd2_exam1.pdf",
+          "finding": "Lists constant-vector-acceleration trajectory and polar acceleration (r_doubleprime-r*theta_prime²)rhat+(r*theta_doubleprime+2*r_prime*theta_prime)thetahat."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Every kinematic formula, projection, discriminant, polar-basis derivative and unit relation was independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "rhat_dot=theta_dot*thetahat and thetahat_dot=-theta_dot*rhat yield a_r=r_doubleprime-r*theta_dot² and a_theta=r*theta_doubleprime+2*r_dot*theta_dot."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The first displayed rhat is the unit radial vector, not the full position r*rhat; the subsequent velocity and acceleration correctly use that distinction."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L95"
+    },
+    {
+      "id": "repo-91193967930501621f960483",
+      "ordinal": 16,
+      "messages_sha256": "91193967930501621f9604837e7baf37aa0cda95c447980d18ba09af58b3b981",
+      "state": "PASS",
+      "rationale": "Correct parametric trajectory for an explicitly constant horizontal force plus gravity, and a valid time inversion from the vertical equation.",
+      "evidence": [
+        {
+          "title": "MIT8.012 Classical Mechanics, Exam1 Useful Relations, PDF page3",
+          "url": "https://ocw.mit.edu/courses/8-012-physics-i-classical-mechanics-fall-2008/15feeea6471bc3ff11ca74e33fde4bd2_exam1.pdf",
+          "finding": "Lists constant-vector-acceleration trajectory and polar acceleration (r_doubleprime-r*theta_prime²)rhat+(r*theta_doubleprime+2*r_prime*theta_prime)thetahat."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Every kinematic formula, projection, discriminant, polar-basis derivative and unit relation was independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Writing u=v0*cos(theta), w=v0*sin(theta), a=F/m gives x=u*t+a*t²/2 and y=w*t-g*t²/2. The combination g*x+a*y=(g*u+a*w)*t eliminates the quadratic term and yields an implicit quadratic trajectory when the denominator is nonzero."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "From rest at origin is loose wording alongside a specified launch velocity; the equations clearly start at the origin with that velocity. Uniform wind would not generally exert a constant force, but the prompt explicitly prescribes constant F. Degenerate collinear acceleration/velocity can yield a line."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L100"
+    },
+    {
+      "id": "repo-0f32ebcac589885e91e52dea",
+      "ordinal": 20,
+      "messages_sha256": "0f32ebcac589885e91e52dea65afc28a82047ad76d79ae0e479ec6082f7947d8",
+      "state": "PASS",
+      "rationale": "Correct units for a cubic force-law coefficient.",
+      "evidence": [
+        {
+          "title": "NIST Guide to the SI, chapter4",
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes",
+          "finding": "Pascal is N/m²=kg/(m*s²); energy and torque share dimensions while their customary unit names distinguish physical quantities."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Every kinematic formula, projection, discriminant, polar-basis derivative and unit relation was independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "[k]=[F]/[x]³=(kg*m/s²)/m³=kg/(m²*s²)=N/m³."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L166"
+    },
+    {
+      "id": "repo-26d17ec7f6fcc3cdf8a552aa",
+      "ordinal": 21,
+      "messages_sha256": "26d17ec7f6fcc3cdf8a552aa6546426af48b17002ef7ee156fde641e1f378b8a",
+      "state": "PASS",
+      "rationale": "Correct vector-component projection analogy with the basis identified.",
+      "evidence": [
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Every kinematic formula, projection, discriminant, polar-basis derivative and unit relation was independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "In an orthonormal Cartesian basis, v_x=v dot e_x and v_y=v dot e_y, and v=v_x*e_x+v_y*e_y."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "For nonorthogonal bases, scalar projections and expansion coefficients differ and require the dual basis/Gram matrix; the x/y shadow analogy is the ordinary orthogonal setting."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L170"
+    },
+    {
+      "id": "repo-9feda20556160a165939e726",
+      "ordinal": 22,
+      "messages_sha256": "9feda20556160a165939e7262a24cdda1c2c15c564303f31d8019dd090c3f94a",
+      "state": "PASS",
+      "rationale": "Correct pascal base-unit expansion and qualitative origin of its factors.",
+      "evidence": [
+        {
+          "title": "NIST Guide to the SI, chapter4",
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes",
+          "finding": "Pascal is N/m²=kg/(m*s²); energy and torque share dimensions while their customary unit names distinguish physical quantities."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Every kinematic formula, projection, discriminant, polar-basis derivative and unit relation was independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Pa=N/m²=(kg*m/s²)/m²=kg/(m*s²)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The physical gloss is a dimensional mnemonic; units alone do not identify a particular microscopic pressure mechanism."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L171"
+    },
+    {
+      "id": "repo-8be1a555c11e789387a16822",
+      "ordinal": 23,
+      "messages_sha256": "8be1a555c11e789387a16822580f6b639f1af5e37f813d74db6b477cb674d92f",
+      "state": "PASS",
+      "rationale": "Correct conclusion that dimensions alone do not distinguish energy from torque.",
+      "evidence": [
+        {
+          "title": "NIST Guide to the SI, chapter4",
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes",
+          "finding": "Pascal is N/m²=kg/(m*s²); energy and torque share dimensions while their customary unit names distinguish physical quantities."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Every kinematic formula, projection, discriminant, polar-basis derivative and unit relation was independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Both have mass*length²/time² dimensions, while energy is scalar and three-dimensional torque is an axial vector."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "SI convention uses joule for energy and newton meter for torque even though their base dimensions agree."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L180"
+    },
+    {
+      "id": "repo-478139a0eb5a6dbc039c1673",
+      "ordinal": 24,
+      "messages_sha256": "478139a0eb5a6dbc039c1673cabe6266acf594f115330fbae353309e83a48a27",
+      "state": "PASS",
+      "rationale": "Correct dimensional derivation of the gravitational constant.",
+      "evidence": [
+        {
+          "title": "NIST Guide to the SI, chapter4",
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-chapter-4-two-classes-si-units-and-si-prefixes",
+          "finding": "Pascal is N/m²=kg/(m*s²); energy and torque share dimensions while their customary unit names distinguish physical quantities."
+        },
+        {
+          "method": "independent_mathematical_and_dimensional_derivation",
+          "finding": "Every kinematic formula, projection, discriminant, polar-basis derivative and unit relation was independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "[G]=[F]*[r]²/[m]²=(kg*m/s²)*m²/kg²=m³/(kg*s²)."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L185"
+    }
+  ]
+}

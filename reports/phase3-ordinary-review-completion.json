@@ -1,0 +1,174 @@
+{
+  "repository": "scott198989/SLM-1-",
+  "published_remote_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "published_substantive_reviews": 392,
+  "publication_status": "LOCAL_ONLY; public-upload block respected",
+  "local_checkpoint_predecessor": "42b4de5e20ffdcdda159e8ba6e9ef9eac8fa1247",
+  "prior_through_physics_checkpoint_commit": "8832a6ceccc0add5611f517ceab7bfa9675050ca",
+  "selected_domain": "materials_manufacturing",
+  "selected_domain_records": 250,
+  "new_pending_materials_records_reviewed": 244,
+  "prior_materials_substantive_reviews_preserved": 6,
+  "current_materials_substantive_reviews": 250,
+  "all_selected_domain_records_substantively_reviewed": true,
+  "all_ordinary_pending_review_queues_exhausted": true,
+  "domain_dispositions": {
+    "PASS": 203,
+    "QUARANTINE": 41,
+    "REJECT": 6
+  },
+  "new_review_dispositions": {
+    "PASS": 200,
+    "QUARANTINE": 40,
+    "REJECT": 4
+  },
+  "current_substantive_reviews": 2109,
+  "current_dispositions": {
+    "PASS": 1698,
+    "QUARANTINE": 340,
+    "REJECT": 72,
+    "NEEDS_HUMAN_REVIEW": 2
+  },
+  "by_domain": {
+    "circuits": {
+      "PASS": 139,
+      "REJECT": 12,
+      "QUARANTINE": 60,
+      "NEEDS_HUMAN_REVIEW": 0
+    },
+    "engineering_mathematics": {
+      "PASS": 179,
+      "REJECT": 3,
+      "QUARANTINE": 18,
+      "NEEDS_HUMAN_REVIEW": 0
+    },
+    "algebra": {
+      "PASS": 176,
+      "REJECT": 8,
+      "QUARANTINE": 32,
+      "NEEDS_HUMAN_REVIEW": 0
+    },
+    "thermal_process_engineering": {
+      "PASS": 73,
+      "REJECT": 5,
+      "QUARANTINE": 24,
+      "NEEDS_HUMAN_REVIEW": 2
+    },
+    "trigonometry": {
+      "PASS": 168,
+      "REJECT": 7,
+      "QUARANTINE": 25,
+      "NEEDS_HUMAN_REVIEW": 0
+    },
+    "calculus": {
+      "PASS": 185,
+      "REJECT": 4,
+      "QUARANTINE": 26,
+      "NEEDS_HUMAN_REVIEW": 0
+    },
+    "electrical_components": {
+      "PASS": 232,
+      "REJECT": 14,
+      "QUARANTINE": 54,
+      "NEEDS_HUMAN_REVIEW": 0
+    },
+    "electromagnetism": {
+      "PASS": 131,
+      "REJECT": 6,
+      "QUARANTINE": 29,
+      "NEEDS_HUMAN_REVIEW": 0
+    },
+    "materials_manufacturing": {
+      "PASS": 203,
+      "REJECT": 6,
+      "QUARANTINE": 41,
+      "NEEDS_HUMAN_REVIEW": 0
+    },
+    "physics": {
+      "PASS": 212,
+      "REJECT": 7,
+      "QUARANTINE": 31,
+      "NEEDS_HUMAN_REVIEW": 0
+    }
+  },
+  "substantively_unreviewed": 0,
+  "reviewed_specialist_holds": [
+    {
+      "id": "repo-7886618e589bccad28f0bd96",
+      "domain": "thermal_process_engineering",
+      "state": "NEEDS_HUMAN_REVIEW",
+      "messages_sha256": "7886618e589bccad28f0bd961f890290c41e2391f2bc39410310e8ecc2d4fd0e",
+      "rationale": "Read complete response; mixture retrograde phase-envelope temperature-versus-pressure conditions need specialist/property-source confirmation before correctness approval."
+    },
+    {
+      "id": "repo-7e650062f278ca4669500987",
+      "domain": "thermal_process_engineering",
+      "state": "NEEDS_HUMAN_REVIEW",
+      "messages_sha256": "7e650062f278ca4669500987a988e32d6f9efbda7702df2698056357eee18c6c",
+      "rationale": "Read complete response; fundamental Helmholtz approach plausible but provider-wide all-properties/all-table claims and fitting count require source-qualified specialist confirmation."
+    }
+  ],
+  "original_structural_only_quarantines": [
+    {
+      "id": "repo-2308b4e2dc495dfb6b2f12f3",
+      "domain": "algebra",
+      "state": "QUARANTINE",
+      "messages_sha256": "2308b4e2dc495dfb6b2f12f3f7902222528d4e723e795b250607f235837c4600",
+      "rationale": "STANDALONE_CONTEXT_DEPENDENCY_UNRESOLVED"
+    },
+    {
+      "id": "repo-a29c2810f6df5627c04ccab8",
+      "domain": "trigonometry",
+      "state": "QUARANTINE",
+      "messages_sha256": "a29c2810f6df5627c04ccab84726d0d4fbfb7d6428415a5cfde07f1e4dae0fe3",
+      "rationale": "STANDALONE_CONTEXT_DEPENDENCY_UNRESOLVED"
+    },
+    {
+      "id": "repo-ba110a948fcfd763580a0637",
+      "domain": "algebra",
+      "state": "QUARANTINE",
+      "messages_sha256": "ba110a948fcfd763580a063773a2f5d84a0ecdad2738b74b396544410c1adfa0",
+      "rationale": "STANDALONE_CONTEXT_DEPENDENCY_UNRESOLVED"
+    }
+  ],
+  "all_1865_prior_checkpoint_decisions_preserved": true,
+  "all_392_published_decisions_preserved": true,
+  "all_2112_original_hashes_verified": true,
+  "all_source_message_tokens_and_rights_unchanged": true,
+  "all_250_materials_original_source_lines_verified": true,
+  "source_bytes": 726427,
+  "source_sha256": "028348459f744df65879a12bf9df655c32fc25597c3202a13c3c780667554cc4",
+  "source_git_blob": "7600092ff72f14bf69ea54f647928cbbcd84edf3",
+  "frozen_file_sha256": {
+    "src/forge_tools/engineering.py": "ce6ab03daa581ba0dc179facd89dec2e41b2e3890c3215af5a5c75454199fd9e",
+    "src/forge_tools/statistics.py": "d72162556c53bdc63151f87a89ecedb231933800b928f86935d7c0882bbfd43d",
+    "reports/phase3-pilot-release.json": "555c9746295b83049fe05e4de6041ae0d6cff337f6fb9f6bb5b7c656d5962111",
+    "reports/phase3-rag-pilot.json": "b2f380c816869998ea50e9dc1d3ba25937e338b7887e95ef646d391fb88f74e6",
+    "reports/phase3-sealed-gold.json": "5ddd0bd9f46c0fe6134f885f7f9c8461467544bcc8d352e859620e3ac57c5149",
+    "manifests/phase3-release-families.json": "861b3ccf2ac3ae9988c4e6ffa59e8043c31623e88f5136b70c0ddfeba51a9510",
+    "manifests/phase3-rights-dispositions.json": "87d8247546810f388c741faf4710bcf220f6d029a3978fb8cc85d6191c00c549",
+    "data/sft/staging/forge-v01-review-curriculum.jsonl.gz": "81ed89390722b15e255719fbcbe929e3b1d78259078960e15ef6e633e297e0eb",
+    "data/sft/staging/consolidated-20261001-v2/candidates.jsonl.gz": "5696cb8188a1a9aa44ffc2544cdefa7f10ce3870862c1edd01922effeff95dcd",
+    "reports/qwen-token-audit.json": "77724a540cf3c712ef8a7e4508fb020156a48332d61389cb16817377826745b2",
+    "reports/preparation-validation.json": "7da2dc121480658173e682abac3c66af4b0996c8a725f0a27652ede7a4c216fb",
+    "manifests/repository-datasets-final.json": "a6eee4eb268398eeebdf8ac5b6c4c2f310f3d0137f6fccbbec205b16d953d4d5"
+  },
+  "original_domain_end_exclusive": 250,
+  "next_reader_offset": 250,
+  "reader_retained_only_structural_ordinals": [],
+  "independent_agent_qa_batches": 10,
+  "next_domain": null,
+  "next_batch": null,
+  "remaining_gates": [
+    "Two preserved specialist technical holds require separately scoped expert review.",
+    "Three preserved original structural-only quarantines require separately scoped context review.",
+    "Rights/source-family and release gates remain unresolved; technical PASS does not resolve them.",
+    "Private pilot/gold/RAG qualification remains unavailable in the cloud.",
+    "Remote publication remains blocked; no retry or alternate route."
+  ],
+  "technical_PASS_not_release_approval": true,
+  "independent_human_review": false,
+  "release_approved": false,
+  "training_authorized": false,
+  "private_artifacts_requalified": false
+}

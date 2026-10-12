@@ -1,0 +1,58 @@
+{
+  "model_assets": {
+    "model": "Qwen/Qwen3-30B-A3B-Base",
+    "revision": "1b75feb79f60b8dc6c5bc769a898c206a1c6a4f9",
+    "weights_downloaded": false,
+    "assets": [
+      {
+        "path": "tokenizer.json",
+        "bytes": 7031645,
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 9678,
+        "sha256": "3c04ed3ca964ea2f6b2b5faf0dc4d31aec1cb1e8b4bcf63f402d295046b422b5"
+      },
+      {
+        "path": "config.json",
+        "bytes": 964,
+        "sha256": "7e4142150e976c6b4796adf88fce0a2a23e581ed63bcede7e1d69a645e73b362"
+      }
+    ]
+  },
+  "all_candidates": {
+    "rows_seen": 34463,
+    "formatted_records": 34462,
+    "tokens": 2033523,
+    "assistant_tokens": 1354641,
+    "over_2048": 0,
+    "over_4096": 0
+  },
+  "stem_candidates": {
+    "records": 14253,
+    "tokens": 1149849,
+    "assistant_tokens": 830436,
+    "over_2048": 0
+  },
+  "format_rejections": {
+    "embedded_template_control_requires_review": 1
+  },
+  "lengths": {
+    "maximum": 318,
+    "p50": 47,
+    "p95": 132,
+    "p99": 174
+  },
+  "model_default_eos": 151643,
+  "training_chat_eos": 151645,
+  "mask_policy": "assistant_body_including_official_empty_think_wrapper_and_im_end_only",
+  "weights_downloaded": false,
+  "training_run": false,
+  "release_approved": false,
+  "over_context_policy": "reject_not_truncate",
+  "cpu_versions": {
+    "tokenizers": "0.22.2",
+    "jinja2": "3.1.6"
+  }
+}

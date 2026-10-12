@@ -1,0 +1,525 @@
+{
+  "base_commit": "8832a6ceccc0add5611f517ceab7bfa9675050ca",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "materials_manufacturing",
+  "offset": 0,
+  "limit": 25,
+  "next_offset": 25,
+  "selected_window_end_exclusive": 25,
+  "selected_rows_in_window": 25,
+  "new_substantive_reviews": 19,
+  "skipped_existing": 6,
+  "preserved_structural_quarantines": [],
+  "dispositions_added": {
+    "PASS": 17,
+    "QUARANTINE": 2
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "/root/review_materials_first_batch",
+    "records_checked": 19,
+    "final_counts": {
+      "PASS": 17,
+      "QUARANTINE": 2
+    },
+    "disposition_changes": [
+      {
+        "ordinal": 7,
+        "from": "QUARANTINE",
+        "to": "PASS"
+      },
+      {
+        "ordinal": 20,
+        "from": "QUARANTINE",
+        "to": "PASS"
+      }
+    ],
+    "review_precision_corrections": [
+      "7 retains pre-neck measure difference as caveat without inventing first/only claims.",
+      "20 accepts the standard closed-cylinder instructional scope.",
+      "Add direct thermal-strain and ionic/covalent-bonding evidence.",
+      "Final evidence audit corrects the phase-transitions textbook title and uses directly matched primary sources/row-specific checks without changing any disposition, rationale, source message or token count."
+    ],
+    "full_prompt_and_answer_review": true,
+    "all_source_hashes_ids_ordinals_and_ledger_matches": true,
+    "source_sha256": "028348459f744df65879a12bf9df655c32fc25597c3202a13c3c780667554cc4",
+    "candidate_preparation_predecessor_commit": "8832a6ceccc0add5611f517ceab7bfa9675050ca",
+    "reviewed_against_local_commit": "8832a6ceccc0add5611f517ceab7bfa9675050ca",
+    "published_base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "independent_human_review": false,
+    "release_approved": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 1865,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 1515,
+    "REJECT": 68,
+    "QUARANTINE": 302,
+    "NEEDS_HUMAN_REVIEW": 227
+  },
+  "agent_substantive_reviews": 1884,
+  "substantively_unreviewed": 225,
+  "records": [
+    {
+      "id": "repo-3b6b519146d3e879d74fdfc3",
+      "ordinal": 0,
+      "messages_sha256": "3b6b519146d3e879d74fdfc396baf9e2e477ba475e7f0c9aacf117c7bf8b5cda",
+      "state": "PASS",
+      "rationale": "Correct thermodynamic explanation of temperature-dependent crystal stability.",
+      "evidence": [
+        {
+          "method": "independent_row_specific_check",
+          "finding": "At fixed temperature, pressure and composition, the stable phase minimizes Gibbs free energy G=H-T*S; competing phase free energies can cross with temperature."
+        },
+        {
+          "title": "Bhadeshia and Yan, Phase Transitions: An introduction with worked examples",
+          "url": "https://www.phase-trans.msm.cam.ac.uk/2022/EMS523U_book.pdf",
+          "finding": "Phase equilibria and steel phase-transformation examples; this is not a general all-topic engineering-materials handbook."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At fixed temperature, pressure and composition, the stable phase minimizes Gibbs free energy G=H-T*S; competing phase free energies can cross with temperature."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Kinetic retention/metastability and pressure matter. Iron also has additional high-temperature phase behavior, so the example is not a complete phase diagram."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L40"
+    },
+    {
+      "id": "repo-7ac1780dffe78022c0787761",
+      "ordinal": 1,
+      "messages_sha256": "7ac1780dffe78022c07877612cc08b760eaacb974d3359ba900939cf733c5858",
+      "state": "PASS",
+      "rationale": "Correct introductory interstitial-carbon/dislocation strengthening mechanism with phase dependence noted.",
+      "evidence": [
+        {
+          "title": "MIT Physical Metallurgy Lecture 16",
+          "url": "https://ocw.mit.edu/courses/3-40j-physical-metallurgy-fall-2009/613623af5c60a58694cab425892aa9b0_MIT3_40JF09_lec16.pdf",
+          "finding": "Solute size/modulus interactions and interstitial atmosphere/dislocation pinning support the strengthening mechanism."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Carbide precipitation, martensitic transformation and phase fractions also contribute in steels; cementite is a distinct compound, not merely carbon in the same iron solid solution."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L45"
+    },
+    {
+      "id": "repo-0d4f1638bd0f6c0e7bbbee66",
+      "ordinal": 2,
+      "messages_sha256": "0d4f1638bd0f6c0e7bbbee6641ec552b9fb0e8b14dfeccd9ab4743eb1f2f8ec5",
+      "state": "PASS",
+      "rationale": "Correct rejection of a one-to-one bond-type lookup rule for crystal structure.",
+      "evidence": [
+        {
+          "method": "conceptual_scope_review",
+          "finding": "Correct rejection of a one-to-one bond-type lookup rule for crystal structure."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Packing, electronic structure, competing free energies and kinetics jointly affect phase selection; the answer explicitly includes these competing factors."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L84"
+    },
+    {
+      "id": "repo-aa773c2059c78fdb785ce3cd",
+      "ordinal": 4,
+      "messages_sha256": "aa773c2059c78fdb785ce3cd853a66bdd8e5f4d211ca45349c16b0f2cfc58b78",
+      "state": "PASS",
+      "rationale": "Correct introductory units and deformation-versus-loading distinction.",
+      "evidence": [
+        {
+          "method": "independent_row_specific_check",
+          "finding": "Stress has force/area units Pa, while a simple engineering strain is DeltaL/L0 and is dimensionless."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Stress has force/area units Pa, while a simple engineering strain is DeltaL/L0 and is dimensionless."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Cause/effect is a mnemonic, not a universal constitutive direction: imposed strain, thermal expansion and constraints can generate stress, and tensors generalize the scalar picture."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L104"
+    },
+    {
+      "id": "repo-0c0280a354c2444532c5f7bc",
+      "ordinal": 5,
+      "messages_sha256": "0c0280a354c2444532c5f7bc6a757842bf4a27ae0587ac1dd8889428093011fd",
+      "state": "PASS",
+      "rationale": "Correct linear-elastic Young-modulus definition and reasonable representative stiffness orders.",
+      "evidence": [
+        {
+          "title": "MIT Unified Engineering Materials and Structures Lab01",
+          "url": "https://ocw.mit.edu/courses/16-001-unified-engineering-materials-and-structures-fall-2021/mit16_001_f21_lab01.pdf",
+          "finding": "Defines elastic slope, yield and maximum engineering tensile stress in the standard ductile tensile-test setting."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "For a linear uniaxial curve through the unloaded origin, slope d(sigma)/d(epsilon)=sigma/epsilon=E."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a linear uniaxial curve through the unloaded origin, slope d(sigma)/d(epsilon)=sigma/epsilon=E."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Exact steel/aluminum moduli vary with composition and conditions; rubber stiffness varies widely with formulation, strain, temperature and rate, so 0.01 GPa is an illustrative scale rather than a specification."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L105"
+    },
+    {
+      "id": "repo-7d1400bf9bdb95d8bbca69e3",
+      "ordinal": 6,
+      "messages_sha256": "7d1400bf9bdb95d8bbca69e3c916c2b04b996c40f7d55a27fc5a00d92689e122",
+      "state": "PASS",
+      "rationale": "Correct yield-versus-ultimate distinction in an ordinary ductile engineering tensile test.",
+      "evidence": [
+        {
+          "title": "MIT Unified Engineering Materials and Structures Lab01",
+          "url": "https://ocw.mit.edu/courses/16-001-unified-engineering-materials-and-structures-fall-2021/mit16_001_f21_lab01.pdf",
+          "finding": "Defines elastic slope, yield and maximum engineering tensile stress in the standard ductile tensile-test setting."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "UTS is the maximum engineering stress, commonly at incipient diffuse necking. Brittle materials may fracture without a clear prior yield point, and true post-neck stress has a different meaning."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L106"
+    },
+    {
+      "id": "repo-39a776a8088e367839cb11b4",
+      "ordinal": 7,
+      "messages_sha256": "39a776a8088e367839cb11b4a138d40266680802a6238a7a8363168d892549a8",
+      "state": "PASS",
+      "rationale": "Correct area definitions and conventional strain-hardening ductile tensile behavior after necking. The explanatory clause concerns opposite post-necking trends and does not assert numerical equality before necking.",
+      "evidence": [
+        {
+          "title": "David Roylance, MIT, Stress-Strain Curves",
+          "url": "https://ocw.mit.edu/courses/3-91-mechanical-behavior-of-plastics-spring-2007/3a897788136a567881ff5c4ff10ca780_04_stress.pdf",
+          "finding": "Distinguishes engineering and true measures before necking and gives the Considere construction and power-law necking strain."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "During homogeneous approximately volume-conserving extension, A=A0/(1+e), so sigma_true=sigma_engineering*(1+e) before neck formation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "During homogeneous approximately volume-conserving extension, A=A0/(1+e), so sigma_true=sigma_engineering*(1+e) before neck formation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The measures already differ whenever area changes; the post-necking trend is material-dependent, and local stress is multiaxial."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L108"
+    },
+    {
+      "id": "repo-fdd4034e73423e1cd96ce27b",
+      "ordinal": 9,
+      "messages_sha256": "fdd4034e73423e1cd96ce27b588ba3b421ee65c04b52ff51a67008aa2ca50618",
+      "state": "PASS",
+      "rationale": "Correct warning about fatigue damage and failure below macroscopic yield, with endurance behavior acknowledged.",
+      "evidence": [
+        {
+          "title": "David Roylance, MIT, Fatigue",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/f678e01017186c53d45845ad93c07938_MIT3_11F99_fatigue.pdf",
+          "finding": "Cyclic slip, initiation and growth permit fatigue failure below macroscopic static yield."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Not every sub-yield cyclic stress causes eventual failure: amplitude, mean stress, environment, defects and endurance behavior matter. The answer is the mechanism/risk overview, not a lifetime prediction for every cycle level."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L127"
+    },
+    {
+      "id": "repo-66c530eedbd311bd7bfaac5f",
+      "ordinal": 12,
+      "messages_sha256": "66c530eedbd311bd7bfaac5f5c4d7829e7808212f4283bfff07f1bc3f08f81e1",
+      "state": "PASS",
+      "rationale": "Correct classical Considere necking derivation and Hollomon hardening-exponent result.",
+      "evidence": [
+        {
+          "title": "David Roylance, MIT, Stress-Strain Curves",
+          "url": "https://ocw.mit.edu/courses/3-91-mechanical-behavior-of-plastics-spring-2007/3a897788136a567881ff5c4ff10ca780_04_stress.pdf",
+          "finding": "Distinguishes engineering and true measures before necking and gives the Considere construction and power-law necking strain."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "At maximum load F=sigma*A, dF=0 and plastic volume conservation dA/A=-d(epsilon_true) yield d(sigma)/d(epsilon)=sigma. For sigma=K*epsilon^n this gives epsilon=n."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At maximum load F=sigma*A, dF=0 and plastic volume conservation dA/A=-d(epsilon_true) yield d(sigma)/d(epsilon)=sigma. For sigma=K*epsilon^n this gives epsilon=n."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Assumes uniform uniaxial rate-independent plastic deformation, negligible elastic volume/strain contributions in the power law and suitable loading control. It is not a universal criterion for rate-sensitive or thermally softening materials."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L141"
+    },
+    {
+      "id": "repo-aae151a3558ecafd59d4b40b",
+      "ordinal": 13,
+      "messages_sha256": "aae151a3558ecafd59d4b40b9d14ffbe1e9f28acd761c7959d14d3c439816843",
+      "state": "QUARANTINE",
+      "rationale": "Plastic residual strain is one valid explanation, but zero stress with nonzero strain does not uniquely establish prior plastic loading. Free thermal strain and other eigenstrains can give the same observation.",
+      "evidence": [
+        {
+          "method": "independent_row_specific_check",
+          "finding": "A freely heated linear bar has epsilon=alpha*DeltaT and sigma=E*(epsilon-alpha*DeltaT)=0 without yielding."
+        },
+        {
+          "title": "MIT Lagace, Structural Mechanics Unit 9, page 5",
+          "url": "https://ocw.mit.edu/courses/16-20-structural-mechanics-fall-2002/9116903dab61fcd685f268bd3c97f733_unit9.pdf",
+          "finding": "Thermal strain can occur without stress in an unconstrained body; stress depends on mechanical strain after subtracting thermal expansion."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A freely heated linear bar has epsilon=alpha*DeltaT and sigma=E*(epsilon-alpha*DeltaT)=0 without yielding."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the definite diagnosis and loading history, not the standard elastic-unloading explanation when plastic deformation is independently known."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L145"
+    },
+    {
+      "id": "repo-d13b3e4181f544201664b718",
+      "ordinal": 14,
+      "messages_sha256": "d13b3e4181f544201664b718d0e47de7e0ced5833a5330f61a200cfb10d338ab",
+      "state": "PASS",
+      "rationale": "Correct nominal single-shear stress and von-Mises pure-shear yield ratio.",
+      "evidence": [
+        {
+          "method": "independent_row_specific_check",
+          "finding": "For pure shear tau, von Mises equivalent stress=sqrt(3)*|tau|, so shear yield is sigma_y/sqrt(3)=0.57735*sigma_y."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For pure shear tau, von Mises equivalent stress=sqrt(3)*|tau|, so shear yield is sigma_y/sqrt(3)=0.57735*sigma_y."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is an isotropic ductile yielding check, not a complete bolt safety assessment; thread area, bending, bearing, fatigue, preload and stress concentration require the actual joint model."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L146"
+    },
+    {
+      "id": "repo-f0b6179e2a06c26c0a7d44ec",
+      "ordinal": 16,
+      "messages_sha256": "f0b6179e2a06c26c0a7d44ec0e0bc7fcc57abce8f45f79cfe84114534cf41418",
+      "state": "QUARANTINE",
+      "rationale": "Restricted dislocation mobility and limited crack-tip plasticity are valid brittle-ceramic themes, but the answer incorrectly groups ionic bonds with covalent bonds as intrinsically directional.",
+      "evidence": [
+        {
+          "title": "UNSW, Ionic and Covalent Bonding",
+          "url": "https://www.unsw.edu.au/science/our-schools/materials/engage-with-us/high-school-students-and-teachers/online-tutorials/ceramics/structure-and-form/ionic-covalent-bonding",
+          "finding": "Distinguishes ordinary nondirectional ionic bonding from directional covalent bonding."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "An ideal ionic Coulomb interaction depends on charge separation, not an orbital bond angle. Ionic slip barriers involve lattice geometry and unfavorable like-charge alignment, not a blanket covalent-style directionality rule."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "An ideal ionic Coulomb interaction depends on charge separation, not an orbital bond angle. Ionic slip barriers involve lattice geometry and unfavorable like-charge alignment, not a blanket covalent-style directionality rule."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for the bond classification. Ceramic plasticity varies with structure, temperature and defects; the ordinary brittle behavior is not denied."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L148"
+    },
+    {
+      "id": "repo-14cd93e0f1a24b557b1802ca",
+      "ordinal": 17,
+      "messages_sha256": "14cd93e0f1a24b557b1802ca7629b534e9a1b6a673e1d9a20dea223a981b5058",
+      "state": "PASS",
+      "rationale": "Reasonable conceptual contrast between small metal bond strains before slip and larger recoverable polymer-chain conformational changes.",
+      "evidence": [
+        {
+          "title": "MIT Polymer Engineering, Chain Conformation and Rubber Elasticity",
+          "url": "https://www.ocw.mit.edu/courses/3-064-polymer-engineering-fall-2003/resources/lec_6/",
+          "finding": "Polymer-chain conformation and network entropy provide recoverable deformation mechanisms distinct from small bond stretching in ordinary crystalline metals."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The stated strains are example observations, not universal limits. Polymer response depends on glass transition, crystallinity, crosslinking and rate; irreversible lamellar drawing should not be conflated with reversible chain reconfiguration."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L152"
+    },
+    {
+      "id": "repo-388b46756a4f724223923c24",
+      "ordinal": 19,
+      "messages_sha256": "388b46756a4f724223923c243815f21bc14f90854320513d13e457b8fcecccdb",
+      "state": "PASS",
+      "rationale": "Correct pressure-insensitive von-Mises distortion-energy interpretation for ordinary ductile-metal yielding.",
+      "evidence": [
+        {
+          "method": "independent_row_specific_check",
+          "finding": "sigma_equiv²=[(sigma1-sigma2)²+(sigma2-sigma3)²+(sigma3-sigma1)²]/2, so an equal hydrostatic addition cancels."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "sigma_equiv²=[(sigma1-sigma2)²+(sigma2-sigma3)²+(sigma3-sigma1)²]/2, so an equal hydrostatic addition cancels."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is the model criterion, not a universal law for porous solids, pressure-sensitive polymers, brittle fracture or extreme-pressure transformations."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L160"
+    },
+    {
+      "id": "repo-5fe0781de176da23bfcde3a7",
+      "ordinal": 20,
+      "messages_sha256": "5fe0781de176da23bfcde3a7fe53b512006b5f78bc0fceb60bee27c21bda2282",
+      "state": "PASS",
+      "rationale": "Correct conventional thin closed-pressure-vessel membrane stresses, negligible radial stress, and the expected hoop-dominated longitudinal splitting tendency in the standard instructional model.",
+      "evidence": [
+        {
+          "title": "University of Illinois, Introductory Solid Mechanics, Pressure Vessels",
+          "url": "https://mechref.engr.illinois.edu/sol/pressure.html",
+          "finding": "Pressure-loaded end-cap force balance gives the axial pr/(2t) membrane stress; hoop force balance gives pr/t."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "Closed-end axial balance gives sigma_a*(2*pi*r*t)=p*pi*r². An open-ended tube without transmitted end thrust does not acquire that axial stress from pressure alone; flaw geometry and material anisotropy can change the failure direction."
+        },
+        {
+          "title": "University of Colorado, Physical Models and Demonstrations in Engineering Education, printed pages 99–100",
+          "url": "https://www.colorado.edu/ceae/sites/default/files/attached-files/how-to_guide_-_physical_models_and_demos_in_engineering_education.pdf",
+          "finding": "The conventional closed thin-cylinder demonstration links the two-to-one membrane stress ratio with longitudinal splitting."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Closed-end axial balance gives sigma_a*(2*pi*r*t)=p*pi*r². An open-ended tube without transmitted end thrust does not acquire that axial stress from pressure alone; flaw geometry and material anisotropy can change the failure direction."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The axial formula requires transmitted end thrust; open-ended tubes and actual fracture paths require their boundary conditions, flaws, joints, and material properties."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L162"
+    },
+    {
+      "id": "repo-38f399300821f596ac7569b2",
+      "ordinal": 21,
+      "messages_sha256": "38f399300821f596ac7569b26ab54c01acc4c46321dd2483e61e14d16a9196ff",
+      "state": "PASS",
+      "rationale": "Correct introductory Mode-I linear-elastic stress-intensity scale and toughness comparison.",
+      "evidence": [
+        {
+          "title": "David Roylance, MIT, Introduction to Fracture Mechanics",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/e5bca953e1dbd0cd0376f0f77033dc0d_MIT3_11F99_frac.pdf",
+          "finding": "Describes linear-elastic crack-tip stress intensity, geometry factors and the distinct plane-strain Mode-I toughness condition."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "The leading crack-tip stress field scales as K/sqrt(2*pi*r), and a geometry/loading factor gives K=Y*sigma*sqrt(pi*a)."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The leading crack-tip stress field scales as K/sqrt(2*pi*r), and a geometry/loading factor gives K=Y*sigma*sqrt(pi*a)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Use the appropriate mode, angular field, geometry-dependent Y and toughness for constraint/thickness. K_IC is the plane-strain Mode-I value, and Y near 1 is only a common illustrative scale, not a bound or complete design rule."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L168"
+    },
+    {
+      "id": "repo-99f649f02a6cfc10ba6065e0",
+      "ordinal": 22,
+      "messages_sha256": "99f649f02a6cfc10ba6065e0aa95daf6a935ec23e57de23cbbc13a5dc6c827c1",
+      "state": "PASS",
+      "rationale": "Correct square-root crack-length scaling and numerical example under a fixed geometry factor and applicable brittle-fracture criterion.",
+      "evidence": [
+        {
+          "title": "David Roylance, MIT, Introduction to Fracture Mechanics",
+          "url": "https://ocw.mit.edu/courses/3-11-mechanics-of-materials-fall-1999/e5bca953e1dbd0cd0376f0f77033dc0d_MIT3_11F99_frac.pdf",
+          "finding": "Describes linear-elastic crack-tip stress intensity, geometry factors and the distinct plane-strain Mode-I toughness condition."
+        },
+        {
+          "method": "independent_row_specific_check",
+          "finding": "0.7*sqrt(2)=0.989949..., while 0.7*sqrt(4)=1.4, giving the quoted near-threshold and above-threshold values in that model."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "0.7*sqrt(2)=0.989949..., while 0.7*sqrt(4)=1.4, giving the quoted near-threshold and above-threshold values in that model."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Y can vary as a crack approaches boundaries and loading/constraint can change. Guaranteed past it is read as the arithmetic of the specified 70-percent fixed-Y example, not a universal component-failure guarantee."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L169"
+    },
+    {
+      "id": "repo-e5c24c4b37f29893b6f0f8cc",
+      "ordinal": 23,
+      "messages_sha256": "e5c24c4b37f29893b6f0f8cc234854df12fa3c8541e0ae714807228b999df7e2",
+      "state": "PASS",
+      "rationale": "Correctly lists multiple plausible causes of early stress-strain nonlinearity and asks for material/rate context.",
+      "evidence": [
+        {
+          "title": "MIT Unified Engineering Materials and Structures Lab01",
+          "url": "https://ocw.mit.edu/courses/16-001-unified-engineering-materials-and-structures-fall-2021/mit16_001_f21_lab01.pdf",
+          "finding": "Defines elastic slope, yield and maximum engineering tensile stress in the standard ductile tensile-test setting."
+        },
+        {
+          "title": "MIT Polymer Engineering, Chain Conformation and Rubber Elasticity",
+          "url": "https://www.ocw.mit.edu/courses/3-064-polymer-engineering-fall-2003/resources/lec_6/",
+          "finding": "Polymer-chain conformation and network entropy provide recoverable deformation mechanisms distinct from small bond stretching in ordinary crystalline metals."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Nonlinearity alone does not establish irreversible plasticity; reversible nonlinear elasticity and time-dependent response must be distinguished by loading history and recovery."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L172"
+    },
+    {
+      "id": "repo-0b34090519957626a91fcd87",
+      "ordinal": 24,
+      "messages_sha256": "0b34090519957626a91fcd873bd2f35924e4ca715ef50fea87980689672d9492",
+      "state": "PASS",
+      "rationale": "Correct viscoelastic history dependence, recoverable and dissipative contributions, and standard creep/relaxation/hysteresis manifestations.",
+      "evidence": [
+        {
+          "method": "independent_row_specific_check",
+          "finding": "A linear viscoelastic stress can be written as a history integral over a relaxation modulus, combining storage and time dependence."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A linear viscoelastic stress can be written as a history integral over a relaxation modulus, combining storage and time dependence."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Different rheological networks need not have an instantaneous strain jump under a stress step; elastic refers to recoverable storage, while the whole response depends on the loading protocol."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_material_science.jsonl#L174"
+    }
+  ]
+}

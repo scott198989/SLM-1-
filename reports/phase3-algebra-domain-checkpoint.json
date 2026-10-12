@@ -1,0 +1,98 @@
+{
+  "repository": "scott198989/SLM-1-",
+  "published_remote_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "published_substantive_reviews": 392,
+  "publication_status": "LOCAL_ONLY; existing public-upload block respected",
+  "local_checkpoint_predecessor": "8c07a74d3307859279f09166ec7a5be11c4eaea3",
+  "electrical_checkpoint_commit": "59964150f76c34539bf770b939a039cf1054da05",
+  "selected_domain": "algebra",
+  "selected_domain_records": 216,
+  "new_pending_algebra_records_reviewed": 203,
+  "prior_algebra_substantive_reviews_preserved": 11,
+  "current_algebra_substantive_reviews": 214,
+  "all_selected_domain_records_substantively_reviewed": false,
+  "pending_substantive_queue_exhausted": true,
+  "preserved_structural_only_quarantines": [
+    {
+      "ordinal": 170,
+      "id": "repo-ba110a948fcfd763580a0637",
+      "messages_sha256": "ba110a948fcfd763580a063773a2f5d84a0ecdad2738b74b396544410c1adfa0",
+      "reason": "STANDALONE_CONTEXT_DEPENDENCY_UNRESOLVED",
+      "unchanged_from_published_base": true
+    },
+    {
+      "ordinal": 211,
+      "id": "repo-2308b4e2dc495dfb6b2f12f3",
+      "messages_sha256": "2308b4e2dc495dfb6b2f12f3f7902222528d4e723e795b250607f235837c4600",
+      "reason": "STANDALONE_CONTEXT_DEPENDENCY_UNRESOLVED",
+      "unchanged_from_published_base": true
+    }
+  ],
+  "domain_dispositions": {
+    "PASS": 176,
+    "QUARANTINE": 32,
+    "REJECT": 8
+  },
+  "new_review_dispositions": {
+    "PASS": 167,
+    "QUARANTINE": 30,
+    "REJECT": 6
+  },
+  "current_substantive_reviews": 870,
+  "current_dispositions": {
+    "PASS": 646,
+    "NEEDS_HUMAN_REVIEW": 1241,
+    "QUARANTINE": 178,
+    "REJECT": 47
+  },
+  "substantively_unreviewed": 1239,
+  "reviewed_specialist_holds": 2,
+  "all_three_original_structural_quarantines_preserved": true,
+  "all_667_electrical_checkpoint_decisions_preserved": true,
+  "all_392_published_decisions_preserved": true,
+  "all_2112_original_hashes_verified": true,
+  "all_source_message_tokens_and_rights_unchanged": true,
+  "all_216_algebra_original_source_lines_verified": true,
+  "source_bytes": 547194,
+  "source_sha256": "87dea8584252719990f16589465740a1fa9bfb4f2c161912e7c5e3bd2af2de07",
+  "source_git_blob": "49abd5e2c6c9d1e5a9954c61c993a9d2dbb53f16",
+  "frozen_file_sha256": {
+    "src/forge_tools/engineering.py": "ce6ab03daa581ba0dc179facd89dec2e41b2e3890c3215af5a5c75454199fd9e",
+    "src/forge_tools/statistics.py": "d72162556c53bdc63151f87a89ecedb231933800b928f86935d7c0882bbfd43d",
+    "reports/phase3-pilot-release.json": "555c9746295b83049fe05e4de6041ae0d6cff337f6fb9f6bb5b7c656d5962111",
+    "reports/phase3-rag-pilot.json": "b2f380c816869998ea50e9dc1d3ba25937e338b7887e95ef646d391fb88f74e6",
+    "reports/phase3-sealed-gold.json": "5ddd0bd9f46c0fe6134f885f7f9c8461467544bcc8d352e859620e3ac57c5149",
+    "manifests/phase3-release-families.json": "861b3ccf2ac3ae9988c4e6ffa59e8043c31623e88f5136b70c0ddfeba51a9510",
+    "manifests/phase3-rights-dispositions.json": "87d8247546810f388c741faf4710bcf220f6d029a3978fb8cc85d6191c00c549",
+    "data/sft/staging/forge-v01-review-curriculum.jsonl.gz": "81ed89390722b15e255719fbcbe929e3b1d78259078960e15ef6e633e297e0eb",
+    "data/sft/staging/consolidated-20261001-v2/candidates.jsonl.gz": "5696cb8188a1a9aa44ffc2544cdefa7f10ce3870862c1edd01922effeff95dcd",
+    "reports/qwen-token-audit.json": "77724a540cf3c712ef8a7e4508fb020156a48332d61389cb16817377826745b2",
+    "reports/preparation-validation.json": "7da2dc121480658173e682abac3c66af4b0996c8a725f0a27652ede7a4c216fb",
+    "manifests/repository-datasets-final.json": "a6eee4eb268398eeebdf8ac5b6c4c2f310f3d0137f6fccbbec205b16d953d4d5"
+  },
+  "original_domain_end_exclusive": 216,
+  "next_reader_offset": 225,
+  "reader_retained_only_structural_ordinals": [
+    170,
+    211
+  ],
+  "independent_agent_qa_batches": 9,
+  "next_domain": "Await supervisor selection",
+  "remaining_domain_pending_counts": {
+    "circuits": 0,
+    "engineering_mathematics": 194,
+    "algebra": 0,
+    "thermal_process_engineering": 2,
+    "trigonometry": 189,
+    "calculus": 208,
+    "electrical_components": 0,
+    "electromagnetism": 162,
+    "materials_manufacturing": 244,
+    "physics": 242
+  },
+  "technical_PASS_not_release_approval": true,
+  "independent_human_review": false,
+  "release_approved": false,
+  "training_authorized": false,
+  "private_artifacts_requalified": false
+}

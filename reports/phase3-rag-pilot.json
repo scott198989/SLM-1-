@@ -1,0 +1,145 @@
+{
+  "code_chunks": 8,
+  "exact_line_and_source_hash_checks_passed": true,
+  "expected_hits_top3": 10,
+  "figure_render_review": {
+    "axes_legend_units_caption_read": true,
+    "reviewer": "Codex visual inspection of final v02 PNG",
+    "source": "original ideal model, not measured or imported Drive image",
+    "values_and_intersections_checked": true
+  },
+  "index_sha256": "02223e1b189a9f0da4fd32f5761e85eaf6dc613f8811d64302ba698a902fccea",
+  "old_43205_chunk_index_production_approved": false,
+  "original_graph_chunks": 1,
+  "pilot_version": "rag-pilot-v02",
+  "private_manifest_sha256": "337583fc5b29aa381155d8454d38f4608a8ab62398e8e9a82d6b455c7f62e114",
+  "private_pilot_chunks": 9,
+  "production_approved_after_render_review": true,
+  "query_receipts": [
+    {
+      "entailment_review": "query targets explicitly quoted contract or original verified data table; only these demonstrator questions are qualified",
+      "expected_chunk": "calculator-axial_stress",
+      "expected_in_top3": true,
+      "hit_ids": [
+        "calculator-axial_stress",
+        "calculator-series_rlc",
+        "calculator-thermal_expansion"
+      ],
+      "query": "What is the zero load axial stress factor of safety?",
+      "source_slice_hash_location_rechecked": true
+    },
+    {
+      "entailment_review": "query targets explicitly quoted contract or original verified data table; only these demonstrator questions are qualified",
+      "expected_chunk": "calculator-dc_motor",
+      "expected_in_top3": true,
+      "hit_ids": [
+        "calculator-dc_motor",
+        "original-dc-motor-power-graph",
+        "calculator-series_rlc"
+      ],
+      "query": "DC motor torque mechanical power copper loss terminal voltage",
+      "source_slice_hash_location_rechecked": true
+    },
+    {
+      "entailment_review": "query targets explicitly quoted contract or original verified data table; only these demonstrator questions are qualified",
+      "expected_chunk": "calculator-thermal_expansion",
+      "expected_in_top3": true,
+      "hit_ids": [
+        "calculator-thermal_expansion",
+        "calculator-convert_units",
+        "calculator-dc_motor"
+      ],
+      "query": "thermal expansion unconstrained temperature difference",
+      "source_slice_hash_location_rechecked": true
+    },
+    {
+      "entailment_review": "query targets explicitly quoted contract or original verified data table; only these demonstrator questions are qualified",
+      "expected_chunk": "calculator-series_rlc",
+      "expected_in_top3": true,
+      "hit_ids": [
+        "calculator-series_rlc",
+        "calculator-second_order_step",
+        "calculator-axial_stress"
+      ],
+      "query": "series RLC natural frequency damping quality factor",
+      "source_slice_hash_location_rechecked": true
+    },
+    {
+      "entailment_review": "query targets explicitly quoted contract or original verified data table; only these demonstrator questions are qualified",
+      "expected_chunk": "calculator-second_order_step",
+      "expected_in_top3": true,
+      "hit_ids": [
+        "calculator-second_order_step",
+        "calculator-series_rlc"
+      ],
+      "query": "second order step settling time approximation peak time",
+      "source_slice_hash_location_rechecked": true
+    },
+    {
+      "entailment_review": "query targets explicitly quoted contract or original verified data table; only these demonstrator questions are qualified",
+      "expected_chunk": "calculator-quadratic_roots",
+      "expected_in_top3": true,
+      "hit_ids": [
+        "calculator-quadratic_roots",
+        "calculator-series_rlc"
+      ],
+      "query": "quadratic roots discriminant real roots",
+      "source_slice_hash_location_rechecked": true
+    },
+    {
+      "entailment_review": "query targets explicitly quoted contract or original verified data table; only these demonstrator questions are qualified",
+      "expected_chunk": "calculator-convert_units",
+      "expected_in_top3": true,
+      "hit_ids": [
+        "calculator-convert_units",
+        "calculator-series_rlc",
+        "calculator-dc_motor"
+      ],
+      "query": "convert units Celsius Kelvin angular frequency Hz",
+      "source_slice_hash_location_rechecked": true
+    },
+    {
+      "entailment_review": "query targets explicitly quoted contract or original verified data table; only these demonstrator questions are qualified",
+      "expected_chunk": "calculator-check_dimensional_equation",
+      "expected_in_top3": true,
+      "hit_ids": [
+        "calculator-check_dimensional_equation",
+        "calculator-convert_units",
+        "calculator-thermal_expansion"
+      ],
+      "query": "Equal dimensional equation units does it prove physical validity?",
+      "source_slice_hash_location_rechecked": true
+    },
+    {
+      "entailment_review": "query targets explicitly quoted contract or original verified data table; only these demonstrator questions are qualified",
+      "expected_chunk": "original-dc-motor-power-graph",
+      "expected_in_top3": true,
+      "hit_ids": [
+        "original-dc-motor-power-graph",
+        "calculator-dc_motor",
+        "calculator-check_dimensional_equation"
+      ],
+      "query": "At what current does the motor graph copper loss equal mechanical power?",
+      "source_slice_hash_location_rechecked": true
+    },
+    {
+      "entailment_review": "query targets explicitly quoted contract or original verified data table; only these demonstrator questions are qualified",
+      "expected_chunk": "original-dc-motor-power-graph",
+      "expected_in_top3": true,
+      "hit_ids": [
+        "original-dc-motor-power-graph",
+        "calculator-dc_motor"
+      ],
+      "query": "Motor figure current 5 amperes mechanical copper power",
+      "source_slice_hash_location_rechecked": true
+    }
+  ],
+  "raw_Drive_content_used": false,
+  "retrieval_queries": 10,
+  "sealed_statistics_source_family_present": false,
+  "source_files": 2,
+  "statistical_retrieval_accuracy_claim": false,
+  "status": "RELEASED_PRIVATE_CALCULATOR_REFERENCE_PILOT",
+  "training_authorized": false,
+  "visual_scope": "original fully specified plotted model only; external engineering figures unverified; Qwen Base has no image encoder"
+}

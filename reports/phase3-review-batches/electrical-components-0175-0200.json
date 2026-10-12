@@ -1,0 +1,520 @@
+{
+  "base_commit": "c62cdbe3d3cbc48b9b3ffd27b203b9c2a568e77f",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "electrical_components",
+  "offset": 175,
+  "limit": 25,
+  "next_offset": 200,
+  "new_substantive_reviews": 25,
+  "skipped_existing": 0,
+  "dispositions_added": {
+    "PASS": 23,
+    "QUARANTINE": 2
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "independent_agent",
+    "base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "records_checked": 25,
+    "canonical_hashes_matched": 25,
+    "whole_published_ledger_records_matched": 25,
+    "source_lines_and_staging_matched": 25,
+    "final_counts": {
+      "PASS": 23,
+      "QUARANTINE": 2
+    },
+    "all_states_upheld": true,
+    "review_only_corrections": [
+      "175 directly relevant input-spec evidence",
+      "183 direct shielding evidence"
+    ],
+    "source_answers_unchanged": true,
+    "independent_human_review": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 542,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 402,
+    "REJECT": 36,
+    "QUARANTINE": 130,
+    "NEEDS_HUMAN_REVIEW": 1544
+  },
+  "agent_substantive_reviews": 567,
+  "substantively_unreviewed": 1542,
+  "records": [
+    {
+      "id": "repo-60b4b295d441e3cde4b96ebd",
+      "ordinal": 175,
+      "messages_sha256": "60b4b295d441e3cde4b96ebd306aa35658232573228f78b5685585a2cec59e6a",
+      "state": "PASS",
+      "rationale": "Correct practical meaning of a logic-compatible SSR input, with the essential explicit warning to check actual voltage/current capability rather than assume every MCU or PLC pin can drive it. No universal logic voltage or input-current rating is invented.",
+      "evidence": [
+        {
+          "title": "OMRON SSR input terminology",
+          "url": "https://www.ia.omron.com/support/guide/18/explanation_of_terms.html",
+          "finding": "Defines SSR input voltage/current characteristics, which must be checked against the control output."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Compatibility requires output-high/low levels and source/sink-current capability to meet the SSR input requirements; a category name alone does not establish those inequalities."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L897"
+    },
+    {
+      "id": "repo-0f5b83b327f26b41d38a4e99",
+      "ordinal": 176,
+      "messages_sha256": "0f5b83b327f26b41d38a4e99876b15d73a5a91de4a85d65fa6eb050e1e7cde1a",
+      "state": "PASS",
+      "rationale": "Sound explanation of why an initial correction may not remain valid when layout-induced leakage, thermal offsets or coupling change with operating conditions. The conditional premise is changing parasitic error, not a claim that calibration can never include environmental compensation.",
+      "evidence": [
+        {
+          "title": "Analog Devices thermoelectric error in precision voltage sources",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/20-bit-dac-and-accurate-precision-voltage-source.html",
+          "finding": "Dissimilar junctions and thermal gradients create parasitic EMFs; clean junctions, thermal stabilization and symmetry reduce errors."
+        },
+        {
+          "title": "Analog Devices thermocouple measurement and shielding",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/measuring-temp-using-thermocouples.html",
+          "finding": "Low-level thermocouple signals require attention to EMI pickup and appropriate cable shielding."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A fixed correction measured at condition c0 cannot cancel a different offset e(c1) unless e(c1)=e(c0) or the correction explicitly models the change."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L898"
+    },
+    {
+      "id": "repo-48d7d2d708a7b8ed3881d62e",
+      "ordinal": 177,
+      "messages_sha256": "48d7d2d708a7b8ed3881d62ee8b6b050af53a87ee5228bf6395a05a59bec36ef",
+      "state": "PASS",
+      "rationale": "Appropriately multi-hypothesis reasoning: galvanic isolation does not eliminate capacitive common-mode coupling, cable paths, supply disturbances or receiver-margin problems. It explicitly says measurements are needed and does not infer a unique fault or certify barrier safety.",
+      "evidence": [
+        {
+          "title": "TI isolation technology comparison",
+          "url": "https://www.ti.com/document-viewer/lit/html/SSZT549/GUID-CA39ED82-D99B-4D48-9C4F-54279373DCFE",
+          "finding": "Optocoupler delay/CTR/aging and CMTI are device-dependent; integrated isolator solutions can also be cost-effective rather than universally more expensive."
+        },
+        {
+          "title": "Analog Devices grounding guidance",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/grounding-again.html",
+          "finding": "Local bypassing and controlled low-impedance current paths help keep switching currents from contaminating ADC circuitry; topology and frequency matter."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "An isolation barrier may block DC conduction while parasitic capacitance carries transient current I=C*dV/dt; isolation and common-mode-transient immunity are different properties."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L906"
+    },
+    {
+      "id": "repo-44882ff87dd750e3e0797cb5",
+      "ordinal": 178,
+      "messages_sha256": "44882ff87dd750e3e0797cb5dc03764974361e8e14220655614506731897c864",
+      "state": "PASS",
+      "rationale": "Correct concise LVDS description of small-swing differential signaling over a terminated pair with potential speed/EMI/immunity advantages. Differential current swing is acceptable current-steering language rather than an assertion that voltage is irrelevant; no unconditional cable/data-rate guarantee is made.",
+      "evidence": [
+        {
+          "title": "TI LVDS precision labs",
+          "url": "https://www.ti.com/video/series/precision-labs/ti-precision-labs-LVDS.html",
+          "finding": "A current-steering driver and termination develop a small differential voltage; typical 3.5 mA through 100 ohms yields 350 mV."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "3.5 mA through 100 ohms yields 0.35 V differential magnitude, with polarity switching to encode state."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L907"
+    },
+    {
+      "id": "repo-d32f708ef59e0b346efd0e09",
+      "ordinal": 179,
+      "messages_sha256": "d32f708ef59e0b346efd0e09d0d6e543bdffb722cf7deebf453bca478eeb53af",
+      "state": "PASS",
+      "rationale": "Correct practical LED-current-limiting explanation: the steep I-V relationship makes a bare voltage source an unreliable current control, and a suitable resistor/driver limits stress. Brightness/voltage wording is informal, but the causal current mechanism is explicitly supplied.",
+      "evidence": [
+        {
+          "title": "Kingbright LED circuit design notes",
+          "url": "https://www.kingbrightusa.com/applicationnotes/ApplicationNotesFor_SMD_LEDs.pdf",
+          "finding": "LED current is sensitive to applied voltage; current limiting and the actual part operating range matter rather than treating nominal forward voltage as a hard threshold."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L917"
+    },
+    {
+      "id": "repo-48dc9282244ae3de992c32f4",
+      "ordinal": 180,
+      "messages_sha256": "48dc9282244ae3de992c32f49164fc761e8eba0fcf1eb46476a5a268acdbf948",
+      "state": "PASS",
+      "rationale": "Reasonable conditional architecture for a large 24-to-3.3 V step-down, with optional low-noise postregulation and no part/rating prescription. Usually preserves exceptions such as extremely small loads; the answer does not claim every linear solution is thermally impossible.",
+      "evidence": [
+        {
+          "title": "Analog Devices AN-140 regulator concepts",
+          "url": "https://www.analog.com/en/resources/app-notes/an-140.html",
+          "finding": "Linear regulators favor low ripple/simplicity but dissipate voltage-drop times load current; switch-mode conversion trades switching artifacts and complexity for efficiency."
+        },
+        {
+          "title": "Analog Devices low-noise LDO postregulation",
+          "url": "https://www.analog.com/en/resources/technical-articles/supply-clean-power-with-ultralow-noise-ldo-regulators.html",
+          "finding": "Precision applications commonly combine a switching converter with a sufficiently high-PSRR low-noise LDO postregulator."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Ideal linear efficiency is roughly 3.3/24=13.75 percent, and dissipation is 20.7 V times load current. Absolute heat still depends on that current."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L922"
+    },
+    {
+      "id": "repo-b19e1231703b9380ed447929",
+      "ordinal": 181,
+      "messages_sha256": "b19e1231703b9380ed44792974fd1288ea2bf14c8abb4f262cb13ccffb84754f",
+      "state": "PASS",
+      "rationale": "Correct explanation of the common pulse-duration family on an SOA plot: transient thermal impedance permits greater short-pulse stress than continuous operation under the plotted conditions. It is not a complete application-qualification procedure or a promise of unlimited microsecond current.",
+      "evidence": [
+        {
+          "title": "Infineon MOSFET linear-mode SOA",
+          "url": "https://www.infineon.com/assets/row/public/documents/24/42/infineon-applicationnote-linear-mode-operation-safe-operation-diagram-mosfets-applicationnotes-en.pdf?fileId=db3a30433e30e4bf013e3646e9381200",
+          "finding": "MOSFET electrothermal instability depends on operating point, current temperature coefficient and heat removal; fully enhanced positive on-resistance behavior differs from vulnerable linear operation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L932"
+    },
+    {
+      "id": "repo-0196779f8b47c5c270c80ec4",
+      "ordinal": 182,
+      "messages_sha256": "0196779f8b47c5c270c80ec424b5f665c1db10eaf1601f56e86efea5831fddc9",
+      "state": "PASS",
+      "rationale": "Accurate static-versus-dynamic MOSFET gate-drive distinction, including charge, Miller coupling, peak current and driver timing. It avoids using threshold voltage as a drive guarantee and does not claim zero real gate leakage or zero switching energy.",
+      "evidence": [
+        {
+          "title": "Analog Devices gate-driver peak current",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/peak-current-of-isolated-gate-drivers.html",
+          "finding": "MOSFET switching requires charging/discharging nonlinear gate capacitance, including the drain-coupled Miller region, with appropriate driver current."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Average charge supplied per cycle gives approximately Iavg=Qg*f, while fast transition time requires peak current on the order of relevant gate charge divided by allowed transition time."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L933"
+    },
+    {
+      "id": "repo-76bffe7ecd03ff3c1e5e62f0",
+      "ordinal": 183,
+      "messages_sha256": "76bffe7ecd03ff3c1e5e62f0e0f6e1d3f44a2d104b810912dbc0e6f24094a0f1",
+      "state": "PASS",
+      "rationale": "Correct reason to consider shielding for small thermocouple/strain-gauge signals exposed to EMI. It says reduce pickup rather than eliminate every coupling mechanism and does not supply an unqualified shield-termination or protective-earth instruction.",
+      "evidence": [
+        {
+          "title": "Analog Devices thermocouple measurement and shielding",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/measuring-temp-using-thermocouples.html",
+          "finding": "Low-level thermocouple signals require attention to EMI pickup and appropriate cable shielding."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L938"
+    },
+    {
+      "id": "repo-cdb247a67b9baa07ac4a5275",
+      "ordinal": 184,
+      "messages_sha256": "cdb247a67b9baa07ac4a5275c7318caa6b88462a7885eefd37c4fdfb18324da9",
+      "state": "PASS",
+      "rationale": "Plausible non-exhaustive nanomotion sensing options and appropriate warning about environmental drift. Movement can be dynamic, so mentioning piezoelectric sensing is not a claim of unlimited DC/static position measurement; no chosen system accuracy is certified.",
+      "evidence": [
+        {
+          "title": "PI capacitive nanometrology sensors",
+          "url": "https://www.pi-usa.us/en/expertise/technology/sensor-technologies/capacitive-sensors/",
+          "finding": "Capacitive displacement sensing and laser interferometry serve nanometrology, with accuracy dependent on sensor geometry and environmental conditions."
+        },
+        {
+          "title": "PI Ceramic piezo technology",
+          "url": "https://www.piceramic.com/en/expertise/piezo-technology",
+          "finding": "Piezo components can generate and detect mechanical/ultrasonic waves through the inverse and direct piezoelectric effects."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A 0.1 m structure with expansion coefficient 10 ppm/K moves 1 micrometer per kelvin; even a 0.01 K change produces 10 nm, illustrating the environmental-control concern."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L944"
+    },
+    {
+      "id": "repo-8bc82e16d1107569432a8244",
+      "ordinal": 185,
+      "messages_sha256": "8bc82e16d1107569432a8244c98efc7dcdbe45705608bb10f7b6683b8b2169c6",
+      "state": "PASS",
+      "rationale": "Correct rejection of the false amplify-versus-switch dichotomy: semiconductor transistors are routinely driven between off and low-loss on states rather than intentionally held in a linear-amplifying regime.",
+      "evidence": [
+        {
+          "title": "Analog Devices gate-driver peak current",
+          "url": "https://www.analog.com/en/resources/analog-dialogue/articles/peak-current-of-isolated-gate-drivers.html",
+          "finding": "MOSFET switching requires charging/discharging nonlinear gate capacitance, including the drain-coupled Miller region, with appropriate driver current."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A switch minimizes conduction loss with low on-state voltage and blocks current when off; this is a different operating objective from small-signal linear amplification."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L945"
+    },
+    {
+      "id": "repo-cec6ec5a6b0892daf643e765",
+      "ordinal": 186,
+      "messages_sha256": "cec6ec5a6b0892daf643e765c3854a8a020715be5044cd405bf6d28b5aa5009e",
+      "state": "PASS",
+      "rationale": "Correct inductive current-continuity, wiring-parasitic and transient-stress chain. It does not equate occasional survival/avalanche with design qualification and appropriately lists multiple clamp approaches depending on release speed.",
+      "evidence": [
+        {
+          "title": "TI solenoid driving topologies",
+          "url": "https://www.ti.com/lit/an/slvae59a/slvae59a.pdf?ts=1776259564837",
+          "finding": "Discusses low-side/high-side and bridge switching, recirculation and clamp choices for inductive solenoid loads."
+        },
+        {
+          "title": "Infineon MOSFET linear-mode SOA",
+          "url": "https://www.infineon.com/assets/row/public/documents/24/42/infineon-applicationnote-linear-mode-operation-safe-operation-diagram-mosfets-applicationnotes-en.pdf?fileId=db3a30433e30e4bf013e3646e9381200",
+          "finding": "MOSFET electrothermal instability depends on operating point, current temperature coefficient and heat removal; fully enhanced positive on-resistance behavior differs from vulnerable linear operation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "V=L*di/dt means forced rapid current interruption demands large voltage; stored energy 0.5*L*I² must be transferred or dissipated through a controlled path."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L947"
+    },
+    {
+      "id": "repo-2fba667209f0a1939d7b0147",
+      "ordinal": 187,
+      "messages_sha256": "2fba667209f0a1939d7b01472a18275c6984940b17720cf54350e71f944a5e2d",
+      "state": "PASS",
+      "rationale": "Reasonable conditional sensor-selection comparison: target material and distance come first, and the answer separately checks chemical compatibility, sealing and cleaning rather than equating an IP rating with all-environment safety. It does not certify an unnamed fertilizer installation.",
+      "evidence": [
+        {
+          "title": "ifm compact inductive sensors",
+          "url": "https://www.ifm.com/us/en/us/learn-more/inductive/compact-inductive-sensors/compact-inductive-sensors",
+          "finding": "Metal-target inductive proximity sensing can tolerate dust/moisture and avoids optical lens obscuration, but model and exposure suitability still matter."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L954"
+    },
+    {
+      "id": "repo-50fd19d6ec3e5fa5e45509fa",
+      "ordinal": 188,
+      "messages_sha256": "50fd19d6ec3e5fa5e45509fa7ac931c62c6f8d2421897f7b9911496dc17af088",
+      "state": "PASS",
+      "rationale": "Correct basic four-wire force/sense technique for suppressing lead/contact drop in a resistance measurement. Removing those errors is accepted idealized wording when sense points bracket the DUT; it does not remove contact resistance inside the sensed boundary or other instrument errors.",
+      "evidence": [
+        {
+          "title": "Keithley four-wire Kelvin measurements",
+          "url": "https://download.tek.com/document/2110_2Wire4WireKelvinResistanceAppNote.pdf",
+          "finding": "Separate force and sense leads suppress lead/contact voltage-drop error when sense connections bracket the DUT and draw negligible current."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With negligible sense current, sense-lead I*R drop is negligible, while the high-current lead drop falls outside the voltage-sense points."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L957"
+    },
+    {
+      "id": "repo-5fac8859ddf03985a1eb70cc",
+      "ordinal": 189,
+      "messages_sha256": "5fac8859ddf03985a1eb70cc6f1e09d2e84dfd7493f41fc57e3315e39902bcf5",
+      "state": "PASS",
+      "rationale": "Appropriate possible-cause list for a hot contactor, including terminal/contact resistance, load/rating and ambient conditions. Could be several things avoids the unsupported definitive diagnosis seen in another record.",
+      "evidence": [
+        {
+          "title": "OMRON relay troubleshooting",
+          "url": "https://www.ia.omron.com/support/guide/36/troubleshooting.html",
+          "finding": "Mechanical relays have multiple failure mechanisms, including contact welding, wear, intermittent contact and coil deterioration."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Contact/terminal heating scales with I²R, while elevated ambient reduces temperature margin even at unchanged current."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L983"
+    },
+    {
+      "id": "repo-4c041025f0996315f131ddb0",
+      "ordinal": 190,
+      "messages_sha256": "4c041025f0996315f131ddb004a86891107af5577427cb2cf16b4fc8283a7af7",
+      "state": "PASS",
+      "rationale": "Sound topology-aware decomposition of buffering, inductive current dynamics and resistive sensing/damping/loss, with explicit ESR/ESL/core/saturation limitations. It repeatedly qualifies placement and boundary instead of pretending every input stage has one fixed circuit.",
+      "evidence": [
+        {
+          "title": "Coilcraft application-frequency inductor testing",
+          "url": "https://www.coilcraft.com/en-us/resources/application-notes/testing-inductors-at-application-frequencies/",
+          "finding": "Winding resistance and copper/core losses affect Q; winding capacitance and inductance set self-resonance."
+        },
+        {
+          "title": "Analog Devices practical capacitor behavior",
+          "url": "https://www.analog.com/en/resources/technical-articles/2022/07/16/11/45/passives-arent-really-so-passive-part-1-capacitors.html",
+          "finding": "Parasitic inductance, geometry and resonance determine capacitive connections' frequency response; ground-coupled noise currents are not erased."
+        },
+        {
+          "title": "Analog Devices AN-140 regulator concepts",
+          "url": "https://www.analog.com/en/resources/app-notes/an-140.html",
+          "finding": "Linear regulators favor low ripple/simplicity but dissipate voltage-drop times load current; switch-mode conversion trades switching artifacts and complexity for efficiency."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Capacitor ripple loss is Irms²*ESR, parasitic lead voltage includes ESL*di/dt, and inductor voltage is L*di/dt before saturation/nonlinear effects dominate."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L989"
+    },
+    {
+      "id": "repo-49f6295f61cb18fdc6f00e3d",
+      "ordinal": 191,
+      "messages_sha256": "49f6295f61cb18fdc6f00e3df6458b94fea49c43d1bc8ab5819470a97a19d300",
+      "state": "QUARANTINE",
+      "rationale": "Certification and breaking capacity are important, but safety-rated versus regular is not defined as one universal fuse class, and without arcing again conflates safe arc interruption with zero internal arc formation. The exact standard, voltage and fault-duty rating must be identified rather than inferred from a generic label.",
+      "evidence": [
+        {
+          "title": "Littelfuse technical application guide",
+          "url": "https://www.littelfuse.com/assetdocs/powr-gard-catalog?assetguid=85d36235-a32b-4608-bfed-f9878aa43af0",
+          "finding": "Interrupting rating is the available fault current the fuse can interrupt safely at its rated voltage and specified test conditions."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L993"
+    },
+    {
+      "id": "repo-56106e2175d4a555008e0a1c",
+      "ordinal": 192,
+      "messages_sha256": "56106e2175d4a555008e0a1cdf67deddc4d81c2234cc9fa363662059a507431d",
+      "state": "QUARANTINE",
+      "rationale": "The graph-reading steps are broadly correct, but reading maximum allowable current from pulse width alone omits the plotted case temperature and single-versus-repetitive pulse conditions. A vague stay well below cannot establish suitability under hotter or repetitive operation. Hold the unqualified application recipe rather than importing missing thermal conditions.",
+      "evidence": [
+        {
+          "title": "Infineon MOSFET linear-mode SOA",
+          "url": "https://www.infineon.com/assets/row/public/documents/24/42/infineon-applicationnote-linear-mode-operation-safe-operation-diagram-mosfets-applicationnotes-en.pdf?fileId=db3a30433e30e4bf013e3646e9381200",
+          "finding": "MOSFET electrothermal instability depends on operating point, current temperature coefficient and heat removal; fully enhanced positive on-resistance behavior differs from vulnerable linear operation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "In a thermal-limited region, allowable power scales with (Tjmax-Tcase)/Zth. Raising Tcase from 25 C to 100 C with Tjmax=150 C reduces this headroom from 125 K to 50 K before any repetitive-duty correction."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L995"
+    },
+    {
+      "id": "repo-fe59f0bcfcd4e0e919487d81",
+      "ordinal": 193,
+      "messages_sha256": "fe59f0bcfcd4e0e919487d81296624ac30bd8e24c99f507178d2e7eddde42394",
+      "state": "PASS",
+      "rationale": "Correct qualified reversibility example: piezoelectric elements can convert mechanical excitation to an electrical signal and electrical excitation to mechanical motion. Sometimes avoids generalizing this to all transducers or promising equal efficiency in both directions.",
+      "evidence": [
+        {
+          "title": "PI Ceramic piezo technology",
+          "url": "https://www.piceramic.com/en/expertise/piezo-technology",
+          "finding": "Piezo components can generate and detect mechanical/ultrasonic waves through the inverse and direct piezoelectric effects."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L1002"
+    },
+    {
+      "id": "repo-7741abe4844cadf33598d7cf",
+      "ordinal": 194,
+      "messages_sha256": "7741abe4844cadf33598d7cf342374976efcdda31a50c61a3319dc3a018adb51",
+      "state": "PASS",
+      "rationale": "Appropriate ADC-driver selection checklist covers dynamic settling, noise/distortion, ranges, load stability, DC error and supply rejection, and calls for ADC-specific vendor guidance. It does not mistake bandwidth alone for guaranteed settling precision.",
+      "evidence": [
+        {
+          "title": "TI TIDA-01053 ADC-driver reference design",
+          "url": "https://www.ti.com/tool/TIDA-01053",
+          "finding": "A capacitive ADC input makes settling, stability, current drive, noise and distortion central to amplifier selection."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L1003"
+    },
+    {
+      "id": "repo-ad35b66c8332d19fd838dc36",
+      "ordinal": 195,
+      "messages_sha256": "ad35b66c8332d19fd838dc36edc7311afe4b35dd34e0622df1567813f35e6e29",
+      "state": "PASS",
+      "rationale": "Defensible conditional recommendation using the prompt's stated lead time, price premium, criticality and supply risks, rather than supplier nationality alone. It acknowledges cases where the alternative could be justified and creates no purchase commitment or invented cost calculation.",
+      "evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "A 26-week replenishment horizon versus 4 weeks creates a larger planning/exposure window, but total risk cost cannot be numerically computed without demand and disruption data."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L1005"
+    },
+    {
+      "id": "repo-a9cd01d384275f05f8a91971",
+      "ordinal": 196,
+      "messages_sha256": "a9cd01d384275f05f8a91971f2a12a058306a2e760eaf3f2ade1b918534098c5",
+      "state": "PASS",
+      "rationale": "Clear, accurate operational paraphrase of component lifecycle exposure and downstream redesign/supply costs. It uses may/can and does not assert a specific supplier or part is actually nearing end of life.",
+      "evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "An otherwise functional component can impose future redesign/support cost when availability or support changes; present unit price does not encode that whole lifecycle exposure."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L1008"
+    },
+    {
+      "id": "repo-627d2cf3374ffd9a80c39298",
+      "ordinal": 197,
+      "messages_sha256": "627d2cf3374ffd9a80c39298733b1584b5672686db0b4c3a7e73739ea1cc448d",
+      "state": "PASS",
+      "rationale": "Correct ideal capacitive-versus-inductive reactance trend, at the conceptual level asked about. It does not address complete real-component impedance beyond self-resonance; easier/harder to drive means lower/higher impedance magnitude here.",
+      "evidence": [
+        {
+          "title": "Coilcraft application-frequency inductor testing",
+          "url": "https://www.coilcraft.com/en-us/resources/application-notes/testing-inductors-at-application-frequencies/",
+          "finding": "Winding resistance and copper/core losses affect Q; winding capacitance and inductance set self-resonance."
+        },
+        {
+          "title": "Analog Devices practical capacitor behavior",
+          "url": "https://www.analog.com/en/resources/technical-articles/2022/07/16/11/45/passives-arent-really-so-passive-part-1-capacitors.html",
+          "finding": "Parasitic inductance, geometry and resonance determine capacitive connections' frequency response; ground-coupled noise currents are not erased."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For positive frequency, |Xc|=1/(2*pi*f*C) decreases with f, while |Xl|=2*pi*f*L increases with f."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L1021"
+    },
+    {
+      "id": "repo-281637aa900cb83b597842fb",
+      "ordinal": 198,
+      "messages_sha256": "281637aa900cb83b597842fb4185766393604957641b991bdb4f9cec916602db",
+      "state": "PASS",
+      "rationale": "Correct qualitative low-pass effect when useful sensor changes are slower than the noise: the RC time constant attenuates faster components while passing slower variation. Might help appropriately avoids claiming it can separate overlapping-band signal and noise without distortion.",
+      "evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "For an unloaded first-order RC low-pass, H(jw)=1/(1+j*w*R*C); magnitude is near 1 for wRC<<1 and falls for wRC>>1."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L1026"
+    },
+    {
+      "id": "repo-a7ed697ce83dd58ac03167b9",
+      "ordinal": 199,
+      "messages_sha256": "a7ed697ce83dd58ac03167b9033b0674f91d92c58f95959b3494229164c7856b",
+      "state": "PASS",
+      "rationale": "Reasonable conditional lifecycle/BOM comparison between the stated short-season toy and long-service industrial system. May and more likely preserve business-dependent trade-offs; the answer does not imply cost pressure excuses product-safety duties or invent a specific company's policy.",
+      "evidence": [
+        {
+          "method": "independent_analytical_check",
+          "finding": "Long support horizons and costly downtime increase the potential value of availability/qualified alternates relative to an otherwise equal short-lived product; no universal numeric premium follows."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_elect_components.jsonl#L1031"
+    }
+  ]
+}

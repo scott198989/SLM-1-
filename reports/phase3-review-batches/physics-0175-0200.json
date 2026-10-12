@@ -1,0 +1,681 @@
+{
+  "base_commit": "67994b7933dd378ff53c8baf77c0afce90467e17",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "physics",
+  "offset": 175,
+  "limit": 25,
+  "next_offset": 200,
+  "selected_window_end_exclusive": 200,
+  "selected_rows_in_window": 25,
+  "new_substantive_reviews": 25,
+  "skipped_existing": 0,
+  "preserved_structural_quarantines": [],
+  "dispositions_added": {
+    "PASS": 21,
+    "QUARANTINE": 4
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "/root/review_physics_eighth_batch",
+    "records_checked": 25,
+    "final_counts": {
+      "PASS": 21,
+      "QUARANTINE": 4
+    },
+    "disposition_changes": [],
+    "review_precision_corrections": [
+      "182 held only for strength-dependent exact decoupling, preserving approximate usefulness.",
+      "183 uses initially degenerate uncoupled oscillators split by detuning.",
+      "186 retains the higher-order decay-rate-difference caveat."
+    ],
+    "full_prompt_and_answer_review": true,
+    "all_source_hashes_ids_ordinals_and_ledger_matches": true,
+    "source_sha256": "080c95bcf16135143d3609bd39c6d8bccd90385405dc49b8673ccb8e7e5cab93",
+    "candidate_preparation_predecessor_commit": "3025f8eb30f4472580e503d85aa3261f30d26945",
+    "reviewed_against_local_commit": "67994b7933dd378ff53c8baf77c0afce90467e17",
+    "published_base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "independent_human_review": false,
+    "release_approved": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 1790,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 1454,
+    "REJECT": 66,
+    "QUARANTINE": 296,
+    "NEEDS_HUMAN_REVIEW": 296
+  },
+  "agent_substantive_reviews": 1815,
+  "substantively_unreviewed": 294,
+  "records": [
+    {
+      "id": "repo-5a479431bc2af0cbeb9650d0",
+      "ordinal": 175,
+      "messages_sha256": "5a479431bc2af0cbeb9650d0184e9b7f2097357e5ab2c06e45298199121fccde",
+      "state": "PASS",
+      "rationale": "Correct separation between a system modal shape and the coefficient set by excitation or initial data.",
+      "evidence": [
+        {
+          "title": "MIT Engineering Dynamics, Modal Analysis lecture24",
+          "url": "https://ocw.mit.edu/courses/2-003sc-engineering-dynamics-fall-2011/resources/lecture-24-modal-analysis-orthogonality-mass-stiffness-damping-matrix/index.html",
+          "finding": "Mode transformation diagonalizes mass and stiffness, while compatible classical damping also yields a diagonal modal damping matrix."
+        },
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For x(t)=v_n*q_n(t), v_n is the shape vector and q_n sets its excitation with a specified normalization."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Shape scaling is arbitrary until normalization is fixed, and the coefficient rescales inversely; only their product is physical."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1144"
+    },
+    {
+      "id": "repo-6177586c2a5030f309b70c86",
+      "ordinal": 176,
+      "messages_sha256": "6177586c2a5030f309b70c86ff75731ad3935f1766bfff37db02eda02e180dea",
+      "state": "PASS",
+      "rationale": "Correct compatibility criterion for classical damping and the consequence of modal cross terms.",
+      "evidence": [
+        {
+          "title": "MIT Engineering Dynamics, Modal Analysis lecture24",
+          "url": "https://ocw.mit.edu/courses/2-003sc-engineering-dynamics-fall-2011/resources/lecture-24-modal-analysis-orthogonality-mass-stiffness-damping-matrix/index.html",
+          "finding": "Mode transformation diagonalizes mass and stiffness, while compatible classical damping also yields a diagonal modal damping matrix."
+        },
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If Phi^T*M*Phi=I and Phi^T*K*Phi=Omega², then proportional C=a*M+b*K gives Phi^T*C*Phi=a*I+b*Omega², so modal equations decouple."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Simultaneous Euclidean eigenvectors of M,K,C are a sufficient special case; the general statement uses the mass-normalized/congruence modal basis. Complex state-space modes can handle many nonclassical cases."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1148"
+    },
+    {
+      "id": "repo-0542eb4fcd9d5f23220bfce7",
+      "ordinal": 177,
+      "messages_sha256": "0542eb4fcd9d5f23220bfce7c77b3057e03c24e93f6bd4af90a0a3f05c4e71c5",
+      "state": "PASS",
+      "rationale": "Correct state-continuity and new-modal-projection explanation after an ideal finite stiffness step.",
+      "evidence": [
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Positions and velocities remain continuous under bounded-force parameter switching; coefficients must then be recomputed in the new eigenbasis. For a symmetric pair, stronger positive coupling raises the antisymmetric frequency and usually increases splitting."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Changing stiffness can inject or remove potential energy through the actuator. Frequency-splitting trends are model-dependent, and usually is correctly qualified."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1151"
+    },
+    {
+      "id": "repo-b753e2c0def4308990edd38c",
+      "ordinal": 178,
+      "messages_sha256": "b753e2c0def4308990edd38c1d826bfdc7f20e5632d486a63d1aa1290995d39f",
+      "state": "PASS",
+      "rationale": "Correct symmetry shortcut for identifying a candidate mode shape and reducing the calculation.",
+      "evidence": [
+        {
+          "title": "MIT Engineering Dynamics, Modal Analysis lecture24",
+          "url": "https://ocw.mit.edu/courses/2-003sc-engineering-dynamics-fall-2011/resources/lecture-24-modal-analysis-orthogonality-mass-stiffness-damping-matrix/index.html",
+          "finding": "Mode transformation diagonalizes mass and stiffness, while compatible classical damping also yields a diagonal modal damping matrix."
+        },
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "An invariant symmetric/antisymmetric subspace can be tested directly in K*v=omega²*M*v instead of expanding the full determinant."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Symmetry can determine a subspace rather than a unique eigenvector in degenerate or higher-dimensional cases; the source uses often and likely."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1152"
+    },
+    {
+      "id": "repo-a9fc33bd92ae62b34388f962",
+      "ordinal": 179,
+      "messages_sha256": "a9fc33bd92ae62b34388f962e7b21764a8e3a035ce9aa88667e4cda35f668cb4",
+      "state": "PASS",
+      "rationale": "Correct modal-participation explanation for a local force producing motion elsewhere in a coupled system.",
+      "evidence": [
+        {
+          "title": "MIT Engineering Dynamics, Modal Analysis lecture24",
+          "url": "https://ocw.mit.edu/courses/2-003sc-engineering-dynamics-fall-2011/resources/lecture-24-modal-analysis-orthogonality-mass-stiffness-damping-matrix/index.html",
+          "finding": "Mode transformation diagonalizes mass and stiffness, while compatible classical damping also yields a diagonal modal damping matrix."
+        },
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Generalized modal force is v_n^T*f under a consistent mass normalization; a force at one coordinate excites modes having nonzero participation there."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "At special frequencies destructive modal interference can cancel the other coordinate, so can is important rather than guaranteed motion at every frequency."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1156"
+    },
+    {
+      "id": "repo-5a5309f3d3345a6237f61976",
+      "ordinal": 180,
+      "messages_sha256": "5a5309f3d3345a6237f61976d9ce2070c6a37ce1087f86d7869602aa7c7604d4",
+      "state": "PASS",
+      "rationale": "Correct qualitative two-mode beating and unequal-decay picture in the underdamped modal regime.",
+      "evidence": [
+        {
+          "title": "MIT Engineering Dynamics, Modal Analysis lecture24",
+          "url": "https://ocw.mit.edu/courses/2-003sc-engineering-dynamics-fall-2011/resources/lecture-24-modal-analysis-orthogonality-mass-stiffness-damping-matrix/index.html",
+          "finding": "Mode transformation diagonalizes mass and stiffness, while compatible classical damping also yields a diagonal modal damping matrix."
+        },
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A sum a1*exp(-gamma1*t)*cos(omega1*t)+a2*exp(-gamma2*t)*cos(omega2*t) retains a decaying beat if rates are similar and loses visibility when one term becomes negligible."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Strong overdamping or nonclassical modal coupling can need a fuller state-space treatment; the question names a weakly coupled pair and the answer explains the ordinary oscillatory case."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1159"
+    },
+    {
+      "id": "repo-46adf42445adc7e42b2c25cb",
+      "ordinal": 181,
+      "messages_sha256": "46adf42445adc7e42b2c25cb67d055dc8dc2a2c24e9703c3af34d6c63fbabd67",
+      "state": "PASS",
+      "rationale": "Correct counterexample to inferring absence of coupling from one unstretched in-phase motion.",
+      "evidence": [
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For two displacements x1=x2, a coupling-spring extension x1-x2 vanishes, while its stiffness still changes the out-of-phase mode."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The coupling can carry a prestress or have nonlinear features in other models; the simple spring example establishes the intended point."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1163"
+    },
+    {
+      "id": "repo-2951dc22e5af2e4c09d52ce5",
+      "ordinal": 182,
+      "messages_sha256": "2951dc22e5af2e4c09d52ce5fe8867b8160d34cf07da8836e29950e8c56003fc",
+      "state": "QUARANTINE",
+      "rationale": "The rejection of total mode destruction is right, but exact undamped-basis decoupling does not wait for damping to mix modes strongly enough. Any nonzero off-diagonal modal damping term breaks exact decoupling, although a weak term can be a good approximation.",
+      "evidence": [
+        {
+          "title": "MIT, Using superposition of undamped modes to model non-orthogonally damped systems",
+          "url": "https://dspace.mit.edu/entities/publication/899ad9a3-778d-4269-bc6f-93a70e5d330d",
+          "finding": "Nonproportional damping introduces modal cross terms; neglecting them is an approximation whose accuracy depends on the system."
+        },
+        {
+          "title": "MIT Engineering Dynamics, Modal Analysis lecture24",
+          "url": "https://ocw.mit.edu/courses/2-003sc-engineering-dynamics-fall-2011/resources/lecture-24-modal-analysis-orthogonality-mass-stiffness-damping-matrix/index.html",
+          "finding": "Mode transformation diagonalizes mass and stiffness, while compatible classical damping also yields a diagonal modal damping matrix."
+        },
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With M=I,K=diag(1,4),C=epsilon*[[1,1],[1,1]], the undamped basis has off-diagonal damping for every epsilon>0, however small."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the ambiguous strength-based exact-decoupling criterion, not the practical usefulness of lightly damped modal approximations or the existence of complex modes."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1164"
+    },
+    {
+      "id": "repo-aa8ce37fb7ebf112b2a75e20",
+      "ordinal": 183,
+      "messages_sha256": "aa8ce37fb7ebf112b2a75e202ebdece92cf7279aac5b91ee73fc7b08fdb56403",
+      "state": "QUARANTINE",
+      "rationale": "The distinction between split modes and observed beating is correct, but frequency separation alone does not prove that an interaction caused it. Detuning uncoupled oscillators also gives separated frequencies.",
+      "evidence": [
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Begin with two uncoupled oscillators having identical stiffness-to-mass ratios and one degenerate frequency. Detuning one stiffness then splits the frequencies without adding any coupling or permitting inter-oscillator energy exchange."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "If a controlled comparison shows coupling lifts a prior degeneracy, splitting is relevant evidence. Hold the unqualified proves/evidence-of-coupling inference while preserving the preparation-dependent beating explanation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1170"
+    },
+    {
+      "id": "repo-ef595eb07164a114ebfd5071",
+      "ordinal": 184,
+      "messages_sha256": "ef595eb07164a114ebfd5071e75bc2dcadcb3552ff77e58c7f1ea51e35612489",
+      "state": "PASS",
+      "rationale": "Correct plain-language meaning of lifting an initially shared frequency degeneracy by a coupling-induced split.",
+      "evidence": [
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A perturbation with different eigenvalues inside a degenerate subspace separates the previously equal frequencies."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Not every coupling lifts every protected degeneracy, but the prompt explicitly asks about observed frequency splitting."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1174"
+    },
+    {
+      "id": "repo-7d068ebef9a7fccd5b18bade",
+      "ordinal": 185,
+      "messages_sha256": "7d068ebef9a7fccd5b18bade7e5cb3a312272d08d46f7827eba47718d66a82e8",
+      "state": "PASS",
+      "rationale": "Correct qualified single-mode inference for equal initial displacements in a symmetric identical pair, with damping and imperfections acknowledged.",
+      "evidence": [
+        {
+          "title": "MIT Engineering Dynamics, Modal Analysis lecture24",
+          "url": "https://ocw.mit.edu/courses/2-003sc-engineering-dynamics-fall-2011/resources/lecture-24-modal-analysis-orthogonality-mass-stiffness-damping-matrix/index.html",
+          "finding": "Mode transformation diagonalizes mass and stiffness, while compatible classical damping also yields a diagonal modal damping matrix."
+        },
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For identical mirrored oscillators, (x1,x2)=(a,a) and zero velocities have no antisymmetric projection, yielding one free modal frequency."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Lack of visible beats is not conclusive evidence by itself; the original explicitly mentions weak second-mode content and damping as alternatives."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1184"
+    },
+    {
+      "id": "repo-2ab92ed89f337efa51b99892",
+      "ordinal": 186,
+      "messages_sha256": "2ab92ed89f337efa51b99892e2a9e78c2d6435b52ed491ea23793f4645d49df7",
+      "state": "PASS",
+      "rationale": "Reasonable qualitative account of lossy, generally imperfect energy exchange when damping acts on one member of a coupled pair.",
+      "evidence": [
+        {
+          "title": "MIT, Using superposition of undamped modes to model non-orthogonally damped systems",
+          "url": "https://dspace.mit.edu/entities/publication/899ad9a3-778d-4269-bc6f-93a70e5d330d",
+          "finding": "Nonproportional damping introduces modal cross terms; neglecting them is an approximation whose accuracy depends on the system."
+        },
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Damped modal rates and transfer completeness depend on coupling and damping strength. In weak damping the two rates can be nearly equal, so less-damped dominance may emerge only on long times; the undamped perfect-transfer pattern is not preserved indefinitely."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1185"
+    },
+    {
+      "id": "repo-2dd7742b20f0254dd2a47f55",
+      "ordinal": 187,
+      "messages_sha256": "2dd7742b20f0254dd2a47f55eb2b562c380fcce3657141a5a8c2f34b64a3e5c0",
+      "state": "PASS",
+      "rationale": "Correct distinction between symmetry-forbidden excitation and simultaneous participation of two compatible modes.",
+      "evidence": [
+        {
+          "title": "MIT Engineering Dynamics, Modal Analysis lecture24",
+          "url": "https://ocw.mit.edu/courses/2-003sc-engineering-dynamics-fall-2011/resources/lecture-24-modal-analysis-orthogonality-mass-stiffness-damping-matrix/index.html",
+          "finding": "Mode transformation diagonalizes mass and stiffness, while compatible classical damping also yields a diagonal modal damping matrix."
+        },
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If a drive has nonzero projection on both modal vectors, both response coefficients can be nonzero, especially near their frequencies."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "A prescribed force excites both modes without necessarily coupling their homogeneous equations. Selection rules require the specified drive symmetry as well as system symmetry."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1189"
+    },
+    {
+      "id": "repo-75b3073e62c428682e875f3e",
+      "ordinal": 188,
+      "messages_sha256": "75b3073e62c428682e875f3e14d4c7711efaadabb8f10534bb0c5795a9fd9e83",
+      "state": "PASS",
+      "rationale": "Correct SI distinction and magnetization relation among B,H and M.",
+      "evidence": [
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "B=mu0*(H+M), reducing to B=mu0*H in vacuum; B enters the magnetic Lorentz force and H has A/m units."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "H is related to free-current and displacement-current sources through macroscopic Maxwell equations, but is not solely a direct knob independent of material/boundary response."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1200"
+    },
+    {
+      "id": "repo-c304482ccee9763f5cc9c6ae",
+      "ordinal": 189,
+      "messages_sha256": "c304482ccee9763f5cc9c6aed2803e4236a2e90ece0fba9563445b00346bb6e9",
+      "state": "PASS",
+      "rationale": "Correct electrostatic conservative-field interpretation and ordinary Faraday-induction contrast.",
+      "evidence": [
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "title": "OpenStax University Physics volume2, Faraday Law",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/13-1-faradays-law",
+          "finding": "The fixed-loop electric circulation is minus the time derivative of magnetic flux, so the relevant loop flux rather than any local B change determines the integral."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Electrostatic E=-grad V gives zero closed-loop work; where partial_t B is nonzero, curl E=-partial_t B is nonzero."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Changing E alone does not force nonzero curl E, and global potential existence also depends on topology. The parenthetical induction is read as changing magnetic field rather than every time-dependent field."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1208"
+    },
+    {
+      "id": "repo-b057c9db08b7aa74d6f92852",
+      "ordinal": 190,
+      "messages_sha256": "b057c9db08b7aa74d6f928523a293e7d2fa6c4ecf8fde9a540b2f3c6e5d2ccee",
+      "state": "PASS",
+      "rationale": "Correct field-line uniqueness intuition at nonzero regular field points, with the zero-field exception explicitly recognized.",
+      "evidence": [
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At a nonzero smooth vector-field point, a field line tangent is fixed by the vector direction; two distinct tangents cannot both follow it."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "At zeros or singularities the directional/ODE-uniqueness reasoning needs separate treatment, as the source partly notes."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1219"
+    },
+    {
+      "id": "repo-52ed4d84cf96740073664b3b",
+      "ordinal": 191,
+      "messages_sha256": "52ed4d84cf96740073664b3b341418be2fe84a4e25269e95eb3b01cb78de6ddf",
+      "state": "QUARANTINE",
+      "rationale": "The battery versus transformer-induction distinction is useful, but induced emf is not exclusively a nonconservative electric field from changing B. Motional induction can occur in a static magnetic field.",
+      "evidence": [
+        {
+          "title": "OpenStax College Physics, Motional Emf",
+          "url": "https://openstax.org/books/college-physics/pages/23-3-motional-emf",
+          "finding": "Motion of a conductor through a stationary magnetic field can generate emf through the magnetic Lorentz-force term, distinct from transformer induction."
+        },
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A rod of length ell moving across a static uniform B has motional emf B*ell*v from integral(v cross B) dot dl, even though partial_t B=0 and the laboratory electric field can be curl-free."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold the unqualified source-of-induced-emf statement, preserving the correct changing-B case and the distinction from chemical energy in a battery."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1224"
+    },
+    {
+      "id": "repo-1570544eb692b1462cc86084",
+      "ordinal": 192,
+      "messages_sha256": "1570544eb692b1462cc86084bdebf87cd58f5cf4e8740a54196a12956b417a28",
+      "state": "PASS",
+      "rationale": "Correct cylindrical-Gauss result with charge-sign direction stated.",
+      "evidence": [
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "E_r*2*pi*r*L=lambda*L/epsilon0 gives E_r=lambda/(2*pi*epsilon0*r)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Assumes an isolated infinite uniform line in the usual homogeneous vacuum model."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1225"
+    },
+    {
+      "id": "repo-7e41b2ecf32405bc03ed1410",
+      "ordinal": 193,
+      "messages_sha256": "7e41b2ecf32405bc03ed1410a407138da1e9e607552a9bb4d6b410bafec79ded",
+      "state": "PASS",
+      "rationale": "Correct intuitive energy-consistency explanation for the opposing sign of passive electromagnetic induction.",
+      "evidence": [
+        {
+          "title": "OpenStax University Physics volume2, Faraday Law",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/13-1-faradays-law",
+          "finding": "The fixed-loop electric circulation is minus the time derivative of magnetic flux, so the relevant loop flux rather than any local B change determines the integral."
+        },
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Lenz law is encoded quantitatively in Maxwell/Lorentz dynamics; active sources and externally supplied energy can produce reinforcing feedback without free energy. The example concerns the ordinary passive induction situation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1235"
+    },
+    {
+      "id": "repo-bbb93dddc889dfd74861cb79",
+      "ordinal": 194,
+      "messages_sha256": "bbb93dddc889dfd74861cb79c61601c2c5259075159729a464cca76337891150",
+      "state": "PASS",
+      "rationale": "Correct statement that total enclosed-charge flux is independent of Gaussian-surface shape while extracting a local E value depends on symmetry.",
+      "evidence": [
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Any closed surface enclosing the point charge has total flux Q/epsilon0. On a cube, E dot n is nonuniform even though equal faces share flux when the charge is exactly centered."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Gauss law gives the total without performing a difficult integral; the difficulty concerns local-field extraction or directly integrating its varying distribution, not the known total flux itself."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1238"
+    },
+    {
+      "id": "repo-c858142e0214723cc328ddaa",
+      "ordinal": 195,
+      "messages_sha256": "c858142e0214723cc328ddaab43864cea8137c54accf5b69cc62095d6468dade",
+      "state": "PASS",
+      "rationale": "Correct flux-linkage change and average induced-emf magnitude.",
+      "evidence": [
+        {
+          "title": "OpenStax University Physics volume2, Faraday Law",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/13-1-faradays-law",
+          "finding": "The fixed-loop electric circulation is minus the time derivative of magnetic flux, so the relevant loop flux rather than any local B change determines the integral."
+        },
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "N*DeltaPhi/Delta_t=100*(0.08-0.02)/0.1=60 V; for increasing positive linked flux, signed average emf is-60 V in the corresponding positive loop orientation."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is an average unless the flux ramp is linear; Lenz opposition determines direction with a chosen orientation, not an absolute sign independent of convention."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1242"
+    },
+    {
+      "id": "repo-b16ec7932a4ac3c996e44170",
+      "ordinal": 196,
+      "messages_sha256": "b16ec7932a4ac3c996e44170cdfe29cbdd948198a1797a3c30eabc3567300caf",
+      "state": "PASS",
+      "rationale": "Correct single-loop center-field integration and axial direction.",
+      "evidence": [
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "All filamentary Biot-Savart contributions add axially, giving mu0*I*(2*pi*R)/(4*pi*R²)=mu0*I/(2*R)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Material effects, multiple turns and finite wire thickness require their extensions."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1266"
+    },
+    {
+      "id": "repo-1340e8c28a905f4b1608c6e3",
+      "ordinal": 197,
+      "messages_sha256": "1340e8c28a905f4b1608c6e303d07d906aa458d4bc3a3e2d4d213fba0ef967c7",
+      "state": "PASS",
+      "rationale": "Correct qualitative eddy-current braking and near-terminal gravitational-power-to-heat explanation.",
+      "evidence": [
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "title": "OpenStax University Physics volume2, Faraday Law",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/13-1-faradays-law",
+          "finding": "The fixed-loop electric circulation is minus the time derivative of magnetic flux, so the relevant loop flux rather than any local B change determines the integral."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At terminal speed, magnetic drag balances weight and dissipation rate is approximately m*g*v; induced currents oppose the motion-induced flux change."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "During acceleration some gravitational energy changes kinetic/field energy. The all-heat statement is the steady-terminal idealization neglecting other losses, consistent with the preceding near-terminal description."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1273"
+    },
+    {
+      "id": "repo-c60410231bab764381993b64",
+      "ordinal": 198,
+      "messages_sha256": "c60410231bab764381993b64c5f7b50718fbfcf707b1372a420c1e737c2e5615",
+      "state": "PASS",
+      "rationale": "Correct hypothetical symmetric Maxwell extension under the stated magnetic-charge convention and Dirac quantization motivation.",
+      "evidence": [
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Adding div B=mu0*rho_m and curl E=-partial_t B-mu0*J_m implies magnetic-charge continuity upon taking divergence."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The source normalizes magnetic charge/current in its chosen SI convention; proposed magnetic batteries are a speculative analogy, not a demonstrated technology or consequence guaranteeing practical devices."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1277"
+    },
+    {
+      "id": "repo-6be63c3172461a4c171ceadd",
+      "ordinal": 199,
+      "messages_sha256": "6be63c3172461a4c171ceadd9f392701959b2b93199b529c41554501e7be4517",
+      "state": "QUARANTINE",
+      "rationale": "The Faraday nonconservative-work idea is correct, but a changing B does not force nonzero circulation around every selected loop, and it is work along a path rather than the local force itself that is path dependent in this sense.",
+      "evidence": [
+        {
+          "title": "OpenStax University Physics volume2, Faraday Law",
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/13-1-faradays-law",
+          "finding": "The fixed-loop electric circulation is minus the time derivative of magnetic flux, so the relevant loop flux rather than any local B change determines the integral."
+        },
+        {
+          "method": "independent_modal_and_electromagnetic_derivation",
+          "finding": "Individually checked modal shapes and projections, damping diagonalization, state continuity across parameter changes, field/flux laws, magnetic forces and induction calculations."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For uniform time-varying B along z, a fixed loop with normal x has zero magnetic flux and zero electric circulation despite B changing. At a given point/time, q*E is defined independently of which path a test charge previously took."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for the loop-flux and force-versus-work statements; nonzero curl in a region still prevents a purely scalar global electrostatic representation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_physics.jsonl#L1279"
+    }
+  ]
+}

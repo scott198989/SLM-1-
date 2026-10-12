@@ -1,0 +1,90 @@
+{
+  "academic_scope_only": true,
+  "extraction_settled": true,
+  "analysis": {
+    "status": "BOUNDED_TIMEOUT",
+    "at": "2026-10-01T19:22:11.036083+00:00",
+    "limit_seconds": 2400,
+    "current_completed_manifests": false,
+    "old_20260924_manifests": "STALE_NOT_CURRENT_EVIDENCE",
+    "candidate_pair_capacity_results": "UNKNOWN",
+    "family_isolation": "UNKNOWN",
+    "near_dedup_exhaustive": false
+  },
+  "exact_ledger_dedup": {
+    "duplicate_sources": 172,
+    "repeated_unit_text_hash_groups": 5364,
+    "characters_before": 134628005,
+    "characters_after": 131523710
+  },
+  "ocr": {
+    "active_explicit_queue_pages": 1207,
+    "Stroud_scanned_page_ledger": 1057,
+    "prior_Stroud_complete_cached_envelopes": 248,
+    "prior_Stroud_cached_nonblank": 247,
+    "prior_cache_integrated_or_released": false,
+    "Stroud_without_complete_saved_envelope_upper_bound": 809,
+    "other_untriaged_page_slots": 150,
+    "combined_unknown_cache_or_new_OCR_upper_bound": 959,
+    "new_OCR_started": false
+  },
+  "review_index": {
+    "index_bytes": 206577664,
+    "index_sha256": "c8c8680f3d5afa3c14dbc816a923f68c8469bdbe6d1408bc892ff3d2f1aa0fef",
+    "build_complete": false,
+    "counts": {
+      "committed_chunks": 43205,
+      "chunk_self_hash_and_ledger_metadata_checked": 43205,
+      "unique_cited_sources": 295,
+      "unique_cited_units": 33971,
+      "search_index_rows": 43205,
+      "eligible_sources": 1342,
+      "eligible_needs_review_units": 107158
+    },
+    "sqlite_quick_check": [
+      "ok"
+    ],
+    "query_gate_checks": [
+      {
+        "allow_review": false,
+        "query_blocked": true,
+        "reason": "index_build_incomplete"
+      },
+      {
+        "allow_review": true,
+        "query_blocked": true,
+        "reason": "index_build_incomplete"
+      }
+    ],
+    "metadata_gaps_overlap": {
+      "chunks_with_empty_location_metadata": 0,
+      "chunks_without_numbered_page_location": 21777,
+      "chunks_missing_source_hash": 0,
+      "chunks_missing_source_url": 0,
+      "chunks_without_visual_geometry": 35424
+    },
+    "context_dependency_flags_overlap": {
+      "partial_unit_chunks_require_adjacent_context": 16208,
+      "chunks_with_unverified_math_dependency": 12562,
+      "chunks_with_unverified_visual_dependency": 22370,
+      "chunks_with_fragment_or_sentence_context_flag": 1066,
+      "chunks_with_unverified_ocr": 1682
+    },
+    "full_derivative_citation_validation_receipt_exists": false,
+    "validation_limits": [
+      "This audit checks committed chunk self-hashes and current ledger metadata only.",
+      "Raw and normalized artifact bytes, exact source text slices, original location/page URLs and semantic context must pass the separate full validator.",
+      "Sources without committed chunks are not assessed; a build without build_report is incomplete.",
+      "Unnumbered page metadata may be appropriate for Word, sheet, EPUB and image sources; it is not automatically an error."
+    ],
+    "production_approved": false,
+    "status": "BOUNDED_TIMEOUT_INCOMPLETE_ARTIFACT",
+    "full_raw_source_offset_context_validation": "NOT_COMPLETED"
+  },
+  "approved_sft": 0,
+  "training": false,
+  "private_content_included": false,
+  "settled_at": "2026-10-01T20:04:25.046762+00:00",
+  "workers_remaining": 0,
+  "automatic_checks": false
+}

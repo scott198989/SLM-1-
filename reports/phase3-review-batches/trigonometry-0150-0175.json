@@ -1,0 +1,578 @@
+{
+  "base_commit": "d2dff88ee54ce13136d62259d999c00171252594",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "trigonometry",
+  "offset": 150,
+  "limit": 25,
+  "next_offset": 175,
+  "selected_window_end_exclusive": 175,
+  "selected_rows_in_window": 25,
+  "new_substantive_reviews": 25,
+  "skipped_existing": 0,
+  "preserved_structural_quarantines": [],
+  "dispositions_added": {
+    "PASS": 23,
+    "REJECT": 1,
+    "QUARANTINE": 1
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "independent_trigonometry_seventh_batch_agent",
+    "records_checked": 25,
+    "final_counts": {
+      "PASS": 23,
+      "QUARANTINE": 1,
+      "REJECT": 1
+    },
+    "disposition_changes": [],
+    "review_precision_corrections": [
+      "155 adds direct NPTEL stress-function/rectangular-series evidence."
+    ],
+    "full_prompt_and_answer_review": true,
+    "all_source_hashes_ids_ordinals_and_ledger_matches": true,
+    "source_sha256": "16978f85007b8e9742c1b55f0cc288a505833c654042b0fe79a8cfe96ff19173",
+    "reviewed_against_local_commit": "d2dff88ee54ce13136d62259d999c00171252594",
+    "candidate_preparation_predecessor_commit": "9b307915c18c38942b8fc3c5f4a0d6b5bf23105e",
+    "published_base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "independent_human_review": false,
+    "release_approved": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 1009,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 786,
+    "REJECT": 53,
+    "QUARANTINE": 196,
+    "NEEDS_HUMAN_REVIEW": 1077
+  },
+  "agent_substantive_reviews": 1034,
+  "substantively_unreviewed": 1075,
+  "records": [
+    {
+      "id": "repo-245b95f36eef7b2c03ef9dc8",
+      "ordinal": 150,
+      "messages_sha256": "245b95f36eef7b2c03ef9dc84c779ba727e65b47479d263b38990ed8f7ad7a3a",
+      "state": "PASS",
+      "rationale": "Correct Fourier-coefficient interpretation as orthogonal projection; the answer itself supplies the harmonic context missing from the short antecedent.",
+      "evidence": [
+        {
+          "method": "independent_orthogonal_projection",
+          "finding": "For an orthogonal harmonic basis under the full-period inner product, the coefficient of a basis function is its inner product with the signal divided by squared norm; other orthogonal terms vanish."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If f=sum a_n e_n and <e_n,e_m>=0 for n!=m, then <f,e_m>=a_m*||e_m||²."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Requires the appropriate full-period inner product and an orthogonal basis; arbitrary finite windows or nonorthogonal sampled harmonics do not guarantee separation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1145"
+    },
+    {
+      "id": "repo-1443651fd715f5b9e2d08031",
+      "ordinal": 151,
+      "messages_sha256": "1443651fd715f5b9e2d08031a533217caadd61d50b1ef811e248021f13635bcb",
+      "state": "PASS",
+      "rationale": "Correct negative-sine branches and equivalence of negative and positive representatives.",
+      "evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identities, solution branches, approximate values and original-domain restrictions are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "sin x=-1/2 iff x=7pi/6+2n*pi or 11pi/6+2n*pi; -pi/6 and 11pi/6 differ by 2pi."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1165"
+    },
+    {
+      "id": "repo-c4227379d69236ca2b382a6d",
+      "ordinal": 152,
+      "messages_sha256": "c4227379d69236ca2b382a6d305f39430ad47ecabbdf4de751cb8076e5ce8126",
+      "state": "PASS",
+      "rationale": "Correct unit-circle reflection explanation of cosine evenness.",
+      "evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identities, solution branches, approximate values and original-domain restrictions are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Reflection (x,y)->(x,-y) preserves the cosine coordinate."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1177"
+    },
+    {
+      "id": "repo-a14def86c64c3dd35616eded",
+      "ordinal": 153,
+      "messages_sha256": "a14def86c64c3dd35616eded2477050fddf1cb9630ec9b0576b215b736f908b1",
+      "state": "PASS",
+      "rationale": "Exact Euler-formula modulus proof for real angles.",
+      "evidence": [
+        {
+          "method": "independent_complex_algebra",
+          "finding": "Moduli, polar powers and conjugate-product identities are checked algebraically."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "|cos theta+i sin theta|²=cos²theta+sin²theta=1."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The angular variable theta is real in this trig/unit-circle context; no claim for arbitrary complex theta is made."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1189"
+    },
+    {
+      "id": "repo-d714b83b328f23f3e8c5f13e",
+      "ordinal": 154,
+      "messages_sha256": "d714b83b328f23f3e8c5f13e24f43af475d4135bb20fefde7e3837ca30492a6f",
+      "state": "PASS",
+      "rationale": "Reasonable qualitative explanation of how transparent notation helps a marker assess the algebra.",
+      "evidence": [
+        {
+          "method": "scope_limited_pedagogical_review",
+          "finding": "Clear notation can make assumptions and algebraic structure easier to check; the answer is qualitative guidance, not a measured claim about marker error rates."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is pedagogical guidance, not empirical measurement of all markers or a claim that neatness proves correctness."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1190"
+    },
+    {
+      "id": "repo-a2cde1182c6bd6f56637e6cc",
+      "ordinal": 155,
+      "messages_sha256": "a2cde1182c6bd6f56637e6cc4204389a77985c144ee63d3e31f4ec117a246968",
+      "state": "PASS",
+      "rationale": "Sound introductory description of the normalized Prandtl torsion-function problem and rectangular Fourier/hyperbolic separation.",
+      "evidence": [
+        {
+          "title": "Ike, Galerkin-Kantorovich method for Saint-Venant rectangular bars, 2024",
+          "url": "https://www.extrica.com/article/23928",
+          "finding": "The primary paper derives the rectangular Prandtl stress-function Poisson problem and series-based torsional solution. Its dimensional stress function includes material/twist scaling; a normalized torsion function can use right-hand side -2."
+        },
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identities, solution branches, approximate values and original-domain restrictions are independently checked."
+        },
+        {
+          "title": "NPTEL Applied Elasticity, Chapter 9, equations 9.47, 9.50, 9.78-9.92",
+          "url": "https://archive.nptel.ac.in/content/storage2/courses/105106049/lecnotes/mainch9.html",
+          "finding": "Derives the dimensional Prandtl stress-function formulation and rectangular trigonometric/hyperbolic series; division by material/twist scale gives the normalized -2 equation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Normalizing dimensional stress function Phi by G times twist-per-length gives phi with Laplacian -2. After a quadratic particular solution, harmonic separated corrections combine cos(k*x) with cosh(k*y) or sinh(k*y)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The -2 convention is a normalized torsion function, not an unscaled stress potential. The simple zero boundary value is for a homogeneous isotropic simply connected section such as the rectangle; multiply connected or restrained-warping problems require additional conditions."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1194"
+    },
+    {
+      "id": "repo-f9ba5690dbf7058fc118ce4c",
+      "ordinal": 156,
+      "messages_sha256": "f9ba5690dbf7058fc118ce4c6a92e6398a1524058fdb6ecc869527dc3903b3d4",
+      "state": "PASS",
+      "rationale": "Correct fourth-quadrant angle, reference angle and exact sine/cosine values.",
+      "evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identities, solution branches, approximate values and original-domain restrictions are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "11pi/6=2pi-pi/6; cos=sqrt3/2, sin=-1/2."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1204"
+    },
+    {
+      "id": "repo-13695366a5dda117581250c9",
+      "ordinal": 157,
+      "messages_sha256": "13695366a5dda117581250c90faaba38c60cd4aa9f649de7bb614cf631f2fb67",
+      "state": "PASS",
+      "rationale": "Exact expansion and identity substitution.",
+      "evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identities, solution branches, approximate values and original-domain restrictions are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "(sin x+cos x)²=sin²x+cos²x+2sin x cos x=1+sin2x."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1207"
+    },
+    {
+      "id": "repo-ae1301fbf764ad14ffa2997e",
+      "ordinal": 158,
+      "messages_sha256": "ae1301fbf764ad14ffa2997ef04e22fa2adac195f3316bb3b72f3129aca46b6a",
+      "state": "PASS",
+      "rationale": "Faithful restatement of the requested unit-circle/reference-angle method.",
+      "evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identities, solution branches, approximate values and original-domain restrictions are independently checked."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Axis angles are boundary cases, and the period added depends on the function and argument scaling; this is a paraphrase, not a fully specified solver."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1212"
+    },
+    {
+      "id": "repo-2baf7198be5df3a2596c6c5e",
+      "ordinal": 159,
+      "messages_sha256": "2baf7198be5df3a2596c6c5ea480b2ef19939b1a0033c5a53c15d94488cc68f7",
+      "state": "PASS",
+      "rationale": "Correct polar power and nth-root construction in the ordinary positive-integer setting.",
+      "evidence": [
+        {
+          "method": "independent_complex_algebra",
+          "finding": "Moduli, polar powers and conjugate-product identities are checked algebraically."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "(r exp(i theta))^n=r^n exp(i*n*theta). Matching argument modulo 2pi yields the n angles listed."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "n is a positive integer. For w=0 the unique root is zero and polar argument is arbitrary, so the displayed angular branches coincide rather than give n distinct nonzero roots."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1215"
+    },
+    {
+      "id": "repo-0efa3cd125683485611ef852",
+      "ordinal": 160,
+      "messages_sha256": "0efa3cd125683485611ef852ae25045bff53849ad169c497431ab016815f9711",
+      "state": "PASS",
+      "rationale": "Correct dot-product proof of Thales theorem for a nondegenerate inscribed triangle.",
+      "evidence": [
+        {
+          "method": "independent_vector_geometry",
+          "finding": "Dot-product expansions establish orthogonality, with nonzero vectors required when interpreting an angle."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "(-r-P) dot(r-P)=|P|²-|r|²=0, and for P distinct from A,B both chord vectors are nonzero."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The angle APB presupposes P differs from diameter endpoints; at an endpoint one vector is zero and an angle is undefined."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1216"
+    },
+    {
+      "id": "repo-c825bc3d60cfff1e2eb20ef2",
+      "ordinal": 161,
+      "messages_sha256": "c825bc3d60cfff1e2eb20ef276d3f928e5a3411b04fdf8d98f30fb8459f6c973",
+      "state": "REJECT",
+      "rationale": "Symmetry removes odd terms but does not in general make a symmetrically clamped, symmetrically loaded beam a pure cosh. A symmetric uniform-load clamped beam gives an even quartic counterexample.",
+      "evidence": [
+        {
+          "method": "exact_Euler_Bernoulli_counterexample",
+          "finding": "A uniform clamped beam on [-a,a] under constant transverse load q has w=q*(x²-a²)²/(24EI). This satisfies EI*w_fourth=q and w=w_prime=0 at both endpoints, and is even but not a pure cosh."
+        },
+        {
+          "title": "MIT Unified Engineering, Heat Transfer from a Fin",
+          "url": "https://web.mit.edu/16.unified/www/SPRING/propulsion/notes/node128.html",
+          "finding": "The homogeneous constant-coefficient fin temperature-excess equation has a cosh/sinh basis; symmetry can select its even cosh member under appropriate boundary conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For q,EI,a nonzero, w(x)=q*(x²-a²)²/(24EI) has w(±a)=w_prime(±a)=0 and w_fourth=q/EI. It is not C*cosh(k*x)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "An appropriate symmetric homogeneous fin temperature-excess problem can select cosh. The rejection concerns the beam example and the symmetry-alone inference, not that valid fin case."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1240"
+    },
+    {
+      "id": "repo-79321a5758d380dc0d6a3d3d",
+      "ordinal": 162,
+      "messages_sha256": "79321a5758d380dc0d6a3d3d10b9667c67c557dd886a952a3c748333a692872b",
+      "state": "PASS",
+      "rationale": "Correct diagnosis of an unjustified one-way implication from an assumed conclusion and useful distinction between discovery and proof presentation.",
+      "evidence": [
+        {
+          "method": "independent_proof_logic_review",
+          "finding": "A one-way derivation of a truth from a desired identity is insufficient; a justified chain of biconditionals can instead be read in reverse."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "If every step is explicitly justified as a biconditional on the original domain, the chain can be read backward and form a valid proof. The answer should not be generalized into a ban on reversible equivalence proofs."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1242"
+    },
+    {
+      "id": "repo-e8448ba50567eb786a96853f",
+      "ordinal": 163,
+      "messages_sha256": "e8448ba50567eb786a96853f21270829d3e76681d9e3324aa6067990009e243d",
+      "state": "PASS",
+      "rationale": "Correct introductory contrast between equations holding for selected angles and identities holding over the entire common domain.",
+      "evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identities, solution branches, approximate values and original-domain restrictions are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "2sin x=1 holds only on two periodic branches; sin²x+cos²x=1 holds for every real x."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Some classifications separately name equations with no solutions contradictions; this explanation focuses on the displayed conditional and identity examples."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1251"
+    },
+    {
+      "id": "repo-a2761fc20ee4cda881941e82",
+      "ordinal": 164,
+      "messages_sha256": "a2761fc20ee4cda881941e829abb4603796f06b1436fb9820b63655fe6c2a746",
+      "state": "PASS",
+      "rationale": "Correct matching expansions on the common tangent/cotangent domain; initial hesitation is resolved by the proof.",
+      "evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identities, solution branches, approximate values and original-domain restrictions are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For sin x*cos x!=0, tan x*cot x=1 and sec²+csc²=2+tan²+cot²."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1252"
+    },
+    {
+      "id": "repo-51790987b64fb77fce44843b",
+      "ordinal": 165,
+      "messages_sha256": "51790987b64fb77fce44843bc79e98e3f46a1ca67106e87f3cf4584c0b5ab376",
+      "state": "PASS",
+      "rationale": "Correct factorization, modulus and approximate value.",
+      "evidence": [
+        {
+          "method": "independent_complex_algebra",
+          "finding": "Moduli, polar powers and conjugate-product identities are checked algebraically."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "abs(exp(3+2i))=exp(3)=20.085536923188; exp(2i) has unit modulus."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1263"
+    },
+    {
+      "id": "repo-8caa1d839aede8e634db4d43",
+      "ordinal": 166,
+      "messages_sha256": "8caa1d839aede8e634db4d43d7a89572159f3f3ca6e945b161cf8a16d1d3f6e6",
+      "state": "PASS",
+      "rationale": "Correct horizontal scale, period, right phase shift, reflection, vertical translation and range.",
+      "evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identities, solution branches, approximate values and original-domain restrictions are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "pi*x/3-pi/6=(pi/3)*(x-1/2); B=pi/3>1, period=6, amplitude=2, midline=4, range [2,6]."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1264"
+    },
+    {
+      "id": "repo-758f0d50097c97ce836752d8",
+      "ordinal": 167,
+      "messages_sha256": "758f0d50097c97ce836752d8f78114857627a84838cce26f3279e1f1fe94eab6",
+      "state": "PASS",
+      "rationale": "Exact two successive double-angle substitutions and polynomial expansion.",
+      "evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identities, solution branches, approximate values and original-domain restrictions are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "2*(2c²-1)²-1=8c^4-8c²+1, c=cos x."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1271"
+    },
+    {
+      "id": "repo-4bf4e3ed4b55885cf526b25d",
+      "ordinal": 168,
+      "messages_sha256": "4bf4e3ed4b55885cf526b25daec99ba0d26556985ab44b7b6aa62f99700534be",
+      "state": "PASS",
+      "rationale": "Correct ordinary triangle-data guidance for sine and cosine rules.",
+      "evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identities, solution branches, approximate values and original-domain restrictions are independently checked."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "SSA can be ambiguous and sufficient independent data remain necessary; best/works is practical guidance rather than exclusive solvability."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1275"
+    },
+    {
+      "id": "repo-14896a19c154f923760ad69e",
+      "ordinal": 169,
+      "messages_sha256": "14896a19c154f923760ad69ec487d10e9d39f674d44ccbfb5518feae26a505ef",
+      "state": "PASS",
+      "rationale": "Correct complete solution union, with harmless redundancy in the first family.",
+      "evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identities, solution branches, approximate values and original-domain restrictions are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "x=2n*pi is a subset of x=2n*pi/3, which is the complete solution set."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The answer does not falsely claim the families are disjoint; redundancy alone is not a mathematical error."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1292"
+    },
+    {
+      "id": "repo-b02c974eedbaee6c68042227",
+      "ordinal": 170,
+      "messages_sha256": "b02c974eedbaee6c68042227d97a25f7bd9e028127a56eba37612e6da07fa7fb",
+      "state": "PASS",
+      "rationale": "Correct warning that division can silently narrow the proven domain.",
+      "evidence": [
+        {
+          "method": "independent_proof_logic_review",
+          "finding": "A one-way derivation of a truth from a desired identity is insufficient; a justified chain of biconditionals can instead be read in reverse."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A proof using division by sin x must separately cover sin x=0 if those points belong to the original claim."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1293"
+    },
+    {
+      "id": "repo-1099d210ee8321b30668d9a7",
+      "ordinal": 171,
+      "messages_sha256": "1099d210ee8321b30668d9a7aa6c0f6892238a7404d30bc9c339080aec605ad6",
+      "state": "QUARANTINE",
+      "rationale": "The preference for rectangular expansion is reasonable, but the claim that a polar proof requires converting the sums to rectangular form is too strong. A direct modulus/cosine-law expansion in polar quantities proves the law.",
+      "evidence": [
+        {
+          "method": "independent_complex_algebra",
+          "finding": "Moduli, polar powers and conjugate-product identities are checked algebraically."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For z1=r exp(i alpha), z2=s exp(i beta), |z1±z2|²=r²+s²±2rs cos(alpha-beta). Adding cancels the cross terms without computing rectangular coordinates of either sum."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Hold narrowly for the asserted necessity; do not reject the parallelogram identity or the recommendation that rectangular expansion is often simplest."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1294"
+    },
+    {
+      "id": "repo-4f3a8444719cc76cfa576736",
+      "ordinal": 172,
+      "messages_sha256": "4f3a8444719cc76cfa576736d13c748ea50fbce9ca308d6f8fd533f4f8b801c4",
+      "state": "PASS",
+      "rationale": "Correct principal and supplementary numerical sine solutions and periodic continuation.",
+      "evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identities, solution branches, approximate values and original-domain restrictions are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "asin(0.8)=0.927295218002; pi-asin(0.8)=2.214297435588."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1307"
+    },
+    {
+      "id": "repo-a3b4b62a18bf945e4084b137",
+      "ordinal": 173,
+      "messages_sha256": "a3b4b62a18bf945e4084b1375db3453676ae4ba6e9f67e733dc8b86c1cd0b5e7",
+      "state": "PASS",
+      "rationale": "Correct factorization and exclusion of the impossible real branch on the original common domain.",
+      "evidence": [
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identities, solution branches, approximate values and original-domain restrictions are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Original tan x and tan2x being defined implies cos x!=0 and tan²x!=1. The second branch gives tan²x=-1, leaving x=k*pi."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "No roots are lost at tan²x=1 because tan2x is undefined there."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1310"
+    },
+    {
+      "id": "repo-acc2f26c6ed8162305c93d2b",
+      "ordinal": 174,
+      "messages_sha256": "acc2f26c6ed8162305c93d2b6c0abe2f18c430cc7d130ee99ed41cf47e99a769",
+      "state": "PASS",
+      "rationale": "Correct equal-wave phase-addition explanation of the cosine-squared intensity factor.",
+      "evidence": [
+        {
+          "title": "OpenStax College Physics 2e, Superposition and Interference",
+          "url": "https://openstax.org/books/college-physics-2e/pages/16-10-superposition-and-interference",
+          "finding": "Equal coherent waves add constructively or destructively according to phase; squaring their resultant amplitude determines the intensity dependence."
+        },
+        {
+          "title": "OpenStax Physics, Sound Intensity and Sound Level",
+          "url": "https://openstax.org/books/physics/pages/14-2-sound-intensity-and-sound-level",
+          "finding": "Physical sound intensity is proportional to squared pressure amplitude. Perceived loudness and logarithmic intensity level are distinct quantities."
+        },
+        {
+          "method": "independent_trigonometric_algebra",
+          "finding": "Identities, solution branches, approximate values and original-domain restrictions are independently checked."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "A exp(i*phi/2)+A exp(-i*phi/2)=2A cos(phi/2); squared magnitude is 4A² cos²(phi/2)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Physical intensity includes a medium-dependent proportionality constant and coherent equal-frequency assumptions. Brightness/loudness are informal perceptual examples, not a claim that perceived loudness is numerically equal to intensity; unequal amplitudes use the more general interference law."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Trigonometry.jsonl#L1321"
+    }
+  ]
+}

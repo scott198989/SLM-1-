@@ -1,0 +1,548 @@
+{
+  "base_commit": "dd82c21946c6d98bf0b84f2f75d8945d4b9a5134",
+  "remote_published_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+  "publication_status": "LOCAL_ONLY; remote publication blocked",
+  "domain": "algebra",
+  "offset": 50,
+  "limit": 25,
+  "next_offset": 75,
+  "new_substantive_reviews": 25,
+  "skipped_existing": 0,
+  "dispositions_added": {
+    "PASS": 22,
+    "REJECT": 1,
+    "QUARANTINE": 2
+  },
+  "independent_agent_review": true,
+  "independent_human_review": false,
+  "independent_qa": {
+    "reviewer": "independent_algebra_third_batch_agent",
+    "records_checked": 25,
+    "final_counts": {
+      "PASS": 22,
+      "REJECT": 1,
+      "QUARANTINE": 2
+    },
+    "disposition_changes": [],
+    "review_precision_corrections": [
+      "63: hold narrowly for arc-length alone not providing bifurcation detection/branch switching."
+    ],
+    "full_prompt_and_answer_review": true,
+    "all_source_hashes_ids_ordinals_and_ledger_matches": true,
+    "source_sha256": "87dea8584252719990f16589465740a1fa9bfb4f2c161912e7c5e3bd2af2de07",
+    "reviewed_against_local_commit": "dd82c21946c6d98bf0b84f2f75d8945d4b9a5134",
+    "published_base_commit": "917a9d3bb68ceae5f320004e67b1129202bd7fed",
+    "independent_human_review": false,
+    "release_approved": false,
+    "training_authorized": false
+  },
+  "original_messages_unchanged": true,
+  "token_counts_unchanged": true,
+  "earlier_decisions_unchanged": 706,
+  "all_original_hashes_reverified": 2112,
+  "technical_PASS_not_release_approval": true,
+  "training_authorized": false,
+  "current_dispositions": {
+    "PASS": 531,
+    "REJECT": 43,
+    "QUARANTINE": 158,
+    "NEEDS_HUMAN_REVIEW": 1380
+  },
+  "agent_substantive_reviews": 731,
+  "substantively_unreviewed": 1378,
+  "records": [
+    {
+      "id": "repo-1bb66e19a7b8b0fb2bdfbc7f",
+      "ordinal": 50,
+      "messages_sha256": "1bb66e19a7b8b0fb2bdfbc7f217fe8cb00ef87339fa006808571b301143e5429",
+      "state": "PASS",
+      "rationale": "Faithful conceptual paraphrase of systematically solving interacting equations while honoring model constraints. It makes no numerical convergence or physical correctness guarantee.",
+      "evidence": [
+        {
+          "title": "MIT nonlinear programming, constrained optimality",
+          "url": "https://ocw.mit.edu/courses/15-084j-nonlinear-programming-spring-2004/21073fc1bb9e5f68b3319bec0895683f_lec6_constr_opt.pdf",
+          "finding": "Theorem 22 requires a feasible base point, continuously differentiable constraints and a nonsingular Jacobian block for local elimination; multipliers are introduced for constrained optimization with relevant regularity conditions."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "'Cleanly' is informal workflow language rather than a defined mathematical property."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L287"
+    },
+    {
+      "id": "repo-8bfbfd87fcc309f27c98f9ab",
+      "ordinal": 51,
+      "messages_sha256": "8bfbfd87fcc309f27c98f9abff7f13c84f2b3a1240092c1bcf7552ac4f7a5dd2",
+      "state": "PASS",
+      "rationale": "Both directions of the modular invertibility criterion are correctly established using Bezout's identity and the fact that any common divisor divides every integer linear combination.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Algebraic steps, symbolic identities and equation residuals are checked directly, rather than trusting a matching numeric result alone."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If as+nt=1, reduction mod n gives an inverse. If ab-kn=1, every common divisor of a,n divides 1, so the positive gcd is 1."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L292"
+    },
+    {
+      "id": "repo-98737810c2f6cddbd672785a",
+      "ordinal": 52,
+      "messages_sha256": "98737810c2f6cddbd672785aea67707882759248c8fa71413e52a9b8cf12963c",
+      "state": "REJECT",
+      "rationale": "The final combined ODE does not follow from the two substituted equations, and dropping one equation is not an equivalent reduction. A holonomic constraint generally requires reaction forces or a compatibility analysis; the original unconstrained equations plus the imposed constraint can be inconsistent.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Algebraic steps, symbolic identities and equation residuals are checked directly, rather than trusting a matching numeric result alone."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Set m1=m2=k1=k2=L=1. The actual substituted equations are x1''+3x1=1 and x1''+2x1=1. Their difference requires x1=0 for all time, contradicting either equation. The proposed 2x1''+3x1=1 even admits the constant x1=1/3, x2=2/3, whose second original residual is 1/3."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L305"
+    },
+    {
+      "id": "repo-358cf13f51dad9ef6480ed5f",
+      "ordinal": 53,
+      "messages_sha256": "358cf13f51dad9ef6480ed5f340cd2e3cb68f22fee3bb4b26f8ff3145e68653f",
+      "state": "PASS",
+      "rationale": "Correct invariant-factor description of rational canonical form: divisibility chain, product equal to characteristic polynomial, largest factor equal to minimal polynomial, and no field-splitting requirement.",
+      "evidence": [
+        {
+          "title": "Romyar Sharifi, UCLA Abstract Algebra, section 8.10",
+          "url": "https://math.ucla.edu/~sharifi/notes/algebra-ch08.html",
+          "finding": "Lemma 8.10.20 states that the largest invariant factor is the minimal polynomial and their product is the characteristic polynomial; rational canonical form uses companion blocks over the original field."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For a companion matrix of x^2+1 over R, both minimal and characteristic polynomials are x^2+1; the rational form exists over R without adjoining i."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The phrase 'purest' is a stylistic judgment, not a mathematical theorem."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L306"
+    },
+    {
+      "id": "repo-5e36cdc97258edfc334f4a8f",
+      "ordinal": 54,
+      "messages_sha256": "5e36cdc97258edfc334f4a8f801b20e5bc91f3978f4dd4dda69a7f4d8b9285c2",
+      "state": "PASS",
+      "rationale": "Correct positivity argument for the real denominator, establishing continuity at every finite real input and no vertical asymptote.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Algebraic steps, symbolic identities and equation residuals are checked directly, rather than trusting a matching numeric result alone."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For real x, x^2+1>=1, so the rational function has no finite real pole."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L307"
+    },
+    {
+      "id": "repo-233c8180374e3d5924c42a18",
+      "ordinal": 55,
+      "messages_sha256": "233c8180374e3d5924c42a1874aac88b27d9c914365767ca033707d4b77a0e84",
+      "state": "PASS",
+      "rationale": "Correct standard subgroup test, with the properties required for arbitrary elements and associativity inherited from the ambient group.",
+      "evidence": [
+        {
+          "method": "independent_axiom_and_subgroup_check",
+          "finding": "Group claims are checked directly against closure, inherited associativity, identity and inverses. No numerical example substitutes for the general proof."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Nonemptiness plus closure and inverses gives the identity aa^-1 in the subset; the inherited operation then satisfies all group axioms."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L310"
+    },
+    {
+      "id": "repo-254e1c91ae6941051eef6619",
+      "ordinal": 56,
+      "messages_sha256": "254e1c91ae6941051eef661931899151a433771c9994e2657749d2a14a6fa707",
+      "state": "PASS",
+      "rationale": "Valid left-cancellation proof using the inverse and associativity, without assuming commutativity.",
+      "evidence": [
+        {
+          "method": "independent_axiom_and_subgroup_check",
+          "finding": "Group claims are checked directly against closure, inherited associativity, identity and inverses. No numerical example substitutes for the general proof."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Left multiply ab=ac by a^-1, regroup, and reduce eb=ec to b=c."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L319"
+    },
+    {
+      "id": "repo-8eda3569208cb36f2136c140",
+      "ordinal": 57,
+      "messages_sha256": "8eda3569208cb36f2136c140493e93a534be5a1d0c6e41a18a5d64ba65fc830b",
+      "state": "PASS",
+      "rationale": "Valid proof that a homomorphism image is nonempty, multiplicatively closed and inverse-closed.",
+      "evidence": [
+        {
+          "method": "independent_axiom_and_subgroup_check",
+          "finding": "Group claims are checked directly against closure, inherited associativity, identity and inverses. No numerical example substitutes for the general proof."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Products and inverses of images are images of products and inverses in the domain."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L326"
+    },
+    {
+      "id": "repo-48bf4da4043da1ad240eae75",
+      "ordinal": 58,
+      "messages_sha256": "48bf4da4043da1ad240eae753eb8ebdd14b3b6f5d5f5d783502d8c0c2e133473",
+      "state": "PASS",
+      "rationale": "Correct substitution and final solution; the explanation of alternative elimination is appropriate.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Algebraic steps, symbolic identities and equation residuals are checked directly, rather than trusting a matching numeric result alone."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "At (x,y)=(2,5), 2x+1=5 and -x+7=5."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L336"
+    },
+    {
+      "id": "repo-79c04ae3cb85324d555a2098",
+      "ordinal": 59,
+      "messages_sha256": "79c04ae3cb85324d555a2098cfd169df5c23250f41df0efe923d46b56695bd6b",
+      "state": "PASS",
+      "rationale": "Correct finite-injection argument behind the theorem. For each nonzero multiplier, absence of zero divisors gives injectivity, and finiteness gives surjectivity and a multiplicative inverse.",
+      "evidence": [
+        {
+          "method": "independent_finite_injection_argument",
+          "finding": "For nonzero a in an integral domain, ax=ay implies a(x-y)=0 and hence x=y. A finite-set injection into itself is surjective, so some x maps to 1."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "If a is nonzero, ax=ay implies x=y. A map of a finite set of size N omitting one value cannot have N distinct outputs; therefore 1 is reached."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The multiplication map is for nonzero a, as required by the field theorem; no inverse of zero is asserted."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L342"
+    },
+    {
+      "id": "repo-a0670bd31c2031bce8301d70",
+      "ordinal": 60,
+      "messages_sha256": "a0670bd31c2031bce8301d70f7bb8c6fd500874a35f22c2e06666cbafc3c3f08",
+      "state": "PASS",
+      "rationale": "Sound high-level rigid multibody modeling option: joint reactions can be enforced by multipliers and unilateral contact by complementarity with specialized switching-aware integration.",
+      "evidence": [
+        {
+          "title": "Drake, Contact Modeling",
+          "url": "https://drake.mit.edu/doxygen_cxx/group__drake__contacts.html",
+          "finding": "Rigid unilateral contact uses complementarity between gap and normal contact force, with significant numerical difficulties and specialized solvers. Compliant contact is an alternative model."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For an ideal normal contact, gap g>=0, normal force lambda>=0 and g*lambda=0 express separation without force or contact without penetration."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Impact impulses, restitution and friction need an appropriate contact law and solver; the answer is an approach overview, not a complete implementation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L368"
+    },
+    {
+      "id": "repo-627be837ea6e9dc025437a69",
+      "ordinal": 61,
+      "messages_sha256": "627be837ea6e9dc025437a6963b9477e226e96b0b9ada3d9336d6a1789f2a2c4",
+      "state": "PASS",
+      "rationale": "The paraphrase preserves the given statement's elimination and reduced-system meaning. It does not introduce a universal claim about all Schur complements.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Algebraic steps, symbolic identities and equation residuals are checked directly, rather than trusting a matching numeric result alone."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The positive-definite property is supplied in the text being rephrased. This PASS evaluates the paraphrase, not whether every unspecified saddle-point system has that property."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L372"
+    },
+    {
+      "id": "repo-7d88affde56b68f2724a92de",
+      "ordinal": 62,
+      "messages_sha256": "7d88affde56b68f2724a92decbf5f01e6f0816bd0fe479082c2ec586001d48f9",
+      "state": "PASS",
+      "rationale": "Appropriately begins with a conditional answer and names real tradeoffs: constraints can remove degrees of freedom, conflict or worsen conditioning. The under/over-constrained shorthand is reasonable at the requested conceptual scope.",
+      "evidence": [
+        {
+          "title": "MIT nonlinear programming, constrained optimality",
+          "url": "https://ocw.mit.edu/courses/15-084j-nonlinear-programming-spring-2004/21073fc1bb9e5f68b3319bec0895683f_lec6_constr_opt.pdf",
+          "finding": "Theorem 22 requires a feasible base point, continuously differentiable constraints and a nonsingular Jacobian block for local elimination; multipliers are introduced for constrained optimization with relevant regularity conditions."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Adding x+y=0 to a free two-variable problem leaves one degree of freedom; adding x=1 and x=2 makes it inconsistent. Redundant constraints can also worsen a multiplier system without reducing the feasible set."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "No universal numerical optimum in constraint count or condition number follows from this qualitative explanation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L375"
+    },
+    {
+      "id": "repo-e6fe954e194f7854b0b08ad4",
+      "ordinal": 63,
+      "messages_sha256": "e6fe954e194f7854b0b08ad40ede49dafa40e7f06f751f47d44ca291591acb9f",
+      "state": "QUARANTINE",
+      "rationale": "The homotopy and predictor-corrector outline is useful, but arc-length continuation is presented as handling bifurcations without distinguishing the additional detection and branch-switching operations. Arc-length parameterization alone does not supply those operations.",
+      "evidence": [
+        {
+          "title": "GetFEM, Numerical continuation and bifurcation",
+          "url": "https://getfem.org/userdoc/model_continuation.html",
+          "finding": "Predictor-corrector curve tracking, limit-point tests, bifurcation detection and branch switching are distinct operations; branching requires extra tests and tangent construction beyond basic continuation."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "For F(u,lambda)=u(u^2-lambda), the trivial branch u=0 meets two nontrivial branches at (0,0). Parameterizing path length alone does not select or construct a desired nontrivial branch."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L377"
+    },
+    {
+      "id": "repo-ff7d8065f6c168b92a10e9d0",
+      "ordinal": 64,
+      "messages_sha256": "ff7d8065f6c168b92a10e9d0dfcd96ae6d5af6ed734e6da447665ed3b3eca3da",
+      "state": "PASS",
+      "rationale": "Reasonable explanation of genuine or apparent circularity: assuming the conclusion or leaving dependency structure unclear. The advice to state assumptions and use justified facts is sound.",
+      "evidence": [
+        {
+          "method": "direct_mathematical_review",
+          "finding": "A symbolic identity or implication derived from stated algebraic axioms proves all covered instances; a finite list of numerical tests does not establish an unrestricted universal statement."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "This is explanatory guidance about proof presentation, not a measured frequency claim."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L379"
+    },
+    {
+      "id": "repo-b8e130ffcde8777b0e1e65a0",
+      "ordinal": 65,
+      "messages_sha256": "b8e130ffcde8777b0e1e65a00d70b403d3c422215159218336b0caafa70ab770",
+      "state": "PASS",
+      "rationale": "Correct relationship between algebraic proof and logical inference from definitions, assumptions and established results.",
+      "evidence": [
+        {
+          "method": "direct_mathematical_review",
+          "finding": "A symbolic identity or implication derived from stated algebraic axioms proves all covered instances; a finite list of numerical tests does not establish an unrestricted universal statement."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L384"
+    },
+    {
+      "id": "repo-ae38057d71bb2d8f4268a12d",
+      "ordinal": 66,
+      "messages_sha256": "ae38057d71bb2d8f4268a12da7beebe4d9b1e5204f049722a08b2e6e49e439e2",
+      "state": "PASS",
+      "rationale": "Correct representation of a finite linear system by a coefficient matrix, unknown vector and constant vector.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Algebraic steps, symbolic identities and equation residuals are checked directly, rather than trusting a matching numeric result alone."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The ith component of Ax=b is sum_j a_ij*x_j=b_i, exactly the corresponding linear equation."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L389"
+    },
+    {
+      "id": "repo-1077304e19bcb562bdbe8d37",
+      "ordinal": 67,
+      "messages_sha256": "1077304e19bcb562bdbe8d37a06dde5964b23dacc73d7a48758b043595afd57b",
+      "state": "PASS",
+      "rationale": "Correct first-principles setup and inverse formula with the essential nonzero determinant condition explicitly included.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Algebraic steps, symbolic identities and equation residuals are checked directly, rather than trusting a matching numeric result alone."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Multiplying [[a,b],[c,d]] by [[d,-b],[-c,a]] yields (ad-bc)I, as does multiplication in the reverse order."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L396"
+    },
+    {
+      "id": "repo-a6aceab4852a947688f2f591",
+      "ordinal": 68,
+      "messages_sha256": "a6aceab4852a947688f2f591e8be2fabf9c118a27aaa5678d608846adc40e8fc",
+      "state": "PASS",
+      "rationale": "Correct elimination arithmetic and final pair, checked in both original equations.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Algebraic steps, symbolic identities and equation residuals are checked directly, rather than trusting a matching numeric result alone."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "x=7/5,y=-9/5 gives 4x-3y=(28+27)/5=11 and 2x+y=(14-9)/5=1."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L399"
+    },
+    {
+      "id": "repo-b8f46949dfb85d81d02eadae",
+      "ordinal": 69,
+      "messages_sha256": "b8f46949dfb85d81d02eadae674db1f0dd43bd95be6aacdd4935f5d684b8c8db",
+      "state": "PASS",
+      "rationale": "Accurate geometric interpretation of rank-nullity with the required finite-dimensional domain specified. The R^3 example gives the correct one-dimensional kernel.",
+      "evidence": [
+        {
+          "method": "independent_basis_extension_proof",
+          "finding": "Extend a basis of the kernel to a basis of the finite-dimensional domain. The images of the additional basis vectors form a basis of the image, giving dimension(domain)=nullity+rank."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Extend k kernel basis vectors to an n-vector basis; the remaining n-k images form an image basis, so rank=n-k."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The two piles count dimensions of a chosen complementary decomposition, not a canonical partition of all individual vectors."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L402"
+    },
+    {
+      "id": "repo-615799ec86a7006298a2e6f2",
+      "ordinal": 70,
+      "messages_sha256": "615799ec86a7006298a2e6f2a2d4c6c4aa7d9f8fc530af508cb6a4af3ac06200",
+      "state": "QUARANTINE",
+      "rationale": "The dependence and infinite-solution diagnosis is correct, but the requested solve is left unfinished. The answer introduces z=t and then asks the reader to solve x and y rather than giving the full solution set.",
+      "evidence": [
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Algebraic steps, symbolic identities and equation residuals are checked directly, rather than trusting a matching numeric result alone."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The full family is x=(17-4t)/5, y=(1+3t)/5, z=t. Substitution gives all three right-hand sides 4,7,11. This review check does not rewrite the original answer."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L403"
+    },
+    {
+      "id": "repo-ed5e26e231ab57ed12bf680d",
+      "ordinal": 71,
+      "messages_sha256": "ed5e26e231ab57ed12bf680dfe3916d3e35abe4248ba1de85ecaa5e921414786",
+      "state": "PASS",
+      "rationale": "Correct definitions and inequality between geometric and algebraic multiplicity. A deficit for any eigenvalue prevents diagonalizability.",
+      "evidence": [
+        {
+          "title": "James Demmel, Berkeley MA221 Lecture 15",
+          "url": "https://people.eecs.berkeley.edu/~demmel/ma221_Fall09/Lectures/Lecture_15.html",
+          "finding": "Defines eigenvalues through the characteristic determinant and nonzero null vectors; shows similarity preserves eigenvalues and presents unique Jordan blocks up to ordering."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "The 2 by 2 Jordan block at lambda has algebraic multiplicity 2 and one-dimensional eigenspace, hence is not diagonalizable."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L411"
+    },
+    {
+      "id": "repo-732f24602ffc6dd16e27bc45",
+      "ordinal": 72,
+      "messages_sha256": "732f24602ffc6dd16e27bc4589d1e607f657a493bc5d8b6bb53d9cf66097e434",
+      "state": "PASS",
+      "rationale": "Correct distributive-law and additive-cancellation proof of a times zero equals zero, adequate for the ordinary scalar zero-product question.",
+      "evidence": [
+        {
+          "method": "independent_axiom_and_subgroup_check",
+          "finding": "Group claims are checked directly against closure, inherited associativity, identity and inverses. No numerical example substitutes for the general proof."
+        },
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Algebraic steps, symbolic identities and equation residuals are checked directly, rather than trusting a matching numeric result alone."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Let b=a*0. Distributivity gives b=b+b; adding -b yields 0=b."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "In a noncommutative ring, the left-zero identity 0*a=0 follows by the analogous other distributive law. The displayed proof explicitly establishes a*0."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L418"
+    },
+    {
+      "id": "repo-a40161b8589ff4f43bae03c5",
+      "ordinal": 73,
+      "messages_sha256": "a40161b8589ff4f43bae03c5b99e7432e0a039caf7b74255a2b3e91b11d619f9",
+      "state": "PASS",
+      "rationale": "Appropriate conditional options for uncertain measured constraints: weighted soft penalties or a probabilistic likelihood model, with the modeling choices acknowledged.",
+      "evidence": [
+        {
+          "title": "Boyd and Vandenberghe, Convex Optimization",
+          "url": "https://www.seas.ucla.edu/~vandenbe/cvxbook/bv_cvxbook.pdf",
+          "finding": "Least-squares and statistical estimation formulations model residuals and uncertainty using objective penalties; the choice of weighting and probability model matters."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "Under independent Gaussian measurement errors with known variances sigma_i^2, the negative log likelihood contributes weighted squared residuals r_i^2/(2 sigma_i^2)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "Weighting, dependence, error model and which constraints must remain hard require application-specific choices; easier solving is stated as a possibility."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L419"
+    },
+    {
+      "id": "repo-df53d54dd0b7a1636bd8d6f6",
+      "ordinal": 74,
+      "messages_sha256": "df53d54dd0b7a1636bd8d6f631cd9391b77aa1a10101fda53064e044558bc68d",
+      "state": "PASS",
+      "rationale": "The direct even-square calculation is correct and the stated odd-square implication is exactly its logical contrapositive, providing the requested contrast.",
+      "evidence": [
+        {
+          "method": "direct_mathematical_review",
+          "finding": "A symbolic identity or implication derived from stated algebraic axioms proves all covered instances; a finite list of numerical tests does not establish an unrestricted universal statement."
+        },
+        {
+          "method": "independent_exact_mathematical_check",
+          "finding": "Algebraic steps, symbolic identities and equation residuals are checked directly, rather than trusting a matching numeric result alone."
+        },
+        {
+          "method": "independent_analytical_check",
+          "finding": "With P='n even' and Q='n^2 even', P=>Q is equivalent to not Q=>not P. For integer n, not-even means odd. If n=2k then n^2=2(2k^2)."
+        },
+        {
+          "method": "scope_caveat",
+          "finding": "The answer identifies the contrapositive formulation rather than supplying a separate full proof of it; the prompt asks for a contrast using an example."
+        }
+      ],
+      "source_url": "https://github.com/scott198989/Completions/blob/c290b73ed960531ebb32028fd47daa5bebbefe9b/D_Algebra.jsonl#L421"
+    }
+  ]
+}
